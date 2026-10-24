@@ -1,0 +1,28 @@
+{
+  "m_root": {
+    "x": 0,
+    "y": 0,
+    "definition": "miner_root",
+    "root": true
+  },
+  "m_move1": {
+    "x": -1,
+    "y": -1,
+    "definition": "miner_move1"
+  },
+  "m_speed2": {
+    "x": 1,
+    "y": -1,
+    "definition": "miner_speed2"
+  },
+  "m_stamina": {
+    "x": 0,
+    "y": -2,
+    "definition": "miner_stamina"
+  },
+  "m_master": {
+    "x": 0,
+    "y": -3,
+    "definition": "miner_master"
+  }
+}

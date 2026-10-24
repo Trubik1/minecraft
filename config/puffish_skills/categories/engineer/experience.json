@@ -1,0 +1,17 @@
+{
+  "experience_per_level": 45,
+  "sources": [
+    {
+      "type": "kill_entity",
+      "data": {
+        "experience": 8
+      }
+    },
+    {
+      "type": "break_block",
+      "data": {
+        "experience": 3
+      }
+    }
+  ]
+}

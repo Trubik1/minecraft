@@ -1,0 +1,18 @@
+# Файлы миров (у каждого игрока свои сохранения)
+saves/
+
+# Временные системные файлы и логи
+logs/
+crash-reports/
+.cache/
+.mixin.out/
+.sable/
+downloads/
+screenshots/
+usercache.json
+usernamecache.json
+local/
+
+
+# Локальные настройки управления и звука (чтобы не перезаписывать настройки звука и кнопок друга)
+# options.txt

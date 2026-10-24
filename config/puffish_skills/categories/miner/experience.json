@@ -1,0 +1,11 @@
+{
+  "experience_per_level": 50,
+  "sources": [
+    {
+      "type": "break_block",
+      "data": {
+        "experience": 5
+      }
+    }
+  ]
+}

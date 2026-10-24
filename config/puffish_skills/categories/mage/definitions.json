@@ -1,0 +1,142 @@
+{
+  "mage_root": {
+    "title": {
+      "text": "Пробуждение Источника"
+    },
+    "description": {
+      "text": "Связь с магической энергией (+2 HP к запасу здоровья)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:amethyst_shard"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 2.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "mage_step": {
+    "title": {
+      "text": "Мерцающий шаг"
+    },
+    "description": {
+      "text": "Легкость движения мага (+10% к скорости перемещения)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "ars_nouveau:magebloom"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.movement_speed",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
+  },
+  "mage_barrier": {
+    "title": {
+      "text": "Эфирный барьер"
+    },
+    "description": {
+      "text": "Магическое поле отражает мощные атаки (+4 твёрдости брони)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "ars_nouveau:abjuration_essence"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 2,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor_toughness",
+          "value": 4.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "mage_archmage": {
+    "title": {
+      "text": "Архимаг"
+    },
+    "description": {
+      "text": "Полный контроль над телом и разумом: +6 HP, +2.0 урона и +15% скорости каста!"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "ars_nouveau:archmage_spell_book"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "challenge"
+      }
+    },
+    "cost": 3,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 6.0,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.attack_damage",
+          "value": 2.0,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.attack_speed",
+          "value": 0.15,
+          "operation": "multiply_base"
+        }
+      }
+    ]
+  }
+}

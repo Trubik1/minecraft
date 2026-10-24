@@ -1,0 +1,467 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter_endgame"
+	group: "3E8A1F026B5C7D91"
+	icon: {
+		id: "create:creative_motor"
+	}
+	id: "5A8C11099EFA0005"
+	images: [ ]
+	order_index: 0
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:nether_star"
+			}
+			id: "5A8C11099E050001"
+			rewards: [
+				{
+					count: 4
+					id: "0215AA5046F7DB18"
+					item: {
+						count: 4
+						id: "minecraft:totem_of_undying"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "4720D74AF59A4A32"
+					item: {
+						count: 2
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					id: "756D0D19D5C74C94"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "0F575AFBB3B0DD31"
+				item: { count: 1, id: "minecraft:nether_star" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E050001"]
+			icon: {
+				id: "create:creative_motor"
+			}
+			id: "5A8C11099E050002"
+			rewards: [
+				{
+					count: 4
+					id: "64B662C3061790E2"
+					item: {
+						count: 4
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					id: "00AFD0D076AD1C73"
+					type: "xp_levels"
+					xp_levels: 100
+				}
+			]
+			shape: "challenge"
+			size: 1.3d
+			tasks: [{
+				id: "779D151EF6217356"
+				item: { count: 1, id: "create:creative_motor" }
+				type: "item"
+			}]
+			x: 2.2d
+			y: -1.8d
+		}
+		{
+			dependencies: ["5A8C11099E050002"]
+			icon: {
+				id: "create:creative_blaze_cake"
+			}
+			id: "5A8C11099E050003"
+			rewards: [
+				{
+					count: 32
+					id: "46C8F67ADF7CEDD3"
+					item: {
+						count: 32
+						id: "create:blaze_cake"
+					}
+					type: "item"
+				}
+				{
+					id: "65FD76BF76DD3F42"
+					type: "xp_levels"
+					xp_levels: 80
+				}
+			]
+			tasks: [{
+				id: "4EF38FE7AA6E1C06"
+				item: { count: 1, id: "create:creative_blaze_cake" }
+				type: "item"
+			}]
+			x: 4.2d
+			y: -1.8d
+		}
+		{
+			dependencies: ["5A8C11099E050001"]
+			icon: {
+				id: "mekanism:creative_energy_cube"
+			}
+			id: "5A8C11099E050004"
+			rewards: [
+				{
+					count: 4
+					id: "1BD31464AA2DEDEB"
+					item: {
+						count: 4
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					id: "0066E261EF360C32"
+					type: "xp_levels"
+					xp_levels: 100
+				}
+			]
+			shape: "challenge"
+			size: 1.3d
+			tasks: [{
+				id: "17F2753459807DB4"
+				item: { count: 1, id: "mekanism:creative_energy_cube" }
+				type: "item"
+			}]
+			x: 2.2d
+			y: 1.8d
+		}
+		{
+			dependencies: ["5A8C11099E050004"]
+			icon: {
+				id: "mekanism:creative_fluid_tank"
+			}
+			id: "5A8C11099E050005"
+			rewards: [
+				{
+					count: 8
+					id: "2354907D5A30F3B0"
+					item: {
+						count: 8
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					id: "19117127BE5487FB"
+					type: "xp_levels"
+					xp_levels: 80
+				}
+			]
+			tasks: [{
+				id: "5206B092EA66389D"
+				item: { count: 1, id: "mekanism:creative_fluid_tank" }
+				type: "item"
+			}]
+			x: 4.2d
+			y: 1.8d
+		}
+		{
+			dependencies: [
+				"5A8C11099E050003"
+				"5A8C11099E050005"
+			]
+			icon: {
+				id: "refinedstorage:creative_storage_disk"
+			}
+			id: "5A8C11099E050006"
+			rewards: [
+				{
+					id: "67184A51DF78EEF3"
+					item: {
+						count: 1
+						id: "refinedstorage:creative_controller"
+					}
+					type: "item"
+				}
+				{
+					id: "7F8A676690C3F06E"
+					type: "xp_levels"
+					xp_levels: 120
+				}
+			]
+			shape: "challenge"
+			size: 1.3d
+			tasks: [{
+				id: "3036005E26774E39"
+				item: { count: 1, id: "refinedstorage:creative_storage_disk" }
+				type: "item"
+			}]
+			x: 5.8d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E050006"]
+			icon: {
+				id: "refinedstorage:creative_controller"
+			}
+			id: "5A8C11099E050008"
+			rewards: [
+				{
+					count: 8
+					id: "08CB2C07EE561336"
+					item: {
+						count: 8
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					id: "536328F419864636"
+					type: "xp_levels"
+					xp_levels: 100
+				}
+			]
+			tasks: [{
+				id: "55099418B99E7558"
+				item: { count: 1, id: "refinedstorage:creative_controller" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A8C11099E050006"]
+			icon: {
+				id: "refinedstorage:network_card"
+			}
+			id: "5A8C11099E050009"
+			rewards: [
+				{
+					count: 16
+					id: "6C51B91DCF4A4F3F"
+					item: {
+						count: 16
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					id: "3B925FD82F4913EA"
+					type: "xp_levels"
+					xp_levels: 80
+				}
+			]
+			tasks: [{
+				id: "1C047410C5A068D2"
+				item: { count: 1, id: "refinedstorage:network_card" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"5A8C11099E050008"
+				"5A8C11099E050009"
+			]
+			icon: {
+				id: "minecraft:dragon_egg"
+			}
+			id: "5A8C11099E050007"
+			rewards: [
+				{
+					count: 32
+					id: "4826FEA83BE72C62"
+					item: {
+						count: 32
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "1E3AEF814F993EE5"
+					item: {
+						count: 64
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					id: "7165C4CECFC3EA1C"
+					type: "xp_levels"
+					xp_levels: 500
+				}
+			]
+			shape: "heart"
+			size: 2.0d
+			tasks: [
+				{
+					id: "48ED19B6DAF43400"
+					item: { count: 1, id: "create:creative_motor" }
+					type: "item"
+				}
+				{
+					id: "55704BBE3E2748F3"
+					item: { count: 1, id: "mekanism:creative_energy_cube" }
+					type: "item"
+				}
+				{
+					id: "452C229136FE2939"
+					item: { count: 1, id: "refinedstorage:creative_storage_disk" }
+					type: "item"
+				}
+			]
+			x: 9.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E050001"]
+			icon: {
+				id: "create:brass_block"
+			}
+			id: "5A8C11099E050010"
+			rewards: [
+				{
+					count: 16
+					id: "0327265F0E912D06"
+					item: {
+						count: 16
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					id: "2CB62B36FD3F8022"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+			]
+			tasks: [
+				{
+					id: "7240E1AC9D3BF853"
+					item: { count: 1, id: "create:brass_block" }
+					type: "item"
+				}
+				{
+					id: "3BD32844407F6BD6"
+					item: { count: 1, id: "minecraft:netherite_block" }
+					type: "item"
+				}
+			]
+			x: 2.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E050003"]
+			icon: {
+				id: "ars_nouveau:archmage_spell_book"
+			}
+			id: "5A8C11099E050011"
+			rewards: [
+				{
+					count: 8
+					id: "5D522EA733C5229C"
+					item: {
+						count: 8
+						id: "ars_nouveau:source_gem_block"
+					}
+					type: "item"
+				}
+				{
+					id: "24CAC8EAD8E17AC1"
+					type: "xp_levels"
+					xp_levels: 80
+				}
+			]
+			tasks: [{
+				id: "511DB6F05958807A"
+				item: { count: 1, id: "ars_nouveau:archmage_spell_book" }
+				type: "item"
+			}]
+			x: 5.8d
+			y: -1.8d
+		}
+		{
+			dependencies: ["5A8C11099E050005"]
+			icon: {
+				id: "mekanism:induction_casing"
+			}
+			id: "5A8C11099E050012"
+			rewards: [
+				{
+					count: 2
+					id: "6E51864B8C6754E4"
+					item: {
+						count: 2
+						id: "mekanism:ultimate_induction_cell"
+					}
+					type: "item"
+				}
+				{
+					id: "49AFFE334DD1D21A"
+					type: "xp_levels"
+					xp_levels: 80
+				}
+			]
+			tasks: [{
+				id: "5DC8BD5A62B9C832"
+				item: { count: 1, id: "mekanism:induction_casing" }
+				type: "item"
+			}]
+			x: 5.8d
+			y: 1.8d
+		}
+		{
+			dependencies: ["5A8C11099E050007"]
+			icon: {
+				id: "minecraft:nether_star"
+			}
+			id: "5A8C11099E050013"
+			rewards: [
+				{
+					count: 64
+					id: "4CA7275DD7803429"
+					item: {
+						count: 64
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "623B4AE6F4EB049F"
+					item: {
+						count: 64
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					id: "3033252DD7874ABC"
+					type: "xp_levels"
+					xp_levels: 1000
+				}
+			]
+			shape: "diamond"
+			size: 2.5d
+			tasks: [{
+				id: "231C8EE556B0B4CA"
+				type: "checkmark"
+			}]
+			x: 11.2d
+			y: 0.0d
+		}
+	]
+}

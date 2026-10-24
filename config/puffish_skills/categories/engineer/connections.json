@@ -1,0 +1,18 @@
+[
+  [
+    "e_root",
+    "e_suit"
+  ],
+  [
+    "e_root",
+    "e_reflexes"
+  ],
+  [
+    "e_suit",
+    "e_master"
+  ],
+  [
+    "e_reflexes",
+    "e_master"
+  ]
+]

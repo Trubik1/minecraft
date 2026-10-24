@@ -1,0 +1,15 @@
+{
+  "title": {
+    "text": "Путь Инженера"
+  },
+  "description": {
+    "text": "Механизмы Create, дистанция работы, точность и мастерство автоматизации."
+  },
+  "icon": {
+    "type": "item",
+    "data": {
+      "item": "create:cogwheel"
+    }
+  },
+  "background": "minecraft:textures/block/polished_andesite.png"
+}

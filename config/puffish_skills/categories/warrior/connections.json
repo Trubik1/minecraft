@@ -1,0 +1,30 @@
+[
+  [
+    "s_root",
+    "s_hp1"
+  ],
+  [
+    "s_root",
+    "s_armor1"
+  ],
+  [
+    "s_hp1",
+    "s_speed1"
+  ],
+  [
+    "s_hp1",
+    "s_dmg2"
+  ],
+  [
+    "s_armor1",
+    "s_dmg2"
+  ],
+  [
+    "s_armor1",
+    "s_toughness"
+  ],
+  [
+    "s_dmg2",
+    "s_titan"
+  ]
+]

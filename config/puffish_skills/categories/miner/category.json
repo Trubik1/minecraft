@@ -1,0 +1,15 @@
+{
+  "title": {
+    "text": "Путь Шахтёра"
+  },
+  "description": {
+    "text": "Скорость добычи руды, исследование пещер и поиск подземных сокровищ."
+  },
+  "icon": {
+    "type": "item",
+    "data": {
+      "item": "minecraft:netherite_pickaxe"
+    }
+  },
+  "background": "minecraft:textures/block/deepslate.png"
+}

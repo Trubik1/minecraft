@@ -1,0 +1,227 @@
+{
+  "warrior_root": {
+    "title": {
+      "text": "Ученик Меча"
+    },
+    "description": {
+      "text": "Первый шаг на пути великого воина (+1.0 урона от атак)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_sword"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.attack_damage",
+          "value": 1.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "warrior_hp1": {
+    "title": {
+      "text": "Закалка тела I"
+    },
+    "description": {
+      "text": "Увеличивает максимальное здоровье на 4 HP (2 сердца)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:glistering_melon_slice"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 4.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "warrior_armor1": {
+    "title": {
+      "text": "Стальная кожа I"
+    },
+    "description": {
+      "text": "Постоянный бонус брони (+3 брони)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_chestplate"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor",
+          "value": 3.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "warrior_speed1": {
+    "title": {
+      "text": "Ярость битвы"
+    },
+    "description": {
+      "text": "Увеличивает скорость атаки на 15%"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:golden_sword"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 2,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.attack_speed",
+          "value": 0.15,
+          "operation": "multiply_base"
+        }
+      }
+    ]
+  },
+  "warrior_dmg2": {
+    "title": {
+      "text": "Сокрушительный клинок"
+    },
+    "description": {
+      "text": "Наносит мощные удары (+2.5 урона от атак)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:diamond_sword"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 2,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.attack_damage",
+          "value": 2.5,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "warrior_toughness": {
+    "title": {
+      "text": "Несокрушимость"
+    },
+    "description": {
+      "text": "Твёрдость брони снижает пробивающий урон (+4 твёрдости брони)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:diamond_chestplate"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 2,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor_toughness",
+          "value": 4.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "warrior_titan": {
+    "title": {
+      "text": "Титан войны"
+    },
+    "description": {
+      "text": "Вершина боевого мастерства: +8 HP и +0.3 сопротивления отбрасыванию!"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:netherite_chestplate"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "challenge"
+      }
+    },
+    "cost": 3,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 8.0,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "value": 0.3,
+          "operation": "addition"
+        }
+      }
+    ]
+  }
+}

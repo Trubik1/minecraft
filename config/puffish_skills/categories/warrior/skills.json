@@ -1,0 +1,38 @@
+{
+  "s_root": {
+    "x": 0,
+    "y": 0,
+    "definition": "warrior_root",
+    "root": true
+  },
+  "s_hp1": {
+    "x": -1,
+    "y": -1,
+    "definition": "warrior_hp1"
+  },
+  "s_armor1": {
+    "x": 1,
+    "y": -1,
+    "definition": "warrior_armor1"
+  },
+  "s_speed1": {
+    "x": -1,
+    "y": -2,
+    "definition": "warrior_speed1"
+  },
+  "s_dmg2": {
+    "x": 0,
+    "y": -2,
+    "definition": "warrior_dmg2"
+  },
+  "s_toughness": {
+    "x": 1,
+    "y": -2,
+    "definition": "warrior_toughness"
+  },
+  "s_titan": {
+    "x": 0,
+    "y": -3,
+    "definition": "warrior_titan"
+  }
+}

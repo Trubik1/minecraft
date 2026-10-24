@@ -1,0 +1,11 @@
+{
+  "experience_per_level": 40,
+  "sources": [
+    {
+      "type": "kill_entity",
+      "data": {
+        "experience": 10
+      }
+    }
+  ]
+}

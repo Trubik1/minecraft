@@ -1,0 +1,23 @@
+{
+  "mg_root": {
+    "x": 0,
+    "y": 0,
+    "definition": "mage_root",
+    "root": true
+  },
+  "mg_step": {
+    "x": -1,
+    "y": -1,
+    "definition": "mage_step"
+  },
+  "mg_barrier": {
+    "x": 1,
+    "y": -1,
+    "definition": "mage_barrier"
+  },
+  "mg_archmage": {
+    "x": 0,
+    "y": -2,
+    "definition": "mage_archmage"
+  }
+}

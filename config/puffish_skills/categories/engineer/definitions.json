@@ -1,0 +1,145 @@
+{
+  "eng_root": {
+    "title": {
+      "text": "Инженерная смекалка"
+    },
+    "description": {
+      "text": "Начало пути изобретателя (+1.0 к дистанции взаимодействия с блоками)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "create:wrench"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:player.block_interaction_range",
+          "value": 1.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "eng_suit": {
+    "title": {
+      "text": "Защитный комбинезон"
+    },
+    "description": {
+      "text": "Защита от опасных движущихся шестерней (+3 брони и +2 твёрдости)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "create:copper_diving_helmet"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor",
+          "value": 3.0,
+          "operation": "addition"
+        },
+        "attribute": "minecraft:generic.armor_toughness",
+        "value": 2.0,
+        "operation": "addition"
+      }
+    ]
+  },
+  "eng_reflexes": {
+    "title": {
+      "text": "Быстрый монтаж"
+    },
+    "description": {
+      "text": "Скорость работы руками (+15% к скорости атаки/инструментов)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "create:precision_mechanism"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 2,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.attack_speed",
+          "value": 0.15,
+          "operation": "multiply_base"
+        }
+      }
+    ]
+  },
+  "eng_master": {
+    "title": {
+      "text": "Главный Архитектор"
+    },
+    "description": {
+      "text": "Увеличение дистанции взаимодействия (+2.0 блоков) и запас здоровья (+4 HP)!"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "create:steam_engine"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "challenge"
+      }
+    },
+    "cost": 3,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:player.block_interaction_range",
+          "value": 2.0,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:player.entity_interaction_range",
+          "value": 2.0,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 4.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  }
+}

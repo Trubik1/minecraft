@@ -1,0 +1,18 @@
+[
+  [
+    "mg_root",
+    "mg_step"
+  ],
+  [
+    "mg_root",
+    "mg_barrier"
+  ],
+  [
+    "mg_step",
+    "mg_archmage"
+  ],
+  [
+    "mg_barrier",
+    "mg_archmage"
+  ]
+]

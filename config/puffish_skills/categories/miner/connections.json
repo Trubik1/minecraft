@@ -1,0 +1,22 @@
+[
+  [
+    "m_root",
+    "m_move1"
+  ],
+  [
+    "m_root",
+    "m_speed2"
+  ],
+  [
+    "m_move1",
+    "m_stamina"
+  ],
+  [
+    "m_speed2",
+    "m_stamina"
+  ],
+  [
+    "m_stamina",
+    "m_master"
+  ]
+]

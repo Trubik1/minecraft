@@ -1,0 +1,721 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter_big_cannons"
+	group: "181E781F1BAE7410"
+	icon: {
+		id: "createbigcannons:cannon_crafting_wand"
+	}
+	id: "5A8C11099EFA0002"
+	images: [ ]
+	order_index: 5
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "createbigcannons:cannon_crafting_wand"
+			}
+			id: "5A8C11099E020001"
+			rewards: [
+				{
+					count: 32
+					id: "6DCF57381C94CED9"
+					item: {
+						count: 32
+						id: "minecraft:gunpowder"
+					}
+					type: "item"
+				}
+				{
+					id: "024034B4CA436ED4"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "23A3BE5BB6DAE063"
+				item: { count: 1, id: "createbigcannons:cannon_crafting_wand" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E020001"]
+			icon: {
+				id: "createbigcannons:autocannon_barrel_cast_mould"
+			}
+			id: "5A8C11099E020002"
+			rewards: [
+				{
+					count: 16
+					id: "5CD24AECD7F9B563"
+					item: {
+						components: {
+							"ftbquests:missing_item": "16x create:copper_ingot"
+						}
+						count: 1
+						id: "ftbquests:missing_item"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "446C7C22A50C77D2"
+					item: {
+						count: 16
+						id: "create:zinc_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "29A567310A9698E7"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [{
+				id: "67940D72BA8AFAE9"
+				item: { count: 1, id: "createbigcannons:autocannon_barrel_cast_mould" }
+				type: "item"
+			}]
+			x: 1.8d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E020002"]
+			icon: {
+				id: "createbigcannons:cannon_drill"
+			}
+			id: "5A8C11099E020003"
+			rewards: [
+				{
+					count: 8
+					id: "2EA6B5893F912FB6"
+					item: {
+						count: 8
+						id: "create:iron_sheet"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "7EE4E3B0A6FE0D04"
+					item: {
+						count: 8
+						id: "create:brass_sheet"
+					}
+					type: "item"
+				}
+				{
+					id: "7E1EBBAFE40DA4CA"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			tasks: [{
+				id: "61BFA2C8415661E5"
+				item: { count: 1, id: "createbigcannons:cannon_drill" }
+				type: "item"
+			}]
+			x: 3.6d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E020003"]
+			icon: {
+				components: {
+					"ftbquests:missing_item": "createbigcannons:sliding_breech_block"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "5A8C11099E020004"
+			rewards: [
+				{
+					count: 2
+					id: "2F9CED0CA2A704CF"
+					item: {
+						count: 2
+						id: "create:precision_mechanism"
+					}
+					type: "item"
+				}
+				{
+					id: "6A38495C38BECA1B"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [{
+				id: "346309AEC9056866"
+				item: { components: { "ftbquests:missing_item": "createbigcannons:sliding_breech_block" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 5.4d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5A8C11099E020003"]
+			icon: {
+				id: "createbigcannons:cannon_mount"
+			}
+			id: "5A8C11099E020005"
+			rewards: [
+				{
+					count: 4
+					id: "14617862A20714C8"
+					item: {
+						count: 4
+						id: "create:brass_casing"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "77631D607523C314"
+					item: {
+						count: 16
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "2EC193FAAE596999"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [{
+				id: "236A5137640C9B5B"
+				item: { count: 1, id: "createbigcannons:cannon_mount" }
+				type: "item"
+			}]
+			x: 5.4d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"5A8C11099E020004"
+				"5A8C11099E020005"
+			]
+			icon: {
+				id: "createbigcannons:solid_shot"
+			}
+			id: "5A8C11099E020006"
+			rewards: [
+				{
+					count: 8
+					id: "4A8247C60E2E46DA"
+					item: {
+						count: 8
+						id: "minecraft:tnt"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "31D93D312609F7DA"
+					item: {
+						count: 64
+						id: "minecraft:gunpowder"
+					}
+					type: "item"
+				}
+				{
+					id: "4168E4B9A523EB23"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+			]
+			tasks: [
+				{
+					id: "1755CBE8E4D85A91"
+					item: { count: 1, id: "createbigcannons:solid_shot" }
+					type: "item"
+				}
+				{
+					id: "7AA536DAE6CB3AD0"
+					item: { count: 1, id: "createbigcannons:ap_shot" }
+					type: "item"
+				}
+			]
+			x: 7.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E020002"]
+			icon: {
+				id: "createbigcannons:bronze_autocannon_barrel"
+			}
+			id: "5A8C11099E020007"
+			rewards: [
+				{
+					count: 16
+					id: "72B4340426022482"
+					item: {
+						count: 16
+						id: "createbigcannons:autocannon_cartridge"
+					}
+					type: "item"
+				}
+				{
+					id: "1E9BA5A0E3B375EC"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [{
+				id: "44E35A8499146D03"
+				item: { count: 1, id: "createbigcannons:bronze_autocannon_barrel" }
+				type: "item"
+			}]
+			x: 3.6d
+			y: -2.2d
+		}
+		{
+			dependencies: ["5A8C11099E020007"]
+			icon: {
+				id: "createbigcannons:autocannon_ammo_container"
+			}
+			id: "5A8C11099E020008"
+			rewards: [
+				{
+					count: 32
+					id: "0A03A1A343FEF466"
+					item: {
+						count: 32
+						id: "createbigcannons:ap_autocannon_round"
+					}
+					type: "item"
+				}
+				{
+					id: "2B9547BDDD532C74"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+			]
+			tasks: [{
+				id: "48071DBE874BEAE5"
+				item: { count: 1, id: "createbigcannons:autocannon_ammo_container" }
+				type: "item"
+			}]
+			x: 5.4d
+			y: -2.2d
+		}
+		{
+			dependencies: ["5A8C11099E020006"]
+			icon: {
+				id: "createbigcannons:he_shell"
+			}
+			id: "5A8C11099E020009"
+			rewards: [
+				{
+					count: 2
+					id: "26DF2BA15A31F51A"
+					item: {
+						count: 2
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "2AB97E46DF7CB6C2"
+					item: {
+						count: 4
+						id: "create:brass_block"
+					}
+					type: "item"
+				}
+				{
+					id: "7F44A5136B60D717"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+			]
+			shape: "challenge"
+			size: 1.5d
+			tasks: [{
+				id: "2A757174E1BE3C11"
+				item: { count: 1, id: "createbigcannons:he_shell" }
+				type: "item"
+			}]
+			x: 7.2d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5A8C11099E020002"]
+			icon: {
+				components: {
+					"ftbquests:missing_item": "createbigcannons:drop_mortar_end"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "5A8C11099E020010"
+			rewards: [
+				{
+					count: 32
+					id: "2B007153CEF87C1B"
+					item: {
+						count: 32
+						id: "minecraft:gunpowder"
+					}
+					type: "item"
+				}
+				{
+					id: "35B96FDDE5368AC6"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			tasks: [{
+				id: "08D10B25A68FD3BF"
+				type: "checkmark"
+			}]
+			x: 3.6d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5A8C11099E020010"]
+			icon: {
+				id: "createbigcannons:mortar_stone"
+			}
+			id: "5A8C11099E020011"
+			rewards: [
+				{
+					count: 4
+					id: "02B74F7F15D74B5B"
+					item: {
+						count: 4
+						id: "minecraft:tnt"
+					}
+					type: "item"
+				}
+				{
+					id: "6EF0053893458F00"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			tasks: [{
+				id: "2A3F754C16F61C1E"
+				item: { count: 1, id: "createbigcannons:mortar_stone" }
+				type: "item"
+			}]
+			x: 5.4d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5A8C11099E020006"]
+			icon: {
+				id: "createbigcannons:impact_fuze"
+			}
+			id: "5A8C11099E020012"
+			rewards: [
+				{
+					count: 2
+					id: "2E8B90FC64706418"
+					item: {
+						count: 2
+						id: "create:precision_mechanism"
+					}
+					type: "item"
+				}
+				{
+					id: "31BADE1FCA2AA21D"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [{
+				id: "593F5A910CD2E938"
+				item: { count: 1, id: "createbigcannons:impact_fuze" }
+				type: "item"
+			}]
+			x: 7.2d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A8C11099E020006"]
+			icon: {
+				id: "create:mechanical_piston"
+			}
+			id: "5A8C11099E020013"
+			rewards: [
+				{
+					count: 4
+					id: "49749685534D351B"
+					item: {
+						count: 4
+						id: "create:brass_casing"
+					}
+					type: "item"
+				}
+				{
+					id: "180A4EDFE31A38CD"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+			]
+			tasks: [{
+				id: "7A72D183B9528A05"
+				type: "checkmark"
+			}]
+			x: 8.8d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E020008"]
+			icon: {
+				components: {
+					"ftbquests:missing_item": "createbigcannons:autocannon_recoil_spring"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "5A8C11099E020014"
+			rewards: [
+				{
+					count: 64
+					id: "0545DC8584032D46"
+					item: {
+						count: 64
+						id: "createbigcannons:ap_autocannon_round"
+					}
+					type: "item"
+				}
+				{
+					id: "332FF28BA75A32DC"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			tasks: [{
+				id: "2A6A0CEF56DDC2BB"
+				item: { components: { "ftbquests:missing_item": "createbigcannons:autocannon_recoil_spring" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 8.8d
+			y: -2.2d
+		}
+		{
+			dependencies: ["5A8C11099E020002"]
+			icon: {
+				id: "createbigcannons:cast_iron_cannon_chamber"
+			}
+			id: "5A8C11099E020015"
+			rewards: [
+				{
+					count: 4
+					id: "5CE2CE2C6DB25846"
+					item: {
+						count: 4
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1656CF11954143F4"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [{
+				id: "4FAAEE12500DD47A"
+				type: "checkmark"
+			}]
+			x: 1.8d
+			y: 1.8d
+		}
+		{
+			dependencies: ["5A8C11099E020002"]
+			icon: {
+				id: "createbigcannons:steel_cannon_chamber"
+			}
+			id: "5A8C11099E020016"
+			rewards: [
+				{
+					id: "7D5A6A2CA023F051"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "332E719732105AB8"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [{
+				id: "7836364D23D64B51"
+				type: "checkmark"
+			}]
+			x: 1.8d
+			y: -1.8d
+		}
+		{
+			dependencies: ["5A8C11099E020003"]
+			icon: {
+				id: "createbigcannons:cannon_drill"
+			}
+			id: "5A8C11099E020017"
+			rewards: [
+				{
+					count: 2
+					id: "0EA165A239824962"
+					item: {
+						count: 2
+						id: "create:precision_mechanism"
+					}
+					type: "item"
+				}
+				{
+					id: "3CF42BD7C11B9424"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [{
+				id: "663E72BB5E4B49B6"
+				type: "checkmark"
+			}]
+			x: 5.4d
+			y: 3.2d
+		}
+		{
+			dependencies: ["5A8C11099E020017"]
+			icon: {
+				id: "createbigcannons:cannon_mount"
+			}
+			id: "5A8C11099E020018"
+			rewards: [
+				{
+					count: 2
+					id: "354F7C8F5690BDDF"
+					item: {
+						count: 2
+						id: "create:brass_block"
+					}
+					type: "item"
+				}
+				{
+					id: "2A750BAE6E66F612"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+			]
+			tasks: [{
+				id: "652D2E09B8037540"
+				type: "checkmark"
+			}]
+			x: 7.2d
+			y: 3.2d
+		}
+		{
+			dependencies: ["5A8C11099E020006"]
+			icon: {
+				id: "createbigcannons:bag_of_grapeshot"
+			}
+			id: "5A8C11099E020019"
+			rewards: [
+				{
+					count: 64
+					id: "624F3192165D5441"
+					item: {
+						count: 64
+						id: "minecraft:gunpowder"
+					}
+					type: "item"
+				}
+				{
+					id: "743EF7CA8046BAA1"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [{
+				id: "15BDADA0A4CC3B55"
+				item: { count: 1, id: "createbigcannons:bag_of_grapeshot" }
+				type: "item"
+			}]
+			x: 8.8d
+			y: 1.8d
+		}
+		{
+			dependencies: ["5A8C11099E020006"]
+			icon: {
+				id: "createbigcannons:powder_charge"
+			}
+			id: "5A8C11099E020020"
+			rewards: [
+				{
+					count: 16
+					id: "2FD0BC67F3A53B77"
+					item: {
+						count: 16
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+				{
+					id: "31A826B9570980D1"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [{
+				id: "70FB808400E84641"
+				type: "checkmark"
+			}]
+			x: 8.8d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"5A8C11099E020009"
+				"5A8C11099E020018"
+			]
+			icon: {
+				id: "createbigcannons:solid_shot"
+			}
+			id: "5A8C11099E020021"
+			rewards: [
+				{
+					count: 4
+					id: "2644212018542137"
+					item: {
+						count: 4
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "553EC91072B102A5"
+					item: {
+						count: 8
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					id: "2AD4983A160ABA3B"
+					type: "xp_levels"
+					xp_levels: 60
+				}
+			]
+			shape: "heart"
+			size: 1.8d
+			tasks: [{
+				id: "2DC672AD069E2EFA"
+				type: "checkmark"
+			}]
+			x: 10.5d
+			y: 0.0d
+		}
+	]
+}

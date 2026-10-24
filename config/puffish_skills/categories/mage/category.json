@@ -1,0 +1,15 @@
+{
+  "title": {
+    "text": "Путь Мага"
+  },
+  "description": {
+    "text": "Тайны заклинаний Ars Nouveau, духовная сила, мобильность и магическая защита."
+  },
+  "icon": {
+    "type": "item",
+    "data": {
+      "item": "ars_nouveau:source_gem"
+    }
+  },
+  "background": "minecraft:textures/block/amethyst_block.png"
+}

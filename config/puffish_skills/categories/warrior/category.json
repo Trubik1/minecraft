@@ -1,0 +1,15 @@
+{
+  "title": {
+    "text": "Путь Воина"
+  },
+  "description": {
+    "text": "Боевое искусство, сила атаки, броня и выживание в жестоких битвах."
+  },
+  "icon": {
+    "type": "item",
+    "data": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "background": "minecraft:textures/block/nether_bricks.png"
+}

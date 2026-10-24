@@ -1,0 +1,173 @@
+{
+  "miner_root": {
+    "title": {
+      "text": "Горное чутьё"
+    },
+    "description": {
+      "text": "Базовые навыки шахтёра (+2.0 к скорости копания)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:player.block_break_speed",
+          "value": 2.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "miner_move1": {
+    "title": {
+      "text": "Бодрый шаг"
+    },
+    "description": {
+      "text": "Легкий бег по шахтам (+8% к скорости перемещения)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_boots"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.movement_speed",
+          "value": 0.08,
+          "operation": "multiply_base"
+        }
+      }
+    ]
+  },
+  "miner_speed2": {
+    "title": {
+      "text": "Крепкая кирка"
+    },
+    "description": {
+      "text": "Кирка рассекает породу быстрее (+4.0 к скорости копания)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:diamond_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:player.block_break_speed",
+          "value": 4.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "miner_stamina": {
+    "title": {
+      "text": "Глубинный геолог"
+    },
+    "description": {
+      "text": "Выносливость в опасных шахтах (+4 HP и +2 брони)"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:golden_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 2,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 4.0,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor",
+          "value": 2.0,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
+  "miner_master": {
+    "title": {
+      "text": "Владыка Недр"
+    },
+    "description": {
+      "text": "Крушит любой обсидиан и глубинную руду (+8.0 к скорости копания и +10% к скорости ходьбы)!"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:netherite_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "challenge"
+      }
+    },
+    "cost": 3,
+    "rewards": [
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:player.block_break_speed",
+          "value": 8.0,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "attribute",
+        "data": {
+          "attribute": "minecraft:generic.movement_speed",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
+  }
+}

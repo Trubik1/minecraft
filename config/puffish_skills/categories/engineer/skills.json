@@ -1,0 +1,23 @@
+{
+  "e_root": {
+    "x": 0,
+    "y": 0,
+    "definition": "eng_root",
+    "root": true
+  },
+  "e_suit": {
+    "x": -1,
+    "y": -1,
+    "definition": "eng_suit"
+  },
+  "e_reflexes": {
+    "x": 1,
+    "y": -1,
+    "definition": "eng_reflexes"
+  },
+  "e_master": {
+    "x": 0,
+    "y": -2,
+    "definition": "eng_master"
+  }
+}

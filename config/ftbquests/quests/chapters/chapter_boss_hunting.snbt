@@ -1,0 +1,795 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter_boss_hunting"
+	group: "1643FF0B14990565"
+	icon: {
+		id: "cataclysm:abyssal_sacrifice"
+	}
+	id: "5A8C11099EFA0001"
+	images: [ ]
+	order_index: 5
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:writable_book"
+			}
+			id: "5A8C11099E010001"
+			rewards: [
+				{
+					count: 5
+					id: "41D7B7FD80D7C7D7"
+					item: {
+						count: 5
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "5EAE94F17DF9DA40"
+					item: {
+						count: 16
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					id: "471DC9EC44BDDCFD"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "7B74142B36F68F69"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E010001"]
+			icon: {
+				components: {
+					"ftbquests:missing_item": "cataclysm:monstrosity_blade"
+				}
+				id: "ftbquests:missing_item"
+			}
+			id: "5A8C11099E010002"
+			rewards: [
+				{
+					count: 2
+					id: "2F3C0C2852B5205E"
+					item: {
+						count: 2
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "31207FC8AA000CC2"
+					item: {
+						count: 2
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					id: "56C4792730BB1ACB"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			tasks: [{
+				id: "29F24E016F4BA807"
+				item: { components: { "ftbquests:missing_item": "cataclysm:monstrosity_blade" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A8C11099E010002"]
+			icon: {
+				id: "cataclysm:ignitium_ingot"
+			}
+			id: "5A8C11099E010003"
+			rewards: [
+				{
+					id: "52BE6CA358650FED"
+					item: {
+						count: 1
+						id: "cataclysm:ignitium_block"
+					}
+					type: "item"
+				}
+				{
+					id: "0F2198FA40DAEE02"
+					item: {
+						count: 1
+						id: "minecraft:nether_star"
+					}
+					type: "item"
+				}
+				{
+					id: "207D094881AFED0A"
+					type: "xp_levels"
+					xp_levels: 40
+				}
+			]
+			tasks: [{
+				id: "7FE58B9C07748739"
+				item: { count: 1, id: "cataclysm:ignitium_ingot" }
+				type: "item"
+			}]
+			x: 3.8d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A8C11099E010001"]
+			icon: {
+				id: "cataclysm:witherite_ingot"
+			}
+			id: "5A8C11099E010004"
+			rewards: [
+				{
+					count: 3
+					id: "18F485B2726F4C79"
+					item: {
+						count: 3
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "38632FE2F6066EDB"
+					item: {
+						count: 8
+						id: "minecraft:redstone_block"
+					}
+					type: "item"
+				}
+				{
+					id: "7E94C031DC94D756"
+					type: "xp_levels"
+					xp_levels: 35
+				}
+			]
+			tasks: [{
+				id: "3DB9FA8B28E8157D"
+				item: { count: 1, id: "cataclysm:witherite_ingot" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5A8C11099E010004"]
+			icon: {
+				id: "cataclysm:abyssal_sacrifice"
+			}
+			id: "5A8C11099E010005"
+			rewards: [
+				{
+					id: "59096E07C0832BCC"
+					item: {
+						count: 1
+						id: "minecraft:heart_of_the_sea"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "61D35118C278F602"
+					item: {
+						count: 4
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					id: "7FD212C7EDE8F9FC"
+					type: "xp_levels"
+					xp_levels: 45
+				}
+			]
+			tasks: [{
+				id: "55786BE08ED37980"
+				item: { count: 1, id: "cataclysm:abyssal_sacrifice" }
+				type: "item"
+			}]
+			x: 3.8d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"5A8C11099E010003"
+				"5A8C11099E010005"
+			]
+			icon: {
+				id: "cataclysm:remnant_skull"
+			}
+			id: "5A8C11099E010006"
+			rewards: [
+				{
+					count: 8
+					id: "0EE7FDBA55EAA623"
+					item: {
+						count: 8
+						id: "minecraft:gold_block"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "46F2B1E275AD2C9D"
+					item: {
+						count: 4
+						id: "minecraft:ancient_debris"
+					}
+					type: "item"
+				}
+				{
+					id: "7D9DFE8B98228B7F"
+					type: "xp_levels"
+					xp_levels: 40
+				}
+			]
+			tasks: [{
+				id: "06F2E32B0CEA524F"
+				item: { count: 1, id: "cataclysm:sandstorm_in_a_bottle" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E010006"]
+			icon: {
+				id: "cataclysm:void_core"
+			}
+			id: "5A8C11099E010007"
+			rewards: [
+				{
+					id: "3B6E6078C500EE80"
+					item: {
+						count: 1
+						id: "minecraft:dragon_head"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "5EDD381B45AD9641"
+					item: {
+						count: 2
+						id: "minecraft:nether_star"
+					}
+					type: "item"
+				}
+				{
+					id: "089B7B5B8B6567E7"
+					item: {
+						count: 1
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					id: "50AEE87F9651DC2F"
+					type: "xp_levels"
+					xp_levels: 60
+				}
+			]
+			shape: "challenge"
+			size: 1.5d
+			tasks: [{
+				id: "223BE5F407B066EA"
+				item: { count: 1, id: "cataclysm:void_core" }
+				type: "item"
+			}]
+			x: 7.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E010005"]
+			icon: {
+				id: "minecraft:prismarine"
+			}
+			id: "5A8C11099E010013"
+			rewards: [
+				{
+					count: 16
+					id: "62930E3D60AB0D97"
+					item: {
+						count: 16
+						id: "minecraft:sea_lantern"
+					}
+					type: "item"
+				}
+				{
+					id: "0215F6B8C7F715D0"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+			]
+			tasks: [{
+				id: "4D14D551732C43E1"
+				type: "checkmark"
+			}]
+			x: 5.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5A8C11099E010003"]
+			icon: {
+				id: "cataclysm:witherite_block"
+			}
+			id: "5A8C11099E010014"
+			rewards: [
+				{
+					count: 3
+					id: "509B6834F3CB4FD3"
+					item: {
+						count: 3
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "55F47C6E92A94E02"
+					type: "xp_levels"
+					xp_levels: 35
+				}
+			]
+			tasks: [{
+				id: "6736CB9DE91FC764"
+				item: { count: 1, id: "cataclysm:witherite_ingot" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A8C11099E010001"]
+			icon: {
+				id: "twilightforest:naga_scale"
+			}
+			id: "5A8C11099E010008"
+			rewards: [
+				{
+					count: 8
+					id: "364550E814150390"
+					item: {
+						count: 8
+						id: "twilightforest:naga_scale"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "70BD940AEEA109ED"
+					item: {
+						count: 4
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+				{
+					id: "4EF1232A9E083B1E"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			tasks: [{
+				id: "4C73FD543FC7F6E5"
+				item: { count: 1, id: "twilightforest:naga_scale" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A8C11099E010008"]
+			icon: {
+				id: "twilightforest:twilight_scepter"
+			}
+			id: "5A8C11099E010009"
+			rewards: [
+				{
+					count: 4
+					id: "6E37CE2421DC23E6"
+					item: {
+						count: 4
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "68BF22E8CC97BE52"
+					item: {
+						count: 4
+						id: "minecraft:lapis_block"
+					}
+					type: "item"
+				}
+				{
+					id: "673D39BC56E90CB6"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+			]
+			tasks: [{
+				id: "0FB593BCD4C30C76"
+				item: { count: 1, id: "twilightforest:twilight_scepter" }
+				type: "item"
+			}]
+			x: -3.8d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A8C11099E010009"]
+			icon: {
+				id: "twilightforest:fiery_blood"
+			}
+			id: "5A8C11099E010010"
+			rewards: [
+				{
+					count: 8
+					id: "2588477CEC84E45A"
+					item: {
+						count: 8
+						id: "twilightforest:fiery_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "5CFB87606D15E9CF"
+					item: {
+						count: 16
+						id: "twilightforest:hydra_chop"
+					}
+					type: "item"
+				}
+				{
+					id: "1808ADD86709E897"
+					type: "xp_levels"
+					xp_levels: 35
+				}
+			]
+			tasks: [{
+				id: "4238AB9268E33126"
+				item: { count: 1, id: "twilightforest:fiery_blood" }
+				type: "item"
+			}]
+			x: -5.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A8C11099E010008"]
+			icon: {
+				id: "twilightforest:carminite"
+			}
+			id: "5A8C11099E010011"
+			rewards: [
+				{
+					count: 16
+					id: "1588B7AFB07F3E7B"
+					item: {
+						count: 16
+						id: "minecraft:ghast_tear"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "58CD8E3B3DB52D46"
+					item: {
+						count: 8
+						id: "twilightforest:fiery_tears"
+					}
+					type: "item"
+				}
+				{
+					id: "0BF82788E25EE2DA"
+					type: "xp_levels"
+					xp_levels: 35
+				}
+			]
+			tasks: [{
+				id: "10831740A1485EF3"
+				item: { count: 1, id: "twilightforest:carminite" }
+				type: "item"
+			}]
+			x: -3.8d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5A8C11099E010011"]
+			icon: {
+				id: "twilightforest:snow_queen_trophy"
+			}
+			id: "5A8C11099E010012"
+			rewards: [
+				{
+					count: 4
+					id: "0E4CFED12A9D559D"
+					item: {
+						count: 4
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "5AFB227B3C5828A7"
+					item: {
+						count: 64
+						id: "minecraft:packed_ice"
+					}
+					type: "item"
+				}
+				{
+					id: "2087128A218FFC22"
+					type: "xp_levels"
+					xp_levels: 45
+				}
+			]
+			shape: "challenge"
+			size: 1.3d
+			tasks: [{
+				id: "6627DE564B5E9CE0"
+				item: { count: 1, id: "twilightforest:triple_bow" }
+				type: "item"
+			}]
+			x: -5.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5A8C11099E010001"]
+			icon: {
+				id: "minecraft:spyglass"
+			}
+			id: "5A8C11099E010015"
+			rewards: [
+				{
+					count: 4
+					id: "161541A47ACE42CD"
+					item: {
+						count: 4
+						id: "minecraft:gold_block"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "014FC37F08BAEA45"
+					item: {
+						count: 4
+						id: "minecraft:emerald_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1F46F41414E9CFCB"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [{
+				id: "784320A60EF1A1F1"
+				item: { count: 1, id: "minecraft:spyglass" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["5A8C11099E010015"]
+			icon: {
+				id: "minecraft:cherry_sapling"
+			}
+			id: "5A8C11099E010016"
+			rewards: [
+				{
+					count: 2
+					id: "1E6C428C6173987A"
+					item: {
+						count: 2
+						id: "minecraft:enchanted_golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "5351A8F252EFBCCE"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+			]
+			tasks: [{
+				id: "49836B2521CDE4A8"
+				type: "checkmark"
+			}]
+			x: 1.8d
+			y: -3.2d
+		}
+		{
+			dependencies: ["5A8C11099E010016"]
+			icon: {
+				id: "create:brass_block"
+			}
+			id: "5A8C11099E010017"
+			rewards: [
+				{
+					count: 4
+					id: "0A5411E84F65D5C5"
+					item: {
+						count: 4
+						id: "create:precision_mechanism"
+					}
+					type: "item"
+				}
+				{
+					id: "392F795F47302C2F"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			tasks: [{
+				id: "6F634F74FEF5AC0F"
+				type: "checkmark"
+			}]
+			x: 3.6d
+			y: -3.2d
+		}
+		{
+			dependencies: ["5A8C11099E010017"]
+			icon: {
+				id: "minecraft:elytra"
+			}
+			id: "5A8C11099E010018"
+			rewards: [
+				{
+					count: 2
+					id: "456828DCB699D5A0"
+					item: {
+						count: 2
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					id: "3C040E97B9546914"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+			]
+			shape: "challenge"
+			size: 1.4d
+			tasks: [{
+				id: "754603D2EDB5497C"
+				type: "checkmark"
+			}]
+			x: 5.4d
+			y: -3.2d
+		}
+		{
+			dependencies: ["5A8C11099E010001"]
+			icon: {
+				id: "minecraft:torch"
+			}
+			id: "5A8C11099E010019"
+			rewards: [
+				{
+					count: 32
+					id: "3A104321A0721943"
+					item: {
+						count: 32
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "54537F87E1800188"
+					item: {
+						count: 16
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "7758FB7C939351C8"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [{
+				id: "2166460775C29EA1"
+				item: { count: 1, id: "minecraft:torch" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5A8C11099E010019"]
+			icon: {
+				id: "minecraft:golden_apple"
+			}
+			id: "5A8C11099E010020"
+			rewards: [
+				{
+					count: 8
+					id: "10C491F7C3785CEC"
+					item: {
+						count: 8
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "63339273B02A1BE4"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [{
+				id: "09400184904FCB63"
+				item: { count: 1, id: "minecraft:golden_apple" }
+				type: "item"
+			}]
+			x: 1.8d
+			y: 3.2d
+		}
+		{
+			dependencies: ["5A8C11099E010020"]
+			icon: {
+				id: "minecraft:chest"
+			}
+			id: "5A8C11099E010021"
+			rewards: [
+				{
+					count: 2
+					id: "76B8456C0ABEBCBB"
+					item: {
+						count: 2
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 32
+					id: "23CC67000712D610"
+					item: {
+						count: 32
+						id: "minecraft:experience_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "7EB48862D35F0A1A"
+					type: "xp_levels"
+					xp_levels: 35
+				}
+			]
+			shape: "challenge"
+			size: 1.3d
+			tasks: [{
+				id: "0FD1A4B953D79228"
+				item: { count: 1, id: "minecraft:diamond_block" }
+				type: "item"
+			}]
+			x: 3.6d
+			y: 3.2d
+		}
+	]
+}
