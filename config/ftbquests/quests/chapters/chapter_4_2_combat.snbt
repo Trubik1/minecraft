@@ -4,7 +4,7 @@
 	filename: "chapter_4_2_combat"
 	group: "1643FF0B14990565"
 	icon: {
-		id: "epicfight:diamond_greatsword"
+		id: "cataclysm:the_incinerator"
 	}
 	id: "05E39957AAD448D6"
 	images: [ ]
@@ -13,14 +13,24 @@
 	quest_links: [ ]
 	quests: [
 		{
+			description: [
+				"Мод Epic Fight полностью преображает боевую систему Minecraft, превращая сражения в динамичный экшен со стойками, выносливостью и спецударами!",
+				"",
+				"§6Основы боевого режима:§r",
+				"• Клавиша §e[R]§r (по умолчанию) — переключение между мирным и боевым режимом.",
+				"• В боевом режиме появляется шкала Выносливости (Stamina).",
+				"• Нажатие §e[Пробел]§r во время движения — уворот/перекат (Roll) с кадрами неуязвимости (i-frames).",
+				"• Каждое оружие обладает уникальными анимациями, комбо-сериями атак и скоростью.",
+				"• Нанесение ударов накапливает шкалу спецататора — мощнейшего особого приема!"
+			]
 			icon: {
 				id: "epicfight:iron_greatsword"
 			}
-			id: "5A8C11099E060001"
+			id: "4B00000000000001"
 			rewards: [
 				{
 					count: 16
-					id: "504CBAAA0EA45565"
+					id: "4B0000000000000A"
 					item: {
 						count: 16
 						id: "minecraft:cooked_beef"
@@ -28,7 +38,7 @@
 					type: "item"
 				}
 				{
-					id: "52AA5C456CB82DE1"
+					id: "4B0000000000000B"
 					type: "xp_levels"
 					xp_levels: 5
 				}
@@ -36,1069 +46,1009 @@
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "5670B5717AA34269"
+				id: "4B0000000000000C"
+				title: "Я готов изучить боевые искусства!"
 				type: "checkmark"
 			}]
+			title: "Боевые искусства Epic Fight"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["5A8C11099E060001"]
+			dependencies: ["4B00000000000001"]
+			description: [
+				"Книги навыков позволяют изучать пассивные и активные боевые способности: парирование щитом, усиленные рывки, контратаки и финишеры.",
+				"",
+				"§6Как изучать и применять навыки:§r",
+				"1. Возьмите Книгу навыков в руку и изучите её.",
+				"2. Откройте интерфейс навыков Epic Fight (клавиша §e[K]§r или значок в инвентаре).",
+				"3. Перетащите изученную способность в слот Dodge, Guard, Passive или Special."
+			]
 			icon: {
-				id: "minecraft:iron_chestplate"
+				id: "epicfight:skillbook"
 			}
-			id: "5A8C11099E060002"
+			id: "4B00000000000002"
 			rewards: [
 				{
 					count: 8
-					id: "73FFE15F96C18E92"
+					id: "4B0000000000000D"
+					item: {
+						count: 8
+						id: "minecraft:lapis_lazuli"
+					}
+					type: "item"
+				}
+				{
+					id: "4B0000000000000E"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "4B0000000000000F"
+				item: { count: 1, id: "epicfight:skillbook" }
+				type: "item"
+			}]
+			title: "Книга боевых навыков (Skill Book)"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4B00000000000001"]
+			description: [
+				"Двуручные мечи обладают колоссальной разрушительной силой и гигантским радиусом поражения.",
+				"",
+				"Широкие размашистые взмахи наносят урон сразу всем врагам в полукруге, сбивая их с ног и пробивая щиты!"
+			]
+			icon: {
+				id: "epicfight:iron_greatsword"
+			}
+			id: "4B00000000000010"
+			rewards: [
+				{
+					count: 8
+					id: "4B0000000000001A"
 					item: {
 						count: 8
 						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
-				{
-					id: "385CA80F941AB196"
-					type: "xp_levels"
-					xp_levels: 5
-				}
 			]
 			tasks: [{
-				id: "67618D88F2AE7918"
-				item: { count: 1, id: "minecraft:iron_chestplate" }
-				type: "item"
-			}]
-			x: -1.8d
-			y: -1.0d
-		}
-		{
-			dependencies: ["5A8C11099E060002"]
-			icon: {
-				id: "minecraft:shield"
-			}
-			id: "5A8C11099E060003"
-			rewards: [
-				{
-					count: 2
-					id: "4E7ABF53B4D04997"
-					item: {
-						count: 2
-						id: "minecraft:iron_block"
-					}
-					type: "item"
-				}
-				{
-					id: "2191E153D3D74EEA"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "42E1F549A8A004E2"
-				item: { count: 1, id: "minecraft:shield" }
-				type: "item"
-			}]
-			x: -3.6d
-			y: -1.0d
-		}
-		{
-			dependencies: ["5A8C11099E060002"]
-			icon: {
-				id: "minecraft:feather"
-			}
-			id: "5A8C11099E060004"
-			rewards: [
-				{
-					count: 2
-					id: "2468097F55908469"
-					item: {
-						count: 2
-						id: "minecraft:golden_apple"
-					}
-					type: "item"
-				}
-				{
-					id: "6EBEA16182D2FFCF"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "303E783C4F9DE224"
-				type: "checkmark"
-			}]
-			x: -1.8d
-			y: -2.5d
-		}
-		{
-			dependencies: ["5A8C11099E060001"]
-			icon: {
-				id: "epicfight:iron_dagger"
-			}
-			id: "5A8C11099E060005"
-			rewards: [
-				{
-					count: 8
-					id: "156C15187D9571C9"
-					item: {
-						count: 8
-						id: "minecraft:gold_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "4FFE00E6695C9450"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "71896886A95887F2"
-				item: { count: 1, id: "epicfight:iron_dagger" }
-				type: "item"
-			}]
-			x: 1.8d
-			y: -2.0d
-		}
-		{
-			dependencies: ["5A8C11099E060005"]
-			icon: {
-				id: "epicfight:diamond_dagger"
-			}
-			id: "5A8C11099E060006"
-			rewards: [
-				{
-					count: 4
-					id: "5A76CE1E168FBDFA"
-					item: {
-						count: 4
-						id: "minecraft:diamond"
-					}
-					type: "item"
-				}
-				{
-					id: "4239AA3B6085F67D"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			tasks: [{
-				id: "701C27DF1638CFAD"
-				item: { count: 1, id: "epicfight:diamond_dagger" }
-				type: "item"
-			}]
-			x: 3.6d
-			y: -2.0d
-		}
-		{
-			dependencies: ["5A8C11099E060001"]
-			icon: {
-				id: "epicfight:iron_greatsword"
-			}
-			id: "5A8C11099E060007"
-			rewards: [
-				{
-					count: 4
-					id: "5AA41A01D130DCD6"
-					item: {
-						count: 4
-						id: "minecraft:iron_block"
-					}
-					type: "item"
-				}
-				{
-					id: "2FA947B4B29DAB4A"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "5B0EA01EAFFF019B"
+				id: "4B0000000000001B"
 				item: { count: 1, id: "epicfight:iron_greatsword" }
 				type: "item"
 			}]
-			x: 1.8d
-			y: -0.7d
+			title: "Железный двуручный меч (Greatsword)"
+			x: 2.5d
+			y: -2.0d
 		}
 		{
-			dependencies: ["5A8C11099E060007"]
+			dependencies: ["4B00000000000010"]
+			description: [
+				"Усиленный алмазный двуручник наносит сокрушительный урон любому чудовищу."
+			]
 			icon: {
 				id: "epicfight:diamond_greatsword"
 			}
-			id: "5A8C11099E060008"
+			id: "4B00000000000011"
 			rewards: [
 				{
-					count: 6
-					id: "486802E2D57F7495"
+					count: 4
+					id: "4B0000000000001C"
 					item: {
-						count: 6
+						count: 4
 						id: "minecraft:diamond"
 					}
 					type: "item"
 				}
 				{
-					id: "7CC8E6BC300FC574"
+					id: "4B0000000000001D"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [{
+				id: "4B0000000000001E"
+				item: { count: 1, id: "epicfight:diamond_greatsword" }
+				type: "item"
+			}]
+			title: "Алмазный двуручный меч"
+			x: 4.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4B00000000000011"]
+			description: [
+				"Максимальное воплощение силы тяжелого клинка. Спецатака разносит врагов сокрушительным нисходящим ударом!"
+			]
+			icon: {
+				id: "epicfight:netherite_greatsword"
+			}
+			id: "4B00000000000012"
+			rewards: [
+				{
+					count: 2
+					id: "4B0000000000001F"
+					item: {
+						count: 2
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "4B0000000000002A"
 					type: "xp_levels"
 					xp_levels: 20
 				}
 			]
+			shape: "diamond"
+			size: 1.25d
 			tasks: [{
-				id: "13850268768C4443"
-				item: { count: 1, id: "epicfight:diamond_greatsword" }
+				id: "4B0000000000002B"
+				item: { count: 1, id: "epicfight:netherite_greatsword" }
 				type: "item"
 			}]
-			x: 3.6d
-			y: -0.7d
+			title: "Незеритовый двуручный меч"
+			x: 6.5d
+			y: -2.0d
 		}
 		{
-			dependencies: ["5A8C11099E060001"]
+			dependencies: ["4B00000000000001"]
+			description: [
+				"Рыцарский полутораручный меч. Идеальный баланс между дистанцией клинка, скоростью взмаха и защитными стойками.",
+				"",
+				"Позволяет блокировать удары кликом ПКМ прямо клинком!"
+			]
 			icon: {
 				id: "epicfight:iron_longsword"
 			}
-			id: "5A8C11099E060009"
+			id: "4B00000000000013"
 			rewards: [
 				{
-					count: 16
-					id: "62F280FFC052AD2A"
+					count: 8
+					id: "4B0000000000002C"
 					item: {
-						count: 16
+						count: 8
 						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
-				{
-					id: "6C0023E533FCE0A8"
-					type: "xp_levels"
-					xp_levels: 10
-				}
 			]
 			tasks: [{
-				id: "527BCD45173965D4"
+				id: "4B0000000000002D"
 				item: { count: 1, id: "epicfight:iron_longsword" }
 				type: "item"
 			}]
-			x: 1.8d
-			y: 0.7d
+			title: "Железный длинный меч (Longsword)"
+			x: 2.5d
+			y: -0.7d
 		}
 		{
-			dependencies: ["5A8C11099E060009"]
+			dependencies: ["4B00000000000013"]
+			description: [
+				"Алмазный длинный меч обладает увеличенной прочностью и уроном, идеально подходя для дуэлей с боссами."
+			]
 			icon: {
 				id: "epicfight:diamond_longsword"
 			}
-			id: "5A8C11099E060010"
+			id: "4B00000000000014"
 			rewards: [
 				{
 					count: 4
-					id: "66DD6BF321CC4A0C"
+					id: "4B0000000000002E"
 					item: {
 						count: 4
 						id: "minecraft:diamond"
 					}
 					type: "item"
 				}
-				{
-					id: "2E726372754C561F"
-					type: "xp_levels"
-					xp_levels: 15
-				}
 			]
 			tasks: [{
-				id: "355A05C95ACD557C"
+				id: "4B0000000000002F"
 				item: { count: 1, id: "epicfight:diamond_longsword" }
 				type: "item"
 			}]
-			x: 3.6d
-			y: 0.7d
+			title: "Алмазный длинный меч"
+			x: 4.5d
+			y: -0.7d
 		}
 		{
-			dependencies: ["5A8C11099E060001"]
+			dependencies: ["4B00000000000001"]
+			description: [
+				"Традиционный изогнутый клинок самураев. Молниеносные рубящие диагональные взмахи и скользящие увороты."
+			]
 			icon: {
 				id: "epicfight:iron_tachi"
 			}
-			id: "5A8C11099E060011"
+			id: "4B00000000000015"
 			rewards: [
 				{
-					count: 4
-					id: "0D43E267C77B68FF"
+					count: 8
+					id: "4B0000000000003A"
 					item: {
-						count: 4
-						id: "minecraft:lapis_block"
-					}
-					type: "item"
-				}
-				{
-					id: "0A325EDFD4107A41"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "4BC432ABBC8206F6"
-				item: { count: 1, id: "epicfight:iron_tachi" }
-				type: "item"
-			}]
-			x: 1.8d
-			y: 2.0d
-		}
-		{
-			dependencies: ["5A8C11099E060011"]
-			icon: {
-				id: "epicfight:diamond_tachi"
-			}
-			id: "5A8C11099E060012"
-			rewards: [
-				{
-					count: 4
-					id: "346D73A54C7B21C5"
-					item: {
-						count: 4
-						id: "minecraft:diamond"
-					}
-					type: "item"
-				}
-				{
-					id: "0F3CCD592F6D9C4C"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			tasks: [{
-				id: "4E489404C824CD93"
-				item: { count: 1, id: "epicfight:diamond_tachi" }
-				type: "item"
-			}]
-			x: 3.6d
-			y: 2.0d
-		}
-		{
-			dependencies: ["5A8C11099E060001"]
-			icon: {
-				id: "epicfight:iron_spear"
-			}
-			id: "5A8C11099E060013"
-			rewards: [
-				{
-					count: 12
-					id: "662916191113AA45"
-					item: {
-						count: 12
+						count: 8
 						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
+			]
+			tasks: [{
+				id: "4B0000000000003B"
+				item: { count: 1, id: "epicfight:iron_tachi" }
+				type: "item"
+			}]
+			title: "Железный тати (Tachi)"
+			x: 2.5d
+			y: 0.7d
+		}
+		{
+			dependencies: ["4B00000000000015"]
+			description: [
+				"Алмазный тати позволяет проводить стремительные комбо-атаки без потери выносливости."
+			]
+			icon: {
+				id: "epicfight:diamond_tachi"
+			}
+			id: "4B00000000000016"
+			rewards: [
 				{
-					id: "0B926B5FFCA50478"
-					type: "xp_levels"
-					xp_levels: 10
+					count: 4
+					id: "4B0000000000003C"
+					item: {
+						count: 4
+						id: "minecraft:diamond"
+					}
+					type: "item"
 				}
 			]
 			tasks: [{
-				id: "267CF6B5C4605DF3"
+				id: "4B0000000000003D"
+				item: { count: 1, id: "epicfight:diamond_tachi" }
+				type: "item"
+			}]
+			title: "Алмазный тати"
+			x: 4.5d
+			y: 0.7d
+		}
+		{
+			dependencies: ["4B00000000000016"]
+			description: [
+				"Вершина восточного фехтования!",
+				"",
+				"Спецатака Утигатаны позволяет выполнить легендарную технику Баттодзюцу (извлечение клинка из ножен на сверхзвуковой скорости) с колоссальным критическим уроном!"
+			]
+			icon: {
+				id: "epicfight:uchigatana"
+			}
+			id: "4B00000000000017"
+			rewards: [
+				{
+					count: 2
+					id: "4B0000000000003E"
+					item: {
+						count: 2
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "4B0000000000003F"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			shape: "diamond"
+			size: 1.25d
+			tasks: [{
+				id: "4B0000000000004A"
+				item: { count: 1, id: "epicfight:uchigatana" }
+				type: "item"
+			}]
+			title: "Утигатана (Uchigatana)"
+			x: 6.5d
+			y: 0.7d
+		}
+		{
+			dependencies: ["4B00000000000001"]
+			description: [
+				"Парные кинжалы берутся сразу в обе руки.",
+				"",
+				"Бешеная частота ударов и тройной урон при ударе в спину врага делают кинжалы грозным оружием в руках быстрого воина."
+			]
+			icon: {
+				id: "epicfight:iron_dagger"
+			}
+			id: "4B00000000000018"
+			rewards: [
+				{
+					count: 8
+					id: "4B0000000000004B"
+					item: {
+						count: 8
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "4B0000000000004C"
+				item: { count: 1, id: "epicfight:iron_dagger" }
+				type: "item"
+			}]
+			title: "Парные железные кинжалы (Daggers)"
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4B00000000000018"]
+			description: [
+				"Алмазные кинжалы моментально шинкуют врагов в капусту быстрыми крестовыми выпадами."
+			]
+			icon: {
+				id: "epicfight:diamond_dagger"
+			}
+			id: "4B00000000000019"
+			rewards: [
+				{
+					count: 4
+					id: "4B0000000000004D"
+					item: {
+						count: 4
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "4B0000000000004E"
+				item: { count: 1, id: "epicfight:diamond_dagger" }
+				type: "item"
+			}]
+			title: "Алмазные кинжалы"
+			x: 4.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4B00000000000001"]
+			description: [
+				"Длинное древковое оружие. Позволяет удерживать криперов, скелетов и боссов на безопасном расстоянии, прокалывая их защиту."
+			]
+			icon: {
+				id: "epicfight:iron_spear"
+			}
+			id: "4B00000000000020"
+			rewards: [
+				{
+					count: 8
+					id: "4B0000000000004F"
+					item: {
+						count: 8
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "4B0000000000005A"
 				item: { count: 1, id: "epicfight:iron_spear" }
 				type: "item"
 			}]
-			x: 1.5d
-			y: 3.0d
+			title: "Железное копье (Spear)"
+			x: 2.5d
+			y: 3.2d
 		}
 		{
-			dependencies: ["5A8C11099E060001"]
+			dependencies: ["4B00000000000001"]
+			description: [
+				"Стиль кулачного боя. Быстрые серии джебов, хуков и апперкотов ошеломляют противника и сбивают подготовку заклинаний."
+			]
 			icon: {
 				id: "epicfight:glove"
 			}
-			id: "5A8C11099E060014"
+			id: "4B00000000000021"
 			rewards: [
 				{
-					count: 16
-					id: "73F836C4EAC1B7CD"
+					count: 8
+					id: "4B0000000000005B"
 					item: {
-						count: 16
+						count: 8
 						id: "minecraft:leather"
 					}
 					type: "item"
 				}
-				{
-					id: "23626BA65D89B6B6"
-					type: "xp_levels"
-					xp_levels: 10
-				}
 			]
 			tasks: [{
-				id: "7D9D60DB87B65CDF"
+				id: "4B0000000000005C"
 				item: { count: 1, id: "epicfight:glove" }
 				type: "item"
 			}]
-			x: 1.5d
-			y: -3.0d
+			title: "Боевые перчатки (Glove)"
+			x: 2.5d
+			y: -3.2d
 		}
 		{
-			dependencies: ["5A8C11099E060008"]
-			icon: {
-				id: "wom:agony"
-			}
-			id: "5A8C11099E060015"
-			rewards: [
-				{
-					count: 2
-					id: "6E77BC6E5D935EED"
-					item: {
-						count: 2
-						id: "minecraft:netherite_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "703F97FD315DEF9E"
-					type: "xp_levels"
-					xp_levels: 25
-				}
+			dependencies: ["4B00000000000012"]
+			description: [
+				"Легендарный пылающий двуручный меч, выбиваемый из Незеритового Монстра (Netherite Monstrosity).",
+				"",
+				"Поджигает врагов и оставляет за собой пылающие полосы адского огня!"
 			]
-			tasks: [{
-				id: "31AF93C5C5EB148C"
-				item: { count: 1, id: "wom:agony" }
-				type: "item"
-			}]
-			x: 5.4d
-			y: -1.5d
-		}
-		{
-			dependencies: ["5A8C11099E060015"]
 			icon: {
-				id: "wom:antitheus"
+				id: "cataclysm:the_incinerator"
 			}
-			id: "5A8C11099E060016"
-			rewards: [
-				{
-					id: "11EC8B12BD407D54"
-					item: {
-						count: 1
-						id: "minecraft:netherite_block"
-					}
-					type: "item"
-				}
-				{
-					id: "560FD111F2CFC893"
-					type: "xp_levels"
-					xp_levels: 40
-				}
-			]
-			shape: "challenge"
-			size: 1.3d
-			tasks: [{
-				id: "6466EA495250BD4C"
-				item: { count: 1, id: "wom:antitheus" }
-				type: "item"
-			}]
-			x: 7.2d
-			y: -1.5d
-		}
-		{
-			dependencies: ["5A8C11099E060008"]
-			icon: {
-				id: "wom:blackstar"
-			}
-			id: "5A8C11099E060017"
-			rewards: [
-				{
-					count: 2
-					id: "755D32F223F2847C"
-					item: {
-						count: 2
-						id: "minecraft:netherite_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "2C50142E827AA299"
-					type: "xp_levels"
-					xp_levels: 25
-				}
-			]
-			tasks: [{
-				id: "0D945374B361EC3E"
-				item: { count: 1, id: "wom:blackstar" }
-				type: "item"
-			}]
-			x: 5.4d
-			y: 0.0d
-		}
-		{
-			dependencies: ["5A8C11099E060017"]
-			icon: {
-				id: "wom:claw"
-			}
-			id: "5A8C11099E060018"
+			id: "4B00000000000025"
 			rewards: [
 				{
 					count: 4
-					id: "08F274A86E33615F"
+					id: "4B0000000000005D"
 					item: {
 						count: 4
-						id: "minecraft:diamond_block"
-					}
-					type: "item"
-				}
-				{
-					id: "1973451345BB3DE7"
-					type: "xp_levels"
-					xp_levels: 30
-				}
-			]
-			tasks: [{
-				id: "1A06B5961CA4E0DF"
-				item: { count: 1, id: "wom:claw" }
-				type: "item"
-			}]
-			x: 7.2d
-			y: 0.0d
-		}
-		{
-			dependencies: ["5A8C11099E060010"]
-			icon: {
-				id: "wom:celerity_bracelet"
-			}
-			id: "5A8C11099E060019"
-			rewards: [
-				{
-					count: 4
-					id: "222C21852878F436"
-					item: {
-						count: 4
-						id: "minecraft:emerald_block"
-					}
-					type: "item"
-				}
-				{
-					id: "1CDC2B8A271A6C2D"
-					type: "xp_levels"
-					xp_levels: 20
-				}
-			]
-			tasks: [{
-				id: "59AEE22309DF71D0"
-				item: { count: 1, id: "wom:celerity_bracelet" }
-				type: "item"
-			}]
-			x: 5.4d
-			y: 1.5d
-		}
-		{
-			dependencies: ["5A8C11099E060019"]
-			icon: {
-				id: "wom:cursed_mask"
-			}
-			id: "5A8C11099E060020"
-			rewards: [
-				{
-					id: "2483775C93405C1B"
-					item: {
-						count: 1
-						id: "minecraft:nether_star"
-					}
-					type: "item"
-				}
-				{
-					id: "60A3FAC57C6E35FD"
-					type: "xp_levels"
-					xp_levels: 35
-				}
-			]
-			tasks: [{
-				id: "522B82C51A5C499E"
-				item: { count: 1, id: "wom:cursed_mask" }
-				type: "item"
-			}]
-			x: 7.2d
-			y: 1.5d
-		}
-		{
-			dependencies: ["5A8C11099E060001"]
-			icon: {
-				id: "artifacts:cloud_in_a_bottle"
-			}
-			id: "5A8C11099E060021"
-			rewards: [
-				{
-					count: 16
-					id: "15583B919ADBA690"
-					item: {
-						count: 16
-						id: "minecraft:emerald"
-					}
-					type: "item"
-				}
-				{
-					id: "37B217E8FAEA390F"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "1C61B000443CDF66"
-				item: { count: 1, id: "artifacts:cloud_in_a_bottle" }
-				type: "item"
-			}]
-			x: -1.8d
-			y: 1.5d
-		}
-		{
-			dependencies: ["5A8C11099E060021"]
-			icon: {
-				id: "artifacts:bunny_hoppers"
-			}
-			id: "5A8C11099E060022"
-			rewards: [
-				{
-					count: 32
-					id: "40B6A2D7AB9B37D7"
-					item: {
-						count: 32
-						id: "minecraft:feather"
-					}
-					type: "item"
-				}
-				{
-					id: "0ADCABECD45B5ADA"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			tasks: [{
-				id: "5AE574683019E28E"
-				item: { count: 1, id: "artifacts:bunny_hoppers" }
-				type: "item"
-			}]
-			x: -3.6d
-			y: 1.5d
-		}
-		{
-			dependencies: ["5A8C11099E060022"]
-			icon: {
-				id: "artifacts:aqua_dashers"
-			}
-			id: "5A8C11099E060023"
-			rewards: [
-				{
-					count: 16
-					id: "181B7B404F505807"
-					item: {
-						count: 16
-						id: "minecraft:prismarine_crystals"
-					}
-					type: "item"
-				}
-				{
-					id: "5B1920EB4CC11718"
-					type: "xp_levels"
-					xp_levels: 20
-				}
-			]
-			tasks: [{
-				id: "743326D54FE1798D"
-				item: { count: 1, id: "artifacts:aqua_dashers" }
-				type: "item"
-			}]
-			x: -5.4d
-			y: 1.5d
-		}
-		{
-			dependencies: ["5A8C11099E060021"]
-			icon: {
-				id: "artifacts:everlasting_beef"
-			}
-			id: "5A8C11099E060024"
-			rewards: [
-				{
-					count: 16
-					id: "314189A58F078543"
-					item: {
-						count: 16
-						id: "minecraft:golden_carrot"
-					}
-					type: "item"
-				}
-				{
-					id: "2CCE7D29CFC689B6"
-					type: "xp_levels"
-					xp_levels: 20
-				}
-			]
-			tasks: [{
-				id: "3ED8DE777C4B68AE"
-				item: { count: 1, id: "artifacts:everlasting_beef" }
-				type: "item"
-			}]
-			x: -1.8d
-			y: 3.2d
-		}
-		{
-			dependencies: ["5A8C11099E060024"]
-			icon: {
-				id: "artifacts:fire_gauntlet"
-			}
-			id: "5A8C11099E060025"
-			rewards: [
-				{
-					count: 16
-					id: "09D1B8B61AD7AD3C"
-					item: {
-						count: 16
-						id: "minecraft:blaze_rod"
-					}
-					type: "item"
-				}
-				{
-					id: "33A1FBDEFB7E482B"
-					type: "xp_levels"
-					xp_levels: 20
-				}
-			]
-			tasks: [{
-				id: "29120AB2DE73C9B4"
-				item: { count: 1, id: "artifacts:fire_gauntlet" }
-				type: "item"
-			}]
-			x: -3.6d
-			y: 3.2d
-		}
-		{
-			dependencies: ["5A8C11099E060025"]
-			icon: {
-				id: "artifacts:chorus_totem"
-			}
-			id: "5A8C11099E060026"
-			rewards: [
-				{
-					count: 2
-					id: "7779A4CFD04B4BA2"
-					item: {
-						count: 2
-						id: "minecraft:totem_of_undying"
-					}
-					type: "item"
-				}
-				{
-					id: "54FB13DF846F2FC4"
-					type: "xp_levels"
-					xp_levels: 30
-				}
-			]
-			shape: "challenge"
-			size: 1.3d
-			tasks: [{
-				id: "46BF909683FAC45F"
-				item: { count: 1, id: "artifacts:chorus_totem" }
-				type: "item"
-			}]
-			x: -5.4d
-			y: 3.2d
-		}
-		{
-			dependencies: ["5A8C11099E060016"]
-			icon: { id: "cataclysm:the_incinerator" }
-			id: "5A8C11099E060028"
-			rewards: [
-				{
-					count: 2
-					id: "25A7AF8300A0D9EF"
-					item: {
-						count: 2
-						id: "minecraft:netherite_block"
-					}
-					type: "item"
-				}
-				{
-					id: "2E6290DF8CF9C301"
-					type: "xp_levels"
-					xp_levels: 50
-				}
-			]
-			shape: "challenge"
-			size: 1.4d
-			tasks: [{
-				id: "68D17CF0FACA3A7A"
-				type: "checkmark"
-			}]
-			x: 9.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["5A8C11099E060018"]
-			icon: { id: "cataclysm:infernal_forge" }
-			id: "5A8C11099E060029"
-			rewards: [
-				{
-					count: 8
-					id: "52599B675CA4AA08"
-					item: {
-						count: 8
-						id: "minecraft:diamond_block"
-					}
-					type: "item"
-				}
-				{
-					id: "193EA55F2CB1AFBB"
-					type: "xp_levels"
-					xp_levels: 45
-				}
-			]
-			shape: "challenge"
-			size: 1.4d
-			tasks: [{
-				id: "7DB41E24E2D6D3B0"
-				type: "checkmark"
-			}]
-			x: 9.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["5A8C11099E060020"]
-			icon: { id: "epicfight:netherite_greatsword" }
-			id: "5A8C11099E060030"
-			rewards: [
-				{
-					count: 2
-					id: "03CCE63A05CBAA7E"
-					item: {
-						count: 2
-						id: "minecraft:nether_star"
-					}
-					type: "item"
-				}
-				{
-					id: "53F2C1596A9F20C4"
-					type: "xp_levels"
-					xp_levels: 50
-				}
-			]
-			shape: "challenge"
-			size: 1.4d
-			tasks: [{
-				id: "623B4BF012726D0A"
-				type: "checkmark"
-			}]
-			x: 9.0d
-			y: 1.5d
-		}
-		{
-			dependencies: ["5A8C11099E060023"]
-			icon: {
-				id: "artifacts:superstitious_hat"
-			}
-			id: "5A8C11099E060031"
-			rewards: [
-				{
-					count: 2
-					id: "37B47679A7AB5299"
-					item: {
-						count: 2
-						id: "minecraft:emerald_block"
-					}
-					type: "item"
-				}
-				{
-					id: "25E2FB22F35E06AC"
-					type: "xp_levels"
-					xp_levels: 20
-				}
-			]
-			tasks: [{
-				id: "1657B57939C84A6A"
-				item: { count: 1, id: "artifacts:superstitious_hat" }
-				type: "item"
-			}]
-			x: -7.2d
-			y: 1.5d
-		}
-		{
-			dependencies: ["5A8C11099E060026"]
-			icon: {
-				id: "artifacts:helium_flamingo"
-			}
-			id: "5A8C11099E060032"
-			rewards: [
-				{
-					count: 64
-					id: "3C7AC315C60EB88C"
-					item: {
-						count: 64
-						id: "minecraft:feather"
-					}
-					type: "item"
-				}
-				{
-					id: "628CD218AE8EC94D"
-					type: "xp_levels"
-					xp_levels: 25
-				}
-			]
-			tasks: [{
-				id: "450812AC5C8D0F01"
-				item: { count: 1, id: "artifacts:helium_flamingo" }
-				type: "item"
-			}]
-			x: -7.2d
-			y: 3.2d
-		}
-		{
-			dependencies: ["5A8C11099E060025"]
-			icon: {
-				id: "artifacts:shock_pendant"
-			}
-			id: "5A8C11099E060033"
-			rewards: [
-				{
-					count: 4
-					id: "38379712CA19E35F"
-					item: {
-						count: 4
-						id: "minecraft:copper_block"
-					}
-					type: "item"
-				}
-				{
-					id: "5A479573789C8698"
-					type: "xp_levels"
-					xp_levels: 20
-				}
-			]
-			tasks: [{
-				id: "5B386438A8E4911A"
-				item: { count: 1, id: "artifacts:shock_pendant" }
-				type: "item"
-			}]
-			x: -3.6d
-			y: 4.6d
-		}
-		{
-			dependencies: ["5A8C11099E060033"]
-			icon: {
-				id: "artifacts:panic_necklace"
-			}
-			id: "5A8C11099E060034"
-			rewards: [
-				{
-					count: 8
-					id: "0B7B5A401F64133E"
-					item: {
-						count: 8
-						id: "minecraft:golden_carrot"
-					}
-					type: "item"
-				}
-				{
-					id: "225C6A0186AF99AD"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			tasks: [{
-				id: "5558D3FD627BD75F"
-				item: { count: 1, id: "artifacts:panic_necklace" }
-				type: "item"
-			}]
-			x: -5.4d
-			y: 4.6d
-		}
-		{
-			dependencies: [
-				"5A8C11099E060028"
-				"5A8C11099E060029"
-				"5A8C11099E060030"
-			]
-			icon: {
-				id: "epicfight:diamond_greatsword"
-			}
-			id: "5A8C11099E060035"
-			rewards: [
-				{
-					count: 16
-					id: "20647DD65E5BA02E"
-					item: {
-						count: 16
-						id: "minecraft:netherite_block"
-					}
-					type: "item"
-				}
-				{
-					count: 32
-					id: "533E5AAE3D3A9528"
-					item: {
-						count: 32
-						id: "minecraft:diamond_block"
-					}
-					type: "item"
-				}
-				{
-					id: "6BA0B90FB53BB6B8"
-					type: "xp_levels"
-					xp_levels: 300
-				}
-			]
-			shape: "heart"
-			size: 2.0d
-			tasks: [{
-				id: "2830CB880A76370F"
-				type: "checkmark"
-			}]
-			x: 10.8d
-			y: 0.0d
-		}
-		{
-			id: "47A5006422D7E643"
-			rewards: [
-				{
-					count: 2
-					id: "640246824F3F527F"
-					item: {
-						count: 1
 						id: "cataclysm:witherite_ingot"
 					}
 					type: "item"
 				}
 				{
-					id: "36DD3C2E0DA73C19"
+					id: "4B0000000000005E"
 					type: "xp_levels"
-					xp_levels: 25
+					xp_levels: 30
 				}
 			]
-			shape: "hexagon"
-			size: 1.25d
+			shape: "diamond"
+			size: 1.35d
 			tasks: [{
-				id: "2433DE1CFD93A9D5"
-				item: { count: 1, id: "epicfight:uchigatana" }
+				id: "4B0000000000005F"
+				item: { count: 1, id: "cataclysm:the_incinerator" }
 				type: "item"
 			}]
-			x: 12.0d
+			title: "Испепелитель (The Incinerator)"
+			x: 8.5d
 			y: -1.5d
 		}
 		{
-			id: "64601A58B3E05B1A"
+			dependencies: ["4B00000000000017"]
+			description: [
+				"Сокрушительный боевой молот древних адских кузнецов.",
+				"",
+				"Каждый удар раскалывает землю, отбрасывая врагов и вызывая волны лавы!"
+			]
+			icon: {
+				id: "cataclysm:infernal_forge"
+			}
+			id: "4B00000000000026"
 			rewards: [
 				{
-					count: 8
-					id: "0097C720AE98E0BD"
+					count: 4
+					id: "4B0000000000006A"
 					item: {
-						count: 1
-						id: "ars_nouveau:source_gem"
+						count: 4
+						id: "cataclysm:witherite_ingot"
 					}
 					type: "item"
 				}
 				{
-					id: "377BEAA28BB9BB10"
+					id: "4B0000000000006B"
 					type: "xp_levels"
-					xp_levels: 15
+					xp_levels: 30
 				}
 			]
-			shape: "gear"
-			size: 1.25d
+			shape: "diamond"
+			size: 1.35d
 			tasks: [{
-				id: "460DEA52C68CA708"
-				item: { count: 1, id: "epicfight:skillbook" }
+				id: "4B0000000000006C"
+				item: { count: 1, id: "cataclysm:infernal_forge" }
 				type: "item"
 			}]
-			x: 12.0d
+			title: "Адская кузня (Infernal Forge)"
+			x: 8.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4B00000000000019"]
+			description: [
+				"Могущественная перчатка Стража Оплота (Harbinger).",
+				"",
+				"Позволяет ставить непреодолимые силовые блоки и наносить сокрушительные импульсные удары."
+			]
+			icon: {
+				id: "cataclysm:gauntlet_of_bulwark"
+			}
+			id: "4B00000000000027"
+			rewards: [
+				{
+					count: 4
+					id: "4B0000000000006D"
+					item: {
+						count: 4
+						id: "cataclysm:witherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "4B0000000000006E"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			shape: "diamond"
+			size: 1.35d
+			tasks: [{
+				id: "4B0000000000006F"
+				item: { count: 1, id: "cataclysm:gauntlet_of_bulwark" }
+				type: "item"
+			}]
+			title: "Перчатка оплота (Gauntlet of Bulwark)"
+			x: 8.5d
 			y: 1.5d
+		}
+		{
+			dependencies: [
+				"4B00000000000025"
+				"4B00000000000026"
+				"4B00000000000027"
+			]
+			description: [
+				"Вы подчинили силу величайших боссов разрушительного мира Cataclysm и стали абсолютным мастером клинка!",
+				"",
+				"Ваша легенда высечена в камне навечно."
+			]
+			icon: {
+				id: "cataclysm:the_incinerator"
+			}
+			id: "4B00000000000030"
+			rewards: [
+				{
+					count: 4
+					id: "4B0000000000007A"
+					item: {
+						count: 4
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "4B0000000000007B"
+					item: {
+						count: 8
+						id: "cataclysm:witherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "4B0000000000007C"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+			]
+			shape: "heart"
+			size: 1.6d
+			tasks: [{
+				id: "4B0000000000007D"
+				title: "Я стал легендой боевых искусств!"
+				type: "checkmark"
+			}]
+			title: "Сердце Воина: Триумф над Боссами"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4B00000000000001"]
+			description: [
+				"В сокровищницах, пирамидах, заброшенных шахтах и подводных руинах сокрыты могущественные артефакты.",
+				"",
+				"Они экипируются в специальные слоты аксессуаров (кнопка слотов Curios в инвентаре) и даруют владельцу мощные постоянные эффекты.",
+				"",
+				"§6Внимание:§r Все квесты на артефакты §eполностью независимы§r! Находите любой артефакт в подземельях и сразу получайте за него награду без всяких очередей!"
+			]
+			icon: {
+				id: "artifacts:cloud_in_a_bottle"
+			}
+			id: "4B00000000000100"
+			rewards: [
+				{
+					id: "4B0000000000007E"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "rsquare"
+			size: 1.4d
+			tasks: [{
+				id: "4B0000000000007F"
+				title: "Охота за реликвиями открыта!"
+				type: "checkmark"
+			}]
+			title: "Древние реликвии и артефакты"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Позволяет совершать дополнительный прыжок прямо в воздухе!"
+			]
+			icon: {
+				id: "artifacts:cloud_in_a_bottle"
+			}
+			id: "4B00000000000101"
+			rewards: [{
+				count: 4
+				id: "4B0000000000008A"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B0000000000008B"
+				item: { count: 1, id: "artifacts:cloud_in_a_bottle" }
+				type: "item"
+			}]
+			title: "Облако в банке (Двойной прыжок)"
+			x: -4.0d
+			y: -3.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Увеличивают высоту прыжка и полностью аннулируют урон от падения с любой высоты!"
+			]
+			icon: {
+				id: "artifacts:bunny_hoppers"
+			}
+			id: "4B00000000000102"
+			rewards: [{
+				count: 4
+				id: "4B0000000000008C"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B0000000000008D"
+				item: { count: 1, id: "artifacts:bunny_hoppers" }
+				type: "item"
+			}]
+			title: "Заячьи тапочки (Bunny Hoppers)"
+			x: -5.8d
+			y: -3.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Позволяют бегать по поверхности воды так же легко, как по твердой земле."
+			]
+			icon: {
+				id: "artifacts:aqua_dashers"
+			}
+			id: "4B00000000000103"
+			rewards: [{
+				count: 4
+				id: "4B0000000000008E"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B0000000000008F"
+				item: { count: 1, id: "artifacts:aqua_dashers" }
+				type: "item"
+			}]
+			title: "Водобеги (Aqua Dashers)"
+			x: -7.6d
+			y: -3.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Повышает показатель Удачи персонажа (+Looting) при убийстве любых существ."
+			]
+			icon: {
+				id: "artifacts:superstitious_hat"
+			}
+			id: "4B00000000000104"
+			rewards: [{
+				count: 4
+				id: "4B0000000000009A"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B0000000000009B"
+				item: { count: 1, id: "artifacts:superstitious_hat" }
+				type: "item"
+			}]
+			title: "Суеверная шляпа (Удача)"
+			x: -9.4d
+			y: -3.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Бесконечный кусок питательного мяса, который можно есть снова и снова!"
+			]
+			icon: {
+				id: "artifacts:everlasting_beef"
+			}
+			id: "4B00000000000105"
+			rewards: [{
+				count: 4
+				id: "4B0000000000009C"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B0000000000009D"
+				item: { count: 1, id: "artifacts:everlasting_beef" }
+				type: "item"
+			}]
+			title: "Вечная говядина (Everlasting Beef)"
+			x: -4.0d
+			y: -1.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Любой ваш удар в ближнем бою поджигает противника адским пламенем."
+			]
+			icon: {
+				id: "artifacts:fire_gauntlet"
+			}
+			id: "4B00000000000106"
+			rewards: [{
+				count: 4
+				id: "4B0000000000009E"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B0000000000009F"
+				item: { count: 1, id: "artifacts:fire_gauntlet" }
+				type: "item"
+			}]
+			title: "Огненная перчатка (Fire Gauntlet)"
+			x: -5.8d
+			y: -1.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"В момент получения смертельного удара тотем спасает вас и мгновенно телепортирует в безопасное место."
+			]
+			icon: {
+				id: "artifacts:chorus_totem"
+			}
+			id: "4B00000000000107"
+			rewards: [{
+				count: 4
+				id: "4B000000000000A1"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B000000000000A2"
+				item: { count: 1, id: "artifacts:chorus_totem" }
+				type: "item"
+			}]
+			title: "Тотем хоруса (Chorus Totem)"
+			x: -7.6d
+			y: -1.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Дарует бесконечный запас кислорода и высокую скорость плавания под водой."
+			]
+			icon: {
+				id: "artifacts:helium_flamingo"
+			}
+			id: "4B00000000000108"
+			rewards: [{
+				count: 4
+				id: "4B000000000000A3"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B000000000000A4"
+				item: { count: 1, id: "artifacts:helium_flamingo" }
+				type: "item"
+			}]
+			title: "Гелиевый фламинго (Плавание)"
+			x: -9.4d
+			y: -1.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"При получении вами урона бьет атакующего противника ответным разрядом молнии."
+			]
+			icon: {
+				id: "artifacts:shock_pendant"
+			}
+			id: "4B00000000000109"
+			rewards: [{
+				count: 4
+				id: "4B000000000000A5"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B000000000000A6"
+				item: { count: 1, id: "artifacts:shock_pendant" }
+				type: "item"
+			}]
+			title: "Грозовой кулон (Shock Pendant)"
+			x: -4.0d
+			y: 1.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"При получении любого ранения активирует сильный прилив адреналина и скорости бега."
+			]
+			icon: {
+				id: "artifacts:panic_necklace"
+			}
+			id: "4B00000000000110"
+			rewards: [{
+				count: 4
+				id: "4B000000000000A7"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B000000000000A8"
+				item: { count: 1, id: "artifacts:panic_necklace" }
+				type: "item"
+			}]
+			title: "Ожерелье паники (Panic Necklace)"
+			x: -5.8d
+			y: 1.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Увеличивает период неуязвимости (i-frames) после каждого полученного удара."
+			]
+			icon: {
+				id: "artifacts:cross_necklace"
+			}
+			id: "4B00000000000111"
+			rewards: [{
+				count: 4
+				id: "4B000000000000A9"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B000000000000AA"
+				item: { count: 1, id: "artifacts:cross_necklace" }
+				type: "item"
+			}]
+			title: "Крест защиты (Cross Necklace)"
+			x: -7.6d
+			y: 1.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Даруют постоянный эффект ночного видения без ограничения по времени!"
+			]
+			icon: {
+				id: "artifacts:night_vision_goggles"
+			}
+			id: "4B00000000000112"
+			rewards: [{
+				count: 4
+				id: "4B000000000000AB"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B000000000000AC"
+				item: { count: 1, id: "artifacts:night_vision_goggles" }
+				type: "item"
+			}]
+			title: "Очки ночного видения"
+			x: -9.4d
+			y: 1.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"В разы уменьшает длительность любых негативных эффектов (отравление, иссушение, слабость)."
+			]
+			icon: {
+				id: "artifacts:antidote_vessel"
+			}
+			id: "4B00000000000113"
+			rewards: [{
+				count: 4
+				id: "4B000000000000AD"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B000000000000AE"
+				item: { count: 1, id: "artifacts:antidote_vessel" }
+				type: "item"
+			}]
+			title: "Сосуд с противоядием"
+			x: -4.0d
+			y: 3.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Автоматически притягивает к вам выпавшие предметы и сферы опыта на значительном радиусе."
+			]
+			icon: {
+				id: "artifacts:universal_attractor"
+			}
+			id: "4B00000000000114"
+			rewards: [{
+				count: 4
+				id: "4B000000000000AF"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B000000000000B1"
+				item: { count: 1, id: "artifacts:universal_attractor" }
+				type: "item"
+			}]
+			title: "Универсальный магнит"
+			x: -5.8d
+			y: 3.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Восстанавливает здоровье при нанесении урона противникам в ближнем бою."
+			]
+			icon: {
+				id: "artifacts:vampiric_glove"
+			}
+			id: "4B00000000000115"
+			rewards: [{
+				count: 4
+				id: "4B000000000000B2"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B000000000000B3"
+				item: { count: 1, id: "artifacts:vampiric_glove" }
+				type: "item"
+			}]
+			title: "Перчатка вампира (Вампиризм)"
+			x: -7.6d
+			y: 3.2d
+		}
+		{
+			dependencies: ["4B00000000000100"]
+			description: [
+				"Дарует временную неуязвимость к огню и лаве при контакте с ними."
+			]
+			icon: {
+				id: "artifacts:obsidian_skull"
+			}
+			id: "4B00000000000116"
+			rewards: [{
+				count: 4
+				id: "4B000000000000B4"
+				item: { count: 4, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B000000000000B5"
+				item: { count: 1, id: "artifacts:obsidian_skull" }
+				type: "item"
+			}]
+			title: "Обсидиановый череп (Защита от лавы)"
+			x: -9.4d
+			y: 3.2d
 		}
 	]
 }

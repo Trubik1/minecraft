@@ -1715,4 +1715,50 @@ ServerEvents.recipes(event => {
         C: 'create:brass_casing'
     }).id('steampunk:powah/dielectric_casing_plastic');
 
+
+    // ==========================================================================
+    // PIPEZ & FLUX NETWORKS RECIPES
+    // ==========================================================================
+
+    // Creative/Infinity Pipe Upgrade on 3x3 Crafting Table (not overly complicated)
+    event.remove({ output: 'pipez:infinity_upgrade' });
+    event.shaped('pipez:infinity_upgrade', [
+        'UNU',
+        'NSN',
+        'UNU'
+    ], {
+        U: 'pipez:ultimate_upgrade',
+        N: 'minecraft:netherite_ingot',
+        S: 'minecraft:nether_star'
+    }).id('steampunk:pipez/infinity_upgrade_netherite');
+
+    event.shaped('pipez:infinity_upgrade', [
+        'UBU',
+        'BSB',
+        'UBU'
+    ], {
+        U: 'pipez:ultimate_upgrade',
+        B: 'extendedcrafting:black_iron_ingot',
+        S: 'minecraft:nether_star'
+    }).id('steampunk:pipez/infinity_upgrade_black_iron');
+
+    // Flux Dust alternative recipes (crafting table & energizing)
+    event.shapeless('2x fluxnetworks:flux_dust', [
+        'minecraft:redstone',
+        'minecraft:obsidian'
+    ]).id('steampunk:fluxnetworks/flux_dust_crafting');
+
+    event.custom({
+        type: 'powah:energizing',
+        energy: 5000,
+        ingredients: [
+            { item: 'minecraft:redstone' },
+            { item: 'minecraft:obsidian' }
+        ],
+        result: {
+            count: 4,
+            id: 'fluxnetworks:flux_dust'
+        }
+    }).id('steampunk:fluxnetworks/flux_dust_energizing');
+
 });
