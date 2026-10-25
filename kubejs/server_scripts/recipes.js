@@ -59,21 +59,9 @@ ServerEvents.recipes(event => {
     );
 
     // --------------------------------------------------------------------------
-    // 4. СВЯЗКА: ЦИФРОВЫЕ ТЕХНОЛОГИИ (Refined Storage x Create Sequenced Assembly)
-    // Корпус механизма Refined Storage требует латунный корпус Create
+    // 4. СВЯЗКА: ЦИФРОВЫЕ ТЕХНОЛОГИИ (Refined Storage x Create)
+    // Основные крафты корпусов, контроллеров и микросхем находятся в progression_recipes.js
     // --------------------------------------------------------------------------
-    event.replaceInput(
-        { output: 'refinedstorage:machine_casing' },
-        'minecraft:iron_ingot',
-        'create:brass_casing'
-    );
-
-    // Контроллер Refined Storage требует точный механизм и продвинутый процессор
-    event.replaceInput(
-        { output: 'refinedstorage:controller' },
-        'refinedstorage:silicon',
-        'create:precision_mechanism'
-    );
 
     // Резка кремния с помощью пилы Slice & Dice
     event.recipes.create.cutting('refinedstorage:silicon', 'minecraft:quartz')
