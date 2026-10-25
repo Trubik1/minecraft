@@ -16,13 +16,11 @@
 			dependencies: ["43E4EE94BB396A7C"]
 			hide_dependency_lines: true
 			id: "71FB3EA8CB37A038"
-			rewards: [
-				{
-					id: "8AFB3EA8CB37A000"
-					type: "xp"
-					xp: 50
-				}
-			]
+			rewards: [{
+				id: "7102D976577C6A24"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "7AFB3EA8CB37A001"
 				item: { count: 1, id: "createaddition:straw" }
@@ -30,17 +28,15 @@
 			}]
 			x: -4.0d
 			y: -2.0d
-		},
+		}
 		{
 			dependencies: ["71FB3EA8CB37A038"]
 			id: "62671BDA7C583957"
-			rewards: [
-				{
-					id: "8A671BDA7C583900"
-					type: "xp"
-					xp: 75
-				}
-			]
+			rewards: [{
+				id: "70D945594202F290"
+				type: "xp"
+				xp: 75
+			}]
 			tasks: [{
 				id: "7A671BDA7C583901"
 				item: { count: 1, id: "createaddition:biomass" }
@@ -48,21 +44,22 @@
 			}]
 			x: -4.0d
 			y: 0.0d
-		},
+		}
 		{
 			dependencies: ["62671BDA7C583957"]
 			id: "5A8C11099ECC0001"
 			rewards: [
 				{
-					id: "8A8C11099ECC0000"
+					count: 16
+					id: "6CDA8C862AB6C890"
 					item: {
-						count: 16
+						count: 1
 						id: "createaddition:biomass_pellet"
 					}
 					type: "item"
 				}
 				{
-					id: "8A8C11099ECC0001"
+					id: "693F03028209F096"
 					type: "xp"
 					xp: 100
 				}
@@ -74,17 +71,15 @@
 			}]
 			x: -5.2d
 			y: 2.0d
-		},
+		}
 		{
 			dependencies: ["62671BDA7C583957"]
 			id: "36760F31374EB61E"
-			rewards: [
-				{
-					id: "8A760F31374EB600"
-					type: "xp"
-					xp: 100
-				}
-			]
+			rewards: [{
+				id: "57D810D01CC38D7B"
+				type: "xp"
+				xp: 100
+			}]
 			tasks: [{
 				id: "7A760F31374EB601"
 				item: { count: 1, id: "createaddition:seed_oil_bucket" }
@@ -92,21 +87,22 @@
 			}]
 			x: -4.0d
 			y: 2.0d
-		},
+		}
 		{
 			dependencies: ["36760F31374EB61E"]
 			id: "0354DB37FD2030EE"
 			rewards: [
 				{
-					id: "8A54DB37FD203000"
+					count: 2
+					id: "397B69C1822D4EDF"
 					item: {
-						count: 2
+						count: 1
 						id: "create:blaze_cake"
 					}
 					type: "item"
 				}
 				{
-					id: "8A54DB37FD203001"
+					id: "3CC7C005C188598A"
 					type: "xp"
 					xp: 150
 				}
@@ -118,16 +114,14 @@
 			}]
 			x: -4.0d
 			y: 4.0d
-		},
+		}
 		{
 			id: "43E4EE94BB396A7C"
-			rewards: [
-				{
-					id: "8AE4EE94BB396A00"
-					type: "xp"
-					xp: 100
-				}
-			]
+			rewards: [{
+				id: "0FDBF56EB1D7A45F"
+				type: "xp"
+				xp: 100
+			}]
 			shape: "gear"
 			size: 1.4d
 			tasks: [{
@@ -137,21 +131,22 @@
 			}]
 			x: 0.0d
 			y: -3.0d
-		},
+		}
 		{
 			dependencies: ["43E4EE94BB396A7C"]
 			id: "0488989FD7F5AF42"
 			rewards: [
 				{
-					id: "8A88989FD7F5AF00"
+					count: 8
+					id: "414BF4700CB2A56D"
 					item: {
-						count: 8
+						count: 1
 						id: "createaddition:iron_rod"
 					}
 					type: "item"
 				}
 				{
-					id: "8A88989FD7F5AF01"
+					id: "7D8CA4263E839EE5"
 					type: "xp"
 					xp: 50
 				}
@@ -163,17 +158,15 @@
 			}]
 			x: -1.2d
 			y: -1.2d
-		},
+		}
 		{
 			dependencies: ["0488989FD7F5AF42"]
 			id: "64AB5CCDD9860DD8"
-			rewards: [
-				{
-					id: "8AAB5CCDD9860D00"
-					type: "xp"
-					xp: 50
-				}
-			]
+			rewards: [{
+				id: "4B8B6BC8B61D44EF"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "7AAB5CCDD9860D01"
 				item: { count: 1, id: "createaddition:iron_wire" }
@@ -181,21 +174,22 @@
 			}]
 			x: -1.2d
 			y: 0.6d
-		},
+		}
 		{
 			dependencies: ["43E4EE94BB396A7C"]
 			id: "66108B4F2DBF2E3F"
 			rewards: [
 				{
-					id: "8A108B4F2DBF2E00"
+					count: 8
+					id: "15D65E04197DF7EB"
 					item: {
-						count: 8
+						count: 1
 						id: "createaddition:copper_rod"
 					}
 					type: "item"
 				}
 				{
-					id: "8A108B4F2DBF2E01"
+					id: "594E5536BE85ED4D"
 					type: "xp"
 					xp: 50
 				}
@@ -207,21 +201,22 @@
 			}]
 			x: 0.0d
 			y: -1.2d
-		},
+		}
 		{
 			dependencies: ["66108B4F2DBF2E3F"]
 			id: "40F8FF1E85694FD4"
 			rewards: [
 				{
-					id: "8AF8FF1E85694F00"
+					count: 16
+					id: "10BE67C927D5CD1B"
 					item: {
-						count: 16
+						count: 1
 						id: "createaddition:copper_wire"
 					}
 					type: "item"
 				}
 				{
-					id: "8AF8FF1E85694F01"
+					id: "3D1E67130089AEE9"
 					type: "xp"
 					xp: 75
 				}
@@ -233,21 +228,22 @@
 			}]
 			x: 0.0d
 			y: 0.6d
-		},
+		}
 		{
 			dependencies: ["43E4EE94BB396A7C"]
 			id: "0C8F501F6BDFFB92"
 			rewards: [
 				{
-					id: "8A8F501F6BDFFB00"
+					count: 4
+					id: "05787FC396C75AA4"
 					item: {
-						count: 4
+						count: 1
 						id: "createaddition:gold_rod"
 					}
 					type: "item"
 				}
 				{
-					id: "8A8F501F6BDFFB01"
+					id: "70337E077F8480FE"
 					type: "xp"
 					xp: 50
 				}
@@ -259,21 +255,22 @@
 			}]
 			x: 1.2d
 			y: -1.2d
-		},
+		}
 		{
 			dependencies: ["0C8F501F6BDFFB92"]
 			id: "113E1D3C37C63088"
 			rewards: [
 				{
-					id: "8A3E1D3C37C63000"
+					count: 8
+					id: "199010BE6A35AED4"
 					item: {
-						count: 8
+						count: 1
 						id: "createaddition:gold_wire"
 					}
 					type: "item"
 				}
 				{
-					id: "8A3E1D3C37C63001"
+					id: "6BC8AF38BB486F79"
 					type: "xp"
 					xp: 75
 				}
@@ -285,50 +282,52 @@
 			}]
 			x: 1.2d
 			y: 0.6d
-		},
+		}
 		{
-		dependencies: [
+			dependencies: [
 				"40F8FF1E85694FD4"
 				"113E1D3C37C63088"
-		]
+			]
 			id: "5A8C11099ECC0002"
 			rewards: [
 				{
-					id: "8A8C11099ECC0000"
+					count: 4
+					id: "35AF6F86EABC6AEE"
 					item: {
-						count: 4
+						count: 1
 						id: "createaddition:electrum_ingot"
 					}
 					type: "item"
 				}
 				{
-					id: "8A8C11099ECC0001"
+					id: "29E61D668504E3BB"
 					type: "xp"
 					xp: 100
 				}
 			]
 			tasks: [{
-				id: "7A8C11099ECC0001"
+				id: "0C1720ECF0392304"
 				item: { count: 1, id: "createaddition:electrum_ingot" }
 				type: "item"
 			}]
 			x: 0.0d
 			y: 2.4d
-		},
+		}
 		{
 			dependencies: ["5A8C11099ECC0002"]
 			id: "4F1FA866A2F510A1"
 			rewards: [
 				{
-					id: "8A1FA866A2F51000"
+					count: 4
+					id: "52A894EC067C5C31"
 					item: {
-						count: 4
+						count: 1
 						id: "createaddition:electrum_rod"
 					}
 					type: "item"
 				}
 				{
-					id: "8A1FA866A2F51001"
+					id: "59EFD5C8A1997CE0"
 					type: "xp"
 					xp: 100
 				}
@@ -340,21 +339,22 @@
 			}]
 			x: -0.7d
 			y: 4.0d
-		},
+		}
 		{
 			dependencies: ["4F1FA866A2F510A1"]
 			id: "22AC3C79141AB3FC"
 			rewards: [
 				{
-					id: "8AAC3C79141AB300"
+					count: 8
+					id: "07022EFCAC1D1B25"
 					item: {
-						count: 8
+						count: 1
 						id: "createaddition:electrum_wire"
 					}
 					type: "item"
 				}
 				{
-					id: "8AAC3C79141AB301"
+					id: "7D0FB4BF269621C7"
 					type: "xp"
 					xp: 100
 				}
@@ -366,65 +366,65 @@
 			}]
 			x: 0.7d
 			y: 4.0d
-		},
+		}
 		{
 			dependencies: ["43E4EE94BB396A7C"]
 			id: "5A8C11099ECC0003"
 			rewards: [
 				{
-					id: "8A8C11099ECC0000"
+					count: 4
+					id: "309DC4DD7C40DE17"
 					item: {
-						count: 4
+						count: 1
 						id: "createaddition:brass_rod"
 					}
 					type: "item"
 				}
 				{
-					id: "8A8C11099ECC0001"
+					id: "2B8D83F66C2C588D"
 					type: "xp"
 					xp: 75
 				}
 			]
 			tasks: [{
-				id: "7A8C11099ECC0001"
+				id: "749F1782057CA0D3"
 				item: { count: 1, id: "createaddition:brass_rod" }
 				type: "item"
 			}]
 			x: -1.5d
 			y: 2.4d
-		},
+		}
 		{
 			dependencies: ["43E4EE94BB396A7C"]
 			id: "5A8C11099ECC0004"
-			rewards: [
-				{
-					id: "8A8C11099ECC0000"
-					type: "xp"
-					xp: 100
-				}
-			]
+			rewards: [{
+				id: "14993C1C77F04A60"
+				type: "xp"
+				xp: 100
+			}]
 			tasks: [{
-				id: "7A8C11099ECC0001"
+				id: "6FBE6D42617644FE"
 				item: { count: 1, id: "createaddition:diamond_grit_sandpaper" }
 				type: "item"
 			}]
 			x: 1.5d
 			y: 2.4d
-		},
+		}
 		{
 			dependencies: ["43E4EE94BB396A7C"]
 			id: "7B6E46D719CFB570"
 			rewards: [
 				{
-					id: "8A6E46D719CFB500"
+					count: 4
+					id: "680A2BECBFC03583"
 					item: {
-						count: 4
+						count: 1
 						id: "createaddition:spool"
 					}
 					type: "item"
 				}
 				{
-					id: "8A6E46D719CFB501"
+					id: "6873FF118481AB23"
 					type: "xp"
 					xp: 50
 				}
@@ -436,24 +436,25 @@
 			}]
 			x: 4.0d
 			y: -2.0d
-		},
+		}
 		{
-		dependencies: [
+			dependencies: [
 				"7B6E46D719CFB570"
 				"40F8FF1E85694FD4"
-		]
+			]
 			id: "215D766150B54B17"
 			rewards: [
 				{
-					id: "8A5D766150B54B00"
+					count: 2
+					id: "71770B3F45FAF8AF"
 					item: {
-						count: 2
+						count: 1
 						id: "createaddition:copper_spool"
 					}
 					type: "item"
 				}
 				{
-					id: "8A5D766150B54B01"
+					id: "5D31A160ED0241FD"
 					type: "xp"
 					xp: 75
 				}
@@ -465,24 +466,25 @@
 			}]
 			x: 3.2d
 			y: 0.0d
-		},
+		}
 		{
-		dependencies: [
+			dependencies: [
 				"7B6E46D719CFB570"
 				"113E1D3C37C63088"
-		]
+			]
 			id: "0B8148DAF5CC9DF1"
 			rewards: [
 				{
-					id: "8A8148DAF5CC9D00"
+					count: 2
+					id: "4A2348B1E6EA0814"
 					item: {
-						count: 2
+						count: 1
 						id: "createaddition:gold_spool"
 					}
 					type: "item"
 				}
 				{
-					id: "8A8148DAF5CC9D01"
+					id: "1A223B46FE26B331"
 					type: "xp"
 					xp: 100
 				}
@@ -494,24 +496,25 @@
 			}]
 			x: 4.8d
 			y: 0.0d
-		},
+		}
 		{
-		dependencies: [
+			dependencies: [
 				"22AC3C79141AB3FC"
 				"7B6E46D719CFB570"
-		]
+			]
 			id: "62F1177325B16068"
 			rewards: [
 				{
-					id: "8AF1177325B16000"
+					count: 2
+					id: "7098D9F9E95B5B8B"
 					item: {
-						count: 2
+						count: 1
 						id: "createaddition:electrum_spool"
 					}
 					type: "item"
 				}
 				{
-					id: "8AF1177325B16001"
+					id: "6882119B52E58500"
 					type: "xp"
 					xp: 150
 				}
@@ -523,21 +526,22 @@
 			}]
 			x: 3.2d
 			y: 2.0d
-		},
+		}
 		{
 			dependencies: ["215D766150B54B17"]
 			id: "4A22534045841AE4"
 			rewards: [
 				{
-					id: "8A22534045841A00"
+					count: 2
+					id: "700629248A4BC778"
 					item: {
-						count: 2
+						count: 1
 						id: "createaddition:festive_spool"
 					}
 					type: "item"
 				}
 				{
-					id: "8A22534045841A01"
+					id: "25DD098E837E4905"
 					type: "xp"
 					xp: 100
 				}
@@ -549,21 +553,22 @@
 			}]
 			x: 4.8d
 			y: 2.0d
-		},
+		}
 		{
 			dependencies: ["215D766150B54B17"]
 			id: "77B2C22D776D1B60"
 			rewards: [
 				{
-					id: "8AB2C22D776D1B00"
+					count: 8
+					id: "5B14148E407B0D9A"
 					item: {
-						count: 8
+						count: 1
 						id: "createaddition:connector"
 					}
 					type: "item"
 				}
 				{
-					id: "8AB2C22D776D1B01"
+					id: "78B35138DEE908B2"
 					type: "xp"
 					xp: 75
 				}
@@ -575,21 +580,22 @@
 			}]
 			x: 4.0d
 			y: 3.8d
-		},
+		}
 		{
 			dependencies: ["77B2C22D776D1B60"]
 			id: "1F36CF5D11E08839"
 			rewards: [
 				{
-					id: "8A36CF5D11E08800"
+					count: 4
+					id: "5CAA210C7E9B22B1"
 					item: {
-						count: 4
+						count: 1
 						id: "createaddition:large_connector"
 					}
 					type: "item"
 				}
 				{
-					id: "8A36CF5D11E08801"
+					id: "3E715DF77E86A244"
 					type: "xp"
 					xp: 100
 				}
@@ -601,21 +607,22 @@
 			}]
 			x: 3.2d
 			y: 5.5d
-		},
+		}
 		{
 			dependencies: ["77B2C22D776D1B60"]
 			id: "17709C4D6222244B"
 			rewards: [
 				{
-					id: "8A709C4D62222400"
+					count: 4
+					id: "0AB0A4005E001D7F"
 					item: {
-						count: 4
+						count: 1
 						id: "createaddition:small_light_connector"
 					}
 					type: "item"
 				}
 				{
-					id: "8A709C4D62222401"
+					id: "39DB2C91C8AA25D6"
 					type: "xp"
 					xp: 75
 				}
@@ -627,50 +634,52 @@
 			}]
 			x: 4.8d
 			y: 5.5d
-		},
+		}
 		{
 			dependencies: ["77B2C22D776D1B60"]
 			id: "5A8C11099ECC0005"
 			rewards: [
 				{
-					id: "8A8C11099ECC0000"
+					count: 2
+					id: "36A71672D0A15869"
 					item: {
-						count: 2
+						count: 1
 						id: "minecraft:redstone_block"
 					}
 					type: "item"
 				}
 				{
-					id: "8A8C11099ECC0001"
+					id: "256FD7C8655C5230"
 					type: "xp"
 					xp: 100
 				}
 			]
 			tasks: [{
-				id: "7A8C11099ECC0001"
+				id: "174958610C6553EE"
 				item: { count: 1, id: "createaddition:redstone_relay" }
 				type: "item"
 			}]
 			x: 4.0d
 			y: 7.2d
-		},
+		}
 		{
-		dependencies: [
+			dependencies: [
 				"43E4EE94BB396A7C"
 				"66108B4F2DBF2E3F"
-		]
+			]
 			id: "39124F73B82400F4"
 			rewards: [
 				{
-					id: "8A124F73B8240000"
+					count: 4
+					id: "5EC3327415841837"
 					item: {
-						count: 4
+						count: 1
 						id: "createaddition:connector"
 					}
 					type: "item"
 				}
 				{
-					id: "8A124F73B8240001"
+					id: "1638D7B722857DA2"
 					type: "xp"
 					xp: 150
 				}
@@ -684,21 +693,22 @@
 			}]
 			x: 8.0d
 			y: -2.0d
-		},
+		}
 		{
 			dependencies: ["39124F73B82400F4"]
 			id: "4FCCEB8B6A6AA643"
 			rewards: [
 				{
-					id: "8ACCEB8B6A6AA600"
+					count: 4
+					id: "24826956DDA685EA"
 					item: {
-						count: 4
+						count: 1
 						id: "createaddition:capacitor"
 					}
 					type: "item"
 				}
 				{
-					id: "8ACCEB8B6A6AA601"
+					id: "4B39F5FBAF41BDC9"
 					type: "xp"
 					xp: 100
 				}
@@ -710,21 +720,22 @@
 			}]
 			x: 8.0d
 			y: 0.0d
-		},
+		}
 		{
 			dependencies: ["4FCCEB8B6A6AA643"]
 			id: "00ACD837E30165B3"
 			rewards: [
 				{
-					id: "8AACD837E3016500"
+					count: 4
+					id: "72E14A9CD0CC90BB"
 					item: {
-						count: 4
+						count: 1
 						id: "create:brass_casing"
 					}
 					type: "item"
 				}
 				{
-					id: "8AACD837E3016501"
+					id: "5AB86D9E08F674F0"
 					type: "xp"
 					xp: 150
 				}
@@ -738,21 +749,22 @@
 			}]
 			x: 8.0d
 			y: 2.2d
-		},
+		}
 		{
 			dependencies: ["4FCCEB8B6A6AA643"]
 			id: "3CA5DFF1105281D6"
 			rewards: [
 				{
-					id: "8AA5DFF110528100"
+					count: 2
+					id: "7E73D21FA3433D9C"
 					item: {
-						count: 2
+						count: 1
 						id: "createaddition:modular_accumulator"
 					}
 					type: "item"
 				}
 				{
-					id: "8AA5DFF110528101"
+					id: "3EB5CC6E7E9CB20F"
 					type: "xp"
 					xp: 150
 				}
@@ -766,13 +778,13 @@
 			}]
 			x: 8.0d
 			y: 4.5d
-		},
+		}
 		{
 			dependencies: ["3CA5DFF1105281D6"]
 			id: "0834527ED1C0E83B"
 			rewards: [
 				{
-					id: "8A34527ED1C0E800"
+					id: "7EB15BA22B31287A"
 					item: {
 						count: 1
 						id: "createaddition:portable_energy_interface"
@@ -780,7 +792,7 @@
 					type: "item"
 				}
 				{
-					id: "8A34527ED1C0E801"
+					id: "6AF9717727F781B0"
 					type: "xp"
 					xp: 150
 				}
@@ -792,21 +804,22 @@
 			}]
 			x: 11.5d
 			y: 0.5d
-		},
+		}
 		{
 			dependencies: ["3CA5DFF1105281D6"]
 			id: "60DBF181ED929607"
 			rewards: [
 				{
-					id: "8ADBF181ED929600"
+					count: 4
+					id: "23036183A87D9630"
 					item: {
-						count: 4
+						count: 1
 						id: "createaddition:capacitor"
 					}
 					type: "item"
 				}
 				{
-					id: "8ADBF181ED929601"
+					id: "21A5A707AD0FEDB1"
 					type: "xp"
 					xp: 200
 				}
@@ -820,53 +833,55 @@
 			}]
 			x: 11.5d
 			y: 2.8d
-		},
+		}
 		{
 			dependencies: ["60DBF181ED929607"]
 			id: "5A8C11099ECC0006"
 			rewards: [
 				{
-					id: "8A8C11099ECC0000"
+					count: 16
+					id: "426F9DD717DA7DB3"
 					item: {
-						count: 16
+						count: 1
 						id: "createaddition:barbed_wire"
 					}
 					type: "item"
 				}
 				{
-					id: "8A8C11099ECC0001"
+					id: "373736DEAA5B724A"
 					type: "xp"
 					xp: 100
 				}
 			]
 			tasks: [{
-				id: "7A8C11099ECC0001"
+				id: "79B6A4E64A3F4BB4"
 				item: { count: 1, id: "createaddition:barbed_wire" }
 				type: "item"
 			}]
 			x: 12.5d
 			y: 5.0d
-		},
+		}
 		{
 			dependencies: ["3CA5DFF1105281D6"]
 			id: "5A8C11099ECC0007"
 			rewards: [
 				{
-					id: "8A8C11099ECC0000"
+					count: 4
+					id: "7C7C207FD55FD8C3"
 					item: {
-						count: 4
+						count: 1
 						id: "create:display_board"
 					}
 					type: "item"
 				}
 				{
-					id: "8A8C11099ECC0001"
+					id: "6B6CC9AB06A5A07A"
 					type: "xp"
 					xp: 100
 				}
 			]
 			tasks: [{
-				id: "7A8C11099ECC0001"
+				id: "74742F5339D832C8"
 				item: { count: 1, id: "createaddition:digital_adapter" }
 				type: "item"
 			}]

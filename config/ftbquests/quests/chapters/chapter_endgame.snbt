@@ -623,17 +623,5 @@
 			x: 10.8d
 			y: 3.5d
 		}
-		{
-			id: "488788726F80DCBA"
-			shape: "diamond"
-			size: 1.3d
-			tasks: [{
-				id: "645F8EB291BD870A"
-				item: { count: 1, id: "refinedstorage:creative_controller" }
-				type: "item"
-			}]
-			x: 10.8d
-			y: 5.5d
-		}
 	]
 }
