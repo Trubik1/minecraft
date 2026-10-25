@@ -1,0 +1,353 @@
+{
+	autofocus_id: "5A8C11099EFA0201"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "botany_pots"
+	group: "0015B593B4889A40"
+	icon: {
+		id: "botanypots:terracotta_hopper_botany_pot"
+	}
+	id: "5A8C11099EFA0008"
+	images: [ ]
+	order_index: 8
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			id: "5A8C11099EFA0201"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 16
+						id: "minecraft:bone_meal"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "botanypots:terracotta_botany_pot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.0d
+		},
+		{
+			dependencies: ["5A8C11099EFA0201"]
+			id: "5A8C11099EFA0202"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 4
+						id: "minecraft:soul_sand"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 50
+				}
+			]
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "minecraft:farmland" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -2.5d
+		},
+		{
+			dependencies: ["5A8C11099EFA0202"]
+			id: "5A8C11099EFA0203"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 4
+						id: "farmersdelight:rich_soil"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "farmersdelight:rich_soil" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -0.5d
+		},
+		{
+			dependencies: ["5A8C11099EFA0201"]
+			id: "5A8C11099EFA0204"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 1
+						id: "minecraft:hopper"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "diamond"
+			size: 1.3d
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "botanypots:terracotta_hopper_botany_pot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		},
+		{
+			dependencies: ["5A8C11099EFA0201"]
+			id: "5A8C11099EFA0205"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 4
+						id: "minecraft:honeycomb"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 50
+				}
+			]
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "botanypots:terracotta_waxed_botany_pot" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.5d
+		},
+		{
+			dependencies: ["5A8C11099EFA0201"]
+			id: "5A8C11099EFA0206"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 2
+						id: "minecraft:spruce_sapling"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					item: {
+						count: 2
+						id: "minecraft:dark_oak_sapling"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0202"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "minecraft:oak_sapling" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: -0.5d
+		},
+		{
+			dependencies: ["5A8C11099EFA0204"]
+			id: "5A8C11099EFA0207"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 1
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "rsquare"
+			size: 1.1d
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "botanypotstiers:elite_terracotta_hopper_botany_pot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		},
+		{
+			dependencies: ["5A8C11099EFA0207"]
+			id: "5A8C11099EFA0208"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 1
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "rsquare"
+			size: 1.1d
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "botanypotstiers:ultra_terracotta_hopper_botany_pot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		},
+		{
+			dependencies: ["5A8C11099EFA0208"]
+			id: "5A8C11099EFA0209"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 250
+				}
+			]
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "botanypotstiers:mega_terracotta_hopper_botany_pot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		},
+		{
+			dependencies: ["5A8C11099EFA0204"]
+			id: "5A8C11099EFA020A"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 2
+						id: "mysticalagriculture:prosperity_seed_base"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "mysticalagriculture:inferium_farmland" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.5d
+		},
+		{
+		dependencies: [
+				"5A8C11099EFA020A"
+				"5A8C11099EFA0209"
+		]
+			id: "5A8C11099EFA020B"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 2
+						id: "mysticalagradditions:insanium_essence"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 200
+				}
+			]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "mysticalagradditions:insanium_farmland" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 3.5d
+		},
+		{
+			dependencies: ["5A8C11099EFA0204"]
+			id: "5A8C11099EFA020C"
+			rewards: [
+				{
+					id: "8B8C11099EFA0200"
+					item: {
+						count: 4
+						id: "pipez:basic_upgrade"
+					}
+					type: "item"
+				}
+				{
+					id: "8B8C11099EFA0201"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "7B8C11099EFA0201"
+				item: { count: 1, id: "pipez:item_pipe" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.5d
+		}
+	]
+}
