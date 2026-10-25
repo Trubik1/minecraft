@@ -2644,5 +2644,115 @@
 			x: 30.5d
 			y: 1.5d
 		}
+,
+		{
+			dependencies: [
+				"5C7E9012D4F6A8B0"
+			]
+			id: "WS6698AA35A47D96"
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [
+				{
+					id: "WSD0AB34BC6813CD"
+					count: 4L
+					item: { count: 1, id: "waystones:warp_dust" }
+					type: "item"
+				}
+			]
+			x: 23.5d
+			y: -3.5d
+		},
+		{
+			dependencies: [
+				"WS6698AA35A47D96"
+				"6D8F0123E5A7B9C1"
+			]
+			id: "WSE36186FA059CD1"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [
+				{
+					id: "WS1A818D7DC012F6"
+					item: { count: 1, id: "waystones:warp_stone" }
+					type: "item"
+				}
+			]
+			x: 25.0d
+			y: -3.5d
+		},
+		{
+			dependencies: [
+				"WSE36186FA059CD1"
+			]
+			id: "WS71CAB096353587"
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+				{
+					id: "WS6B25A4C73FA713"
+					item: { count: 1, id: "waystones:waystone" }
+					type: "item"
+				}
+			]
+			x: 26.5d
+			y: -3.5d
+		},
+		{
+			dependencies: [
+				"WS6698AA35A47D96"
+			]
+			id: "WSE879A35A0A8C15"
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [
+				{
+					id: "WS15D62280321101"
+					item: { count: 1, id: "waystones:warp_scroll" }
+					type: "item"
+				}
+				{
+					id: "WS3B19B5148A08D8"
+					item: { count: 1, id: "waystones:return_scroll" }
+					type: "item"
+				}
+			]
+			x: 23.5d
+			y: -5.0d
+		},
+		{
+			dependencies: [
+				"WSE36186FA059CD1"
+			]
+			id: "WSE2FDF6A5EFF140"
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [
+				{
+					id: "WS1DC55F1A6821A5"
+					item: { count: 1, id: "waystones:warp_plate" }
+					type: "item"
+				}
+			]
+			x: 25.0d
+			y: -5.0d
+		},
+		{
+			dependencies: [
+				"WS71CAB096353587"
+			]
+			id: "WS7FFE01EA38F599"
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [
+				{
+					id: "WS41EB7EF0A207F3"
+					item: { count: 1, id: "waystones:sharestone" }
+					type: "item"
+				}
+			]
+			x: 26.5d
+			y: -5.0d
+		}
 	]
 }

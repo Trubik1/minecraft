@@ -1383,4 +1383,22 @@ ServerEvents.recipes(event => {
         M: 'create:brass_casing'
     }).id('steampunk:waystones/warp_plate_progression');
 
+
+    // ==========================================
+    // RPG DIMENSION PROGRESSION: UNDERGARDEN CATALYST
+    // ==========================================
+    // Gated behind Aether exploration (Zanite Gemstone) + Gold + Depthrock / Stone Bricks
+    event.remove({ output: 'undergarden:catalyst' });
+    event.shaped('undergarden:catalyst', [
+        'GCG',
+        'ZNZ',
+        'GSG'
+    ], {
+        G: '#c:ingots/gold',
+        C: 'minecraft:copper_ingot',
+        Z: 'aether:zanite_gemstone',
+        N: 'minecraft:ender_pearl',
+        S: 'minecraft:stone_bricks'
+    }).id('steampunk:undergarden/catalyst_aether_progression');
+
 });
