@@ -1380,8 +1380,12 @@
 			y: -6.0d
 		}
 		{
+			icon: {
+				id: "aether:valkyrie_chestplate"
+			}
 			dependencies: ["26D6FC091B7A8B38"]
 			id: "75C5BFAEADEB486E"
+			title: "Доспехи Валькирий"
 			optional: true
 			rewards: [{
 				id: "06383E85BFCB2527"
@@ -1627,8 +1631,12 @@
 			y: -5.0d
 		}
 		{
+			icon: {
+				id: "aether:phoenix_chestplate"
+			}
 			dependencies: ["5C6BA6BBEC75EB71"]
 			id: "7A4B51313FB134EA"
+			title: "Доспехи Феникса"
 			optional: true
 			rewards: [{
 				id: "14F9FE47813F5401"
@@ -1646,9 +1654,10 @@
 		{
 			dependencies: ["7A4B51313FB134EA"]
 			icon: {
-				id: "aether:obsidian_helmet"
+				id: "aether:obsidian_chestplate"
 			}
 			id: "362F529D5E7C37A4"
+			title: "Обсидиановые Доспехи Эфира"
 			optional: true
 			rewards: [{
 				id: "7EA0B922E326E00A"
@@ -1735,8 +1744,12 @@
 			y: -5.0d
 		}
 		{
+			icon: {
+				id: "aether:skyroot_sword"
+			}
 			dependencies: ["3417FF406CF0479E"]
 			id: "63D4621C06BA747C"
+			title: "Оружие из древесины Скайрут"
 			rewards: [{
 				count: 4
 				id: "3F3465EAED8E9E43"
@@ -1756,8 +1769,12 @@
 			y: 12.5d
 		}
 		{
+			icon: {
+				id: "aether:skyroot_pickaxe"
+			}
 			dependencies: ["3417FF406CF0479E"]
 			id: "4394AEF0823FB4D2"
+			title: "Инструменты из Скайрута"
 			rewards: [{
 				count: 4
 				id: "659AFA2960C5993D"
@@ -1777,8 +1794,12 @@
 			y: 13.5d
 		}
 		{
+			icon: {
+				id: "aether:skyroot_bucket"
+			}
 			dependencies: ["3417FF406CF0479E"]
 			id: "769B23E692CBA16B"
+			title: "Ведро и Лодка Скайрута"
 			rewards: [{
 				count: 3
 				id: "6A1CCE6E34BDAB98"
@@ -1798,8 +1819,12 @@
 			y: 13.5d
 		}
 		{
+			icon: {
+				id: "aether:holystone_sword"
+			}
 			dependencies: ["6797E67E0136D96A"]
 			id: "04833C4BB0CCCBB7"
+			title: "Оружие из Священного камня"
 			rewards: [{
 				count: 5
 				id: "1E0E1E49F26208E8"
@@ -1819,8 +1844,12 @@
 			y: 10.5d
 		}
 		{
+			icon: {
+				id: "aether:holystone_pickaxe"
+			}
 			dependencies: ["6797E67E0136D96A"]
 			id: "4AED9EF9E0F68483"
+			title: "Инструменты из Холистоуна"
 			rewards: [{
 				count: 5
 				id: "1011957BC14019E4"
@@ -1840,8 +1869,12 @@
 			y: 10.5d
 		}
 		{
+			icon: {
+				id: "aether:zanite_sword"
+			}
 			dependencies: ["0483D3B051665F07"]
 			id: "3781DB4807A89375"
+			title: "Оружие из Занита"
 			rewards: [{
 				count: 2
 				id: "333CDE20A0EE3BC0"
@@ -1861,8 +1894,12 @@
 			y: 6.5d
 		}
 		{
+			icon: {
+				id: "aether:zanite_pickaxe"
+			}
 			dependencies: ["0483D3B051665F07"]
 			id: "714960DF26EFFA53"
+			title: "Инструменты из Занита"
 			rewards: [{
 				count: 2
 				id: "7B01F155F18CF733"
@@ -1882,8 +1919,12 @@
 			y: 5.5d
 		}
 		{
+			icon: {
+				id: "aether:zanite_chestplate"
+			}
 			dependencies: ["0483D3B051665F07"]
 			id: "58006FC06C34F6CA"
+			title: "Броня из Занита"
 			rewards: [{
 				count: 2
 				id: "588BEB71CB8B4116"
@@ -1923,8 +1964,12 @@
 			y: 5.5d
 		}
 		{
+			icon: {
+				id: "aether:gravitite_sword"
+			}
 			dependencies: ["20C2A09007E1309A"]
 			id: "04B92FAB179A74C9"
+			title: "Оружие из Гравитита"
 			rewards: [{
 				count: 2
 				id: "39EC61BF0C8CB2B0"
@@ -1944,8 +1989,12 @@
 			y: 5.5d
 		}
 		{
+			icon: {
+				id: "aether:gravitite_pickaxe"
+			}
 			dependencies: ["20C2A09007E1309A"]
 			id: "1B7B377CB757867E"
+			title: "Инструменты из Гравитита"
 			rewards: [{
 				count: 2
 				id: "19A20F9F04994CE2"
@@ -1965,8 +2014,12 @@
 			y: 5.5d
 		}
 		{
+			icon: {
+				id: "aether:gravitite_chestplate"
+			}
 			dependencies: ["20C2A09007E1309A"]
 			id: "20D957B3C350CDE2"
+			title: "Броня из Гравитита"
 			rewards: [{
 				count: 2
 				id: "5E8C41E1D0304540"
@@ -2004,8 +2057,12 @@
 			y: -5.0d
 		}
 		{
+			icon: {
+				id: "aether:valkyrie_pickaxe"
+			}
 			dependencies: ["26D6FC091B7A8B38"]
 			id: "4974F265003DAEC9"
+			title: "Инструменты Валькирий"
 			optional: true
 			rewards: [{
 				id: "5808C68B1F4B22BE"
@@ -2021,8 +2078,12 @@
 			y: -3.0d
 		}
 		{
+			icon: {
+				id: "aether:neptune_chestplate"
+			}
 			dependencies: ["3DB036804AD70497"]
 			id: "5F44BF9A1DAE8B99"
+			title: "Доспехи Нептуна"
 			optional: true
 			rewards: [{
 				id: "29C332410F07707E"

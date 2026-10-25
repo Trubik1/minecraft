@@ -124,10 +124,7 @@
 		{
 			dependencies: ["5A8C11099E020003"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "createbigcannons:sliding_breechblock"
-				}
-				id: "ftbquests:missing_item"
+				id: "createbigcannons:cast_iron_sliding_breechblock"
 			}
 			id: "5A8C11099E020004"
 			rewards: [
@@ -148,7 +145,7 @@
 			]
 			tasks: [{
 				id: "346309AEC9056866"
-				item: { components: { "ftbquests:missing_item": "createbigcannons:sliding_breechblock" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "createbigcannons:cast_iron_sliding_breechblock" }
 				type: "item"
 			}]
 			x: 5.4d
@@ -346,10 +343,7 @@
 		{
 			dependencies: ["5A8C11099E020002"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "createbigcannons:drop_mortar_end"
-				}
-				id: "ftbquests:missing_item"
+				id: "createbigcannons:wrought_iron_drop_mortar_end"
 			}
 			id: "5A8C11099E020010"
 			rewards: [

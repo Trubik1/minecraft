@@ -156,7 +156,7 @@
 			]
 			tasks: [{
 				id: "0427B441A750316F"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				item: { components: { "sophisticatedstorage:wood_type": "oak" }, count: 1, id: "sophisticatedstorage:gold_chest" }
 				type: "item"
 			}]
 			x: 11.0d
@@ -188,7 +188,7 @@
 			]
 			tasks: [{
 				id: "00ED02255105A973"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				item: { components: { "sophisticatedstorage:wood_type": "oak" }, count: 1, id: "sophisticatedstorage:diamond_chest" }
 				type: "item"
 			}]
 			x: 13.0d
@@ -220,7 +220,7 @@
 			]
 			tasks: [{
 				id: "34B6EB0B801E4743"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				item: { components: { "sophisticatedstorage:wood_type": "oak" }, count: 1, id: "sophisticatedstorage:netherite_chest" }
 				type: "item"
 			}]
 			x: 15.0d
@@ -337,7 +337,7 @@
 				}
 				{
 					id: "301665A6315B569C"
-					item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "functionalstorage:linking_tool" }
 					type: "item"
 				}
 			]
@@ -359,7 +359,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "51CC9A8E36385400"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "sophisticatedbackpacks:upgrade_base" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -1842,7 +1842,7 @@
 			]
 			tasks: [{
 				id: "349B2DA0A38AE9B5"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "functionalstorage:framed_1" }
 				type: "item"
 			}]
 			x: -10.0d
@@ -1869,7 +1869,7 @@
 			shape: "diamond"
 			tasks: [{
 				id: "26A85DCA60F71DFF"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "functionalstorage:fluid_1" }
 				type: "item"
 			}]
 			x: -9.0d
@@ -1915,7 +1915,7 @@
 			size: 1.25d
 			tasks: [{
 				id: "073D1C45B3018BBA"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:chest" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -1998,7 +1998,7 @@
 			}]
 			tasks: [{
 				id: "14FA4A933C39A406"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "minecraft:oak_chest_boat" }
 				type: "item"
 			}]
 			x: 1.5d
@@ -2066,7 +2066,7 @@
 			}]
 			tasks: [{
 				id: "593CD1E685B4DDAA"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "sophisticatedbackpacks:battery_upgrade" }
 				type: "item"
 			}]
 			x: 17.5d
