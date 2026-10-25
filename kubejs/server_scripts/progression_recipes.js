@@ -378,4 +378,68 @@ ServerEvents.recipes(event => {
         C: 'create:precision_mechanism'
     }).id('steampunk:combat/master_uchigatana');
 
+
+    // ==========================================================================
+    // 13. ЛЕСТНИЦА ИЗМЕРЕНИЙ (DivineRPG-Style Dimensional Ladder)
+    // Покорение миров шаг за шагом: один мир открывает ключ к следующему!
+    // ==========================================================================
+
+    // 1. СТУПЕНЬ 2 ➔ 3: КАТАЛИЗАТОР ПОДЗЕМНОГО САДА (Undergarden Catalyst)
+    // Требует: Огненный слиток Сумеречного Леса (с Гидры) + Латунь Create + Самоцвет Ars
+    event.remove({ output: 'undergarden:catalyst' });
+    event.shaped('undergarden:catalyst', [
+        'ABA',
+        'CDC',
+        'AEA'
+    ], {
+        A: 'minecraft:gold_ingot',
+        B: 'twilightforest:fiery_ingot',
+        C: 'create:brass_sheet',
+        D: 'ars_nouveau:source_gem',
+        E: 'minecraft:diamond'
+    }).id('steampunk:dimension/undergarden_catalyst');
+
+    // 2. СТУПЕНЬ 3 ➔ 4: СВЯЩЕННЫЙ АЛТАРЬ РАЯ (The Aether Altar)
+    // Требует: Забытый слиток Undergarden + Осколок Утровита + Сталь Mekanism + Блок Источника
+    event.remove({ output: 'aether:altar' });
+    event.shaped('aether:altar', [
+        'AAA',
+        'BCB',
+        'DED'
+    ], {
+        A: 'aether:holystone',
+        B: 'undergarden:utheric_shard',
+        C: 'undergarden:forgotten_ingot',
+        D: 'mekanism:ingot_steel',
+        E: 'ars_nouveau:source_gem_block'
+    }).id('steampunk:dimension/aether_altar_gated');
+
+    // 3. СТУПЕНЬ 4 ➔ 5: СЕРДЦЕ ГЛУБИН ДЛЯ МИРА СКАЛКА (Deeper & Darker Heart of The Deep)
+    // Требует: Слиток Игнития с босса Cataclysm + Рог Монструозности + Занорит Аэзера + Осколок Эха
+    event.remove({ output: 'deeperdarker:heart_of_the_deep' });
+    event.shaped('deeperdarker:heart_of_the_deep', [
+        'ABA',
+        'CDC',
+        'AEA'
+    ], {
+        A: 'minecraft:echo_shard',
+        B: 'cataclysm:ignitium_ingot',
+        C: 'aether:zanite_gemstone',
+        D: 'cataclysm:monstrous_horn',
+        E: 'undergarden:forgotten_ingot'
+    }).id('steampunk:dimension/heart_of_the_deep_gated');
+
+    // 4. СТУПЕНЬ 5 ➔ 6: ОКО КРАЯ (Eye of Ender)
+    // Требует Пыль Душ из измерения The Otherside (Deeper and Darker) для открытия Края!
+    event.remove({ output: 'minecraft:ender_eye' });
+    event.shaped('minecraft:ender_eye', [
+        ' A ',
+        'BCB',
+        ' A '
+    ], {
+        A: 'deeperdarker:soul_dust',
+        B: 'minecraft:blaze_powder',
+        C: 'minecraft:ender_pearl'
+    }).id('steampunk:dimension/ender_eye_gated');
+
 });
