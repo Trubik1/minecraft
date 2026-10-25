@@ -914,4 +914,220 @@ ServerEvents.recipes(event => {
         }
     }).id('steampunk:powah/energizing_ender_core_quad');
 
+
+    // ==========================================================================
+    // ПРОГРЕССИЯ МИКРОСХЕМ MEKANISM: ПРОДВИНУТЫЕ, ЭЛИТНЫЕ (СИНИЕ) И СОВЕРШЕННЫЕ (ФИОЛЕТОВЫЕ)
+    // ==========================================================================
+
+    // --------------------------------------------------------------------------
+    // 1. ПРОДВИНУТАЯ СХЕМА УПРАВЛЕНИЯ (Advanced Control Circuit - Красная)
+    // Синтез: Базовая схема + Прецизионный механизм Create + Обогащенные сплавы + Самоцвет Источника + Полированный розовый кварц
+    // --------------------------------------------------------------------------
+    event.remove({ output: 'mekanism:advanced_control_circuit' });
+    event.shaped('mekanism:advanced_control_circuit', [
+        'QMQ',
+        'ABA',
+        'QSQ'
+    ], {
+        Q: 'create:polished_rose_quartz',
+        M: 'create:precision_mechanism',
+        A: 'mekanism:alloy_infused',
+        B: 'mekanism:basic_control_circuit',
+        S: 'ars_nouveau:source_gem'
+    }).id('steampunk:circuits/advanced_control_circuit_shaped');
+
+    // Промышленный метод в Наполнителе: Прецизионный механизм + 80 редстоуна
+    event.remove({ id: 'mekanism:control_circuit/infused_advanced' });
+    event.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemical_input: {
+            amount: 80,
+            tag: 'mekanism:redstone'
+        },
+        item_input: {
+            count: 1,
+            item: 'create:precision_mechanism'
+        },
+        output: {
+            count: 1,
+            id: 'mekanism:advanced_control_circuit'
+        },
+        per_tick_usage: false
+    }).id('steampunk:circuits/advanced_from_precision_infusing');
+
+    // --------------------------------------------------------------------------
+    // 2. ЭЛИТНАЯ СХЕМА УПРАВЛЕНИЯ (Elite Control Circuit - СИНЯЯ)
+    // Высокотехнологичная плата с охлаждением.
+    // Требует: Продвинутая схема + Армированные сплавы + Ниотический кристалл Powah + Сапфировый Занит из Аэзера + Термостойкие листы Create
+    // --------------------------------------------------------------------------
+    event.remove({ output: 'mekanism:elite_control_circuit' });
+    event.remove({ id: 'mekanism:control_circuit/infused_elite' });
+
+    // Основной рецепт: через Небесный мир (The Aether)
+    event.shaped('mekanism:elite_control_circuit', [
+        'TNT',
+        'ACA',
+        'TZT'
+    ], {
+        T: 'create:sturdy_sheet',
+        N: 'powah:crystal_niotic',
+        A: 'mekanism:alloy_reinforced',
+        C: 'mekanism:advanced_control_circuit',
+        Z: 'aether:zanite_gemstone'
+    }).id('steampunk:circuits/elite_control_circuit_aether');
+
+    // Альтернативный рецепт: через Андергарден (Undergarden Морозная сталь)
+    event.shaped('mekanism:elite_control_circuit', [
+        'TNT',
+        'ACA',
+        'TFT'
+    ], {
+        T: 'create:sturdy_sheet',
+        N: 'powah:crystal_niotic',
+        A: 'mekanism:alloy_reinforced',
+        C: 'mekanism:advanced_control_circuit',
+        F: 'undergarden:froststeel_ingot'
+    }).id('steampunk:circuits/elite_control_circuit_undergarden');
+
+    // Металлургический наполнитель: Продвинутая схема + 160 ед. Алмазной пыли
+    event.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemical_input: {
+            amount: 160,
+            tag: 'mekanism:diamond'
+        },
+        item_input: {
+            count: 1,
+            item: 'mekanism:advanced_control_circuit'
+        },
+        output: {
+            count: 1,
+            id: 'mekanism:elite_control_circuit'
+        },
+        per_tick_usage: false
+    }).id('steampunk:circuits/elite_from_advanced_infusing');
+
+    // --------------------------------------------------------------------------
+    // 3. СОВЕРШЕННАЯ СХЕМА УПРАВЛЕНИЯ (Ultimate Control Circuit - ФИОЛЕТОВАЯ)
+    // Квантово-магический венец вычислений.
+    // Требует: Элитная (синяя) схема + Атомарные сплавы + Нитро-кристалл Powah + Карминит Сумеречного Леса + Очищенный обсидиан
+    // --------------------------------------------------------------------------
+    event.remove({ output: 'mekanism:ultimate_control_circuit' });
+    event.remove({ id: 'mekanism:control_circuit/infused_ultimate' });
+
+    // Основной рецепт: через Карминит Сумеречного Леса и Нитро-кристалл Powah
+    event.shaped('mekanism:ultimate_control_circuit', [
+        'ONO',
+        'AEA',
+        'OCO'
+    ], {
+        O: 'mekanism:ingot_refined_obsidian',
+        N: 'powah:crystal_nitro',
+        A: 'mekanism:alloy_atomic',
+        E: 'mekanism:elite_control_circuit',
+        C: 'twilightforest:carminite'
+    }).id('steampunk:circuits/ultimate_control_circuit_tf');
+
+    // Альтернативный рецепт: через Зачарованный гравитит Аэзера и Кристалл Утерия Андергардена
+    event.shaped('mekanism:ultimate_control_circuit', [
+        'GNG',
+        'AEA',
+        'GUG'
+    ], {
+        G: 'aether:enchanted_gravitite',
+        N: 'powah:crystal_nitro',
+        A: 'mekanism:alloy_atomic',
+        E: 'mekanism:elite_control_circuit',
+        U: 'undergarden:utherium_crystal'
+    }).id('steampunk:circuits/ultimate_control_circuit_aether_undergarden');
+
+    // Металлургический наполнитель: Элитная схема + 320 ед. Очищенного обсидиана
+    event.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemical_input: {
+            amount: 320,
+            tag: 'mekanism:refined_obsidian'
+        },
+        item_input: {
+            count: 1,
+            item: 'mekanism:elite_control_circuit'
+        },
+        output: {
+            count: 1,
+            id: 'mekanism:ultimate_control_circuit'
+        },
+        per_tick_usage: false
+    }).id('steampunk:circuits/ultimate_from_elite_infusing');
+
+    // --------------------------------------------------------------------------
+    // 4. МАССОВАЯ ЗАРЯДКА МИКРОСХЕМ В ЗАРЯДНОЙ СФЕРЕ POWAH (Двойной выход!)
+    // --------------------------------------------------------------------------
+
+    // Зарядка Продвинутой схемы (2x выход): Базовая схема + Точный механизм + Самоцвет Источника (100k FE)
+    event.custom({
+        type: 'powah:energizing',
+        energy: 100000,
+        ingredients: [
+            { item: 'mekanism:basic_control_circuit' },
+            { item: 'create:precision_mechanism' },
+            { item: 'ars_nouveau:source_gem' }
+        ],
+        result: {
+            count: 2,
+            id: 'mekanism:advanced_control_circuit'
+        }
+    }).id('steampunk:circuits/energizing_advanced_double');
+
+    // Зарядка Элитной схемы (Синей) (2x выход): Продвинутая схема + Ниотический кристалл + Занит (400k FE)
+    event.custom({
+        type: 'powah:energizing',
+        energy: 400000,
+        ingredients: [
+            { item: 'mekanism:advanced_control_circuit' },
+            { item: 'powah:crystal_niotic' },
+            { item: 'aether:zanite_gemstone' }
+        ],
+        result: {
+            count: 2,
+            id: 'mekanism:elite_control_circuit'
+        }
+    }).id('steampunk:circuits/energizing_elite_double');
+
+    // Зарядка Совершенной схемы (Фиолетовой) (2x выход): Элитная схема + Нитро-кристалл + Карминит (1.5M FE)
+    event.custom({
+        type: 'powah:energizing',
+        energy: 1500000,
+        ingredients: [
+            { item: 'mekanism:elite_control_circuit' },
+            { item: 'powah:crystal_nitro' },
+            { item: 'twilightforest:carminite' }
+        ],
+        result: {
+            count: 2,
+            id: 'mekanism:ultimate_control_circuit'
+        }
+    }).id('steampunk:circuits/energizing_ultimate_double');
+
+    // --------------------------------------------------------------------------
+    // 5. REFINED STORAGE: ИНТЕГРАЦИЯ ПРОЦЕССОРОВ С МИКРОСХЕМАМИ MEKANISM
+    // --------------------------------------------------------------------------
+
+    // Улучшенный процессор (Синий RS): требует Базовую микросхему Mekanism + Золотой лист Create
+    event.remove({ output: 'refinedstorage:raw_improved_processor' });
+    event.shapeless('refinedstorage:raw_improved_processor', [
+        'refinedstorage:processor_binding',
+        'create:golden_sheet',
+        'refinedstorage:silicon',
+        'mekanism:basic_control_circuit'
+    ]).id('steampunk:rs/raw_improved_processor_integrated');
+
+    // Продвинутый процессор (Желтый RS): требует Продвинутую микросхему Mekanism + Алмаз + Кремний
+    event.remove({ output: 'refinedstorage:raw_advanced_processor' });
+    event.shapeless('refinedstorage:raw_advanced_processor', [
+        'refinedstorage:processor_binding',
+        'minecraft:diamond',
+        'refinedstorage:silicon',
+        'mekanism:advanced_control_circuit'
+    ]).id('steampunk:rs/raw_advanced_processor_integrated');
+
 });

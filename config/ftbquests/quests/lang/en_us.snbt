@@ -633,4 +633,19 @@
 	task.1F929F1DF23460AE.title: "Binding Cards"
 	task.3282910297C28795.title: "AllRightsReserved"
 	task.36E378BF22554E0A.title: "Energy Cables"
+
+	// Mekanism Circuit Progression Descriptions
+	quest.7C687DCF71D77761.title: "&cAdvanced Control Circuit"
+	quest.7C687DCF71D77761.quest_desc: [
+		"Next generation red processor.\n\nCombines a Basic Control Circuit with Mekanism Enriched Alloys, &6Create Precision Mechanisms&r, Polished Rose Quartz, and &dArs Nouveau Source Gems&r.\n\n&aTip:&r In the Powah Energizing Orb you can energize these materials to yield &b2x circuits&r at once!"
+	]
+	quest.1AEFF93A398B8BBF.title: "&9Elite Control Circuit (Blue)"
+	quest.1AEFF93A398B8BBF.quest_desc: [
+		"Blue processor of exceptional computational capacity.\n\nRequires Reinforced Alloys, &9Powah Niotic Crystals&r, &3Aether Zanite Gemstones&r (or Undergarden Froststeel), and Create Sturdy Sheets for extreme heat dissipation.\n\n&aTip:&r High-voltage charging in Powah Energizing Orb yields double (2x) output!"
+	]
+	quest.06210B6FD0F9989B.title: "&5Ultimate Control Circuit (Purple)"
+	quest.06210B6FD0F9989B.quest_desc: [
+		"Purple quantum processor - the absolute pinnacle of technology.\n\nSynthesized from an Elite Circuit, Atomic Alloys, &5Powah Nitro Crystals&r, &cTwilight Forest Carminite&r, and Refined Obsidian.\n\nUnlocks Fission & Fusion Reactors, Digital Miners, and QIO quantum storage!\n\n&aTip:&r Energizing Orb yields 2x circuits!"
+	]
+
 }
