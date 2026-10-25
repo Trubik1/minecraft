@@ -22,30 +22,38 @@
 	chapter_group.1643FF0B14990565.title: "Приключения и Магия"
 	chapter_group.181E781F1BAE7410.title: "Инженерия и Авиация"
 	chapter_group.3E8A1F026B5C7D91.title: "Эндгейм и Мега-Крафты"
-	quest.00ACD837E30165B3.quest_desc: [
-	"Consumes FE and outputs mechanical rotation!\n\nUse a wrench to configure target RPM (up to 256 RPM) and direction. Perfect for powering remote factories without water wheels!"
-	]
+	quest.00ACD837E30165B3.quest_desc: ["Consumes FE and outputs mechanical rotation!\n\nUse a wrench to configure target RPM (up to 256 RPM) and direction. Perfect for powering remote factories without water wheels!"]
 	quest.00ACD837E30165B3.title: "Electric Motor"
 	quest.01F18150EC923482.quest_desc: [
-	"Контроллер Refined Storage — это вершина технологического и магического прогресса!"
-	""
-	"Для его создания вам потребуются компоненты сразу четырех модов:"
-	"- &6Create&r: Точный механизм (Precision Mechanism)"
-	"- &bMekanism&r: Базовая микросхема и Энергетический планшет"
-	"- &dArs Nouveau&r: Самоцвет Источника (Source Gem)"
-	"- &aRefined Storage&r: Продвинутые процессоры и Корпус механизма"
+		"Контроллер Refined Storage — это вершина технологического и магического прогресса!"
+		""
+		"Для его создания вам потребуются компоненты сразу четырех модов:"
+		"- &6Create&r: Точный механизм (Precision Mechanism)"
+		"- &bMekanism&r: Базовая микросхема и Энергетический планшет"
+		"- &dArs Nouveau&r: Самоцвет Источника (Source Gem)"
+		"- &aRefined Storage&r: Продвинутые процессоры и Корпус механизма"
 	]
 	quest.01F18150EC923482.title: "Квантовое Сердце Сети"
-	quest.0354DB37FD2030EE.quest_desc: [
-	"Clean liquid fuel for boilers and engines."
-	]
+	quest.0354DB37FD2030EE.quest_desc: ["Clean liquid fuel for boilers and engines."]
 	quest.0354DB37FD2030EE.title: "Bioethanol"
 	quest.038C692C2AF271EC.quest_desc: ["Глубинный сланец залегает на глубинах ниже нулевой высоты и прочнее обычного камня."]
 	quest.038C692C2AF271EC.title: "Глубинный сланец"
+	quest.04833C4BB0CCCBB7.quest_desc: [
+		"Комплект экипировки Эфира: Оружие из Священного камня."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.04833C4BB0CCCBB7.title: "Оружие из Священного камня"
+	quest.04B92FAB179A74C9.quest_desc: [
+		"Комплект экипировки Эфира: Оружие из Гравитита."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.04B92FAB179A74C9.title: "Оружие из Гравитита"
 	quest.04D52AAB4265DB45.quest_desc: [
-	"Колоссальный пылающий меч лорда Игниса."
-	""
-	"Запитан квантовым энергопланшетом Mekanism и магией Источника Ars Nouveau."
+		"Колоссальный пылающий меч лорда Игниса."
+		""
+		"Запитан квантовым энергопланшетом Mekanism и магией Источника Ars Nouveau."
 	]
 	quest.04D52AAB4265DB45.title: "Плазменный Испепелитель Игниса"
 	quest.05A676E2103DFC85.quest_desc: ["Отыщите аметистовую жеоду и создайте подзорную трубу для дальнего обзора."]
@@ -55,34 +63,62 @@
 	quest.05B8181D12C48AB8.title: "Красная пыль"
 	quest.06210B6FD0F9989B.quest_desc: ["Purple quantum processor - the absolute pinnacle of technology.\n\nSynthesized from an Elite Circuit, Atomic Alloys, &5Powah Nitro Crystals&r, &cTwilight Forest Carminite&r, and Refined Obsidian.\n\nUnlocks Fission & Fusion Reactors, Digital Miners, and QIO quantum storage!\n\n&aTip:&r Energizing Orb yields 2x circuits!"]
 	quest.06210B6FD0F9989B.title: "&5Ultimate Control Circuit (Purple)"
-	quest.0834527ED1C0E83B.quest_desc: [
-	"Transfers power between moving contraptions (trains, carts) and stationary stations."
-	]
+	quest.0834527ED1C0E83B.quest_desc: ["Transfers power between moving contraptions (trains, carts) and stationary stations."]
 	quest.0834527ED1C0E83B.title: "Portable Energy Interface"
+	quest.08E4892F96828EC4.quest_desc: [
+		"&eГде найти:&r Вершина Золотого Данжа (остров с гигантской золотой сферой солнца)."
+		""
+		"&cУЯЗВИМОСТЬ:&r Неуязвим к прямому урону оружием!"
+		""
+		"&eТактика:&r Босс атакует волнами огня и запускает белые ледяные шары. &6Отбивайте ледяные шары ударом меча прямо в босса!&r После серии попаданий его огненная броня растает."
+		""
+		"&aНаграда:&r Золотой ключ, Солнечный Алтарь и доспехи Феникса."
+	]
+	quest.08E4892F96828EC4.title: "Дух Солнца — Босс Золотого Данжа"
 	quest.0D2E4F6A8B0C24E6.quest_desc: ["Золотые яблоки спасают жизнь в критических битвах благодаря регенерации и поглощению урона."]
 	quest.0D2E4F6A8B0C24E6.title: "Золотые плоды"
+	quest.0D2F07FC0F804223.quest_desc: [
+		"&fГде найти:&r Тронный зал Серебряного Данжа (парящий античный дворец)."
+		""
+		"&eПоведение:&r Сначала победите 10 рядовых валькирий в залах храма, чтобы заслужить их медали. Предъявите медали Королеве, чтобы начать бой."
+		""
+		"&cТактика:&r Парирует удары, создает телепорты и воздушные воронки. Бейте сразу после ее приземления и держите щит наготове."
+		""
+		"&aНаграда:&r Серебряный ключ и оружие Валькирий."
+	]
+	quest.0D2F07FC0F804223.title: "Королева Валькирий — Босс Серебряного Данжа"
 	quest.0F00BBDF3618B3BA.quest_desc: [
-	"Сетка объединяет доступ к цифровому хранилищу и верстак."
-	""
-	"Автоматический манипулятор построен на &6Точном механизме Create&r и магической матрице &dСамоцвета Источника Ars Nouveau&r."
+		"Сетка объединяет доступ к цифровому хранилищу и верстак."
+		""
+		"Автоматический манипулятор построен на &6Точном механизме Create&r и магической матрице &dСамоцвета Источника Ars Nouveau&r."
 	]
 	quest.0F00BBDF3618B3BA.title: "Сетка Автоматического Крафта"
 	quest.0FD62827710F0AC6.quest_desc: ["The &cMagmator&r will generate FE when supplied with Lava."]
 	quest.0FFF2BEE5D8EBE12.title: "Реактор (Ниотический)"
 	quest.1029384756AFBECD.quest_desc: ["Деревянный сундук и бочка позволят складывать накопившийся лут и сохранять порядок на базе."]
 	quest.1029384756AFBECD.title: "Базовое хранение"
+	quest.102DD961706E861A.quest_desc: [
+		"&2Где найти:&r Прячется в траве Эфира среди деревьев Скайрут."
+		""
+		"&eПоведение:&r Неподвижный хищный цветок. Заметив игрока, раскрывает ядовитые лепестки и стреляет отравляющими иглами."
+		""
+		"&cТактика:&r Атакуйте издалека из лука или подбегайте под прикрытием щита."
+		""
+		"&aДроп:&r &dЛепестки Эхора (Aechor Petal)&r — ключевой ресурс для приручения птенцов Моа!"
+	]
+	quest.102DD961706E861A.title: "Эхор-растение (Aechor Plant)"
 	quest.12A43F82FC67A289.quest_desc: [
-	"Дисковод читает накопители данных МЭ-сети."
-	""
-	"Для сборки привода головок чтения требуется &6Точный механизм Create&r и &bБазовая микросхема Mekanism&r."
+		"Дисковод читает накопители данных МЭ-сети."
+		""
+		"Для сборки привода головок чтения требуется &6Точный механизм Create&r и &bБазовая микросхема Mekanism&r."
 	]
 	quest.12A43F82FC67A289.title: "Цифровой Дисковод"
 	quest.1361B54CCB784EFF.quest_desc: ["Добудьте первые брёвна древесины руками или первым топором."]
 	quest.1361B54CCB784EFF.title: "Первое дерево"
 	quest.162CE44400A63575.quest_desc: [
-	"Входной билет в индустрию Mekanism!"
-	""
-	"&eВнимание:&r крафт требует освоения &6Create&r — &6Латунный корпус&r, прессованные пластины и &6Электронную лампу&r."
+		"Входной билет в индустрию Mekanism!"
+		""
+		"&eВнимание:&r крафт требует освоения &6Create&r — &6Латунный корпус&r, прессованные пластины и &6Электронную лампу&r."
 	]
 	quest.162CE44400A63575.title: "Металлургический Наполнитель"
 	quest.16F8506A5C3FAD00.quest_desc: ["Лазурит используется для чародейства и синих красителей."]
@@ -100,11 +136,17 @@
 	quest.1B0087400B0B8B49.quest_desc: ["The &9Reactor&r is a 3x4x3 multiblock generator that burns &aUrananite&r as fuel to produce FE.\\n\\nTo build it, you'll need to make a total of 36 Reactor Blocks. While holding 36 in hand, placing one block will auto-build the reactor. Make sure to clear out some room first!\\n\\nYou'll want to cool the reactor down for it to create more FE, and you can do this with either solid or liquid &bcoolant&r. To use a solid coolant, you'll also need to give it some liquid coolant as well. &bDry Ice&r makes for a great solid coolant! (Note: 1 Water Bucket will do).\\n\\nYou can also increase the FE generation by keeping the fuel buffer full, as well as adding both Coal and Redstone to the Reactor. Using Blocks of either will also work!"]
 	quest.1B0087400B0B8B49.title: "Reactor (Starter)"
 	quest.1B709930F41F8470.quest_desc: [
-	"Сокрушительный боевой молот Cataclysm, усиленный паровым двигателем Create и сталью Mekanism!"
-	""
-	"Разносит врагов ударными сейсмическими волнами."
+		"Сокрушительный боевой молот Cataclysm, усиленный паровым двигателем Create и сталью Mekanism!"
+		""
+		"Разносит врагов ударными сейсмическими волнами."
 	]
 	quest.1B709930F41F8470.title: "Инфернальный Кинетический Молот"
+	quest.1B7B377CB757867E.quest_desc: [
+		"Комплект экипировки Эфира: Инструменты из Гравитита."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.1B7B377CB757867E.title: "Инструменты из Гравитита"
 	quest.1BEA5FD82A6F8384.quest_desc: ["Алмазы — вершина классического шахтёрского дела. С их помощью создаётся высший инструмент и активируются порталы."]
 	quest.1BEA5FD82A6F8384.title: "Алмазы!"
 	quest.1BED8100B043C1D7.quest_desc: ["Добудьте сырое железо в подземных пещерах."]
@@ -112,13 +154,35 @@
 	quest.1C273D9E046FD18A.quest_desc: ["Used to energize items using the Energizing Orb."]
 	quest.1F2E3D4C5B6A7890.quest_desc: ["Железный нагрудник и броня существенно повышают защиту от физического урона."]
 	quest.1F2E3D4C5B6A7890.title: "Железная броня"
-	quest.215D766150B54B17.quest_desc: [
-	"Standard wire spool for connecting two connectors up to 16 blocks apart."
+	quest.20D957B3C350CDE2.quest_desc: [
+		"Комплект экипировки Эфира: Броня из Гравитита."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
 	]
+	quest.20D957B3C350CDE2.title: "Броня из Гравитита"
+	quest.215D766150B54B17.quest_desc: ["Standard wire spool for connecting two connectors up to 16 blocks apart."]
 	quest.215D766150B54B17.title: "Copper Wire Spool"
+	quest.24E124F12CFF2A50.quest_desc: [
+		"&6Где найти:&r Глубины Бронзового Данжа (лабиринт внутри каменных островов)."
+		""
+		"&cУЯЗВИМОСТЬ:&r &4ПОЛНОСТЬЮ НЕУЯЗВИМ К МЕЧАМ, ЛУКАМ И МАГИИ!&r Уязвим &eТОЛЬКО К КИРКАМ&r!"
+		""
+		"&eТактика:&r Возьмите лучшую кирку (Занитовую или Незеритовую). Уклоняйтесь от резких рывков босса по полу и бейте киркой по боковым граням куба."
+		""
+		"&aНаграда:&r Бронзовый ключ от сундука сокровищницы."
+	]
+	quest.24E124F12CFF2A50.title: "Ползун (Slider) — Босс Бронзового Данжа"
 	quest.25AC9E54B4FCA21F.quest_desc: ["Шалкеровый ящик сохраняет все предметы внутри при разрушении — абсолютный триумф портативного хранения."]
 	quest.25AC9E54B4FCA21F.title: "Шалкеровый ящик"
 	quest.25EFC21A3C48E0B6.title: "Tier: &2Spirited"
+	quest.29E6EFC8C19912BD.quest_desc: [
+		"&7Где найти:&r Коридоры и ловушки Бронзового Данжа."
+		""
+		"&eПоведение:&r Прыгучий круглый охранный страж. При приближении к игроку быстро раздувается и взрывается."
+		""
+		"&cТактика:&r Стреляйте издалека или атакуйте оружием с длинным радиусом."
+	]
+	quest.29E6EFC8C19912BD.title: "Часовой (Sentry)"
 	quest.2A1B0C3D4E5F6789.quest_desc: ["Стол зачарования открывает тайные знания древних магов. Добро пожаловать в мир Ars Nouveau!"]
 	quest.2A1B0C3D4E5F6789.title: "Шлюз: Магия Ars Nouveau"
 	quest.2A3B4C5D6E7F8091.quest_desc: ["Алмазная кирка способна разрушить самый крепкий блок верхнего мира — обсидиан."]
@@ -131,24 +195,72 @@
 	quest.2C0D3C467E4E8AEF.title: "Аметист и подзорная труба"
 	quest.2C1B4A5D6E709281.quest_desc: ["Распилите брёвна на доски и настругайте палок для создания первых рукояток инструментов."]
 	quest.2C1B4A5D6E709281.title: "Доски и палки"
+	quest.2E05F4FB1A1FDE2D.quest_desc: [
+		"&bГде найти:&r Распространенный обитатель травянистых лугов Эфира."
+		""
+		"&eПоведение:&r Желеобразный моб, затягивающий неосторожных путников внутрь и наносящий урон от удушья."
+		""
+		"&cТактика:&r Держите дистанцию, отбивайтесь оружием с отбрасыванием или луком."
+		""
+		"&aДроп:&r Шарики сладней (Swet Ball) — эфирный аналог сгустков слизи."
+	]
+	quest.2E05F4FB1A1FDE2D.title: "Синий сладень (Blue Swet)"
 	quest.2E1094F9A6C84310.quest_desc: ["Щит спасет от стрел скелетов и взрывов криперов."]
 	quest.2E1094F9A6C84310.title: "Щит"
 	quest.2F4A6C8E0B2D4F68.quest_desc: ["Адский нарост растет на песке душ и служит основой для подавляющего большинства зелий."]
 	quest.2F4A6C8E0B2D4F68.title: "Алхимия и Адский нарост"
+	quest.326452FFA7F5C6CA.quest_desc: [
+		"&6Где найти:&r Обитает на парящих равнинах Эфира, особенно возле рощ Золотых дубов."
+		""
+		"&eПоведение:&r Прыгает в сторону игрока. При касании поглощает вас внутрь своего золотого тела и взмывает высоко в воздух, нанося урон при падении."
+		""
+		"&cТактика:&r Не сражайтесь на краю островов — сладень легко сбросит вас в бездну! Расстреливайте из лука или наносите удары мечом с дистанции."
+		""
+		"&aДроп:&r Золотые шарики сладней (Golden Swet Balls)."
+	]
+	quest.326452FFA7F5C6CA.title: "Золотой сладень (Golden Swet)"
 	quest.33816AF0E699F19F.quest_desc: ["This block will drain FE from any charged item."]
 	quest.341486C9F277FEB7.title: "Реактор (Пылкий)"
+	quest.362F529D5E7C37A4.quest_desc: [
+		"Комплект экипировки Эфира: Обсидиановые Доспехи Эфира."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.362F529D5E7C37A4.title: "Обсидиановые Доспехи Эфира"
+	quest.36D9FB96D3557266.quest_desc: [
+		"&3Где найти:&r Гнезда птиц Моа на высоких кронах деревьев."
+		""
+		"&eПриручение:&r Взрослые дикие Моа не приручаются! Найдите яйцо в гнезде, высидите в инкубаторе и накормите вылупившегося птенца &dЛепестками Эхора&r."
+		""
+		"&aПолеты:&r Прирученный Моа — верный маунт, способный совершать до 3–4 прыжков в воздухе!"
+	]
+	quest.36D9FB96D3557266.title: "Птица Моа (Moa)"
+	quest.3781DB4807A89375.quest_desc: [
+		"Комплект экипировки Эфира: Оружие из Занита."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.3781DB4807A89375.title: "Оружие из Занита"
 	quest.37B5C824E0198A2F.quest_desc: [
-	"Добыв кварц в Нижнем мире и кремний, вы готовы к переходу в цифровую эру Refined Storage!"
-	""
-	"Для создания МЭ-сети вам потребуются технологии &6Create&r (точный механизм), &bMekanism&r (микросхемы и энергопланшет) и магия &dArs Nouveau&r (самоцвет источника)!"
+		"Добыв кварц в Нижнем мире и кремний, вы готовы к переходу в цифровую эру Refined Storage!"
+		""
+		"Для создания МЭ-сети вам потребуются технологии &6Create&r (точный механизм), &bMekanism&r (микросхемы и энергопланшет) и магия &dArs Nouveau&r (самоцвет источника)!"
 	]
 	quest.37B5C824E0198A2F.title: "Шлюз: Сети Refined Storage"
 	quest.384F9A105B8C1D90.quest_desc: ["Добудьте обсидиан при помощи алмазной кирки. Он потребуется для рамки портала в Нижний мир и стола зачарования."]
 	quest.384F9A105B8C1D90.title: "Обсидиан"
-	quest.39124F73B82400F4.quest_desc: [
-	"Converts mechanical rotation into Forge Energy (FE)!\n\nThe higher the rotational speed (RPM), the more FE/t it generates. Place a connector on it to draw power."
-	]
+	quest.39124F73B82400F4.quest_desc: ["Converts mechanical rotation into Forge Energy (FE)!\n\nThe higher the rotational speed (RPM), the more FE/t it generates. Place a connector on it to draw power."]
 	quest.39124F73B82400F4.title: "Alternator (FE Generator)"
+	quest.39E1211455224291.quest_desc: [
+		"&fГде найти:&r Парит в открытом воздухе вокруг островов Эфира (аналог адского Гаста)."
+		""
+		"&eПоведение:&r Летающее грозовое облако. Стреляет ветряными снарядами, которые отбрасывают игрока на десятки блоков."
+		""
+		"&cТактика:&r Стреляйте из лука. Летящий шар Зефира можно &6отбить ударом меча обратно в него&r!"
+		""
+		"&aДроп:&r Зефирный снежок (Zephyr Snowball)."
+	]
+	quest.39E1211455224291.title: "Зефир (Zephyr)"
 	quest.3A5C7E90B2D4F6A8.quest_desc: ["Древние обломки скрываются в глубинах лавовых озёр Нижнего мира. Переплавьте их в незеритовый лом!"]
 	quest.3A5C7E90B2D4F6A8.title: "Древние обломки"
 	quest.3B4C5D6E7F890123.quest_desc: ["Ведро лавы служит отличным сверхдолгим топливом для печи и источником обсидиана."]
@@ -157,25 +269,27 @@
 	quest.3B5C7D9E1A2F4082.title: "Деревянная кирка"
 	quest.3C5D7E9F1A2B4680.quest_desc: ["Скрафтите удочку для ловли рыбы, полезных сокровищ и зачарованных книг."]
 	quest.3C5D7E9F1A2B4680.title: "Рыбалка"
-	quest.3CA5DFF1105281D6.quest_desc: [
-	"A scalable multiblock FE energy battery.\n\nCombine blocks into 1x1, 2x2, or 3x3 structures up to several blocks tall. Each block increases total storage capacity."
-	]
+	quest.3CA5DFF1105281D6.quest_desc: ["A scalable multiblock FE energy battery.\n\nCombine blocks into 1x1, 2x2, or 3x3 structures up to several blocks tall. Each block increases total storage capacity."]
 	quest.3CA5DFF1105281D6.title: "Modular Accumulator"
 	quest.3CB6DC5B09C62CFE.quest_desc: ["&5Ender Gates&r are used to transfer power wirelessly to and from an adjacent block into the &7Ender Network&r.\\n\\nThink of these like wireless access points to your wireless network of power.\\n\\nNote: You can only add &apower storage capacity&r using an Ender Cell."]
 	quest.3D5F87F8E6B89C1B.quest_desc: ["The &7Furnator&r will burn items like coal and wood to produce FE."]
 	quest.3DDF87A1E5F5D009.quest_desc: [
-	"In the beginning, you can get by with creating the &7Starter&r and &bBasic&r tier machines using Iron, but you'll eventually need to create energized mats using the &9Energizing Orb&r.\\n\\nThe &9Energizing Orb&r will energize items using nearby &aEnergizing Rods&r within a 9x9 area around it, creating better materials for you to use to progress through the &eTiers&r in Powah.\\n\\nTo power the orb, you'll need to attach Energizing Rods to Energy Cables that are being supplied with energy. If you want the Orb to energize faster, either make more rods, upgrade to higher tier rods, or both! To see if the Rods are connected, set your &aWrench&r to link mode and you can link any Rod to the Orb."
-	""
-	"{image:atm:textures/questpics/powah/powah_energizing.png width:200 height:200 align:1}"
+		"In the beginning, you can get by with creating the &7Starter&r and &bBasic&r tier machines using Iron, but you'll eventually need to create energized mats using the &9Energizing Orb&r.\\n\\nThe &9Energizing Orb&r will energize items using nearby &aEnergizing Rods&r within a 9x9 area around it, creating better materials for you to use to progress through the &eTiers&r in Powah.\\n\\nTo power the orb, you'll need to attach Energizing Rods to Energy Cables that are being supplied with energy. If you want the Orb to energize faster, either make more rods, upgrade to higher tier rods, or both! To see if the Rods are connected, set your &aWrench&r to link mode and you can link any Rod to the Orb."
+		""
+		"{image:atm:textures/questpics/powah/powah_energizing.png width:200 height:200 align:1}"
 	]
 	quest.3DDF87A1E5F5D009.title: "The &9Energizing Orb"
 	quest.40B2389C5E1F4FC0.quest_desc: ["Добудьте булыжник деревянной киркой."]
 	quest.40B2389C5E1F4FC0.title: "Булыжник"
 	quest.41DF79A9BE6E1780.quest_desc: ["Переплавьте сырое железо в прочные слитки."]
 	quest.41DF79A9BE6E1780.title: "Железные слитки"
-	quest.43E4EE94BB396A7C.quest_desc: [
-	"The Rolling Mill is the core machine of Create Crafts & Additions.\n\nSupply kinetic rotational power from Create. Drop ingots (iron, copper, gold) on top. The machine rolls them into Rods, and a second pass produces thin Wires without material loss!"
+	quest.4394AEF0823FB4D2.quest_desc: [
+		"Комплект экипировки Эфира: Инструменты из Скайрута."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
 	]
+	quest.4394AEF0823FB4D2.title: "Инструменты из Скайрута"
+	quest.43E4EE94BB396A7C.quest_desc: ["The Rolling Mill is the core machine of Create Crafts & Additions.\n\nSupply kinetic rotational power from Create. Drop ingots (iron, copper, gold) on top. The machine rolls them into Rods, and a second pass produces thin Wires without material loss!"]
 	quest.43E4EE94BB396A7C.title: "Rolling Mill"
 	quest.4430352AB5FE48B5.quest_desc: ["Андезитовый сплав — основа шестерней, валов и кинетических механизмов Create."]
 	quest.4430352AB5FE48B5.title: "Андезитовый сплав"
@@ -186,13 +300,25 @@
 	quest.44F78B45E12E9901.quest_desc: ["Добудьте первые брёвна древесины руками или первым топором."]
 	quest.44F78B45E12E9901.title: "Первое дерево"
 	quest.47A5006422D7E643.quest_desc: [
-	"Легендарная катана Epic Fight с молниеносными стойками и комбо-ударами!"
-	""
-	"Выкована из стали Mekanism, Витерита Cataclysm и кинетического Точного механизма Create."
+		"Легендарная катана Epic Fight с молниеносными стойками и комбо-ударами!"
+		""
+		"Выкована из стали Mekanism, Витерита Cataclysm и кинетического Точного механизма Create."
 	]
 	quest.47A5006422D7E643.title: "Клинок Мастера: Утигатана"
+	quest.4974F265003DAEC9.quest_desc: [
+		"Комплект экипировки Эфира: Инструменты Валькирий."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.4974F265003DAEC9.title: "Инструменты Валькирий"
 	quest.4A5B6C7D8E9F0123.quest_desc: ["Костёр позволяет готовить пищу до 4 порций одновременно без затрат угля, а также служит ориентиром."]
 	quest.4A5B6C7D8E9F0123.title: "Тёплый костёр"
+	quest.4AED9EF9E0F68483.quest_desc: [
+		"Комплект экипировки Эфира: Инструменты из Холистоуна."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.4AED9EF9E0F68483.title: "Инструменты из Холистоуна"
 	quest.4B6D8F01C3E5A7B9.quest_desc: ["Объедините 4 незеритовых лома и 4 золотых слитка для создания незеритового слитка — вершины земной металлургии."]
 	quest.4B6D8F01C3E5A7B9.title: "Незеритовый слиток"
 	quest.4C2AF1950255410E.quest_desc: ["Каменная кирка позволяет добывать железо, медь и уголь."]
@@ -201,17 +327,39 @@
 	quest.4C5D6E7F89012345.title: "Наковальня"
 	quest.4D6E8F0A2B4C6E80.quest_desc: ["Кости скелетов перемалываются в костную муку для мгновенного ускорения роста растений."]
 	quest.4D6E8F0A2B4C6E80.title: "Охота: Кости скелетов"
+	quest.4E847B0288265DA3.quest_desc: [
+		"&8Где найти:&r Спавнится ночью или в темных расселинах под парящими островами."
+		""
+		"&eПоведение:&r Агрессивная птица-рептилия, плюющаяся ядовитыми дротиками, накладывающими медлительность и сильное отравление."
+		""
+		"&cТактика:&r &6Щит полностью блокирует его иглы!&r Защищайтесь щитом и бейте стрелами или мечом."
+		""
+		"&aДроп:&r Перья василиска (для ядовитых стрел)."
+	]
+	quest.4E847B0288265DA3.title: "Василиск (Cockatrice)"
 	quest.4F1FFC02F4EAA2E6.title: "Tier: &4Nitro"
 	quest.4F657525624E2004.quest_desc: ["Скрафтите лук и запас стрел для эффективной дальней охоты и обороны."]
 	quest.4F657525624E2004.title: "Охота: Лук и стрелы"
-	quest.51843C5D4D609076.quest_desc: [
-	"Crush plant matter to create biomass for green fuels."
-	]
+	quest.51843C5D4D609076.quest_desc: ["Crush plant matter to create biomass for green fuels."]
 	quest.51843C5D4D609076.title: "Biomass"
 	quest.52E59FCB39D66BCF.quest_desc: ["One of the best options for \"Passive Power\", the &9Thermal Generator&r will produce FE when placed over a &cHeat Source&r and given a steady supply of water.\\n\\nThere are currently 3 blocks you can place this over: a Magma block which produces the lowest, a lava source block which is a little better, or a &cBlock of Blazing Crystal&r, which provides the most heat. "]
 	quest.5615D59B33BF1D65.quest_desc: ["Скрафтите лук и запас стрел для эффективной дальней охоты и обороны."]
 	quest.5615D59B33BF1D65.title: "Охота: Лук и стрелы"
 	quest.562BD37539EE318E.title: "Tier: &cBlazing"
+	quest.57DD886985DBFD97.quest_desc: [
+		"&6Где найти:&r В комнатах Бронзовых данжей под видом сундука с сокровищами."
+		""
+		"&eПоведение:&r При попытке открыть или подойти распахивает зубастую пасть и бросается в атаку."
+		""
+		"&cТактика:&r Проверяйте сундуки в данжах ударом оружия на безопасном расстоянии!"
+	]
+	quest.57DD886985DBFD97.title: "Мимик (Mimic)"
+	quest.58006FC06C34F6CA.quest_desc: [
+		"Комплект экипировки Эфира: Броня из Занита."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.58006FC06C34F6CA.title: "Броня из Занита"
 	quest.5A8C11099E010001.quest_desc: ["Добро пожаловать в гильдию охотников! Великие чудовища терзают этот мир. Сразите их, чтобы заслужить несметные богатства и признание."]
 	quest.5A8C11099E010001.title: "Гильдия Охотников на Боссов"
 	quest.5A8C11099E010002.quest_desc: ["Древнее чудовище из расплавленного незерита обитает в глубинах Незера. Разбейте его тяжелую броню и заберите его клинок!"]
@@ -332,105 +480,55 @@
 	quest.5A8C11099E030017.title: "Горячий Шоколад и Сидр"
 	quest.5A8C11099E030018.quest_desc: ["Приготовьте полный стол всех пиров Farmer's Delight: Пастуший пирог, Фаршированная тыква и Ростбиф!"]
 	quest.5A8C11099E030018.title: "Гранд-Банкет Шеф-Повара"
-	quest.5A8C11099E030101.quest_desc: [
-	"Place the grill over a campfire or open fire to roast skewers."
-	]
+	quest.5A8C11099E030101.quest_desc: ["Place the grill over a campfire or open fire to roast skewers."]
 	quest.5A8C11099E030101.title: "&6Barbeque Grill&r"
-	quest.5A8C11099E030102.quest_desc: [
-	"Use the basin to mix sauces, spices, and marinate raw skewers."
-	]
+	quest.5A8C11099E030102.quest_desc: ["Use the basin to mix sauces, spices, and marinate raw skewers."]
 	quest.5A8C11099E030102.title: "Seasoning Basin"
-	quest.5A8C11099E030103.quest_desc: [
-	"Craft Barbeque and Honey Mustard sauces."
-	]
+	quest.5A8C11099E030103.quest_desc: ["Craft Barbeque and Honey Mustard sauces."]
 	quest.5A8C11099E030103.title: "Chef Sauces"
-	quest.5A8C11099E030104.quest_desc: [
-	"Chili, cumin, and pepper powders for rich aroma."
-	]
+	quest.5A8C11099E030104.quest_desc: ["Chili, cumin, and pepper powders for rich aroma."]
 	quest.5A8C11099E030104.title: "Exotic Spices"
-	quest.5A8C11099E030105.quest_desc: [
-	"Juicy charcoal grilled beef."
-	]
+	quest.5A8C11099E030105.quest_desc: ["Juicy charcoal grilled beef."]
 	quest.5A8C11099E030105.title: "Grilled Beef Skewer"
-	quest.5A8C11099E030106.quest_desc: [
-	"Crispy Bavarian sausages on a skewer."
-	]
+	quest.5A8C11099E030106.quest_desc: ["Crispy Bavarian sausages on a skewer."]
 	quest.5A8C11099E030106.title: "Grilled Sausage Skewer"
-	quest.5A8C11099E030107.quest_desc: [
-	"Tender marinated chicken breast."
-	]
+	quest.5A8C11099E030107.quest_desc: ["Tender marinated chicken breast."]
 	quest.5A8C11099E030107.title: "Grilled Chicken Skewer"
-	quest.5A8C11099E030108.quest_desc: [
-	"Savory roasted lamb."
-	]
+	quest.5A8C11099E030108.quest_desc: ["Savory roasted lamb."]
 	quest.5A8C11099E030108.title: "Grilled Lamb Skewer"
-	quest.5A8C11099E030109.quest_desc: [
-	"Grilled salmon and cod skewers."
-	]
+	quest.5A8C11099E030109.quest_desc: ["Grilled salmon and cod skewers."]
 	quest.5A8C11099E030109.title: "Seafood BBQ"
-	quest.5A8C11099E030110.quest_desc: [
-	"Roasted potato, mushroom, and vegetable skewers."
-	]
+	quest.5A8C11099E030110.quest_desc: ["Roasted potato, mushroom, and vegetable skewers."]
 	quest.5A8C11099E030110.title: "Grilled Vegetables"
-	quest.5A8C11099E030111.quest_desc: [
-	"Juicy meat, veggies, and sauce rolled in flatbread."
-	]
+	quest.5A8C11099E030111.quest_desc: ["Juicy meat, veggies, and sauce rolled in flatbread."]
 	quest.5A8C11099E030111.title: "&6Kebab Wrap&r"
-	quest.5A8C11099E030112.quest_desc: [
-	"Toasted bun packed with roast meat."
-	]
+	quest.5A8C11099E030112.quest_desc: ["Toasted bun packed with roast meat."]
 	quest.5A8C11099E030112.title: "Kebab Sandwich"
-	quest.5A8C11099E030113.quest_desc: [
-	"Rice bowl with seasoned beef, fried egg, and spicy sauce."
-	]
+	quest.5A8C11099E030113.quest_desc: ["Rice bowl with seasoned beef, fried egg, and spicy sauce."]
 	quest.5A8C11099E030113.title: "&eKorean Bibimbap&r"
-	quest.5A8C11099E030114.quest_desc: [
-	"Bun, patty, and lettuce."
-	]
+	quest.5A8C11099E030114.quest_desc: ["Bun, patty, and lettuce."]
 	quest.5A8C11099E030114.title: "Simple Hamburger"
-	quest.5A8C11099E030115.quest_desc: [
-	"Classic burger with melted cheese."
-	]
+	quest.5A8C11099E030115.quest_desc: ["Classic burger with melted cheese."]
 	quest.5A8C11099E030115.title: "Cheeseburger"
-	quest.5A8C11099E030116.quest_desc: [
-	"Hearty breakfast burger with egg."
-	]
+	quest.5A8C11099E030116.quest_desc: ["Hearty breakfast burger with egg."]
 	quest.5A8C11099E030116.title: "Egg Burger"
-	quest.5A8C11099E030117.quest_desc: [
-	"Double patty, crispy bacon, and double cheese!"
-	]
+	quest.5A8C11099E030117.quest_desc: ["Double patty, crispy bacon, and double cheese!"]
 	quest.5A8C11099E030117.title: "&6Loaded Hamburger&r"
-	quest.5A8C11099E030118.quest_desc: [
-	"Toasted bread with a grilled steak."
-	]
+	quest.5A8C11099E030118.quest_desc: ["Toasted bread with a grilled steak."]
 	quest.5A8C11099E030118.title: "Steak Sandwich"
-	quest.5A8C11099E030119.quest_desc: [
-	"Triple decker sandwich with chicken, egg, and tomato."
-	]
+	quest.5A8C11099E030119.quest_desc: ["Triple decker sandwich with chicken, egg, and tomato."]
 	quest.5A8C11099E030119.title: "Chicken Club Sandwich"
-	quest.5A8C11099E030120.quest_desc: [
-	"Pasta in rich cream sauce with chicken."
-	]
+	quest.5A8C11099E030120.quest_desc: ["Pasta in rich cream sauce with chicken."]
 	quest.5A8C11099E030120.title: "Creamy Chicken Pasta"
-	quest.5A8C11099E030121.quest_desc: [
-	"Savory carbonara with ham."
-	]
+	quest.5A8C11099E030121.quest_desc: ["Savory carbonara with ham."]
 	quest.5A8C11099E030121.title: "Creamy Ham Pasta"
-	quest.5A8C11099E030122.quest_desc: [
-	"Fluffy rice with tender beef."
-	]
+	quest.5A8C11099E030122.quest_desc: ["Fluffy rice with tender beef."]
 	quest.5A8C11099E030122.title: "Beef Rice Bowl"
-	quest.5A8C11099E030123.quest_desc: [
-	"Fluffy mashed potatoes with butter and milk."
-	]
+	quest.5A8C11099E030123.quest_desc: ["Fluffy mashed potatoes with butter and milk."]
 	quest.5A8C11099E030123.title: "Mashed Potatoes"
-	quest.5A8C11099E030124.quest_desc: [
-	"Skillet fried diced potatoes with beef."
-	]
+	quest.5A8C11099E030124.quest_desc: ["Skillet fried diced potatoes with beef."]
 	quest.5A8C11099E030124.title: "Diced Potatoes with Beef"
-	quest.5A8C11099E030125.quest_desc: [
-	"Fluffy breakfast omelette and cold chocolate popsicle."
-	]
+	quest.5A8C11099E030125.quest_desc: ["Fluffy breakfast omelette and cold chocolate popsicle."]
 	quest.5A8C11099E030125.title: "Omelette & Popsicle"
 	quest.5A8C11099E040001.quest_desc: ["Современный век требует колоссальной мощности и гибкой логистики. Исследуйте Powah, PneumaticCraft, Industrial Foregoing и Flux Networks!"]
 	quest.5A8C11099E040001.title: "Эра Продвинутых Технологий"
@@ -528,57 +626,31 @@
 	quest.5A8C11099E050012.title: "Квантовый Индукционный Монолит"
 	quest.5A8C11099E050013.quest_desc: ["Абсолютное завершение сборки Steampunk  Swords. Вы взошли на трон повелителя вселенной!"]
 	quest.5A8C11099E050013.title: "Венец Вечности (Crown of Eternity)"
-	quest.5A8C11099E050020.quest_desc: [
-	"First tier of extended crafting with Black Iron."
-	]
+	quest.5A8C11099E050020.quest_desc: ["First tier of extended crafting with Black Iron."]
 	quest.5A8C11099E050020.title: "Basic Crafting Table (3x3)"
-	quest.5A8C11099E050021.quest_desc: [
-	"Extended 5x5 crafting matrix for advanced components."
-	]
+	quest.5A8C11099E050021.quest_desc: ["Extended 5x5 crafting matrix for advanced components."]
 	quest.5A8C11099E050021.title: "Advanced Crafting Table (5x5)"
-	quest.5A8C11099E050022.quest_desc: [
-	"Large 7x7 grid for high-tier catalysts and alloys."
-	]
+	quest.5A8C11099E050022.quest_desc: ["Large 7x7 grid for high-tier catalysts and alloys."]
 	quest.5A8C11099E050022.title: "Elite Crafting Table (7x7)"
-	quest.5A8C11099E050023.quest_desc: [
-	"Monumental &e9x9&r crafting table!\n\nUnlocks the crafting of &6Creative Items&r: Creative Motor, Creative Energy Cube, and Creative RS Controller!"
-	]
+	quest.5A8C11099E050023.quest_desc: ["Monumental &e9x9&r crafting table!\n\nUnlocks the crafting of &6Creative Items&r: Creative Motor, Creative Energy Cube, and Creative RS Controller!"]
 	quest.5A8C11099E050023.title: "&6Ultimate Crafting Table (9x9)&r"
-	quest.5A8C11099E060001.quest_desc: [
-	"Schematics are blueprints allowing you to save, share, and auto-build complex factories block by block!\n\nEmpty Schematics are blank canvases for building plans."
-	]
+	quest.5A8C11099E060001.quest_desc: ["Schematics are blueprints allowing you to save, share, and auto-build complex factories block by block!\n\nEmpty Schematics are blank canvases for building plans."]
 	quest.5A8C11099E060001.title: "&6What are Create Schematics?&r"
-	quest.5A8C11099E060002.quest_desc: [
-	"Loads schematic files onto blank blueprints.\n\nInsert an empty schematic, select your design, and print. Now you hold a deployable hologram!"
-	]
+	quest.5A8C11099E060002.quest_desc: ["Loads schematic files onto blank blueprints.\n\nInsert an empty schematic, select your design, and print. Now you hold a deployable hologram!"]
 	quest.5A8C11099E060002.title: "Schematic Table"
-	quest.5A8C11099E060003.quest_desc: [
-	"You do not need to design complex farms from scratch!\n\n1. Visit &6https://createmod.com&r\n2. Find designs (tree farms, iron factories, stations).\n3. Download the &e.nbt&r file.\n4. Place it in &b.minecraft/schematics&r.\n5. Open the Schematic Table - it appears instantly in the list!"
-	]
+	quest.5A8C11099E060003.quest_desc: ["You do not need to design complex farms from scratch!\n\n1. Visit &6https://createmod.com&r\n2. Find designs (tree farms, iron factories, stations).\n3. Download the &e.nbt&r file.\n4. Place it in &b.minecraft/schematics&r.\n5. Open the Schematic Table - it appears instantly in the list!"]
 	quest.5A8C11099E060003.title: "&bWhere to find pre-made factories?&r"
-	quest.5A8C11099E060004.quest_desc: [
-	"Want to save your own build?\n\nRight-click corner 1, then corner 2 with the Quill. Enter a name and save - your build is now an .nbt file!"
-	]
+	quest.5A8C11099E060004.quest_desc: ["Want to save your own build?\n\nRight-click corner 1, then corner 2 with the Quill. Enter a name and save - your build is now an .nbt file!"]
 	quest.5A8C11099E060004.title: "Schematic and Quill"
-	quest.5A8C11099E060005.quest_desc: [
-	"The automated block-shooting builder!\n\nPlace it near your hologram, attach a chest with materials, feed it gunpowder, insert the schematic, and press start. It constructs the building block by block!"
-	]
+	quest.5A8C11099E060005.quest_desc: ["The automated block-shooting builder!\n\nPlace it near your hologram, attach a chest with materials, feed it gunpowder, insert the schematic, and press start. It constructs the building block by block!"]
 	quest.5A8C11099E060005.title: "&6Schematicannon&r"
-	quest.5A8C11099E060006.quest_desc: [
-	"Attach mechanical saws, chests, and deployers to a mechanical bearing to automate infinite wood and charcoal."
-	]
+	quest.5A8C11099E060006.quest_desc: ["Attach mechanical saws, chests, and deployers to a mechanical bearing to automate infinite wood and charcoal."]
 	quest.5A8C11099E060006.title: "Automation: Tree Farm"
-	quest.5A8C11099E060007.quest_desc: [
-	"Drill cobblestone and feed into crushing wheels to produce endless gravel."
-	]
+	quest.5A8C11099E060007.quest_desc: ["Drill cobblestone and feed into crushing wheels to produce endless gravel."]
 	quest.5A8C11099E060007.title: "Automation: Cobblestone & Gravel"
-	quest.5A8C11099E060008.quest_desc: [
-	"The classic Create Iron Factory:\n\nWash gravel with an encased fan and water stream to yield Iron Nuggets and Flint! Press nuggets into ingots."
-	]
+	quest.5A8C11099E060008.quest_desc: ["The classic Create Iron Factory:\n\nWash gravel with an encased fan and water stream to yield Iron Nuggets and Flint! Press nuggets into ingots."]
 	quest.5A8C11099E060008.title: "&eAutomation: Infinite Iron!&r"
-	quest.5A8C11099E060009.quest_desc: [
-	"Trains transport thousands of items and fluids across distant bases and dimensions."
-	]
+	quest.5A8C11099E060009.quest_desc: ["Trains transport thousands of items and fluids across distant bases and dimensions."]
 	quest.5A8C11099E060009.title: "Logistics: Trains"
 	quest.5A8C11099E060010.quest_desc: ["Рыцарский меч высшего ранга."]
 	quest.5A8C11099E060010.title: "Алмазный Лонгсворд"
@@ -614,8 +686,6 @@
 	quest.5A8C11099E060025.title: "Огненная Рукавица (Fire Gauntlet)"
 	quest.5A8C11099E060026.quest_desc: ["Автоматически телепортирует героя в безопасное место при получении смертельного удара."]
 	quest.5A8C11099E060026.title: "Тотем Хоруса (Chorus Totem)"
-	quest.5A8C11099E060027.quest_desc: ["Особая техника быстрого извлечения клинка из ножен (Иайдо)."]
-	quest.5A8C11099E060027.title: "Утигатана Самурая (Uchigatana)"
 	quest.5A8C11099E060028.quest_desc: ["Пожинает души павших монстров, восстанавливая стамину владельца."]
 	quest.5A8C11099E060028.title: "Синигами — Коса Смерти (Shinigami)"
 	quest.5A8C11099E060029.quest_desc: ["Мистический клинок, испускающий волны лунного света при взмахе."]
@@ -710,6 +780,12 @@
 	quest.5A8C11099E080021.title: "Улучшение: Ёмкость"
 	quest.5B1C2D3E4F5A6B70.quest_desc: ["Сахарный тростник растет вдоль рек и водоёмов. Он понадобится для производства сахара, бумаги и книг."]
 	quest.5B1C2D3E4F5A6B70.title: "Сахарный тростник"
+	quest.5BB5EE00BB4F9691.quest_desc: [
+		"&7Где найти:&r Острова Эфира."
+		""
+		"&eОсобенности:&r Корова с крыльями. Дает молоко в деревянное ведро Скайрута."
+	]
+	quest.5BB5EE00BB4F9691.title: "Летающая корова (Flying Cow)"
 	quest.5BCA3F716348ECCD.quest_desc: ["The &9Energy Hopper&r will charge any chargeable item inside of the inventory of the block it is pointed to, like a chest."]
 	quest.5C7E9012D4F6A8B0.quest_desc: ["Жемчуг Края падает со странников Края и позволяет телепортироваться на расстояния."]
 	quest.5C7E9012D4F6A8B0.title: "Жемчуг Края"
@@ -724,29 +800,45 @@
 	quest.5E5C60783F414D2B.title: "Шлюз: Индустрия Mekanism"
 	quest.5E7F9A1B3C5D7F91.quest_desc: ["Нить пауков нужна для удочек, поводков, луков и шерсти."]
 	quest.5E7F9A1B3C5D7F91.title: "Охота: Нить паука"
-	quest.5F6152CF085D75D6.title: "Реактор (Базовый)"
-	quest.60DBF181ED929607.quest_desc: [
-	"Strikes hostile mobs with electricity or wirelessly recharges player equipment!"
+	quest.5F44BF9A1DAE8B99.quest_desc: [
+		"Комплект экипировки Эфира: Доспехи Нептуна."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
 	]
+	quest.5F44BF9A1DAE8B99.title: "Доспехи Нептуна"
+	quest.5F6152CF085D75D6.title: "Реактор (Базовый)"
+	quest.60DBF181ED929607.quest_desc: ["Strikes hostile mobs with electricity or wirelessly recharges player equipment!"]
 	quest.60DBF181ED929607.title: "Tesla Coil"
+	quest.6149E5F1F9CF8DC6.quest_desc: [
+		"&dГде найти:&r Парящие луга Эфира."
+		""
+		"&eОсобенности:&r Свинья с крылышками. Наденьте седло, чтобы планировать по небесам!"
+	]
+	quest.6149E5F1F9CF8DC6.title: "Фиг (Phyg)"
 	quest.61A8FAEC4FF18449.quest_desc: ["These can be used to charge items in your inventory, or can be used to increase the overall power capacity of an &7Ender Network&r channel."]
 	quest.61DCECE1FC38E151.title: "Реактор (Нитро)"
 	quest.622351BC30D93F04.quest_desc: ["Медь — ключевой металл кинематики Create, проводов и паровых технологий."]
 	quest.622351BC30D93F04.title: "Медная руда"
 	quest.624642FD21AB7ACF.quest_desc: ["Золото необходимо для энергетики, золотых яблок и продвинутых сплавов."]
 	quest.624642FD21AB7ACF.title: "Золотая руда"
+	quest.63D4621C06BA747C.quest_desc: [
+		"Комплект экипировки Эфира: Оружие из древесины Скайрут."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.63D4621C06BA747C.title: "Оружие из древесины Скайрут"
 	quest.64601A58B3E05B1A.quest_desc: [
-	"Книга боевых навыков Epic Fight."
-	""
-	"Открывает доступ к парированию, акробатическим уклонениям и смертоносным спец-приемам!"
+		"Книга боевых навыков Epic Fight."
+		""
+		"Открывает доступ к парированию, акробатическим уклонениям и смертоносным спец-приемам!"
 	]
 	quest.64601A58B3E05B1A.title: "Фолиант Боевых Искусств"
 	quest.66ECC26BC81D0093.title: "Tier: &bBasic"
 	quest.6754612E9AD4B9C0.title: "Реактор (Пылающий)"
 	quest.677365A816994C8B.quest_desc: [
-	"The &9Player Transmitter&r will charge a player's items wirelessly. You must first bind this to a player using a &9Binding Card&r. This is the basic card which allows the transmitter to only work in the same dimension. You can upgrade this by using a &dBinding Card (Dimensional)&r instead. "
-	""
-	"Note: To get a Player Aerial Pearl, use an Aerial Pearl on a Zombie or Husk."
+		"The &9Player Transmitter&r will charge a player's items wirelessly. You must first bind this to a player using a &9Binding Card&r. This is the basic card which allows the transmitter to only work in the same dimension. You can upgrade this by using a &dBinding Card (Dimensional)&r instead. "
+		""
+		"Note: To get a Player Aerial Pearl, use an Aerial Pearl on a Zombie or Husk."
 	]
 	quest.6845261FBEABB40C.quest_desc: ["Постройте рамку из обсидиана и подожгите огнивом, чтобы отправиться в адские пустоши Нижнего мира."]
 	quest.6845261FBEABB40C.title: "Экспедиция в Нижний мир"
@@ -770,16 +862,56 @@
 	quest.6F8A0B2C4D6E80A2.quest_desc: ["Порох с криперов позволяет делать динамит (TNT) и ракеты для надкрылий."]
 	quest.6F8A0B2C4D6E80A2.title: "Опасность: Порох и TNT"
 	quest.700F3FF7C23D0C0F.quest_desc: ["The &5Ender Cell&r will store power for a channel in your &7Ender Network&r. To increase the power capacity of the network, right click on the Ender Cell to open up the interface, then add either a &aBattery&r or an &9Energy Cell&r to increase the overall capacity."]
+	quest.714960DF26EFFA53.quest_desc: [
+		"Комплект экипировки Эфира: Инструменты из Занита."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.714960DF26EFFA53.title: "Инструменты из Занита"
 	quest.75BF61D8614792D6.quest_desc: ["Постройте рамку из обсидиана и подожгите огнивом, чтобы отправиться в адские пустоши Нижнего мира."]
 	quest.75BF61D8614792D6.title: "Экспедиция в Нижний мир"
-	quest.7678B5DD1339833E.quest_desc: ["The Solar Panel generates FE when given direct access to the sun. However, you can use a &7Lens of Ender&r to ignore blocks in its way."]
-	quest.77B2C22D776D1B60.quest_desc: [
-	"How to transmit power with wires:\n\n1. Place a Connector on an alternator, battery, or motor.\n2. Hold a Wire Spool in hand.\n3. Right-click the first connector, then the second - a wire connects them!\n\nLarge Connectors handle higher power transfer."
+	quest.75C5BFAEADEB486E.quest_desc: [
+		"Комплект экипировки Эфира: Доспехи Валькирий."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
 	]
+	quest.75C5BFAEADEB486E.title: "Доспехи Валькирий"
+	quest.7678B5DD1339833E.quest_desc: ["The Solar Panel generates FE when given direct access to the sun. However, you can use a &7Lens of Ender&r to ignore blocks in its way."]
+	quest.769B23E692CBA16B.quest_desc: [
+		"Комплект экипировки Эфира: Ведро и Лодка Скайрута."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.769B23E692CBA16B.title: "Ведро и Лодка Скайрута"
+	quest.77B2C22D776D1B60.quest_desc: ["How to transmit power with wires:\n\n1. Place a Connector on an alternator, battery, or motor.\n2. Hold a Wire Spool in hand.\n3. Right-click the first connector, then the second - a wire connects them!\n\nLarge Connectors handle higher power transfer."]
 	quest.77B2C22D776D1B60.title: "Connectors & Power Transmission"
 	quest.78202A1CF5D86B94.quest_desc: ["The &9Power Bank&r of Powah.\\n\\nThese can also be used to upgrade the total power storage capacity of your wireless &7Ender Networks&r."]
+	quest.78AAFE5AF04A13AC.quest_desc: [
+		"&fГде найти:&r Зеленые поляны Эфира."
+		""
+		"&aПолезная механика:&r Кликните ПКМ по зайчику с пустой рукой, чтобы &6посадить его себе на голову&r! Зайчик дарует эффект плавного падения без урона."
+	]
+	quest.78AAFE5AF04A13AC.title: "Аэрозайчик (Aerbunny)"
+	quest.78BD3D4FBA42D3DC.quest_desc: [
+		"&fГде найти:&r Равнины Эфира."
+		""
+		"&eОсобенности:&r Пушистая летающая овечка. Стрижка ножницами дает шерсть Эфира. При падении раздувается как парашют."
+	]
+	quest.78BD3D4FBA42D3DC.title: "Овцепух (Sheepuff)"
+	quest.7A4B51313FB134EA.quest_desc: [
+		"Комплект экипировки Эфира: Доспехи Феникса."
+		""
+		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
+	]
+	quest.7A4B51313FB134EA.title: "Доспехи Феникса"
 	quest.7A9B1C3D5E7F91B3.quest_desc: ["Переплавьте песок в прозрачное стекло для окон, колб и приборов."]
 	quest.7A9B1C3D5E7F91B3.title: "Стекло и колбы"
+	quest.7AD4ED72AC31D912.quest_desc: [
+		"&bГде найти:&r Высоко в открытом небе Эфира между облаками."
+		""
+		"&eПоведение:&r Мирный гигант небес. Медленно парит в воздухе, выпуская облачные потоки дыхания."
+	]
+	quest.7AD4ED72AC31D912.title: "Аэрокит (Aerwhale)"
 	quest.7C687DCF71D77761.quest_desc: ["Next generation red processor.\n\nCombines a Basic Control Circuit with Mekanism Enriched Alloys, &6Create Precision Mechanisms&r, Polished Rose Quartz, and &dArs Nouveau Source Gems&r.\n\n&aTip:&r In the Powah Energizing Orb you can energize these materials to yield &b2x circuits&r at once!"]
 	quest.7C687DCF71D77761.title: "&cAdvanced Control Circuit"
 	quest.7D52DD751DDADA1B.quest_desc: ["The basic cables for transferring power."]
@@ -796,110 +928,6 @@
 	quest.7F5203BC5B8FC8C2.title: "Каменный уголь"
 	quest.7F804E19C6A18D34.quest_desc: ["Бросьте алмаз в заполненный водой бассейн 2х2 с цветами, чтобы открыть портал в Сумеречный Лес."]
 	quest.7F804E19C6A18D34.title: "Шлюз: The Twilight Forest"
-	task.09C7E50E7E13C53C.title: "AllRightsReserved"
-	task.17F07D6404668DE6.title: "Energizing Rods"
-	task.1F929F1DF23460AE.title: "Binding Cards"
-	task.3282910297C28795.title: "AllRightsReserved"
-	task.36E378BF22554E0A.title: "Energy Cables"
-	task.3C4D5E6F7001A2B3.title: "Любые доски"
-	task.3E7D63E63D08420D.title: "Любая кровать"
-	task.44F78B45E12E9903.title: "Любое бревно"
-
-	// === New RPG, Extended Crafting & Waystones Quests ===
-	quest.ECEB1AA88965309D.title: "Черное Железо и Люминесценция"
-	quest.ECEB1AA88965309D.quest_desc: [
-		"&8Черное железо&r и сияющая &eЛюминесценция&r — фундаментальные материалы для создания многомерных верстаков Extended Crafting."
-		""
-		"&eПодсказка:&r Черное железо выплавляется из железа и угля, а люминесценция создается из светопыли, пороха и редстоуна. Запаситесь ими заранее!"
-	]
-	quest.EC818F73C359D14D.title: "Базовый Верстак (3x3)"
-	quest.EC818F73C359D14D.quest_desc: [
-		"Первая ступень расширенных верстаков. Позволяет создавать рецепты повышенной точности и продвинутые компоненты."
-		""
-		"Используется как основа для улучшения верстака до 5х5!"
-	]
-	quest.EC5EDA9CE88B48BC.title: "Продвинутый Верстак (5x5)"
-	quest.EC5EDA9CE88B48BC.quest_desc: [
-		"Сетка 5 на 5 открывает доступ к сборке сложных индустриальных матриц и катализаторов."
-		""
-		"Внимательно раскладывайте ингредиенты по сетке рецепта!"
-	]
-	quest.ECFEEA1B87F5B6A5.title: "Элитный Верстак (7x7)"
-	quest.ECFEEA1B87F5B6A5.quest_desc: [
-		"Верстак с гигантской сеткой 7х7. Шаг на порог божественного крафта."
-		""
-		"На нем крафтятся элитные катализаторы, компоненты и материалы сингулярностей."
-	]
-	quest.EC3280AB8ED0659D.title: "&6Абсолютный Верстак (9x9)&r"
-	quest.EC3280AB8ED0659D.quest_desc: [
-		"&6Колоссальный Верстак 9х9!&r Это вершина инженерной и магической мысли!"
-		""
-		"Именно в сетке 9 на 9 крафтятся &dКреативные предметы&r: Креативный мотор Create, Креативный энергокуб Mekanism, Креативная ячейка Powah и Креативный контроллер Refined Storage!"
-		""
-		"&aСовет:&r Убедитесь, что вокруг верстака достаточно места, чтобы удобно разместить сундуки и автокрафт."
-	]
-	quest.ECF2A6E8AECCDEAF.title: "Кристалтайн и Абсолютный Катализатор"
-	quest.ECF2A6E8AECCDEAF.quest_desc: [
-		"Кристалтайн сочетает прочность алмазов и силу люминесценции, а Абсолютный Катализатор концентрирует силу компонентов всех уровней."
-		""
-		"Без этих двух элементов невозможно стабилизировать сплав Абсолютного Слитка."
-	]
-	quest.ECB533A1EBF09E31.title: "&dАбсолютный Слиток (The Ultimate Ingot)&r"
-	quest.ECB533A1EBF09E31.quest_desc: [
-		"&dВеличайший металл вселенной.&r В нем сплавлены слитки всех металлов: железо, золото, медь, незерит, сталь, осмий, олово, свинец, занит, клоггрум и морозная сталь!"
-		""
-		"Является обязательным компонентом для креативных крафтов на столе 9х9."
-	]
-	quest.ECBD29C21FD3B855.title: "&cКреативная Энергетическая Ячейка Powah&r"
-	quest.ECBD29C21FD3B855.quest_desc: [
-		"&cБесконечная энергия Powah!&r Выдает неограниченное количество FE/RF в тик."
-		""
-		"Крафтится на Верстаке 9х9 из Абсолютных слитков, Нитро-ячеек, реакторов и фиолетовых квантовых процессоров Mekanism!"
-	]
-	quest.ECE5BCB733A89E97.title: "&bКреативный Контроллер Refined Storage&r"
-	quest.ECE5BCB733A89E97.quest_desc: [
-		"&bБесконечная мощность МЭ-сети!&r Питает любую сеть Refined Storage без внешних источников энергии."
-		""
-		"Крафтится на Верстаке 9х9 с использованием Квантовых процессоров, Нитро-реакторов Powah и Точных механизмов Create."
-	]
-	quest.WS6698AA35A47D96.title: "Пыль Телепортации"
-	quest.WS6698AA35A47D96.quest_desc: [
-		"Измельченный жемчуг Эндера и красители позволяют получить мерцающую &dПыль Телепортации&r."
-		""
-		"Это базовая основа для свитков и камней телепортации в моде Waystones."
-	]
-	quest.WSE36186FA059CD1.title: "&5Камень Перемещения (Warp Stone)&r"
-	quest.WSE36186FA059CD1.quest_desc: [
-		"&5Многоразовый карманный телепорт!&r Зажмите ПКМ с камнем в руке, чтобы открыть карту всех активированных путеводных камней и мгновенно переместиться к любому из них."
-		""
-		"&eУсложненный крафт:&r Требует &6Точный Механизм Create&r, &dСамоцвет Источника Ars Nouveau&r, Око Эндера и Осколки Аметиста. После использования перезаряжается."
-	]
-	quest.WS71CAB096353587.title: "&6Путеводный Камень (Waystone)&r"
-	quest.WS71CAB096353587.quest_desc: [
-		"&6Стационарный обелиск телепортации.&r Поставьте его на своей базе или возле важной шахты, нажмите ПКМ, чтобы активировать и дать имя."
-		""
-		"&eУсложненный крафт:&r Собирается из готового &5Камня Перемещения&r, &bСтали Mekanism&r, &6Укрепленных листов Create&r и каменных кирпичей. Телепортация теперь заслуженная награда за развитие!"
-	]
-	quest.WSE879A35A0A8C15.title: "Свитки Телепортации и Возвращения"
-	quest.WSE879A35A0A8C15.quest_desc: [
-		"Одноразовые свитки быстрого перемещения на основе &dЧистого пергамента Ars Nouveau&r."
-		""
-		"- &eСвиток Телепортации&r: позволяет выбрать любой известный путеводный камень."
-		"- &aСвиток Возвращения&r: мгновенно возвращает вас к последнему использованному камню или точке возрождения."
-	]
-	quest.WSE2FDF6A5EFF140.title: "Нажимная Плита Телепортации"
-	quest.WSE2FDF6A5EFF140.quest_desc: [
-		"Латунная плита Create с магическим наполнителем. Позволяет связывать две плиты осколком телепортации."
-		""
-		"Наступите на плиту — и через секунду вы окажетесь на парной плите в другом конце базы!"
-	]
-	quest.WS7FFE01EA38F599.title: "Общий Путеводный Камень (Sharestone)"
-	quest.WS7FFE01EA38F599.quest_desc: [
-		"Идеальный путеводный камень для совместной игры!"
-		""
-		"Все камни одного цвета автоматически объединяются в общую сеть, доступную всем игрокам сервера без необходимости личной активации."
-	]
-	quest.DM12C899F8A3309B.title: "1. Врата Преисподней (Незер)"
 	quest.DM12C899F8A3309B.quest_desc: [
 		"&4Первое измерение великого похода!&r"
 		""
@@ -907,23 +935,15 @@
 		""
 		"&6Цель в Незере:&r Отыскать Адскую Крепость, добыть огненные стержни и 3 черепа визер-скелетов для призыва босса."
 	]
-	quest.DMC0B2514BE1822D.title: "2. Триумф над Иссушителем и Светокамень"
-	quest.DMC0B2514BE1822D.quest_desc: [
-		"&5Победа над владыкой преисподней!&r"
+	quest.DM12C899F8A3309B.title: "1. Врата Преисподней (Незер)"
+	quest.DM139D4FF868EABA.quest_desc: [
+		"&2Катакомбы Ундергардена и древний голем.&r"
 		""
-		"&eПризыв:&r Поставьте Т-образную фигуру из 4 блоков Песка Душ и поместите 3 Черепа Визер-скелетов сверху."
+		"Отыщите Катакомбы Ундергардена и бросьте вызов &2Забытому Стражу (Forgotten Guardian)&r."
 		""
-		"&aНаграда:&r Звезда Незера откроет путь к маякам и высоким технологиям, а добытый в Незере &eСветокамень&r станет ключом к Небесному Миру!"
+		"С него выпадает легендарный &aЗабытый Слиток (Forgotten Ingot)&r, прочнее алмаза и наделяющий оружие сокрушительным уроном!"
 	]
-	quest.DMAE4321E32C1CF4.title: "3. Врата Небес (Эфир)"
-	quest.DMAE4321E32C1CF4.quest_desc: [
-		"&bВторое измерение: Парящие острова Эфира!&r"
-		""
-		"&eКак построить портал:&r Соберите рамку 4 на 5 из &eСветокамня (Glowstone)&r и залейте нижний блок ведром обычной &bВоды&r!"
-		""
-		"В Эфире гравитация работает иначе, а в небесах парят древние подземелья трех стихий."
-	]
-	quest.DM1540EF06A1E9B3.title: "4. Покорение Эфира: Данжи и Руды"
+	quest.DM139D4FF868EABA.title: "6. Забытый Страж и Металл Древних"
 	quest.DM1540EF06A1E9B3.quest_desc: [
 		"&6Пройдите испытания Небесных Подземелий:&r"
 		"- &6Бронзовый Данж:&r Победите босса &eПолзуна (Slider)&r киркой."
@@ -932,23 +952,7 @@
 		""
 		"&aДобыча:&r Самоцветы &bЗанита&r и &eЗолотой Янтарь&r потребуются для пробуждения портала в темные глубины Ундергардена!"
 	]
-	quest.DMA1A117B09FD7A4.title: "5. Катализатор Подземелий (Ундергарден)"
-	quest.DMA1A117B09FD7A4.quest_desc: [
-		"&2Третье измерение: Первобытные глубины Ундергардена!&r"
-		""
-		"&eКрафт Катализатора:&r Требует &bСамоцвет Занита из Эфира&r, золото, медь, жемчуг Эндера и каменные кирпичи!"
-		""
-		"&eКак построить портал:&r Соберите рамку 4 на 5 из &7Каменных Кирпичей (Stone Bricks)&r и нажмите ПКМ &2Катализатором&r по внутреннему блоку."
-	]
-	quest.DM139D4FF868EABA.title: "6. Забытый Страж и Металл Древних"
-	quest.DM139D4FF868EABA.quest_desc: [
-		"&2Катакомбы Ундергардена и древний голем.&r"
-		""
-		"Отыщите Катакомбы Ундергардена и бросьте вызов &2Забытому Стражу (Forgotten Guardian)&r."
-		""
-		"С него выпадает легендарный &aЗабытый Слиток (Forgotten Ingot)&r, прочнее алмаза и наделяющий оружие сокрушительным уроном!"
-	]
-	quest.DM6855FE57F89DF0.title: "7. Сердце Скалка и Врата Тьмы (The Otherside)"
+	quest.DM1540EF06A1E9B3.title: "4. Покорение Эфира: Данжи и Руды"
 	quest.DM6855FE57F89DF0.quest_desc: [
 		"&3Четвертое измерение: Потусторонний Мир Скалка!&r"
 		""
@@ -956,7 +960,31 @@
 		""
 		"&eАктивация портала:&r Очистите центр рамки из Укрепленного Глубинного Сланца в Древнем Городе и кликните Сердцем Края. Проход во тьму открыт!"
 	]
-	quest.DMDFF47F5DBDBB2F.title: "&68. Абсолютный Чемпион Всех Измерений&r"
+	quest.DM6855FE57F89DF0.title: "7. Сердце Скалка и Врата Тьмы (The Otherside)"
+	quest.DMA1A117B09FD7A4.quest_desc: [
+		"&2Третье измерение: Первобытные глубины Ундергардена!&r"
+		""
+		"&eКрафт Катализатора:&r Требует &bСамоцвет Занита из Эфира&r, золото, медь, жемчуг Эндера и каменные кирпичи!"
+		""
+		"&eКак построить портал:&r Соберите рамку 4 на 5 из &7Каменных Кирпичей (Stone Bricks)&r и нажмите ПКМ &2Катализатором&r по внутреннему блоку."
+	]
+	quest.DMA1A117B09FD7A4.title: "5. Катализатор Подземелий (Ундергарден)"
+	quest.DMAE4321E32C1CF4.quest_desc: [
+		"&bВторое измерение: Парящие острова Эфира!&r"
+		""
+		"&eКак построить портал:&r Соберите рамку 4 на 5 из &eСветокамня (Glowstone)&r и залейте нижний блок ведром обычной &bВоды&r!"
+		""
+		"В Эфире гравитация работает иначе, а в небесах парят древние подземелья трех стихий."
+	]
+	quest.DMAE4321E32C1CF4.title: "3. Врата Небес (Эфир)"
+	quest.DMC0B2514BE1822D.quest_desc: [
+		"&5Победа над владыкой преисподней!&r"
+		""
+		"&eПризыв:&r Поставьте Т-образную фигуру из 4 блоков Песка Душ и поместите 3 Черепа Визер-скелетов сверху."
+		""
+		"&aНаграда:&r Звезда Незера откроет путь к маякам и высоким технологиям, а добытый в Незере &eСветокамень&r станет ключом к Небесному Миру!"
+	]
+	quest.DMC0B2514BE1822D.title: "2. Триумф над Иссушителем и Светокамень"
 	quest.DMDFF47F5DBDBB2F.quest_desc: [
 		"&6Величайший подвиг завершен!&r"
 		""
@@ -964,236 +992,106 @@
 		""
 		"Теперь перед вами открыт путь к &dКреативным технологиям верстака 9х9&r в финальной главе Endgame!"
 	]
-
-	// === Aether Mobs Wiki & Tool Chapter Guides ===
-	quest.326452FFA7F5C6CA.title: "Золотой сладень (Golden Swet)"
-	quest.326452FFA7F5C6CA.quest_desc: [
-		"&6Где найти:&r Обитает на парящих равнинах Эфира, особенно возле рощ Золотых дубов."
+	quest.DMDFF47F5DBDBB2F.title: "&68. Абсолютный Чемпион Всех Измерений&r"
+	quest.EC3280AB8ED0659D.quest_desc: [
+		"&6Колоссальный Верстак 9х9!&r Это вершина инженерной и магической мысли!"
 		""
-		"&eПоведение:&r Прыгает в сторону игрока. При касании поглощает вас внутрь своего золотого тела и взмывает высоко в воздух, нанося урон при падении."
+		"Именно в сетке 9 на 9 крафтятся &dКреативные предметы&r: Креативный мотор Create, Креативный энергокуб Mekanism, Креативная ячейка Powah и Креативный контроллер Refined Storage!"
 		""
-		"&cТактика:&r Не сражайтесь на краю островов — сладень легко сбросит вас в бездну! Расстреливайте из лука или наносите удары мечом с дистанции."
-		""
-		"&aДроп:&r Золотые шарики сладней (Golden Swet Balls)."
+		"&aСовет:&r Убедитесь, что вокруг верстака достаточно места, чтобы удобно разместить сундуки и автокрафт."
 	]
-	quest.2E05F4FB1A1FDE2D.title: "Синий сладень (Blue Swet)"
-	quest.2E05F4FB1A1FDE2D.quest_desc: [
-		"&bГде найти:&r Распространенный обитатель травянистых лугов Эфира."
+	quest.EC3280AB8ED0659D.title: "&6Абсолютный Верстак (9x9)&r"
+	quest.EC5EDA9CE88B48BC.quest_desc: [
+		"Сетка 5 на 5 открывает доступ к сборке сложных индустриальных матриц и катализаторов."
 		""
-		"&eПоведение:&r Желеобразный моб, затягивающий неосторожных путников внутрь и наносящий урон от удушья."
-		""
-		"&cТактика:&r Держите дистанцию, отбивайтесь оружием с отбрасыванием или луком."
-		""
-		"&aДроп:&r Шарики сладней (Swet Ball) — эфирный аналог сгустков слизи."
+		"Внимательно раскладывайте ингредиенты по сетке рецепта!"
 	]
-	quest.102DD961706E861A.title: "Эхор-растение (Aechor Plant)"
-	quest.102DD961706E861A.quest_desc: [
-		"&2Где найти:&r Прячется в траве Эфира среди деревьев Скайрут."
+	quest.EC5EDA9CE88B48BC.title: "Продвинутый Верстак (5x5)"
+	quest.EC818F73C359D14D.quest_desc: [
+		"Первая ступень расширенных верстаков. Позволяет создавать рецепты повышенной точности и продвинутые компоненты."
 		""
-		"&eПоведение:&r Неподвижный хищный цветок. Заметив игрока, раскрывает ядовитые лепестки и стреляет отравляющими иглами."
-		""
-		"&cТактика:&r Атакуйте издалека из лука или подбегайте под прикрытием щита."
-		""
-		"&aДроп:&r &dЛепестки Эхора (Aechor Petal)&r — ключевой ресурс для приручения птенцов Моа!"
+		"Используется как основа для улучшения верстака до 5х5!"
 	]
-	quest.4E847B0288265DA3.title: "Василиск (Cockatrice)"
-	quest.4E847B0288265DA3.quest_desc: [
-		"&8Где найти:&r Спавнится ночью или в темных расселинах под парящими островами."
+	quest.EC818F73C359D14D.title: "Базовый Верстак (3x3)"
+	quest.ECB533A1EBF09E31.quest_desc: [
+		"&dВеличайший металл вселенной.&r В нем сплавлены слитки всех металлов: железо, золото, медь, незерит, сталь, осмий, олово, свинец, занит, клоггрум и морозная сталь!"
 		""
-		"&eПоведение:&r Агрессивная птица-рептилия, плюющаяся ядовитыми дротиками, накладывающими медлительность и сильное отравление."
-		""
-		"&cТактика:&r &6Щит полностью блокирует его иглы!&r Защищайтесь щитом и бейте стрелами или мечом."
-		""
-		"&aДроп:&r Перья василиска (для ядовитых стрел)."
+		"Является обязательным компонентом для креативных крафтов на столе 9х9."
 	]
-	quest.39E1211455224291.title: "Зефир (Zephyr)"
-	quest.39E1211455224291.quest_desc: [
-		"&fГде найти:&r Парит в открытом воздухе вокруг островов Эфира (аналог адского Гаста)."
+	quest.ECB533A1EBF09E31.title: "&dАбсолютный Слиток (The Ultimate Ingot)&r"
+	quest.ECBD29C21FD3B855.quest_desc: [
+		"&cБесконечная энергия Powah!&r Выдает неограниченное количество FE/RF в тик."
 		""
-		"&eПоведение:&r Летающее грозовое облако. Стреляет ветряными снарядами, которые отбрасывают игрока на десятки блоков."
-		""
-		"&cТактика:&r Стреляйте из лука. Летящий шар Зефира можно &6отбить ударом меча обратно в него&r!"
-		""
-		"&aДроп:&r Зефирный снежок (Zephyr Snowball)."
+		"Крафтится на Верстаке 9х9 из Абсолютных слитков, Нитро-ячеек, реакторов и фиолетовых квантовых процессоров Mekanism!"
 	]
-	quest.24E124F12CFF2A50.title: "Ползун (Slider) — Босс Бронзового Данжа"
-	quest.24E124F12CFF2A50.quest_desc: [
-		"&6Где найти:&r Глубины Бронзового Данжа (лабиринт внутри каменных островов)."
+	quest.ECBD29C21FD3B855.title: "&cКреативная Энергетическая Ячейка Powah&r"
+	quest.ECE5BCB733A89E97.quest_desc: [
+		"&bБесконечная мощность МЭ-сети!&r Питает любую сеть Refined Storage без внешних источников энергии."
 		""
-		"&cУЯЗВИМОСТЬ:&r &4ПОЛНОСТЬЮ НЕУЯЗВИМ К МЕЧАМ, ЛУКАМ И МАГИИ!&r Уязвим &eТОЛЬКО К КИРКАМ&r!"
-		""
-		"&eТактика:&r Возьмите лучшую кирку (Занитовую или Незеритовую). Уклоняйтесь от резких рывков босса по полу и бейте киркой по боковым граням куба."
-		""
-		"&aНаграда:&r Бронзовый ключ от сундука сокровищницы."
+		"Крафтится на Верстаке 9х9 с использованием Квантовых процессоров, Нитро-реакторов Powah и Точных механизмов Create."
 	]
-	quest.0D2F07FC0F804223.title: "Королева Валькирий — Босс Серебряного Данжа"
-	quest.0D2F07FC0F804223.quest_desc: [
-		"&fГде найти:&r Тронный зал Серебряного Данжа (парящий античный дворец)."
+	quest.ECE5BCB733A89E97.title: "&bКреативный Контроллер Refined Storage&r"
+	quest.ECEB1AA88965309D.quest_desc: [
+		"&8Черное железо&r и сияющая &eЛюминесценция&r — фундаментальные материалы для создания многомерных верстаков Extended Crafting."
 		""
-		"&eПоведение:&r Сначала победите 10 рядовых валькирий в залах храма, чтобы заслужить их медали. Предъявите медали Королеве, чтобы начать бой."
-		""
-		"&cТактика:&r Парирует удары, создает телепорты и воздушные воронки. Бейте сразу после ее приземления и держите щит наготове."
-		""
-		"&aНаграда:&r Серебряный ключ и оружие Валькирий."
+		"&eПодсказка:&r Черное железо выплавляется из железа и угля, а люминесценция создается из светопыли, пороха и редстоуна. Запаситесь ими заранее!"
 	]
-	quest.08E4892F96828EC4.title: "Дух Солнца — Босс Золотого Данжа"
-	quest.08E4892F96828EC4.quest_desc: [
-		"&eГде найти:&r Вершина Золотого Данжа (остров с гигантской золотой сферой солнца)."
+	quest.ECEB1AA88965309D.title: "Черное Железо и Люминесценция"
+	quest.ECF2A6E8AECCDEAF.quest_desc: [
+		"Кристалтайн сочетает прочность алмазов и силу люминесценции, а Абсолютный Катализатор концентрирует силу компонентов всех уровней."
 		""
-		"&cУЯЗВИМОСТЬ:&r Неуязвим к прямому урону оружием!"
-		""
-		"&eТактика:&r Босс атакует волнами огня и запускает белые ледяные шары. &6Отбивайте ледяные шары ударом меча прямо в босса!&r После серии попаданий его огненная броня растает."
-		""
-		"&aНаграда:&r Золотой ключ, Солнечный Алтарь и доспехи Феникса."
+		"Без этих двух элементов невозможно стабилизировать сплав Абсолютного Слитка."
 	]
-	quest.29E6EFC8C19912BD.title: "Часовой (Sentry)"
-	quest.29E6EFC8C19912BD.quest_desc: [
-		"&7Где найти:&r Коридоры и ловушки Бронзового Данжа."
+	quest.ECF2A6E8AECCDEAF.title: "Кристалтайн и Абсолютный Катализатор"
+	quest.ECFEEA1B87F5B6A5.quest_desc: [
+		"Верстак с гигантской сеткой 7х7. Шаг на порог божественного крафта."
 		""
-		"&eПоведение:&r Прыгучий круглый охранный страж. При приближении к игроку быстро раздувается и взрывается."
-		""
-		"&cТактика:&r Стреляйте издалека или атакуйте оружием с длинным радиусом."
+		"На нем крафтятся элитные катализаторы, компоненты и материалы сингулярностей."
 	]
-	quest.57DD886985DBFD97.title: "Мимик (Mimic)"
-	quest.57DD886985DBFD97.quest_desc: [
-		"&6Где найти:&r В комнатах Бронзовых данжей под видом сундука с сокровищами."
+	quest.ECFEEA1B87F5B6A5.title: "Элитный Верстак (7x7)"
+	quest.WS6698AA35A47D96.quest_desc: [
+		"Измельченный жемчуг Эндера и красители позволяют получить мерцающую &dПыль Телепортации&r."
 		""
-		"&eПоведение:&r При попытке открыть или подойти распахивает зубастую пасть и бросается в атаку."
-		""
-		"&cТактика:&r Проверяйте сундуки в данжах ударом оружия на безопасном расстоянии!"
+		"Это базовая основа для свитков и камней телепортации в моде Waystones."
 	]
-	quest.7AD4ED72AC31D912.title: "Аэрокит (Aerwhale)"
-	quest.7AD4ED72AC31D912.quest_desc: [
-		"&bГде найти:&r Высоко в открытом небе Эфира между облаками."
+	quest.WS6698AA35A47D96.title: "Пыль Телепортации"
+	quest.WS71CAB096353587.quest_desc: [
+		"&6Стационарный обелиск телепортации.&r Поставьте его на своей базе или возле важной шахты, нажмите ПКМ, чтобы активировать и дать имя."
 		""
-		"&eПоведение:&r Мирный гигант небес. Медленно парит в воздухе, выпуская облачные потоки дыхания."
+		"&eУсложненный крафт:&r Собирается из готового &5Камня Перемещения&r, &bСтали Mekanism&r, &6Укрепленных листов Create&r и каменных кирпичей. Телепортация теперь заслуженная награда за развитие!"
 	]
-	quest.78AAFE5AF04A13AC.title: "Аэрозайчик (Aerbunny)"
-	quest.78AAFE5AF04A13AC.quest_desc: [
-		"&fГде найти:&r Зеленые поляны Эфира."
+	quest.WS71CAB096353587.title: "&6Путеводный Камень (Waystone)&r"
+	quest.WS7FFE01EA38F599.quest_desc: [
+		"Идеальный путеводный камень для совместной игры!"
 		""
-		"&aПолезная механика:&r Кликните ПКМ по зайчику с пустой рукой, чтобы &6посадить его себе на голову&r! Зайчик дарует эффект плавного падения без урона."
+		"Все камни одного цвета автоматически объединяются в общую сеть, доступную всем игрокам сервера без необходимости личной активации."
 	]
-	quest.78BD3D4FBA42D3DC.title: "Овцепух (Sheepuff)"
-	quest.78BD3D4FBA42D3DC.quest_desc: [
-		"&fГде найти:&r Равнины Эфира."
+	quest.WS7FFE01EA38F599.title: "Общий Путеводный Камень (Sharestone)"
+	quest.WSE2FDF6A5EFF140.quest_desc: [
+		"Латунная плита Create с магическим наполнителем. Позволяет связывать две плиты осколком телепортации."
 		""
-		"&eОсобенности:&r Пушистая летающая овечка. Стрижка ножницами дает шерсть Эфира. При падении раздувается как парашют."
+		"Наступите на плиту — и через секунду вы окажетесь на парной плите в другом конце базы!"
 	]
-	quest.6149E5F1F9CF8DC6.title: "Фиг (Phyg)"
-	quest.6149E5F1F9CF8DC6.quest_desc: [
-		"&dГде найти:&r Парящие луга Эфира."
+	quest.WSE2FDF6A5EFF140.title: "Нажимная Плита Телепортации"
+	quest.WSE36186FA059CD1.quest_desc: [
+		"&5Многоразовый карманный телепорт!&r Зажмите ПКМ с камнем в руке, чтобы открыть карту всех активированных путеводных камней и мгновенно переместиться к любому из них."
 		""
-		"&eОсобенности:&r Свинья с крылышками. Наденьте седло, чтобы планировать по небесам!"
+		"&eУсложненный крафт:&r Требует &6Точный Механизм Create&r, &dСамоцвет Источника Ars Nouveau&r, Око Эндера и Осколки Аметиста. После использования перезаряжается."
 	]
-	quest.5BB5EE00BB4F9691.title: "Летающая корова (Flying Cow)"
-	quest.5BB5EE00BB4F9691.quest_desc: [
-		"&7Где найти:&r Острова Эфира."
+	quest.WSE36186FA059CD1.title: "&5Камень Перемещения (Warp Stone)&r"
+	quest.WSE879A35A0A8C15.quest_desc: [
+		"Одноразовые свитки быстрого перемещения на основе &dЧистого пергамента Ars Nouveau&r."
 		""
-		"&eОсобенности:&r Корова с крыльями. Дает молоко в деревянное ведро Скайрута."
+		"- &eСвиток Телепортации&r: позволяет выбрать любой известный путеводный камень."
+		"- &aСвиток Возвращения&r: мгновенно возвращает вас к последнему использованному камню или точке возрождения."
 	]
-	quest.36D9FB96D3557266.title: "Птица Моа (Moa)"
-	quest.36D9FB96D3557266.quest_desc: [
-		"&3Где найти:&r Гнезда птиц Моа на высоких кронах деревьев."
-		""
-		"&eПриручение:&r Взрослые дикие Моа не приручаются! Найдите яйцо в гнезде, высидите в инкубаторе и накормите вылупившегося птенца &dЛепестками Эхора&r."
-		""
-		"&aПолеты:&r Прирученный Моа — верный маунт, способный совершать до 3–4 прыжков в воздухе!"
-	]
-	quest.63D4621C06BA747C.title: "Оружие из древесины Скайрут"
-	quest.63D4621C06BA747C.quest_desc: [
-		"Комплект экипировки Эфира: Оружие из древесины Скайрут."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.4394AEF0823FB4D2.title: "Инструменты из Скайрута"
-	quest.4394AEF0823FB4D2.quest_desc: [
-		"Комплект экипировки Эфира: Инструменты из Скайрута."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.769B23E692CBA16B.title: "Ведро и Лодка Скайрута"
-	quest.769B23E692CBA16B.quest_desc: [
-		"Комплект экипировки Эфира: Ведро и Лодка Скайрута."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.04833C4BB0CCCBB7.title: "Оружие из Священного камня"
-	quest.04833C4BB0CCCBB7.quest_desc: [
-		"Комплект экипировки Эфира: Оружие из Священного камня."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.4AED9EF9E0F68483.title: "Инструменты из Холистоуна"
-	quest.4AED9EF9E0F68483.quest_desc: [
-		"Комплект экипировки Эфира: Инструменты из Холистоуна."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.3781DB4807A89375.title: "Оружие из Занита"
-	quest.3781DB4807A89375.quest_desc: [
-		"Комплект экипировки Эфира: Оружие из Занита."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.714960DF26EFFA53.title: "Инструменты из Занита"
-	quest.714960DF26EFFA53.quest_desc: [
-		"Комплект экипировки Эфира: Инструменты из Занита."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.58006FC06C34F6CA.title: "Броня из Занита"
-	quest.58006FC06C34F6CA.quest_desc: [
-		"Комплект экипировки Эфира: Броня из Занита."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.04B92FAB179A74C9.title: "Оружие из Гравитита"
-	quest.04B92FAB179A74C9.quest_desc: [
-		"Комплект экипировки Эфира: Оружие из Гравитита."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.1B7B377CB757867E.title: "Инструменты из Гравитита"
-	quest.1B7B377CB757867E.quest_desc: [
-		"Комплект экипировки Эфира: Инструменты из Гравитита."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.20D957B3C350CDE2.title: "Броня из Гравитита"
-	quest.20D957B3C350CDE2.quest_desc: [
-		"Комплект экипировки Эфира: Броня из Гравитита."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.4974F265003DAEC9.title: "Инструменты Валькирий"
-	quest.4974F265003DAEC9.quest_desc: [
-		"Комплект экипировки Эфира: Инструменты Валькирий."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.75C5BFAEADEB486E.title: "Доспехи Валькирий"
-	quest.75C5BFAEADEB486E.quest_desc: [
-		"Комплект экипировки Эфира: Доспехи Валькирий."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.7A4B51313FB134EA.title: "Доспехи Феникса"
-	quest.7A4B51313FB134EA.quest_desc: [
-		"Комплект экипировки Эфира: Доспехи Феникса."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.362F529D5E7C37A4.title: "Обсидиановые Доспехи Эфира"
-	quest.362F529D5E7C37A4.quest_desc: [
-		"Комплект экипировки Эфира: Обсидиановые Доспехи Эфира."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
-	quest.5F44BF9A1DAE8B99.title: "Доспехи Нептуна"
-	quest.5F44BF9A1DAE8B99.quest_desc: [
-		"Комплект экипировки Эфира: Доспехи Нептуна."
-		""
-		"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-	]
+	quest.WSE879A35A0A8C15.title: "Свитки Телепортации и Возвращения"
+	task.09C7E50E7E13C53C.title: "AllRightsReserved"
+	task.17F07D6404668DE6.title: "Energizing Rods"
+	task.1F929F1DF23460AE.title: "Binding Cards"
+	task.3282910297C28795.title: "AllRightsReserved"
+	task.36E378BF22554E0A.title: "Energy Cables"
+	task.3C4D5E6F7001A2B3.title: "Любые доски"
+	task.3E7D63E63D08420D.title: "Любая кровать"
+	task.44F78B45E12E9903.title: "Любое бревно"
 }

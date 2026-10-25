@@ -18,6 +18,7 @@
 				id: "minecraft:writable_book"
 			}
 			id: "5A8C11099E010001"
+			title: "Гильдия Охотников на Боссов"
 			rewards: [
 				{
 					id: "41D7B7FD80D7C7D7"
@@ -53,6 +54,9 @@
 			]
 			shape: "gear"
 			size: 1.5d
+						description: [
+				"Добро пожаловать в гильдию охотников! Великие чудовища терзают этот мир. Сразите их, чтобы заслужить несметные богатства и признание."
+			]
 			tasks: [{
 				id: "7B74142B36F68F69"
 				item: { count: 1, id: "minecraft:iron_sword" }
@@ -67,6 +71,7 @@
 				id: "cataclysm:monstrous_horn"
 			}
 			id: "5A8C11099E010002"
+			title: "Незеритовая Монструозность"
 			rewards: [
 				{
 					count: 2
@@ -92,6 +97,9 @@
 					xp_levels: 30
 				}
 			]
+						description: [
+				"Древнее чудовище из расплавленного незерита обитает в глубинах Незера. Разбейте его тяжелую броню и заберите его клинок!"
+			]
 			tasks: [{
 				id: "29F24E016F4BA807"
 				item: { count: 1, id: "cataclysm:monstrous_horn" }
@@ -106,6 +114,7 @@
 				id: "cataclysm:ignitium_ingot"
 			}
 			id: "5A8C11099E010003"
+			title: "Игнис — Владыка Преисподней"
 			rewards: [
 				{
 					id: "52BE6CA358650FED"
@@ -129,6 +138,9 @@
 					xp_levels: 40
 				}
 			]
+						description: [
+				"Огненный рыцарь в цитадели Незера. Он не ведает пощады и сжигает все живое адским огнем."
+			]
 			tasks: [{
 				id: "7FE58B9C07748739"
 				item: { count: 1, id: "cataclysm:ignitium_ingot" }
@@ -143,6 +155,7 @@
 				id: "cataclysm:witherite_ingot"
 			}
 			id: "5A8C11099E010004"
+			title: "Предвестник (The Harbinger)"
 			rewards: [
 				{
 					count: 3
@@ -168,6 +181,9 @@
 					xp_levels: 35
 				}
 			]
+						description: [
+				"Древний механический страж из визерита, вооруженный лазерными пушками и ЭМИ-снарядами."
+			]
 			tasks: [{
 				id: "3DB9FA8B28E8157D"
 				item: { count: 1, id: "cataclysm:witherite_ingot" }
@@ -182,6 +198,7 @@
 				id: "cataclysm:abyssal_sacrifice"
 			}
 			id: "5A8C11099E010005"
+			title: "Левиафан Бездны"
 			rewards: [
 				{
 					id: "59096E07C0832BCC"
@@ -206,6 +223,9 @@
 					xp_levels: 45
 				}
 			]
+						description: [
+				"Ужас подводных глубин и древних океанских капищ. Его клешни сокрушают корабли."
+			]
 			tasks: [{
 				id: "55786BE08ED37980"
 				item: { count: 1, id: "cataclysm:abyssal_sacrifice" }
@@ -223,6 +243,7 @@
 				id: "cataclysm:remnant_skull"
 			}
 			id: "5A8C11099E010006"
+			title: "Древний Ревенант (Ancient Remnant)"
 			rewards: [
 				{
 					count: 8
@@ -248,6 +269,9 @@
 					xp_levels: 40
 				}
 			]
+						description: [
+				"Гигантский саркофаг и титан песков, покоящийся в священных гробницах пустыни."
+			]
 			tasks: [{
 				id: "06F2E32B0CEA524F"
 				item: { count: 1, id: "cataclysm:sandstorm_in_a_bottle" }
@@ -262,6 +286,7 @@
 				id: "cataclysm:void_core"
 			}
 			id: "5A8C11099E010007"
+			title: "Страж Края (Ender Guardian)"
 			rewards: [
 				{
 					id: "3B6E6078C500EE80"
@@ -296,6 +321,9 @@
 			]
 			shape: "challenge"
 			size: 1.5d
+						description: [
+				"Окончательный колосс Пустоты в глубинах измерений Энда. Заберите его Ядро Пустоты!"
+			]
 			tasks: [{
 				id: "223BE5F407B066EA"
 				item: { count: 1, id: "cataclysm:void_core" }
@@ -310,6 +338,7 @@
 				id: "minecraft:prismarine"
 			}
 			id: "5A8C11099E010013"
+			title: "Кораллоссус (Coralssus)"
 			rewards: [
 				{
 					count: 16
@@ -326,6 +355,9 @@
 					xp_levels: 25
 				}
 			]
+						description: [
+				"Каменный исполин, оживленный коралловым проклятием океанских бездн."
+			]
 			tasks: [{
 				id: "4D14D551732C43E1"
 				type: "checkmark"
@@ -339,6 +371,7 @@
 				id: "cataclysm:witherite_block"
 			}
 			id: "5A8C11099E010014"
+			title: "Маледиктус — Призрачный Паладин"
 			rewards: [
 				{
 					count: 3
@@ -355,6 +388,9 @@
 					xp_levels: 35
 				}
 			]
+						description: [
+				"Проклятый рыцарь Пустоты, охраняющий тайны древней магии."
+			]
 			tasks: [{
 				id: "6736CB9DE91FC764"
 				item: { count: 1, id: "cataclysm:witherite_ingot" }
@@ -369,6 +405,7 @@
 				id: "twilightforest:naga_scale"
 			}
 			id: "5A8C11099E010008"
+			title: "Нага — Змей Лабиринта"
 			rewards: [
 				{
 					count: 8
@@ -394,6 +431,9 @@
 					xp_levels: 15
 				}
 			]
+						description: [
+				"Гигантская бронированная змея в каменном дворе Сумеречного Леса. Сбейте её чешуйки!"
+			]
 			tasks: [{
 				id: "4C73FD543FC7F6E5"
 				item: { count: 1, id: "twilightforest:naga_scale" }
@@ -408,6 +448,7 @@
 				id: "twilightforest:twilight_scepter"
 			}
 			id: "5A8C11099E010009"
+			title: "Сумеречный Лич"
 			rewards: [
 				{
 					count: 4
@@ -433,6 +474,9 @@
 					xp_levels: 25
 				}
 			]
+						description: [
+				"Некромант на вершине обсидиановой башни, защищенный щитами иллюзий."
+			]
 			tasks: [{
 				id: "0FB593BCD4C30C76"
 				item: { count: 1, id: "twilightforest:twilight_scepter" }
@@ -447,6 +491,7 @@
 				id: "twilightforest:fiery_blood"
 			}
 			id: "5A8C11099E010010"
+			title: "Огнедышащая Гидра"
 			rewards: [
 				{
 					count: 8
@@ -472,6 +517,9 @@
 					xp_levels: 35
 				}
 			]
+						description: [
+				"Многоголовое чудовище в дымящемся болоте. Срубите все головы и соберите огненную кровь!"
+			]
 			tasks: [{
 				id: "4238AB9268E33126"
 				item: { count: 1, id: "twilightforest:fiery_blood" }
@@ -486,6 +534,7 @@
 				id: "twilightforest:carminite"
 			}
 			id: "5A8C11099E010011"
+			title: "Ур-Гаст Тёмной Башни"
 			rewards: [
 				{
 					count: 16
@@ -511,6 +560,9 @@
 					xp_levels: 35
 				}
 			]
+						description: [
+				"Плачущий титан над облаками темного леса. Уничтожьте его и карминитовые механизмы."
+			]
 			tasks: [{
 				id: "10831740A1485EF3"
 				item: { count: 1, id: "twilightforest:carminite" }
@@ -525,6 +577,7 @@
 				id: "twilightforest:snow_queen_trophy"
 			}
 			id: "5A8C11099E010012"
+			title: "Снежная Королева"
 			rewards: [
 				{
 					count: 4
@@ -552,6 +605,9 @@
 			]
 			shape: "challenge"
 			size: 1.3d
+						description: [
+				"Повелительница вечного льда на сияющем ледяном пике ледника."
+			]
 			tasks: [{
 				id: "6627DE564B5E9CE0"
 				item: { count: 1, id: "twilightforest:triple_bow" }
@@ -566,6 +622,7 @@
 				id: "minecraft:spyglass"
 			}
 			id: "5A8C11099E010015"
+			title: "Летучие Корабли Пиратов (Corsair's Gale)"
 			rewards: [
 				{
 					count: 4
@@ -591,6 +648,9 @@
 					xp_levels: 20
 				}
 			]
+						description: [
+				"Огромные парящие галеоны пиратов бороздят небеса. Возьмите их на абордаж!"
+			]
 			tasks: [{
 				id: "784320A60EF1A1F1"
 				item: { count: 1, id: "minecraft:spyglass" }
@@ -605,6 +665,7 @@
 				id: "minecraft:cherry_sapling"
 			}
 			id: "5A8C11099E010016"
+			title: "Священный Храм Сиракава"
 			rewards: [
 				{
 					count: 2
@@ -621,6 +682,9 @@
 					xp_levels: 25
 				}
 			]
+						description: [
+				"Многоярусный восточный храм в горах, охраняемый древними воинами."
+			]
 			tasks: [{
 				id: "49836B2521CDE4A8"
 				type: "checkmark"
@@ -634,6 +698,7 @@
 				id: "create:brass_block"
 			}
 			id: "5A8C11099E010017"
+			title: "Заброшенный Завод (The Foundry)"
 			rewards: [
 				{
 					count: 4
@@ -650,6 +715,9 @@
 					xp_levels: 30
 				}
 			]
+						description: [
+				"Индустриальная мега-структура с механизмами, шестернями и огнеметными ловушками."
+			]
 			tasks: [{
 				id: "6F634F74FEF5AC0F"
 				type: "checkmark"
@@ -663,6 +731,7 @@
 				id: "minecraft:elytra"
 			}
 			id: "5A8C11099E010018"
+			title: "Небесный Замок (Heavenly Challenger)"
 			rewards: [
 				{
 					count: 2
@@ -681,6 +750,9 @@
 			]
 			shape: "challenge"
 			size: 1.4d
+						description: [
+				"Вершина архитектуры небес. Дворец над самыми высокими облаками с сундуками богов."
+			]
 			tasks: [{
 				id: "754603D2EDB5497C"
 				type: "checkmark"
@@ -694,6 +766,7 @@
 				id: "minecraft:torch"
 			}
 			id: "5A8C11099E010019"
+			title: "Спуск в Подземелья (Dungeon Crawl)"
 			rewards: [
 				{
 					count: 32
@@ -719,6 +792,9 @@
 					xp_levels: 10
 				}
 			]
+						description: [
+				"Процедурные многоэтажные катакомбы уходят глубоко под землю. Запаситесь факелами и зельями!"
+			]
 			tasks: [{
 				id: "2166460775C29EA1"
 				item: { count: 1, id: "minecraft:torch" }
@@ -733,6 +809,7 @@
 				id: "minecraft:golden_apple"
 			}
 			id: "5A8C11099E010020"
+			title: "Глубинные Этажи Катакомб"
 			rewards: [
 				{
 					count: 8
@@ -749,6 +826,9 @@
 					xp_levels: 20
 				}
 			]
+						description: [
+				"Начиная с 3-го яруса монстры появляются в зачарованной броне. Будьте предельно осторожны!"
+			]
 			tasks: [{
 				id: "09400184904FCB63"
 				item: { count: 1, id: "minecraft:golden_apple" }
@@ -763,6 +843,7 @@
 				id: "minecraft:chest"
 			}
 			id: "5A8C11099E010021"
+			title: "Сокровищница Лабиринта"
 			rewards: [
 				{
 					count: 2
@@ -790,6 +871,9 @@
 			]
 			shape: "challenge"
 			size: 1.3d
+						description: [
+				"Дно катакомб скрывает главный сундук с древними реликвиями."
+			]
 			tasks: [{
 				id: "0FD1A4B953D79228"
 				item: { count: 1, id: "minecraft:diamond_block" }
@@ -800,6 +884,7 @@
 		}
 		{
 			id: "1B709930F41F8470"
+			title: "Инфернальный Кинетический Молот"
 			rewards: [
 				{
 					count: 4
@@ -818,6 +903,11 @@
 			]
 			shape: "octagon"
 			size: 1.5d
+						description: [
+				"Сокрушительный боевой молот Cataclysm, усиленный паровым двигателем Create и сталью Mekanism!"
+				""
+				"Разносит врагов ударными сейсмическими волнами."
+			]
 			tasks: [{
 				id: "34EF56C1E8D46660"
 				item: { count: 1, id: "cataclysm:infernal_forge" }
@@ -828,6 +918,7 @@
 		}
 		{
 			id: "04D52AAB4265DB45"
+			title: "Плазменный Испепелитель Игниса"
 			rewards: [
 				{
 					count: 2
@@ -846,6 +937,11 @@
 			]
 			shape: "octagon"
 			size: 1.5d
+						description: [
+				"Колоссальный пылающий меч лорда Игниса."
+				""
+				"Запитан квантовым энергопланшетом Mekanism и магией Источника Ars Nouveau."
+			]
 			tasks: [{
 				id: "2D07063DE7EA949E"
 				item: { count: 1, id: "cataclysm:the_incinerator" }
@@ -854,184 +950,160 @@
 			x: 8.25d
 			y: -1.5d
 		}
-,
 		{
-			dependencies: [
-				"5A8C11099E010001"
-			]
-			id: "DM12C899F8A3309B"
+			dependencies: ["5A8C11099E010001"]
+			id: "1DD7D6619823E8DA"
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [
 				{
-					id: "DMF9330485A3F35E"
 					count: 10L
+					id: "00BD30E0D65EBAF8"
 					item: { count: 1, id: "minecraft:obsidian" }
 					type: "item"
 				}
 				{
-					id: "DM85A77F2FFA02CF"
+					id: "03214C49954E6111"
 					item: { count: 1, id: "minecraft:flint_and_steel" }
 					type: "item"
 				}
 			]
 			x: -3.5d
 			y: 5.5d
-		},
+		}
 		{
-			dependencies: [
-				"DM12C899F8A3309B"
-			]
-			id: "DMC0B2514BE1822D"
+			id: "70749324EA30C5BE"
 			shape: "hexagon"
 			size: 1.3d
 			tasks: [
 				{
-					id: "DMDD83CCCD6B90D3"
+					id: "3F72EFE62F7A0D2B"
 					item: { count: 1, id: "minecraft:nether_star" }
 					type: "item"
 				}
 				{
-					id: "DM53C156F490017E"
 					count: 10L
+					id: "458E4C1B80EC4FF6"
 					item: { count: 1, id: "minecraft:glowstone" }
 					type: "item"
 				}
 			]
 			x: -1.5d
 			y: 5.5d
-		},
+		}
 		{
-			dependencies: [
-				"DMC0B2514BE1822D"
-			]
-			id: "DMAE4321E32C1CF4"
+			id: "4E6AD4C5586B7420"
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [
 				{
-					id: "DM1F94708ED10959"
 					count: 14L
+					id: "3FC4233CA77AF2A8"
 					item: { count: 1, id: "minecraft:glowstone" }
 					type: "item"
 				}
 				{
-					id: "DMA2C7F06F8BD760"
+					id: "05B7A9A635DB3495"
 					item: { count: 1, id: "minecraft:water_bucket" }
 					type: "item"
 				}
 			]
 			x: 0.5d
 			y: 5.5d
-		},
+		}
 		{
-			dependencies: [
-				"DMAE4321E32C1CF4"
-			]
-			id: "DM1540EF06A1E9B3"
+			id: "1932529F244EF120"
 			shape: "gear"
 			size: 1.4d
 			tasks: [
 				{
-					id: "DM15362B999C933A"
 					count: 4L
+					id: "2D2B53BF66B4235C"
 					item: { count: 1, id: "aether:zanite_gemstone" }
 					type: "item"
 				}
 				{
-					id: "DM08D39DFCE10E4B"
 					count: 2L
+					id: "1834A00247E2DAFE"
 					item: { count: 1, id: "aether:golden_amber" }
 					type: "item"
 				}
 			]
 			x: 2.5d
 			y: 5.5d
-		},
+		}
 		{
-			dependencies: [
-				"DM1540EF06A1E9B3"
-			]
-			id: "DMA1A117B09FD7A4"
+			id: "3B88136D2886602C"
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [
 				{
-					id: "DMB925E70B7ADB79"
+					id: "31B4B48C426C9F4F"
 					item: { count: 1, id: "undergarden:catalyst" }
 					type: "item"
 				}
 				{
-					id: "DM843A896C45F267"
 					count: 10L
+					id: "01E57CFD84D2439A"
 					item: { count: 1, id: "minecraft:stone_bricks" }
 					type: "item"
 				}
 			]
 			x: 4.5d
 			y: 5.5d
-		},
+		}
 		{
-			dependencies: [
-				"DMA1A117B09FD7A4"
-			]
-			id: "DM139D4FF868EABA"
+			id: "26B0E60BA72B216E"
 			shape: "gear"
 			size: 1.4d
 			tasks: [
 				{
-					id: "DM18E75E105C7DCB"
+					id: "05B47B3CF1AD9E11"
 					item: { count: 1, id: "undergarden:forgotten_ingot" }
 					type: "item"
 				}
 				{
-					id: "DM73A18CF17284CF"
 					count: 4L
+					id: "1722E6F7A2939FEC"
 					item: { count: 1, id: "undergarden:cloggrum_ingot" }
 					type: "item"
 				}
 			]
 			x: 6.5d
 			y: 5.5d
-		},
+		}
 		{
-			dependencies: [
-				"DM139D4FF868EABA"
-			]
-			id: "DM6855FE57F89DF0"
+			id: "38135A804445ED26"
 			shape: "hexagon"
 			size: 1.3d
 			tasks: [
 				{
-					id: "DMDD26AE8D4CC37B"
-					item: { count: 1, id: "deeper_and_darker:heart_of_the_ender" }
+					id: "6D15AAF1CBE5E3EE"
+					item: { components: { "ftbquests:missing_item": "deeper_and_darker:heart_of_the_ender" }, count: 1, id: "ftbquests:missing_item" }
 					type: "item"
 				}
 				{
-					id: "DM5598C552A6B1B1"
 					count: 4L
+					id: "441CA2CC7EFA7301"
 					item: { count: 1, id: "minecraft:echo_shard" }
 					type: "item"
 				}
 			]
 			x: 8.5d
 			y: 5.5d
-		},
+		}
 		{
-			dependencies: [
-				"DM6855FE57F89DF0"
-			]
-			id: "DMDFF47F5DBDBB2F"
+			id: "0975BABBDBC6A031"
 			shape: "diamond"
 			size: 1.6d
 			tasks: [
 				{
-					id: "DM9DEDDF76788AC7"
+					id: "7DE7DD5951B4A4F8"
 					item: { count: 1, id: "cataclysm:ignitium_ingot" }
 					type: "item"
 				}
 				{
-					id: "DM1E00E57D6768C7"
+					id: "69AC7B152944DD5F"
 					item: { count: 1, id: "cataclysm:witherite_ingot" }
 					type: "item"
 				}

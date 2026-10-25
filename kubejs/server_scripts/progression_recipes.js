@@ -1401,4 +1401,243 @@ ServerEvents.recipes(event => {
         S: 'minecraft:stone_bricks'
     }).id('steampunk:undergarden/catalyst_aether_progression');
 
+
+    // ==========================================
+    // 1. CRYSTALTINE INGOT: CREATE SEQUENCED ASSEMBLY
+    // ==========================================
+    // Sequence: Iron Ingot -> Diamond -> Lapis -> Gold -> Nether Star / Luminessence -> Press
+    event.remove({ output: 'extendedcrafting:crystaltine_ingot' });
+    
+    // Variant A: With Nether Star -> 4x Crystaltine Ingot
+    event.recipes.create.sequenced_assembly([
+        '4x extendedcrafting:crystaltine_ingot'
+    ], 'minecraft:iron_ingot', [
+        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'minecraft:diamond']),
+        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'minecraft:lapis_lazuli']),
+        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'minecraft:gold_ingot']),
+        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'minecraft:nether_star']),
+        event.recipes.createPressing('extendedcrafting:black_iron_ingot', 'extendedcrafting:black_iron_ingot')
+    ]).transitionalItem('extendedcrafting:black_iron_ingot').loops(1).id('steampunk:create/sequenced_crystaltine_star');
+
+    // Variant B: With Luminessence -> 2x Crystaltine Ingot
+    event.recipes.create.sequenced_assembly([
+        '2x extendedcrafting:crystaltine_ingot'
+    ], 'minecraft:iron_ingot', [
+        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'minecraft:diamond']),
+        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'minecraft:lapis_lazuli']),
+        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'minecraft:gold_ingot']),
+        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'extendedcrafting:luminessence']),
+        event.recipes.createPressing('extendedcrafting:black_iron_ingot', 'extendedcrafting:black_iron_ingot')
+    ]).transitionalItem('extendedcrafting:black_iron_ingot').loops(1).id('steampunk:create/sequenced_crystaltine_luminessence');
+
+    // ==========================================
+    // 2. EXTENDED CRAFTING TABLES PROGRESSION
+    // ==========================================
+    // Basic Table 3x3
+    event.remove({ output: 'extendedcrafting:basic_table' });
+    event.shaped('extendedcrafting:basic_table', [
+        'BLB',
+        'LCL',
+        'BSB'
+    ], {
+        B: 'extendedcrafting:black_iron_ingot',
+        L: 'extendedcrafting:luminessence',
+        C: 'minecraft:crafting_table',
+        S: 'mekanism:block_steel'
+    }).id('steampunk:extendedcrafting/basic_table_progression');
+
+    // Advanced Table 5x5
+    event.remove({ output: 'extendedcrafting:advanced_table' });
+    event.shaped('extendedcrafting:advanced_table', [
+        'CGC',
+        'GTG',
+        'CBC'
+    ], {
+        C: 'extendedcrafting:crystaltine_ingot',
+        G: 'minecraft:gold_block',
+        T: 'extendedcrafting:basic_table',
+        B: 'create:brass_casing'
+    }).id('steampunk:extendedcrafting/advanced_table_progression');
+
+    // Elite Table 7x7
+    event.remove({ output: 'extendedcrafting:elite_table' });
+    event.shaped('extendedcrafting:elite_table', [
+        'CDC',
+        'MTA',
+        'CPC'
+    ], {
+        C: 'extendedcrafting:crystaltine_block',
+        D: 'minecraft:diamond_block',
+        T: 'extendedcrafting:advanced_table',
+        M: 'create:precision_mechanism',
+        A: 'mekanism:elite_control_circuit',
+        P: 'powah:crystal_spirited'
+    }).id('steampunk:extendedcrafting/elite_table_progression');
+
+    // Ultimate Table 9x9
+    event.remove({ output: 'extendedcrafting:ultimate_table' });
+    event.shaped('extendedcrafting:ultimate_table', [
+        'CNC',
+        'UTE',
+        'CQC'
+    ], {
+        C: 'extendedcrafting:crystaltine_block',
+        N: 'minecraft:netherite_block',
+        T: 'extendedcrafting:elite_table',
+        U: 'mekanism:ultimate_control_circuit',
+        E: 'powah:crystal_nitro',
+        Q: 'minecraft:nether_star'
+    }).id('steampunk:extendedcrafting/ultimate_table_progression');
+
+    // ==========================================
+    // 3. THE ULTIMATE INGOT: CREATE MECHANICAL CRAFTING
+    // ==========================================
+    // 5x5 grid of Mechanical Crafters fusing metals of all dimensions
+    event.remove({ output: 'extendedcrafting:the_ultimate_ingot' });
+    event.recipes.create.mechanical_crafting('extendedcrafting:the_ultimate_ingot', [
+        'ICGZN',
+        'BSLMK',
+        'XRFUW',
+        'OAPTY',
+        'VEDHJ'
+    ], {
+        I: 'minecraft:iron_ingot',
+        C: 'minecraft:copper_ingot',
+        G: 'minecraft:gold_ingot',
+        Z: 'create:zinc_ingot',
+        N: 'minecraft:netherite_ingot',
+        B: 'create:brass_ingot',
+        S: 'mekanism:ingot_steel',
+        L: 'mekanism:ingot_lead',
+        M: 'mekanism:ingot_osmium',
+        K: 'mekanism:ingot_tin',
+        X: 'extendedcrafting:black_iron_ingot',
+        R: 'extendedcrafting:crystaltine_ingot',
+        F: 'extendedcrafting:the_ultimate_catalyst',
+        U: 'undergarden:cloggrum_ingot',
+        W: 'undergarden:froststeel_ingot',
+        O: 'undergarden:forgotten_ingot',
+        A: 'aether:zanite_gemstone',
+        P: 'powah:crystal_nitro',
+        T: 'cataclysm:ignitium_ingot',
+        Y: 'cataclysm:witherite_ingot',
+        V: 'minecraft:diamond',
+        E: 'minecraft:emerald',
+        D: 'minecraft:nether_star',
+        H: 'minecraft:echo_shard',
+        J: 'minecraft:amethyst_shard'
+    }).id('steampunk:create/mechanical_ultimate_ingot');
+
+    // ==========================================
+    // 4. MYSTICAL AGRICULTURE SEED PROGRESSION
+    // ==========================================
+    // Prosperity Seed Base requires Ars Nouveau + Create
+    event.remove({ output: 'mysticalagriculture:prosperity_seed_base' });
+    event.shaped('mysticalagriculture:prosperity_seed_base', [
+        'PSP',
+        'SMS',
+        'PSP'
+    ], {
+        P: 'mysticalagriculture:prosperity_shard',
+        S: 'ars_nouveau:source_gem',
+        M: 'create:precision_mechanism'
+    }).id('steampunk:mystical/prosperity_seed_base_progression');
+
+    // Infusion Altar
+    event.remove({ output: 'mysticalagriculture:infusion_altar' });
+    event.shaped('mysticalagriculture:infusion_altar', [
+        'SGS',
+        'RCR',
+        'SSS'
+    ], {
+        S: 'mekanism:ingot_steel',
+        G: 'minecraft:gold_ingot',
+        R: 'minecraft:redstone',
+        C: 'ars_nouveau:source_gem'
+    }).id('steampunk:mystical/infusion_altar_progression');
+
+    // Infusion Pedestal
+    event.remove({ output: 'mysticalagriculture:infusion_pedestal' });
+    event.shaped('mysticalagriculture:infusion_pedestal', [
+        'S S',
+        ' A ',
+        'SAS'
+    ], {
+        S: 'mekanism:ingot_steel',
+        A: 'create:andesite_alloy'
+    }).id('steampunk:mystical/infusion_pedestal_progression');
+
+    // Infusion Crystal
+    event.remove({ output: 'mysticalagriculture:infusion_crystal' });
+    event.shaped('mysticalagriculture:infusion_crystal', [
+        'PLP',
+        'LSL',
+        'PLP'
+    ], {
+        P: 'mysticalagriculture:prosperity_shard',
+        L: 'extendedcrafting:luminessence',
+        S: 'ars_nouveau:source_gem'
+    }).id('steampunk:mystical/infusion_crystal_progression');
+
+    // Iron Seeds
+    event.remove({ output: 'mysticalagriculture:iron_seeds' });
+    event.shaped('mysticalagriculture:iron_seeds', [
+        'EPE',
+        'PSP',
+        'EPE'
+    ], {
+        P: 'create:iron_sheet',
+        E: 'mysticalagriculture:prudentium_essence',
+        S: 'mysticalagriculture:prosperity_seed_base'
+    }).id('steampunk:mystical/iron_seeds_progression');
+
+    // Copper Seeds
+    event.remove({ output: 'mysticalagriculture:copper_seeds' });
+    event.shaped('mysticalagriculture:copper_seeds', [
+        'EPE',
+        'PSP',
+        'EPE'
+    ], {
+        P: 'create:copper_sheet',
+        E: 'mysticalagriculture:prudentium_essence',
+        S: 'mysticalagriculture:prosperity_seed_base'
+    }).id('steampunk:mystical/copper_seeds_progression');
+
+    // Gold Seeds
+    event.remove({ output: 'mysticalagriculture:gold_seeds' });
+    event.shaped('mysticalagriculture:gold_seeds', [
+        'EPE',
+        'PSP',
+        'EPE'
+    ], {
+        P: 'create:brass_sheet',
+        E: 'mysticalagriculture:tertium_essence',
+        S: 'mysticalagriculture:prosperity_seed_base'
+    }).id('steampunk:mystical/gold_seeds_progression');
+
+    // Diamond Seeds
+    event.remove({ output: 'mysticalagriculture:diamond_seeds' });
+    event.shaped('mysticalagriculture:diamond_seeds', [
+        'EPE',
+        'PSP',
+        'EPE'
+    ], {
+        P: 'mekanism:enriched_diamond',
+        E: 'mysticalagriculture:imperium_essence',
+        S: 'mysticalagriculture:prosperity_seed_base'
+    }).id('steampunk:mystical/diamond_seeds_progression');
+
+    // Netherite Seeds
+    event.remove({ output: 'mysticalagriculture:netherite_seeds' });
+    event.shaped('mysticalagriculture:netherite_seeds', [
+        'ECE',
+        'NSN',
+        'ECE'
+    ], {
+        N: 'minecraft:netherite_ingot',
+        C: 'extendedcrafting:crystaltine_ingot',
+        E: 'mysticalagriculture:supremium_essence',
+        S: 'mysticalagriculture:prosperity_seed_base'
+    }).id('steampunk:mystical/netherite_seeds_progression');
+
 });

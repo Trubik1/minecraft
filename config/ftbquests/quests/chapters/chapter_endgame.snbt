@@ -17,6 +17,7 @@
 				id: "minecraft:nether_star"
 			}
 			id: "5A8C11099E050001"
+			title: "Врата Абсолютного Могущества"
 			rewards: [
 				{
 					count: 4
@@ -44,6 +45,9 @@
 			]
 			shape: "gear"
 			size: 1.5d
+						description: [
+				"Вы покорили дирижабли, обуздали магию Ars Nouveau, построили заводы Mekanism и повергли древних боссов. Пришло время создать реликвии богов — Креативные предметы!"
+			]
 			tasks: [{
 				id: "0F575AFBB3B0DD31"
 				item: { count: 1, id: "minecraft:nether_star" }
@@ -58,6 +62,7 @@
 				id: "create:creative_motor"
 			}
 			id: "5A8C11099E050002"
+			title: "Креативный Мотор Create"
 			rewards: [
 				{
 					count: 4
@@ -76,6 +81,9 @@
 			]
 			shape: "challenge"
 			size: 1.3d
+						description: [
+				"Бесконечный источник вращения с любой скоростью RPM и стресс-емкостью SU. Больше никаких паровых котлов и ветряков!"
+			]
 			tasks: [{
 				id: "779D151EF6217356"
 				item: { count: 1, id: "create:creative_motor" }
@@ -90,6 +98,7 @@
 				id: "create:creative_blaze_cake"
 			}
 			id: "5A8C11099E050003"
+			title: "Креативный Торт Сполоха"
 			rewards: [
 				{
 					count: 32
@@ -106,6 +115,9 @@
 					xp_levels: 80
 				}
 			]
+						description: [
+				"Вечное сверхгорячее пламя для любых механизмов Create. Никогда не тухнет!"
+			]
 			tasks: [{
 				id: "4EF38FE7AA6E1C06"
 				item: { count: 1, id: "create:creative_blaze_cake" }
@@ -120,6 +132,7 @@
 				id: "mekanism:creative_energy_cube"
 			}
 			id: "5A8C11099E050004"
+			title: "Креативный Энергетический Куб"
 			rewards: [
 				{
 					count: 4
@@ -138,6 +151,9 @@
 			]
 			shape: "challenge"
 			size: 1.3d
+						description: [
+				"Источник бесконечной FE энергии максимальной мощности. Питает гигантские индукционные матрицы и реакторы."
+			]
 			tasks: [{
 				id: "17F2753459807DB4"
 				item: { count: 1, id: "mekanism:creative_energy_cube" }
@@ -152,6 +168,7 @@
 				id: "mekanism:creative_fluid_tank"
 			}
 			id: "5A8C11099E050005"
+			title: "Креативный Резервуар Жидкостей"
 			rewards: [
 				{
 					count: 8
@@ -167,6 +184,9 @@
 					type: "xp_levels"
 					xp_levels: 80
 				}
+			]
+						description: [
+				"Бесконечный объем любой залитой жидкости или газа. Залейте тяжелую воду, пар или лаву!"
 			]
 			tasks: [{
 				id: "5206B092EA66389D"
@@ -185,6 +205,7 @@
 				id: "refinedstorage:creative_storage_disk"
 			}
 			id: "5A8C11099E050006"
+			title: "Бесконечный Диск Данных RS"
 			rewards: [
 				{
 					id: "67184A51DF78EEF3"
@@ -202,6 +223,9 @@
 			]
 			shape: "challenge"
 			size: 1.3d
+						description: [
+				"Креативный диск для Refined Storage. Бесконечная емкость: вмещает триллионы предметов и ресурсов!"
+			]
 			tasks: [{
 				id: "3036005E26774E39"
 				item: { count: 1, id: "refinedstorage:creative_storage_disk" }
@@ -216,6 +240,7 @@
 				id: "refinedstorage:creative_controller"
 			}
 			id: "5A8C11099E050008"
+			title: "Креативный Контроллер RS"
 			rewards: [
 				{
 					count: 8
@@ -232,6 +257,9 @@
 					xp_levels: 100
 				}
 			]
+						description: [
+				"Бесконечное питание цифровой МЭ-сети без генераторов энергии."
+			]
 			tasks: [{
 				id: "55099418B99E7558"
 				item: { count: 1, id: "refinedstorage:creative_controller" }
@@ -246,6 +274,7 @@
 				id: "refinedstorage:network_card"
 			}
 			id: "5A8C11099E050009"
+			title: "Око Сингулярности (Quantum Bridge)"
 			rewards: [
 				{
 					count: 16
@@ -261,6 +290,9 @@
 					type: "xp_levels"
 					xp_levels: 80
 				}
+			]
+						description: [
+				"Мгновенная беспроводная связь между любыми измерениями через квантовые кольца."
 			]
 			tasks: [{
 				id: "1C047410C5A068D2"
@@ -279,6 +311,7 @@
 				id: "minecraft:dragon_egg"
 			}
 			id: "5A8C11099E050007"
+			title: "Повелитель Измерений (God of Steampunk)"
 			rewards: [
 				{
 					count: 32
@@ -306,6 +339,9 @@
 			]
 			shape: "heart"
 			size: 2.0d
+						description: [
+				"Вы создали все величайшие реликвии и стали абсолютным богом вселенной Steampunk  Swords! Слава великому инженеру и архимагу!"
+			]
 			tasks: [
 				{
 					id: "48ED19B6DAF43400"
@@ -332,6 +368,7 @@
 				id: "create:brass_block"
 			}
 			id: "5A8C11099E050010"
+			title: "Повелитель Металлов"
 			rewards: [
 				{
 					count: 16
@@ -347,6 +384,9 @@
 					type: "xp_levels"
 					xp_levels: 50
 				}
+			]
+						description: [
+				"Соберите блоки всех металлов вселенной: Медь, Цинк, Латунь, Олово, Свинец, Уран, Осмий, Золото, Железо и Незерит!"
 			]
 			tasks: [
 				{
@@ -409,6 +449,7 @@
 				id: "ars_nouveau:archmage_spell_book"
 			}
 			id: "5A8C11099E050011"
+			title: "Апофеоз Магии: Архимаг"
 			rewards: [
 				{
 					count: 8
@@ -425,6 +466,9 @@
 					xp_levels: 80
 				}
 			]
+						description: [
+				"Полный гримуар со всеми глифами и высшими заклинаниями Ars Nouveau."
+			]
 			tasks: [{
 				id: "511DB6F05958807A"
 				item: { count: 1, id: "ars_nouveau:archmage_spell_book" }
@@ -439,6 +483,7 @@
 				id: "mekanism:induction_casing"
 			}
 			id: "5A8C11099E050012"
+			title: "Квантовый Индукционный Монолит"
 			rewards: [
 				{
 					count: 2
@@ -455,6 +500,9 @@
 					xp_levels: 80
 				}
 			]
+						description: [
+				"Индукционная матрица Mekanism с емкостью в сотни миллиардов джоулей."
+			]
 			tasks: [{
 				id: "5DC8BD5A62B9C832"
 				item: { count: 1, id: "mekanism:induction_casing" }
@@ -469,6 +517,7 @@
 				id: "minecraft:nether_star"
 			}
 			id: "5A8C11099E050013"
+			title: "Венец Вечности (Crown of Eternity)"
 			rewards: [
 				{
 					count: 64
@@ -496,6 +545,9 @@
 			]
 			shape: "diamond"
 			size: 2.5d
+						description: [
+				"Абсолютное завершение сборки Steampunk  Swords. Вы взошли на трон повелителя вселенной!"
+			]
 			tasks: [{
 				id: "231C8EE556B0B4CA"
 				type: "checkmark"
@@ -503,168 +555,126 @@
 			x: 13.75d
 			y: 0.0d
 		}
-,
 		{
-			dependencies: [
-				"5A8C11099E050001"
-			]
-			id: "ECEB1AA88965309D"
+			dependencies: ["5A8C11099E050001"]
+			id: "2450F8449D8780B2"
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [
 				{
-					id: "EC6AEE98664BF4ED"
+					id: "28AF2BABA7F099E4"
 					item: { count: 1, id: "extendedcrafting:black_iron_ingot" }
 					type: "item"
 				}
 				{
-					id: "EC9DEB49C41DCB80"
+					id: "6D77202F5892D33E"
 					item: { count: 1, id: "extendedcrafting:luminessence" }
 					type: "item"
 				}
 			]
 			x: 0.0d
 			y: 4.5d
-		},
+		}
 		{
-			dependencies: [
-				"ECEB1AA88965309D"
-			]
-			id: "EC818F73C359D14D"
+			id: "43712EBCC3EFBE24"
 			shape: "rsquare"
 			size: 1.0d
-			tasks: [
-				{
-					id: "EC2794B0E93A1B02"
-					item: { count: 1, id: "extendedcrafting:basic_table" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "1C94783B023D88C9"
+				item: { count: 1, id: "extendedcrafting:basic_table" }
+				type: "item"
+			}]
 			x: 1.8d
 			y: 4.5d
-		},
+		}
 		{
-			dependencies: [
-				"EC818F73C359D14D"
-			]
-			id: "EC5EDA9CE88B48BC"
+			id: "5B20E2FCB41BAB81"
 			shape: "rsquare"
 			size: 1.0d
-			tasks: [
-				{
-					id: "EC8E4C510E31BEFC"
-					item: { count: 1, id: "extendedcrafting:advanced_table" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "15BA8FB2B812193F"
+				item: { count: 1, id: "extendedcrafting:advanced_table" }
+				type: "item"
+			}]
 			x: 3.6d
 			y: 4.5d
-		},
+		}
 		{
-			dependencies: [
-				"EC5EDA9CE88B48BC"
-			]
-			id: "ECFEEA1B87F5B6A5"
+			id: "05D354F1AB90DB0D"
 			shape: "rsquare"
 			size: 1.0d
-			tasks: [
-				{
-					id: "EC6FA2CAF64FE551"
-					item: { count: 1, id: "extendedcrafting:elite_table" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "06B337BE399FCB99"
+				item: { count: 1, id: "extendedcrafting:elite_table" }
+				type: "item"
+			}]
 			x: 5.4d
 			y: 4.5d
-		},
+		}
 		{
-			dependencies: [
-				"ECFEEA1B87F5B6A5"
-			]
-			id: "EC3280AB8ED0659D"
+			id: "116954FDC8A87CBA"
 			shape: "gear"
 			size: 1.5d
-			tasks: [
-				{
-					id: "EC302D299A22B6BD"
-					item: { count: 1, id: "extendedcrafting:ultimate_table" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "1FE277D73F82A504"
+				item: { count: 1, id: "extendedcrafting:ultimate_table" }
+				type: "item"
+			}]
 			x: 7.2d
 			y: 4.5d
-		},
+		}
 		{
-			dependencies: [
-				"EC3280AB8ED0659D"
-			]
-			id: "ECF2A6E8AECCDEAF"
+			id: "3C08EA6D9E6CD675"
 			shape: "hexagon"
 			size: 1.1d
 			tasks: [
 				{
-					id: "EC61279678918026"
+					id: "5ED8F25975BA888E"
 					item: { count: 1, id: "extendedcrafting:crystaltine_ingot" }
 					type: "item"
 				}
 				{
-					id: "EC180272E336ED91"
+					id: "64C11E042407FEA0"
 					item: { count: 1, id: "extendedcrafting:the_ultimate_catalyst" }
 					type: "item"
 				}
 			]
 			x: 7.2d
 			y: 6.0d
-		},
+		}
 		{
-			dependencies: [
-				"EC3280AB8ED0659D"
-				"ECF2A6E8AECCDEAF"
-			]
-			id: "ECB533A1EBF09E31"
+			id: "6BD5EA9D4C0B4FF0"
 			shape: "hexagon"
 			size: 1.3d
-			tasks: [
-				{
-					id: "EC5BE06FE5FCEF57"
-					item: { count: 1, id: "extendedcrafting:the_ultimate_ingot" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "33431EF68C50F83A"
+				item: { count: 1, id: "extendedcrafting:the_ultimate_ingot" }
+				type: "item"
+			}]
 			x: 9.0d
 			y: 4.5d
-		},
+		}
 		{
-			dependencies: [
-				"ECB533A1EBF09E31"
-			]
-			id: "ECBD29C21FD3B855"
+			id: "73457CFC8A28A6A4"
 			shape: "diamond"
 			size: 1.3d
-			tasks: [
-				{
-					id: "ECDFD5B5D6ABC8A2"
-					item: { count: 1, id: "powah:energy_cell_creative" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "76948442AF02774A"
+				item: { count: 1, id: "powah:energy_cell_creative" }
+				type: "item"
+			}]
 			x: 10.8d
 			y: 3.5d
-		},
+		}
 		{
-			dependencies: [
-				"ECB533A1EBF09E31"
-			]
-			id: "ECE5BCB733A89E97"
+			id: "488788726F80DCBA"
 			shape: "diamond"
 			size: 1.3d
-			tasks: [
-				{
-					id: "EC5541ABA17856EB"
-					item: { count: 1, id: "refinedstorage:creative_controller" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "645F8EB291BD870A"
+				item: { count: 1, id: "refinedstorage:creative_controller" }
+				type: "item"
+			}]
 			x: 10.8d
 			y: 5.5d
 		}

@@ -16,11 +16,11 @@
 			icon: {
 				id: "create:empty_schematic"
 			}
-			id: "5A8C11099E060001"
+			id: "15F6F182239E6D14"
 			rewards: [
 				{
 					count: 4
-					id: "1A2B3C4D5E6F7001"
+					id: "50C5E87FBB137F37"
 					item: {
 						count: 4
 						id: "create:empty_schematic"
@@ -48,10 +48,9 @@
 			icon: {
 				id: "create:schematic_table"
 			}
-			id: "5A8C11099E060002"
+			id: "28B92D4B88B293F0"
 			rewards: [
 				{
-					count: 1
 					id: "1A2B3C4D5E6F7003"
 					item: {
 						count: 1
@@ -80,7 +79,7 @@
 			icon: {
 				id: "minecraft:writable_book"
 			}
-			id: "5A8C11099E060003"
+			id: "28658F919522A076"
 			rewards: [
 				{
 					count: 16
@@ -111,7 +110,7 @@
 			icon: {
 				id: "create:schematic_and_quill"
 			}
-			id: "5A8C11099E060004"
+			id: "162EE7EA9C8B90F3"
 			rewards: [
 				{
 					count: 2
@@ -141,7 +140,7 @@
 			icon: {
 				id: "create:schematicannon"
 			}
-			id: "5A8C11099E060005"
+			id: "7F963674E6A4D5EE"
 			rewards: [
 				{
 					count: 32
@@ -153,7 +152,6 @@
 					type: "item"
 				}
 				{
-					count: 1
 					id: "1A2B3C4D5E6F7010"
 					item: {
 						count: 1
@@ -182,7 +180,7 @@
 			icon: {
 				id: "create:mechanical_saw"
 			}
-			id: "5A8C11099E060006"
+			id: "18874E3BBD0A580F"
 			rewards: [
 				{
 					count: 64
@@ -219,7 +217,7 @@
 			icon: {
 				id: "create:mechanical_drill"
 			}
-			id: "5A8C11099E060007"
+			id: "7C1ABAE323C520FB"
 			rewards: [
 				{
 					count: 2
@@ -256,7 +254,7 @@
 			icon: {
 				id: "create:encased_fan"
 			}
-			id: "5A8C11099E060008"
+			id: "6147ADDC198A8FC0"
 			rewards: [
 				{
 					count: 32
@@ -293,7 +291,7 @@
 			icon: {
 				id: "create:track_station"
 			}
-			id: "5A8C11099E060009"
+			id: "0E11885A11CC7656"
 			rewards: [
 				{
 					count: 64
@@ -318,7 +316,7 @@
 				}
 				{
 					id: "2A3B4C5D6E7F8013"
-					item: { count: 1, id: "create:train_controls" }
+					item: { components: { "ftbquests:missing_item": "create:train_controls" }, count: 1, id: "ftbquests:missing_item" }
 					type: "item"
 				}
 			]
