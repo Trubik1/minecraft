@@ -442,4 +442,260 @@ ServerEvents.recipes(event => {
         C: 'minecraft:ender_pearl'
     }).id('steampunk:dimension/ender_eye_gated');
 
+
+    // ==========================================================================
+    // СИСТЕМА УЛУЧШЕНИЯ РЮКЗАКОВ (LOLILAND STYLE)
+    // Усложненная ступенчатая прогрессия рюкзаков и стаков
+    // ==========================================================================
+
+    // 1. Медный рюкзак: Базовый рюкзак + медные листы Create + медь
+    event.remove({ output: 'sophisticatedbackpacks:copper_backpack' });
+    event.shaped('sophisticatedbackpacks:copper_backpack', [
+        'CSC',
+        'SBS',
+        'CSC'
+    ], {
+        C: 'minecraft:copper_ingot',
+        S: 'create:copper_sheet',
+        B: 'sophisticatedbackpacks:backpack'
+    }).id('steampunk:backpack/copper_backpack_loliland');
+
+    // 2. Железный рюкзак: Медный рюкзак + железные листы Create + слитки железа
+    event.remove({ output: 'sophisticatedbackpacks:iron_backpack' });
+    event.shaped('sophisticatedbackpacks:iron_backpack', [
+        'ISI',
+        'SCS',
+        'ISI'
+    ], {
+        I: 'minecraft:iron_ingot',
+        S: 'create:iron_sheet',
+        C: 'sophisticatedbackpacks:copper_backpack'
+    }).id('steampunk:backpack/iron_backpack_loliland');
+
+    // 3. Золотой рюкзак: Железный рюкзак + золотые листы Create + сплав Mekanism + камень Источника
+    event.remove({ output: 'sophisticatedbackpacks:gold_backpack' });
+    event.shaped('sophisticatedbackpacks:gold_backpack', [
+        'GSG',
+        'AIA',
+        'GSG'
+    ], {
+        G: 'minecraft:gold_ingot',
+        S: 'create:golden_sheet',
+        A: 'mekanism:alloy_infused',
+        I: 'sophisticatedbackpacks:iron_backpack'
+    }).id('steampunk:backpack/gold_backpack_loliland');
+
+    // 4. Алмазный рюкзак: Золотой рюкзак + точный механизм Create + усиленный сплав Mekanism + алмазы
+    event.remove({ output: 'sophisticatedbackpacks:diamond_backpack' });
+    event.shaped('sophisticatedbackpacks:diamond_backpack', [
+        'DMD',
+        'AGA',
+        'DMD'
+    ], {
+        D: 'minecraft:diamond',
+        M: 'create:precision_mechanism',
+        A: 'mekanism:alloy_reinforced',
+        G: 'sophisticatedbackpacks:gold_backpack'
+    }).id('steampunk:backpack/diamond_backpack_loliland');
+
+    // 5. Незеритовый рюкзак: Алмазный рюкзак + атомный сплав Mekanism + незеритовые слитки / обломки
+    event.remove({ output: 'sophisticatedbackpacks:netherite_backpack' });
+    event.shaped('sophisticatedbackpacks:netherite_backpack', [
+        'NAN',
+        'ADA',
+        'NAN'
+    ], {
+        N: 'minecraft:netherite_ingot',
+        A: 'mekanism:alloy_atomic',
+        D: 'sophisticatedbackpacks:diamond_backpack'
+    }).id('steampunk:backpack/netherite_backpack_loliland');
+
+    // 6. Шаблон улучшения рюкзака (Upgrade Base)
+    // Требует латунные листы Create и кожу
+    event.remove({ output: 'sophisticatedbackpacks:upgrade_base' });
+    event.shaped('sophisticatedbackpacks:upgrade_base', [
+        'SLS',
+        'LIL',
+        'SLS'
+    ], {
+        S: 'minecraft:string',
+        L: 'minecraft:leather',
+        I: 'create:brass_sheet'
+    }).id('steampunk:backpack/upgrade_base_loliland');
+
+    // 7. Улучшения стаков (Stack Upgrades I - IV)
+    event.remove({ output: 'sophisticatedbackpacks:stack_upgrade_tier_1' });
+    event.shaped('sophisticatedbackpacks:stack_upgrade_tier_1', [
+        'SIS',
+        'IUI',
+        'SIS'
+    ], {
+        S: 'create:brass_sheet',
+        I: 'minecraft:iron_block',
+        U: 'sophisticatedbackpacks:upgrade_base'
+    }).id('steampunk:backpack/stack_upgrade_t1_loliland');
+
+    event.remove({ output: 'sophisticatedbackpacks:stack_upgrade_tier_2' });
+    event.shaped('sophisticatedbackpacks:stack_upgrade_tier_2', [
+        'GAG',
+        'AUA',
+        'GAG'
+    ], {
+        G: 'minecraft:gold_block',
+        A: 'mekanism:alloy_infused',
+        U: 'sophisticatedbackpacks:stack_upgrade_tier_1'
+    }).id('steampunk:backpack/stack_upgrade_t2_loliland');
+
+    event.remove({ output: 'sophisticatedbackpacks:stack_upgrade_tier_3' });
+    event.shaped('sophisticatedbackpacks:stack_upgrade_tier_3', [
+        'DAD',
+        'AUA',
+        'DAD'
+    ], {
+        D: 'minecraft:diamond_block',
+        A: 'mekanism:alloy_reinforced',
+        U: 'sophisticatedbackpacks:stack_upgrade_tier_2'
+    }).id('steampunk:backpack/stack_upgrade_t3_loliland');
+
+    event.remove({ output: 'sophisticatedbackpacks:stack_upgrade_tier_4' });
+    event.shaped('sophisticatedbackpacks:stack_upgrade_tier_4', [
+        'NAN',
+        'AUA',
+        'NAN'
+    ], {
+        N: 'minecraft:netherite_ingot',
+        A: 'mekanism:alloy_atomic',
+        U: 'sophisticatedbackpacks:stack_upgrade_tier_3'
+    }).id('steampunk:backpack/stack_upgrade_t4_loliland');
+
+    // ==========================================================================
+    // СОЛНЕЧНЫЕ ПАНЕЛИ SOLAR FLUX REBORN (ИНТЕГРАЦИЯ CREATE, MEKANISM, TWILIGHT)
+    // ==========================================================================
+
+    // Солнечная панель 1: Зеркала + железные листы Create + редстоун
+    event.remove({ output: 'solarflux:sp_1' });
+    event.shaped('solarflux:sp_1', [
+        'MMM',
+        'RSR',
+        'SSS'
+    ], {
+        M: 'solarflux:mirror',
+        R: 'minecraft:redstone',
+        S: 'create:iron_sheet'
+    }).id('steampunk:solar/sp_1_craft');
+
+    // Солнечная панель 2: 2x SP 1 + латунные листы Create + Фотоэлемент 1
+    event.remove({ output: 'solarflux:sp_2' });
+    event.shaped('solarflux:sp_2', [
+        'PPP',
+        'SCS',
+        'SSS'
+    ], {
+        P: 'solarflux:sp_1',
+        C: 'solarflux:photovoltaic_cell_1',
+        S: 'create:brass_sheet'
+    }).id('steampunk:solar/sp_2_craft');
+
+    // Солнечная панель 3: 2x SP 2 + сплав Mekanism + Фотоэлемент 2
+    event.remove({ output: 'solarflux:sp_3' });
+    event.shaped('solarflux:sp_3', [
+        'PPP',
+        'ACA',
+        'AAA'
+    ], {
+        P: 'solarflux:sp_2',
+        C: 'solarflux:photovoltaic_cell_2',
+        A: 'mekanism:alloy_infused'
+    }).id('steampunk:solar/sp_3_craft');
+
+    // Солнечная панель 4: 2x SP 3 + базовая схема Mekanism + Фотоэлемент 3
+    event.remove({ output: 'solarflux:sp_4' });
+    event.shaped('solarflux:sp_4', [
+        'PPP',
+        'ECE',
+        'EEE'
+    ], {
+        P: 'solarflux:sp_3',
+        C: 'solarflux:photovoltaic_cell_3',
+        E: 'mekanism:basic_control_circuit'
+    }).id('steampunk:solar/sp_4_craft');
+
+    // Солнечная панель 5: 2x SP 4 + продвинутая схема Mekanism + Фотоэлемент 4
+    event.remove({ output: 'solarflux:sp_5' });
+    event.shaped('solarflux:sp_5', [
+        'PPP',
+        'ECE',
+        'EEE'
+    ], {
+        P: 'solarflux:sp_4',
+        C: 'solarflux:photovoltaic_cell_4',
+        E: 'mekanism:advanced_control_circuit'
+    }).id('steampunk:solar/sp_5_craft');
+
+    // Солнечная панель 6: 2x SP 5 + элитная схема Mekanism + камень Источника + точный механизм
+    event.remove({ output: 'solarflux:sp_6' });
+    event.shaped('solarflux:sp_6', [
+        'PPP',
+        'ECE',
+        'SGS'
+    ], {
+        P: 'solarflux:sp_5',
+        C: 'solarflux:photovoltaic_cell_5',
+        E: 'mekanism:elite_control_circuit',
+        S: 'ars_nouveau:source_gem',
+        G: 'create:precision_mechanism'
+    }).id('steampunk:solar/sp_6_craft');
+
+    // Солнечная панель 7: 2x SP 6 + абсолютная схема Mekanism + Звезда Незера
+    event.remove({ output: 'solarflux:sp_7' });
+    event.shaped('solarflux:sp_7', [
+        'PPP',
+        'ECE',
+        'NSN'
+    ], {
+        P: 'solarflux:sp_6',
+        C: 'solarflux:photovoltaic_cell_6',
+        E: 'mekanism:ultimate_control_circuit',
+        N: 'minecraft:nether_star',
+        S: 'mekanism:alloy_atomic'
+    }).id('steampunk:solar/sp_7_craft');
+
+    // Солнечная панель 8 (Максимум): 2x SP 7 + точные механизмы + незеритовые блоки + антиматерия
+    event.remove({ output: 'solarflux:sp_8' });
+    event.shaped('solarflux:sp_8', [
+        'PPP',
+        'NAN',
+        'MAM'
+    ], {
+        P: 'solarflux:sp_7',
+        N: 'minecraft:netherite_block',
+        A: 'mekanism:pellet_antimatter',
+        M: 'create:precision_mechanism'
+    }).id('steampunk:solar/sp_8_craft');
+
+    // Огненная солнечная панель (Fiery Solar Panel): 4x SP 4 + огненные слитки Twilight Forest + жезлы блейза
+    event.remove({ output: 'solarflux:sp_tf.fiery' });
+    event.shaped('solarflux:sp_tf.fiery', [
+        'FFF',
+        'PSP',
+        'PBP'
+    ], {
+        F: 'twilightforest:fiery_ingot',
+        P: 'solarflux:sp_4',
+        S: 'minecraft:blaze_powder',
+        B: 'minecraft:blaze_rod'
+    }).id('steampunk:solar/sp_fiery_craft');
+
+    // Карминитовая солнечная панель (Carminite Solar Panel): 4x SP 5 + карминит Twilight Forest
+    event.remove({ output: 'solarflux:sp_tf.carminite' });
+    event.shaped('solarflux:sp_tf.carminite', [
+        'CCC',
+        'PSP',
+        'PBP'
+    ], {
+        C: 'twilightforest:carminite',
+        P: 'solarflux:sp_5',
+        S: 'twilightforest:carminite_block',
+        B: 'ars_nouveau:source_gem'
+    }).id('steampunk:solar/sp_carminite_craft');
 });

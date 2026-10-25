@@ -670,8 +670,8 @@
 				item: { count: 1, id: "minecraft:bone" }
 				type: "item"
 			}]
-			x: 9.0d
-			y: -3.0d
+			x: 10.0d
+			y: -4.5d
 		}
 		{
 			dependencies: ["4D6E8F0A2B4C6E80"]
@@ -703,8 +703,8 @@
 				item: { count: 1, id: "minecraft:string" }
 				type: "item"
 			}]
-			x: 10.5d
-			y: -3.0d
+			x: 10.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["5E7F9A1B3C5D7F91"]
@@ -736,8 +736,8 @@
 				item: { count: 1, id: "minecraft:gunpowder" }
 				type: "item"
 			}]
-			x: 12.0d
-			y: -3.0d
+			x: 10.0d
+			y: -9.5d
 		}
 		{
 			dependencies: ["4C2AF1950255410E"]
@@ -808,18 +808,18 @@
 			id: "7A9B1C3D5E7F91B3"
 			rewards: [
 				{
-					count: 8
-					id: "5EA9707831B9F2A4"
-					item: {
-						count: 1
-						id: "minecraft:glass_bottle"
-					}
-					type: "item"
-				}
-				{
 					id: "0A9C979BD5D9F071"
 					type: "xp"
 					xp: 50
+				}
+				{
+					count: 8
+					id: "3EA7D8CD38045A48"
+					item: {
+						count: 1
+						id: "minecraft:glass"
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
@@ -1438,48 +1438,12 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["05B8181D12C48AB8"]
-			icon: {
-				id: "minecraft:repeater"
-			}
-			id: "1E3F5A7B9C1D35F7"
-			rewards: [
-				{
-					count: 2
-					id: "12569042ACC3D11D"
-					item: {
-						count: 1
-						id: "minecraft:sticky_piston"
-					}
-					type: "item"
-				}
-				{
-					id: "0B8B4D8F7AD263C5"
-					type: "xp"
-					xp: 75
-				}
-			]
-			shape: "circle"
-			size: 1.0d
-			tasks: [
-				{
-					id: "30872C26A746F07B"
-					item: { count: 1, id: "minecraft:repeater" }
-					type: "item"
-				}
-				{
-					id: "0352C9D16D7BA357"
-					item: { count: 1, id: "minecraft:piston" }
-					type: "item"
-				}
-			]
-			x: 17.5d
-			y: 1.5d
-		}
-		{
 			dependencies: ["18A60F5F68F91B10"]
 			icon: {
-				id: "minecraft:lapis_lazuli"
+				components: {
+					"ftbquests:icon": "minecraft:block/lapis_ore"
+				}
+				id: "ftbquests:custom_icon"
 			}
 			id: "16F8506A5C3FAD00"
 			rewards: [
@@ -1507,7 +1471,7 @@
 				type: "item"
 			}]
 			x: 15.5d
-			y: 3.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["18A60F5F68F91B10"]
@@ -1569,8 +1533,8 @@
 				item: { count: 1, id: "minecraft:diamond" }
 				type: "item"
 			}]
-			x: 19.5d
-			y: -0.5d
+			x: 21.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["1BEA5FD82A6F8384"]
@@ -1636,7 +1600,7 @@
 			shape: "square"
 			size: 1.1d
 			tasks: [{
-				count: 14L
+				count: 10L
 				id: "6F5AA19B3E80CD8A"
 				item: { count: 1, id: "minecraft:obsidian" }
 				type: "item"
@@ -1698,24 +1662,20 @@
 			id: "2A1B0C3D4E5F6789"
 			rewards: [
 				{
+					count: 4
 					id: "3B2C1D0E4F5A6B7C"
 					item: {
-						components: {
-							"ftbquests:missing_item": "ars_nouveau:blank_rune"
-						}
-						count: 1
-						id: "ftbquests:missing_item"
+						count: 4
+						id: "ars_nouveau:source_gem"
 					}
 					type: "item"
 				}
 				{
+					count: 2
 					id: "4C3D2E1F0A5B6C7D"
 					item: {
-						components: {
-							"ftbquests:missing_item": "ars_nouveau:magic_clay"
-						}
-						count: 1
-						id: "ftbquests:missing_item"
+						count: 2
+						id: "ars_nouveau:blank_parchment"
 					}
 					type: "item"
 				}
@@ -1934,6 +1894,7 @@
 			y: 1.5d
 		}
 		{
+			dependencies: ["6845261FBEABB40C"]
 			icon: {
 				id: "minecraft:ancient_debris"
 			}
@@ -2445,8 +2406,8 @@
 				item: { count: 1, id: "minecraft:compass" }
 				type: "item"
 			}]
-			x: 14.0d
-			y: 3.5d
+			x: 15.5d
+			y: 5.0d
 		}
 		{
 			icon: {
@@ -2512,7 +2473,7 @@
 				}
 			]
 			x: 15.5d
-			y: 3.5d
+			y: 7.0d
 		}
 		{
 			icon: {
@@ -2540,8 +2501,8 @@
 				item: { count: 1, id: "minecraft:nautilus_shell" }
 				type: "item"
 			}]
-			x: 20.0d
-			y: 4.0d
+			x: 17.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["5A8C11099E070013"]
@@ -2570,10 +2531,11 @@
 				item: { count: 1, id: "minecraft:heart_of_the_sea" }
 				type: "item"
 			}]
-			x: 21.5d
-			y: 4.0d
+			x: 17.0d
+			y: 7.0d
 		}
 		{
+			dependencies: ["6DC6F6273114EE3F"]
 			icon: {
 				id: "minecraft:elytra"
 			}
@@ -2614,6 +2576,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["6DC6F6273114EE3F"]
 			icon: {
 				id: "minecraft:ender_chest"
 			}
@@ -2652,6 +2615,7 @@
 			y: -1.5d
 		}
 		{
+			dependencies: ["6DC6F6273114EE3F"]
 			icon: {
 				id: "minecraft:chorus_fruit"
 			}

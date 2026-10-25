@@ -1966,24 +1966,6 @@
 			y: -7.0d
 		}
 		{
-			id: "4C7E006502E30C20"
-			invisible: true
-			optional: true
-			tags: ["arr"]
-			tasks: [
-				{
-					id: "39194D9CDF673768"
-					type: "checkmark"
-				}
-				{
-					id: "4AA225E5056787B8"
-					type: "checkmark"
-				}
-			]
-			x: 0.5d
-			y: -9.0d
-		}
-		{
 			dependencies: ["1C232674CD04024D"]
 			icon: {
 				components: {

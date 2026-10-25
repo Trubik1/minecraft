@@ -359,6 +359,46 @@
 					item: { count: 1, id: "minecraft:netherite_block" }
 					type: "item"
 				}
+				{
+					id: "1994A260A876757C"
+					item: { count: 1, id: "create:zinc_block" }
+					type: "item"
+				}
+				{
+					id: "1758240CA75F5E44"
+					item: { count: 1, id: "minecraft:copper_block" }
+					type: "item"
+				}
+				{
+					id: "32340B8A461BB22E"
+					item: { count: 1, id: "mekanism:block_tin" }
+					type: "item"
+				}
+				{
+					id: "3936AA1939F4D906"
+					item: { count: 1, id: "mekanism:block_lead" }
+					type: "item"
+				}
+				{
+					id: "7074CBC71AC3515D"
+					item: { count: 1, id: "powah:uraninite_block" }
+					type: "item"
+				}
+				{
+					id: "481491F2AEAAEB73"
+					item: { count: 1, id: "mekanism:block_osmium" }
+					type: "item"
+				}
+				{
+					id: "02722F7D8E53369D"
+					item: { count: 1, id: "minecraft:gold_block" }
+					type: "item"
+				}
+				{
+					id: "5B21019E4F431C94"
+					item: { count: 1, id: "minecraft:iron_block" }
+					type: "item"
+				}
 			]
 			x: 2.2d
 			y: 0.0d
@@ -460,7 +500,7 @@
 				id: "231C8EE556B0B4CA"
 				type: "checkmark"
 			}]
-			x: 11.2d
+			x: 13.75d
 			y: 0.0d
 		}
 	]

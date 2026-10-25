@@ -54,11 +54,8 @@
 					count: 16
 					id: "5CD24AECD7F9B563"
 					item: {
-						components: {
-							"ftbquests:missing_item": "16x create:copper_ingot"
-						}
-						count: 1
-						id: "ftbquests:missing_item"
+						count: 16
+						id: "minecraft:copper_ingot"
 					}
 					type: "item"
 				}
@@ -127,10 +124,7 @@
 		{
 			dependencies: ["5A8C11099E020003"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "createbigcannons:sliding_breech_block"
-				}
-				id: "ftbquests:missing_item"
+				id: "createbigcannons:sliding_breechblock"
 			}
 			id: "5A8C11099E020004"
 			rewards: [
@@ -151,7 +145,7 @@
 			]
 			tasks: [{
 				id: "346309AEC9056866"
-				item: { components: { "ftbquests:missing_item": "createbigcannons:sliding_breech_block" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "createbigcannons:sliding_breechblock" }
 				type: "item"
 			}]
 			x: 5.4d
@@ -470,10 +464,7 @@
 		{
 			dependencies: ["5A8C11099E020008"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "createbigcannons:autocannon_recoil_spring"
-				}
-				id: "ftbquests:missing_item"
+				id: "createbigcannons:recoil_spring"
 			}
 			id: "5A8C11099E020014"
 			rewards: [
@@ -494,7 +485,7 @@
 			]
 			tasks: [{
 				id: "2A6A0CEF56DDC2BB"
-				item: { components: { "ftbquests:missing_item": "createbigcannons:autocannon_recoil_spring" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "createbigcannons:recoil_spring" }
 				type: "item"
 			}]
 			x: 8.8d

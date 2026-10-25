@@ -13,26 +13,35 @@
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["1F2E3D4C5B6A7890"]
 			icon: {
 				id: "minecraft:writable_book"
 			}
 			id: "5A8C11099E010001"
 			rewards: [
 				{
-					count: 5
 					id: "41D7B7FD80D7C7D7"
 					item: {
-						count: 5
+						count: 1
 						id: "minecraft:diamond"
 					}
 					type: "item"
 				}
 				{
-					count: 16
+					count: 8
 					id: "5EAE94F17DF9DA40"
 					item: {
-						count: 16
+						count: 8
 						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "7AE012F4B5C6D7E8"
+					item: {
+						count: 16
+						id: "minecraft:cooked_beef"
 					}
 					type: "item"
 				}
@@ -46,7 +55,8 @@
 			size: 1.5d
 			tasks: [{
 				id: "7B74142B36F68F69"
-				type: "checkmark"
+				item: { count: 1, id: "minecraft:iron_sword" }
+				type: "item"
 			}]
 			x: 0.0d
 			y: 0.0d
@@ -54,10 +64,7 @@
 		{
 			dependencies: ["5A8C11099E010001"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "cataclysm:monstrosity_blade"
-				}
-				id: "ftbquests:missing_item"
+				id: "cataclysm:monstrous_horn"
 			}
 			id: "5A8C11099E010002"
 			rewards: [
@@ -87,7 +94,7 @@
 			]
 			tasks: [{
 				id: "29F24E016F4BA807"
-				item: { components: { "ftbquests:missing_item": "cataclysm:monstrosity_blade" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "cataclysm:monstrous_horn" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -816,7 +823,7 @@
 				item: { count: 1, id: "cataclysm:infernal_forge" }
 				type: "item"
 			}]
-			x: 5.0d
+			x: 8.25d
 			y: 1.5d
 		}
 		{
@@ -844,7 +851,7 @@
 				item: { count: 1, id: "cataclysm:the_incinerator" }
 				type: "item"
 			}]
-			x: 5.0d
+			x: 8.25d
 			y: -1.5d
 		}
 	]
