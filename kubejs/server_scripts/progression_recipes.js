@@ -157,4 +157,82 @@ ServerEvents.recipes(event => {
     }).id('steampunk:progression/rs_crafting_grid');
 
     console.info('=== Steampunk & Swords Progression Recipes Loaded Successfully! ===');
+
+    // --------------------------------------------------------------------------
+    // 10. MEKANISM METALLURGIC INFUSER: Электронная лампа Create (Electron Tube)
+    // Массовое производство в Металлургическом наполнителе через насыщение редстоуном!
+    // --------------------------------------------------------------------------
+
+    // 1. Из железной пластины (create:iron_sheet) + 20 ед. редстоуна
+    event.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemical_input: {
+            amount: 20,
+            tag: 'mekanism:redstone'
+        },
+        item_input: {
+            count: 1,
+            item: 'create:iron_sheet'
+        },
+        output: {
+            count: 1,
+            id: 'create:electron_tube'
+        },
+        per_tick_usage: false
+    }).id('steampunk:infusing/electron_tube_from_iron_sheet');
+
+    // 2. Из розового кварца (create:rose_quartz) + 20 ед. редстоуна (без полировки наждачкой!)
+    event.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemical_input: {
+            amount: 20,
+            tag: 'mekanism:redstone'
+        },
+        item_input: {
+            count: 1,
+            item: 'create:rose_quartz'
+        },
+        output: {
+            count: 1,
+            id: 'create:electron_tube'
+        },
+        per_tick_usage: false
+    }).id('steampunk:infusing/electron_tube_from_rose_quartz');
+
+    // 3. Из полированного розового кварца (create:polished_rose_quartz) + 10 ед. редстоуна
+    event.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemical_input: {
+            amount: 10,
+            tag: 'mekanism:redstone'
+        },
+        item_input: {
+            count: 1,
+            item: 'create:polished_rose_quartz'
+        },
+        output: {
+            count: 1,
+            id: 'create:electron_tube'
+        },
+        per_tick_usage: false
+    }).id('steampunk:infusing/electron_tube_from_polished_quartz');
+
+    // 4. Дополнительно: Ванильная Краснокаменная лампа (minecraft:redstone_lamp) из светящегося камня + 40 редстоуна
+    event.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemical_input: {
+            amount: 40,
+            tag: 'mekanism:redstone'
+        },
+        item_input: {
+            count: 1,
+            item: 'minecraft:glowstone'
+        },
+        output: {
+            count: 1,
+            id: 'minecraft:redstone_lamp'
+        },
+        per_tick_usage: false
+    }).id('steampunk:infusing/redstone_lamp_from_glowstone');
+
 });
