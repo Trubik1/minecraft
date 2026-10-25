@@ -398,7 +398,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "78BD3D4FBA42D3DC"
-			title: "Овцепух (Sheepuff)"
 			rewards: [
 				{
 					count: 3
@@ -417,11 +416,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&fГде найти:&r Равнины Эфира."
-				""
-				"&eОсобенности:&r Пушистая летающая овечка. Стрижка ножницами дает шерсть Эфира. При падении раздувается как парашют."
-			]
 			tasks: [{
 				entity: "aether:sheepuff"
 				id: "127807B986E056CB"
@@ -434,7 +428,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "6149E5F1F9CF8DC6"
-			title: "Фиг (Phyg)"
 			rewards: [
 				{
 					count: 3
@@ -453,11 +446,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&dГде найти:&r Парящие луга Эфира."
-				""
-				"&eОсобенности:&r Свинья с крылышками. Наденьте седло, чтобы планировать по небесам!"
-			]
 			tasks: [{
 				entity: "aether:phyg"
 				id: "777B93ED9147671F"
@@ -470,7 +458,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "7AD4ED72AC31D912"
-			title: "Аэрокит (Aerwhale)"
 			rewards: [
 				{
 					id: "060A9353E91893A3"
@@ -495,11 +482,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&bГде найти:&r Высоко в открытом небе Эфира между облаками."
-				""
-				"&eПоведение:&r Мирный гигант небес. Медленно парит в воздухе, выпуская облачные потоки дыхания."
-			]
 			tasks: [{
 				entity: "aether:aerwhale"
 				id: "4ABC91CA48DF7B3E"
@@ -512,7 +494,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "78AAFE5AF04A13AC"
-			title: "Аэрозайчик (Aerbunny)"
 			rewards: [
 				{
 					count: 3
@@ -531,11 +512,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&fГде найти:&r Зеленые поляны Эфира."
-				""
-				"&aПолезная механика:&r Кликните ПКМ по зайчику с пустой рукой, чтобы &6посадить его себе на голову&r! Зайчик дарует эффект плавного падения без урона."
-			]
 			tasks: [{
 				entity: "aether:aerbunny"
 				id: "4294B46D6E9C661C"
@@ -548,7 +524,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "36D9FB96D3557266"
-			title: "Птица Моа (Moa)"
 			rewards: [
 				{
 					id: "29D1292F1B59E5DA"
@@ -566,13 +541,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&3Где найти:&r Гнезда птиц Моа на высоких кронах деревьев."
-				""
-				"&eПриручение:&r Взрослые дикие Моа не приручаются! Найдите яйцо в гнезде, высидите в инкубаторе и накормите вылупившегося птенца &dЛепестками Эхора&r."
-				""
-				"&aПолеты:&r Прирученный Моа — верный маунт, способный совершать до 3–4 прыжков в воздухе!"
-			]
 			tasks: [{
 				entity: "aether:moa"
 				id: "16024FFF047A0066"
@@ -585,7 +553,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "5BB5EE00BB4F9691"
-			title: "Летающая корова (Flying Cow)"
 			rewards: [
 				{
 					count: 3
@@ -604,11 +571,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&7Где найти:&r Острова Эфира."
-				""
-				"&eОсобенности:&r Корова с крыльями. Дает молоко в деревянное ведро Скайрута."
-			]
 			tasks: [{
 				entity: "aether:flying_cow"
 				id: "50766A6CAB691423"
@@ -621,7 +583,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "102DD961706E861A"
-			title: "Эхор-растение (Aechor Plant)"
 			rewards: [
 				{
 					id: "25E71482008984A6"
@@ -639,15 +600,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&2Где найти:&r Прячется в траве Эфира среди деревьев Скайрут."
-				""
-				"&eПоведение:&r Неподвижный хищный цветок. Заметив игрока, раскрывает ядовитые лепестки и стреляет отравляющими иглами."
-				""
-				"&cТактика:&r Атакуйте издалека из лука или подбегайте под прикрытием щита."
-				""
-				"&aДроп:&r &dЛепестки Эхора (Aechor Petal)&r — ключевой ресурс для приручения птенцов Моа!"
-			]
 			tasks: [{
 				entity: "aether:aechor_plant"
 				id: "39A7F4843B001E04"
@@ -660,7 +612,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "2E05F4FB1A1FDE2D"
-			title: "Синий сладень (Blue Swet)"
 			rewards: [
 				{
 					count: 3
@@ -679,15 +630,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&bГде найти:&r Распространенный обитатель травянистых лугов Эфира."
-				""
-				"&eПоведение:&r Желеобразный моб, затягивающий неосторожных путников внутрь и наносящий урон от удушья."
-				""
-				"&cТактика:&r Держите дистанцию, отбивайтесь оружием с отбрасыванием или луком."
-				""
-				"&aДроп:&r Шарики сладней (Swet Ball) — эфирный аналог сгустков слизи."
-			]
 			tasks: [{
 				entity: "aether:blue_swet"
 				id: "2BCE121B1C2E63C2"
@@ -700,7 +642,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "326452FFA7F5C6CA"
-			title: "Золотой сладень (Golden Swet)"
 			rewards: [
 				{
 					count: 9
@@ -719,15 +660,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&6Где найти:&r Обитает на парящих равнинах Эфира, особенно возле рощ Золотых дубов."
-				""
-				"&eПоведение:&r Прыгает в сторону игрока. При касании поглощает вас внутрь своего золотого тела и взмывает высоко в воздух, нанося урон при падении."
-				""
-				"&cТактика:&r Не сражайтесь на краю островов — сладень легко сбросит вас в бездну! Расстреливайте из лука или наносите удары мечом с дистанции."
-				""
-				"&aДроп:&r Золотые шарики сладней (Golden Swet Balls)."
-			]
 			tasks: [{
 				entity: "aether:golden_swet"
 				id: "4B600C7426A6E879"
@@ -740,7 +672,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "39E1211455224291"
-			title: "Зефир (Zephyr)"
 			rewards: [
 				{
 					count: 3
@@ -759,15 +690,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&fГде найти:&r Парит в открытом воздухе вокруг островов Эфира (аналог адского Гаста)."
-				""
-				"&eПоведение:&r Летающее грозовое облако. Стреляет ветряными снарядами, которые отбрасывают игрока на десятки блоков."
-				""
-				"&cТактика:&r Стреляйте из лука. Летящий шар Зефира можно &6отбить ударом меча обратно в него&r!"
-				""
-				"&aДроп:&r Зефирный снежок (Zephyr Snowball)."
-			]
 			tasks: [{
 				entity: "aether:zephyr"
 				id: "42405AC709BBD60E"
@@ -805,7 +727,6 @@
 		{
 			dependencies: ["4BF7F82F1C8680B9"]
 			id: "24E124F12CFF2A50"
-			title: "Ползун (Slider) — Босс Бронзового Данжа"
 			rewards: [
 				{
 					id: "510FE969F9005DDD"
@@ -842,15 +763,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&6Где найти:&r Глубины Бронзового Данжа (лабиринт внутри каменных островов)."
-				""
-				"&cУЯЗВИМОСТЬ:&r &4ПОЛНОСТЬЮ НЕУЯЗВИМ К МЕЧАМ, ЛУКАМ И МАГИИ!&r Уязвим &eТОЛЬКО К КИРКАМ&r!"
-				""
-				"&eТактика:&r Возьмите лучшую кирку (Занитовую или Незеритовую). Уклоняйтесь от резких рывков босса по полу и бейте киркой по боковым граням куба."
-				""
-				"&aНаграда:&r Бронзовый ключ от сундука сокровищницы."
-			]
 			tasks: [{
 				entity: "aether:slider"
 				id: "3FFA952296D04750"
@@ -888,7 +800,6 @@
 		{
 			dependencies: ["52007C01B52F7295"]
 			id: "0D2F07FC0F804223"
-			title: "Королева Валькирий — Босс Серебряного Данжа"
 			rewards: [
 				{
 					id: "3767B08F0AB63105"
@@ -925,15 +836,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&fГде найти:&r Тронный зал Серебряного Данжа (парящий античный дворец)."
-				""
-				"&eПоведение:&r Сначала победите 10 рядовых валькирий в залах храма, чтобы заслужить их медали. Предъявите медали Королеве, чтобы начать бой."
-				""
-				"&cТактика:&r Парирует удары, создает телепорты и воздушные воронки. Бейте сразу после ее приземления и держите щит наготове."
-				""
-				"&aНаграда:&r Серебряный ключ и оружие Валькирий."
-			]
 			tasks: [{
 				entity: "aether:valkyrie_queen"
 				id: "513822189B4BE046"
@@ -1143,7 +1045,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "4E847B0288265DA3"
-			title: "Василиск (Cockatrice)"
 			rewards: [
 				{
 					count: 3
@@ -1162,15 +1063,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&8Где найти:&r Спавнится ночью или в темных расселинах под парящими островами."
-				""
-				"&eПоведение:&r Агрессивная птица-рептилия, плюющаяся ядовитыми дротиками, накладывающими медлительность и сильное отравление."
-				""
-				"&cТактика:&r &6Щит полностью блокирует его иглы!&r Защищайтесь щитом и бейте стрелами или мечом."
-				""
-				"&aДроп:&r Перья василиска (для ядовитых стрел)."
-			]
 			tasks: [{
 				entity: "aether:cockatrice"
 				id: "6DA8601AA69BD9F8"
@@ -1208,7 +1100,6 @@
 		{
 			dependencies: ["5A5D4DFE4175FB42"]
 			id: "08E4892F96828EC4"
-			title: "Дух Солнца — Босс Золотого Данжа"
 			rewards: [
 				{
 					id: "2C3966BD1F4DB0EA"
@@ -1245,15 +1136,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&eГде найти:&r Вершина Золотого Данжа (остров с гигантской золотой сферой солнца)."
-				""
-				"&cУЯЗВИМОСТЬ:&r Неуязвим к прямому урону оружием!"
-				""
-				"&eТактика:&r Босс атакует волнами огня и запускает белые ледяные шары. &6Отбивайте ледяные шары ударом меча прямо в босса!&r После серии попаданий его огненная броня растает."
-				""
-				"&aНаграда:&r Золотой ключ, Солнечный Алтарь и доспехи Феникса."
-			]
 			tasks: [{
 				entity: "aether:sun_spirit"
 				id: "1186F0B47FE4698A"
@@ -1266,7 +1148,6 @@
 		{
 			dependencies: ["4BF7F82F1C8680B9"]
 			id: "29E6EFC8C19912BD"
-			title: "Часовой (Sentry)"
 			rewards: [{
 				count: 10
 				id: "48D64D8F4AA35563"
@@ -1278,13 +1159,6 @@
 			}]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&7Где найти:&r Коридоры и ловушки Бронзового Данжа."
-				""
-				"&eПоведение:&r Прыгучий круглый охранный страж. При приближении к игроку быстро раздувается и взрывается."
-				""
-				"&cТактика:&r Стреляйте издалека или атакуйте оружием с длинным радиусом."
-			]
 			tasks: [{
 				entity: "aether:sentry"
 				id: "5924C0E60C124879"
@@ -1297,7 +1171,6 @@
 		{
 			dependencies: ["5825892699A8DCB7"]
 			id: "57DD886985DBFD97"
-			title: "Мимик (Mimic)"
 			rewards: [
 				{
 					id: "1A5A33B92D631402"
@@ -1315,13 +1188,6 @@
 			]
 			shape: "circle"
 			size: 1.5d
-						description: [
-				"&6Где найти:&r В комнатах Бронзовых данжей под видом сундука с сокровищами."
-				""
-				"&eПоведение:&r При попытке открыть или подойти распахивает зубастую пасть и бросается в атаку."
-				""
-				"&cТактика:&r Проверяйте сундуки в данжах ударом оружия на безопасном расстоянии!"
-			]
 			tasks: [{
 				entity: "aether:mimic"
 				id: "710F379D428111A0"
@@ -1519,18 +1385,12 @@
 				id: "aether:valkyrie_chestplate"
 			}
 			id: "75C5BFAEADEB486E"
-			title: "Доспехи Валькирий"
 			optional: true
 			rewards: [{
 				id: "06383E85BFCB2527"
 				type: "xp_levels"
 				xp_levels: 1
 			}]
-						description: [
-				"Комплект экипировки Эфира: Доспехи Валькирий."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "7F141E86B806CFF4"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:valkyrie_helmet)item(aether:valkyrie_chestplate)item(aether:valkyrie_leggings)item(aether:valkyrie_boots)item(aether:valkyrie_gloves))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -1775,18 +1635,12 @@
 				id: "aether:phoenix_chestplate"
 			}
 			id: "7A4B51313FB134EA"
-			title: "Доспехи Феникса"
 			optional: true
 			rewards: [{
 				id: "14F9FE47813F5401"
 				type: "xp_levels"
 				xp_levels: 1
 			}]
-						description: [
-				"Комплект экипировки Эфира: Доспехи Феникса."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "3644541F6AAB5206"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:phoenix_helmet)item(aether:phoenix_chestplate)item(aether:phoenix_leggings)item(aether:phoenix_boots)item(aether:phoenix_gloves))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -1801,18 +1655,12 @@
 				id: "aether:obsidian_chestplate"
 			}
 			id: "362F529D5E7C37A4"
-			title: "Обсидиановые Доспехи Эфира"
 			optional: true
 			rewards: [{
 				id: "7EA0B922E326E00A"
 				type: "xp_levels"
 				xp_levels: 1
 			}]
-						description: [
-				"Комплект экипировки Эфира: Обсидиановые Доспехи Эфира."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "1597F6606C34FDB5"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:obsidian_helmet)item(aether:obsidian_chestplate)item(aether:obsidian_leggings)item(aether:obsidian_boots)item(aether:obsidian_gloves))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -1898,7 +1746,6 @@
 				id: "aether:skyroot_sword"
 			}
 			id: "63D4621C06BA747C"
-			title: "Оружие из древесины Скайрут"
 			rewards: [{
 				count: 4
 				id: "3F3465EAED8E9E43"
@@ -1909,11 +1756,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Оружие из древесины Скайрут."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "48F116CCB864F7C2"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:skyroot_sword)item(aether:skyroot_axe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -1928,7 +1770,6 @@
 				id: "aether:skyroot_pickaxe"
 			}
 			id: "4394AEF0823FB4D2"
-			title: "Инструменты из Скайрута"
 			rewards: [{
 				count: 4
 				id: "659AFA2960C5993D"
@@ -1939,11 +1780,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Инструменты из Скайрута."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "57F02A55B8D314FC"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:skyroot_shovel)item(aether:skyroot_pickaxe)item(aether:skyroot_hoe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -1958,7 +1794,6 @@
 				id: "aether:skyroot_bucket"
 			}
 			id: "769B23E692CBA16B"
-			title: "Ведро и Лодка Скайрута"
 			rewards: [{
 				count: 3
 				id: "6A1CCE6E34BDAB98"
@@ -1969,11 +1804,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Ведро и Лодка Скайрута."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "797455345151134A"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:skyroot_bucket)item(aether:skyroot_boat))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -1988,7 +1818,6 @@
 				id: "aether:holystone_sword"
 			}
 			id: "04833C4BB0CCCBB7"
-			title: "Оружие из Священного камня"
 			rewards: [{
 				count: 5
 				id: "1E0E1E49F26208E8"
@@ -1999,11 +1828,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Оружие из Священного камня."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "6D476FECBF390199"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:holystone_sword)item(aether:holystone_axe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -2018,7 +1842,6 @@
 				id: "aether:holystone_pickaxe"
 			}
 			id: "4AED9EF9E0F68483"
-			title: "Инструменты из Холистоуна"
 			rewards: [{
 				count: 5
 				id: "1011957BC14019E4"
@@ -2029,11 +1852,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Инструменты из Холистоуна."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "6002F0C07BF24B73"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:holystone_shovel)item(aether:holystone_pickaxe)item(aether:holystone_hoe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -2048,7 +1866,6 @@
 				id: "aether:zanite_sword"
 			}
 			id: "3781DB4807A89375"
-			title: "Оружие из Занита"
 			rewards: [{
 				count: 2
 				id: "333CDE20A0EE3BC0"
@@ -2059,11 +1876,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Оружие из Занита."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "3614AAEC0B41CFF6"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:zanite_sword)item(aether:zanite_axe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -2078,7 +1890,6 @@
 				id: "aether:zanite_pickaxe"
 			}
 			id: "714960DF26EFFA53"
-			title: "Инструменты из Занита"
 			rewards: [{
 				count: 2
 				id: "7B01F155F18CF733"
@@ -2089,11 +1900,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Инструменты из Занита."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "37F2D13F6E593C1E"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:zanite_shovel)item(aether:zanite_hoe)item(aether:zanite_pickaxe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -2108,7 +1914,6 @@
 				id: "aether:zanite_chestplate"
 			}
 			id: "58006FC06C34F6CA"
-			title: "Броня из Занита"
 			rewards: [{
 				count: 2
 				id: "588BEB71CB8B4116"
@@ -2119,11 +1924,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Броня из Занита."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "1324F3940041C73D"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:zanite_helmet)item(aether:zanite_chestplate)item(aether:zanite_leggings)item(aether:zanite_boots)item(aether:zanite_gloves))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -2158,7 +1958,6 @@
 				id: "aether:gravitite_sword"
 			}
 			id: "04B92FAB179A74C9"
-			title: "Оружие из Гравитита"
 			rewards: [{
 				count: 2
 				id: "39EC61BF0C8CB2B0"
@@ -2169,11 +1968,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Оружие из Гравитита."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "3D41832D0CA41A6C"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:gravitite_sword)item(aether:gravitite_axe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -2188,7 +1982,6 @@
 				id: "aether:gravitite_pickaxe"
 			}
 			id: "1B7B377CB757867E"
-			title: "Инструменты из Гравитита"
 			rewards: [{
 				count: 2
 				id: "19A20F9F04994CE2"
@@ -2199,11 +1992,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Инструменты из Гравитита."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "079FEE70B6D6944F"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:gravitite_shovel)item(aether:gravitite_pickaxe)item(aether:gravitite_hoe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -2218,7 +2006,6 @@
 				id: "aether:gravitite_chestplate"
 			}
 			id: "20D957B3C350CDE2"
-			title: "Броня из Гравитита"
 			rewards: [{
 				count: 2
 				id: "5E8C41E1D0304540"
@@ -2229,11 +2016,6 @@
 				type: "item"
 			}]
 			size: 1.25d
-						description: [
-				"Комплект экипировки Эфира: Броня из Гравитита."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "2BDE62E061949965"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:gravitite_helmet)item(aether:gravitite_chestplate)item(aether:gravitite_leggings)item(aether:gravitite_boots)item(aether:gravitite_gloves))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -2266,18 +2048,12 @@
 				id: "aether:valkyrie_pickaxe"
 			}
 			id: "4974F265003DAEC9"
-			title: "Инструменты Валькирий"
 			optional: true
 			rewards: [{
 				id: "5808C68B1F4B22BE"
 				type: "xp_levels"
 				xp_levels: 1
 			}]
-						description: [
-				"Комплект экипировки Эфира: Инструменты Валькирий."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "472C79498DAC538E"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:valkyrie_shovel)item(aether:valkyrie_pickaxe)item(aether:valkyrie_axe)item(aether:valkyrie_hoe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
@@ -2292,18 +2068,12 @@
 				id: "aether:neptune_chestplate"
 			}
 			id: "5F44BF9A1DAE8B99"
-			title: "Доспехи Нептуна"
 			optional: true
 			rewards: [{
 				id: "29C332410F07707E"
 				type: "xp_levels"
 				xp_levels: 1
 			}]
-						description: [
-				"Комплект экипировки Эфира: Доспехи Нептуна."
-				""
-				"Для выполнения квеста достаточно скрафтить любой предмет из этой категории!"
-			]
 			tasks: [{
 				id: "67FAA549302701D6"
 				item: { components: { "ftbfiltersystem:filter": "or(item(aether:neptune_helmet)item(aether:neptune_chestplate)item(aether:neptune_leggings)item(aether:neptune_boots)item(aether:neptune_gloves))" }, count: 1, id: "ftbfiltersystem:smart_filter" }

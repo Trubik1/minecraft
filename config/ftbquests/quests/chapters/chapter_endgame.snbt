@@ -17,7 +17,6 @@
 				id: "minecraft:nether_star"
 			}
 			id: "5A8C11099E050001"
-			title: "Врата Абсолютного Могущества"
 			rewards: [
 				{
 					count: 4
@@ -45,9 +44,6 @@
 			]
 			shape: "gear"
 			size: 1.5d
-						description: [
-				"Вы покорили дирижабли, обуздали магию Ars Nouveau, построили заводы Mekanism и повергли древних боссов. Пришло время создать реликвии богов — Креативные предметы!"
-			]
 			tasks: [{
 				id: "0F575AFBB3B0DD31"
 				item: { count: 1, id: "minecraft:nether_star" }
@@ -62,7 +58,6 @@
 				id: "create:creative_motor"
 			}
 			id: "5A8C11099E050002"
-			title: "Креативный Мотор Create"
 			rewards: [
 				{
 					count: 4
@@ -81,9 +76,6 @@
 			]
 			shape: "challenge"
 			size: 1.3d
-						description: [
-				"Бесконечный источник вращения с любой скоростью RPM и стресс-емкостью SU. Больше никаких паровых котлов и ветряков!"
-			]
 			tasks: [{
 				id: "779D151EF6217356"
 				item: { count: 1, id: "create:creative_motor" }
@@ -98,7 +90,6 @@
 				id: "create:creative_blaze_cake"
 			}
 			id: "5A8C11099E050003"
-			title: "Креативный Торт Сполоха"
 			rewards: [
 				{
 					count: 32
@@ -115,9 +106,6 @@
 					xp_levels: 80
 				}
 			]
-						description: [
-				"Вечное сверхгорячее пламя для любых механизмов Create. Никогда не тухнет!"
-			]
 			tasks: [{
 				id: "4EF38FE7AA6E1C06"
 				item: { count: 1, id: "create:creative_blaze_cake" }
@@ -132,7 +120,6 @@
 				id: "mekanism:creative_energy_cube"
 			}
 			id: "5A8C11099E050004"
-			title: "Креативный Энергетический Куб"
 			rewards: [
 				{
 					count: 4
@@ -151,9 +138,6 @@
 			]
 			shape: "challenge"
 			size: 1.3d
-						description: [
-				"Источник бесконечной FE энергии максимальной мощности. Питает гигантские индукционные матрицы и реакторы."
-			]
 			tasks: [{
 				id: "17F2753459807DB4"
 				item: { count: 1, id: "mekanism:creative_energy_cube" }
@@ -168,7 +152,6 @@
 				id: "mekanism:creative_fluid_tank"
 			}
 			id: "5A8C11099E050005"
-			title: "Креативный Резервуар Жидкостей"
 			rewards: [
 				{
 					count: 8
@@ -184,9 +167,6 @@
 					type: "xp_levels"
 					xp_levels: 80
 				}
-			]
-						description: [
-				"Бесконечный объем любой залитой жидкости или газа. Залейте тяжелую воду, пар или лаву!"
 			]
 			tasks: [{
 				id: "5206B092EA66389D"
@@ -205,7 +185,6 @@
 				id: "refinedstorage:creative_storage_disk"
 			}
 			id: "5A8C11099E050006"
-			title: "Бесконечный Диск Данных RS"
 			rewards: [
 				{
 					id: "67184A51DF78EEF3"
@@ -223,9 +202,6 @@
 			]
 			shape: "challenge"
 			size: 1.3d
-						description: [
-				"Креативный диск для Refined Storage. Бесконечная емкость: вмещает триллионы предметов и ресурсов!"
-			]
 			tasks: [{
 				id: "3036005E26774E39"
 				item: { count: 1, id: "refinedstorage:creative_storage_disk" }
@@ -240,7 +216,6 @@
 				id: "refinedstorage:creative_controller"
 			}
 			id: "5A8C11099E050008"
-			title: "Креативный Контроллер RS"
 			rewards: [
 				{
 					count: 8
@@ -257,9 +232,6 @@
 					xp_levels: 100
 				}
 			]
-						description: [
-				"Бесконечное питание цифровой МЭ-сети без генераторов энергии."
-			]
 			tasks: [{
 				id: "55099418B99E7558"
 				item: { count: 1, id: "refinedstorage:creative_controller" }
@@ -274,7 +246,6 @@
 				id: "refinedstorage:network_card"
 			}
 			id: "5A8C11099E050009"
-			title: "Око Сингулярности (Quantum Bridge)"
 			rewards: [
 				{
 					count: 16
@@ -290,9 +261,6 @@
 					type: "xp_levels"
 					xp_levels: 80
 				}
-			]
-						description: [
-				"Мгновенная беспроводная связь между любыми измерениями через квантовые кольца."
 			]
 			tasks: [{
 				id: "1C047410C5A068D2"
@@ -311,7 +279,6 @@
 				id: "minecraft:dragon_egg"
 			}
 			id: "5A8C11099E050007"
-			title: "Повелитель Измерений (God of Steampunk)"
 			rewards: [
 				{
 					count: 32
@@ -339,9 +306,6 @@
 			]
 			shape: "heart"
 			size: 2.0d
-						description: [
-				"Вы создали все величайшие реликвии и стали абсолютным богом вселенной Steampunk  Swords! Слава великому инженеру и архимагу!"
-			]
 			tasks: [
 				{
 					id: "48ED19B6DAF43400"
@@ -368,7 +332,6 @@
 				id: "create:brass_block"
 			}
 			id: "5A8C11099E050010"
-			title: "Повелитель Металлов"
 			rewards: [
 				{
 					count: 16
@@ -384,9 +347,6 @@
 					type: "xp_levels"
 					xp_levels: 50
 				}
-			]
-						description: [
-				"Соберите блоки всех металлов вселенной: Медь, Цинк, Латунь, Олово, Свинец, Уран, Осмий, Золото, Железо и Незерит!"
 			]
 			tasks: [
 				{
@@ -449,7 +409,6 @@
 				id: "ars_nouveau:archmage_spell_book"
 			}
 			id: "5A8C11099E050011"
-			title: "Апофеоз Магии: Архимаг"
 			rewards: [
 				{
 					count: 8
@@ -466,9 +425,6 @@
 					xp_levels: 80
 				}
 			]
-						description: [
-				"Полный гримуар со всеми глифами и высшими заклинаниями Ars Nouveau."
-			]
 			tasks: [{
 				id: "511DB6F05958807A"
 				item: { count: 1, id: "ars_nouveau:archmage_spell_book" }
@@ -483,7 +439,6 @@
 				id: "mekanism:induction_casing"
 			}
 			id: "5A8C11099E050012"
-			title: "Квантовый Индукционный Монолит"
 			rewards: [
 				{
 					count: 2
@@ -500,9 +455,6 @@
 					xp_levels: 80
 				}
 			]
-						description: [
-				"Индукционная матрица Mekanism с емкостью в сотни миллиардов джоулей."
-			]
 			tasks: [{
 				id: "5DC8BD5A62B9C832"
 				item: { count: 1, id: "mekanism:induction_casing" }
@@ -517,7 +469,6 @@
 				id: "minecraft:nether_star"
 			}
 			id: "5A8C11099E050013"
-			title: "Венец Вечности (Crown of Eternity)"
 			rewards: [
 				{
 					count: 64
@@ -545,9 +496,6 @@
 			]
 			shape: "diamond"
 			size: 2.5d
-						description: [
-				"Абсолютное завершение сборки Steampunk  Swords. Вы взошли на трон повелителя вселенной!"
-			]
 			tasks: [{
 				id: "231C8EE556B0B4CA"
 				type: "checkmark"

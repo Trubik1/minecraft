@@ -4,7 +4,7 @@
 	filename: "chapter_advanced_tech"
 	group: "0015B593B4889A40"
 	icon: {
-		id: "powah:dielectric_casing"
+		id: "industrialforegoing:plastic"
 	}
 	id: "5A8C11099EFA0004"
 	images: [ ]
@@ -13,6 +13,11 @@
 	quest_links: [ ]
 	quests: [
 		{
+			description: [
+				"Диэлектрическая паста — базовый изолирующий материал для продвинутой энергетики Powah.",
+				"",
+				"Используется для создания конденсаторов, корпусов механизмов и зарядных стержней."
+			]
 			icon: {
 				id: "powah:dielectric_paste"
 			}
@@ -28,53 +33,66 @@
 					type: "item"
 				}
 				{
-					id: "2E71F3B28199EEDC"
-					type: "xp_levels"
-					xp_levels: 5
+					id: "7B2B64E4D3E04001"
+					type: "xp"
+					xp: 50
 				}
 			]
 			shape: "gear"
-			size: 1.5d
+			size: 1.3d
 			tasks: [{
-				id: "402777741E5932CE"
+				id: "2E71F3B28199EEDC"
 				item: { count: 1, id: "powah:dielectric_paste" }
 				type: "item"
 			}]
+			title: "Диэлектрическая паста (Dielectric Paste)"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["5A8C11099E040001"]
+			description: [
+				"Основа для всех энергоустановок, генераторов и накопителей энергии Powah.",
+				"",
+				"§eСовет:§r Используя Промышленный пластик (Industrial Foregoing Plastic), вы получаете сразу 4 корпуса вместо 2!"
+			]
 			icon: {
 				id: "powah:dielectric_casing"
 			}
 			id: "5A8C11099E040002"
 			rewards: [
 				{
-					count: 4
+					count: 2
 					id: "1D6A6B5EA933AB27"
 					item: {
-						count: 4
+						count: 2
 						id: "powah:dielectric_casing"
 					}
 					type: "item"
 				}
 				{
-					id: "3E8DFBBF85964FE7"
-					type: "xp_levels"
-					xp_levels: 10
+					id: "7B2B64E4D3E04002"
+					type: "xp"
+					xp: 100
 				}
 			]
 			tasks: [{
-				id: "5DEB0C9327FC19A1"
+				id: "3E8DFBBF85964FE7"
 				item: { count: 1, id: "powah:dielectric_casing" }
 				type: "item"
 			}]
+			title: "Диэлектрический корпус (Dielectric Casing)"
 			x: 1.8d
 			y: -1.5d
 		}
 		{
 			dependencies: ["5A8C11099E040002"]
+			description: [
+				"Зарядный шар заряжает ресурсы с помощью энергии стержней (Energizing Rods).",
+				"",
+				"Установите шар, а вокруг него направьте от 1 до 6 зарядных стержней, подключенных к энергии.",
+				"В шаре создаются заряженная сталь, кристаллы Blazing, Niotic, Spirited, Nitro, а также §6Слиток Черного Железа§r!"
+			]
 			icon: {
 				id: "powah:energizing_orb"
 			}
@@ -90,60 +108,70 @@
 					type: "item"
 				}
 				{
-					id: "3D88BBDB2ACA8E5F"
-					type: "xp_levels"
-					xp_levels: 15
+					id: "7B2B64E4D3E04003"
+					type: "xp"
+					xp: 150
 				}
 			]
+			shape: "hexagon"
+			size: 1.2d
 			tasks: [{
-				id: "0297CD4399722308"
+				id: "3D88BBDB2ACA8E5F"
 				item: { count: 1, id: "powah:energizing_orb" }
 				type: "item"
 			}]
+			title: "Зарядный шар (Energizing Orb)"
 			x: 3.6d
 			y: -1.5d
 		}
 		{
 			dependencies: ["5A8C11099E040003"]
+			description: [
+				"Многоблочный ядерный реактор Powah. Для постройки требуется 36 блоков реактора (сетка 3x3x4).",
+				"",
+				"Работает на уранините (Uraninite), угле и воде/хладагенте (лед, сухой лед).",
+				"Крафт требует Простой корпус механизма (Industrial Foregoing Simple Machine Frame)!"
+			]
 			icon: {
 				id: "powah:reactor_starter"
 			}
 			id: "5A8C11099E040004"
 			rewards: [
 				{
-					count: 32
+					count: 16
 					id: "775096722D0986A5"
 					item: {
-						count: 32
+						count: 16
 						id: "powah:uraninite"
 					}
 					type: "item"
 				}
 				{
-					count: 8
+					count: 4
 					id: "62E09AC6D253244A"
 					item: {
-						count: 8
+						count: 4
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
 				}
-				{
-					id: "307DF1A8E582D2E9"
-					type: "xp_levels"
-					xp_levels: 30
-				}
 			]
 			tasks: [{
-				id: "598CEC1FFCB55E7C"
+				id: "307DF1A8E582D2E9"
 				item: { count: 1, id: "powah:reactor_starter" }
 				type: "item"
 			}]
+			title: "Ядерный реактор (Reactor Starter)"
 			x: 5.4d
 			y: -2.5d
 		}
 		{
 			dependencies: ["5A8C11099E040003"]
+			description: [
+				"Беспроводной передатчик энергии прямо в инвентарь игрока!",
+				"",
+				"Используйте Карту привязки (Binding Card), чтобы привязать передатчик к себе. Ваши броня, оружие и инструменты будут заряжаться где угодно!"
+			]
 			icon: {
 				id: "powah:player_transmitter_starter"
 			}
@@ -158,83 +186,244 @@
 					type: "item"
 				}
 				{
-					id: "04926867A59D76C6"
-					type: "xp_levels"
-					xp_levels: 25
+					id: "7B2B64E4D3E04004"
+					type: "xp"
+					xp: 100
 				}
 			]
 			tasks: [{
-				id: "76ED961BC09F9E75"
+				id: "04926867A59D76C6"
 				item: { count: 1, id: "powah:player_transmitter_starter" }
 				type: "item"
 			}]
+			title: "Передатчик энергии игроку (Player Transmitter)"
 			x: 5.4d
 			y: -0.8d
 		}
 		{
 			dependencies: ["5A8C11099E040004"]
+			description: [
+				"Максимальный тир реактора Powah — вырабатывает колоссальное количество FE/t!",
+				"",
+				"Требует нитро-кристаллы (Nitro Crystals), создаваемые в Зарядном шаре с Nether Star и Redstone."
+			]
 			icon: {
 				id: "powah:reactor_nitro"
 			}
 			id: "5A8C11099E040018"
 			rewards: [
 				{
-					count: 8
+					count: 4
 					id: "6AF6824DCF33E6FA"
 					item: {
-						count: 8
+						count: 4
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
 				}
 				{
-					id: "4E7E74CA75961178"
+					id: "7B2B64E4D3E04005"
 					type: "xp_levels"
-					xp_levels: 50
+					xp_levels: 30
 				}
 			]
-			shape: "challenge"
-			size: 1.3d
+			shape: "diamond"
+			size: 1.4d
 			tasks: [{
-				id: "5FB828D9DBBCFC27"
+				id: "4E7E74CA75961178"
 				item: { count: 1, id: "powah:reactor_nitro" }
 				type: "item"
 			}]
+			title: "Нитро-реактор (Reactor Nitro)"
 			x: 7.2d
 			y: -2.5d
 		}
 		{
+			dependencies: ["5A8C11099E040002"]
+			description: [
+				"Пассивный генератор энергии. Вырабатывает FE, если под ним находится горячий блок (лава, магма, пылающий кристалл), а сверху залита вода/лед."
+			]
+			icon: {
+				id: "powah:thermo_generator_starter"
+			}
+			id: "5A8C11099E040021"
+			rewards: [
+				{
+					id: "7B2B64E4D3E04006"
+					item: {
+						count: 1
+						id: "minecraft:lava_bucket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "3E79DFB0715D397C"
+				item: { count: 1, id: "powah:thermo_generator_starter" }
+				type: "item"
+			}]
+			title: "Термогенератор (Thermo Generator)"
+			x: 3.6d
+			y: -3.8d
+		}
+		{
+			dependencies: ["5A8C11099E040002"]
+			description: [
+				"Генерирует энергию при сжигании лавы и жидкого магматического топлива."
+			]
+			icon: {
+				id: "powah:magmator_starter"
+			}
+			id: "5A8C11099E040022"
+			rewards: [
+				{
+					count: 2
+					id: "7B2B64E4D3E04007"
+					item: {
+						count: 2
+						id: "powah:capacitor_basic"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "5CFBD1C2A3C1F4FA"
+				item: { count: 1, id: "powah:magmator_starter" }
+				type: "item"
+			}]
+			title: "Магмагенератор (Magmator)"
+			x: 3.6d
+			y: -2.5d
+		}
+		{
+			dependencies: ["5A8C11099E040002"]
+			description: [
+				"Вырабатывает экологичную энергию солнца в дневное время суток."
+			]
+			icon: {
+				id: "powah:solar_panel_starter"
+			}
+			id: "5A8C11099E040023"
+			rewards: [
+				{
+					count: 2
+					id: "4ACCF169BAFC3678"
+					item: {
+						count: 2
+						id: "powah:solar_panel_starter"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "72256382A5DA6E7E"
+				item: { count: 1, id: "powah:solar_panel_starter" }
+				type: "item"
+			}]
+			title: "Солнечная панель (Solar Panel Starter)"
+			x: 5.4d
+			y: -3.8d
+		}
+		{
+			dependencies: ["5A8C11099E040003"]
+			description: [
+				"Стационарный накопитель энергии. Может быть улучшен до Нитро-уровня."
+			]
+			icon: {
+				id: "powah:energy_cell_starter"
+			}
+			id: "5A8C11099E040024"
+			rewards: [
+				{
+					id: "555E5AC72EABAD3B"
+					item: {
+						count: 1
+						id: "powah:battery_starter"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "1D659879B8CBA122"
+				item: { count: 1, id: "powah:energy_cell_starter" }
+				type: "item"
+			}]
+			title: "Энергоячейка (Energy Cell)"
+			x: 7.2d
+			y: -1.2d
+		}
+		{
 			dependencies: ["5A8C11099E040001"]
+			description: [
+				"Основа мода PneumaticCraft: Repressurized.",
+				"",
+				"Сжигает горючее топливо для нагнетания давления сжатого воздуха в трубах."
+			]
 			icon: {
 				id: "pneumaticcraft:air_compressor"
 			}
 			id: "5A8C11099E040006"
 			rewards: [
 				{
-					count: 8
+					count: 4
 					id: "5B53EE177BD752FA"
 					item: {
-						count: 8
+						count: 4
 						id: "pneumaticcraft:advanced_pressure_tube"
 					}
 					type: "item"
 				}
 				{
-					id: "7B42633C03A4C9F9"
-					type: "xp_levels"
-					xp_levels: 10
+					id: "7B2B64E4D3E04008"
+					type: "xp"
+					xp: 100
 				}
 			]
 			tasks: [{
-				id: "64528D9C37D543F6"
+				id: "7B42633C03A4C9F9"
 				item: { count: 1, id: "pneumaticcraft:air_compressor" }
 				type: "item"
 			}]
+			title: "Воздушный компрессор (Air Compressor)"
 			x: 1.8d
 			y: 1.5d
 		}
 		{
 			dependencies: ["5A8C11099E040006"]
+			description: [
+				"Защищает ваши трубы от взрыва при превышении максимального давления (выше 5 или 20 бар)!"
+			]
+			icon: {
+				id: "pneumaticcraft:safety_tube_module"
+			}
+			id: "5A8C11099E040028"
+			rewards: [
+				{
+					count: 2
+					id: "2C2A3BA2C61CDB8E"
+					item: {
+						count: 2
+						id: "pneumaticcraft:advanced_pressure_tube"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7AEC533A1AEC4C6A"
+				item: { count: 1, id: "pneumaticcraft:safety_tube_module" }
+				type: "item"
+			}]
+			title: "Клапан сброса давления (Safety Tube Module)"
+			x: 3.6d
+			y: 0.2d
+		}
+		{
+			dependencies: ["5A8C11099E040006"]
+			description: [
+				"Многоблочная барокамера (3x3x3 с пустотой внутри).",
+				"",
+				"Под высоким давлением спрессовывает железо в сжатое железо (Compressed Iron) и трансформирует материалы."
+			]
 			icon: {
 				id: "pneumaticcraft:pressure_chamber_wall"
 			}
@@ -250,120 +439,228 @@
 					type: "item"
 				}
 				{
-					id: "766B01F46C494C1C"
-					type: "xp_levels"
-					xp_levels: 15
+					id: "7B2B64E4D3E04009"
+					type: "xp"
+					xp: 150
 				}
 			]
 			tasks: [{
-				id: "4837B0C091CCE0CA"
+				id: "766B01F46C494C1C"
 				item: { count: 1, id: "pneumaticcraft:pressure_chamber_wall" }
 				type: "item"
 			}]
+			title: "Стенка барокамеры (Pressure Chamber Wall)"
 			x: 3.6d
 			y: 1.5d
 		}
 		{
 			dependencies: ["5A8C11099E040007"]
+			description: [
+				"Экспонирует пустую печатную плату ультрафиолетовым светом перед травлением."
+			]
+			icon: {
+				id: "pneumaticcraft:uv_light_box"
+			}
+			id: "5A8C11099E040025"
+			rewards: [
+				{
+					id: "62252DC9EAC4CEF0"
+					item: {
+						count: 1
+						id: "pneumaticcraft:empty_pcb"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "51AD6B7E211B7167"
+				item: { count: 1, id: "pneumaticcraft:uv_light_box" }
+				type: "item"
+			}]
+			title: "УФ-лампа (UV Light Box)"
+			x: 5.4d
+			y: 0.2d
+		}
+		{
+			dependencies: ["5A8C11099E040025"]
+			description: [
+				"Травит экспонированную плату в кислоте для создания готовой печатной платы."
+			]
+			icon: {
+				id: "pneumaticcraft:etching_tank"
+			}
+			id: "5A8C11099E040026"
+			rewards: [
+				{
+					count: 4
+					id: "79C132EF8F1B8D9D"
+					item: {
+						count: 4
+						id: "pneumaticcraft:plastic"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "3DA26ED567CF3503"
+				item: { count: 1, id: "pneumaticcraft:etching_tank" }
+				type: "item"
+			}]
+			title: "Травильный резервуар (Etching Tank)"
+			x: 7.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E040007"]
+			description: [
+				"Сердце передовой микроэлектроники PneumaticCraft.",
+				"",
+				"Используется для дронов, продвинутых сенсоров и пневматического оружия."
+			]
 			icon: {
 				id: "pneumaticcraft:printed_circuit_board"
 			}
 			id: "5A8C11099E040008"
 			rewards: [
 				{
-					count: 16
+					count: 8
 					id: "768B8AF4B7F9D1B1"
 					item: {
-						count: 16
+						count: 8
 						id: "pneumaticcraft:plastic"
 					}
 					type: "item"
 				}
 				{
-					id: "1579B0C5B0F1D7FA"
-					type: "xp_levels"
-					xp_levels: 25
+					id: "7B2B64E4D3E04010"
+					type: "xp"
+					xp: 200
 				}
 			]
 			tasks: [{
-				id: "57ABE4AFAE595A41"
+				id: "1579B0C5B0F1D7FA"
 				item: { count: 1, id: "pneumaticcraft:printed_circuit_board" }
 				type: "item"
 			}]
+			title: "Печатная плата (Printed Circuit Board)"
 			x: 5.4d
 			y: 1.5d
 		}
 		{
 			dependencies: ["5A8C11099E040008"]
+			description: [
+				"Скорострельный пневматический миниган, уничтожающий врагов градом пуль под давлением воздуха!"
+			]
 			icon: {
 				id: "pneumaticcraft:minigun"
 			}
 			id: "5A8C11099E040009"
 			rewards: [
 				{
-					count: 64
+					count: 32
 					id: "2B6D8B2163A64388"
 					item: {
-						count: 64
+						count: 32
 						id: "minecraft:gunpowder"
 					}
 					type: "item"
 				}
 				{
-					count: 32
+					count: 16
 					id: "4D779B59A486A0DF"
 					item: {
-						count: 32
+						count: 16
 						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
-				{
-					id: "122A292762D2CE7F"
-					type: "xp_levels"
-					xp_levels: 30
-				}
 			]
 			tasks: [{
-				id: "731603FA86AB9054"
+				id: "122A292762D2CE7F"
 				item: { count: 1, id: "pneumaticcraft:minigun" }
 				type: "item"
 			}]
+			title: "Пневматический миниган (Minigun)"
 			x: 7.2d
 			y: 1.5d
 		}
 		{
 			dependencies: ["5A8C11099E040008"]
+			description: [
+				"Программируемый дрон, выполняющий логистические задачи, охрану базы и сбор предметов."
+			]
 			icon: {
 				id: "pneumaticcraft:drone"
 			}
 			id: "5A8C11099E040019"
 			rewards: [
 				{
-					count: 32
+					count: 4
 					id: "53969AF85EFD3668"
 					item: {
-						count: 32
+						count: 4
+						id: "pneumaticcraft:plastic"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "3F017A649074FC0A"
+				item: { count: 1, id: "pneumaticcraft:drone" }
+				type: "item"
+			}]
+			title: "Пневматический дрон (Drone)"
+			x: 7.2d
+			y: 0.8d
+		}
+		{
+			dependencies: ["5A8C11099E040009"]
+			description: [
+				"Броня на сжатом воздухе с реактивным полетом и встроенными апгрейдами."
+			]
+			icon: {
+				id: "pneumaticcraft:pneumatic_chestplate"
+			}
+			id: "5A8C11099E040027"
+			rewards: [
+				{
+					count: 4
+					id: "53DA840CCF8F2397"
+					item: {
+						count: 4
 						id: "pneumaticcraft:plastic"
 					}
 					type: "item"
 				}
 				{
-					id: "3F017A649074FC0A"
-					type: "xp_levels"
-					xp_levels: 30
+					id: "110181294D9B73E1"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
 				}
 			]
 			tasks: [{
-				id: "170C538C91571A62"
-				item: { count: 1, id: "pneumaticcraft:drone" }
+				id: "0FDE1DB70CA87191"
+				item: { count: 1, id: "pneumaticcraft:pneumatic_chestplate" }
 				type: "item"
 			}]
-			x: 7.2d
-			y: 0.2d
+			title: "Пневматический нагрудник (Pneumatic Chestplate)"
+			x: 9.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["5A8C11099E040001"]
+			description: [
+				"Первый механизм мода Industrial Foregoing!",
+				"",
+				"§6Как добывать латекс:§r",
+				"1. Поставьте сборщик лицевой стороной к любому стволу дерева (бревну).",
+				"2. Механизм не требует энергии — он медленно выкачивает жидкий латекс (Latex) из бревна.",
+				"3. Когда бревно разрушится, замените его новым (можно автоматизировать через Create Deployer).",
+				"4. Передайте латекс трубами в Установку обработки латекса (Latex Processing Unit)."
+			]
 			icon: {
 				id: "industrialforegoing:fluid_extractor"
 			}
@@ -381,19 +678,30 @@
 				{
 					id: "2620A20470711A85"
 					type: "xp_levels"
-					xp_levels: 10
+					xp_levels: 5
 				}
 			]
+			shape: "gear"
+			size: 1.3d
 			tasks: [{
 				id: "68B52B5026E45E23"
 				item: { count: 1, id: "industrialforegoing:fluid_extractor" }
 				type: "item"
 			}]
+			title: "Сборщик латекса (Fluid Extractor)"
 			x: 1.8d
-			y: 3.2d
+			y: 3.5d
 		}
 		{
 			dependencies: ["5A8C11099E040010"]
+			description: [
+				"Преобразует жидкий латекс и воду в кусочки сухой резины (Tiny Dry Rubber).",
+				"",
+				"§6Инструкция:§r",
+				"1. Подключите электроэнергию (FE).",
+				"2. Подайте воду и жидкий латекс.",
+				"3. На выходе получаются кусочки резины. 9 кусочков объединяются в слиток сухой резины (Dry Rubber)!"
+			]
 			icon: {
 				id: "industrialforegoing:latex_processing_unit"
 			}
@@ -411,26 +719,291 @@
 				{
 					id: "7435479616CACE90"
 					type: "xp_levels"
-					xp_levels: 15
+					xp_levels: 10
+				}
+			]
+			tasks: [{
+				id: "58200A00081FFA1A"
+				item: { count: 1, id: "industrialforegoing:latex_processing_unit" }
+				type: "item"
+			}]
+			title: "Обработка латекса (Latex Processing Unit)"
+			x: 3.6d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5A8C11099E040011"]
+			description: [
+				"Кусочки резины собираются в слиток сухой резины (Dry Rubber).",
+				"",
+				"Переплавьте сухую резину в любой печи — и вы получите заветный §bПромышленный пластик (Plastic)§r!"
+			]
+			icon: {
+				id: "industrialforegoing:dryrubber"
+			}
+			id: "5A8C11099E040040"
+			rewards: [
+				{
+					count: 8
+					id: "7B2B64E4D3E04011"
+					item: {
+						count: 8
+						id: "industrialforegoing:dryrubber"
+					}
+					type: "item"
+				}
+				{
+					id: "7B2B64E4D3E04012"
+					type: "xp"
+					xp: 100
 				}
 			]
 			tasks: [
 				{
-					id: "58200A00081FFA1A"
-					item: { count: 1, id: "industrialforegoing:latex_processing_unit" }
+					id: "7B2B64E4D3E04013"
+					item: { count: 1, id: "industrialforegoing:tinydryrubber" }
 					type: "item"
 				}
 				{
-					id: "4D7F8864FADB3485"
-					item: { count: 1, id: "industrialforegoing:plastic" }
+					id: "7B2B64E4D3E04014"
+					item: { count: 1, id: "industrialforegoing:dryrubber" }
 					type: "item"
 				}
 			]
-			x: 3.6d
-			y: 3.2d
+			title: "Сухая резина (Dry Rubber)"
+			x: 5.4d
+			y: 3.5d
 		}
 		{
-			dependencies: ["5A8C11099E040011"]
+			dependencies: ["5A8C11099E040040"]
+			description: [
+				"Промышленный пластик — ключевой конструкционный материал технологической революции!",
+				"",
+				"§6Где необходим пластик:§r",
+				"• Корпуса механизмов Industrial Foregoing (Pity, Simple, Advanced).",
+				"• Стальной корпус Mekanism (Mekanism Steel Casing теперь требует пластик!).",
+				"• Улучшенный крафт диэлектрического корпуса Powah (дает сразу 4 корпуса).",
+				"• Пневматические печатные платы и логистические трубы."
+			]
+			icon: {
+				id: "industrialforegoing:plastic"
+			}
+			id: "5A8C11099E040041"
+			rewards: [
+				{
+					count: 16
+					id: "7B2B64E4D3E04015"
+					item: {
+						count: 16
+						id: "industrialforegoing:plastic"
+					}
+					type: "item"
+				}
+				{
+					id: "7B2B64E4D3E04016"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "gear"
+			size: 1.4d
+			tasks: [{
+				id: "4D7F8864FADB3485"
+				item: { count: 1, id: "industrialforegoing:plastic" }
+				type: "item"
+			}]
+			title: "Промышленный пластик (Plastic)"
+			x: 7.2d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5A8C11099E040041"]
+			description: [
+				"Первая ступень корпусов Industrial Foregoing.",
+				"",
+				"Крафтится в обычном верстаке из пластика, железа и дерева. Используется для базовых машин и для Камеры растворения!"
+			]
+			icon: {
+				id: "industrialforegoing:machine_frame_pity"
+			}
+			id: "5A8C11099E040042"
+			rewards: [
+				{
+					count: 2
+					id: "7B2B64E4D3E04017"
+					item: {
+						count: 2
+						id: "industrialforegoing:machine_frame_pity"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7B2B64E4D3E04018"
+				item: { count: 1, id: "industrialforegoing:machine_frame_pity" }
+				type: "item"
+			}]
+			title: "Жалкий корпус (Machine Frame: Pity)"
+			x: 9.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5A8C11099E040042"]
+			description: [
+				"Камера растворения — главный химический реактор Industrial Foregoing!",
+				"",
+				"Смешивает жидкости (латекс, розовую слизь, эфир) с предметами для синтеза Простых, Продвинутых и Высших корпусов механизмов."
+			]
+			icon: {
+				id: "industrialforegoing:dissolution_chamber"
+			}
+			id: "5A8C11099E040043"
+			rewards: [
+				{
+					count: 4
+					id: "7B2B64E4D3E04019"
+					item: {
+						count: 4
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "7B2B64E4D3E04020"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [{
+				id: "7B2B64E4D3E04021"
+				item: { count: 1, id: "industrialforegoing:dissolution_chamber" }
+				type: "item"
+			}]
+			title: "Камера растворения (Dissolution Chamber)"
+			x: 10.8d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5A8C11099E040043"]
+			description: [
+				"Вторая ступень корпусов механизмов.",
+				"",
+				"Создается в Камере растворения из Pity Frame, жидкого латекса и золота.",
+				"§eУчаствует в крафте Стартового Реактора Powah!§r"
+			]
+			icon: {
+				id: "industrialforegoing:machine_frame_simple"
+			}
+			id: "5A8C11099E040044"
+			rewards: [
+				{
+					id: "7B2B64E4D3E04022"
+					item: {
+						count: 1
+						id: "industrialforegoing:machine_frame_simple"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7B2B64E4D3E04023"
+				item: { count: 1, id: "industrialforegoing:machine_frame_simple" }
+				type: "item"
+			}]
+			title: "Простой корпус (Machine Frame: Simple)"
+			x: 12.6d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"5A8C11099E040044"
+				"5A8C11099E040012"
+			]
+			description: [
+				"Третья ступень корпусов механизмов.",
+				"",
+				"Создается в Камере растворения из Simple Frame, алмазов и Розовой слизи (Pink Slime) из Фабрики убоя!",
+				"§6Ключевой элемент для 5x5 верстака Extended Crafting и Crafting Core!§r"
+			]
+			icon: {
+				id: "industrialforegoing:machine_frame_advanced"
+			}
+			id: "5A8C11099E040045"
+			rewards: [
+				{
+					id: "7B2B64E4D3E04024"
+					item: {
+						count: 1
+						id: "industrialforegoing:machine_frame_advanced"
+					}
+					type: "item"
+				}
+				{
+					id: "7B2B64E4D3E04025"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			shape: "diamond"
+			size: 1.3d
+			tasks: [{
+				id: "7B2B64E4D3E04026"
+				item: { count: 1, id: "industrialforegoing:machine_frame_advanced" }
+				type: "item"
+			}]
+			title: "Продвинутый корпус (Machine Frame: Advanced)"
+			x: 14.4d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5A8C11099E040045"]
+			description: [
+				"Высший корпус механизмов Industrial Foregoing.",
+				"",
+				"Создается в Камере растворения с незеритом и жидким эфиром.",
+				"§6Необходим для 7x7 верстака Extended Crafting и Лазерного бура!§r"
+			]
+			icon: {
+				id: "industrialforegoing:machine_frame_supreme"
+			}
+			id: "5A8C11099E040046"
+			rewards: [
+				{
+					id: "7B2B64E4D3E04027"
+					item: {
+						count: 1
+						id: "industrialforegoing:machine_frame_supreme"
+					}
+					type: "item"
+				}
+				{
+					id: "7B2B64E4D3E04028"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+			]
+			shape: "hexagon"
+			size: 1.4d
+			tasks: [{
+				id: "7B2B64E4D3E04029"
+				item: { count: 1, id: "industrialforegoing:machine_frame_supreme" }
+				type: "item"
+			}]
+			title: "Высший корпус (Machine Frame: Supreme)"
+			x: 16.2d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5A8C11099E040042"]
+			description: [
+				"Уничтожает мобов в зоне действия, превращая их в две жидкости:",
+				"1. Жидкое мясо (Liquid Meat) — пища для автокормушки.",
+				"2. Розовая слизь (Pink Slime) — незаменима для Продвинутого корпуса механизма!",
+				"",
+				"Поставьте перед спавнером или фермой мобов."
+			]
 			icon: {
 				id: "industrialforegoing:mob_slaughter_factory"
 			}
@@ -438,17 +1011,17 @@
 			rewards: [
 				{
 					count: 4
-					id: "371D8B32E4F15E62"
+					id: "6F50ED0C401C03BE"
 					item: {
 						count: 4
-						id: "minecraft:slime_block"
+						id: "industrialforegoing:pink_laser_lens"
 					}
 					type: "item"
 				}
 				{
-					id: "152461358F3A575C"
+					id: "447BBE6810237C51"
 					type: "xp_levels"
-					xp_levels: 20
+					xp_levels: 10
 				}
 			]
 			tasks: [{
@@ -456,522 +1029,76 @@
 				item: { count: 1, id: "industrialforegoing:mob_slaughter_factory" }
 				type: "item"
 			}]
-			x: 5.4d
-			y: 3.2d
+			title: "Фабрика убоя мобов (Mob Slaughter Factory)"
+			x: 12.6d
+			y: 5.0d
 		}
 		{
 			dependencies: ["5A8C11099E040012"]
+			description: [
+				"В отличие от фабрики убоя, Дробитель мобов убивает существ как игрок:",
+				"Сохраняет весь лут мобов и генерирует жидкий опыт (Essence)!",
+				"Идеален для автоматических спавн-ферм."
+			]
 			icon: {
-				id: "industrialforegoing:ore_laser_base"
+				id: "industrialforegoing:mob_crusher"
 			}
-			id: "5A8C11099E040013"
+			id: "5A8C11099E040047"
 			rewards: [
 				{
 					count: 2
-					id: "576CDD26A01C3C24"
+					id: "7B2B64E4D3E04030"
 					item: {
 						count: 2
-						id: "minecraft:diamond_block"
+						id: "minecraft:diamond"
 					}
 					type: "item"
 				}
+			]
+			tasks: [{
+				id: "7B2B64E4D3E04031"
+				item: { count: 1, id: "industrialforegoing:mob_crusher" }
+				type: "item"
+			}]
+			title: "Дробитель мобов (Mob Crusher)"
+			x: 12.6d
+			y: 6.5d
+		}
+		{
+			dependencies: ["5A8C11099E040047"]
+			description: [
+				"Инструмент для захвата любых сущностей (мирных и враждебных).",
+				"ПКМ по мобу — он запечатывается внутри. Используется для переноса мобов и для работы Дубликатора!"
+			]
+			icon: {
+				id: "industrialforegoing:mob_imprisonment_tool"
+			}
+			id: "5A8C11099E040048"
+			rewards: [
 				{
-					id: "3BEF73C61665D8FA"
+					id: "7B2B64E4D3E04032"
 					item: {
 						count: 1
-						id: "minecraft:netherite_ingot"
+						id: "industrialforegoing:mob_imprisonment_tool"
 					}
 					type: "item"
 				}
-				{
-					id: "4D94E9085F68E25A"
-					type: "xp_levels"
-					xp_levels: 35
-				}
 			]
 			tasks: [{
-				id: "751F7F69EA2BD373"
-				item: { count: 1, id: "industrialforegoing:ore_laser_base" }
+				id: "7B2B64E4D3E04033"
+				item: { count: 1, id: "industrialforegoing:mob_imprisonment_tool" }
 				type: "item"
 			}]
-			x: 7.2d
-			y: 3.2d
+			title: "Тюрьма для мобов (Mob Imprisonment Tool)"
+			x: 14.4d
+			y: 6.5d
 		}
 		{
-			dependencies: ["5A8C11099E040013"]
-			icon: {
-				components: {
-					"industrialforegoing:infinity_can_charge": 1b
-					"industrialforegoing:infinity_item_power": 0L
-					"industrialforegoing:infinity_item_selected_tier": "poor"
-					"industrialforegoing:infinity_item_special": 0b
-				}
-				id: "industrialforegoing:infinity_drill"
-			}
-			id: "5A8C11099E040020"
-			rewards: [
-				{
-					count: 2
-					id: "4B8435F7F49419B8"
-					item: {
-						count: 2
-						id: "minecraft:netherite_block"
-					}
-					type: "item"
-				}
-				{
-					id: "176127DF500F99D3"
-					type: "xp_levels"
-					xp_levels: 50
-				}
+			dependencies: ["5A8C11099E040048"]
+			description: [
+				"Потребляет энергию и жидкий опыт (Essence), чтобы бесконечно клонировать моба, помещенного в инструмент тюрьмы!",
+				"Позволяет бесконечно фармить любых мобов, включая боссов и эндерменов."
 			]
-			shape: "challenge"
-			size: 1.3d
-			tasks: [{
-				id: "36CB0AA47803B209"
-				item: { components: { "industrialforegoing:infinity_can_charge": 1b, "industrialforegoing:infinity_item_power": 0L, "industrialforegoing:infinity_item_selected_tier": "poor", "industrialforegoing:infinity_item_special": 0b }, count: 1, id: "industrialforegoing:infinity_drill" }
-				type: "item"
-			}]
-			x: 9.0d
-			y: 3.2d
-		}
-		{
-			dependencies: ["5A8C11099E040001"]
-			icon: {
-				id: "pipez:universal_pipe"
-			}
-			id: "5A8C11099E040014"
-			rewards: [
-				{
-					count: 4
-					id: "7F1C4F9117815155"
-					item: {
-						count: 4
-						id: "pipez:basic_upgrade"
-					}
-					type: "item"
-				}
-				{
-					id: "40585630DBED41A6"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "69DB62D0CA72B59F"
-				item: { count: 1, id: "pipez:universal_pipe" }
-				type: "item"
-			}]
-			x: -1.8d
-			y: 0.0d
-		}
-		{
-			dependencies: ["5A8C11099E040014"]
-			icon: {
-				id: "pipez:ultimate_upgrade"
-			}
-			id: "5A8C11099E040015"
-			rewards: [
-				{
-					id: "0E27A9E65C002F27"
-					item: {
-						count: 1
-						id: "pipez:infinity_upgrade"
-					}
-					type: "item"
-				}
-				{
-					id: "028AFAFA5B11CE58"
-					type: "xp_levels"
-					xp_levels: 25
-				}
-			]
-			tasks: [{
-				id: "2759A91764A50F40"
-				item: { count: 1, id: "pipez:ultimate_upgrade" }
-				type: "item"
-			}]
-			x: -3.6d
-			y: 0.0d
-		}
-		{
-			dependencies: ["5A8C11099E040001"]
-			icon: {
-				id: "fluxnetworks:flux_core"
-			}
-			id: "5A8C11099E040016"
-			rewards: [
-				{
-					id: "4FF37CDE9DAC4DD9"
-					item: {
-						count: 1
-						id: "fluxnetworks:flux_controller"
-					}
-					type: "item"
-				}
-				{
-					id: "4105F2B5A3B3A8FE"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			tasks: [
-				{
-					id: "182A69B6CF0B875C"
-					item: { count: 1, id: "fluxnetworks:flux_point" }
-					type: "item"
-				}
-				{
-					id: "5858E8F9A673AD2B"
-					item: { count: 1, id: "fluxnetworks:flux_plug" }
-					type: "item"
-				}
-			]
-			x: -1.8d
-			y: 1.8d
-		}
-		{
-			dependencies: ["5A8C11099E040016"]
-			icon: {
-				id: "fluxnetworks:gargantuan_flux_storage"
-			}
-			id: "5A8C11099E040017"
-			rewards: [
-				{
-					count: 2
-					id: "4658A34381BBE2B0"
-					item: {
-						count: 2
-						id: "minecraft:netherite_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "120636A108B6667B"
-					type: "xp_levels"
-					xp_levels: 30
-				}
-			]
-			tasks: [{
-				id: "27012F0A56A22109"
-				item: { count: 1, id: "fluxnetworks:gargantuan_flux_storage" }
-				type: "item"
-			}]
-			x: -3.6d
-			y: 1.8d
-		}
-		{
-			dependencies: ["5A8C11099E040002"]
-			icon: {
-				id: "powah:thermo_generator_starter"
-			}
-			id: "5A8C11099E040021"
-			rewards: [
-				{
-					count: 2
-					id: "444CEEA813C855EC"
-					item: {
-						count: 2
-						id: "minecraft:lava_bucket"
-					}
-					type: "item"
-				}
-				{
-					id: "6DC4C3682D51E2FD"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "61F5B0AE9DE76C7F"
-				item: { count: 1, id: "powah:thermo_generator_starter" }
-				type: "item"
-			}]
-			x: 1.8d
-			y: -3.0d
-		}
-		{
-			dependencies: ["5A8C11099E040021"]
-			icon: {
-				id: "powah:magmator_starter"
-			}
-			id: "5A8C11099E040022"
-			rewards: [
-				{
-					count: 16
-					id: "0DCFD6DA1E4FCA00"
-					item: {
-						count: 16
-						id: "powah:dielectric_paste"
-					}
-					type: "item"
-				}
-				{
-					id: "3524610B9DB81561"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "59E05600528C05A5"
-				item: { count: 1, id: "powah:magmator_starter" }
-				type: "item"
-			}]
-			x: 3.6d
-			y: -3.0d
-		}
-		{
-			dependencies: ["5A8C11099E040002"]
-			icon: {
-				id: "powah:solar_panel_starter"
-			}
-			id: "5A8C11099E040023"
-			rewards: [
-				{
-					count: 3
-					id: "4ACCF169BAFC3678"
-					item: {
-						count: 3
-						id: "powah:solar_panel_starter"
-					}
-					type: "item"
-				}
-				{
-					id: "72256382A5DA6E7E"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "3BA87DA5BACA78ED"
-				item: { count: 1, id: "powah:solar_panel_starter" }
-				type: "item"
-			}]
-			x: 5.4d
-			y: -3.8d
-		}
-		{
-			dependencies: ["5A8C11099E040003"]
-			icon: {
-				id: "powah:energy_cell_starter"
-			}
-			id: "5A8C11099E040024"
-			rewards: [
-				{
-					count: 2
-					id: "555E5AC72EABAD3B"
-					item: {
-						count: 2
-						id: "powah:battery_starter"
-					}
-					type: "item"
-				}
-				{
-					id: "1D659879B8CBA122"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			tasks: [{
-				id: "532E8E8A973E713C"
-				item: { count: 1, id: "powah:energy_cell_starter" }
-				type: "item"
-			}]
-			x: 7.2d
-			y: -1.2d
-		}
-		{
-			dependencies: ["5A8C11099E040007"]
-			icon: {
-				id: "pneumaticcraft:uv_light_box"
-			}
-			id: "5A8C11099E040025"
-			rewards: [
-				{
-					count: 4
-					id: "62252DC9EAC4CEF0"
-					item: {
-						count: 4
-						id: "pneumaticcraft:empty_pcb"
-					}
-					type: "item"
-				}
-				{
-					id: "51AD6B7E211B7167"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			tasks: [{
-				id: "53B0E7B9C299AEB0"
-				item: { count: 1, id: "pneumaticcraft:uv_light_box" }
-				type: "item"
-			}]
-			x: 5.4d
-			y: 0.2d
-		}
-		{
-			dependencies: ["5A8C11099E040025"]
-			icon: {
-				id: "pneumaticcraft:etching_tank"
-			}
-			id: "5A8C11099E040026"
-			rewards: [
-				{
-					count: 8
-					id: "79C132EF8F1B8D9D"
-					item: {
-						count: 8
-						id: "pneumaticcraft:plastic"
-					}
-					type: "item"
-				}
-				{
-					id: "3DA26ED567CF3503"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			tasks: [{
-				id: "250AC3BD8CFD99BB"
-				item: { count: 1, id: "pneumaticcraft:etching_tank" }
-				type: "item"
-			}]
-			x: 7.2d
-			y: 0.0d
-		}
-		{
-			dependencies: ["5A8C11099E040009"]
-			icon: {
-				id: "pneumaticcraft:pneumatic_chestplate"
-			}
-			id: "5A8C11099E040027"
-			rewards: [
-				{
-					count: 32
-					id: "53DA840CCF8F2397"
-					item: {
-						count: 32
-						id: "pneumaticcraft:plastic"
-					}
-					type: "item"
-				}
-				{
-					count: 2
-					id: "110181294D9B73E1"
-					item: {
-						count: 2
-						id: "minecraft:netherite_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "0FDE1DB70CA87191"
-					type: "xp_levels"
-					xp_levels: 35
-				}
-			]
-			shape: "challenge"
-			size: 1.3d
-			tasks: [{
-				id: "20C5DDFC10095667"
-				item: { count: 1, id: "pneumaticcraft:pneumatic_chestplate" }
-				type: "item"
-			}]
-			x: 9.0d
-			y: 1.5d
-		}
-		{
-			dependencies: ["5A8C11099E040006"]
-			icon: {
-				id: "pneumaticcraft:safety_tube_module"
-			}
-			id: "5A8C11099E040028"
-			rewards: [
-				{
-					count: 8
-					id: "2C2A3BA2C61CDB8E"
-					item: {
-						count: 8
-						id: "pneumaticcraft:advanced_pressure_tube"
-					}
-					type: "item"
-				}
-				{
-					id: "7AEC533A1AEC4C6A"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			tasks: [{
-				id: "35A54C3F81710E68"
-				type: "checkmark"
-			}]
-			x: 3.6d
-			y: 0.2d
-		}
-		{
-			dependencies: ["5A8C11099E040011"]
-			icon: {
-				id: "industrialforegoing:plant_gatherer"
-			}
-			id: "5A8C11099E040029"
-			rewards: [
-				{
-					count: 8
-					id: "4EF940FF3DDA797C"
-					item: {
-						count: 8
-						id: "industrialforegoing:plastic"
-					}
-					type: "item"
-				}
-				{
-					id: "6394902C7D5B4FA9"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			tasks: [{
-				id: "73A64D7D2E76545D"
-				item: { count: 1, id: "industrialforegoing:plant_gatherer" }
-				type: "item"
-			}]
-			x: 3.6d
-			y: 4.4d
-		}
-		{
-			dependencies: ["5A8C11099E040029"]
-			icon: {
-				id: "industrialforegoing:plant_sower"
-			}
-			id: "5A8C11099E040030"
-			rewards: [
-				{
-					count: 8
-					id: "20D7E2A325D9E097"
-					item: {
-						count: 8
-						id: "industrialforegoing:plastic"
-					}
-					type: "item"
-				}
-				{
-					id: "25D49870FF927413"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			tasks: [{
-				id: "565CAC90A8A8FDDE"
-				item: { count: 1, id: "industrialforegoing:plant_sower" }
-				type: "item"
-			}]
-			x: 5.4d
-			y: 4.4d
-		}
-		{
-			dependencies: ["5A8C11099E040012"]
 			icon: {
 				id: "industrialforegoing:mob_duplicator"
 			}
@@ -985,129 +1112,216 @@
 					}
 					type: "item"
 				}
-				{
-					id: "5C84C63A7D009F44"
-					type: "xp_levels"
-					xp_levels: 30
-				}
 			]
 			tasks: [{
-				id: "175ECB894DE0A83D"
+				id: "5C84C63A7D009F44"
 				item: { count: 1, id: "industrialforegoing:mob_duplicator" }
 				type: "item"
 			}]
+			title: "Дубликатор мобов (Mob Duplicator)"
+			x: 16.2d
+			y: 6.5d
+		}
+		{
+			dependencies: ["5A8C11099E040012"]
+			description: [
+				"Автоматическая кормушка, заправляемая Жидким мясом (Liquid Meat).",
+				"Держите её в инвентаре или слоте брони — ваш голод никогда не упадет!"
+			]
+			icon: {
+				id: "industrialforegoing:meat_feeder"
+			}
+			id: "5A8C11099E040049"
+			rewards: [
+				{
+					count: 16
+					id: "7B2B64E4D3E04034"
+					item: {
+						count: 16
+						id: "minecraft:cooked_beef"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7B2B64E4D3E04035"
+				item: { count: 1, id: "industrialforegoing:meat_feeder" }
+				type: "item"
+			}]
+			title: "Автокормушка (Meat Feeder)"
+			x: 14.4d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5A8C11099E040041"]
+			description: [
+				"Автоматически собирает созревший урожай и спиливает деревья в зоне действия.",
+				"Не требует семян для работы — срезает только готовые плоды."
+			]
+			icon: {
+				id: "industrialforegoing:plant_gatherer"
+			}
+			id: "5A8C11099E040029"
+			rewards: [
+				{
+					count: 4
+					id: "4EF940FF3DDA797C"
+					item: {
+						count: 4
+						id: "industrialforegoing:plastic"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "6394902C7D5B4FA9"
+				item: { count: 1, id: "industrialforegoing:plant_gatherer" }
+				type: "item"
+			}]
+			title: "Сборщик урожая (Plant Gatherer)"
 			x: 7.2d
-			y: 4.4d
+			y: 5.0d
 		}
 		{
-			dependencies: ["5A8C11099E040031"]
+			dependencies: ["5A8C11099E040029"]
+			description: [
+				"Устанавливается под грядками и автоматически засеивает землю семенами или саженцами из своего инвентаря."
+			]
 			icon: {
-				components: {
-					"industrialforegoing:infinity_can_charge": 1b
-					"industrialforegoing:infinity_item_power": 0L
-					"industrialforegoing:infinity_item_selected_tier": "poor"
-					"industrialforegoing:infinity_item_special": 0b
-				}
-				id: "industrialforegoing:infinity_backpack"
+				id: "industrialforegoing:plant_sower"
 			}
-			id: "5A8C11099E040032"
+			id: "5A8C11099E040030"
 			rewards: [
 				{
-					id: "371674BE0803FD7B"
+					count: 4
+					id: "20D7E2A325D9E097"
 					item: {
-						count: 1
-						id: "minecraft:netherite_block"
+						count: 4
+						id: "industrialforegoing:plastic"
 					}
 					type: "item"
 				}
-				{
-					id: "46326A815D9B4B4A"
-					type: "xp_levels"
-					xp_levels: 40
-				}
 			]
-			shape: "challenge"
-			size: 1.3d
 			tasks: [{
-				id: "6C0374AA5F6F157F"
-				item: { components: { "industrialforegoing:infinity_can_charge": 1b, "industrialforegoing:infinity_item_power": 0L, "industrialforegoing:infinity_item_selected_tier": "poor", "industrialforegoing:infinity_item_special": 0b }, count: 1, id: "industrialforegoing:infinity_backpack" }
+				id: "25D49870FF927413"
+				item: { count: 1, id: "industrialforegoing:plant_sower" }
 				type: "item"
 			}]
+			title: "Автоматический сеятель (Plant Sower)"
 			x: 9.0d
-			y: 4.4d
+			y: 5.0d
 		}
 		{
-			dependencies: ["5A8C11099E040015"]
-			icon: {
-				id: "pipez:infinity_upgrade"
-			}
-			id: "5A8C11099E040033"
-			rewards: [
-				{
-					count: 2
-					id: "42C95A221AB131A6"
-					item: {
-						count: 2
-						id: "minecraft:netherite_block"
-					}
-					type: "item"
-				}
-				{
-					id: "45A1A8796E7CDDC2"
-					type: "xp_levels"
-					xp_levels: 40
-				}
+			dependencies: ["5A8C11099E040046"]
+			description: [
+				"Добыча любых руд из недр земли без разрушения блоков!",
+				"Установите базу, а вокруг неё поставьте от 1 до 4 лазерных буров (Laser Drill), направленных на базу.",
+				"Цветные линзы определяют приоритет добываемых минералов."
 			]
-			shape: "challenge"
-			size: 1.3d
-			tasks: [{
-				id: "18A91E60CA13B9D7"
-				item: { count: 1, id: "pipez:infinity_upgrade" }
-				type: "item"
-			}]
-			x: -5.4d
-			y: 0.0d
-		}
-		{
-			dependencies: ["5A8C11099E040016"]
 			icon: {
-				id: "fluxnetworks:flux_controller"
+				id: "industrialforegoing:ore_laser_base"
 			}
-			id: "5A8C11099E040034"
+			id: "5A8C11099E040013"
 			rewards: [
 				{
-					count: 8
-					id: "5B98E6297B3A71A2"
+					count: 4
+					id: "084AC9203E3F6D59"
 					item: {
-						count: 8
-						id: "fluxnetworks:flux_core"
+						count: 4
+						id: "minecraft:netherite_ingot"
 					}
 					type: "item"
 				}
 				{
-					id: "5BA267CAE720287F"
+					id: "25F6C6418B51AEFA"
 					type: "xp_levels"
 					xp_levels: 20
 				}
 			]
+			shape: "diamond"
+			size: 1.3d
 			tasks: [{
-				id: "597EBFD9DC8E267B"
-				item: { count: 1, id: "fluxnetworks:flux_controller" }
+				id: "751F7F69EA2BD373"
+				item: { count: 1, id: "industrialforegoing:ore_laser_base" }
 				type: "item"
 			}]
-			x: -1.8d
-			y: -1.5d
+			title: "База лазерного бура (Ore Laser Base)"
+			x: 18.0d
+			y: 3.5d
 		}
 		{
-			dependencies: ["5A8C11099E040017"]
+			dependencies: ["5A8C11099E040013"]
+			description: [
+				"Фокусирует лазерный луч высокой мощности в Ore Laser Base.",
+				"Чем больше буров направлено в базу (до 4 штук) и чем выше напряжение FE, тем быстрее поступают руды!"
+			]
 			icon: {
-				id: "fluxnetworks:flux_block"
+				id: "industrialforegoing:laser_drill"
 			}
-			id: "5A8C11099E040035"
+			id: "5A8C11099E040050"
+			rewards: [
+				{
+					count: 2
+					id: "7B2B64E4D3E04036"
+					item: {
+						count: 2
+						id: "industrialforegoing:laser_drill"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7B2B64E4D3E04037"
+				item: { count: 1, id: "industrialforegoing:laser_drill" }
+				type: "item"
+			}]
+			title: "Лазерный бур (Laser Drill)"
+			x: 19.8d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5A8C11099E040013"]
+			description: [
+				"Аналог рудной базы, но добывает жидкости (нефть, лаву, воду, жидкий опыт) прямо из глубин мира!"
+			]
+			icon: {
+				id: "industrialforegoing:fluid_laser_base"
+			}
+			id: "5A8C11099E040051"
 			rewards: [
 				{
 					count: 4
-					id: "359606CC7AFB6CEB"
+					id: "7B2B64E4D3E04038"
+					item: {
+						count: 4
+						id: "minecraft:bucket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7B2B64E4D3E04039"
+				item: { count: 1, id: "industrialforegoing:fluid_laser_base" }
+				type: "item"
+			}]
+			title: "База добычи жидкостей (Fluid Laser Base)"
+			x: 18.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5A8C11099E040046"]
+			description: [
+				"Легендарный бур Бесконечности! Прокачивается по мере закачки миллионов FE энергии.",
+				"На высших уровнях копает гигантские зоны до 11х11 и обладает шелковым касанием/удачей."
+			]
+			icon: {
+				id: "industrialforegoing:infinity_drill"
+			}
+			id: "5A8C11099E040020"
+			rewards: [
+				{
+					count: 4
+					id: "27BE2BA67D02C1E4"
 					item: {
 						count: 4
 						id: "minecraft:netherite_block"
@@ -1115,20 +1329,331 @@
 					type: "item"
 				}
 				{
-					id: "2D00FA9A2A249047"
+					id: "19D087265B8A1D34"
 					type: "xp_levels"
 					xp_levels: 50
 				}
 			]
-			shape: "challenge"
+			shape: "diamond"
 			size: 1.4d
 			tasks: [{
-				id: "3AB1FD24524C5550"
+				id: "36CB0AA47803B209"
+				item: { count: 1, id: "industrialforegoing:infinity_drill" }
+				type: "item"
+			}]
+			title: "Бур Бесконечности (Infinity Drill)"
+			x: 18.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5A8C11099E040020"]
+			description: [
+				"Сокрушительный боевой молот Бесконечности, наносящий колоссальный урон по площади!"
+			]
+			icon: {
+				id: "industrialforegoing:infinity_hammer"
+			}
+			id: "5A8C11099E040052"
+			rewards: [
+				{
+					count: 2
+					id: "7B2B64E4D3E04040"
+					item: {
+						count: 2
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7B2B64E4D3E04041"
+				item: { count: 1, id: "industrialforegoing:infinity_hammer" }
+				type: "item"
+			}]
+			title: "Молот Бесконечности (Infinity Hammer)"
+			x: 19.8d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5A8C11099E040020"]
+			description: [
+				"Срубает гигантские лесные массивы за один клик."
+			]
+			icon: {
+				id: "industrialforegoing:infinity_saw"
+			}
+			id: "5A8C11099E040053"
+			rewards: [
+				{
+					count: 2
+					id: "7B2B64E4D3E04042"
+					item: {
+						count: 2
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7B2B64E4D3E04043"
+				item: { count: 1, id: "industrialforegoing:infinity_saw" }
+				type: "item"
+			}]
+			title: "Пила Бесконечности (Infinity Saw)"
+			x: 19.8d
+			y: 0.8d
+		}
+		{
+			dependencies: ["5A8C11099E040031"]
+			description: [
+				"Рюкзак Бесконечности вмещает колоссальные объемы предметов и жидкостей, полностью решая проблему инвентаря."
+			]
+			icon: {
+				id: "industrialforegoing:infinity_backpack"
+			}
+			id: "5A8C11099E040032"
+			rewards: [
+				{
+					count: 4
+					id: "371674BE0803FD7B"
+					item: {
+						count: 4
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
+					id: "7B2B64E4D3E04044"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			shape: "diamond"
+			size: 1.3d
+			tasks: [{
+				id: "6C0374AA5F6F157F"
+				item: { count: 1, id: "industrialforegoing:infinity_backpack" }
+				type: "item"
+			}]
+			title: "Рюкзак Бесконечности (Infinity Backpack)"
+			x: 18.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["5A8C11099E040001"]
+			description: [
+				"Универсальные трубы Pipez передают предметы, жидкости, газы и энергию одновременно в одной трубе!"
+			]
+			icon: {
+				id: "pipez:universal_pipe"
+			}
+			id: "5A8C11099E040014"
+			rewards: [
+				{
+					count: 16
+					id: "44243A9A4A6708F2"
+					item: {
+						count: 16
+						id: "pipez:universal_pipe"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "4193F91515C870C6"
+				item: { count: 1, id: "pipez:universal_pipe" }
+				type: "item"
+			}]
+			title: "Универсальная труба (Universal Pipe)"
+			x: -1.8d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E040014"]
+			description: [
+				"Увеличивает пропускную способность труб Pipez до сотен тысяч FE/t и стаков предметов."
+			]
+			icon: {
+				id: "pipez:ultimate_upgrade"
+			}
+			id: "5A8C11099E040015"
+			rewards: [
+				{
+					count: 4
+					id: "4BCDA31620D235F8"
+					item: {
+						count: 4
+						id: "pipez:ultimate_upgrade"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "277D59A65D397FE9"
+				item: { count: 1, id: "pipez:ultimate_upgrade" }
+				type: "item"
+			}]
+			title: "Ультимативное улучшение труб (Ultimate Upgrade)"
+			x: -3.6d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E040015"]
+			description: [
+				"Мгновенная бесконечная передача ресурсов и энергии без задержек и ограничений!"
+			]
+			icon: {
+				id: "pipez:infinity_upgrade"
+			}
+			id: "5A8C11099E040033"
+			rewards: [
+				{
+					id: "42C95A221AB131A6"
+					item: {
+						count: 1
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [{
+				id: "45A1A8796E7CDDC2"
+				item: { count: 1, id: "pipez:infinity_upgrade" }
+				type: "item"
+			}]
+			title: "Бесконечное улучшение труб (Infinity Upgrade)"
+			x: -5.4d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E040001"]
+			description: [
+				"Базовый компонент беспроводной сети Flux Networks.",
+				"Позволяет передавать энергию сквозь любые измерения без проводов!"
+			]
+			icon: {
+				id: "fluxnetworks:flux_core"
+			}
+			id: "5A8C11099E040016"
+			rewards: [
+				{
+					count: 8
+					id: "43C73A3FA716279F"
+					item: {
+						count: 8
+						id: "fluxnetworks:flux_core"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "5B744A62D71A7D18"
+				item: { count: 1, id: "fluxnetworks:flux_core" }
+				type: "item"
+			}]
+			title: "Ядро потока (Flux Core)"
+			x: -1.8d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A8C11099E040016"]
+			description: [
+				"Центральный контроллер беспроводной энергетической сети.",
+				"Позволяет заряжать инвентарь игрока по всему миру и настраивать приоритеты подачи энергии."
+			]
+			icon: {
+				id: "fluxnetworks:flux_controller"
+			}
+			id: "5A8C11099E040034"
+			rewards: [
+				{
+					count: 4
+					id: "5B98E6297B3A71A2"
+					item: {
+						count: 4
+						id: "fluxnetworks:flux_core"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "5BA267CAE720287F"
+				item: { count: 1, id: "fluxnetworks:flux_controller" }
+				type: "item"
+			}]
+			title: "Контроллер потока (Flux Controller)"
+			x: -3.6d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5A8C11099E040016"]
+			description: [
+				"Гигантский беспроводной буфер энергии емкостью 128 миллионов FE!"
+			]
+			icon: {
+				id: "fluxnetworks:gargantuan_flux_storage"
+			}
+			id: "5A8C11099E040017"
+			rewards: [
+				{
+					count: 2
+					id: "0ACD52C04D8D58EF"
+					item: {
+						count: 2
+						id: "fluxnetworks:flux_point"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "3E7D7A04530460A2"
+					item: {
+						count: 2
+						id: "fluxnetworks:flux_plug"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7DCDBB15BC6BD4E9"
+				item: { count: 1, id: "fluxnetworks:gargantuan_flux_storage" }
+				type: "item"
+			}]
+			title: "Исполинское хранилище потока (Gargantuan Storage)"
+			x: -3.6d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5A8C11099E040017"]
+			description: [
+				"Блок потока для создания мощных энергетических накопителей."
+			]
+			icon: {
+				id: "fluxnetworks:flux_block"
+			}
+			id: "5A8C11099E040035"
+			rewards: [
+				{
+					id: "359606CC7AFB6CEB"
+					item: {
+						count: 1
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2D00FA9A2A249047"
 				item: { count: 1, id: "fluxnetworks:flux_block" }
 				type: "item"
 			}]
+			title: "Блок потока (Flux Block)"
 			x: -5.4d
-			y: 1.8d
+			y: 1.5d
 		}
 	]
 }

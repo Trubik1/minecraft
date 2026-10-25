@@ -238,7 +238,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "4D70A941AC068FD0"
-					table_id: "5A8C11099EFA8001"
 					type: "random"
 				}
 				{
@@ -267,7 +266,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "2697788BE1DA45A5"
-					table_id: "5A8C11099EFA8001"
 					type: "random"
 				}
 				{
@@ -321,7 +319,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "2A6F17E116386597"
-					table_id: "5A8C11099EFA8001"
 					type: "random"
 				}
 				{
@@ -440,8 +437,8 @@
 					type: "item"
 				}
 			]
-			x: -2.0d
-			y: 0.0d
+			x: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["072FBEB0F6F1BC48"]
@@ -490,7 +487,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "15EBE7B85362F7D8"
-					table_id: "5A8C11099EFA8001"
 					type: "random"
 				}
 				{
@@ -1357,7 +1353,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "676E10971674E8A6"
-					table_id: "5A8C11099EFA8001"
 					type: "random"
 				}
 				{
@@ -1529,41 +1524,6 @@
 			y: 1.5d
 		}
 		{
-			icon: {
-				id: "minecraft:enchanted_book"
-			}
-			id: "7EF57BBEAA4B6B08"
-			min_width: 300
-			rewards: [
-				{
-					id: "1A2C25BD95D6B332"
-					item: {
-						components: {
-							"minecraft:stored_enchantments": {
-								levels: {
-									"minecraft:unbreaking": 1
-								}
-							}
-						}
-						count: 1
-						id: "minecraft:enchanted_book"
-					}
-					type: "item"
-				}
-				{
-					id: "0F416DCD09AC9026"
-					type: "xp"
-					xp: 10
-				}
-			]
-			tasks: [{
-				id: "21FBC4E0F668347C"
-				type: "checkmark"
-			}]
-			x: 2.0d
-			y: 0.0d
-		}
-		{
 			dependencies: ["6FBAE89EE782DABA"]
 			icon: {
 				id: "functionalstorage:controller_extension"
@@ -1573,7 +1533,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "3B3806A609441EDA"
-					table_id: "5A8C11099EFA8001"
 					type: "random"
 				}
 				{
@@ -1761,7 +1720,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "4D2A091C283F066D"
-					table_id: "5A8C11099EFA8001"
 					type: "random"
 				}
 				{
@@ -1790,7 +1748,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "70103C9D2AC82504"
-					table_id: "5A8C11099EFA8001"
 					type: "random"
 				}
 				{
@@ -1814,7 +1771,6 @@
 				{
 					exclude_from_claim_all: true
 					id: "648DC351936EDC5E"
-					table_id: "5A8C11099EFA8001"
 					type: "random"
 				}
 				{
@@ -1918,8 +1874,7 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "49B86F222F7D3761"
-				table_id: "5A8C11099EFA8001"
-					type: "random"
+				type: "random"
 			}]
 			shape: "circle"
 			size: 1.25d
@@ -1937,8 +1892,7 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "2478604121C909A0"
-				table_id: "5A8C11099EFA8001"
-					type: "random"
+				type: "random"
 			}]
 			tasks: [{
 				id: "34909E6C5CB47A43"
@@ -1954,8 +1908,7 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "04358096D006C946"
-				table_id: "5A8C11099EFA8001"
-					type: "random"
+				type: "random"
 			}]
 			tasks: [{
 				id: "5E8A262AF1E9DB0B"
@@ -1971,8 +1924,7 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "0676EA85C82B36B2"
-				table_id: "5A8C11099EFA8001"
-					type: "random"
+				type: "random"
 			}]
 			tasks: [{
 				id: "63F391DE2563954A"
@@ -1988,8 +1940,7 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "3A19490F1A07D34B"
-				table_id: "5A8C11099EFA8001"
-					type: "random"
+				type: "random"
 			}]
 			tasks: [{
 				id: "34F6C74C0D167C8B"
@@ -2008,8 +1959,7 @@
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "66BA6B781711F99A"
-				table_id: "5A8C11099EFA8001"
-					type: "random"
+				type: "random"
 			}]
 			tasks: [{
 				id: "14FA4A933C39A406"
@@ -2086,25 +2036,6 @@
 			}]
 			x: 17.5d
 			y: 5.0d
-		}
-		{
-			id: "209DC1E9AD4C5A84"
-			invisible: true
-			optional: true
-			shape: "circle"
-			tags: ["arr"]
-			tasks: [
-				{
-					id: "1809DDEA104A9CE8"
-					type: "checkmark"
-				}
-				{
-					id: "5DEBE38C614EFBB4"
-					type: "checkmark"
-				}
-			]
-			x: 0.0d
-			y: 2.0d
 		}
 	]
 }

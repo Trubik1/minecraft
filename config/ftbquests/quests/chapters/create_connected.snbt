@@ -4,10 +4,7 @@
 	filename: "create_connected"
 	group: "181E781F1BAE7410"
 	icon: {
-		components: {
-			"ftbquests:missing_item": "create_connected:freewheeling_clutch"
-		}
-		id: "ftbquests:missing_item"
+		id: "create_connected:freewheel_clutch"
 	}
 	id: "4206A58542561BF0"
 	images: [ ]

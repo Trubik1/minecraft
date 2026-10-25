@@ -31,11 +31,12 @@ ServerEvents.recipes(event => {
     // --------------------------------------------------------------------------
     event.remove({ output: 'mekanism:steel_casing' });
     event.shaped('mekanism:steel_casing', [
-        'SGS',
+        'SPS',
         'GCG',
-        'SGS'
+        'SPS'
     ], {
         S: 'mekanism:ingot_steel',
+        P: 'industrialforegoing:plastic',
         G: 'minecraft:glass',
         C: 'create:brass_casing'
     }).id('steampunk:progression/steel_casing');
@@ -1446,20 +1447,21 @@ ServerEvents.recipes(event => {
         S: 'mekanism:block_steel'
     }).id('steampunk:extendedcrafting/basic_table_progression');
 
-    // Advanced Table 5x5
+    // Advanced Table 5x5 (Requires Industrial Foregoing Advanced Machine Frame)
     event.remove({ output: 'extendedcrafting:advanced_table' });
     event.shaped('extendedcrafting:advanced_table', [
         'CGC',
-        'GTG',
+        'MTM',
         'CBC'
     ], {
         C: 'extendedcrafting:crystaltine_ingot',
         G: 'minecraft:gold_block',
+        M: 'industrialforegoing:machine_frame_advanced',
         T: 'extendedcrafting:basic_table',
         B: 'create:brass_casing'
     }).id('steampunk:extendedcrafting/advanced_table_progression');
 
-    // Elite Table 7x7
+    // Elite Table 7x7 (Requires Industrial Foregoing Supreme Machine Frame)
     event.remove({ output: 'extendedcrafting:elite_table' });
     event.shaped('extendedcrafting:elite_table', [
         'CDC',
@@ -1467,7 +1469,7 @@ ServerEvents.recipes(event => {
         'CPC'
     ], {
         C: 'extendedcrafting:crystaltine_block',
-        D: 'minecraft:diamond_block',
+        D: 'industrialforegoing:machine_frame_supreme',
         T: 'extendedcrafting:advanced_table',
         M: 'create:precision_mechanism',
         A: 'mekanism:elite_control_circuit',
@@ -1639,5 +1641,78 @@ ServerEvents.recipes(event => {
         E: 'mysticalagriculture:supremium_essence',
         S: 'mysticalagriculture:prosperity_seed_base'
     }).id('steampunk:mystical/netherite_seeds_progression');
+
+
+    // ==========================================================================
+    // INDUSTRIAL FOREGOING & POWAH ENERGIZING PROGRESSION
+    // ==========================================================================
+
+    // Black Iron Ingot via Powah Energizing Orb
+    event.remove({ output: 'extendedcrafting:black_iron_ingot' });
+    event.custom({
+        type: 'powah:energizing',
+        energy: 10000,
+        ingredients: [
+            { item: 'minecraft:iron_ingot' },
+            { item: 'minecraft:coal' },
+            { item: 'minecraft:coal' },
+            { item: 'powah:dielectric_paste' }
+        ],
+        result: {
+            count: 2,
+            id: 'extendedcrafting:black_iron_ingot'
+        }
+    }).id('steampunk:powah/energizing_black_iron_ingot');
+
+    event.custom({
+        type: 'powah:energizing',
+        energy: 10000,
+        ingredients: [
+            { item: 'minecraft:iron_ingot' },
+            { item: 'minecraft:charcoal' },
+            { item: 'minecraft:charcoal' },
+            { item: 'powah:dielectric_paste' }
+        ],
+        result: {
+            count: 2,
+            id: 'extendedcrafting:black_iron_ingot_charcoal'
+        }
+    }).id('steampunk:powah/energizing_black_iron_ingot_charcoal');
+
+    // Extended Crafting Core (Requires Industrial Foregoing Advanced Machine Frame)
+    event.remove({ output: 'extendedcrafting:crafting_core' });
+    event.shaped('extendedcrafting:crafting_core', [
+        'BIB',
+        'SMS',
+        'BIB'
+    ], {
+        B: 'extendedcrafting:black_iron_ingot',
+        I: 'mekanism:alloy_reinforced',
+        S: 'minecraft:nether_star',
+        M: 'industrialforegoing:machine_frame_advanced'
+    }).id('steampunk:extendedcrafting/crafting_core_progression');
+
+    // Powah Reactor Starter (Requires Industrial Foregoing Simple Machine Frame)
+    event.remove({ output: 'powah:reactor_starter' });
+    event.shaped('powah:reactor_starter', [
+        'CDC',
+        'DMD',
+        'CDC'
+    ], {
+        C: 'powah:capacitor_basic',
+        D: 'powah:dielectric_casing',
+        M: 'industrialforegoing:machine_frame_simple'
+    }).id('steampunk:powah/reactor_starter_progression');
+
+    // High efficiency Dielectric Casing using Industrial Foregoing Plastic (4x output!)
+    event.shaped('4x powah:dielectric_casing', [
+        'RPR',
+        'PCP',
+        'RPR'
+    ], {
+        R: 'powah:dielectric_rod',
+        P: 'industrialforegoing:plastic',
+        C: 'create:brass_casing'
+    }).id('steampunk:powah/dielectric_casing_plastic');
 
 });

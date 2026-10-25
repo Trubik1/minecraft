@@ -795,12 +795,7 @@
 		}
 		{
 			dependencies: ["5A8C11099E060016"]
-			icon: {
-				components: {
-					"ftbquests:missing_item": "wom:shinigami"
-				}
-				id: "ftbquests:missing_item"
-			}
+			icon: { id: "cataclysm:the_incinerator" }
 			id: "5A8C11099E060028"
 			rewards: [
 				{
@@ -829,12 +824,7 @@
 		}
 		{
 			dependencies: ["5A8C11099E060018"]
-			icon: {
-				components: {
-					"ftbquests:missing_item": "wom:moonlight"
-				}
-				id: "ftbquests:missing_item"
-			}
+			icon: { id: "cataclysm:infernal_forge" }
 			id: "5A8C11099E060029"
 			rewards: [
 				{
@@ -863,12 +853,7 @@
 		}
 		{
 			dependencies: ["5A8C11099E060020"]
-			icon: {
-				components: {
-					"ftbquests:missing_item": "wom:excalibur"
-				}
-				id: "ftbquests:missing_item"
-			}
+			icon: { id: "epicfight:netherite_greatsword" }
 			id: "5A8C11099E060030"
 			rewards: [
 				{

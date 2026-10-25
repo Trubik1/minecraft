@@ -206,10 +206,7 @@
 		{
 			dependencies: ["0B11EAB8D76529E0"]
 			icon: {
-				components: {
-					"ftbquests:icon": "minecraft:textures/entity_icon/warden/warden.png"
-				}
-				id: "ftbquests:custom_icon"
+				id: "minecraft:echo_shard"
 			}
 			id: "3D579A1F7EFEDD5C"
 			rewards: [

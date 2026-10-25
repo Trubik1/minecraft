@@ -1288,10 +1288,7 @@
 			size: 1.5d
 			tasks: [{
 				icon: {
-					components: {
-						"ftbquests:missing_item": "draconicevolution:mob_soul"
-					}
-					id: "ftbquests:missing_item"
+					id: "undergarden:minion_spawn_egg"
 				}
 				id: "6043A40C2B121AF9"
 				observation_type: "entity_type"
@@ -1968,10 +1965,7 @@
 		{
 			dependencies: ["1C232674CD04024D"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "immersiveengineering:warning_sign_attention"
-				}
-				id: "ftbquests:missing_item"
+				id: "undergarden:utheric_shard"
 			}
 			id: "76CDC18D7A208512"
 			rewards: [{
