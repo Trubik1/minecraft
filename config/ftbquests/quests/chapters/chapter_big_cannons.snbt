@@ -124,7 +124,10 @@
 		{
 			dependencies: ["5A8C11099E020003"]
 			icon: {
-				id: "createbigcannons:sliding_breechblock"
+				components: {
+					"ftbquests:missing_item": "createbigcannons:sliding_breechblock"
+				}
+				id: "ftbquests:missing_item"
 			}
 			id: "5A8C11099E020004"
 			rewards: [
@@ -145,7 +148,7 @@
 			]
 			tasks: [{
 				id: "346309AEC9056866"
-				item: { count: 1, id: "createbigcannons:sliding_breechblock" }
+				item: { components: { "ftbquests:missing_item": "createbigcannons:sliding_breechblock" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
 			}]
 			x: 5.4d

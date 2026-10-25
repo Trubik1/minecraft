@@ -6,9 +6,9 @@
 	icon: {
 		id: "solarflux:sp_5"
 	}
-	id: "5A8C11099EFA0003"
+	id: "6C91DA156B4B0C44"
 	images: [ ]
-	order_index: 6
+	order_index: 4
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
@@ -121,7 +121,7 @@
 					type: "item"
 				}
 				{
-					id: "7D8E9F0A1B2C3D4E"
+					id: "50620D8D904B0CF7"
 					type: "xp_levels"
 					xp_levels: 5
 				}
@@ -143,7 +143,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "8E9F0A1B2C3D4E5F"
+					id: "74853595470AE906"
 					item: {
 						count: 2
 						id: "mekanism:alloy_reinforced"
@@ -151,7 +151,7 @@
 					type: "item"
 				}
 				{
-					id: "9F0A1B2C3D4E5F6A"
+					id: "619307D68455740B"
 					type: "xp_levels"
 					xp_levels: 10
 				}
@@ -210,13 +210,13 @@
 					type: "item"
 				}
 				{
-					id: "3D4E5F6A7B8C9D0E"
+					id: "0CC4DA28D60A2B1A"
 					type: "xp_levels"
 					xp_levels: 25
 				}
 			]
 			tasks: [{
-				id: "8D9E0F1A2B3C4D5E"
+				id: "19B50067FD8AB540"
 				item: { count: 1, id: "solarflux:photovoltaic_cell_6" }
 				type: "item"
 			}]
@@ -249,7 +249,7 @@
 				}
 			]
 			tasks: [{
-				id: "9E0F1A2B3C4D5E6F"
+				id: "30D7D48B154F509C"
 				item: { count: 1, id: "solarflux:sp_1" }
 				type: "item"
 			}]
@@ -301,7 +301,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "8C9D0E1F2A3B4C5D"
+					id: "26214080AB486F48"
 					item: {
 						count: 2
 						id: "solarflux:sp_3"
@@ -309,13 +309,13 @@
 					type: "item"
 				}
 				{
-					id: "9D0E1F2A3B4C5D6E"
+					id: "4E53C442E28092D1"
 					type: "xp_levels"
 					xp_levels: 5
 				}
 			]
 			tasks: [{
-				id: "1A2B3C4D5E6F7A8B"
+				id: "6C848AC22CA30A4D"
 				item: { count: 1, id: "solarflux:sp_3" }
 				type: "item"
 			}]
@@ -402,7 +402,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "4C5D6E7F8A9B0C1D"
+					id: "6A3A7BC8F0D99472"
 					item: {
 						count: 2
 						id: "solarflux:sp_6"
@@ -410,7 +410,7 @@
 					type: "item"
 				}
 				{
-					id: "5D6E7F8A9B0C1D2E"
+					id: "4F942910528160A1"
 					type: "xp_levels"
 					xp_levels: 20
 				}
@@ -432,7 +432,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "6E7F8A9B0C1D2E3F"
+					id: "02E47933CE4ACA52"
 					item: {
 						count: 2
 						id: "solarflux:sp_7"
@@ -464,7 +464,7 @@
 			rewards: [
 				{
 					count: 4
-					id: "8A9B0C1D2E3F4A5B"
+					id: "4FA4E72850F36303"
 					item: {
 						count: 4
 						id: "minecraft:netherite_block"
@@ -473,7 +473,7 @@
 				}
 				{
 					count: 2
-					id: "9B0C1D2E3F4A5B6C"
+					id: "2B24DD2235B8E576"
 					item: {
 						count: 2
 						id: "solarflux:sp_8"
@@ -513,7 +513,7 @@
 					type: "item"
 				}
 				{
-					id: "2E3F4A5B6C7D8E9F"
+					id: "6BA62A00DFE42104"
 					type: "xp_levels"
 					xp_levels: 15
 				}
@@ -554,7 +554,7 @@
 			]
 			shape: "rsquare"
 			tasks: [{
-				id: "8B9C0D1E2F3A4B5C"
+				id: "68142D28736C49A7"
 				item: { count: 1, id: "solarflux:sp_tf.carminite" }
 				type: "item"
 			}]
@@ -570,7 +570,7 @@
 			rewards: [
 				{
 					count: 4
-					id: "5B6C7D8E9F0A1B2C"
+					id: "5922F9E512EB9108"
 					item: {
 						count: 4
 						id: "solarflux:blank_upgrade"
@@ -578,14 +578,14 @@
 					type: "item"
 				}
 				{
-					id: "6C7D8E9F0A1B2C3D"
+					id: "20A36363917BF7E4"
 					type: "xp"
 					xp: 50
 				}
 			]
 			tasks: [{
 				count: 2L
-				id: "9C0D1E2F3A4B5C6D"
+				id: "043F2CB6E3C06FC7"
 				item: { count: 1, id: "solarflux:blank_upgrade" }
 				type: "item"
 			}]
@@ -601,7 +601,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "7D8E9F0A1B2C3D4E"
+					id: "3101FCFBBED31CE6"
 					item: {
 						count: 2
 						id: "solarflux:efficiency_upgrade"
@@ -609,13 +609,13 @@
 					type: "item"
 				}
 				{
-					id: "8E9F0A1B2C3D4E5F"
+					id: "6D952CA3B83AAF92"
 					type: "xp_levels"
 					xp_levels: 5
 				}
 			]
 			tasks: [{
-				id: "0D1E2F3A4B5C6D7E"
+				id: "1E8CA444F6DAE946"
 				item: { count: 1, id: "solarflux:efficiency_upgrade" }
 				type: "item"
 			}]
@@ -631,7 +631,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "9F0A1B2C3D4E5F6A"
+					id: "24DF011AFC588EF9"
 					item: {
 						count: 2
 						id: "solarflux:transfer_rate_upgrade"
@@ -639,13 +639,13 @@
 					type: "item"
 				}
 				{
-					id: "0A1B2C3D4E5F6A7B"
+					id: "7230BC4A320B8ADC"
 					type: "xp_levels"
 					xp_levels: 5
 				}
 			]
 			tasks: [{
-				id: "1E2F3A4B5C6D7E8F"
+				id: "1D171C7EAB666C23"
 				item: { count: 1, id: "solarflux:transfer_rate_upgrade" }
 				type: "item"
 			}]
@@ -661,7 +661,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "1B2C3D4E5F6A7B8C"
+					id: "39441B746019577E"
 					item: {
 						count: 2
 						id: "solarflux:capacity_upgrade"
@@ -669,7 +669,7 @@
 					type: "item"
 				}
 				{
-					id: "2C3D4E5F6A7B8C9D"
+					id: "0933CA85B3DD54E5"
 					type: "xp_levels"
 					xp_levels: 5
 				}

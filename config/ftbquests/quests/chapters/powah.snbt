@@ -362,7 +362,7 @@
 			y: 13.7d
 		}
 	]
-	order_index: 5
+	order_index: 3
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
@@ -443,10 +443,11 @@
 			id: "3DDF87A1E5F5D009"
 			min_width: 300
 			rewards: [
-								{
+				{
+					count: 16
 					id: "336EF3D109FC4797"
 					item: {
-						count: 16
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -486,10 +487,11 @@
 			]
 			id: "52E59FCB39D66BCF"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "274AC988966524C0"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -515,10 +517,11 @@
 			]
 			id: "3D5F87F8E6B89C1B"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "32274A92CA7E0D29"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -544,10 +547,11 @@
 			]
 			id: "7678B5DD1339833E"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "6EB0904004F389DA"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -573,10 +577,11 @@
 			]
 			id: "0FD62827710F0AC6"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "18B81A476AAD7918"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -611,10 +616,11 @@
 					}
 					type: "item"
 				}
-								{
+				{
+					count: 8
 					id: "33E63DBBE49D7134"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -641,10 +647,11 @@
 			]
 			id: "3CB6DC5B09C62CFE"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "6A70A4688D512DDF"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -670,10 +677,11 @@
 			]
 			id: "7D52DD751DDADA1B"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "45B43FBEBBDF09B0"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -699,10 +707,11 @@
 			]
 			id: "677365A816994C8B"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "7C1253E7B75722C1"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -736,10 +745,11 @@
 			id: "5BCA3F716348ECCD"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 8
 					id: "5E890AE83AC01458"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -766,10 +776,11 @@
 			id: "33816AF0E699F19F"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 8
 					id: "37AE24D2704ED63C"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -795,10 +806,11 @@
 			]
 			id: "78202A1CF5D86B94"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "5CEC3181F7E55CBD"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -827,10 +839,11 @@
 			hide_dependency_lines: true
 			id: "700F3FF7C23D0C0F"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "769305364E781D9A"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -854,10 +867,11 @@
 			hide_dependency_lines: true
 			id: "5E090C9BB4DAA5D4"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "55FA38592D091DE5"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -882,10 +896,11 @@
 			hide_dependency_lines: true
 			id: "562BD37539EE318E"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "7A69EACB23126AFC"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -910,10 +925,11 @@
 			hide_dependency_lines: true
 			id: "7D7983F39E6E818D"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "2C64F84E3E5A0266"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -938,10 +954,11 @@
 			hide_dependency_lines: true
 			id: "25EFC21A3C48E0B6"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "05BB1CA3278200D4"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -966,10 +983,11 @@
 			hide_dependency_lines: true
 			id: "4F1FFC02F4EAA2E6"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "1DE001DB521BBA33"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -996,10 +1014,11 @@
 			]
 			id: "61A8FAEC4FF18449"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "14433FED493BD66D"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1024,10 +1043,11 @@
 			id: "5A07C7A54D40FBE2"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 8
 					id: "11D419594731E761"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1054,10 +1074,11 @@
 			id: "35F885A046EAE246"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 8
 					id: "26A866150CB96015"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1083,10 +1104,11 @@
 			]
 			id: "740F314EE6242C13"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "548EB9CCF7F1E732"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1112,10 +1134,11 @@
 			]
 			id: "04F11E192A334E3F"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "77086CA1AA324197"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1142,10 +1165,11 @@
 			hide_dependency_lines: true
 			id: "0C481BA4C1CC0237"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "1C883044138DABFB"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1174,10 +1198,11 @@
 			hide_dependency_lines: true
 			id: "66FA15A92DC655DE"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "333ECD3397C2E8CA"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1205,10 +1230,11 @@
 			hide_dependency_lines: true
 			id: "5A708BF4F5091959"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "6E2746A7CE4F8A12"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1234,10 +1260,11 @@
 			]
 			id: "69D82C33347D360D"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "4531E9D99F71B91A"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1263,10 +1290,11 @@
 			]
 			id: "0E3A9D5E1E8AAF89"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "499F3C25175C255E"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1292,10 +1320,11 @@
 			]
 			id: "67DE5F982629BB34"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "460E0C6416E0A064"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1321,10 +1350,11 @@
 			]
 			id: "60F5DC851FCFF1B2"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "3E8225EF3DBD897E"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1350,10 +1380,11 @@
 			]
 			id: "5F6152CF085D75D6"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "695DE6AE9A9329F2"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1380,10 +1411,11 @@
 			]
 			id: "7890A1478121D2CD"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "2637536BE8BBC147"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -1408,10 +1440,11 @@
 			id: "534485E8185B71C3"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 4
 					id: "257264EBB15C1550"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1438,10 +1471,11 @@
 			id: "04930767C52C7CC2"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 4
 					id: "5E5C1D3C7ABF9D17"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1467,10 +1501,11 @@
 			]
 			id: "7444B85503DE2C53"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "07CBEA27B6841428"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1496,10 +1531,11 @@
 			]
 			id: "604AB95A7600B150"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "5A1DC827A01398E4"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1525,10 +1561,11 @@
 			]
 			id: "7FEE780F37A1322E"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "597278B13B0DCE91"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1552,10 +1589,11 @@
 			hide_dependency_lines: true
 			id: "331498A68D110F81"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "4F124694464385D9"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1583,10 +1621,11 @@
 			hide_dependency_lines: true
 			id: "029922AB09F8C76A"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "46C596393E36A96B"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1612,10 +1651,11 @@
 			]
 			id: "5D594154819DD145"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "15561179FA3DA02E"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1641,10 +1681,11 @@
 			]
 			id: "6ED2F8A8DEED417D"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "37E91B34E25F494D"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1670,10 +1711,11 @@
 			]
 			id: "2AE17A935862BCBF"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "56DB84169DD497F9"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1699,10 +1741,11 @@
 			]
 			id: "6230C6884B800689"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "3BC3FB37A2F3B9C8"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1728,10 +1771,11 @@
 			]
 			id: "05B0A7D0B991050F"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "1713B3EA72A983CB"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1758,10 +1802,11 @@
 			]
 			id: "6C8148B3AE0A2222"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "0F06DF97F7F5C468"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -1787,10 +1832,11 @@
 			]
 			id: "79421463F01ED2D7"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "399E51AED917E377"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -1815,10 +1861,11 @@
 			id: "13FDBA4BC4514F58"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 2
 					id: "49FD98A963240BF5"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -1845,10 +1892,11 @@
 			id: "04811BA420B80046"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 2
 					id: "75514E5D42839B97"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -1874,10 +1922,11 @@
 			]
 			id: "1D80E6C3327AB376"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "1E5B513A15344949"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -1901,10 +1950,11 @@
 			hide_dependency_lines: true
 			id: "564F731F0F3E5AEC"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "4995ADDF96D62FC9"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -1930,10 +1980,11 @@
 			]
 			id: "25088F06228F8561"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "7B2072A45F758E4C"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -1961,10 +2012,11 @@
 			hide_dependency_lines: true
 			id: "0C5936697C9B3716"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "049B68462787BAFD"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -1990,10 +2042,11 @@
 			]
 			id: "1F55B2FA187F63DD"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "28804F9A97A3E425"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -2019,10 +2072,11 @@
 			]
 			id: "0C7D0AB254DF8CF1"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "62814A9FA8AC2592"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -2048,10 +2102,11 @@
 			]
 			id: "323F7A0C4FAC28D0"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "2EEB2D20FA794E4D"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -2077,10 +2132,11 @@
 			]
 			id: "44C1315098B9CF3F"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "72A14865203125D7"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -2106,10 +2162,11 @@
 			]
 			id: "6754612E9AD4B9C0"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "2EC728FD9C8F05B4"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -2136,10 +2193,11 @@
 			]
 			id: "7C34EED27A9737D4"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "53872D4056C7D9D8"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -2164,10 +2222,11 @@
 			id: "555566F1148F5229"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 2
 					id: "1A18165C0855BF42"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2191,10 +2250,11 @@
 			id: "5A8DE0C7D4F28E05"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 2
 					id: "14975DBB973B9595"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2217,10 +2277,11 @@
 			dependencies: ["1D80E6C3327AB376"]
 			id: "2DD9994665799747"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "7BE32CBC4F2E912D"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2243,10 +2304,11 @@
 			dependencies: ["79421463F01ED2D7"]
 			id: "03798EF7AB47BB3D"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "10E7F35B7262EA37"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2270,10 +2332,11 @@
 			hide_dependency_lines: true
 			id: "1CCCA214865526F3"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "26824E0692C7CD6E"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2296,10 +2359,11 @@
 			dependencies: ["25088F06228F8561"]
 			id: "6EFB4BF8110F2712"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "336DE088F93C2773"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2327,10 +2391,11 @@
 			hide_dependency_lines: true
 			id: "68B604EF40198B8D"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "4777EDFDBBE22036"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2353,10 +2418,11 @@
 			dependencies: ["68B604EF40198B8D"]
 			id: "584BD9A6F7594867"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "553724173203A123"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2379,10 +2445,11 @@
 			dependencies: ["0C7D0AB254DF8CF1"]
 			id: "03442045ED56068F"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "5A4A2AA7E595FEB5"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2405,10 +2472,11 @@
 			dependencies: ["323F7A0C4FAC28D0"]
 			id: "24EE138780C43447"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "09289D5CE0C59DF4"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2431,10 +2499,11 @@
 			dependencies: ["44C1315098B9CF3F"]
 			id: "28EE8C172F9DF5C1"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "141433821E0AA5EF"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2457,10 +2526,11 @@
 			dependencies: ["6754612E9AD4B9C0"]
 			id: "0FFF2BEE5D8EBE12"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "093558B6D3AD8663"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2484,10 +2554,11 @@
 			dependencies: ["7C34EED27A9737D4"]
 			id: "39386F88CB38CF36"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "33464F89B8D1FB7E"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -2511,10 +2582,11 @@
 			hide_dependency_lines: true
 			id: "6D88C19F47D0D469"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "06074E4D85E9625E"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -2539,10 +2611,11 @@
 			hide_dependency_lines: true
 			id: "66ECC26BC81D0093"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "72AD97ECD624C9F1"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -2566,10 +2639,11 @@
 			dependencies: ["03798EF7AB47BB3D"]
 			id: "63E57D2745D24761"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "4E00D9EA078233CE"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2592,10 +2666,11 @@
 			dependencies: ["2DD9994665799747"]
 			id: "11F0D662FF4DC335"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "0869AE48992AACA7"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2619,10 +2694,11 @@
 			id: "18B20F4F27F37197"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 2
 					id: "0354276CBFD56D27"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2647,10 +2723,11 @@
 			id: "0536D7B41964FE38"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 2
 					id: "1B55A38A45331C60"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2674,10 +2751,11 @@
 			hide_dependency_lines: true
 			id: "486356E189081ADC"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "7123F500A918DB75"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2700,10 +2778,11 @@
 			dependencies: ["6EFB4BF8110F2712"]
 			id: "4449AD53BCE797E1"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "14DFF6417C3A2982"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2731,10 +2810,11 @@
 			hide_dependency_lines: true
 			id: "379EBE12E3F61679"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "4628C572883B4735"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2757,10 +2837,11 @@
 			dependencies: ["379EBE12E3F61679"]
 			id: "335927C2D234451A"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "7870CE9274C8B1E9"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2783,10 +2864,11 @@
 			dependencies: ["03442045ED56068F"]
 			id: "36B14701D95C3C21"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "03ADA0DDF99F29A6"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2809,10 +2891,11 @@
 			dependencies: ["24EE138780C43447"]
 			id: "5A7C92F05AF39FDB"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "612FB730577BC7F4"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2835,10 +2918,11 @@
 			dependencies: ["28EE8C172F9DF5C1"]
 			id: "637A8E4BBF108417"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "33E8FCF6F8E7CB05"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2861,10 +2945,11 @@
 			dependencies: ["0FFF2BEE5D8EBE12"]
 			id: "341486C9F277FEB7"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "0FD775B49FC7AD8C"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2888,10 +2973,11 @@
 			dependencies: ["39386F88CB38CF36"]
 			id: "760F80E1C273C0AD"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "046DDDDCAAF2BCEB"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -2917,10 +3003,11 @@
 			]
 			id: "348FEC9A50C2E62E"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "461364E687D0F236"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -2945,10 +3032,11 @@
 			id: "24510A5C98703C84"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 2
 					id: "4854D191BA53A416"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -2976,10 +3064,11 @@
 			id: "41DC771674A6C387"
 			optional: true
 			rewards: [
-								{
+				{
+					count: 2
 					id: "45CDC85FB4C3A138"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3005,10 +3094,11 @@
 			]
 			id: "7EBA36EF1858F428"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "32898EFFF794C2B0"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3031,10 +3121,11 @@
 			dependencies: ["4F1FFC02F4EAA2E6"]
 			id: "3B28A8BA318D438F"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "477548F6982B6299"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3060,10 +3151,11 @@
 			]
 			id: "503CD7E104C8BA5D"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "78E1CECA051B681A"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3090,10 +3182,11 @@
 			dependency_requirement: "one_completed"
 			id: "3CD1F9E00E33C6C9"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "521099624333DE1E"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3119,10 +3212,11 @@
 			]
 			id: "44F016F465082C55"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "68A1E17843A0B791"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3148,10 +3242,11 @@
 			]
 			id: "4E67DE071FC9D80D"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "1279B07A8A80FEF8"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3177,10 +3272,11 @@
 			]
 			id: "129F6987E144B048"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "1E983232CF2EF67B"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3206,10 +3302,11 @@
 			]
 			id: "71D08D1C8EA4C631"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "08E9287775B53FFD"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3235,10 +3332,11 @@
 			]
 			id: "61DCECE1FC38E151"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "32D20D1E95358153"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3265,10 +3363,11 @@
 			]
 			id: "393050BEA59F1570"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "7160C8F86CD5C89D"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"
@@ -3295,10 +3394,11 @@
 			hide_dependency_lines: true
 			id: "1C273D9E046FD18A"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "2DEB4C0CFE7C4D29"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -3324,10 +3424,11 @@
 			]
 			id: "4EA69350A20B0B5B"
 			rewards: [
-								{
+				{
+					count: 8
 					id: "5A843A787074F467"
 					item: {
-						count: 8
+						count: 1
 						id: "powah:dielectric_paste"
 					}
 					type: "item"
@@ -3353,10 +3454,11 @@
 			]
 			id: "09DECE4E7977D852"
 			rewards: [
-								{
+				{
+					count: 4
 					id: "15E6315BB25D077E"
 					item: {
-						count: 4
+						count: 1
 						id: "powah:steel_energized"
 					}
 					type: "item"
@@ -3382,10 +3484,11 @@
 			]
 			id: "172B0296F87D6725"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "7809EE77DCB57F35"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_blazing"
 					}
 					type: "item"
@@ -3411,10 +3514,11 @@
 			]
 			id: "270B5EA3E710A209"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "44E183EC5FAFAACD"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_niotic"
 					}
 					type: "item"
@@ -3440,10 +3544,11 @@
 			]
 			id: "69E572EA56B3B31D"
 			rewards: [
-								{
+				{
+					count: 2
 					id: "46BB2C3AB315B384"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_spirited"
 					}
 					type: "item"
@@ -3475,10 +3580,11 @@
 					type: "xp"
 					xp: 250
 				}
-								{
+				{
+					count: 2
 					id: "7EBFFE8FD0DE1E38"
 					item: {
-						count: 2
+						count: 1
 						id: "powah:crystal_nitro"
 					}
 					type: "item"

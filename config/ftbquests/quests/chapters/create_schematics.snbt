@@ -1,0 +1,329 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_schematics"
+	group: "0015B593B4889A40"
+	icon: {
+		id: "create:schematicannon"
+	}
+	id: "5A8C11099EFA0006"
+	images: [ ]
+	order_index: 3
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "create:empty_schematic"
+			}
+			id: "5A8C11099E060001"
+			rewards: [
+				{
+					count: 4
+					id: "1A2B3C4D5E6F7001"
+					item: {
+						count: 4
+						id: "create:empty_schematic"
+					}
+					type: "item"
+				}
+				{
+					id: "1A2B3C4D5E6F7002"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "2A3B4C5D6E7F8001"
+				item: { count: 1, id: "create:empty_schematic" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E060001"]
+			icon: {
+				id: "create:schematic_table"
+			}
+			id: "5A8C11099E060002"
+			rewards: [
+				{
+					count: 1
+					id: "1A2B3C4D5E6F7003"
+					item: {
+						count: 1
+						id: "create:schematic_and_quill"
+					}
+					type: "item"
+				}
+				{
+					id: "1A2B3C4D5E6F7004"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			size: 1.2d
+			tasks: [{
+				id: "2A3B4C5D6E7F8002"
+				item: { count: 1, id: "create:schematic_table" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E060002"]
+			icon: {
+				id: "minecraft:writable_book"
+			}
+			id: "5A8C11099E060003"
+			rewards: [
+				{
+					count: 16
+					id: "1A2B3C4D5E6F7005"
+					item: {
+						count: 16
+						id: "minecraft:paper"
+					}
+					type: "item"
+				}
+				{
+					id: "1A2B3C4D5E6F7006"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [{
+				id: "2A3B4C5D6E7F8003"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5A8C11099E060002"]
+			icon: {
+				id: "create:schematic_and_quill"
+			}
+			id: "5A8C11099E060004"
+			rewards: [
+				{
+					count: 2
+					id: "1A2B3C4D5E6F7007"
+					item: {
+						count: 2
+						id: "create:empty_schematic"
+					}
+					type: "item"
+				}
+				{
+					id: "1A2B3C4D5E6F7008"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2A3B4C5D6E7F8004"
+				item: { count: 1, id: "create:schematic_and_quill" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5A8C11099E060002"]
+			icon: {
+				id: "create:schematicannon"
+			}
+			id: "5A8C11099E060005"
+			rewards: [
+				{
+					count: 32
+					id: "1A2B3C4D5E6F7009"
+					item: {
+						count: 32
+						id: "minecraft:gunpowder"
+					}
+					type: "item"
+				}
+				{
+					count: 1
+					id: "1A2B3C4D5E6F7010"
+					item: {
+						count: 1
+						id: "minecraft:chest"
+					}
+					type: "item"
+				}
+				{
+					id: "1A2B3C4D5E6F7011"
+					type: "xp"
+					xp: 250
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "2A3B4C5D6E7F8005"
+				item: { count: 1, id: "create:schematicannon" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E060005"]
+			icon: {
+				id: "create:mechanical_saw"
+			}
+			id: "5A8C11099E060006"
+			rewards: [
+				{
+					count: 64
+					id: "1A2B3C4D5E6F7012"
+					item: {
+						count: 64
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+				{
+					id: "1A2B3C4D5E6F7013"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "2A3B4C5D6E7F8006"
+					item: { count: 1, id: "create:mechanical_saw" }
+					type: "item"
+				}
+				{
+					id: "2A3B4C5D6E7F8007"
+					item: { count: 1, id: "create:mechanical_bearing" }
+					type: "item"
+				}
+			]
+			x: 7.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5A8C11099E060005"]
+			icon: {
+				id: "create:mechanical_drill"
+			}
+			id: "5A8C11099E060007"
+			rewards: [
+				{
+					count: 2
+					id: "1A2B3C4D5E6F7014"
+					item: {
+						count: 2
+						id: "create:crushing_wheel"
+					}
+					type: "item"
+				}
+				{
+					id: "1A2B3C4D5E6F7015"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "2A3B4C5D6E7F8008"
+					item: { count: 1, id: "create:mechanical_drill" }
+					type: "item"
+				}
+				{
+					id: "2A3B4C5D6E7F8009"
+					item: { count: 1, id: "create:crushing_wheel" }
+					type: "item"
+				}
+			]
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E060007"]
+			icon: {
+				id: "create:encased_fan"
+			}
+			id: "5A8C11099E060008"
+			rewards: [
+				{
+					count: 32
+					id: "1A2B3C4D5E6F7016"
+					item: {
+						count: 32
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1A2B3C4D5E6F7017"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [
+				{
+					id: "2A3B4C5D6E7F8010"
+					item: { count: 1, id: "create:encased_fan" }
+					type: "item"
+				}
+				{
+					id: "2A3B4C5D6E7F8011"
+					item: { count: 1, id: "minecraft:water_bucket" }
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A8C11099E060005"]
+			icon: {
+				id: "create:track_station"
+			}
+			id: "5A8C11099E060009"
+			rewards: [
+				{
+					count: 64
+					id: "1A2B3C4D5E6F7018"
+					item: {
+						count: 64
+						id: "create:track"
+					}
+					type: "item"
+				}
+				{
+					id: "1A2B3C4D5E6F7019"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "2A3B4C5D6E7F8012"
+					item: { count: 1, id: "create:track_station" }
+					type: "item"
+				}
+				{
+					id: "2A3B4C5D6E7F8013"
+					item: { count: 1, id: "create:train_controls" }
+					type: "item"
+				}
+			]
+			x: 7.0d
+			y: 2.0d
+		}
+	]
+}

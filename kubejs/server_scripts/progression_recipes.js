@@ -1130,4 +1130,185 @@ ServerEvents.recipes(event => {
         'mekanism:advanced_control_circuit'
     ]).id('steampunk:rs/raw_advanced_processor_integrated');
 
+
+    // ==========================================================================
+    // EXTENDED CRAFTING: ЭНДГЕЙМ 9x9 МЕГА-КРАФТЫ (КРЕАТИВНЫЕ ПРЕДМЕТЫ)
+    // ==========================================================================
+
+    // 1. Креативный мотор Create (create:creative_motor)
+    event.custom({
+        type: 'extendedcrafting:shaped_table',
+        pattern: [
+            'MFPAUAPFM',
+            'FSPCHCPFS',
+            'PPKOTOKPP',
+            'ACONBNOCA',
+            'UHTBEBHTU',
+            'ACONBNOCA',
+            'PPKOTOKPP',
+            'FSPCHCPFS',
+            'MFPAUAPFM'
+        ],
+        key: {
+            M: { item: 'create:brass_casing' },
+            F: { item: 'create:flywheel' },
+            P: { item: 'create:precision_mechanism' },
+            A: { item: 'mekanism:alloy_atomic' },
+            U: { item: 'mekanism:ultimate_control_circuit' },
+            S: { item: 'create:speedometer' },
+            C: { item: 'twilightforest:carminite' },
+            H: { item: 'cataclysm:monstrous_horn' },
+            K: { item: 'aether:enchanted_gravitite' },
+            O: { item: 'mekanism:ingot_refined_obsidian' },
+            T: { item: 'undergarden:forgotten_ingot' },
+            N: { item: 'powah:crystal_nitro' },
+            B: { item: 'minecraft:nether_star' },
+            E: { item: 'minecraft:netherite_block' }
+        },
+        result: {
+            id: 'create:creative_motor',
+            count: 1
+        }
+    }).id('steampunk:endgame/creative_motor_9x9');
+
+    // 2. Креативный энергетический куб Mekanism (mekanism:creative_energy_cube)
+    event.custom({
+        type: 'extendedcrafting:shaped_table',
+        pattern: [
+            'SCPUAUPFS',
+            'CRUNTNURC',
+            'PUMIEIMUP',
+            'UNMOBOMNU',
+            'ATEBKBETA',
+            'UNMOBOMNU',
+            'PUMIEIMUP',
+            'CRUNTNURC',
+            'SFPUAUPCS'
+        ],
+        key: {
+            S: { item: 'solarflux:sp_8' },
+            C: { item: 'solarflux:sp_tf.carminite' },
+            F: { item: 'solarflux:sp_tf.fiery' },
+            R: { item: 'powah:reactor_nitro' },
+            P: { item: 'powah:energy_cell_nitro' },
+            U: { item: 'mekanism:ultimate_control_circuit' },
+            A: { item: 'mekanism:alloy_atomic' },
+            N: { item: 'powah:crystal_nitro' },
+            T: { item: 'mekanism:pellet_antimatter' },
+            I: { item: 'mekanism:ultimate_induction_cell' },
+            M: { item: 'mekanism:induction_casing' },
+            O: { item: 'mekanism:ingot_refined_obsidian' },
+            B: { item: 'minecraft:nether_star' },
+            E: { item: 'mekanism:energy_cube' },
+            K: { item: 'minecraft:netherite_block' }
+        },
+        result: {
+            id: 'mekanism:creative_energy_cube',
+            count: 1
+        }
+    }).id('steampunk:endgame/creative_energy_cube_9x9');
+
+    // 3. Креативная энергоячейка Powah (powah:energy_cell_creative)
+    event.custom({
+        type: 'extendedcrafting:shaped_table',
+        pattern: [
+            'RRRRRRRRR',
+            'RPUAIAUPR',
+            'RUNTNTNUR',
+            'RAIMEIMAR',
+            'RUTBEBTUR',
+            'RAIMEIMAR',
+            'RUNTNTNUR',
+            'RPUAIAUPR',
+            'RRRRRRRRR'
+        ],
+        key: {
+            R: { item: 'powah:dielectric_casing' },
+            P: { item: 'powah:energy_cell_nitro' },
+            U: { item: 'mekanism:ultimate_control_circuit' },
+            A: { item: 'mekanism:alloy_atomic' },
+            I: { item: 'powah:reactor_nitro' },
+            N: { item: 'powah:crystal_nitro' },
+            T: { item: 'mekanism:pellet_antimatter' },
+            M: { item: 'powah:thermo_generator_nitro' },
+            E: { item: 'solarflux:sp_8' },
+            B: { item: 'minecraft:nether_star' }
+        },
+        result: {
+            id: 'powah:energy_cell_creative',
+            count: 1
+        }
+    }).id('steampunk:endgame/creative_energy_cell_powah_9x9');
+
+    // 4. Креативный контроллер Refined Storage (refinedstorage:creative_controller)
+    event.custom({
+        type: 'extendedcrafting:shaped_table',
+        pattern: [
+            'PPPPUPPPP',
+            'PCSAMASCP',
+            'PSOTBTOSP',
+            'PAEDRDEAP',
+            'UMBKNKBME',
+            'PAEDRDEAP',
+            'PSOTBTOSP',
+            'PCSAMASCP',
+            'PPPPUPPPP'
+        ],
+        key: {
+            P: { item: 'refinedstorage:advanced_processor' },
+            U: { item: 'mekanism:ultimate_control_circuit' },
+            C: { item: 'refinedstorage:controller' },
+            S: { item: 'refinedstorage:64k_storage_part' },
+            A: { item: 'mekanism:alloy_atomic' },
+            M: { item: 'create:precision_mechanism' },
+            O: { item: 'mekanism:ingot_refined_obsidian' },
+            T: { item: 'ars_nouveau:archmage_spell_book' },
+            B: { item: 'minecraft:nether_star' },
+            E: { item: 'powah:crystal_nitro' },
+            D: { item: 'refinedstorage:machine_casing' },
+            R: { item: 'undergarden:forgotten_ingot' },
+            K: { item: 'minecraft:netherite_block' },
+            N: { item: 'refinedstorage:network_card' }
+        },
+        result: {
+            id: 'refinedstorage:creative_controller',
+            count: 1
+        }
+    }).id('steampunk:endgame/creative_controller_rs_9x9');
+
+    // 5. Креативный диск памяти Refined Storage (refinedstorage:creative_storage_disk)
+    event.custom({
+        type: 'extendedcrafting:shaped_table',
+        pattern: [
+            'SSSSUSSSS',
+            'SCPAPAPCS',
+            'SPOMTMOSP',
+            'SAENBNEAP',
+            'UATKDKTAU',
+            'PAENBNEAP',
+            'SPOMTMOSP',
+            'SCPAPAPCS',
+            'SSSSUSSSS'
+        ],
+        key: {
+            S: { item: 'refinedstorage:64k_storage_part' },
+            U: { item: 'mekanism:ultimate_control_circuit' },
+            C: { item: 'refinedstorage:creative_controller' },
+            P: { item: 'refinedstorage:advanced_processor' },
+            A: { item: 'mekanism:alloy_atomic' },
+            O: { item: 'mekanism:ingot_refined_obsidian' },
+            M: { item: 'create:precision_mechanism' },
+            T: { item: 'powah:crystal_nitro' },
+            E: { item: 'twilightforest:carminite' },
+            N: { item: 'minecraft:nether_star' },
+            B: { item: 'undergarden:forgotten_ingot' },
+            K: { item: 'refinedstorage:storage_housing' },
+            D: { item: 'minecraft:netherite_block' }
+        },
+        result: {
+            id: 'refinedstorage:creative_storage_disk',
+            count: 1
+        }
+    }).id('steampunk:endgame/creative_storage_disk_9x9');
+
 });

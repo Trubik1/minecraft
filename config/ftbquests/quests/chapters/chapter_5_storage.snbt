@@ -258,8 +258,8 @@
 			shape: "rsquare"
 			size: 1.5d
 			tasks: [{
-				id: "6205B6B93B306A12"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				id: "095C8219D3184ED9"
+				item: { components: { "sophisticatedstorage:wood_type": "spruce" }, count: 1, id: "sophisticatedstorage:copper_chest" }
 				type: "item"
 			}]
 			x: 4.5d
@@ -285,8 +285,8 @@
 			]
 			size: 1.25d
 			tasks: [{
-				id: "2E04D0F6EEABE677"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				id: "17A64590EBC85EF7"
+				item: { count: 1, id: "functionalstorage:oak_1" }
 				type: "item"
 			}]
 			x: -7.0d
