@@ -79,11 +79,8 @@
 			rewards: [{
 				id: "0B047C10D4250E4B"
 				item: {
-					components: {
-						"ftbquests:missing_item": "mysticalagriculture:slime_seeds"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "mysticalagriculture:slime_seeds"
 				}
 				type: "item"
 			}]
@@ -118,11 +115,8 @@
 			rewards: [{
 				id: "7F9B73902E8BB19A"
 				item: {
-					components: {
-						"ftbquests:missing_item": "mysticalagriculture:gold_seeds"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "mysticalagriculture:gold_seeds"
 				}
 				type: "item"
 			}]
@@ -295,11 +289,8 @@
 			rewards: [{
 				id: "71E326DC6718661A"
 				item: {
-					components: {
-						"ftbquests:missing_item": "mysticalagriculture:coal_seeds"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "mysticalagriculture:coal_seeds"
 				}
 				type: "item"
 			}]

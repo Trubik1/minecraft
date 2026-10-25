@@ -1761,4 +1761,233 @@ ServerEvents.recipes(event => {
         }
     }).id('steampunk:fluxnetworks/flux_dust_energizing');
 
+
+    // ==========================================================================
+    // MYSTICAL AGRICULTURE: HARDENED SEED PROGRESSION (Create x Mekanism x MA)
+    // ==========================================================================
+
+    // 1. Prosperity Seed Base (Усложненная основа семени)
+    event.remove({ output: 'mysticalagriculture:prosperity_seed_base' });
+    event.shaped('mysticalagriculture:prosperity_seed_base', [
+        'PSP',
+        'BWB',
+        'PEP'
+    ], {
+        P: 'mysticalagriculture:prosperity_shard',
+        S: 'mysticalagriculture:inferium_essence',
+        B: 'create:brass_sheet',
+        W: 'minecraft:wheat_seeds',
+        E: 'create:andesite_alloy'
+    }).id('steampunk:mysticalagriculture/prosperity_seed_base_shaped');
+
+    event.recipes.create.sequenced_assembly([
+        'mysticalagriculture:prosperity_seed_base'
+    ], 'minecraft:wheat_seeds', [
+        event.recipes.createDeploying('minecraft:wheat_seeds', ['minecraft:wheat_seeds', 'mysticalagriculture:prosperity_shard']),
+        event.recipes.createDeploying('minecraft:wheat_seeds', ['minecraft:wheat_seeds', 'create:brass_sheet']),
+        event.recipes.createDeploying('minecraft:wheat_seeds', ['minecraft:wheat_seeds', 'mysticalagriculture:inferium_essence']),
+        event.recipes.createPressing('minecraft:wheat_seeds', 'minecraft:wheat_seeds')
+    ]).transitionalItem('minecraft:wheat_seeds').loops(1).id('steampunk:create/sequenced_prosperity_seed_base');
+
+    // 2. Soulium Seed Base (Базовое семя душ с Ars Nouveau & Soulium)
+    event.remove({ output: 'mysticalagriculture:soulium_seed_base' });
+    event.shaped('mysticalagriculture:soulium_seed_base', [
+        'SDS',
+        'GBG',
+        'SDS'
+    ], {
+        S: 'mysticalagriculture:soulium_dust',
+        D: 'mysticalagriculture:soulium_ingot',
+        G: 'ars_nouveau:source_gem',
+        B: 'mysticalagriculture:prosperity_seed_base'
+    }).id('steampunk:mysticalagriculture/soulium_seed_base_progression');
+
+    // 3. Iron Seeds (Железные семена: Tertium + Iron + Brass)
+    event.remove({ output: 'mysticalagriculture:iron_seeds' });
+    event.custom({
+        type: 'mysticalagriculture:infusion',
+        input: { item: 'mysticalagriculture:prosperity_seed_base' },
+        ingredients: [
+            { item: 'minecraft:iron_ingot' },
+            { item: 'mysticalagriculture:tertium_essence' },
+            { item: 'create:brass_ingot' },
+            { item: 'mysticalagriculture:tertium_essence' },
+            { item: 'minecraft:iron_ingot' },
+            { item: 'mysticalagriculture:tertium_essence' },
+            { item: 'create:brass_ingot' },
+            { item: 'mysticalagriculture:tertium_essence' }
+        ],
+        result: { count: 1, id: 'mysticalagriculture:iron_seeds' }
+    }).id('steampunk:mysticalagriculture/infusion_iron_seeds');
+
+    event.recipes.create.sequenced_assembly([
+        'mysticalagriculture:iron_seeds'
+    ], 'mysticalagriculture:prosperity_seed_base', [
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'minecraft:iron_ingot']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:tertium_essence']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'create:brass_ingot']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:tertium_essence']),
+        event.recipes.createPressing('mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:prosperity_seed_base')
+    ]).transitionalItem('mysticalagriculture:prosperity_seed_base').loops(1).id('steampunk:create/sequenced_iron_seeds');
+
+    // 4. Gold Seeds (Золотые семена: Imperium + Gold + Polished Rose Quartz)
+    event.remove({ output: 'mysticalagriculture:gold_seeds' });
+    event.custom({
+        type: 'mysticalagriculture:infusion',
+        input: { item: 'mysticalagriculture:prosperity_seed_base' },
+        ingredients: [
+            { item: 'minecraft:gold_ingot' },
+            { item: 'mysticalagriculture:imperium_essence' },
+            { item: 'create:polished_rose_quartz' },
+            { item: 'mysticalagriculture:imperium_essence' },
+            { item: 'minecraft:gold_ingot' },
+            { item: 'mysticalagriculture:imperium_essence' },
+            { item: 'create:polished_rose_quartz' },
+            { item: 'mysticalagriculture:imperium_essence' }
+        ],
+        result: { count: 1, id: 'mysticalagriculture:gold_seeds' }
+    }).id('steampunk:mysticalagriculture/infusion_gold_seeds');
+
+    event.recipes.create.sequenced_assembly([
+        'mysticalagriculture:gold_seeds'
+    ], 'mysticalagriculture:prosperity_seed_base', [
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'minecraft:gold_ingot']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:imperium_essence']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'create:polished_rose_quartz']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:imperium_essence']),
+        event.recipes.createPressing('mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:prosperity_seed_base')
+    ]).transitionalItem('mysticalagriculture:prosperity_seed_base').loops(1).id('steampunk:create/sequenced_gold_seeds');
+
+    // 5. Redstone Seeds (Краснокаменные семена: Tertium + Redstone Block + Flux Dust)
+    event.remove({ output: 'mysticalagriculture:redstone_seeds' });
+    event.custom({
+        type: 'mysticalagriculture:infusion',
+        input: { item: 'mysticalagriculture:prosperity_seed_base' },
+        ingredients: [
+            { item: 'minecraft:redstone_block' },
+            { item: 'mysticalagriculture:tertium_essence' },
+            { item: 'fluxnetworks:flux_dust' },
+            { item: 'mysticalagriculture:tertium_essence' },
+            { item: 'minecraft:redstone_block' },
+            { item: 'mysticalagriculture:tertium_essence' },
+            { item: 'fluxnetworks:flux_dust' },
+            { item: 'mysticalagriculture:tertium_essence' }
+        ],
+        result: { count: 1, id: 'mysticalagriculture:redstone_seeds' }
+    }).id('steampunk:mysticalagriculture/infusion_redstone_seeds');
+
+    event.custom({
+        type: 'powah:energizing',
+        energy: 30000,
+        ingredients: [
+            { item: 'mysticalagriculture:prosperity_seed_base' },
+            { item: 'minecraft:redstone_block' },
+            { item: 'mysticalagriculture:tertium_essence' },
+            { item: 'fluxnetworks:flux_dust' }
+        ],
+        result: { count: 1, id: 'mysticalagriculture:redstone_seeds' }
+    }).id('steampunk:powah/energizing_redstone_seeds');
+
+    // 6. Slime Seeds (Семена слизи: Tertium + Slime + Dry Rubber)
+    event.remove({ output: 'mysticalagriculture:slime_seeds' });
+    event.custom({
+        type: 'mysticalagriculture:infusion',
+        input: { item: 'mysticalagriculture:soulium_seed_base' },
+        ingredients: [
+            { item: 'minecraft:slime_block' },
+            { item: 'mysticalagriculture:tertium_essence' },
+            { item: 'industrialforegoing:dryrubber' },
+            { item: 'mysticalagriculture:tertium_essence' },
+            { item: 'minecraft:slime_block' },
+            { item: 'mysticalagriculture:tertium_essence' },
+            { item: 'industrialforegoing:dryrubber' },
+            { item: 'mysticalagriculture:tertium_essence' }
+        ],
+        result: { count: 1, id: 'mysticalagriculture:slime_seeds' }
+    }).id('steampunk:mysticalagriculture/infusion_slime_seeds');
+
+    // 7. Diamond Seeds (Алмазные семена: Supremium + Diamond + Reinforced Alloy)
+    event.remove({ output: 'mysticalagriculture:diamond_seeds' });
+    event.custom({
+        type: 'mysticalagriculture:infusion',
+        input: { item: 'mysticalagriculture:prosperity_seed_base' },
+        ingredients: [
+            { item: 'minecraft:diamond' },
+            { item: 'mysticalagriculture:supremium_essence' },
+            { item: 'mekanism:alloy_reinforced' },
+            { item: 'mysticalagriculture:supremium_essence' },
+            { item: 'minecraft:diamond' },
+            { item: 'mysticalagriculture:supremium_essence' },
+            { item: 'mekanism:alloy_reinforced' },
+            { item: 'mysticalagriculture:supremium_essence' }
+        ],
+        result: { count: 1, id: 'mysticalagriculture:diamond_seeds' }
+    }).id('steampunk:mysticalagriculture/infusion_diamond_seeds');
+
+    event.recipes.create.sequenced_assembly([
+        'mysticalagriculture:diamond_seeds'
+    ], 'mysticalagriculture:prosperity_seed_base', [
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'minecraft:diamond']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:supremium_essence']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mekanism:alloy_reinforced']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:supremium_essence']),
+        event.recipes.createPressing('mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:prosperity_seed_base')
+    ]).transitionalItem('mysticalagriculture:prosperity_seed_base').loops(1).id('steampunk:create/sequenced_diamond_seeds');
+
+    // 8. Netherite Seeds (Незеритовые семена: Supremium + Netherite + Black Iron)
+    event.remove({ output: 'mysticalagriculture:netherite_seeds' });
+    event.custom({
+        type: 'mysticalagriculture:infusion',
+        input: { item: 'mysticalagriculture:prosperity_seed_base' },
+        ingredients: [
+            { item: 'minecraft:netherite_ingot' },
+            { item: 'mysticalagriculture:supremium_essence' },
+            { item: 'extendedcrafting:black_iron_ingot' },
+            { item: 'mysticalagriculture:supremium_essence' },
+            { item: 'minecraft:netherite_ingot' },
+            { item: 'mysticalagriculture:supremium_essence' },
+            { item: 'extendedcrafting:black_iron_ingot' },
+            { item: 'mysticalagriculture:supremium_essence' }
+        ],
+        result: { count: 1, id: 'mysticalagriculture:netherite_seeds' }
+    }).id('steampunk:mysticalagriculture/infusion_netherite_seeds');
+
+    event.recipes.create.sequenced_assembly([
+        'mysticalagriculture:netherite_seeds'
+    ], 'mysticalagriculture:prosperity_seed_base', [
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'minecraft:netherite_ingot']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:supremium_essence']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'extendedcrafting:black_iron_ingot']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:supremium_essence']),
+        event.recipes.createPressing('mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:prosperity_seed_base')
+    ]).transitionalItem('mysticalagriculture:prosperity_seed_base').loops(1).id('steampunk:create/sequenced_netherite_seeds');
+
+    // 9. Nether Star Seeds (Семена звезды Незера: Insanium + Nether Star + Crystaltine)
+    event.remove({ output: 'mysticalagriculture:nether_star_seeds' });
+    event.custom({
+        type: 'mysticalagriculture:infusion',
+        input: { item: 'mysticalagriculture:prosperity_seed_base' },
+        ingredients: [
+            { item: 'minecraft:nether_star' },
+            { item: 'mysticalagradditions:insanium_essence' },
+            { item: 'extendedcrafting:crystaltine_ingot' },
+            { item: 'mysticalagradditions:insanium_essence' },
+            { item: 'minecraft:nether_star' },
+            { item: 'mysticalagradditions:insanium_essence' },
+            { item: 'extendedcrafting:crystaltine_ingot' },
+            { item: 'mysticalagradditions:insanium_essence' }
+        ],
+        result: { count: 1, id: 'mysticalagriculture:nether_star_seeds' }
+    }).id('steampunk:mysticalagriculture/infusion_nether_star_seeds');
+
+    event.recipes.create.sequenced_assembly([
+        'mysticalagriculture:nether_star_seeds'
+    ], 'mysticalagriculture:prosperity_seed_base', [
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'minecraft:nether_star']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagradditions:insanium_essence']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'extendedcrafting:crystaltine_ingot']),
+        event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagradditions:insanium_essence']),
+        event.recipes.createPressing('mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:prosperity_seed_base')
+    ]).transitionalItem('mysticalagriculture:prosperity_seed_base').loops(1).id('steampunk:create/sequenced_nether_star_seeds');
+
 });

@@ -184,11 +184,8 @@
 			rewards: [{
 				id: "620031AAC8CB2557"
 				item: {
-					components: {
-						"ftbquests:missing_item": "mysticalagriculture:redstone_seeds"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "mysticalagriculture:redstone_seeds"
 				}
 				type: "item"
 			}]
@@ -207,11 +204,8 @@
 			rewards: [{
 				id: "5742A8B57C1F468F"
 				item: {
-					components: {
-						"ftbquests:missing_item": "mysticalagriculture:slime_seeds"
-					}
 					count: 1
-					id: "ftbquests:missing_item"
+					id: "mysticalagriculture:slime_seeds"
 				}
 				type: "item"
 			}]
