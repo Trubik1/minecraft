@@ -698,4 +698,220 @@ ServerEvents.recipes(event => {
         S: 'twilightforest:carminite_block',
         B: 'ars_nouveau:source_gem'
     }).id('steampunk:solar/sp_carminite_craft');
+
+    // ==========================================================================
+    // POWAH: ТЕХНО-МАГИЧЕСКАЯ ПРОГРЕССИЯ И КРОСС-МОДОВЫЕ РЕЦЕПТЫ
+    // ==========================================================================
+
+    // 1. Металлургический наполнитель: Массовое производство диэлектрической пасты через Углерод
+    event.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemical_input: {
+            amount: 20,
+            tag: 'mekanism:carbon'
+        },
+        item_input: {
+            count: 1,
+            item: 'minecraft:clay_ball'
+        },
+        output: {
+            count: 8,
+            id: 'powah:dielectric_paste'
+        },
+        per_tick_usage: false
+    }).id('steampunk:powah/infusing_dielectric_paste');
+
+    // 2. Альтернативный крафт пасты диэлектрика через Create Cinder Flour
+    event.shapeless('16x powah:dielectric_paste', [
+        'create:cinder_flour',
+        'minecraft:clay_ball',
+        '#minecraft:coals'
+    ]).id('steampunk:powah/dielectric_paste_cinder_flour');
+
+    // 3. Диэлектрические корпуса с повышенным выходом через корпуса Create и Mekanism
+    event.shaped('2x powah:dielectric_casing', [
+        ' R ',
+        'RCR',
+        ' R '
+    ], {
+        R: 'powah:dielectric_rod',
+        C: 'create:andesite_casing'
+    }).id('steampunk:powah/dielectric_casing_andesite');
+
+    event.shaped('4x powah:dielectric_casing', [
+        ' R ',
+        'RCR',
+        ' R '
+    ], {
+        R: 'powah:dielectric_rod',
+        C: 'create:brass_casing'
+    }).id('steampunk:powah/dielectric_casing_brass');
+
+    event.shaped('8x powah:dielectric_casing', [
+        ' R ',
+        'RCR',
+        ' R '
+    ], {
+        R: 'powah:dielectric_rod',
+        C: 'mekanism:steel_casing'
+    }).id('steampunk:powah/dielectric_casing_steel');
+
+    // 4. Зарядная сфера (Energizing Orb) — синтез Create, Mekanism и Ars Nouveau
+    event.remove({ output: 'powah:energizing_orb' });
+    event.shaped('powah:energizing_orb', [
+        'RRR',
+        'PCE',
+        'RSR'
+    ], {
+        R: 'powah:dielectric_rod',
+        P: 'create:precision_mechanism',
+        C: 'powah:dielectric_casing',
+        E: 'mekanism:basic_control_circuit',
+        S: 'ars_nouveau:source_gem'
+    }).id('steampunk:powah/energizing_orb_progression');
+
+    // 5. Зарядоотводы (Energizing Rods) — ступенчатое технологическое улучшение
+    // Базовый стержень: требует латунный лист Create
+    event.remove({ output: 'powah:energizing_rod_basic' });
+    event.shaped('powah:energizing_rod_basic', [
+        ' C ',
+        ' B ',
+        ' S '
+    ], {
+        C: 'powah:capacitor_basic',
+        B: 'create:brass_sheet',
+        S: 'powah:energizing_rod_starter'
+    }).id('steampunk:powah/energizing_rod_basic_craft');
+
+    // Закаленный стержень: требует сталь под напряжением + обогащенный сплав Mekanism
+    event.remove({ output: 'powah:energizing_rod_hardened' });
+    event.shaped('powah:energizing_rod_hardened', [
+        ' C ',
+        ' A ',
+        ' S '
+    ], {
+        C: 'powah:capacitor_hardened',
+        A: 'mekanism:alloy_infused',
+        S: 'powah:energizing_rod_basic'
+    }).id('steampunk:powah/energizing_rod_hardened_craft');
+
+    // Пылающий стержень: требует пылающий кристалл + армированный сплав Mekanism
+    event.remove({ output: 'powah:energizing_rod_blazing' });
+    event.shaped('powah:energizing_rod_blazing', [
+        ' C ',
+        ' A ',
+        ' S '
+    ], {
+        C: 'powah:capacitor_blazing',
+        A: 'mekanism:alloy_reinforced',
+        S: 'powah:energizing_rod_hardened'
+    }).id('steampunk:powah/energizing_rod_blazing_craft');
+
+    // Ниотический стержень: требует ниотический кристалл + слиток очищенного обсидиана
+    event.remove({ output: 'powah:energizing_rod_niotic' });
+    event.shaped('powah:energizing_rod_niotic', [
+        ' C ',
+        ' A ',
+        ' S '
+    ], {
+        C: 'powah:capacitor_niotic',
+        A: 'mekanism:ingot_refined_obsidian',
+        S: 'powah:energizing_rod_blazing'
+    }).id('steampunk:powah/energizing_rod_niotic_craft');
+
+    // Резонансный стержень: требует спиритический кристалл + атомарный сплав Mekanism
+    event.remove({ output: 'powah:energizing_rod_spirited' });
+    event.shaped('powah:energizing_rod_spirited', [
+        ' C ',
+        ' A ',
+        ' S '
+    ], {
+        C: 'powah:capacitor_spirited',
+        A: 'mekanism:alloy_atomic',
+        S: 'powah:energizing_rod_niotic'
+    }).id('steampunk:powah/energizing_rod_spirited_craft');
+
+    // Нитро стержень: требует нитро-кристалл + точный механизм Create + звезда Незера
+    event.remove({ output: 'powah:energizing_rod_nitro' });
+    event.shaped('powah:energizing_rod_nitro', [
+        ' C ',
+        ' N ',
+        ' S '
+    ], {
+        C: 'powah:capacitor_nitro',
+        N: 'minecraft:nether_star',
+        S: 'powah:energizing_rod_spirited'
+    }).id('steampunk:powah/energizing_rod_nitro_craft');
+
+    // 6. Уникальные рецепты Зарядной сферы (Energizing Orb Transmutation)
+    // Create Андезитовый сплав + Золото -> 2x Сталь под напряжением
+    event.custom({
+        type: 'powah:energizing',
+        energy: 20000,
+        ingredients: [
+            { item: 'create:andesite_alloy' },
+            { item: 'minecraft:gold_ingot' }
+        ],
+        result: {
+            count: 2,
+            id: 'powah:steel_energized'
+        }
+    }).id('steampunk:powah/energizing_andesite_to_steel');
+
+    // Сумеречный лес Сталелист + Золото -> 2x Сталь под напряжением (быстрая магическая проводка)
+    event.custom({
+        type: 'powah:energizing',
+        energy: 15000,
+        ingredients: [
+            { item: 'twilightforest:steeleaf_ingot' },
+            { item: 'minecraft:gold_ingot' }
+        ],
+        result: {
+            count: 2,
+            id: 'powah:steel_energized'
+        }
+    }).id('steampunk:powah/energizing_steeleaf_to_steel');
+
+    // Mekanism Обогащенный алмаз -> Ниотический кристалл (скидка 50% энергии!)
+    event.custom({
+        type: 'powah:energizing',
+        energy: 150000,
+        ingredients: [
+            { item: 'mekanism:enriched_diamond' }
+        ],
+        result: {
+            count: 1,
+            id: 'powah:crystal_niotic'
+        }
+    }).id('steampunk:powah/energizing_enriched_diamond_niotic');
+
+    // Ars Nouveau Самоцвет источника + Порошок блейза -> Пылающий кристалл
+    event.custom({
+        type: 'powah:energizing',
+        energy: 60000,
+        ingredients: [
+            { item: 'ars_nouveau:source_gem' },
+            { item: 'minecraft:blaze_powder' }
+        ],
+        result: {
+            count: 1,
+            id: 'powah:crystal_blazing'
+        }
+    }).id('steampunk:powah/energizing_source_gem_blazing');
+
+    // Эндер-ядро: 4x выход при использовании точного механизма Create!
+    event.custom({
+        type: 'powah:energizing',
+        energy: 80000,
+        ingredients: [
+            { item: 'powah:dielectric_casing' },
+            { item: 'minecraft:ender_eye' },
+            { item: 'create:precision_mechanism' }
+        ],
+        result: {
+            count: 4,
+            id: 'powah:ender_core'
+        }
+    }).id('steampunk:powah/energizing_ender_core_quad');
+
 });
