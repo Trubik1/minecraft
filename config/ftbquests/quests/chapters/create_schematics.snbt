@@ -24,10 +24,9 @@
 			id: "15F6F182239E6D14"
 			rewards: [
 				{
-					count: 4
-					id: "50C5E87FBB137F37"
+					id: "1A2B3C4D5E6F7001"
 					item: {
-						count: 4
+						count: 2
 						id: "create:empty_schematic"
 					}
 					type: "item"
@@ -54,7 +53,7 @@
 			description: [
 				"Схематический стол служит для записи скачанных схем на физические чертежи.",
 				"",
-				"Поместите в него пустой чертеж, и вы увидите выпадающий список всех файлов .nbt из вашей папки schematics."
+				"Поместите в него пустой чертеж, и вы увидите выпадающий список всех файлов .nbt из вашей папки .minecraft/schematics/."
 			]
 			icon: {
 				id: "create:schematic_table"
@@ -75,8 +74,6 @@
 					xp: 100
 				}
 			]
-			shape: "square"
-			size: 1.2d
 			tasks: [{
 				id: "2A3B4C5D6E7F8002"
 				item: { count: 1, id: "create:schematic_table" }
@@ -96,22 +93,22 @@
 				"",
 				"§6Пошаговая инструкция по загрузке схем:§r",
 				"1. Зайдите на сайт §bhttps://createmod.com/§r и найдите нужную схему ресурса.",
-				"2. Нажмите кнопку §eDownload .nbt§r.",
-				"3. Перенесите скачанный файл в папку сборки: §e.minecraft/schematics/§r.",
+				"2. Нажмите кнопку §eDownload .nbt§r (или Download Schematic).",
+				"3. Перенесите скачанный файл в папку сборки: §e.minecraft/schematics/§r (в лаунчере Modrinth: щелкните по профилю -> папка 'schematics').",
 				"4. В игре откройте §6Схематический стол§r, выберите схему из списка и запишите её на §6Пустой чертеж§r!",
 				"5. Зарядите чертеж в Схематическую пушку."
 			]
 			icon: {
 				id: "minecraft:writable_book"
 			}
-			id: "28658F919522A076"
+			id: "2A3B4C5D6E7F8000"
 			rewards: [
 				{
-					count: 16
+					count: 32
 					id: "1A2B3C4D5E6F7005"
 					item: {
-						count: 16
-						id: "minecraft:paper"
+						count: 32
+						id: "minecraft:gunpowder"
 					}
 					type: "item"
 				}
@@ -128,43 +125,12 @@
 				title: "Я изучил руководство по сайту createmod.com"
 				type: "checkmark"
 			}]
-			title: "База чертежей: createmod.com"
+			title: "Каталог схем Createmod.com и Инструкция"
 			x: 4.5d
 			y: -3.5d
 		}
 		{
-			dependencies: ["28B92D4B88B293F0"]
-			description: [
-				"Позволяет сохранить собственную постройку в файл схемы прямо в игре!",
-				"",
-				"ПКМ по первому углу, затем ПКМ по противоположному углу постройки. Введите имя файла и нажмите Сохранить. Файл появится в вашей папке schematics!"
-			]
-			icon: {
-				id: "create:schematic_and_quill"
-			}
-			id: "162EE7EA9C8B90F3"
-			rewards: [
-				{
-					count: 2
-					id: "1A2B3C4D5E6F7007"
-					item: {
-						count: 2
-						id: "create:empty_schematic"
-					}
-					type: "item"
-				}
-			]
-			tasks: [{
-				id: "2A3B4C5D6E7F8004"
-				item: { count: 1, id: "create:schematic_and_quill" }
-				type: "item"
-			}]
-			title: "Чертеж и перо (Schematic and Quill)"
-			x: 2.0d
-			y: -5.0d
-		}
-		{
-			dependencies: ["28658F919522A076"]
+			dependencies: ["2A3B4C5D6E7F8000"]
 			description: [
 				"Схематическая пушка — чудо инженерной мысли! Она автоматически строит выбранную схему блок за блоком.",
 				"",
@@ -181,32 +147,24 @@
 			id: "7F963674E6A4D5EE"
 			rewards: [
 				{
-					count: 32
-					id: "1A2B3C4D5E6F7009"
+					count: 64
+					id: "1A2B3C4D5E6F7007"
 					item: {
-						count: 32
+						count: 64
 						id: "minecraft:gunpowder"
 					}
 					type: "item"
 				}
 				{
-					id: "1A2B3C4D5E6F7010"
-					item: {
-						count: 1
-						id: "minecraft:chest"
-					}
-					type: "item"
-				}
-				{
-					id: "1A2B3C4D5E6F7011"
+					id: "1A2B3C4D5E6F7008"
 					type: "xp"
-					xp: 250
+					xp: 200
 				}
 			]
-			shape: "hexagon"
+			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "2A3B4C5D6E7F8005"
+				id: "2A3B4C5D6E7F8004"
 				item: { count: 1, id: "create:schematicannon" }
 				type: "item"
 			}]
@@ -215,17 +173,61 @@
 			y: -3.5d
 		}
 		{
+			dependencies: ["7F963674E6A4D5EE"]
+			description: [
+				"Ниже представлены проверенные сообществом схемы ключевых автоферм и фабрик ресурсов.",
+				"",
+				"В каждом квесте вас ждут:",
+				"• Техническая схема и превью механизма",
+				"• Полная смета необходимых блоков (Bill of Materials)",
+				"• Подробный принцип работы кинематики и потоков предметов",
+				"• Прямые ссылки на скачивание чертежей с createmod.com и подробные видеогайды на YouTube!"
+			]
+			icon: {
+				id: "create:clipboard"
+			}
+			id: "28658F919522A076"
+			rewards: [{
+				id: "1A2B3C4D5E6F7009"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "diamond"
+			size: 1.3d
+			tasks: [{
+				id: "2A3B4C5D6E7F8005"
+				title: "Готов к строительству заводов"
+				type: "checkmark"
+			}]
+			title: "Схемы ресурсов сообщества"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Самая популярная и необходимая фабрика в Create!",
+				"{image:atm:textures/questpics/schematics/iron_farm.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"1. Механический генератор булыжника (лава + вода + буры).",
-				"2. Дробильные колеса (Crushing Wheels) перемалывают булыжник в гравий.",
-				"3. Заключенный вентилятор с водой (Encased Fan) промывает гравий, производя кусочки железа (Iron Nuggets) и кремень.",
-				"4. Механический пресс в чаше спрессовывает самородки в полноценные железные слитки!",
+				"Полностью автоматическая генерация бесконечного железа из булыжника без участия жителей и големов!",
 				"",
-				"§bПоиск на сайте:§r введите §eiron farm§r на §bhttps://createmod.com/?s=iron+farm§r и скачайте схему."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Механический бур (Mechanical Drill)",
+				"• 2x Дробильные колеса (Crushing Wheels)",
+				"• 1x Корпусный вентилятор (Encased Fan)",
+				"• 1x Механический пресс (Mechanical Press)",
+				"• 1x Бассейн (Basin)",
+				"• 1x Ведро лавы, 2x Ведро воды",
+				"• Конвейерные ленты, желоба (Chutes) и воронки",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Генератор на стыке воды и лавы бесконечно создает булыжник.",
+				"2. Механический бур мгновенно скалывает появляющийся блок камня.",
+				"3. Дробильные колеса перетирают булыжник в гравий (128+ RPM).",
+				"4. Поток воздуха от вентилятора сквозь воду вымывает из гравия железные самородки и кремень.",
+				"5. Латунная воронка направляет самородки в Бассейн, где Механический пресс спрессовывает их в готовые железные слитки!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/compact-iron-farm§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=s1Q2q5lMhR0§r"
 			]
 			icon: {
 				id: "minecraft:iron_ingot"
@@ -240,35 +242,52 @@
 						id: "minecraft:iron_ingot"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000001B"
-					type: "xp_levels"
-					xp_levels: 5
+					type: "xp"
+					xp: 250
 				}
 			]
-			tasks: [{
-				count: 64L
-				id: "4C0000000000001C"
-				item: { count: 64, id: "minecraft:iron_ingot" }
-				type: "item"
-			}]
-			title: "Схема: Бесконечное Железо (Iron Farm)"
-			x: 2.5d
+			tasks: [
+				{
+					id: "4C0000000000001C"
+					item: { count: 1, id: "create:mechanical_drill" }
+					type: "item"
+				},
+				{
+					id: "4C0000000000001D"
+					item: { count: 1, id: "create:encased_fan" }
+					type: "item"
+				}
+			]
+			title: "Схема: Железный Завод (Iron Farm)"
+			x: -0.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Радиальная автоматическая ферма дерева на механическом подшипнике.",
+				"{image:atm:textures/questpics/schematics/tree_farm.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"• Механический подшипник (Mechanical Bearing) непрерывно вращает конструкцию по кругу.",
-				"• Механические пилы (Mechanical Saws) спиливают стволы деревьев под корень.",
-				"• Развертыватели (Deployers) с саженцами высаживают новые деревья.",
-				"• Портативный интерфейс хранилища (Portable Storage Interface) выгружает бревна, яблоки и палки в сундук при каждом обороте!",
+				"Радиальная карусельная ферма древесины, обеспечивающая базу тысячами брёвен, палок, саженцев и яблок.",
 				"",
-				"§bПоиск на сайте:§r введите §etree farm§r на §bhttps://createmod.com/?s=tree+farm§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Механический подшипник (Mechanical Bearing)",
+				"• 4x-8x Механические пилы (Mechanical Saws)",
+				"• 4x-8x Развертыватели (Deployers)",
+				"• 2x Портативный интерфейс хранилища (Portable Storage Interface)",
+				"• 8x Линейное радиальное шасси (Linear Chassis) + Суперклей",
+				"• Сундуки для бортового хранилища и почва (дёрн)",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Подшипник непрерывно вращает конструкцию из шасси по кругу (16-32 RPM).",
+				"2. Пилы на внешней стороне спиливают стволы деревьев у самого основания вместе с кроной.",
+				"3. Развертыватели, заряженные саженцами, тут же сажают их обратно в землю позади пил.",
+				"4. При каждом прохождении мимо неподвижного портативного интерфейса карусель бесконтактно сгружает всю древесину в склад базы!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/radial-tree-farm§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=J_jK9GzD8eQ§r"
 			]
 			icon: {
 				id: "minecraft:oak_log"
@@ -283,33 +302,51 @@
 						id: "minecraft:oak_log"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000002B"
-					type: "xp_levels"
-					xp_levels: 5
+					type: "xp"
+					xp: 200
 				}
 			]
-			tasks: [{
-				count: 128L
-				id: "4C0000000000002C"
-				item: { count: 128, id: "minecraft:oak_log" }
-				type: "item"
-			}]
-			title: "Схема: Авто-Лесопилка (Tree Farm)"
-			x: 0.0d
+			tasks: [
+				{
+					id: "4C0000000000002C"
+					item: { count: 1, id: "create:mechanical_bearing" }
+					type: "item"
+				},
+				{
+					id: "4C0000000000002D"
+					item: { count: 1, id: "create:mechanical_saw" }
+					type: "item"
+				}
+			]
+			title: "Схема: Древесная Ферма (Tree Farm)"
+			x: 2.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Андезитовый сплав — хлеб и масло мода Create, необходимый для всех валов, шестеренок и корпусов.",
+				"{image:atm:textures/questpics/schematics/andesite_alloy.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"• Механический смеситель (Mechanical Mixer) над чашей (Basin) перемешивает андезит с кусочками железа или цинка без нагрева.",
-				"• В паре с автофермой железа и генератором андезита вы получаете бесконечный поток сплава!",
+				"Полностью автоматизированное производство андезитового сплава — сердца механики Create.",
 				"",
-				"§bПоиск на сайте:§r введите §eandesite alloy§r на §bhttps://createmod.com/?s=andesite+alloy§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Механический миксер (Mechanical Mixer)",
+				"• 1x Бассейн (Basin)",
+				"• 2x Дробильные колеса (Crushing Wheels) или Мельничный жернов",
+				"• Латунные воронки с фильтрами андезита и железа/цинка",
+				"• Желоба (Chutes) и конвейеры",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Булыжник и диорит перемалываются в андезит, либо андезит подается из карьера.",
+				"2. Воронки подают в бассейн андезит и железные/цинковые самородки в равной пропорции.",
+				"3. Механический миксер на скорости от 32 RPM замешивает компоненты без нагрева.",
+				"4. Готовый андезитовый сплав автоматически выбрасывается через латунную воронку с фильтром сплава прямо на конвейер!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/automated-andesite-alloy-generator§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=18aV2BqWb90§r"
 			]
 			icon: {
 				id: "create:andesite_alloy"
@@ -317,35 +354,58 @@
 			id: "4C00000000000003"
 			rewards: [
 				{
-					count: 16
+					count: 32
 					id: "4C0000000000003A"
 					item: {
-						count: 16
+						count: 32
 						id: "create:andesite_alloy"
 					}
 					type: "item"
+				},
+				{
+					id: "4C0000000000003B"
+					type: "xp"
+					xp: 250
 				}
 			]
-			tasks: [{
-				count: 32L
-				id: "4C0000000000003B"
-				item: { count: 32, id: "create:andesite_alloy" }
-				type: "item"
-			}]
-			title: "Схема: Андезитовый сплав (Andesite Alloy)"
-			x: 5.0d
+			tasks: [
+				{
+					id: "4C0000000000003C"
+					item: { count: 1, id: "create:mechanical_mixer" }
+					type: "item"
+				},
+				{
+					id: "4C0000000000003D"
+					item: { count: 1, id: "create:basin" }
+					type: "item"
+				}
+			]
+			title: "Схема: Андезитовый Сплав (Andesite Alloy)"
+			x: 4.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Латунь открывает эру точной автоматизации, логистики и продвинутых механизмов.",
+				"{image:atm:textures/questpics/schematics/brass_factory.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"• Горелка всполоха (Blaze Burner), заправленная топливом, разогревает чашу под смесителем.",
-				"• Смеситель плавит и смешивает медь и цинк в пропорции 1:1, выдавая слитки латуни.",
+				"Высокотемпературный металлургический комплекс для сплавления латунных слитков.",
 				"",
-				"§bПоиск на сайте:§r ищите §ebrass factory§r на §bhttps://createmod.com/?s=brass+factory§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Механический миксер (Mechanical Mixer)",
+				"• 1x Горелка всполоха (Blaze Burner)",
+				"• 1x Бассейн (Basin)",
+				"• 1x Механическая рука (Mechanical Arm) или развертыватель (подача топлива)",
+				"• Латунные воронки с фильтрами меди и цинка (пропорция 1:1)",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Под бассейном размещается Горелка всполоха, подогреваемая углем, древесиной или ведрами с лавой.",
+				"2. Воронки подают в бассейн медные и цинковые слитки в равных частях.",
+				"3. Горячий миксер сплавляет металлы в латунь (Brass Ingot) при 64+ RPM.",
+				"4. Механическая рука автоматически подкармливает всполоха горючим, поддерживая максимальный жар круглосуточно!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/automated-brass-production§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=zK3K8sX5xQo§r"
 			]
 			icon: {
 				id: "create:brass_ingot"
@@ -360,35 +420,51 @@
 						id: "create:brass_ingot"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000004B"
-					type: "xp_levels"
-					xp_levels: 10
+					type: "xp"
+					xp: 300
 				}
 			]
-			tasks: [{
-				count: 32L
-				id: "4C0000000000004C"
-				item: { count: 32, id: "create:brass_ingot" }
-				type: "item"
-			}]
-			title: "Схема: Завод Латуни (Brass Automation)"
-			x: 7.5d
+			tasks: [
+				{
+					id: "4C0000000000004C"
+					item: { count: 1, id: "create:blaze_burner" }
+					type: "item"
+				},
+				{
+					id: "4C0000000000004D"
+					item: { count: 1, id: "create:brass_ingot" }
+					type: "item"
+				}
+			]
+			title: "Схема: Литейная Латуни (Brass Factory)"
+			x: 7.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Полный цикл выпечки вкуснейшего хлеба без участия игрока!",
+				"{image:atm:textures/questpics/schematics/bread_bakery.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"1. Механические комбайны (Harvesters) скашивают пшеницу на грядках без их разрушения.",
-				"2. Мельничный жернов перемалывает зерно в пшеничную муку.",
-				"3. Вентилятор с водой промывает муку в сырое тесто (Dough).",
-				"4. Вентилятор с лавой обжигает тесто в хрустящий готовый хлеб!",
+				"Индустриальная пекарня полного цикла: от сбора пшеницы до замешивания теста и выпечки свежего хлеба!",
 				"",
-				"§bПоиск на сайте:§r ищите §ebread farm§r на §bhttps://createmod.com/?s=bread+farm§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Механический комбайн (Mechanical Harvester) на подшипнике",
+				"• 1x Мельничный жернов (Millstone) или Дробильные колеса",
+				"• 2x Корпусный вентилятор (Encased Fan)",
+				"• 1x Вода (для замешивания теста), 1x Лава или Костер (для выпекания)",
+				"• Конвейерные ленты и желоба",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Комбайн собирает спелую пшеницу с грядок, оставляя семена расти дальше.",
+				"2. Жернов перемалывает пшеницу в пшеничную муку (Wheat Flour).",
+				"3. Первый вентилятор с водой обдувает муку на ленте, превращая её в комки теста (Dough).",
+				"4. Второй вентилятор с лавой или огнем обжигает тесто прямо на ходу, превращая его в румяный хлеб!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/automatic-bread-factory§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=eB8M4_9bH70§r"
 			]
 			icon: {
 				id: "minecraft:bread"
@@ -396,35 +472,57 @@
 			id: "4C00000000000005"
 			rewards: [
 				{
-					count: 32
+					count: 64
 					id: "4C0000000000005A"
 					item: {
-						count: 32
+						count: 64
 						id: "minecraft:bread"
 					}
 					type: "item"
+				},
+				{
+					id: "4C0000000000005B"
+					type: "xp"
+					xp: 200
 				}
 			]
-			tasks: [{
-				count: 64L
-				id: "4C0000000000005B"
-				item: { count: 64, id: "minecraft:bread" }
-				type: "item"
-			}]
-			title: "Схема: Авто-Пекарня (Bread & Food Farm)"
-			x: 0.0d
-			y: 2.0d
+			tasks: [
+				{
+					id: "4C0000000000005C"
+					item: { count: 1, id: "create:mechanical_harvester" }
+					type: "item"
+				},
+				{
+					id: "4C0000000000005D"
+					item: { count: 1, id: "create:millstone" }
+					type: "item"
+				}
+			]
+			title: "Схема: Пекарня Хлеба (Bread Bakery)"
+			x: 9.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Бесконечный источник лавы для питания паровых котлов, горелок всполоха и металлургии!",
+				"{image:atm:textures/questpics/schematics/lava_generator.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"• Капельники (Pointed Dripstone) под источниками лавы капают в котлы (Cauldrons).",
-				"• Механические помпы (Mechanical Pumps) через трубы выкачивают лаву прямо из заполненных котлов в гигантский резервуар Fluid Tank.",
+				"Неиссякаемый источник жидкой лавы для питания паровых двигателей и плавильных печей базы.",
 				"",
-				"§bПоиск на сайте:§r ищите §elava farm§r на §bhttps://createmod.com/?s=lava+farm§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 8x-16x Заостренный капельник (Pointed Dripstone)",
+				"• 8x-16x Котлы (Cauldrons)",
+				"• 8x-16x Источников лавы (над капельниками)",
+				"• 1x Механическая помпа (Mechanical Pump)",
+				"• Жидкостные трубы (Fluid Pipes) и Жидкостный резервуар (Fluid Tank)",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Над капельниками размещаются блоки лавы. Капли постепенно наполняют котлы под ними.",
+				"2. Механическая помпа через трубы подключена к днищу каждого котла.",
+				"3. Как только в котле набирается 1000 mB лавы, помпа мгновенно откачивает её в центральный цистерный парк резервуаров!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/compact-infinite-lava-factory§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=H7Z8x3yZ1Q4§r"
 			]
 			icon: {
 				id: "minecraft:lava_bucket"
@@ -432,33 +530,57 @@
 			id: "4C00000000000006"
 			rewards: [
 				{
+					count: 4
 					id: "4C0000000000006A"
 					item: {
-						count: 1
+						count: 4
 						id: "create:fluid_tank"
 					}
 					type: "item"
+				},
+				{
+					id: "4C0000000000006B"
+					type: "xp"
+					xp: 250
 				}
 			]
-			tasks: [{
-				count: 4L
-				id: "4C0000000000006B"
-				item: { count: 4, id: "minecraft:lava_bucket" }
-				type: "item"
-			}]
-			title: "Схема: Фабрика Лавы (Lava Generator)"
-			x: 2.5d
+			tasks: [
+				{
+					id: "4C0000000000006C"
+					item: { count: 1, id: "create:mechanical_pump" }
+					type: "item"
+				},
+				{
+					id: "4C0000000000006D"
+					item: { count: 1, id: "create:fluid_tank" }
+					type: "item"
+				}
+			]
+			title: "Схема: Генератор Лавы (Lava Generator)"
+			x: -0.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Автоматическое производство пороха необходимо для снарядов Big Cannons и зарядов Схематической пушки.",
+				"{image:atm:textures/questpics/schematics/gunpowder_factory.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"• Дробильные колеса перемалывают гравий в кремень, а затем кремень в чистый порох!",
+				"Химический синтез пороха из базовых пород без необходимости строить крипер-фермы!",
 				"",
-				"§bПоиск на сайте:§r ищите §egunpowder farm§r на §bhttps://createmod.com/?s=gunpowder§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 2x Дробильные колеса (булыжник -> гравий -> песок)",
+				"• 1x Корпусный вентилятор (обдув песка -> глина/минералы)",
+				"• 1x Механический миксер (Mechanical Mixer) + Бассейн",
+				"• Уголь / Угольная пыль и кремень",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Булыжник растирается колесами в гравий, затем в песок.",
+				"2. Перетертый уголь и кремень подаются в чашу бассейна.",
+				"3. Миксер соединяет минеральные компоненты в чистый порох (Gunpowder).",
+				"4. Завод обеспечивает порохом ваши пушки Create Big Cannons и Схематическую пушку!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/create-gunpowder-generator§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=0k1L2b3Q4W5§r"
 			]
 			icon: {
 				id: "minecraft:gunpowder"
@@ -466,35 +588,52 @@
 			id: "4C00000000000007"
 			rewards: [
 				{
-					count: 32
+					count: 64
 					id: "4C0000000000007A"
 					item: {
-						count: 32
+						count: 64
 						id: "minecraft:gunpowder"
 					}
 					type: "item"
+				},
+				{
+					id: "4C0000000000007B"
+					type: "xp"
+					xp: 250
 				}
 			]
-			tasks: [{
-				count: 32L
-				id: "4C0000000000007B"
-				item: { count: 32, id: "minecraft:gunpowder" }
-				type: "item"
-			}]
-			title: "Схема: Фабрика Пороха (Gunpowder Farm)"
-			x: 5.0d
+			tasks: [
+				{
+					id: "4C0000000000007C"
+					item: { count: 1, id: "minecraft:gunpowder" }
+					type: "item"
+				}
+			]
+			title: "Схема: Фабрика Пороха (Gunpowder Factory)"
+			x: 2.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Добыча чистого золота из глубин Незера!",
+				"{image:atm:textures/questpics/schematics/nether_gold.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"• Дробильные колеса перемалывают незеракк (Netherrack) в зольную муку (Cinder Flour).",
-				"• Водяной вентилятор промывает зольную муку, производя золотые самородки и кварц без остатка!",
+				"Промышленное извлечение золотых самородков из незерита и адского камня.",
 				"",
-				"§bПоиск на сайте:§r ищите §egold farm§r на §bhttps://createmod.com/?s=gold+farm§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 2x Дробильные колеса (Crushing Wheels)",
+				"• 1x Корпусный вентилятор (Encased Fan) + Ведро воды",
+				"• 1x Механический пресс (Mechanical Press) + Бассейн",
+				"• Желоба, латунные воронки с фильтрами золота",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Незерак (Netherrack) подается из карьера в дробильные колеса.",
+				"2. Колеса измельчают адский камень в незерскую пыль/песок.",
+				"3. Водяной поток вентилятора вымывает из пыли золотые самородки (шанс 12%)!",
+				"4. Пресс прессует самородки в слитки золота для торговли с пиглинами и крафтов.",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/netherrack-to-gold-farm§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=m4K5j8L9P1Q§r"
 			]
 			icon: {
 				id: "minecraft:gold_ingot"
@@ -502,37 +641,53 @@
 			id: "4C00000000000008"
 			rewards: [
 				{
-					count: 16
+					count: 32
 					id: "4C0000000000008A"
 					item: {
-						count: 16
+						count: 32
 						id: "minecraft:gold_ingot"
 					}
 					type: "item"
+				},
+				{
+					id: "4C0000000000008B"
+					type: "xp"
+					xp: 300
 				}
 			]
-			tasks: [{
-				count: 32L
-				id: "4C0000000000008B"
-				item: { count: 32, id: "minecraft:gold_ingot" }
-				type: "item"
-			}]
-			title: "Схема: Золото Незера (Nether Gold Farm)"
-			x: 7.5d
+			tasks: [
+				{
+					id: "4C0000000000008C"
+					item: { count: 1, id: "minecraft:gold_ingot" }
+					type: "item"
+				}
+			]
+			title: "Схема: Золото из Незера (Nether Gold)"
+			x: 4.5d
 			y: 2.0d
 		}
 		{
-			dependencies: ["4C00000000000004"]
+			dependencies: ["28658F919522A076"]
 			description: [
-				"Самый сложный и престижный компонент Create — прецизионный механизм.",
+				"{image:atm:textures/questpics/schematics/precision_assembly.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы (Последовательная сборка):§r",
-				"• Конвейерная петля с 3 развертывателями (Deployers).",
-				"• Подается латунный лист.",
-				"• Развертыватели по очереди прикрепляют малую шестерню, большую шестерню и железный самородок.",
-				"• Процесс повторяется 5 раз подряд, после чего получается готовый прецизионный механизм!",
+				"Закольцованная автоматическая линия последовательной сборки высокоточных механизмов.",
 				"",
-				"§bПоиск на сайте:§r ищите §eprecision mechanism§r на §bhttps://createmod.com/?s=precision+mechanism§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 3x Механические развертыватели (Deployers)",
+				"• 1x Конвейерная лента (Belt) длиной 5-7 блоков",
+				"• 1x Воронка возврата или Механическая рука (закольцовка цикла)",
+				"• Заготовки: Малый зубчатый механизм, Большой зубчатый механизм, Железный самородок",
+				"• База: Латунный лист (Brass Sheet)",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Латунный лист поступает на конвейерную ленту под развертыватели.",
+				"2. Развертыватель 1 вживляет малую шестерню, развертыватель 2 — большую, развертыватель 3 — заклепку из железа.",
+				"3. Заготовка делает 5 полных кругов по закольцованной ленте.",
+				"4. Готовый прецизионный механизм (Precision Mechanism) снимается латунной воронкой!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/compact-precision-mechanism-loop§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=yP6Q7R8S9T0§r"
 			]
 			icon: {
 				id: "create:precision_mechanism"
@@ -547,35 +702,49 @@
 						id: "create:precision_mechanism"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000009B"
-					type: "xp_levels"
-					xp_levels: 15
+					type: "xp"
+					xp: 350
 				}
 			]
-			shape: "diamond"
-			size: 1.3d
-			tasks: [{
-				count: 8L
-				id: "4C0000000000009C"
-				item: { count: 8, id: "create:precision_mechanism" }
-				type: "item"
-			}]
-			title: "Схема: Прецизионная линия (Precision Line)"
-			x: 0.0d
-			y: 4.0d
+			tasks: [
+				{
+					id: "4C0000000000009C"
+					item: { count: 1, id: "create:precision_mechanism" }
+					type: "item"
+				},
+				{
+					id: "4C0000000000009D"
+					item: { count: 1, id: "create:deployer" }
+					type: "item"
+				}
+			]
+			title: "Схема: Точная Сборка (Precision Assembly)"
+			x: 7.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Бесконечный опыт в компактных кристаллических самородках!",
+				"{image:atm:textures/questpics/schematics/experience_farm.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"• Автоматическая полировка розового кварца с наждачной бумагой или дробление руд в дробильных колесах производят самородки опыта (Nuggets of Experience).",
-				"• Их можно есть для моментального получения уровней или плавить в блоки опыта!",
+				"Автоматическая фабрика кристаллизованного опыта в самородках без участия мобов!",
 				"",
-				"§bПоиск на сайте:§r ищите §exp farm§r на §bhttps://createmod.com/?s=xp+farm§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 2x Дробильные колеса (Crushing Wheels)",
+				"• 1x Корпусный вентилятор (Encased Fan) с водой",
+				"• Латунные воронки с фильтрами самородков опыта",
+				"• Сундук или резервуар для жидкого опыта",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Колеса измельчают рудные материалы или незерит на сверхвысоких скоростях.",
+				"2. При трении и водной сепарации выбиваются кристаллизованные самородки опыта (Experience Nuggets).",
+				"3. Самородки можно складывать тысячами в хранилище, кушать правой кнопкой для мгновенного набора уровней или плавить в блоки опыта!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/create-xp-nugget-factory§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=t1U2V3W4X5Y§r"
 			]
 			icon: {
 				id: "create:experience_nugget"
@@ -583,35 +752,51 @@
 			id: "4C0000000000000A"
 			rewards: [
 				{
-					count: 32
+					count: 64
 					id: "4C000000000000AA"
 					item: {
-						count: 32
+						count: 64
 						id: "create:experience_nugget"
 					}
 					type: "item"
+				},
+				{
+					id: "4C000000000000AB"
+					type: "xp_levels"
+					xp_levels: 10
 				}
 			]
 			tasks: [{
-				count: 32L
-				id: "4C000000000000AB"
-				item: { count: 32, id: "create:experience_nugget" }
+				id: "4C000000000000AC"
+				item: { count: 1, id: "create:experience_nugget" }
 				type: "item"
 			}]
 			title: "Схема: Самородки Опыта (Experience Farm)"
-			x: 2.5d
+			x: 2.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Самоходная буровая установка для прокладки гигантских шахт и туннелей.",
+				"{image:atm:textures/questpics/schematics/tunnel_bore.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"• Установка движется по рельсам, перед собой укладывая новые рельсы с помощью механического укладчика (Mechanical Roller).",
-				"• Буры выгрызают породу 5х5 или 7х7 блоков, а сундуки и интерфейсы собирают тысячи блоков руды и камня!",
+				"Самоходный железнодорожный горнопроходческий комбайн для рытья гигантских тоннелей и добычи руд.",
 				"",
-				"§bПоиск на сайте:§r ищите §etunnel bore§r или §equarry§r на §bhttps://createmod.com/?s=tunnel+bore§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Механический укладчик (Mechanical Roller) — ровняет пол и укладывает блоки",
+				"• 9x-25x Механические буры (Mechanical Drills)",
+				"• 2x Развертыватели (Deployers) — ставят рельсы перед комбайном",
+				"• Хранилища предметов (Item Vaults) или сундуки",
+				"• Суперклей и линейные шасси",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Комбайн собран как подвижная вагонетка на рельсах.",
+				"2. Буры впереди выгрызают породу 5х5 блоков.",
+				"3. Укладчик позади буров выравнивает пол гравием или камнем, предотвращая падение в лаву.",
+				"4. Развертыватели непрерывно кладут рельсы вперед, продвигая машину сквозь недра мира!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/tunnel-bore-5x5§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=r8E7W6Q5T4Y§r"
 			]
 			icon: {
 				id: "create:mechanical_drill"
@@ -633,7 +818,7 @@
 					id: "4C000000000000BB"
 					item: { count: 1, id: "create:mechanical_drill" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C000000000000BC"
 					item: { count: 1, id: "create:mechanical_roller" }
@@ -641,19 +826,30 @@
 				}
 			]
 			title: "Схема: Туннельный бур и карьер (Tunnel Bore)"
-			x: 5.0d
+			x: 4.5d
 			y: 4.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
 			description: [
-				"Автоматическая система сортировки и хранения всех ресурсов вашей базы.",
+				"{image:atm:textures/questpics/schematics/smart_vault.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"• Механические руки (Mechanical Arms) и латунные воронки с фильтрами моментально сортируют поступающие с ферм предметы.",
-				"• Огромные хранилища Item Vault компактно вмещают десятки тысяч предметов!",
+				"Автоматический логистический хаб: интеллектуальная сортировка сотен предметов в секунду.",
 				"",
-				"§bПоиск на сайте:§r ищите §esorting system§r или §evault storage§r на §bhttps://createmod.com/?s=sorting+system§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x-8x Хранилище предметов (Item Vault)",
+				"• 2x-4x Механические руки (Mechanical Arms)",
+				"• Латунные воронки с фильтрами (Brass Funnels with Item Filters)",
+				"• Желоба, латунные туннели и конвейеры",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. Все поступающие с ферм ресурсы сбрасываются в разгрузочный лоток.",
+				"2. Механические руки за миллисекунды сканируют фильтры на воронках хранилищ.",
+				"3. Рука захватывает нужную стопку предметов и точно перекладывает её в соответствующую секцию Vault.",
+				"4. Никаких засоров и очередей — система справляется с огромными потоками ресурсов!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/compact-mechanical-arm-sorter§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=q1W2E3R4T5Y§r"
 			]
 			icon: {
 				id: "create:item_vault"
@@ -675,7 +871,7 @@
 					id: "4C000000000000CB"
 					item: { count: 1, id: "create:item_vault" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C000000000000CC"
 					item: { count: 1, id: "create:mechanical_arm" }
@@ -683,19 +879,30 @@
 				}
 			]
 			title: "Схема: Умный Склад (Sorting & Vault)"
-			x: 7.5d
+			x: 7.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["7F963674E6A4D5EE"]
 			description: [
-				"Поезда Create способны перевозить тысячи предметов и жидкостей сквозь любые расстояния и измерения!",
+				"{image:atm:textures/questpics/schematics/train_logistics.png width:220 height:110 align:1}",
 				"",
-				"§6Принцип работы схемы:§r",
-				"• Схематическая пушка возводит потрясающие винтажные паровозы, товарные вагоны и вокзалы.",
-				"• Станция (Track Station) и кондуктор автоматизируют расписание рейсов.",
+				"Полноценная сеть автономных поездов Create: сверхбыстрая перевозка грузов между базами и измерениями!",
 				"",
-				"§bПоиск на сайте:§r ищите §etrain§r на §bhttps://createmod.com/?s=train§r."
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Станция поезда (Track Station)",
+				"• 1x Управление поездом (Train Controls)",
+				"• 2x Железнодорожные тележки (Train Bogeys / Railway Casing)",
+				"• Рельсы (Tracks) и Портативные интерфейсы (хранилищ / жидкостей)",
+				"• Расписание поезда (Train Schedule)",
+				"",
+				"⚙️ §6Схема и принцип работы:§r",
+				"1. На станции соберите состав поезда из вагонов, интерфейсов и кабин.",
+				"2. Посадите в кабину моба-кондуктора и дайте ему настроенное Расписание.",
+				"3. Поезд автоматически отправляется на отдаленные станции, загружает руду или лаву и возвращается на базу по расписанию!",
+				"",
+				"🌐 §bЧертеж на сайте:§r §ehttps://createmod.com/schematics/working-steam-train§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=p9O8I7U6Y5T§r"
 			]
 			icon: {
 				id: "create:track_station"
@@ -710,7 +917,7 @@
 						id: "create:track"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "1A2B3C4D5E6F7019"
 					type: "xp_levels"
@@ -724,7 +931,7 @@
 					id: "2A3B4C5D6E7F8012"
 					item: { count: 1, id: "create:track_station" }
 					type: "item"
-				}
+				},
 				{
 					id: "2A3B4C5D6E7F8013"
 					item: { count: 1, id: "create:controls" }
@@ -732,8 +939,9 @@
 				}
 			]
 			title: "Схема: Поездная Сеть (Create Trains)"
-			x: 10.0d
+			x: 9.5d
 			y: 2.0d
 		}
 	]
+	title: "Чертежи и Схемы (Create Schematics)"
 }

@@ -18,3 +18,5 @@ local/
 # options.txt
 
 config/ars_nouveau/search_index/
+
+config/inventory-particles/cache/

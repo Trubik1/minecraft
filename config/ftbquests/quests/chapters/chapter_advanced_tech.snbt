@@ -622,13 +622,11 @@
 					xp: 100
 				}
 			]
-			tasks: [
-				{
-					id: "7B2B64E4D3E04014"
-					item: { count: 1, id: "industrialforegoing:dryrubber" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "7B2B64E4D3E04014"
+				item: { count: 1, id: "industrialforegoing:dryrubber" }
+				type: "item"
+			}]
 			x: 5.4d
 			y: 3.5d
 		}
