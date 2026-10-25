@@ -538,6 +538,7 @@
 				{
 					exclude_from_claim_all: true
 					id: "2650C7A07493B06F"
+					table_id: 6524628468246824964L
 					type: "random"
 				}
 				{
@@ -561,11 +562,13 @@
 				{
 					exclude_from_claim_all: true
 					id: "24EA5A866510486C"
+					table_id: 6524628468246824964L
 					type: "random"
 				}
 				{
 					exclude_from_claim_all: true
 					id: "2AB37D01EE64ED47"
+					table_id: 6524628468246824964L
 					type: "random"
 				}
 				{
