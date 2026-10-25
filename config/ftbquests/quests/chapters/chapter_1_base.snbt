@@ -2725,6 +2725,302 @@
 			}]
 			x: 26.5d
 			y: -5.0d
+		},
+		{
+			dependencies: ["44EE0D7D48747E7F"]
+			icon: {
+				id: "ironfurnaces:copper_furnace"
+			}
+			id: "5A8C11099EFD0001"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFD0201"
+					item: {
+						count: 8
+						id: "minecraft:copper_ingot"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFD0301"
+					type: "xp"
+					xp: 50
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFD0101"
+				item: { count: 1, id: "ironfurnaces:copper_furnace" }
+				type: "item"
+			}]
+			x: 11.5d
+			y: -6.5d
+		},
+		{
+			dependencies: ["5A8C11099EFD0001"]
+			icon: {
+				id: "ironfurnaces:iron_furnace"
+			}
+			id: "5A8C11099EFD0002"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFD0202"
+					item: {
+						count: 8
+						id: "minecraft:iron_ingot"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFD0302"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFD0102"
+				item: { count: 1, id: "ironfurnaces:iron_furnace" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: -6.5d
+		},
+		{
+			dependencies: ["5A8C11099EFD0002"]
+			icon: {
+				id: "ironfurnaces:gold_furnace"
+			}
+			id: "5A8C11099EFD0003"
+			rewards: [
+				{
+					count: 4
+					id: "5A8C11099EFD0203"
+					item: {
+						count: 4
+						id: "minecraft:gold_ingot"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFD0303"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFD0103"
+				item: { count: 1, id: "ironfurnaces:gold_furnace" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: -6.5d
+		},
+		{
+			dependencies: ["5A8C11099EFD0003"]
+			icon: {
+				id: "ironfurnaces:diamond_furnace"
+			}
+			id: "5A8C11099EFD0004"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFD0204"
+					item: {
+						count: 2
+						id: "minecraft:diamond"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFD0304"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFD0104"
+				item: { count: 1, id: "ironfurnaces:diamond_furnace" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: -6.5d
+		},
+		{
+			dependencies: ["5A8C11099EFD0004"]
+			icon: {
+				id: "ironfurnaces:emerald_furnace"
+			}
+			id: "5A8C11099EFD0005"
+			rewards: [
+				{
+					count: 4
+					id: "5A8C11099EFD0205"
+					item: {
+						count: 4
+						id: "minecraft:emerald"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFD0305"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFD0105"
+				item: { count: 1, id: "ironfurnaces:emerald_furnace" }
+				type: "item"
+			}]
+			x: 17.5d
+			y: -6.5d
+		},
+		{
+			dependencies: ["5A8C11099EFD0005"]
+			icon: {
+				id: "ironfurnaces:obsidian_furnace"
+			}
+			id: "5A8C11099EFD0006"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFD0206"
+					item: {
+						count: 8
+						id: "minecraft:obsidian"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFD0306"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFD0106"
+				item: { count: 1, id: "ironfurnaces:obsidian_furnace" }
+				type: "item"
+			}]
+			x: 19.0d
+			y: -6.5d
+		},
+		{
+			dependencies: ["5A8C11099EFD0006"]
+			icon: {
+				id: "ironfurnaces:netherite_furnace"
+			}
+			id: "5A8C11099EFD0007"
+			rewards: [
+				{
+					count: 1
+					id: "5A8C11099EFD0207"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFD0307"
+					type: "xp"
+					xp: 500
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFD0107"
+				item: { count: 1, id: "ironfurnaces:netherite_furnace" }
+				type: "item"
+			}]
+			x: 20.5d
+			y: -6.5d
+		},
+		{
+			dependencies: ["5A8C11099EFD0002"]
+			icon: {
+				id: "ironfurnaces:heater"
+			}
+			id: "5A8C11099EFD0008"
+			rewards: [
+				{
+					count: 4
+					id: "5A8C11099EFD0208"
+					item: {
+						count: 4
+						id: "minecraft:redstone_block"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFD0308"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFD0108"
+				item: { count: 1, id: "ironfurnaces:heater" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: -8.0d
+		},
+		{
+			dependencies: ["5A8C11099EFD0003"]
+			icon: {
+				id: "ironfurnaces:augment_speed"
+			}
+			id: "5A8C11099EFD0009"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFD0209"
+					item: {
+						count: 2
+						id: "minecraft:gold_block"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFD0309"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFD0109"
+				item: { count: 1, id: "ironfurnaces:augment_speed" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: -8.0d
+		},
+		{
+			dependencies: ["5A8C11099EFD0004"]
+			icon: {
+				id: "ironfurnaces:augment_factory"
+			}
+			id: "5A8C11099EFD000A"
+			rewards: [
+				{
+					id: "5A8C11099EFD020A"
+					table_id: 3B4F29D120150001L
+					type: "random"
+				},
+				{
+					id: "5A8C11099EFD030A"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFD010A"
+				item: { count: 1, id: "ironfurnaces:augment_factory" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: -8.0d
 		}
 	]
 }

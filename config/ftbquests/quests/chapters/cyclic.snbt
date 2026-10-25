@@ -1,0 +1,890 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "cyclic"
+	group: "1643FF0B14990565"
+	icon: {
+		id: "cyclic:heart"
+	}
+	id: "5A8C11099EFA000A"
+	images: [ ]
+	order_index: 10
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "cyclic:crafting_stick"
+			}
+			id: "5A8C11099EFC0001"
+			rewards: [
+				{
+					count: 4
+					id: "5A8C11099EFC0201"
+					item: {
+						count: 4
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0301"
+					type: "xp"
+					xp: 50
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0101"
+				item: { count: 1, id: "cyclic:crafting_stick" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC0001"]
+			icon: {
+				id: "cyclic:crafting_bag"
+			}
+			id: "5A8C11099EFC0002"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFC0202"
+					item: {
+						count: 8
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0302"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0102"
+				item: { count: 1, id: "cyclic:crafting_bag" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC0002"]
+			icon: {
+				id: "cyclic:storage_bag"
+			}
+			id: "5A8C11099EFC0003"
+			rewards: [
+				{
+					id: "5A8C11099EFC0203"
+					table_id: 3B4F29D120150002L
+					type: "random"
+				}
+				{
+					id: "5A8C11099EFC0303"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0103"
+				item: { count: 1, id: "cyclic:storage_bag" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC0001"]
+			icon: {
+				id: "cyclic:scythe_harvest"
+			}
+			id: "5A8C11099EFC0004"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFC0204"
+					item: {
+						count: 2
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0304"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0104"
+				item: { count: 1, id: "cyclic:scythe_harvest" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC0003"]
+			icon: {
+				id: "cyclic:cask"
+			}
+			id: "5A8C11099EFC0005"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFC0205"
+					item: {
+						count: 2
+						id: "cyclic:cask"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0305"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0105"
+				item: { count: 1, id: "cyclic:cask" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			icon: {
+				id: "cyclic:anvil"
+			}
+			id: "5A8C11099EFC0006"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFC0206"
+					item: {
+						count: 2
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0306"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0106"
+				item: { count: 1, id: "cyclic:anvil" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC0006"]
+			icon: {
+				id: "cyclic:anvil_magma"
+			}
+			id: "5A8C11099EFC0007"
+			rewards: [
+				{
+					count: 1
+					id: "5A8C11099EFC0207"
+					item: {
+						count: 1
+						id: "minecraft:lava_bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0307"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0107"
+				item: { count: 1, id: "cyclic:anvil_magma" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC0007"]
+			icon: {
+				id: "cyclic:anvil_void"
+			}
+			id: "5A8C11099EFC0008"
+			rewards: [
+				{
+					id: "5A8C11099EFC0208"
+					table_id: 3B4F29D120150002L
+					type: "random"
+				}
+				{
+					id: "5A8C11099EFC0308"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0108"
+				item: { count: 1, id: "cyclic:anvil_void" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC0008"]
+			icon: {
+				id: "cyclic:disenchanter"
+			}
+			id: "5A8C11099EFC0009"
+			rewards: [
+				{
+					count: 16
+					id: "5A8C11099EFC0209"
+					item: {
+						count: 16
+						id: "minecraft:book"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0309"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0109"
+				item: { count: 1, id: "cyclic:disenchanter" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC0006"]
+			icon: {
+				id: "cyclic:ender_book"
+			}
+			id: "5A8C11099EFC000A"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFC020A"
+					item: {
+						count: 8
+						id: "minecraft:ender_pearl"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC030A"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC010A"
+				item: { count: 1, id: "cyclic:ender_book" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 4.0d
+		}
+		{
+			icon: {
+				id: "cyclic:harvester"
+			}
+			id: "5A8C11099EFC000B"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFC020B"
+					item: {
+						count: 8
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC030B"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC010B"
+				item: { count: 1, id: "cyclic:harvester" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC000B"]
+			icon: {
+				id: "cyclic:breaker"
+			}
+			id: "5A8C11099EFC000C"
+			rewards: [
+				{
+					count: 1
+					id: "5A8C11099EFC020C"
+					item: {
+						count: 1
+						id: "minecraft:iron_pickaxe"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC030C"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC010C"
+				item: { count: 1, id: "cyclic:breaker" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC000C"]
+			icon: {
+				id: "cyclic:placer"
+			}
+			id: "5A8C11099EFC000D"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFC020D"
+					item: {
+						count: 2
+						id: "minecraft:piston"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC030D"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC010D"
+				item: { count: 1, id: "cyclic:placer" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC000B"]
+			icon: {
+				id: "cyclic:collector"
+			}
+			id: "5A8C11099EFC000E"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFC020E"
+					item: {
+						count: 2
+						id: "minecraft:hopper"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC030E"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC010E"
+				item: { count: 1, id: "cyclic:collector" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC000D"]
+			icon: {
+				id: "cyclic:user"
+			}
+			id: "5A8C11099EFC000F"
+			rewards: [
+				{
+					id: "5A8C11099EFC020F"
+					table_id: 3B4F29D120150002L
+					type: "random"
+				}
+				{
+					id: "5A8C11099EFC030F"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC010F"
+				item: { count: 1, id: "cyclic:user" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			icon: {
+				id: "cyclic:melter"
+			}
+			id: "5A8C11099EFC0010"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFC0210"
+					item: {
+						count: 8
+						id: "minecraft:magma_block"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0310"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0110"
+				item: { count: 1, id: "cyclic:melter" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC0010"]
+			icon: {
+				id: "cyclic:solidifier"
+			}
+			id: "5A8C11099EFC0011"
+			rewards: [
+				{
+					count: 4
+					id: "5A8C11099EFC0211"
+					item: {
+						count: 4
+						id: "minecraft:obsidian"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0311"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0111"
+				item: { count: 1, id: "cyclic:solidifier" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC0010"]
+			icon: {
+				id: "cyclic:crusher"
+			}
+			id: "5A8C11099EFC0012"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFC0212"
+					item: {
+						count: 2
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0312"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0112"
+				item: { count: 1, id: "cyclic:crusher" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC0011"]
+			icon: {
+				id: "cyclic:experience_pylon"
+			}
+			id: "5A8C11099EFC0013"
+			rewards: [
+				{
+					count: 16
+					id: "5A8C11099EFC0213"
+					item: {
+						count: 16
+						id: "minecraft:experience_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0313"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0113"
+				item: { count: 1, id: "cyclic:experience_pylon" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC0012"]
+			icon: {
+				id: "cyclic:peat_fuel_enriched"
+			}
+			id: "5A8C11099EFC0014"
+			rewards: [
+				{
+					count: 16
+					id: "5A8C11099EFC0214"
+					item: {
+						count: 16
+						id: "cyclic:peat_fuel_enriched"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0314"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0114"
+				item: { count: 1, id: "cyclic:peat_fuel_enriched" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 4.0d
+		}
+		{
+			icon: {
+				id: "cyclic:charm_fire"
+			}
+			id: "5A8C11099EFC0015"
+			rewards: [
+				{
+					count: 4
+					id: "5A8C11099EFC0215"
+					item: {
+						count: 4
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0315"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0115"
+				item: { count: 1, id: "cyclic:charm_fire" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC0015"]
+			icon: {
+				id: "cyclic:charm_water"
+			}
+			id: "5A8C11099EFC0016"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFC0216"
+					item: {
+						count: 8
+						id: "minecraft:prismarine_shard"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0316"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0116"
+				item: { count: 1, id: "cyclic:charm_water" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC0015"]
+			icon: {
+				id: "cyclic:charm_speed"
+			}
+			id: "5A8C11099EFC0017"
+			rewards: [
+				{
+					count: 16
+					id: "5A8C11099EFC0217"
+					item: {
+						count: 16
+						id: "minecraft:sugar"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0317"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0117"
+				item: { count: 1, id: "cyclic:charm_speed" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC0016", "5A8C11099EFC0017"]
+			icon: {
+				id: "cyclic:charm_wing"
+			}
+			id: "5A8C11099EFC0018"
+			rewards: [
+				{
+					count: 16
+					id: "5A8C11099EFC0218"
+					item: {
+						count: 16
+						id: "minecraft:feather"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC0318"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0118"
+				item: { count: 1, id: "cyclic:charm_wing" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC0018"]
+			icon: {
+				id: "cyclic:charm_ultimate"
+			}
+			id: "5A8C11099EFC0019"
+			rewards: [
+				{
+					id: "5A8C11099EFC0219"
+					table_id: 3B4F29D120150002L
+					type: "random"
+				}
+				{
+					id: "5A8C11099EFC0319"
+					type: "xp"
+					xp: 500
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC0119"
+				item: { count: 1, id: "cyclic:charm_ultimate" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			icon: {
+				id: "cyclic:apple_iron"
+			}
+			id: "5A8C11099EFC001A"
+			rewards: [
+				{
+					count: 1
+					id: "5A8C11099EFC021A"
+					item: {
+						count: 1
+						id: "cyclic:apple_iron"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC031A"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC011A"
+				item: { count: 1, id: "cyclic:apple_iron" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC001A"]
+			icon: {
+				id: "cyclic:apple_diamond"
+			}
+			id: "5A8C11099EFC001B"
+			rewards: [
+				{
+					count: 1
+					id: "5A8C11099EFC021B"
+					item: {
+						count: 1
+						id: "cyclic:apple_diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC031B"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC011B"
+				item: { count: 1, id: "cyclic:apple_diamond" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC001B"]
+			icon: {
+				id: "cyclic:apple_emerald"
+			}
+			id: "5A8C11099EFC001C"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFC021C"
+					item: {
+						count: 2
+						id: "minecraft:emerald_block"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC031C"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC011C"
+				item: { count: 1, id: "cyclic:apple_emerald" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5A8C11099EFC001B"]
+			icon: {
+				id: "cyclic:heart"
+			}
+			id: "5A8C11099EFC001D"
+			rewards: [
+				{
+					count: 1
+					id: "5A8C11099EFC021D"
+					item: {
+						count: 1
+						id: "cyclic:heart"
+					}
+					type: "item"
+				}
+				{
+					id: "5A8C11099EFC031D"
+					type: "xp"
+					xp: 500
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC011D"
+				item: { count: 1, id: "cyclic:heart" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5A8C11099EFC001D"]
+			icon: {
+				id: "cyclic:battery"
+			}
+			id: "5A8C11099EFC001E"
+			rewards: [
+				{
+					id: "5A8C11099EFC021E"
+					table_id: 3B4F29D120150001L
+					type: "random"
+				}
+				{
+					id: "5A8C11099EFC031E"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFC011E"
+				item: { count: 1, id: "cyclic:battery" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 4.0d
+		}
+	]
+}

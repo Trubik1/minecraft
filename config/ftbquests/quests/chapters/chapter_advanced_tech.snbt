@@ -1386,6 +1386,444 @@
 			}]
 			x: -5.4d
 			y: 1.5d
+		},
+		{
+			dependencies: ["5A8C11099E040029"]
+			icon: {
+				id: "industrialforegoing:sewer"
+			}
+			id: "5A8C11099EFE0001"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFE0201"
+					item: {
+						count: 8
+						id: "minecraft:iron_ingot"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE0301"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE0101"
+				item: { count: 1, id: "industrialforegoing:sewer" }
+				type: "item"
+			}]
+			x: 7.2d
+			y: 6.5d
+		},
+		{
+			dependencies: ["5A8C11099EFE0001"]
+			icon: {
+				id: "industrialforegoing:sewage_composter"
+			}
+			id: "5A8C11099EFE0002"
+			rewards: [
+				{
+					count: 16
+					id: "5A8C11099EFE0202"
+					item: {
+						count: 16
+						id: "industrialforegoing:fertilizer"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE0302"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE0102"
+				item: { count: 1, id: "industrialforegoing:sewage_composter" }
+				type: "item"
+			}]
+			x: 7.2d
+			y: 8.0d
+		},
+		{
+			dependencies: ["5A8C11099EFE0002"]
+			icon: {
+				id: "industrialforegoing:fertilizer"
+			}
+			id: "5A8C11099EFE0003"
+			rewards: [
+				{
+					count: 32
+					id: "5A8C11099EFE0203"
+					item: {
+						count: 32
+						id: "industrialforegoing:fertilizer"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE0303"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE0103"
+				item: { count: 1, id: "industrialforegoing:fertilizer" }
+				type: "item"
+			}]
+			x: 9.0d
+			y: 8.0d
+		},
+		{
+			dependencies: ["5A8C11099E040030"]
+			icon: {
+				id: "industrialforegoing:plant_fertilizer"
+			}
+			id: "5A8C11099EFE0004"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFE0204"
+					item: {
+						count: 8
+						id: "minecraft:bone_block"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE0304"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE0104"
+				item: { count: 1, id: "industrialforegoing:plant_fertilizer" }
+				type: "item"
+			}]
+			x: 9.0d
+			y: 6.5d
+		},
+		{
+			dependencies: ["5A8C11099E040042"]
+			icon: {
+				id: "industrialforegoing:animal_feeder"
+			}
+			id: "5A8C11099EFE0005"
+			rewards: [
+				{
+					count: 32
+					id: "5A8C11099EFE0205"
+					item: {
+						count: 32
+						id: "minecraft:wheat"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE0305"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE0105"
+				item: { count: 1, id: "industrialforegoing:animal_feeder" }
+				type: "item"
+			}]
+			x: 10.8d
+			y: 5.0d
+		},
+		{
+			dependencies: ["5A8C11099EFE0005"]
+			icon: {
+				id: "industrialforegoing:animal_baby_separator"
+			}
+			id: "5A8C11099EFE0006"
+			rewards: [
+				{
+					count: 4
+					id: "5A8C11099EFE0206"
+					item: {
+						count: 4
+						id: "minecraft:lead"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE0306"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE0106"
+				item: { count: 1, id: "industrialforegoing:animal_baby_separator" }
+				type: "item"
+			}]
+			x: 10.8d
+			y: 6.5d
+		},
+		{
+			dependencies: ["5A8C11099EFE0006"]
+			icon: {
+				id: "industrialforegoing:animal_rancher"
+			}
+			id: "5A8C11099EFE0007"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFE0207"
+					item: {
+						count: 2
+						id: "minecraft:shears"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE0307"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE0107"
+				item: { count: 1, id: "industrialforegoing:animal_rancher" }
+				type: "item"
+			}]
+			x: 10.8d
+			y: 8.0d
+		},
+		{
+			dependencies: ["5A8C11099E040045"]
+			icon: {
+				id: "industrialforegoing:material_stonework_factory"
+			}
+			id: "5A8C11099EFE0008"
+			rewards: [
+				{
+					id: "5A8C11099EFE0208"
+					table_id: 3B4F29D120150001L
+					type: "random"
+				},
+				{
+					id: "5A8C11099EFE0308"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE0108"
+				item: { count: 1, id: "industrialforegoing:material_stonework_factory" }
+				type: "item"
+			}]
+			x: 12.6d
+			y: 8.0d
+		},
+		{
+			dependencies: ["5A8C11099EFE0008"]
+			icon: {
+				id: "industrialforegoing:hydroponic_bed"
+			}
+			id: "5A8C11099EFE0009"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099EFE0209"
+					item: {
+						count: 8
+						id: "industrialforegoing:plastic"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE0309"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE0109"
+				item: { count: 1, id: "industrialforegoing:hydroponic_bed" }
+				type: "item"
+			}]
+			x: 14.4d
+			y: 8.0d
+		},
+		{
+			dependencies: ["5A8C11099E040031"]
+			icon: {
+				id: "industrialforegoing:stasis_chamber"
+			}
+			id: "5A8C11099EFE000A"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFE020A"
+					item: {
+						count: 2
+						id: "minecraft:diamond_block"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE030A"
+					type: "xp"
+					xp: 350
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE010A"
+				item: { count: 1, id: "industrialforegoing:stasis_chamber" }
+				type: "item"
+			}]
+			x: 16.2d
+			y: 8.0d
+		},
+		{
+			dependencies: ["5A8C11099E040044"]
+			icon: {
+				id: "industrialforegoing:bioreactor"
+			}
+			id: "5A8C11099EFE000B"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099EFE020B"
+					item: {
+						count: 2
+						id: "minecraft:emerald_block"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE030B"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE010B"
+				item: { count: 1, id: "industrialforegoing:bioreactor" }
+				type: "item"
+			}]
+			x: 12.6d
+			y: 2.0d
+		},
+		{
+			dependencies: ["5A8C11099E040053"]
+			icon: {
+				id: "industrialforegoing:infinity_trident"
+			}
+			id: "5A8C11099EFE000C"
+			rewards: [
+				{
+					count: 1
+					id: "5A8C11099EFE020C"
+					item: {
+						count: 1
+						id: "minecraft:nether_star"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE030C"
+					type: "xp"
+					xp: 500
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE010C"
+				item: { count: 1, id: "industrialforegoing:infinity_trident" }
+				type: "item"
+			}]
+			x: 21.6d
+			y: 0.8d
+		},
+		{
+			dependencies: ["5A8C11099E040052"]
+			icon: {
+				id: "industrialforegoing:infinity_launcher"
+			}
+			id: "5A8C11099EFE000D"
+			rewards: [
+				{
+					count: 1
+					id: "5A8C11099EFE020D"
+					item: {
+						count: 1
+						id: "minecraft:netherite_block"
+					},
+					type: "item"
+				},
+				{
+					id: "5A8C11099EFE030D"
+					type: "xp"
+					xp: 500
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE010D"
+				item: { count: 1, id: "industrialforegoing:infinity_launcher" }
+				type: "item"
+			}]
+			x: 21.6d
+			y: 2.0d
+		},
+		{
+			dependencies: ["5A8C11099E040013"]
+			icon: {
+				id: "industrialforegoing:infinity_nuke"
+			}
+			id: "5A8C11099EFE000E"
+			rewards: [
+				{
+					id: "5A8C11099EFE020E"
+					table_id: 3B4F29D120150001L
+					type: "random"
+				},
+				{
+					id: "5A8C11099EFE030E"
+					type: "xp"
+					xp: 1000
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE010E"
+				item: { count: 1, id: "industrialforegoing:infinity_nuke" }
+				type: "item"
+			}]
+			x: 21.6d
+			y: 3.5d
+		},
+		{
+			dependencies: ["5A8C11099E040046"]
+			icon: {
+				id: "industrialforegoing:mycelial_reactor"
+			}
+			id: "5A8C11099EFE000F"
+			rewards: [
+				{
+					id: "5A8C11099EFE020F"
+					table_id: 3B4F29D120150001L
+					type: "random"
+				},
+				{
+					id: "5A8C11099EFE030F"
+					type: "xp"
+					xp: 1000
+				}
+			]
+			tasks: [{
+				id: "5A8C11099EFE010F"
+				item: { count: 1, id: "industrialforegoing:mycelial_reactor" }
+				type: "item"
+			}]
+			x: 21.6d
+			y: 5.0d
 		}
 	]
 }
