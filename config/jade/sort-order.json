@@ -1,8 +1,23 @@
 {
   "ars_nouveau:mob_jar": null,
+  "balm:jade": null,
+  "barbequesdelight:grill": null,
   "corpse:corpse": null,
   "dimstorage:dim_block_base": null,
   "dimstorage:dim_tank": null,
+  "extendedcrafting:advanced_auto_table": null,
+  "extendedcrafting:advanced_table": null,
+  "extendedcrafting:auto_ender_crafter": null,
+  "extendedcrafting:basic_auto_table": null,
+  "extendedcrafting:basic_table": null,
+  "extendedcrafting:compressor": null,
+  "extendedcrafting:crafting_core": null,
+  "extendedcrafting:elite_auto_table": null,
+  "extendedcrafting:elite_table": null,
+  "extendedcrafting:ender_crafter": null,
+  "extendedcrafting:flux_crafter": null,
+  "extendedcrafting:ultimate_auto_table": null,
+  "extendedcrafting:ultimate_table": null,
   "functionalstorage:armory": null,
   "functionalstorage:drawer": null,
   "hammerlib:root": null,
@@ -80,5 +95,6 @@
   "storagedrawers:main": null,
   "twilightforest:chiseled_bookshelf_spawner": null,
   "twilightforest:drying_rack": null,
-  "twilightforest:quest_ram_wool": null
+  "twilightforest:quest_ram_wool": null,
+  "waystones:waystone": null
 }
