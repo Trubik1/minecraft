@@ -8,11 +8,10 @@
 	}
 	id: "6EE3A83667F04BFE"
 	images: [ ]
-	order_index: 0
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Добудьте первые брёвна древесины руками или первым топором."]
 			icon: {
 				id: "minecraft:oak_log"
 			}
@@ -41,23 +40,14 @@
 			size: 1.2d
 			tasks: [{
 				id: "44F78B45E12E9903"
-				item: {
-					components: {
-						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:logs)"
-					}
-					count: 1
-					id: "ftbfiltersystem:smart_filter"
-				}
-				title: "Любое бревно"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:logs)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 				type: "item"
 			}]
-			title: "Первое дерево"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["44F78B45E12E9901"]
-			description: ["Распилите брёвна на доски и настругайте палок для создания первых рукояток инструментов."]
 			icon: {
 				id: "minecraft:oak_planks"
 			}
@@ -88,40 +78,28 @@
 				{
 					count: 8L
 					id: "3C4D5E6F7001A2B3"
-					item: {
-						components: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:planks)"
-						}
-						count: 1
-						id: "ftbfiltersystem:smart_filter"
-					}
-					title: "Любые доски"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:planks)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "4D5E6F7001A2B3C4"
-					item: {
-						count: 4
-						id: "minecraft:stick"
-					}
+					item: { count: 1, id: "minecraft:stick" }
 					type: "item"
 				}
 			]
-			title: "Доски и палки"
 			x: 1.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["2C1B4A5D6E709281"]
-			description: ["Деревянный сундук и бочка позволят складывать накопившийся лут и сохранять порядок на базе."]
 			icon: {
 				id: "minecraft:chest"
 			}
 			id: "1029384756AFBECD"
 			rewards: [
 				{
-					id: "A1B2C3D409876543"
+					id: "7AAFB8AE1B55B5B3"
 					item: {
 						count: 1
 						id: "minecraft:barrel"
@@ -129,7 +107,7 @@
 					type: "item"
 				}
 				{
-					id: "B2C3D4E510987654"
+					id: "095310DC5D3AF6AD"
 					type: "xp"
 					xp: 50
 				}
@@ -137,20 +115,15 @@
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
-				id: "C3D4E5F621098765"
-				item: {
-					count: 1
-					id: "minecraft:chest"
-				}
+				id: "17746E4493AF60A4"
+				item: { count: 1, id: "minecraft:chest" }
 				type: "item"
 			}]
-			title: "Базовое хранение"
 			x: 1.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["2C1B4A5D6E709281"]
-			description: ["Создайте верстак — сердце любого крафта 3х3."]
 			icon: {
 				id: "minecraft:crafting_table"
 			}
@@ -168,19 +141,14 @@
 			size: 1.1d
 			tasks: [{
 				id: "4C0F0A3D2F642398"
-				item: {
-					count: 1
-					id: "minecraft:crafting_table"
-				}
+				item: { count: 1, id: "minecraft:crafting_table" }
 				type: "item"
 			}]
-			title: "Верстак"
 			x: 3.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["1A9FD31F8E24306A"]
-			description: ["Деревянная кирка — ваш первый примитивный инструмент для добычи камня."]
 			icon: {
 				id: "minecraft:wooden_pickaxe"
 			}
@@ -205,19 +173,14 @@
 			size: 1.0d
 			tasks: [{
 				id: "7001A2B3C4D5E6F7"
-				item: {
-					count: 1
-					id: "minecraft:wooden_pickaxe"
-				}
+				item: { count: 1, id: "minecraft:wooden_pickaxe" }
 				type: "item"
 			}]
-			title: "Деревянная кирка"
 			x: 4.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["1A9FD31F8E24306A"]
-			description: ["Создайте кровать, чтобы пережить ночные нападения и установить точку возрождения."]
 			icon: {
 				id: "minecraft:red_bed"
 			}
@@ -245,23 +208,14 @@
 			size: 1.0d
 			tasks: [{
 				id: "3E7D63E63D08420D"
-				item: {
-					components: {
-						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:beds)"
-					}
-					count: 1
-					id: "ftbfiltersystem:smart_filter"
-				}
-				title: "Любая кровать"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:beds)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 				type: "item"
 			}]
-			title: "Первая ночь"
 			x: 3.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["6EA719CEED1C4B1C"]
-			description: ["Костёр позволяет готовить пищу до 4 порций одновременно без затрат угля, а также служит ориентиром."]
 			icon: {
 				id: "minecraft:campfire"
 			}
@@ -269,7 +223,7 @@
 			rewards: [
 				{
 					count: 4
-					id: "8192A3B4C5012345"
+					id: "559816875159F17B"
 					item: {
 						count: 1
 						id: "minecraft:beef"
@@ -278,7 +232,7 @@
 				}
 				{
 					count: 4
-					id: "92A3B4C501234567"
+					id: "4371FA0B4E5D4FF5"
 					item: {
 						count: 1
 						id: "minecraft:chicken"
@@ -290,19 +244,14 @@
 			size: 1.0d
 			tasks: [{
 				id: "0123456789ABCDEF"
-				item: {
-					count: 1
-					id: "minecraft:campfire"
-				}
+				item: { count: 1, id: "minecraft:campfire" }
 				type: "item"
 			}]
-			title: "Тёплый костёр"
 			x: 4.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["44F78B45E12E9901"]
-			description: ["Сахарный тростник растет вдоль рек и водоёмов. Он понадобится для производства сахара, бумаги и книг."]
 			icon: {
 				id: "minecraft:sugar_cane"
 			}
@@ -337,19 +286,14 @@
 			tasks: [{
 				count: 8L
 				id: "4D5E6F708192A3B4"
-				item: {
-					count: 8
-					id: "minecraft:sugar_cane"
-				}
+				item: { count: 1, id: "minecraft:sugar_cane" }
 				type: "item"
 			}]
-			title: "Сахарный тростник"
 			x: 0.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["5B1C2D3E4F5A6B70"]
-			description: ["Переработайте тростник в бумагу и сшейте первые книги вместе с кожей."]
 			icon: {
 				id: "minecraft:book"
 			}
@@ -383,29 +327,21 @@
 			tasks: [
 				{
 					count: 6L
-					id: "8192A3B4C5D6E7F8"
-					item: {
-						count: 6
-						id: "minecraft:paper"
-					}
+					id: "20E271F8240D8D8D"
+					item: { count: 1, id: "minecraft:paper" }
 					type: "item"
 				}
 				{
-					id: "92A3B4C5D6E7F809"
-					item: {
-						count: 1
-						id: "minecraft:book"
-					}
+					id: "3EB65F4C86284EF2"
+					item: { count: 1, id: "minecraft:book" }
 					type: "item"
 				}
 			]
-			title: "Бумага и фолианты"
 			x: 1.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["6C2D3E4F5A6B7081"]
-			description: ["Посадите пшеницу для выпечки питательного хлеба и разведения домашнего скота."]
 			icon: {
 				id: "minecraft:bread"
 			}
@@ -441,29 +377,21 @@
 				{
 					count: 8L
 					id: "4567890123ABCDEF"
-					item: {
-						count: 8
-						id: "minecraft:wheat"
-					}
+					item: { count: 1, id: "minecraft:wheat" }
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "5678901234ABCDEF"
-					item: {
-						count: 4
-						id: "minecraft:bread"
-					}
+					item: { count: 1, id: "minecraft:bread" }
 					type: "item"
 				}
 			]
-			title: "Фермерство: Хлеб"
 			x: 3.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["7E8F9A0B1C2D3E4F"]
-			description: ["Отыщите морковь и картофель в деревнях или выбейте из зомби для полноценного рациона."]
 			icon: {
 				id: "minecraft:carrot"
 			}
@@ -471,7 +399,7 @@
 			rewards: [
 				{
 					count: 4
-					id: "A1B2C3D4E5001122"
+					id: "1628FB0FA5F9A004"
 					item: {
 						count: 1
 						id: "minecraft:baked_potato"
@@ -479,7 +407,7 @@
 					type: "item"
 				}
 				{
-					id: "B2C3D4E5F6002233"
+					id: "4D6717AB7FF6AF2A"
 					type: "xp"
 					xp: 50
 				}
@@ -489,30 +417,22 @@
 			tasks: [
 				{
 					count: 4L
-					id: "C3D4E5F6A7003344"
-					item: {
-						count: 4
-						id: "minecraft:carrot"
-					}
+					id: "516CB6A417B4648A"
+					item: { count: 1, id: "minecraft:carrot" }
 					type: "item"
 				}
 				{
 					count: 4L
-					id: "D4E5F6A7B8004455"
-					item: {
-						count: 4
-						id: "minecraft:potato"
-					}
+					id: "05F0B1ED99F3220A"
+					item: { count: 1, id: "minecraft:potato" }
 					type: "item"
 				}
 			]
-			title: "Корнеплоды: Морковь и Картофель"
 			x: 4.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["1A9FD31F8E24306A"]
-			description: ["Ножницы позволяют безопасно стричь овец и собирать листву."]
 			icon: {
 				id: "minecraft:shears"
 			}
@@ -520,7 +440,7 @@
 			rewards: [
 				{
 					count: 4
-					id: "E5F6A7B8C9005566"
+					id: "18F4485CD911B8FB"
 					item: {
 						count: 1
 						id: "minecraft:white_wool"
@@ -528,7 +448,7 @@
 					type: "item"
 				}
 				{
-					id: "F6A7B8C9D0006677"
+					id: "07C412E238B089AF"
 					type: "xp"
 					xp: 50
 				}
@@ -536,20 +456,15 @@
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
-				id: "A7B8C9D0E1007788"
-				item: {
-					count: 1
-					id: "minecraft:shears"
-				}
+				id: "7F645894B3FD64BB"
+				item: { count: 1, id: "minecraft:shears" }
 				type: "item"
 			}]
-			title: "Ножницы и шерсть"
 			x: 3.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["2B4C6D8E0F1A3579"]
-			description: ["Скрафтите удочку для ловли рыбы, полезных сокровищ и зачарованных книг."]
 			icon: {
 				id: "minecraft:fishing_rod"
 			}
@@ -557,7 +472,7 @@
 			rewards: [
 				{
 					count: 4
-					id: "B8C9D0E1F2008899"
+					id: "6D127115AE214F2C"
 					item: {
 						count: 1
 						id: "minecraft:cooked_cod"
@@ -565,7 +480,7 @@
 					type: "item"
 				}
 				{
-					id: "C9D0E1F2A3009900"
+					id: "278DA42BD1DB6346"
 					type: "xp"
 					xp: 75
 				}
@@ -573,20 +488,15 @@
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
-				id: "D0E1F2A3B400AABB"
-				item: {
-					count: 1
-					id: "minecraft:fishing_rod"
-				}
+				id: "0CD1D5DDB44D81B4"
+				item: { count: 1, id: "minecraft:fishing_rod" }
 				type: "item"
 			}]
-			title: "Рыбалка"
 			x: 4.5d
 			y: 3.5d
 		}
 		{
 			dependencies: ["3B5C7D9E1A2F4082"]
-			description: ["Добудьте булыжник деревянной киркой."]
 			icon: {
 				id: "minecraft:cobblestone"
 			}
@@ -605,19 +515,14 @@
 			tasks: [{
 				count: 16L
 				id: "3F4860D4D32B81F4"
-				item: {
-					count: 16
-					id: "minecraft:cobblestone"
-				}
+				item: { count: 1, id: "minecraft:cobblestone" }
 				type: "item"
 			}]
-			title: "Булыжник"
 			x: 6.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["40B2389C5E1F4FC0"]
-			description: ["Каменная кирка позволяет добывать железо, медь и уголь."]
 			icon: {
 				id: "minecraft:stone_pickaxe"
 			}
@@ -635,19 +540,14 @@
 			size: 1.0d
 			tasks: [{
 				id: "6C2B4E9C1C96726A"
-				item: {
-					count: 1
-					id: "minecraft:stone_pickaxe"
-				}
+				item: { count: 1, id: "minecraft:stone_pickaxe" }
 				type: "item"
 			}]
-			title: "Каменная кирка"
 			x: 7.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["4C2AF1950255410E"]
-			description: ["Скрафтите базовый набор каменных инструментов для выживания."]
 			icon: {
 				id: "minecraft:stone_sword"
 			}
@@ -676,40 +576,29 @@
 			tasks: [
 				{
 					id: "386F0AA8B9DFB51A"
-					item: {
-						count: 1
-						id: "minecraft:stone_sword"
-					}
+					item: { count: 1, id: "minecraft:stone_sword" }
 					type: "item"
 				}
 				{
 					id: "67FE70231D56D1F8"
-					item: {
-						count: 1
-						id: "minecraft:stone_axe"
-					}
+					item: { count: 1, id: "minecraft:stone_axe" }
 					type: "item"
 				}
 				{
 					id: "3E171BEFA9A4E9FE"
-					item: {
-						count: 1
-						id: "minecraft:stone_shovel"
-					}
+					item: { count: 1, id: "minecraft:stone_shovel" }
 					type: "item"
 				}
 			]
-			title: "Каменный арсенал"
 			x: 7.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["6D1F5192F6A64644"]
-			description: ["Скрафтите лук и запас стрел для эффективной дальней охоты и обороны."]
 			icon: {
 				id: "minecraft:bow"
 			}
-			id: "8A9B0C1D2E3F4A5B"
+			id: "5615D59B33BF1D65"
 			rewards: [
 				{
 					count: 16
@@ -738,30 +627,21 @@
 			size: 1.0d
 			tasks: [
 				{
-					id: "8901234567ABCDEF"
-					item: {
-						count: 1
-						id: "minecraft:bow"
-					}
+					id: "51D0B01D349B25D8"
+					item: { count: 1, id: "minecraft:bow" }
 					type: "item"
 				}
 				{
 					count: 16L
-					id: "9012345678ABCDEF"
-					item: {
-						count: 16
-						id: "minecraft:arrow"
-					}
+					id: "30525D02248CCE12"
+					item: { count: 1, id: "minecraft:arrow" }
 					type: "item"
 				}
 			]
-			title: "Охота: Лук и стрелы"
 			x: 9.0d
 			y: -1.5d
 		}
 		{
-			dependencies: ["8A9B0C1D2E3F4A5B"]
-			description: ["Кости скелетов перемалываются в костную муку для мгновенного ускорения роста растений."]
 			icon: {
 				id: "minecraft:bone"
 			}
@@ -769,7 +649,7 @@
 			rewards: [
 				{
 					count: 8
-					id: "E1F2A3B4C500BBCC"
+					id: "3DA99A3A5A144E8B"
 					item: {
 						count: 1
 						id: "minecraft:bone_meal"
@@ -777,7 +657,7 @@
 					type: "item"
 				}
 				{
-					id: "F2A3B4C5D600CCDD"
+					id: "072BA24D76D75850"
 					type: "xp"
 					xp: 50
 				}
@@ -786,20 +666,15 @@
 			size: 1.0d
 			tasks: [{
 				count: 4L
-				id: "A3B4C5D6E700DDEE"
-				item: {
-					count: 4
-					id: "minecraft:bone"
-				}
+				id: "02F3FF81DB920F21"
+				item: { count: 1, id: "minecraft:bone" }
 				type: "item"
 			}]
-			title: "Охота: Кости скелетов"
 			x: 9.0d
 			y: -3.0d
 		}
 		{
 			dependencies: ["4D6E8F0A2B4C6E80"]
-			description: ["Нить пауков нужна для удочек, поводков, луков и шерсти."]
 			icon: {
 				id: "minecraft:string"
 			}
@@ -807,7 +682,7 @@
 			rewards: [
 				{
 					count: 4
-					id: "B4C5D6E7F800EEFF"
+					id: "77D644352F9638C5"
 					item: {
 						count: 1
 						id: "minecraft:spider_eye"
@@ -815,7 +690,7 @@
 					type: "item"
 				}
 				{
-					id: "C5D6E7F8A900FF00"
+					id: "308E1A3D65FE0B5C"
 					type: "xp"
 					xp: 50
 				}
@@ -824,20 +699,15 @@
 			size: 1.0d
 			tasks: [{
 				count: 4L
-				id: "D6E7F8A9B0000011"
-				item: {
-					count: 4
-					id: "minecraft:string"
-				}
+				id: "7111F6334997B09F"
+				item: { count: 1, id: "minecraft:string" }
 				type: "item"
 			}]
-			title: "Охота: Нить паука"
 			x: 10.5d
 			y: -3.0d
 		}
 		{
 			dependencies: ["5E7F9A1B3C5D7F91"]
-			description: ["Порох с криперов позволяет делать динамит (TNT) и ракеты для надкрылий."]
 			icon: {
 				id: "minecraft:gunpowder"
 			}
@@ -845,7 +715,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "E7F8A9B0C1001122"
+					id: "765E19CD7B51E0CF"
 					item: {
 						count: 1
 						id: "minecraft:tnt"
@@ -853,7 +723,7 @@
 					type: "item"
 				}
 				{
-					id: "F8A9B0C1D2002233"
+					id: "36363D6F14CD6E84"
 					type: "xp"
 					xp: 75
 				}
@@ -862,20 +732,15 @@
 			size: 1.0d
 			tasks: [{
 				count: 4L
-				id: "A9B0C1D2E3003344"
-				item: {
-					count: 4
-					id: "minecraft:gunpowder"
-				}
+				id: "1CEFEAD53073783F"
+				item: { count: 1, id: "minecraft:gunpowder" }
 				type: "item"
 			}]
-			title: "Опасность: Порох и TNT"
 			x: 12.0d
 			y: -3.0d
 		}
 		{
 			dependencies: ["4C2AF1950255410E"]
-			description: ["Добудьте каменный уголь для плавки и освещения."]
 			icon: {
 				id: "minecraft:coal"
 			}
@@ -901,13 +766,9 @@
 			tasks: [{
 				count: 8L
 				id: "1665D82916F4F032"
-				item: {
-					count: 8
-					id: "minecraft:coal"
-				}
+				item: { count: 1, id: "minecraft:coal" }
 				type: "item"
 			}]
-			title: "Каменный уголь"
 			x: 7.5d
 			y: 1.5d
 		}
@@ -916,7 +777,6 @@
 				"4C2AF1950255410E"
 				"7F5203BC5B8FC8C2"
 			]
-			description: ["Печь необходима для выплавки руды и приготовления пищи."]
 			icon: {
 				id: "minecraft:furnace"
 			}
@@ -934,19 +794,14 @@
 			size: 1.0d
 			tasks: [{
 				id: "5B7443F8FF89E887"
-				item: {
-					count: 1
-					id: "minecraft:furnace"
-				}
+				item: { count: 1, id: "minecraft:furnace" }
 				type: "item"
 			}]
-			title: "Печь"
 			x: 9.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["44EE0D7D48747E7F"]
-			description: ["Переплавьте песок в прозрачное стекло для окон, колб и приборов."]
 			icon: {
 				id: "minecraft:glass"
 			}
@@ -954,7 +809,7 @@
 			rewards: [
 				{
 					count: 8
-					id: "B0C1D2E3F4004455"
+					id: "5EA9707831B9F2A4"
 					item: {
 						count: 1
 						id: "minecraft:glass_bottle"
@@ -962,7 +817,7 @@
 					type: "item"
 				}
 				{
-					id: "C1D2E3F4A5005566"
+					id: "0A9C979BD5D9F071"
 					type: "xp"
 					xp: 50
 				}
@@ -971,20 +826,15 @@
 			size: 1.0d
 			tasks: [{
 				count: 8L
-				id: "D2E3F4A5B6006677"
-				item: {
-					count: 8
-					id: "minecraft:glass"
-				}
+				id: "5B37F260D6F5863B"
+				item: { count: 1, id: "minecraft:glass" }
 				type: "item"
 			}]
-			title: "Стекло и колбы"
 			x: 9.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["44EE0D7D48747E7F"]
-			description: ["Добудьте сырое железо в подземных пещерах."]
 			icon: {
 				id: "minecraft:raw_iron"
 			}
@@ -1003,19 +853,14 @@
 			tasks: [{
 				count: 8L
 				id: "1A7EBFE9A445C544"
-				item: {
-					count: 8
-					id: "minecraft:raw_iron"
-				}
+				item: { count: 1, id: "minecraft:raw_iron" }
 				type: "item"
 			}]
-			title: "Сырое железо"
 			x: 10.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["1BED8100B043C1D7"]
-			description: ["Переплавьте сырое железо в прочные слитки."]
 			icon: {
 				id: "minecraft:iron_ingot"
 			}
@@ -1041,19 +886,14 @@
 			tasks: [{
 				count: 8L
 				id: "02DE9F356B236F6D"
-				item: {
-					count: 8
-					id: "minecraft:iron_ingot"
-				}
+				item: { count: 1, id: "minecraft:iron_ingot" }
 				type: "item"
 			}]
-			title: "Железные слитки"
 			x: 12.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["41DF79A9BE6E1780"]
-			description: ["Щит спасет от стрел скелетов и взрывов криперов."]
 			icon: {
 				id: "minecraft:shield"
 			}
@@ -1082,26 +922,21 @@
 			size: 1.0d
 			tasks: [{
 				id: "447B90C2AE57053B"
-				item: {
-					count: 1
-					id: "minecraft:shield"
-				}
+				item: { count: 1, id: "minecraft:shield" }
 				type: "item"
 			}]
-			title: "Щит"
 			x: 12.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["41DF79A9BE6E1780"]
-			description: ["Железный нагрудник и броня существенно повышают защиту от физического урона."]
 			icon: {
 				id: "minecraft:iron_chestplate"
 			}
 			id: "1F2E3D4C5B6A7890"
 			rewards: [
 				{
-					id: "A1B2C3D4E5F67890"
+					id: "02286019B0611918"
 					item: {
 						count: 1
 						id: "minecraft:iron_leggings"
@@ -1109,7 +944,7 @@
 					type: "item"
 				}
 				{
-					id: "B2C3D4E5F6789012"
+					id: "6CE7FAE9989504D0"
 					type: "xp"
 					xp: 100
 				}
@@ -1117,27 +952,22 @@
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
-				id: "C3D4E5F678901234"
-				item: {
-					count: 1
-					id: "minecraft:iron_chestplate"
-				}
+				id: "2FFFCD026F7BA7B2"
+				item: { count: 1, id: "minecraft:iron_chestplate" }
 				type: "item"
 			}]
-			title: "Железная броня"
 			x: 10.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["41DF79A9BE6E1780"]
-			description: ["Железное ведро позволяет переносить жидкости, тушить огонь и создавать бесконечные источники воды."]
 			icon: {
 				id: "minecraft:water_bucket"
 			}
 			id: "2A3B4C5D6E7F8901"
 			rewards: [
 				{
-					id: "D4E5F67890123456"
+					id: "22A2020510F59173"
 					item: {
 						count: 1
 						id: "minecraft:bucket"
@@ -1145,7 +975,7 @@
 					type: "item"
 				}
 				{
-					id: "E5F6789012345678"
+					id: "76E5231BC73C92A7"
 					type: "xp"
 					xp: 50
 				}
@@ -1153,20 +983,15 @@
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
-				id: "F67890123456789A"
-				item: {
-					count: 1
-					id: "minecraft:water_bucket"
-				}
+				id: "1312628CFD12BFAA"
+				item: { count: 1, id: "minecraft:water_bucket" }
 				type: "item"
 			}]
-			title: "Ведро воды"
 			x: 10.5d
 			y: 1.5d
 		}
 		{
 			dependencies: ["2A3B4C5D6E7F8901"]
-			description: ["Ведро лавы служит отличным сверхдолгим топливом для печи и источником обсидиана."]
 			icon: {
 				id: "minecraft:lava_bucket"
 			}
@@ -1190,19 +1015,14 @@
 			size: 1.0d
 			tasks: [{
 				id: "27890123456789AB"
-				item: {
-					count: 1
-					id: "minecraft:lava_bucket"
-				}
+				item: { count: 1, id: "minecraft:lava_bucket" }
 				type: "item"
 			}]
-			title: "Ведро лавы"
 			x: 12.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["41DF79A9BE6E1780"]
-			description: ["Железная кирка — ключевой инструмент, открывающий доступ ко всем рудам недр."]
 			icon: {
 				id: "minecraft:iron_pickaxe"
 			}
@@ -1224,27 +1044,22 @@
 			size: 1.4d
 			tasks: [{
 				id: "58A1F8D69A6E94BD"
-				item: {
-					count: 1
-					id: "minecraft:iron_pickaxe"
-				}
+				item: { count: 1, id: "minecraft:iron_pickaxe" }
 				type: "item"
 			}]
-			title: "Железная кирка: Врата в недра"
 			x: 13.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["18A60F5F68F91B10"]
-			description: ["Глубинный сланец залегает на глубинах ниже нулевой высоты и прочнее обычного камня."]
 			icon: {
 				id: "minecraft:cobbled_deepslate"
 			}
-			id: "8B0C2D4E6F8A02C4"
+			id: "038C692C2AF271EC"
 			rewards: [
 				{
 					count: 16
-					id: "E3F4A5B6C7007788"
+					id: "670FDAB77494AA0A"
 					item: {
 						count: 1
 						id: "minecraft:deepslate_iron_ore"
@@ -1252,7 +1067,7 @@
 					type: "item"
 				}
 				{
-					id: "F4A5B6C7D8008899"
+					id: "23B5826F3679B0A4"
 					type: "xp"
 					xp: 75
 				}
@@ -1261,20 +1076,15 @@
 			size: 1.0d
 			tasks: [{
 				count: 16L
-				id: "A5B6C7D8E90099AA"
-				item: {
-					count: 16
-					id: "minecraft:cobbled_deepslate"
-				}
+				id: "0D30AECC80088C91"
+				item: { count: 1, id: "minecraft:cobbled_deepslate" }
 				type: "item"
 			}]
-			title: "Глубинный сланец"
 			x: 13.5d
 			y: 1.5d
 		}
 		{
 			dependencies: ["18A60F5F68F91B10"]
-			description: ["Наковальня позволяет накладывать чары, чинить инструменты и переименовывать предметы."]
 			icon: {
 				id: "minecraft:anvil"
 			}
@@ -1298,27 +1108,22 @@
 			size: 1.0d
 			tasks: [{
 				id: "57890123456789AB"
-				item: {
-					count: 1
-					id: "minecraft:anvil"
-				}
+				item: { count: 1, id: "minecraft:anvil" }
 				type: "item"
 			}]
-			title: "Наковальня"
 			x: 13.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["18A60F5F68F91B10"]
-			description: ["Отыщите аметистовую жеоду и создайте подзорную трубу для дальнего обзора."]
 			icon: {
 				id: "minecraft:spyglass"
 			}
-			id: "9C1D3E5F7A9B13D5"
+			id: "2C0D3C467E4E8AEF"
 			rewards: [
 				{
 					count: 4
-					id: "B6C7D8E9F000AABB"
+					id: "370D0E188FF00485"
 					item: {
 						count: 1
 						id: "minecraft:amethyst_shard"
@@ -1326,7 +1131,7 @@
 					type: "item"
 				}
 				{
-					id: "C7D8E9F0A100BBCC"
+					id: "58009139C9338C73"
 					type: "xp"
 					xp: 50
 				}
@@ -1336,29 +1141,21 @@
 			tasks: [
 				{
 					count: 2L
-					id: "D8E9F0A1B200CCDD"
-					item: {
-						count: 2
-						id: "minecraft:amethyst_shard"
-					}
+					id: "0A216E42ED07BC0E"
+					item: { count: 1, id: "minecraft:amethyst_shard" }
 					type: "item"
 				}
 				{
-					id: "E9F0A1B2C300DDEE"
-					item: {
-						count: 1
-						id: "minecraft:spyglass"
-					}
+					id: "0C4F4B25D9414E09"
+					item: { count: 1, id: "minecraft:spyglass" }
 					type: "item"
 				}
 			]
-			title: "Аметист и подзорная труба"
 			x: 13.5d
 			y: 3.0d
 		}
 		{
 			dependencies: ["18A60F5F68F91B10"]
-			description: ["Медь — ключевой металл кинематики Create, проводов и паровых технологий."]
 			icon: {
 				id: "minecraft:raw_copper"
 			}
@@ -1388,19 +1185,14 @@
 			tasks: [{
 				count: 16L
 				id: "1356985EAA61F8AE"
-				item: {
-					count: 16
-					id: "minecraft:raw_copper"
-				}
+				item: { count: 1, id: "minecraft:raw_copper" }
 				type: "item"
 			}]
-			title: "Медная руда"
 			x: 15.5d
 			y: -4.5d
 		}
 		{
 			dependencies: ["622351BC30D93F04"]
-			description: ["Андезитовый сплав — основа шестерней, валов и кинетических механизмов Create."]
 			icon: {
 				id: "create:andesite_alloy"
 			}
@@ -1430,19 +1222,14 @@
 			tasks: [{
 				count: 4L
 				id: "2B548B96C320573B"
-				item: {
-					count: 4
-					id: "create:andesite_alloy"
-				}
+				item: { count: 1, id: "create:andesite_alloy" }
 				type: "item"
 			}]
-			title: "Андезитовый сплав"
 			x: 17.5d
 			y: -4.5d
 		}
 		{
 			dependencies: ["4430352AB5FE48B5"]
-			description: ["Андезитовый сплав готов! Теперь вам полностью открыта глава Create."]
 			icon: {
 				id: "create:goggles"
 			}
@@ -1470,19 +1257,14 @@
 			tasks: [{
 				count: 4L
 				id: "0886DB749AEF562E"
-				item: {
-					count: 4
-					id: "create:andesite_alloy"
-				}
+				item: { count: 1, id: "create:andesite_alloy" }
 				type: "item"
 			}]
-			title: "Шлюз: Инженерия Create"
 			x: 19.5d
 			y: -4.5d
 		}
 		{
 			dependencies: ["18A60F5F68F91B10"]
-			description: ["Осмий — сердце мода Mekanism. Добудьте его для металлургических очистителей и генераторов."]
 			icon: {
 				id: "mekanism:raw_osmium"
 			}
@@ -1508,19 +1290,14 @@
 			tasks: [{
 				count: 8L
 				id: "45BA7E0E756B8287"
-				item: {
-					count: 8
-					id: "mekanism:raw_osmium"
-				}
+				item: { count: 1, id: "mekanism:raw_osmium" }
 				type: "item"
 			}]
-			title: "Сырой осмий"
 			x: 15.5d
 			y: -2.5d
 		}
 		{
 			dependencies: ["5E5C60783F414D2A"]
-			description: ["Добыв осмий, вы разблокировали доступ к ветке высоких технологий Mekanism!"]
 			icon: {
 				id: "mekanism:configurator"
 			}
@@ -1548,19 +1325,14 @@
 			size: 1.5d
 			tasks: [{
 				id: "1D88AE586419C0E2"
-				item: {
-					count: 1
-					id: "mekanism:raw_osmium"
-				}
+				item: { count: 1, id: "mekanism:raw_osmium" }
 				type: "item"
 			}]
-			title: "Шлюз: Индустрия Mekanism"
 			x: 19.5d
 			y: -2.5d
 		}
 		{
 			dependencies: ["18A60F5F68F91B10"]
-			description: ["Золото необходимо для энергетики, золотых яблок и продвинутых сплавов."]
 			icon: {
 				id: "minecraft:raw_gold"
 			}
@@ -1590,26 +1362,21 @@
 			tasks: [{
 				count: 8L
 				id: "7E2174C5E627C171"
-				item: {
-					count: 8
-					id: "minecraft:raw_gold"
-				}
+				item: { count: 1, id: "minecraft:raw_gold" }
 				type: "item"
 			}]
-			title: "Золотая руда"
 			x: 15.5d
 			y: -0.5d
 		}
 		{
 			dependencies: ["624642FD21AB7ACF"]
-			description: ["Золотые яблоки спасают жизнь в критических битвах благодаря регенерации и поглощению урона."]
 			icon: {
 				id: "minecraft:golden_apple"
 			}
 			id: "0D2E4F6A8B0C24E6"
 			rewards: [
 				{
-					id: "F0A1B2C3D400EEFF"
+					id: "2BC04F8102F63A3E"
 					item: {
 						count: 1
 						id: "minecraft:golden_carrot"
@@ -1617,7 +1384,7 @@
 					type: "item"
 				}
 				{
-					id: "A1B2C3D4E500FF00"
+					id: "1FDD95582D39BD4E"
 					type: "xp"
 					xp: 100
 				}
@@ -1626,20 +1393,15 @@
 			size: 1.0d
 			tasks: [{
 				count: 2L
-				id: "B2C3D4E5F6000011"
-				item: {
-					count: 2
-					id: "minecraft:golden_apple"
-				}
+				id: "1A0E26E79B79945A"
+				item: { count: 1, id: "minecraft:golden_apple" }
 				type: "item"
 			}]
-			title: "Золотые плоды"
 			x: 17.5d
 			y: -0.5d
 		}
 		{
 			dependencies: ["18A60F5F68F91B10"]
-			description: ["Красный камень — проводник сигналов и питания для большинства механизмов."]
 			icon: {
 				id: "minecraft:redstone"
 			}
@@ -1669,19 +1431,14 @@
 			tasks: [{
 				count: 16L
 				id: "740A391295E7C57E"
-				item: {
-					count: 16
-					id: "minecraft:redstone"
-				}
+				item: { count: 1, id: "minecraft:redstone" }
 				type: "item"
 			}]
-			title: "Красная пыль"
 			x: 15.5d
 			y: 1.5d
 		}
 		{
 			dependencies: ["05B8181D12C48AB8"]
-			description: ["Повторители и поршни — основа автоматизации, скрытых дверей и логических схем."]
 			icon: {
 				id: "minecraft:repeater"
 			}
@@ -1689,7 +1446,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "C3D4E5F6A7001122"
+					id: "12569042ACC3D11D"
 					item: {
 						count: 1
 						id: "minecraft:sticky_piston"
@@ -1697,7 +1454,7 @@
 					type: "item"
 				}
 				{
-					id: "D4E5F6A7B8002233"
+					id: "0B8B4D8F7AD263C5"
 					type: "xp"
 					xp: 75
 				}
@@ -1706,29 +1463,21 @@
 			size: 1.0d
 			tasks: [
 				{
-					id: "E5F6A7B8C9003344"
-					item: {
-						count: 1
-						id: "minecraft:repeater"
-					}
+					id: "30872C26A746F07B"
+					item: { count: 1, id: "minecraft:repeater" }
 					type: "item"
 				}
 				{
-					id: "F6A7B8C9D0004455"
-					item: {
-						count: 1
-						id: "minecraft:piston"
-					}
+					id: "0352C9D16D7BA357"
+					item: { count: 1, id: "minecraft:piston" }
 					type: "item"
 				}
 			]
-			title: "Редстоун-механика"
 			x: 17.5d
 			y: 1.5d
 		}
 		{
 			dependencies: ["18A60F5F68F91B10"]
-			description: ["Лазурит используется для чародейства и синих красителей."]
 			icon: {
 				id: "minecraft:lapis_lazuli"
 			}
@@ -1754,19 +1503,14 @@
 			tasks: [{
 				count: 16L
 				id: "5B2A66D1B998C17F"
-				item: {
-					count: 16
-					id: "minecraft:lapis_lazuli"
-				}
+				item: { count: 1, id: "minecraft:lapis_lazuli" }
 				type: "item"
 			}]
-			title: "Лазурит"
 			x: 15.5d
 			y: 3.5d
 		}
 		{
 			dependencies: ["18A60F5F68F91B10"]
-			description: ["Алмазы — вершина классического шахтёрского дела. С их помощью создаётся высший инструмент и активируются порталы."]
 			icon: {
 				id: "minecraft:diamond"
 			}
@@ -1791,19 +1535,14 @@
 			tasks: [{
 				count: 3L
 				id: "70FE23C13BA640A9"
-				item: {
-					count: 3
-					id: "minecraft:diamond"
-				}
+				item: { count: 1, id: "minecraft:diamond" }
 				type: "item"
 			}]
-			title: "Алмазы!"
 			x: 17.5d
 			y: 0.5d
 		}
 		{
 			dependencies: ["1BEA5FD82A6F8384"]
-			description: ["Бросьте алмаз в заполненный водой бассейн 2х2 с цветами, чтобы открыть портал в Сумеречный Лес."]
 			icon: {
 				id: "twilightforest:twilight_portal_miniature_structure"
 			}
@@ -1827,19 +1566,14 @@
 			size: 1.5d
 			tasks: [{
 				id: "5B2A0F8F18A4476B"
-				item: {
-					count: 1
-					id: "minecraft:diamond"
-				}
+				item: { count: 1, id: "minecraft:diamond" }
 				type: "item"
 			}]
-			title: "Шлюз: The Twilight Forest"
 			x: 19.5d
 			y: -0.5d
 		}
 		{
 			dependencies: ["1BEA5FD82A6F8384"]
-			description: ["Алмазная кирка способна разрушить самый крепкий блок верхнего мира — обсидиан."]
 			icon: {
 				id: "minecraft:diamond_pickaxe"
 			}
@@ -1868,19 +1602,14 @@
 			size: 1.1d
 			tasks: [{
 				id: "5D6E7F8091A2B3C4"
-				item: {
-					count: 1
-					id: "minecraft:diamond_pickaxe"
-				}
+				item: { count: 1, id: "minecraft:diamond_pickaxe" }
 				type: "item"
 			}]
-			title: "Алмазная кирка"
 			x: 19.5d
 			y: 0.5d
 		}
 		{
 			dependencies: ["2A3B4C5D6E7F8091"]
-			description: ["Добудьте обсидиан при помощи алмазной кирки. Он потребуется для рамки портала в Нижний мир и стола зачарования."]
 			icon: {
 				id: "minecraft:obsidian"
 			}
@@ -1909,13 +1638,9 @@
 			tasks: [{
 				count: 14L
 				id: "6F5AA19B3E80CD8A"
-				item: {
-					count: 14
-					id: "minecraft:obsidian"
-				}
+				item: { count: 1, id: "minecraft:obsidian" }
 				type: "item"
 			}]
-			title: "Обсидиан"
 			x: 21.5d
 			y: 0.5d
 		}
@@ -1926,7 +1651,6 @@
 				"16F8506A5C3FAD00"
 				"6C2D3E4F5A6B7081"
 			]
-			description: ["Объедините силу обсидиана, алмазов, лазурита и книг для создания Стола зачарования."]
 			icon: {
 				id: "minecraft:enchanting_table"
 			}
@@ -1934,7 +1658,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "8E9F0A1B2C3D4E5F"
+					id: "3A30587FC4B5D0CD"
 					item: {
 						count: 1
 						id: "minecraft:bookshelf"
@@ -1943,7 +1667,7 @@
 				}
 				{
 					count: 16
-					id: "9F0A1B2C3D4E5F60"
+					id: "2899AFAC7FF1A861"
 					item: {
 						count: 1
 						id: "minecraft:lapis_lazuli"
@@ -1960,19 +1684,14 @@
 			size: 1.2d
 			tasks: [{
 				id: "1B2C3D4E5F607182"
-				item: {
-					count: 1
-					id: "minecraft:enchanting_table"
-				}
+				item: { count: 1, id: "minecraft:enchanting_table" }
 				type: "item"
 			}]
-			title: "Стол зачарования"
 			x: 17.5d
 			y: 3.5d
 		}
 		{
 			dependencies: ["7D8E9F0A1B2C3D4E"]
-			description: ["Стол зачарования открывает тайные знания древних магов. Добро пожаловать в мир Ars Nouveau!"]
 			icon: {
 				id: "ars_nouveau:novice_spell_book"
 			}
@@ -1981,16 +1700,22 @@
 				{
 					id: "3B2C1D0E4F5A6B7C"
 					item: {
+						components: {
+							"ftbquests:missing_item": "ars_nouveau:blank_rune"
+						}
 						count: 1
-						id: "ars_nouveau:blank_rune"
+						id: "ftbquests:missing_item"
 					}
 					type: "item"
 				}
 				{
 					id: "4C3D2E1F0A5B6C7D"
 					item: {
+						components: {
+							"ftbquests:missing_item": "ars_nouveau:magic_clay"
+						}
 						count: 1
-						id: "ars_nouveau:magic_clay"
+						id: "ftbquests:missing_item"
 					}
 					type: "item"
 				}
@@ -2004,27 +1729,22 @@
 			size: 1.5d
 			tasks: [{
 				id: "6E5F4A3B2C1D0E9F"
-				item: {
-					count: 1
-					id: "ars_nouveau:novice_spell_book"
-				}
+				item: { count: 1, id: "ars_nouveau:novice_spell_book" }
 				type: "item"
 			}]
-			title: "Шлюз: Магия Ars Nouveau"
 			x: 19.5d
 			y: 3.5d
 		}
 		{
 			dependencies: ["384F9A105B8C1D90"]
-			description: ["Постройте рамку из обсидиана и подожгите огнивом, чтобы отправиться в адские пустоши Нижнего мира."]
 			icon: {
 				id: "minecraft:netherrack"
 			}
-			id: "8B9C0D1E2F3A4B5C"
+			id: "6845261FBEABB40C"
 			rewards: [
 				{
 					count: 8
-					id: "9C0D1E2F3A4B5C6D"
+					id: "02E0D31F524345F5"
 					item: {
 						count: 1
 						id: "minecraft:glowstone_dust"
@@ -2046,19 +1766,13 @@
 			tasks: [{
 				count: 16L
 				id: "1E2F3A4B5C6D7E8F"
-				item: {
-					count: 16
-					id: "minecraft:netherrack"
-				}
+				item: { count: 1, id: "minecraft:netherrack" }
 				type: "item"
 			}]
-			title: "Экспедиция в Нижний мир"
 			x: 23.5d
 			y: 0.5d
 		}
 		{
-			dependencies: ["8B9C0D1E2F3A4B5C"]
-			description: ["Огненные стержни ифритов из адской крепости — источник алхимии, огненного порошка и глаз Края."]
 			icon: {
 				id: "minecraft:blaze_rod"
 			}
@@ -2086,20 +1800,15 @@
 			size: 1.0d
 			tasks: [{
 				count: 4L
-				id: "89ABCDEF01234567"
-				item: {
-					count: 4
-					id: "minecraft:blaze_rod"
-				}
+				id: "347C5ACBC595A772"
+				item: { count: 1, id: "minecraft:blaze_rod" }
 				type: "item"
 			}]
-			title: "Огненные стержни (Ифриты)"
 			x: 25.0d
 			y: -0.5d
 		}
 		{
 			dependencies: ["5D6E7F8A9B0C1D2E"]
-			description: ["Адский нарост растет на песке душ и служит основой для подавляющего большинства зелий."]
 			icon: {
 				id: "minecraft:brewing_stand"
 			}
@@ -2107,7 +1816,7 @@
 			rewards: [
 				{
 					count: 4
-					id: "A7B8C9D0E1112233"
+					id: "13460228BCDD372A"
 					item: {
 						count: 1
 						id: "minecraft:nether_wart"
@@ -2116,7 +1825,7 @@
 				}
 				{
 					count: 4
-					id: "B8C9D0E1F2223344"
+					id: "75453DD34E893E31"
 					item: {
 						count: 1
 						id: "minecraft:magma_cream"
@@ -2128,30 +1837,21 @@
 			size: 1.0d
 			tasks: [
 				{
-					id: "C9D0E1F2A3334455"
-					item: {
-						count: 1
-						id: "minecraft:brewing_stand"
-					}
+					id: "69BC85D3972F2D69"
+					item: { count: 1, id: "minecraft:brewing_stand" }
 					type: "item"
 				}
 				{
 					count: 4L
-					id: "D0E1F2A3B4445566"
-					item: {
-						count: 4
-						id: "minecraft:nether_wart"
-					}
+					id: "1C7712576F5E48AF"
+					item: { count: 1, id: "minecraft:nether_wart" }
 					type: "item"
 				}
 			]
-			title: "Алхимия и Адский нарост"
 			x: 26.5d
 			y: -0.5d
 		}
 		{
-			dependencies: ["8B9C0D1E2F3A4B5C"]
-			description: ["Кварц Нижнего мира — главный кристаллический компонент датчиков, компараторов и цифровых схем."]
 			icon: {
 				id: "minecraft:quartz"
 			}
@@ -2159,7 +1859,7 @@
 			rewards: [
 				{
 					count: 8
-					id: "9ABCDEF012345678"
+					id: "04D64E5F2C263344"
 					item: {
 						count: 1
 						id: "minecraft:quartz"
@@ -2167,7 +1867,7 @@
 					type: "item"
 				}
 				{
-					id: "ABCDEF0123456789"
+					id: "05ED07DC89789DEF"
 					item: {
 						count: 1
 						id: "minecraft:comparator"
@@ -2179,14 +1879,10 @@
 			size: 1.0d
 			tasks: [{
 				count: 16L
-				id: "BCDEF0123456789A"
-				item: {
-					count: 16
-					id: "minecraft:quartz"
-				}
+				id: "244ED06F722599D0"
+				item: { count: 1, id: "minecraft:quartz" }
 				type: "item"
 			}]
-			title: "Кварц Нижнего мира"
 			x: 25.0d
 			y: 1.5d
 		}
@@ -2194,11 +1890,6 @@
 			dependencies: [
 				"6E7F8A9B0C1D2E3F"
 				"05B8181D12C48AB8"
-			]
-			description: [
-				"Добыв кварц в Нижнем мире и кремний, вы готовы к переходу в цифровую эру Refined Storage!"
-				""
-				"Для создания МЭ-сети вам потребуются технологии &6Create&r (точный механизм), &bMekanism&r (микросхемы и энергопланшет) и магия &dArs Nouveau&r (самоцвет источника)!"
 			]
 			icon: {
 				id: "refinedstorage:controller"
@@ -2229,29 +1920,20 @@
 				{
 					count: 8L
 					id: "4EE7D1739D16DE3B"
-					item: {
-						count: 8
-						id: "minecraft:quartz"
-					}
+					item: { count: 1, id: "minecraft:quartz" }
 					type: "item"
 				}
 				{
 					count: 8L
 					id: "79BD6E9E49339395"
-					item: {
-						count: 8
-						id: "refinedstorage:silicon"
-					}
+					item: { count: 1, id: "refinedstorage:silicon" }
 					type: "item"
 				}
 			]
-			title: "Шлюз: Сети Refined Storage"
 			x: 27.0d
 			y: 1.5d
 		}
 		{
-			dependencies: ["8B9C0D1E2F3A4B5C"]
-			description: ["Древние обломки скрываются в глубинах лавовых озёр Нижнего мира. Переплавьте их в незеритовый лом!"]
 			icon: {
 				id: "minecraft:ancient_debris"
 			}
@@ -2259,7 +1941,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "E1F2A3B4C5556677"
+					id: "36140AF0A2CD8F7A"
 					item: {
 						count: 1
 						id: "minecraft:netherite_scrap"
@@ -2267,7 +1949,7 @@
 					type: "item"
 				}
 				{
-					id: "F2A3B4C5D6667788"
+					id: "4DC293122C1284C9"
 					type: "xp"
 					xp: 150
 				}
@@ -2276,27 +1958,22 @@
 			size: 1.1d
 			tasks: [{
 				count: 4L
-				id: "A3B4C5D6E7778899"
-				item: {
-					count: 4
-					id: "minecraft:ancient_debris"
-				}
+				id: "56F7862C05D01CFD"
+				item: { count: 1, id: "minecraft:ancient_debris" }
 				type: "item"
 			}]
-			title: "Древние обломки"
 			x: 25.0d
 			y: 0.5d
 		}
 		{
 			dependencies: ["3A5C7E90B2D4F6A8"]
-			description: ["Объедините 4 незеритовых лома и 4 золотых слитка для создания незеритового слитка — вершины земной металлургии."]
 			icon: {
 				id: "minecraft:netherite_ingot"
 			}
 			id: "4B6D8F01C3E5A7B9"
 			rewards: [
 				{
-					id: "B4C5D6E7F8889900"
+					id: "2CED0677267B9B7D"
 					item: {
 						count: 1
 						id: "minecraft:netherite_upgrade_smithing_template"
@@ -2304,7 +1981,7 @@
 					type: "item"
 				}
 				{
-					id: "C5D6E7F8A9990011"
+					id: "5F9D62593B71E122"
 					type: "xp"
 					xp: 250
 				}
@@ -2312,20 +1989,15 @@
 			shape: "diamond"
 			size: 1.3d
 			tasks: [{
-				id: "D6E7F8A9B0001122"
-				item: {
-					count: 1
-					id: "minecraft:netherite_ingot"
-				}
+				id: "63B0B83D1537A54B"
+				item: { count: 1, id: "minecraft:netherite_ingot" }
 				type: "item"
 			}]
-			title: "Незеритовый слиток"
 			x: 27.0d
 			y: 0.5d
 		}
 		{
 			dependencies: ["6D1F5192F6A64644"]
-			description: ["Жемчуг Края падает со странников Края и позволяет телепортироваться на расстояния."]
 			icon: {
 				id: "minecraft:ender_pearl"
 			}
@@ -2333,7 +2005,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "E7F8A9B0C1112233"
+					id: "0B51383C56019299"
 					item: {
 						count: 1
 						id: "minecraft:ender_pearl"
@@ -2341,7 +2013,7 @@
 					type: "item"
 				}
 				{
-					id: "F8A9B0C1D2223344"
+					id: "78E0E42CC4525C75"
 					type: "xp"
 					xp: 100
 				}
@@ -2350,14 +2022,10 @@
 			size: 1.0d
 			tasks: [{
 				count: 4L
-				id: "A9B0C1D2E3334455"
-				item: {
-					count: 4
-					id: "minecraft:ender_pearl"
-				}
+				id: "56545D4C59FD06E9"
+				item: { count: 1, id: "minecraft:ender_pearl" }
 				type: "item"
 			}]
-			title: "Жемчуг Края"
 			x: 23.5d
 			y: -1.5d
 		}
@@ -2366,7 +2034,6 @@
 				"5C7E9012D4F6A8B0"
 				"5D6E7F8A9B0C1D2E"
 			]
-			description: ["Соедините жемчуг Края и огненный порошок, чтобы получить Око Края, ведущее к крепости портала в Край."]
 			icon: {
 				id: "minecraft:ender_eye"
 			}
@@ -2374,7 +2041,7 @@
 			rewards: [
 				{
 					count: 2
-					id: "B0C1D2E3F4445566"
+					id: "0A70F59E1D6A8401"
 					item: {
 						count: 1
 						id: "minecraft:ender_eye"
@@ -2382,7 +2049,7 @@
 					type: "item"
 				}
 				{
-					id: "C1D2E3F4A5556677"
+					id: "6B6ED59DB99A0660"
 					type: "xp"
 					xp: 150
 				}
@@ -2391,27 +2058,22 @@
 			size: 1.2d
 			tasks: [{
 				count: 4L
-				id: "D2E3F4A5B6667788"
-				item: {
-					count: 4
-					id: "minecraft:ender_eye"
-				}
+				id: "1C736588C1A38948"
+				item: { count: 1, id: "minecraft:ender_eye" }
 				type: "item"
 			}]
-			title: "Око Края и Поиски Крепости"
 			x: 25.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["6D8F0123E5A7B9C1"]
-			description: ["Активируйте портал в Край, сразите Дракона Края и заберите трофейное яйцо!"]
 			icon: {
 				id: "minecraft:dragon_egg"
 			}
 			id: "7E901234F6A8B0D2"
 			rewards: [
 				{
-					id: "E3F4A5B6C7778899"
+					id: "4CE7390F99905979"
 					item: {
 						count: 1
 						id: "minecraft:elytra"
@@ -2420,7 +2082,7 @@
 				}
 				{
 					count: 16
-					id: "F4A5B6C7D8889900"
+					id: "741757AA702E48E6"
 					item: {
 						count: 1
 						id: "minecraft:firework_rocket"
@@ -2428,7 +2090,7 @@
 					type: "item"
 				}
 				{
-					id: "A5B6C7D8E9990011"
+					id: "49CDD1D00E929D1C"
 					type: "xp_levels"
 					xp_levels: 5
 				}
@@ -2436,28 +2098,23 @@
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
-				id: "B6C7D8E9F0001122"
-				item: {
-					count: 1
-					id: "minecraft:dragon_egg"
-				}
+				id: "21CC059A2502BC4A"
+				item: { count: 1, id: "minecraft:dragon_egg" }
 				type: "item"
 			}]
-			title: "Победа над Драконом Края"
 			x: 27.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["7E901234F6A8B0D2"]
-			description: ["Шалкеровый ящик сохраняет все предметы внутри при разрушении — абсолютный триумф портативного хранения."]
 			icon: {
 				id: "minecraft:shulker_box"
 			}
-			id: "8F012345A7B9C1E3"
+			id: "6DC6F6273114EE3F"
 			rewards: [
 				{
 					count: 2
-					id: "C7D8E9F0A1112233"
+					id: "04C595BEBD47E718"
 					item: {
 						count: 1
 						id: "minecraft:shulker_shell"
@@ -2465,7 +2122,7 @@
 					type: "item"
 				}
 				{
-					id: "D8E9F0A1B2223344"
+					id: "60F78B0714BB0F13"
 					type: "xp"
 					xp: 200
 				}
@@ -2473,21 +2130,14 @@
 			shape: "square"
 			size: 1.2d
 			tasks: [{
-				id: "E9F0A1B2C3334455"
-				item: {
-					count: 1
-					id: "minecraft:shulker_box"
-				}
+				id: "18C9C8249D98697E"
+				item: { count: 1, id: "minecraft:shulker_box" }
 				type: "item"
 			}]
-			title: "Шалкеровый ящик"
 			x: 29.0d
 			y: -1.5d
 		}
-,
 		{
-			dependencies: ["3C567890B2D4F678"]
-			description: ["Алхимия позволяет варить могущественные зелья усиления и защиты."]
 			icon: {
 				id: "minecraft:brewing_stand"
 			}
@@ -2495,36 +2145,29 @@
 			rewards: [
 				{
 					count: 8
-					id: "5A8C11099E0700_00"
+					id: "4CC5B4D403C785B3"
 					item: {
 						count: 8
 						id: "minecraft:glass_bottle"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "023E7C7A93EF47B8"
 					type: "xp_levels"
 					xp_levels: 10
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:brewing_stand"
-					}
-					type: "item"
-				}
-			]
-			title: "Варочная Стойка"
+			tasks: [{
+				id: "5E9C51D8958F5D22"
+				item: { count: 1, id: "minecraft:brewing_stand" }
+				type: "item"
+			}]
 			x: 24.5d
 			y: -3.5d
-		},
+		}
 		{
 			dependencies: ["5A8C11099E070001"]
-			description: ["Сахар разгоняет метаболизм. Сварите первое зелье стремительности!"]
 			icon: {
 				id: "minecraft:sugar"
 			}
@@ -2532,36 +2175,29 @@
 			rewards: [
 				{
 					count: 16
-					id: "5A8C11099E0700_00"
+					id: "6636F696B2EC3184"
 					item: {
 						count: 16
 						id: "minecraft:sugar"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "6BA6C997073587EC"
 					type: "xp_levels"
 					xp_levels: 5
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:sugar"
-					}
-					type: "item"
-				}
-			]
-			title: "Зелье Скорости"
+			tasks: [{
+				id: "13D937D64901B512"
+				item: { count: 1, id: "minecraft:sugar" }
+				type: "item"
+			}]
 			x: 26.0d
 			y: -4.5d
-		},
+		}
 		{
 			dependencies: ["5A8C11099E070001"]
-			description: ["Сгусток магмы делает тело невосприимчивым к лаве и адскому огню."]
 			icon: {
 				id: "minecraft:magma_cream"
 			}
@@ -2569,36 +2205,29 @@
 			rewards: [
 				{
 					count: 4
-					id: "5A8C11099E0700_00"
+					id: "5C8DBABF1027A234"
 					item: {
 						count: 4
 						id: "minecraft:fire_charge"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "3D853AB6E672D6BB"
 					type: "xp_levels"
 					xp_levels: 10
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:magma_cream"
-					}
-					type: "item"
-				}
-			]
-			title: "Зелье Огнестойкости"
+			tasks: [{
+				id: "31283A675B9D4146"
+				item: { count: 1, id: "minecraft:magma_cream" }
+				type: "item"
+			}]
 			x: 26.0d
 			y: -3.5d
-		},
+		}
 		{
 			dependencies: ["5A8C11099E070001"]
-			description: ["Сверкающий ломтик арбуза с золотом мгновенно восстанавливает здоровье в критический момент."]
 			icon: {
 				id: "minecraft:glistering_melon_slice"
 			}
@@ -2606,36 +2235,29 @@
 			rewards: [
 				{
 					count: 16
-					id: "5A8C11099E0700_00"
+					id: "4ECBF81BC61FF61A"
 					item: {
 						count: 16
 						id: "minecraft:gold_nugget"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "516E62DA7421C814"
 					type: "xp_levels"
 					xp_levels: 10
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:glistering_melon_slice"
-					}
-					type: "item"
-				}
-			]
-			title: "Зелье Исцеления"
+			tasks: [{
+				id: "454FC8644C9C6D18"
+				item: { count: 1, id: "minecraft:glistering_melon_slice" }
+				type: "item"
+			}]
 			x: 26.0d
 			y: -2.5d
-		},
+		}
 		{
 			dependencies: ["5A8C11099E070003"]
-			description: ["Маринованный паучий глаз выворачивает свойства зелья наизнанку."]
 			icon: {
 				id: "minecraft:fermented_spider_eye"
 			}
@@ -2643,36 +2265,28 @@
 			rewards: [
 				{
 					count: 8
-					id: "5A8C11099E0700_00"
+					id: "3B1CC80C6E6CFBD5"
 					item: {
 						count: 8
 						id: "minecraft:golden_carrot"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "0307446E019EF818"
 					type: "xp_levels"
 					xp_levels: 15
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:fermented_spider_eye"
-					}
-					type: "item"
-				}
-			]
-			title: "Зелье Невидимости"
+			tasks: [{
+				id: "1114D0A6D75F0FF8"
+				item: { count: 1, id: "minecraft:fermented_spider_eye" }
+				type: "item"
+			}]
 			x: 27.5d
 			y: -3.5d
-		},
+		}
 		{
-			dependencies: ["0A23456789ABCDEF"]
-			description: ["Стригите овец, чтобы добывать шерсть для кроватей и декораций без убийства животных."]
 			icon: {
 				id: "minecraft:shears"
 			}
@@ -2680,44 +2294,36 @@
 			rewards: [
 				{
 					count: 16
-					id: "5A8C11099E0700_00"
+					id: "4D718C41CB3A3216"
 					item: {
 						count: 16
 						id: "minecraft:wheat"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "69041FEDE34D2E2D"
 					type: "xp_levels"
 					xp_levels: 5
 				}
 			]
 			tasks: [
 				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:shears"
-					}
+					id: "37533AE33528D1C6"
+					item: { count: 1, id: "minecraft:shears" }
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_T1"
-					item: {
-						count: 1
-						id: "minecraft:white_wool"
-					}
+					id: "2C68E290B816AB1B"
+					item: { count: 1, id: "minecraft:white_wool" }
 					type: "item"
 				}
 			]
-			title: "Ножницы и Овцы"
 			x: 6.5d
 			y: -3.5d
-		},
+		}
 		{
 			dependencies: ["5A8C11099E070006"]
-			description: ["Кожа необходима для переплёта книг, создания рюкзаков и брони."]
 			icon: {
 				id: "minecraft:leather"
 			}
@@ -2725,36 +2331,29 @@
 			rewards: [
 				{
 					count: 2
-					id: "5A8C11099E0700_00"
+					id: "6B04A11EB7ACB27C"
 					item: {
 						count: 2
 						id: "minecraft:milk_bucket"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "18B2457CE54DF634"
 					type: "xp_levels"
 					xp_levels: 5
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:leather"
-					}
-					type: "item"
-				}
-			]
-			title: "Разведение Коров: Кожа"
+			tasks: [{
+				id: "790CE931DAC368F3"
+				item: { count: 1, id: "minecraft:leather" }
+				type: "item"
+			}]
 			x: 8.0d
 			y: -3.5d
-		},
+		}
 		{
 			dependencies: ["5A8C11099E070007"]
-			description: ["Привязывайте коров, лошадей и овец или ведите их за собой в загон."]
 			icon: {
 				id: "minecraft:lead"
 			}
@@ -2762,36 +2361,29 @@
 			rewards: [
 				{
 					count: 16
-					id: "5A8C11099E0700_00"
+					id: "22DC63FD414E5041"
 					item: {
 						count: 16
 						id: "minecraft:carrot"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "4EEF3CBCB320B7FA"
 					type: "xp_levels"
 					xp_levels: 5
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:lead"
-					}
-					type: "item"
-				}
-			]
-			title: "Поводок для животных"
+			tasks: [{
+				id: "2796F8699161E9D7"
+				item: { count: 1, id: "minecraft:lead" }
+				type: "item"
+			}]
 			x: 8.0d
 			y: -4.8d
-		},
+		}
 		{
 			dependencies: ["5A8C11099E070006"]
-			description: ["Поставьте костер под улей и срезайте соты ножницами, не разозлив пчёл."]
 			icon: {
 				id: "minecraft:honeycomb"
 			}
@@ -2799,44 +2391,35 @@
 			rewards: [
 				{
 					count: 2
-					id: "5A8C11099E0700_00"
+					id: "6BF51B9D920C6298"
 					item: {
 						count: 2
 						id: "minecraft:campfire"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "4A26D05DC2C56DCC"
 					type: "xp_levels"
 					xp_levels: 10
 				}
 			]
 			tasks: [
 				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:honeycomb"
-					}
+					id: "2525EEC1BFF5CC1B"
+					item: { count: 1, id: "minecraft:honeycomb" }
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_T1"
-					item: {
-						count: 1
-						id: "minecraft:honey_bottle"
-					}
+					id: "31EF6B9643F0D364"
+					item: { count: 1, id: "minecraft:honey_bottle" }
 					type: "item"
 				}
 			]
-			title: "Пасека и Пчеловодство"
 			x: 6.5d
 			y: -4.8d
-		},
+		}
 		{
-			dependencies: ["0E6789ABCDEF0123"]
-			description: ["Стрелка компаса всегда указывает на точку вашего возрождения или мировой спавн."]
 			icon: {
 				id: "minecraft:compass"
 			}
@@ -2844,36 +2427,28 @@
 			rewards: [
 				{
 					count: 16
-					id: "5A8C11099E0700_00"
+					id: "49EE114C8A14E271"
 					item: {
 						count: 16
 						id: "minecraft:paper"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "4871DEDF9CD287B7"
 					type: "xp_levels"
 					xp_levels: 5
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:compass"
-					}
-					type: "item"
-				}
-			]
-			title: "Компас"
+			tasks: [{
+				id: "57ACAA44B691BEDC"
+				item: { count: 1, id: "minecraft:compass" }
+				type: "item"
+			}]
 			x: 14.0d
 			y: 3.5d
-		},
+		}
 		{
-			dependencies: ["0D56789ABCDEF012"]
-			description: ["Позволяют ориентироваться во времени суток даже в самых глубоких темных шахтах."]
 			icon: {
 				id: "minecraft:clock"
 			}
@@ -2881,36 +2456,29 @@
 			rewards: [
 				{
 					count: 8
-					id: "5A8C11099E0700_00"
+					id: "6FBBD8F2533491A2"
 					item: {
 						count: 8
 						id: "minecraft:gold_ingot"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "114FFE39EAFD5130"
 					type: "xp_levels"
 					xp_levels: 5
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:clock"
-					}
-					type: "item"
-				}
-			]
-			title: "Золотые Часы"
+			tasks: [{
+				id: "71874FFEDC9875ED"
+				item: { count: 1, id: "minecraft:clock" }
+				type: "item"
+			}]
 			x: 14.0d
 			y: 5.0d
-		},
+		}
 		{
 			dependencies: ["5A8C11099E070010"]
-			description: ["Создавайте карты неизведанных земель и расширяйте их масштаб."]
 			icon: {
 				id: "minecraft:cartography_table"
 			}
@@ -2918,44 +2486,35 @@
 			rewards: [
 				{
 					count: 32
-					id: "5A8C11099E0700_00"
+					id: "76A9FC347729ABEF"
 					item: {
 						count: 32
 						id: "minecraft:paper"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "4F0A7CA0C9748CF5"
 					type: "xp_levels"
 					xp_levels: 10
 				}
 			]
 			tasks: [
 				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:cartography_table"
-					}
+					id: "4F267423DA1D7971"
+					item: { count: 1, id: "minecraft:cartography_table" }
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_T1"
-					item: {
-						count: 1
-						id: "minecraft:map"
-					}
+					id: "386EB3893D61D84B"
+					item: { count: 1, id: "minecraft:map" }
 					type: "item"
 				}
 			]
-			title: "Стол Картографа и Карты"
 			x: 15.5d
 			y: 3.5d
-		},
+		}
 		{
-			dependencies: ["1089ABCDEF012345"]
-			description: ["Оружие утопленников с чарами Верности или Тягуна для быстрого полета в дождь."]
 			icon: {
 				id: "minecraft:trident"
 			}
@@ -2963,36 +2522,29 @@
 			rewards: [
 				{
 					count: 16
-					id: "5A8C11099E0700_00"
+					id: "1F78E2E3DC3A52E0"
 					item: {
 						count: 16
 						id: "minecraft:prismarine_crystals"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "5A79B001C8D0CE27"
 					type: "xp_levels"
 					xp_levels: 20
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:nautilus_shell"
-					}
-					type: "item"
-				}
-			]
-			title: "Глубинный Трезубец"
+			tasks: [{
+				id: "0870001DF6ABBFE7"
+				item: { count: 1, id: "minecraft:nautilus_shell" }
+				type: "item"
+			}]
 			x: 20.0d
 			y: 4.0d
-		},
+		}
 		{
 			dependencies: ["5A8C11099E070013"]
-			description: ["Дарует ночное зрение, подводное дыхание и ускорение копания под водой."]
 			icon: {
 				id: "minecraft:conduit"
 			}
@@ -3000,84 +2552,68 @@
 			rewards: [
 				{
 					count: 8
-					id: "5A8C11099E0700_00"
+					id: "24252AAEB7D13939"
 					item: {
 						count: 8
 						id: "minecraft:sea_lantern"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "749E7D39B0DA4A9D"
 					type: "xp_levels"
 					xp_levels: 30
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:heart_of_the_sea"
-					}
-					type: "item"
-				}
-			]
-			title: "Морской Проводник (Conduit)"
+			tasks: [{
+				id: "6E6F7007F8155D0A"
+				item: { count: 1, id: "minecraft:heart_of_the_sea" }
+				type: "item"
+			}]
 			x: 21.5d
 			y: 4.0d
-		},
+		}
 		{
-			dependencies: ["6D890123E5F7A9C1"]
-			description: ["Покорите небеса! Спланируйте с вершины городов Края и используйте ракеты фейерверка для бесконечного полета."]
 			icon: {
 				id: "minecraft:elytra"
 			}
 			id: "5A8C11099E070015"
-			shape: "challenge"
-			size: 1.5d
 			rewards: [
 				{
 					count: 64
-					id: "5A8C11099E0700_00"
+					id: "0F3A4646588752D5"
 					item: {
 						count: 64
 						id: "minecraft:firework_rocket"
 					}
 					type: "item"
-				},
+				}
 				{
 					count: 2
-					id: "5A8C11099E0700_01"
+					id: "44A562860995A9CD"
 					item: {
 						count: 2
 						id: "minecraft:netherite_ingot"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "4FC62BADAED3989C"
 					type: "xp_levels"
 					xp_levels: 50
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:elytra"
-					}
-					type: "item"
-				}
-			]
-			title: "Крылья Элитры (Elytra)"
+			shape: "challenge"
+			size: 1.5d
+			tasks: [{
+				id: "5BC851D4FCE100FE"
+				item: { count: 1, id: "minecraft:elytra" }
+				type: "item"
+			}]
 			x: 30.5d
 			y: 0.0d
-		},
+		}
 		{
-			dependencies: ["6D890123E5F7A9C1"]
-			description: ["Единый персональный карманный склад, доступный из любого места и любого измерения."]
 			icon: {
 				id: "minecraft:ender_chest"
 			}
@@ -3085,45 +2621,37 @@
 			rewards: [
 				{
 					count: 16
-					id: "5A8C11099E0700_00"
+					id: "412652B8B09DD7F8"
 					item: {
 						count: 16
 						id: "minecraft:obsidian"
 					}
 					type: "item"
-				},
+				}
 				{
 					count: 4
-					id: "5A8C11099E0700_01"
+					id: "4DF27B4ECE77AE55"
 					item: {
 						count: 4
 						id: "minecraft:ender_eye"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "23E2C4DCF514DBC3"
 					type: "xp_levels"
 					xp_levels: 25
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:ender_chest"
-					}
-					type: "item"
-				}
-			]
-			title: "Сундук Края (Ender Chest)"
+			tasks: [{
+				id: "16AEB2BD006547A9"
+				item: { count: 1, id: "minecraft:ender_chest" }
+				type: "item"
+			}]
 			x: 30.5d
 			y: -1.5d
-		},
+		}
 		{
-			dependencies: ["6D890123E5F7A9C1"]
-			description: ["Телепортирует игрока на случайную дистанцию при поедании. Служит основой для стержней Края."]
 			icon: {
 				id: "minecraft:chorus_fruit"
 			}
@@ -3131,30 +2659,24 @@
 			rewards: [
 				{
 					count: 8
-					id: "5A8C11099E0700_00"
+					id: "44886AFDBA0A5E3A"
 					item: {
 						count: 8
 						id: "minecraft:end_rod"
 					}
 					type: "item"
-				},
+				}
 				{
-					id: "5A8C11099E0700_XP"
+					id: "7670F72AC93E2FA6"
 					type: "xp_levels"
 					xp_levels: 15
 				}
 			]
-			tasks: [
-				{
-					id: "5A8C11099E0700_T0"
-					item: {
-						count: 1
-						id: "minecraft:chorus_fruit"
-					}
-					type: "item"
-				}
-			]
-			title: "Плод Хоруса"
+			tasks: [{
+				id: "7B11065F5FC43611"
+				item: { count: 1, id: "minecraft:chorus_fruit" }
+				type: "item"
+			}]
 			x: 30.5d
 			y: 1.5d
 		}

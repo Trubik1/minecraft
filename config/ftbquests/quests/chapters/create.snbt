@@ -1276,10 +1276,10 @@
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["4430352AB5FE48B6"]
 			icon: {
 				id: "create:large_cogwheel"
 			}
-			dependencies: ["4430352AB5FE48B6"]
 			id: "57A7A5C79389A96A"
 			rewards: [{
 				count: 16
@@ -1967,8 +1967,11 @@
 					count: 3
 					id: "19E74CBA0D778614"
 					item: {
+						components: {
+							"ftbquests:missing_item": "alltheores:brass_ingot"
+						}
 						count: 1
-						id: "alltheores:brass_ingot"
+						id: "ftbquests:missing_item"
 					}
 					type: "item"
 				}
@@ -2049,8 +2052,11 @@
 					count: 4
 					id: "2B72AF25BC0235BE"
 					item: {
+						components: {
+							"ftbquests:missing_item": "supplementaries:bamboo_spikes"
+						}
 						count: 1
-						id: "supplementaries:bamboo_spikes"
+						id: "ftbquests:missing_item"
 					}
 					type: "item"
 				}
@@ -3174,8 +3180,11 @@
 				count: 5
 				id: "783F3F33B293858B"
 				item: {
+					components: {
+						"ftbquests:missing_item": "alltheores:brass_ingot"
+					}
 					count: 1
-					id: "alltheores:brass_ingot"
+					id: "ftbquests:missing_item"
 				}
 				type: "item"
 			}]
@@ -3321,8 +3330,11 @@
 					count: 3
 					id: "727528AFAC25F78B"
 					item: {
+						components: {
+							"ftbquests:missing_item": "the_bumblezone:honey_bucket"
+						}
 						count: 1
-						id: "the_bumblezone:honey_bucket"
+						id: "ftbquests:missing_item"
 					}
 					type: "item"
 				}
@@ -4090,7 +4102,6 @@
 			y: -14.0d
 		}
 		{
-			dependencies: ["26B161FF61AF9947"]
 			id: "6819665DA7028C9E"
 			rewards: [{
 				count: 4
@@ -4132,7 +4143,6 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["56CB9538BFEA025B"]
 			id: "7322A19FDA5B78E1"
 			rewards: [{
 				id: "6A09413634164B93"
@@ -4152,7 +4162,6 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["2846EA366D7DCDEA"]
 			id: "09BE3D92053AE1F8"
 			rewards: [{
 				id: "00D914E96307FCC8"
@@ -4172,7 +4181,6 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["099E4B2370E37A5A"]
 			id: "5AFD4912CC8FBBB8"
 			rewards: [{
 				count: 4
@@ -4193,7 +4201,6 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["35025120C5408A44"]
 			id: "23A9A2D399A7BF94"
 			rewards: [{
 				id: "6A00F6786C5C4148"
@@ -4213,7 +4220,6 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["4B5FBF794355FE9D"]
 			id: "38E9C4DB82B1279A"
 			rewards: [{
 				id: "6B569944E341567B"
@@ -4233,7 +4239,6 @@
 			y: 7.25d
 		}
 		{
-			dependencies: ["4C158B86F80ECB39"]
 			id: "7917E75BBA3F0614"
 			rewards: [{
 				id: "186FBFFDD7D0C6B0"
@@ -4253,7 +4258,6 @@
 			y: -6.5d
 		}
 		{
-			dependencies: ["6D27F1519762F78C"]
 			id: "6350ADB7540C368D"
 			rewards: [{
 				id: "07D0F068398D887E"
@@ -4273,7 +4277,6 @@
 			y: -5.5d
 		}
 		{
-			dependencies: ["5D61A77CC877D7EA"]
 			id: "24CFA0022432887E"
 			rewards: [{
 				id: "42389FB698F8951C"
@@ -4293,7 +4296,6 @@
 			y: -12.5d
 		}
 		{
-			dependencies: ["39A7DA98D281CE92"]
 			id: "4ACD076C19B200B2"
 			rewards: [{
 				count: 8
@@ -4314,7 +4316,6 @@
 			y: -12.5d
 		}
 		{
-			dependencies: ["408569974C683797"]
 			id: "4CFE8B1C53B429E9"
 			rewards: [{
 				count: 16
@@ -4335,7 +4336,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["75ABBD24EF022AA2"]
 			icon: {
 				id: "create:pulp"
 			}
@@ -4359,7 +4359,6 @@
 			y: 0.5d
 		}
 		{
-			dependencies: ["4D269DF7C3B5F2C8"]
 			icon: {
 				id: "create:creative_blaze_cake"
 			}

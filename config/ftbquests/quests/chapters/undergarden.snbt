@@ -290,7 +290,7 @@
 			y: 6.0d
 		}
 	]
-	order_index: 8
+	order_index: 9
 	quest_links: [ ]
 	quests: [
 		{
@@ -1289,9 +1289,9 @@
 			tasks: [{
 				icon: {
 					components: {
-						"draconicevolution:soul_id": "undergarden:minion"
+						"ftbquests:missing_item": "draconicevolution:mob_soul"
 					}
-					id: "draconicevolution:mob_soul"
+					id: "ftbquests:missing_item"
 				}
 				id: "6043A40C2B121AF9"
 				observation_type: "entity_type"
@@ -1986,7 +1986,10 @@
 		{
 			dependencies: ["1C232674CD04024D"]
 			icon: {
-				id: "immersiveengineering:warning_sign_attention"
+				components: {
+					"ftbquests:missing_item": "immersiveengineering:warning_sign_attention"
+				}
+				id: "ftbquests:missing_item"
 			}
 			id: "76CDC18D7A208512"
 			rewards: [{

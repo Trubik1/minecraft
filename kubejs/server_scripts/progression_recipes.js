@@ -52,7 +52,7 @@ ServerEvents.recipes(event => {
     ], {
         S: 'create:brass_sheet',
         R: 'minecraft:redstone',
-        A: 'mekanism:enriched_alloy',
+        A: 'mekanism:alloy_infused',
         T: 'create:electron_tube'
     }).id('steampunk:progression/basic_control_circuit');
 
@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
     ], {
         R: 'minecraft:redstone',
         G: 'create:golden_sheet',
-        A: 'mekanism:enriched_alloy',
+        A: 'mekanism:alloy_infused',
         S: 'ars_nouveau:source_gem'
     }).id('steampunk:progression/energy_tablet');
 
@@ -347,7 +347,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'cataclysm:ignitium_block',
         B: 'mekanism:energy_tablet',
-        C: 'cataclysm:monstrosity_blade',
+        C: 'cataclysm:monstrous_horn',
         D: 'ars_nouveau:source_gem_block',
         E: 'epicfight:netherite_tachi'
     }).id('steampunk:boss_craft/the_incinerator_reforged');
@@ -361,7 +361,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'create:golden_sheet',
         B: 'ars_nouveau:source_gem',
-        C: 'mekanism:enriched_alloy',
+        C: 'mekanism:alloy_infused',
         D: 'minecraft:book'
     }).id('steampunk:combat/master_skillbook');
 
