@@ -1420,16 +1420,7 @@ ServerEvents.recipes(event => {
         event.recipes.createPressing('extendedcrafting:black_iron_ingot', 'extendedcrafting:black_iron_ingot')
     ]).transitionalItem('extendedcrafting:black_iron_ingot').loops(1).id('steampunk:create/sequenced_crystaltine_star');
 
-    // Variant B: With Luminessence -> 2x Crystaltine Ingot
-    event.recipes.create.sequenced_assembly([
-        '2x extendedcrafting:crystaltine_ingot'
-    ], 'minecraft:iron_ingot', [
-        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'minecraft:diamond']),
-        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'minecraft:lapis_lazuli']),
-        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'minecraft:gold_ingot']),
-        event.recipes.createDeploying('extendedcrafting:black_iron_ingot', ['extendedcrafting:black_iron_ingot', 'extendedcrafting:luminessence']),
-        event.recipes.createPressing('extendedcrafting:black_iron_ingot', 'extendedcrafting:black_iron_ingot')
-    ]).transitionalItem('extendedcrafting:black_iron_ingot').loops(1).id('steampunk:create/sequenced_crystaltine_luminessence');
+// Variant B removed as requested (only Nether Star sequenced assembly remains)
 
     // ==========================================
     // 2. EXTENDED CRAFTING TABLES PROGRESSION
@@ -1515,7 +1506,7 @@ ServerEvents.recipes(event => {
         K: 'mekanism:ingot_tin',
         X: 'extendedcrafting:black_iron_ingot',
         R: 'extendedcrafting:crystaltine_ingot',
-        F: 'extendedcrafting:the_ultimate_catalyst',
+        F: 'extendedcrafting:ultimate_catalyst',
         U: 'undergarden:cloggrum_ingot',
         W: 'undergarden:froststeel_ingot',
         O: 'undergarden:forgotten_ingot',
@@ -1720,27 +1711,26 @@ ServerEvents.recipes(event => {
     // PIPEZ & FLUX NETWORKS RECIPES
     // ==========================================================================
 
-    // Creative/Infinity Pipe Upgrade on 3x3 Crafting Table (not overly complicated)
+    // Creative/Infinity Pipe Upgrade on 5x5 Advanced Crafting Table
     event.remove({ output: 'pipez:infinity_upgrade' });
-    event.shaped('pipez:infinity_upgrade', [
-        'UNU',
-        'NSN',
-        'UNU'
-    ], {
-        U: 'pipez:ultimate_upgrade',
-        N: 'minecraft:netherite_ingot',
-        S: 'minecraft:nether_star'
-    }).id('steampunk:pipez/infinity_upgrade_netherite');
-
-    event.shaped('pipez:infinity_upgrade', [
-        'UBU',
-        'BSB',
-        'UBU'
-    ], {
-        U: 'pipez:ultimate_upgrade',
-        B: 'extendedcrafting:black_iron_ingot',
-        S: 'minecraft:nether_star'
-    }).id('steampunk:pipez/infinity_upgrade_black_iron');
+    event.custom({
+        type: 'extendedcrafting:shaped_table',
+        pattern: [
+            'UNNNU',
+            'NBIBN',
+            'NISIN',
+            'NBIBN',
+            'UNNNU'
+        ],
+        key: {
+            U: { item: 'pipez:ultimate_upgrade' },
+            N: { item: 'minecraft:netherite_ingot' },
+            B: { item: 'extendedcrafting:black_iron_ingot' },
+            I: { item: 'extendedcrafting:crystaltine_ingot' },
+            S: { item: 'minecraft:nether_star' }
+        },
+        result: { id: 'pipez:infinity_upgrade', count: 1 }
+    }).id('steampunk:extendedcrafting/infinity_upgrade_5x5');
 
     // Flux Dust alternative recipes (crafting table & energizing)
     event.shapeless('2x fluxnetworks:flux_dust', [
@@ -1989,5 +1979,66 @@ ServerEvents.recipes(event => {
         event.recipes.createDeploying('mysticalagriculture:prosperity_seed_base', ['mysticalagriculture:prosperity_seed_base', 'mysticalagradditions:insanium_essence']),
         event.recipes.createPressing('mysticalagriculture:prosperity_seed_base', 'mysticalagriculture:prosperity_seed_base')
     ]).transitionalItem('mysticalagriculture:prosperity_seed_base').loops(1).id('steampunk:create/sequenced_nether_star_seeds');
+
+
+    // ==========================================================================
+    // MYSTICAL AGRICULTURE: INFUSION CRYSTALS PROGRESSION
+    // ==========================================================================
+    // Custom Infusion Crystal (Tier 1) - requires tech/magic cross-integration
+    event.remove({ output: 'mysticalagriculture:infusion_crystal' });
+    event.shaped('mysticalagriculture:infusion_crystal', [
+        'PIP',
+        'RDR',
+        'PSP'
+    ], {
+        P: 'mysticalagriculture:prosperity_shard',
+        I: 'mysticalagriculture:inferium_essence',
+        R: 'create:polished_rose_quartz',
+        D: 'minecraft:diamond',
+        S: 'ars_nouveau:source_gem'
+    }).id('steampunk:mysticalagriculture/infusion_crystal');
+
+    // Master Infusion Crystal: Remove standard 3x3 craft
+    event.remove({ output: 'mysticalagriculture:master_infusion_crystal' });
+
+    // Master Infusion Crystal - Infusion Altar ritual
+    event.custom({
+        type: 'mysticalagriculture:infusion',
+        input: {
+            item: 'mysticalagriculture:infusion_crystal'
+        },
+        ingredients: [
+            { item: 'mysticalagradditions:insanium_essence' },
+            { item: 'mysticalagriculture:supremium_gemstone' },
+            { item: 'mysticalagradditions:insanium_essence' },
+            { item: 'minecraft:nether_star' },
+            { item: 'mysticalagradditions:insanium_essence' },
+            { item: 'extendedcrafting:crystaltine_ingot' },
+            { item: 'mysticalagradditions:insanium_essence' },
+            { item: 'mysticalagriculture:supremium_gemstone' }
+        ],
+        result: {
+            id: 'mysticalagriculture:master_infusion_crystal'
+        }
+    }).id('steampunk:mysticalagriculture/master_infusion_crystal_altar');
+
+    // Master Infusion Crystal - 5x5 Advanced Crafting Table recipe
+    event.custom({
+        type: 'extendedcrafting:shaped_table',
+        pattern: [
+            'ISSSI',
+            'SGGGS',
+            'SGCGS',
+            'SGGGS',
+            'ISSSI'
+        ],
+        key: {
+            I: { item: 'mysticalagradditions:insanium_essence' },
+            S: { item: 'mysticalagriculture:supremium_essence' },
+            G: { item: 'mysticalagriculture:supremium_gemstone' },
+            C: { item: 'mysticalagriculture:infusion_crystal' }
+        },
+        result: { id: 'mysticalagriculture:master_infusion_crystal', count: 1 }
+    }).id('steampunk:extendedcrafting/master_infusion_crystal_5x5');
 
 });

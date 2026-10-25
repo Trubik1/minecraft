@@ -8,20 +8,13 @@
 	}
 	id: "5A8C11099EFA0007"
 	images: [ ]
-	order_index: 7
+	order_index: 6
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"Добро пожаловать в мир магического растениеводства и индустриальных плантаций!",
-				"",
-				"§6Mystical Agriculture§r позволяет выращивать абсолютно любые ресурсы — от булыжника и угля до золота, алмазов, незерита и даже звёзд Незера прямо на грядках.",
-				"",
-				"Первые шаги начинаются с поиска двух подземных руд:",
-				"• §aInferium Ore§r — источник эссенции инфериума (также выбивается из любых мобов).",
-				"• §bProsperity Ore§r — источник осколков процветания, необходимых для создания семенных баз."
-			]
+		shape: "gear"
+		size: 1.5d
 			icon: {
 				id: "mysticalagriculture:prosperity_shard"
 			}
@@ -42,28 +35,17 @@
 					xp: 100
 				}
 			]
-			shape: "gear"
-			size: 1.5d
-			tasks: [{
+					tasks: [{
 				id: "7A01010101010001"
 				item: { count: 1, id: "mysticalagriculture:prosperity_shard" }
 				type: "item"
 			}]
-			title: "Магическое Земледелие: Начало"
-			x: 0.0d
-			y: -4.0d
-		}
+		x: 0.0d
+		y: -4.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0101"]
-			description: [
-				"Кристалл наполнения — фундаментальный алхимический инструмент мода.",
-				"",
-				"§6Как использовать:§r",
-				"Поместите кристалл в верстак вместе с 4 единицами эссенции более низкого ранга, чтобы получить 1 эссенцию следующего уровня!",
-				"",
-				"Кристалл имеет §e1000 использований§r и тратит по 1 единице прочности за каждую трансмутацию."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0101"]
+				icon: {
 				id: "mysticalagriculture:infusion_crystal"
 			}
 			id: "5A8C11099EFA0102"
@@ -90,18 +72,14 @@
 				item: { count: 1, id: "mysticalagriculture:infusion_crystal" }
 				type: "item"
 			}]
-			title: "Кристалл наполнения (Infusion Crystal)"
-			x: 0.0d
-			y: -2.0d
-		}
+		x: 0.0d
+		y: -2.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0102"]
-			description: [
-				"Венец алхимического мастерства эссенций!",
-				"",
-				"§aМастер-кристалл наполнения не имеет прочности§r и никогда не ломается. Скрафтив его однажды, вы сможете навсегда автоматизировать производство любых высших эссенций в авто-верстаках и МЭ-системе Refined Storage!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0106"]
+		shape: "hexagon"
+		size: 1.3d
+				icon: {
 				id: "mysticalagriculture:master_infusion_crystal"
 			}
 			id: "5A8C11099EFA0103"
@@ -121,28 +99,18 @@
 					xp_levels: 10
 				}
 			]
-			shape: "hexagon"
-			size: 1.4d
-			tasks: [{
+					tasks: [{
 				id: "7A01010101010003"
 				item: { count: 1, id: "mysticalagriculture:master_infusion_crystal" }
 				type: "item"
 			}]
-			title: "Мастер-кристалл (Master Infusion Crystal)"
-			x: 0.0d
-			y: 0.0d
-		}
+		x: 0.0d
+		y: 3.5d
+		},
 		{
-			dependencies: ["5A8C11099EFA0101"]
-			description: [
-				"Основа для создания всех ресурсных и мобо-семян в игре.",
-				"",
-				"§cВнимание: рецепт усложнен!§r",
-				"Для интеграции модов семенная база требует инженерные материалы:",
-				"• §eВерстак:§r 4x Осколка процветания, 2x Латунных листа Create, 1x Андезитовый сплав, 1x Эссенция Инфериума и семена пшеницы.",
-				"• §bАвтоматика Create:§r Сборка через конвейерную ленту с механическими развертывателями (Deployers) и прессом!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0101"]
+		hide_dependency_lines: true
+				icon: {
 				id: "mysticalagriculture:prosperity_seed_base"
 			}
 			id: "5A8C11099EFA0104"
@@ -167,33 +135,21 @@
 				item: { count: 1, id: "mysticalagriculture:prosperity_seed_base" }
 				type: "item"
 			}]
-			title: "Базовое семя процветания (Seed Base)"
-			x: -2.5d
-			y: -2.0d
-		}
+		x: -2.5d
+		y: -4.0d
+		},
 		{
-			dependencies: [
-				"5A8C11099EFA0102"
-				"5A8C11099EFA0104"
-			]
-			description: [
-				"Алтарь Наполнения — ключевая магическая структура для ритуала создания семян культур.",
-				"",
-				"§6Конструкция ритуала:§r",
-				"1. Установите Алтарь наполнения по центру рабочей площадки.",
-				"2. Вокруг алтаря установите минимум §e8 Пьедесталов наполнения§r (в радиусе 1-2 блоков).",
-				"3. Положите целевое базовое семя в центр на Алтарь (ПКМ пустой рукой).",
-				"4. Подайте редстоун-сигнал (рычагом, кнопкой или редстоун-факелом) на алтарь для запуска ритуала!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0102"]
+				icon: {
 				id: "mysticalagriculture:infusion_altar"
 			}
 			id: "5A8C11099EFA0105"
 			rewards: [
 				{
+					count: 4
 					id: "6A01010101010009"
 					item: {
-						count: 4
+						count: 1
 						id: "mysticalagriculture:infusion_pedestal"
 					}
 					type: "item"
@@ -211,19 +167,12 @@
 				item: { count: 1, id: "mysticalagriculture:infusion_altar" }
 				type: "item"
 			}]
-			title: "Алтарь Наполнения (Infusion Altar)"
-			x: -2.5d
-			y: 0.0d
-		}
+		x: 0.0d
+		y: 0.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0105"]
-			description: [
-				"Пьедесталы удерживают эссенции и материалы ритуала вокруг алтаря.",
-				"",
-				"Для крафта большинства семян требуется ровно 8 пьедесталов: 4 для эссенций соответствующего тира и 4 для целевых слитков/материалов.",
-				"Расположите их симметрично вокруг алтаря для быстрого и удобного доступа."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0105"]
+				icon: {
 				id: "mysticalagriculture:infusion_pedestal"
 			}
 			id: "5A8C11099EFA0106"
@@ -246,22 +195,16 @@
 			tasks: [{
 				count: 8L
 				id: "7A01010101010006"
-				item: { count: 8, id: "mysticalagriculture:infusion_pedestal" }
+				item: { count: 1, id: "mysticalagriculture:infusion_pedestal" }
 				type: "item"
 			}]
-			title: "Пьедесталы Наполнения (8 шт.)"
-			x: -4.5d
-			y: 0.0d
-		}
+		x: 0.0d
+		y: 1.5d
+		},
 		{
-			dependencies: ["5A8C11099EFA0101"]
-			description: [
-				"Базовая зелёная эссенция 1-го ранга.",
-				"",
-				"Добывается с подземной руды инфериума, падает со всех мобов (20% шанс) и собирается с урожая семян инфериума.",
-				"Используется для крафта семян 1-го тира (дерево, камень, земля, вода, огонь) и является сырьем для всех последующих эссенций."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0101"]
+		hide_dependency_lines: true
+				icon: {
 				id: "mysticalagriculture:inferium_essence"
 			}
 			id: "5A8C11099EFA0107"
@@ -284,25 +227,15 @@
 			tasks: [{
 				count: 16L
 				id: "7A01010101010007"
-				item: { count: 16, id: "mysticalagriculture:inferium_essence" }
+				item: { count: 1, id: "mysticalagriculture:inferium_essence" }
 				type: "item"
 			}]
-			title: "Tier 1: Эссенция Инфериума"
-			x: 2.5d
-			y: -4.0d
-		}
+		x: 2.5d
+		y: -4.0d
+		},
 		{
-			dependencies: [
-				"5A8C11099EFA0102"
-				"5A8C11099EFA0107"
-			]
-			description: [
-				"Оранжевая эссенция 2-го ранга.",
-				"",
-				"§6Крафт:§r 4x Inferium Essence + Кристалл наполнения.",
-				"Позволяет создавать семена 2-го тира: уголь, медь, красители, семена природы и базовых животных."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0107"]
+				icon: {
 				id: "mysticalagriculture:prudentium_essence"
 			}
 			id: "5A8C11099EFA0108"
@@ -325,22 +258,15 @@
 			tasks: [{
 				count: 8L
 				id: "7A01010101010008"
-				item: { count: 8, id: "mysticalagriculture:prudentium_essence" }
+				item: { count: 1, id: "mysticalagriculture:prudentium_essence" }
 				type: "item"
 			}]
-			title: "Tier 2: Эссенция Прудентиума"
-			x: 2.5d
-			y: -2.5d
-		}
+		x: 2.5d
+		y: -2.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0108"]
-			description: [
-				"Золотисто-жёлтая эссенция 3-го ранга.",
-				"",
-				"§6Крафт:§r 4x Prudentium Essence + Кристалл наполнения.",
-				"Ключевая эссенция промышленного старта: именно она нужна для семян железа, цинка, латуни, редстоуна, олова, бронзы и мобов (слизь, зомби, скелеты)."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0108"]
+				icon: {
 				id: "mysticalagriculture:tertium_essence"
 			}
 			id: "5A8C11099EFA0109"
@@ -363,22 +289,15 @@
 			tasks: [{
 				count: 4L
 				id: "7A01010101010009"
-				item: { count: 4, id: "mysticalagriculture:tertium_essence" }
+				item: { count: 1, id: "mysticalagriculture:tertium_essence" }
 				type: "item"
 			}]
-			title: "Tier 3: Эссенция Тертиума"
-			x: 2.5d
-			y: -1.0d
-		}
+		x: 2.5d
+		y: 0.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0109"]
-			description: [
-				"Голубая эссенция 4-го ранга.",
-				"",
-				"§6Крафт:§r 4x Tertium Essence + Кристалл наполнения.",
-				"Открывает доступ к семенам золота, лазурита, стали Mekanism, осмия, всполохов (Blaze) и эндерменов."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0109"]
+				icon: {
 				id: "mysticalagriculture:imperium_essence"
 			}
 			id: "5A8C11099EFA010A"
@@ -401,22 +320,15 @@
 			tasks: [{
 				count: 4L
 				id: "7A0101010101000A"
-				item: { count: 4, id: "mysticalagriculture:imperium_essence" }
+				item: { count: 1, id: "mysticalagriculture:imperium_essence" }
 				type: "item"
 			}]
-			title: "Tier 4: Эссенция Империума"
-			x: 2.5d
-			y: 0.5d
-		}
+		x: 2.5d
+		y: 2.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA010A"]
-			description: [
-				"Пылающая красная эссенция 5-го ранга.",
-				"",
-				"§6Крафт:§r 4x Imperium Essence + Кристалл наполнения.",
-				"Позволяет выращивать алмазы, изумруды, незерит, уранинит Powah и визер-скелетов, а также ковать неразрушимую броню Супремиума!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA010A"]
+				icon: {
 				id: "mysticalagriculture:supremium_essence"
 			}
 			id: "5A8C11099EFA010B"
@@ -441,22 +353,17 @@
 			tasks: [{
 				count: 4L
 				id: "7A0101010101000B"
-				item: { count: 4, id: "mysticalagriculture:supremium_essence" }
+				item: { count: 1, id: "mysticalagriculture:supremium_essence" }
 				type: "item"
 			}]
-			title: "Tier 5: Эссенция Супремиума"
-			x: 2.5d
-			y: 2.0d
-		}
+		x: 2.5d
+		y: 4.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA010B"]
-			description: [
-				"Фиолетовая эндгейм-эссенция 6-го ранга из дополнения §dMystical Agradditions§r!",
-				"",
-				"§6Крафт:§r 4x Supremium Essence + Мастер-кристалл наполнения.",
-				"С её помощью выращиваются самые могущественные артефакты вселенной: Звёзды Незера, Яйца Дракона и Нитро-кристаллы Powah."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA010B"]
+		shape: "hexagon"
+		size: 1.2d
+				icon: {
 				id: "mysticalagradditions:insanium_essence"
 			}
 			id: "5A8C11099EFA010C"
@@ -476,29 +383,18 @@
 					xp_levels: 10
 				}
 			]
-			shape: "gear"
-			size: 1.4d
-			tasks: [{
+					tasks: [{
 				count: 2L
 				id: "7A0101010101000C"
-				item: { count: 2, id: "mysticalagradditions:insanium_essence" }
+				item: { count: 1, id: "mysticalagradditions:insanium_essence" }
 				type: "item"
 			}]
-			title: "Tier 6: Эссенция Инсаниума (Insanium)"
-			x: 2.5d
-			y: 3.5d
-		}
+		x: 2.5d
+		y: 6.0d
+		},
 		{
-			dependencies: [
-				"5A8C11099EFA0106"
-				"5A8C11099EFA0108"
-			]
-			description: [
-				"Бесконечный источник каменного угля для печей, генераторов Powah и паровых котлов Create.",
-				"",
-				"Создаётся на Алтаре наполнения из эссенции Прудентиума и блоков угля на базе семени процветания."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0104"]
+				icon: {
 				id: "mysticalagriculture:coal_seeds"
 			}
 			id: "5A8C11099EFA010D"
@@ -523,23 +419,12 @@
 				item: { count: 1, id: "mysticalagriculture:coal_seeds" }
 				type: "item"
 			}]
-			title: "Семена Угля (Coal Seeds)"
-			x: -2.5d
-			y: 2.0d
-		}
+		x: -2.5d
+		y: -2.0d
+		},
 		{
-			dependencies: [
-				"5A8C11099EFA0106"
-				"5A8C11099EFA0109"
-			]
-			description: [
-				"Железные плантации — прощайте долгие походы в шахту!",
-				"",
-				"§cУсложненный крафт:§r",
-				"• §eАлтарь наполнения:§r Базовое семя + 4x Tertium Essence + 2x Железных слитка + 2x Латунных слитка Create (Brass Ingot)!",
-				"• §bАвтоматика Create:§r Сборка через конвейер Create с развертывателями (Железо $\to$ Тертиум $\to$ Латунь $\to$ Тертиум $\to$ Пресс)."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA010D"]
+				icon: {
 				id: "mysticalagriculture:iron_seeds"
 			}
 			id: "5A8C11099EFA010E"
@@ -566,23 +451,12 @@
 				item: { count: 1, id: "mysticalagriculture:iron_seeds" }
 				type: "item"
 			}]
-			title: "Семена Железа (Iron Seeds)"
-			x: -4.5d
-			y: 2.0d
-		}
+		x: -3.1d
+		y: 0.0d
+		},
 		{
-			dependencies: [
-				"5A8C11099EFA0106"
-				"5A8C11099EFA0109"
-			]
-			description: [
-				"Грядки, производящие тонны редстоуна для схем и микропроцессоров.",
-				"",
-				"§cУсложненный крафт:§r",
-				"• §eАлтарь наполнения:§r Базовое семя + 4x Tertium Essence + 2x Блока редстоуна + 2x Флаксовой пыли Flux Networks!",
-				"• §bЗарядка Powah:§r Альтернативный синтез на Зарядном столе (Energizing Orb) с 30,000 FE энергии."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA010D"]
+				icon: {
 				id: "mysticalagriculture:redstone_seeds"
 			}
 			id: "5A8C11099EFA010F"
@@ -607,23 +481,15 @@
 				item: { count: 1, id: "mysticalagriculture:redstone_seeds" }
 				type: "item"
 			}]
-			title: "Семена Редстоуна (Redstone Seeds)"
-			x: -2.5d
-			y: 3.5d
-		}
+		x: -1.9d
+		y: 0.0d
+		},
 		{
-			dependencies: [
-				"5A8C11099EFA0106"
-				"5A8C11099EFA010A"
-			]
-			description: [
-				"Выращивание чистого золота для торговли с пиглинами и крафта продвинутых механизмов.",
-				"",
-				"§cУсложненный крафт:§r",
-				"• §eАлтарь наполнения:§r 4x Imperium Essence + 2x Золотых слитка + 2x Полированных розовых кварца Create (Polished Rose Quartz)!",
-				"• §bАвтоматика Create:§r Доступна поточная сборка на конвейере."
-			]
-			icon: {
+		dependencies: [
+			"5A8C11099EFA010E"
+			"5A8C11099EFA010F"
+		]
+				icon: {
 				id: "mysticalagriculture:gold_seeds"
 			}
 			id: "5A8C11099EFA0110"
@@ -650,23 +516,12 @@
 				item: { count: 1, id: "mysticalagriculture:gold_seeds" }
 				type: "item"
 			}]
-			title: "Семена Золота (Gold Seeds)"
-			x: -4.5d
-			y: 3.5d
-		}
+		x: -2.5d
+		y: 2.0d
+		},
 		{
-			dependencies: [
-				"5A8C11099EFA0106"
-				"5A8C11099EFA010B"
-			]
-			description: [
-				"Плантация драгоценных алмазов 5-го тира!",
-				"",
-				"§cУсложненный крафт:§r",
-				"• §eАлтарь наполнения:§r 4x Supremium Essence + 2x Алмаза + 2x Укрепленных сплава Mekanism (Reinforced Alloy)!",
-				"• §bАвтоматика Create:§r Сборка через развертыватели Create (Алмаз $\to$ Супремиум $\to$ Сплав Mekanism $\to$ Пресс)."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0110"]
+				icon: {
 				id: "mysticalagriculture:diamond_seeds"
 			}
 			id: "5A8C11099EFA0111"
@@ -693,20 +548,12 @@
 				item: { count: 1, id: "mysticalagriculture:diamond_seeds" }
 				type: "item"
 			}]
-			title: "Семена Алмазов (Diamond Seeds)"
-			x: -2.5d
-			y: 5.0d
-		}
+		x: -3.1d
+		y: 4.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0111"]
-			description: [
-				"Вершина металлургии: семена для выращивания незерита!",
-				"",
-				"§cУсложненный крафт:§r",
-				"• §eАлтарь наполнения:§r 4x Supremium Essence + 2x Незеритовых слитка + 2x Слитка черного железа Extended Crafting (Black Iron Ingot)!",
-				"• §bАвтоматика Create:§r Поточная сборка на конвейере."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0110"]
+				icon: {
 				id: "mysticalagriculture:netherite_seeds"
 			}
 			id: "5A8C11099EFA0112"
@@ -733,25 +580,17 @@
 				item: { count: 1, id: "mysticalagriculture:netherite_seeds" }
 				type: "item"
 			}]
-			title: "Семена Незерита (Netherite Seeds)"
-			x: -4.5d
-			y: 5.0d
-		}
+		x: -1.9d
+		y: 4.0d
+		},
 		{
-			dependencies: [
-				"5A8C11099EFA010C"
-				"5A8C11099EFA0112"
-			]
-			description: [
-				"Абсолютный триумф автоматизации: грядка, приносящая настоящие Звёзды Незера!",
-				"",
-				"§cУсложненный эндгейм-крафт:§r",
-				"• Требует 4x Insanium Essence, 2x Звезды Незера и 2x Кристалловых слитка Extended Crafting (Crystaltine Ingot).",
-				"",
-				"§4Особое условие роста (Crux):§r",
-				"Семена Звезды Незера §cНЕ БУДУТ РАСТИ§r на обычной земле! Ровно под блоком пашни должен быть установлен специальный блок: §eNether Star Crux§r!"
-			]
-			icon: {
+		dependencies: [
+			"5A8C11099EFA0111"
+			"5A8C11099EFA0112"
+		]
+		shape: "hexagon"
+		size: 1.2d
+				icon: {
 				id: "mysticalagriculture:nether_star_seeds"
 			}
 			id: "5A8C11099EFA0113"
@@ -771,9 +610,7 @@
 					xp_levels: 20
 				}
 			]
-			shape: "gear"
-			size: 1.5d
-			tasks: [
+					tasks: [
 				{
 					id: "7A01010101010013"
 					item: { count: 1, id: "mysticalagriculture:nether_star_seeds" }
@@ -785,18 +622,13 @@
 					type: "item"
 				}
 			]
-			title: "Семена Звезды Незера (Nether Star Seeds)"
-			x: -3.5d
-			y: 6.5d
-		}
+		x: -2.5d
+		y: 6.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0101"]
-			description: [
-				"Кинжал Душ — инструмент для сбора жизненной энергии мобов.",
-				"",
-				"При нанесении последнего удара кинжалом мобы гарантированно дропают §eSoulium Dust§r (пыль душ), а также передают свои души в Банку Душ (Soul Jar) в вашем инвентаре."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0101"]
+		hide_dependency_lines: true
+				icon: {
 				id: "mysticalagriculture:soulium_dagger"
 			}
 			id: "5A8C11099EFA0114"
@@ -821,18 +653,12 @@
 				item: { count: 1, id: "mysticalagriculture:soulium_dagger" }
 				type: "item"
 			}]
-			title: "Кинжал Душ (Soulium Dagger)"
-			x: -7.0d
-			y: -2.0d
-		}
+		x: -5.0d
+		y: -4.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0114"]
-			description: [
-				"Банка Душ аккумулирует эссенцию конкретного типа существ.",
-				"",
-				"Держите банку в инвентаре и убивайте мобов Кинжалом Душ. Наполнив банку до 100%, вы сможете использовать её на алтаре наполнения для создания мобо-семян!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0114"]
+				icon: {
 				id: "mysticalagriculture:soul_jar"
 			}
 			id: "5A8C11099EFA0115"
@@ -857,19 +683,12 @@
 				item: { count: 1, id: "mysticalagriculture:soul_jar" }
 				type: "item"
 			}]
-			title: "Банка Душ (Soul Jar)"
-			x: -7.0d
-			y: 0.0d
-		}
+		x: -5.0d
+		y: -2.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0114"]
-			description: [
-				"Основа для всех мобо-семян (слизь, зомби, скелеты, эндермены, визер-скелеты).",
-				"",
-				"§cУсложненный крафт:§r",
-				"Крафтится из базового семени процветания, слитков и пыли душ (Soulium), а также Самоцветов Источника (Source Gem) из мода Ars Nouveau!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0115"]
+				icon: {
 				id: "mysticalagriculture:soulium_seed_base"
 			}
 			id: "5A8C11099EFA0116"
@@ -894,19 +713,12 @@
 				item: { count: 1, id: "mysticalagriculture:soulium_seed_base" }
 				type: "item"
 			}]
-			title: "Базовое Семя Душ (Soulium Seed Base)"
-			x: -7.0d
-			y: 2.0d
-		}
+		x: -5.0d
+		y: 0.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0116"]
-			description: [
-				"Автоматическое выращивание слизи без необходимости строить фермы на болотах!",
-				"",
-				"§cУсложненный крафт:§r",
-				"Алтарь наполнения: Базовое семя душ + 4x Tertium Essence + 2x Блока слизи + 2x Сухой резины Industrial Foregoing (Dry Rubber)!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0116"]
+				icon: {
 				id: "mysticalagriculture:slime_seeds"
 			}
 			id: "5A8C11099EFA0117"
@@ -931,18 +743,12 @@
 				item: { count: 1, id: "mysticalagriculture:slime_seeds" }
 				type: "item"
 			}]
-			title: "Семена Слизи (Slime Seeds)"
-			x: -7.0d
-			y: 3.5d
-		}
+		x: -5.0d
+		y: 2.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0116"]
-			description: [
-				"Семена для выращивания голов визер-скелетов и незерского угля!",
-				"",
-				"Наполните банку душ визер-скелетами в Крепостях Незера и проведите ритуал на алтаре наполнения с Супремиум эссенцией."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0117"]
+				icon: {
 				id: "mysticalagriculture:wither_skeleton_seeds"
 			}
 			id: "5A8C11099EFA0118"
@@ -969,20 +775,13 @@
 				item: { count: 1, id: "mysticalagriculture:wither_skeleton_seeds" }
 				type: "item"
 			}]
-			title: "Семена Визер-Скелета"
-			x: -7.0d
-			y: 5.0d
-		}
+		x: -5.0d
+		y: 4.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0107"]
-			description: [
-				"Улучшенная грядка для культур Mystical Agriculture.",
-				"",
-				"§6Как создать:§r",
-				"Кликните правой кнопкой мыши эссенцией (Инфериум, Прудентиум, Тертиум, Империум, Супремиум) по обычной ванильной пашне.",
-				"Пашня соответствующего тира дает 100% шанс дропа дополнительного семени при сборе урожая и ускоряет рост!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0101"]
+		hide_dependency_lines: true
+				icon: {
 				id: "mysticalagriculture:inferium_farmland"
 			}
 			id: "5A8C11099EFA0119"
@@ -1007,20 +806,12 @@
 				item: { count: 1, id: "mysticalagriculture:inferium_farmland" }
 				type: "item"
 			}]
-			title: "Эссенциальная пашня (Farmland)"
-			x: 5.0d
-			y: -4.0d
-		}
+		x: 5.0d
+		y: -4.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0107"]
-			description: [
-				"Ускоритель роста — секрет сверхбыстрого созревания растений!",
-				"",
-				"§6Как работает:§r",
-				"Устанавливается §eпод блоком грядки§r (можно закапывать вглубь до 12-40 блоков друг под другом в один вертикальный столб).",
-				"Каждый ускоритель периодически посылает тики роста культуре наверху. Столб из ускорителей заставляет эссенции расти за считанные секунды!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0119"]
+				icon: {
 				id: "mysticalagriculture:inferium_growth_accelerator"
 			}
 			id: "5A8C11099EFA011A"
@@ -1045,18 +836,12 @@
 				item: { count: 1, id: "mysticalagriculture:inferium_growth_accelerator" }
 				type: "item"
 			}]
-			title: "Ускоритель роста (Growth Accelerator)"
-			x: 5.0d
-			y: -2.0d
-		}
+		x: 5.0d
+		y: -2.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0108"]
-			description: [
-				"Магическая лейка для ручного орошения плантаций.",
-				"",
-				"Заполните лейку водой (ПКМ по воде) и удерживайте ПКМ над посевами. Вода будет орошать грядки 3х3 блока, ускоряя созревание урожая прямо на ваших глазах!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA011A"]
+				icon: {
 				id: "mysticalagriculture:inferium_watering_can"
 			}
 			id: "5A8C11099EFA011B"
@@ -1080,18 +865,12 @@
 				item: { count: 1, id: "mysticalagriculture:inferium_watering_can" }
 				type: "item"
 			}]
-			title: "Магические лейки (Watering Cans)"
-			x: 5.0d
-			y: 0.0d
-		}
+		x: 5.0d
+		y: 0.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA0109"]
-			description: [
-				"Переработчик семян перерабатывает излишки семян обратно в чистые эссенции.",
-				"",
-				"При автоматическом сборе урожая образуются тысячи лишних семян. Направьте их трубами Pipez в Reprocessor, чтобы получать непрерывный поток чистой эссенции!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA011B"]
+				icon: {
 				id: "mysticalagriculture:seed_reprocessor"
 			}
 			id: "5A8C11099EFA011C"
@@ -1116,18 +895,12 @@
 				item: { count: 1, id: "mysticalagriculture:seed_reprocessor" }
 				type: "item"
 			}]
-			title: "Переработчик семян (Seed Reprocessor)"
-			x: 5.0d
-			y: 2.0d
-		}
+		x: 5.0d
+		y: 2.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA010A"]
-			description: [
-				"Автоматический сборщик урожая (Harvester) собирает эссенции в настраиваемом радиусе перед собой, не ломая сами грядки и семена.",
-				"",
-				"Работает от энергии FE (питается от Powah или генераторов Mekanism) и автоматически складывает собранные эссенции в прикрепленный сундук или МЭ-интерфейс."
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA011C"]
+				icon: {
 				id: "mysticalagriculture:harvester"
 			}
 			id: "5A8C11099EFA011D"
@@ -1152,22 +925,12 @@
 				item: { count: 1, id: "mysticalagriculture:harvester" }
 				type: "item"
 			}]
-			title: "Сборщик урожая (Harvester)"
-			x: 5.0d
-			y: 3.5d
-		}
+		x: 5.0d
+		y: 4.0d
+		},
 		{
-			dependencies: ["5A8C11099EFA010B"]
-			description: [
-				"Супремиум снаряжение — могущественные доспехи и оружие из высшей эссенции.",
-				"",
-				"Обладают огромным базовым уроном и защитой, а на верстаке Tinkering Table их можно улучшать Аугментами (Augments):",
-				"• Полёт (Flight)",
-				"• Ночное зрение (Night Vision)",
-				"• Дыхание под водой (Water Breathing)",
-				"• Скорость и иммунитет к негативным эффектам!"
-			]
-			icon: {
+		dependencies: ["5A8C11099EFA0103"]
+				icon: {
 				id: "mysticalagriculture:supremium_sword"
 			}
 			id: "5A8C11099EFA011E"
@@ -1201,10 +964,8 @@
 					type: "item"
 				}
 			]
-			title: "Супремиум Снаряжение и Модификации"
-			x: 0.0d
-			y: 3.5d
+		x: 0.0d
+		y: 5.5d
 		}
 	]
-	title: "Мистическое Земледелие (Mystical Agriculture)"
 }

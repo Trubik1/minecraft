@@ -524,6 +524,7 @@
 			y: 4.5d
 		}
 		{
+			dependencies: ["2450F8449D8780B2"]
 			id: "43712EBCC3EFBE24"
 			shape: "rsquare"
 			size: 1.0d
@@ -536,6 +537,7 @@
 			y: 4.5d
 		}
 		{
+			dependencies: ["43712EBCC3EFBE24"]
 			id: "5B20E2FCB41BAB81"
 			shape: "rsquare"
 			size: 1.0d
@@ -548,6 +550,7 @@
 			y: 4.5d
 		}
 		{
+			dependencies: ["5B20E2FCB41BAB81"]
 			id: "05D354F1AB90DB0D"
 			shape: "rsquare"
 			size: 1.0d
@@ -560,6 +563,7 @@
 			y: 4.5d
 		}
 		{
+			dependencies: ["05D354F1AB90DB0D"]
 			id: "116954FDC8A87CBA"
 			shape: "gear"
 			size: 1.5d
@@ -572,6 +576,7 @@
 			y: 4.5d
 		}
 		{
+			dependencies: ["05D354F1AB90DB0D"]
 			id: "3C08EA6D9E6CD675"
 			shape: "hexagon"
 			size: 1.1d
@@ -583,7 +588,7 @@
 				}
 				{
 					id: "64C11E042407FEA0"
-					item: { count: 1, id: "extendedcrafting:the_ultimate_catalyst" }
+					item: { count: 1, id: "extendedcrafting:ultimate_catalyst" }
 					type: "item"
 				}
 			]
@@ -591,6 +596,10 @@
 			y: 6.0d
 		}
 		{
+			dependencies: [
+				"116954FDC8A87CBA"
+				"3C08EA6D9E6CD675"
+			]
 			id: "6BD5EA9D4C0B4FF0"
 			shape: "hexagon"
 			size: 1.3d
