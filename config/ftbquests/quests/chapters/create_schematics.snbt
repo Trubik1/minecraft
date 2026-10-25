@@ -13,6 +13,11 @@
 	quest_links: [ ]
 	quests: [
 		{
+			description: [
+				"Чертеж — основа строительной автоматизации в моде Create.",
+				"",
+				"С его помощью вы можете переносить сложнейшие заводы, фабрики ресурсов, фермы и декоративные постройки между мирами или скачивать готовые проекты сообщества!"
+			]
 			icon: {
 				id: "create:empty_schematic"
 			}
@@ -20,9 +25,9 @@
 			rewards: [
 				{
 					count: 2
-					id: "5196BF5E248DBFDE"
+					id: "1A2B3C4D5E6F7001"
 					item: {
-						count: 1
+						count: 2
 						id: "create:empty_schematic"
 					}
 					type: "item"
@@ -40,11 +45,17 @@
 				item: { count: 1, id: "create:empty_schematic" }
 				type: "item"
 			}]
+			title: "Пустой чертеж (Empty Schematic)"
 			x: 0.0d
 			y: -3.5d
 		}
 		{
 			dependencies: ["15F6F182239E6D14"]
+			description: [
+				"Схематический стол служит для записи скачанных схем на физические чертежи.",
+				"",
+				"Поместите в него пустой чертеж, и вы увидите выпадающий список всех файлов .nbt из вашей папки .minecraft/schematics/."
+			]
 			icon: {
 				id: "create:schematic_table"
 			}
@@ -69,11 +80,25 @@
 				item: { count: 1, id: "create:schematic_table" }
 				type: "item"
 			}]
+			title: "Схематический стол (Schematic Table)"
 			x: 2.0d
 			y: -3.5d
 		}
 		{
 			dependencies: ["28B92D4B88B293F0"]
+			description: [
+				"Официальный сайт сообщества Create с огромной базой готовых схем и 3D-просмотром:",
+				"§bhttps://createmod.com/§r",
+				"",
+				"🌟 §6Возможности сайта createmod.com:§r",
+				"• 🧊 §bИнтерактивный 3D-просмотр:§r кнопка §e«View in 3D»§r (Shulkr WebGL) позволяет прямо в браузере крутить 3D-модель постройки со всех сторон, приближать механизмы и отключать слои!",
+				"• 📋 §eТочная смета материалов (Materials List):§r на странице каждой схемы указан полный перечень всех блоков до единицы, сколько это стаков и кнопка копирования в Markdown.",
+				"• 📖 §aПослойный гайд постройки:§r кнопка §e«Layer by layer Guide»§r показывает пошаговый процесс ручной или полуавтоматической сборки блок за блоком.",
+				"• 📥 §6Кнопка «Create .nbt»:§r моментально скачивает файл чертежа для папки §e.minecraft/schematics/§r.",
+				"",
+				"⚡ §bМод Create: Schematic Helper:§r",
+				"В сборку уже встроен специальный мод, облегчающий работу со схемами напрямую в клиенте игры!"
+			]
 			icon: {
 				id: "minecraft:writable_book"
 			}
@@ -98,13 +123,25 @@
 			size: 1.4d
 			tasks: [{
 				id: "2A3B4C5D6E7F8003"
+				title: "Я изучил руководство по сайту createmod.com"
 				type: "checkmark"
 			}]
+			title: "Каталог схем Createmod.com: 3D-просмотр и Сметы"
 			x: 4.5d
 			y: -3.5d
 		}
 		{
 			dependencies: ["2A3B4C5D6E7F8000"]
+			description: [
+				"Схематическая пушка — чудо инженерной мысли! Она автоматически строит выбранную схему блок за блоком.",
+				"",
+				"§6Как запустить автоматическую постройку:§r",
+				"1. Поставьте пушку на ровную площадку базы.",
+				"2. Возьмите готовый чертеж в руку, нажмите ПКМ по земле для позиционирования голограммы постройки.",
+				"3. Вставьте чертеж в пушку.",
+				"4. Поставьте рядом сундук со всеми блоками из сметы (в пушке есть кнопка Списка материалов / Material List).",
+				"5. Заправьте пушку порохом (Gunpowder) и нажмите §aStart Printing§r!"
+			]
 			icon: {
 				id: "create:schematicannon"
 			}
@@ -132,11 +169,23 @@
 				item: { count: 1, id: "create:schematicannon" }
 				type: "item"
 			}]
+			title: "Схематическая пушка (Schematicannon)"
 			x: 7.0d
 			y: -3.5d
 		}
 		{
 			dependencies: ["7F963674E6A4D5EE"]
+			description: [
+				"Ниже представлены проверенные сообществом схемы ключевых автоферм и фабрик ресурсов.",
+				"",
+				"В каждом квесте вас ждут:",
+				"• Техническая схема и превью механизма",
+				"• Точная смета необходимых блоков (Bill of Materials) со страницы схемы",
+				"• Принцип работы кинематики и потоков предметов",
+				"• 🧊 §bПрямая ссылка на интерактивный 3D-просмотр (Shulkr 3D Viewer)§r",
+				"• 📥 §eПрямая ссылка на скачивание файла .nbt§r",
+				"• 📺 Подробный видеогайд на YouTube!"
+			]
 			icon: {
 				id: "create:clipboard"
 			}
@@ -150,13 +199,37 @@
 			size: 1.3d
 			tasks: [{
 				id: "2A3B4C5D6E7F8005"
+				title: "Готов к строительству заводов"
 				type: "checkmark"
 			}]
+			title: "Схемы ресурсов сообщества"
 			x: 4.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/iron_farm.png width:220 height:110 align:1}",
+				"",
+				"Компактный промышленный генератор железа из булыжника (схема: §ecompact-iron-farm§r).",
+				"",
+				"📦 §6Точная смета блоков со страницы схемы:§r",
+				"• 10x Механический бур (Mechanical Drill)",
+				"• 10x Мельничный жернов (Millstone) / Дробильные колеса",
+				"• 2x Корпусный вентилятор (Encased Fan)",
+				"• 2x Механический пресс (Mechanical Press) + 2x Бассейн (Basin)",
+				"• 14x Латунная воронка (Brass Funnel)",
+				"• 42x Конвейерная лента (Belt) + 88x Андезитовый корпус",
+				"• 10x Источник лавы, 2x Источник воды",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Буры скалывают булыжник $	o$ мельницы перетирают в гравий $	o$ вентилятор с водой вымывает самородки $	o$ прессы сжимают их в слитки железа!",
+				"",
+				"🌐 §bСтраница схемы:§r §ehttps://createmod.com/schematics/compact-iron-farm§r",
+				"🧊 §3Интерактивный 3D-просмотр:§r §bhttps://createmod.com/viewer/shulkr/compact-iron-farm§r",
+				"📥 §aСкачать .nbt:§r §ehttps://createmod.com/get/compact-iron-farm§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=s1Q2q5lMhR0§r"
+			]
 			icon: {
 				id: "minecraft:iron_ingot"
 			}
@@ -170,7 +243,7 @@
 						id: "minecraft:iron_ingot"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000001B"
 					type: "xp"
@@ -182,18 +255,42 @@
 					id: "4C0000000000001C"
 					item: { count: 1, id: "create:mechanical_drill" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000001D"
 					item: { count: 1, id: "create:encased_fan" }
 					type: "item"
 				}
 			]
+			title: "Схема: Компактный Железный Завод"
 			x: -0.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/tree_farm.png width:220 height:110 align:1}",
+				"",
+				"Популярная эффективная круговая ферма древесины со страницы §esimple-tree-farm-t§r!",
+				"",
+				"📦 §6Точная смета блоков со страницы схемы:§r",
+				"• 1x Механический ветряной подшипник (Windmill Bearing)",
+				"• 5x Механическая пила (Mechanical Saw)",
+				"• 5x Механический развертыватель (Deployer)",
+				"• 10x Парус ветряка (White Sail)",
+				"• 4x Бочка (Barrel) для бортового хранения древесины",
+				"• 8x Дубовое бревно, 20x Серый бетон",
+				"• 101x Земля (Dirt), 57x Саженцы ели, 36x Саженцы дуба",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Ветряной подшипник вращает конструкцию без внешнего привода! Пилы срезают деревья, развертыватели тут же сажают новые саженцы, а бочки собирают сотни брёвен и яблок.",
+				"",
+				"🌐 §bСтраница схемы:§r §ehttps://createmod.com/schematics/simple-tree-farm-t§r",
+				"🧊 §3Интерактивный 3D-просмотр:§r §bhttps://createmod.com/viewer/shulkr/simple-tree-farm-t§r",
+				"📥 §aСкачать .nbt:§r §ehttps://createmod.com/get/simple-tree-farm-t§r",
+				"📖 §6Послойный гайд:§r §ehttps://createmod.com/schematics/simple-tree-farm-t/guide§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=J_jK9GzD8eQ§r"
+			]
 			icon: {
 				id: "minecraft:oak_log"
 			}
@@ -207,7 +304,7 @@
 						id: "minecraft:oak_log"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000002B"
 					type: "xp"
@@ -217,20 +314,41 @@
 			tasks: [
 				{
 					id: "4C0000000000002C"
-					item: { count: 1, id: "create:mechanical_bearing" }
+					item: { count: 1, id: "create:windmill_bearing" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000002D"
 					item: { count: 1, id: "create:mechanical_saw" }
 					type: "item"
 				}
 			]
+			title: "Схема: Древесная Ферма (Simple Tree Farm)"
 			x: 2.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/andesite_alloy.png width:220 height:110 align:1}",
+				"",
+				"Высокопроизводительная фабрика андезитового сплава (§ethe-best-andesite-alloy-farm§r).",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Механический миксер (Mechanical Mixer)",
+				"• 1x Бассейн (Basin)",
+				"• 2x Дробильные колеса (Crushing Wheels) или Мельничный жернов",
+				"• Латунные воронки с фильтрами андезита и цинка/железа",
+				"• Желоба (Chutes) и конвейеры",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Автоподача андезита и самородков железа/цинка в чашу бассейна. Миксер на 32+ RPM сплавляет их в андезитовый сплав без нагрева!",
+				"",
+				"🌐 §bСтраница схемы:§r §ehttps://createmod.com/schematics/the-best-andesite-alloy-farm§r",
+				"🧊 §3Интерактивный 3D-просмотр:§r §bhttps://createmod.com/viewer/shulkr/the-best-andesite-alloy-farm§r",
+				"📥 §aСкачать .nbt:§r §ehttps://createmod.com/get/the-best-andesite-alloy-farm§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=18aV2BqWb90§r"
+			]
 			icon: {
 				id: "create:andesite_alloy"
 			}
@@ -244,7 +362,7 @@
 						id: "create:andesite_alloy"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000003B"
 					type: "xp"
@@ -256,18 +374,37 @@
 					id: "4C0000000000003C"
 					item: { count: 1, id: "create:mechanical_mixer" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000003D"
 					item: { count: 1, id: "create:basin" }
 					type: "item"
 				}
 			]
+			title: "Схема: Фабрика Андезитового Сплава"
 			x: 4.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/brass_factory.png width:220 height:110 align:1}",
+				"",
+				"Высокотемпературный металлургический комплекс для непрерывной выплавки латуни.",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Механический миксер (Mechanical Mixer)",
+				"• 1x Горелка всполоха (Blaze Burner)",
+				"• 1x Бассейн (Basin)",
+				"• 1x Механическая рука (Mechanical Arm) или развертыватель (подача топлива)",
+				"• Латунные воронки с фильтрами меди и цинка (пропорция 1:1)",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Горелка под чашей нагревается топливом (лава, уголь). Миксер на 64+ RPM сплавляет медь и цинк в латунные слитки.",
+				"",
+				"🌐 §bПоиск схем на сайте:§r §ehttps://createmod.com/search/?query=brass§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=zK3K8sX5xQo§r"
+			]
 			icon: {
 				id: "create:brass_ingot"
 			}
@@ -281,7 +418,7 @@
 						id: "create:brass_ingot"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000004B"
 					type: "xp"
@@ -293,18 +430,37 @@
 					id: "4C0000000000004C"
 					item: { count: 1, id: "create:blaze_burner" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000004D"
 					item: { count: 1, id: "create:brass_ingot" }
 					type: "item"
 				}
 			]
+			title: "Схема: Литейная Латуни (Brass Factory)"
 			x: 7.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/bread_bakery.png width:220 height:110 align:1}",
+				"",
+				"Индустриальная пекарня полного цикла: от пшеницы до горячего хлеба!",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Механический комбайн (Mechanical Harvester) на подшипнике",
+				"• 1x Мельничный жернов (Millstone) или Дробильные колеса",
+				"• 2x Корпусный вентилятор (Encased Fan)",
+				"• 1x Вода (замешивание теста), 1x Лава или Костер (выпекание)",
+				"• Конвейерные ленты и желоба",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Комбайны срезают спелую пшеницу $	o$ жернов делает муку $	o$ вентилятор с водой делает тесто $	o$ вентилятор с лавой обжигает в хрустящий хлеб!",
+				"",
+				"🌐 §bПоиск схем на сайте:§r §ehttps://createmod.com/search/?query=bread§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=eB8M4_9bH70§r"
+			]
 			icon: {
 				id: "minecraft:bread"
 			}
@@ -318,7 +474,7 @@
 						id: "minecraft:bread"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000005B"
 					type: "xp"
@@ -330,18 +486,37 @@
 					id: "4C0000000000005C"
 					item: { count: 1, id: "create:mechanical_harvester" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000005D"
 					item: { count: 1, id: "create:millstone" }
 					type: "item"
 				}
 			]
+			title: "Схема: Пекарня Хлеба (Bread Bakery)"
 			x: 9.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/lava_generator.png width:220 height:110 align:1}",
+				"",
+				"Неиссякаемый источник жидкой лавы для паровых котлов и плавилен базы.",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 8x-16x Заостренный капельник (Pointed Dripstone)",
+				"• 8x-16x Котлы (Cauldrons)",
+				"• 8x-16x Источников лавы (над капельниками)",
+				"• 1x Механическая помпа (Mechanical Pump)",
+				"• Жидкостные трубы (Fluid Pipes) и Резервуар (Fluid Tank)",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Капельники капают лаву в котлы. Механическая помпа через трубы выкачивает лаву прямо из котлов в центральный цистерный парк!",
+				"",
+				"🌐 §bПоиск схем на сайте:§r §ehttps://createmod.com/search/?query=lava§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=H7Z8x3yZ1Q4§r"
+			]
 			icon: {
 				id: "minecraft:lava_bucket"
 			}
@@ -355,7 +530,7 @@
 						id: "create:fluid_tank"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000006B"
 					type: "xp"
@@ -367,18 +542,36 @@
 					id: "4C0000000000006C"
 					item: { count: 1, id: "create:mechanical_pump" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000006D"
 					item: { count: 1, id: "create:fluid_tank" }
 					type: "item"
 				}
 			]
+			title: "Схема: Генератор Лавы (Lava Generator)"
 			x: -0.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/gunpowder_factory.png width:220 height:110 align:1}",
+				"",
+				"Химический синтез пороха из базовых пород без крипер-ферм!",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 2x Дробильные колеса (булыжник $	o$ гравий $	o$ песок)",
+				"• 1x Корпусный вентилятор (обдув песка $	o$ глина/минералы)",
+				"• 1x Механический миксер (Mechanical Mixer) + Бассейн",
+				"• Уголь / Угольная пыль и кремень",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Миксер соединяет песок, пыль угля и кремень в чистый порох (Gunpowder) для орудий Create Big Cannons и Схематической пушки!",
+				"",
+				"🌐 §bПоиск схем на сайте:§r §ehttps://createmod.com/search/?query=gunpowder§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=0k1L2b3Q4W5§r"
+			]
 			icon: {
 				id: "minecraft:gunpowder"
 			}
@@ -392,23 +585,43 @@
 						id: "minecraft:gunpowder"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000007B"
 					type: "xp"
 					xp: 250
 				}
 			]
-			tasks: [{
-				id: "4C0000000000007C"
-				item: { count: 1, id: "minecraft:gunpowder" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4C0000000000007C"
+					item: { count: 1, id: "minecraft:gunpowder" }
+					type: "item"
+				}
+			]
+			title: "Схема: Фабрика Пороха (Gunpowder Factory)"
 			x: 2.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/nether_gold.png width:220 height:110 align:1}",
+				"",
+				"Промышленное извлечение золотых самородков из незерака и адского камня.",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 2x Дробильные колеса (Crushing Wheels)",
+				"• 1x Корпусный вентилятор (Encased Fan) + Ведро воды",
+				"• 1x Механический пресс (Mechanical Press) + Бассейн",
+				"• Желоба, латунные воронки с фильтрами золота",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Колеса измельчают адский камень в пыль, водяной обдув вымывает золотые самородки (шанс 12%), а пресс прессует их в слитки золота!",
+				"",
+				"🌐 §bПоиск схем на сайте:§r §ehttps://createmod.com/search/?query=gold§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=m4K5j8L9P1Q§r"
+			]
 			icon: {
 				id: "minecraft:gold_ingot"
 			}
@@ -422,23 +635,44 @@
 						id: "minecraft:gold_ingot"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000008B"
 					type: "xp"
 					xp: 300
 				}
 			]
-			tasks: [{
-				id: "4C0000000000008C"
-				item: { count: 1, id: "minecraft:gold_ingot" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4C0000000000008C"
+					item: { count: 1, id: "minecraft:gold_ingot" }
+					type: "item"
+				}
+			]
+			title: "Схема: Золото из Незера (Nether Gold)"
 			x: 4.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/precision_assembly.png width:220 height:110 align:1}",
+				"",
+				"Закольцованная автоматическая линия последовательной сборки высокоточных механизмов.",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 3x Механические развертыватели (Deployers)",
+				"• 1x Конвейерная лента (Belt) длиной 5-7 блоков",
+				"• 1x Воронка возврата или Механическая рука (закольцовка цикла)",
+				"• Заготовки: Малый зубчатый механизм, Большой зубчатый механизм, Железный самородок",
+				"• База: Латунный лист (Brass Sheet)",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Лист делает 5 кругов по ленте под 3 развертывателями, последовательно вживляющими детали с выходом готового Precision Mechanism!",
+				"",
+				"🌐 §bПоиск схем на сайте:§r §ehttps://createmod.com/search/?query=precision+mechanism§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=yP6Q7R8S9T0§r"
+			]
 			icon: {
 				id: "create:precision_mechanism"
 			}
@@ -452,7 +686,7 @@
 						id: "create:precision_mechanism"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000009B"
 					type: "xp"
@@ -464,18 +698,36 @@
 					id: "4C0000000000009C"
 					item: { count: 1, id: "create:precision_mechanism" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C0000000000009D"
 					item: { count: 1, id: "create:deployer" }
 					type: "item"
 				}
 			]
+			title: "Схема: Точная Сборка (Precision Assembly)"
 			x: 7.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/experience_farm.png width:220 height:110 align:1}",
+				"",
+				"Автоматическая фабрика кристаллизованного опыта в самородках без мобов!",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 2x Дробильные колеса (Crushing Wheels)",
+				"• 1x Корпусный вентилятор (Encased Fan) с водой",
+				"• Латунные воронки с фильтрами самородков опыта",
+				"• Сундук или резервуар для жидкого опыта",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Дробление руд и незерака на сверхвысоких скоростях с водной сепарацией выбивает самородки опыта (Experience Nuggets), которые можно кушать правой кнопкой для мгновенных уровней!",
+				"",
+				"🌐 §bПоиск схем на сайте:§r §ehttps://createmod.com/search/?query=experience§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=t1U2V3W4X5Y§r"
+			]
 			icon: {
 				id: "create:experience_nugget"
 			}
@@ -489,7 +741,7 @@
 						id: "create:experience_nugget"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "4C000000000000AB"
 					type: "xp_levels"
@@ -501,71 +753,135 @@
 				item: { count: 1, id: "create:experience_nugget" }
 				type: "item"
 			}]
+			title: "Схема: Самородки Опыта (Experience Farm)"
 			x: 2.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/tunnel_bore.png width:220 height:110 align:1}",
+				"",
+				"Популярная самоходная горнопроходческая буровая установка (§esimple-mining-drill§r).",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Механический укладчик (Mechanical Roller) — ровняет пол и кладет камень",
+				"• 9x-25x Механические буры (Mechanical Drills)",
+				"• 2x Развертыватели (Deployers) — укладка рельс перед буром",
+				"• Хранилища предметов (Item Vaults) или сундуки",
+				"• Суперклей и линейные шасси",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Буры выгрызают тоннель 5х5, укладчик защищает от падения в лаву, кладя каменный пол, а развертыватели стелют рельсы прямо под себя!",
+				"",
+				"🌐 §bСтраница схемы:§r §ehttps://createmod.com/schematics/simple-mining-drill§r",
+				"🧊 §3Интерактивный 3D-просмотр:§r §bhttps://createmod.com/viewer/shulkr/simple-mining-drill§r",
+				"📥 §aСкачать .nbt:§r §ehttps://createmod.com/get/simple-mining-drill§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=r8E7W6Q5T4Y§r"
+			]
 			icon: {
 				id: "create:mechanical_drill"
 			}
 			id: "4C0000000000000B"
-			rewards: [{
-				count: 4
-				id: "4C000000000000BA"
-				item: {
+			rewards: [
+				{
 					count: 4
-					id: "create:crushing_wheel"
+					id: "4C000000000000BA"
+					item: {
+						count: 4
+						id: "create:crushing_wheel"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+			]
 			tasks: [
 				{
 					id: "4C000000000000BB"
 					item: { count: 1, id: "create:mechanical_drill" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C000000000000BC"
 					item: { count: 1, id: "create:mechanical_roller" }
 					type: "item"
 				}
 			]
+			title: "Схема: Туннельный бур и карьер (Mining Drill)"
 			x: 4.5d
 			y: 4.0d
 		}
 		{
 			dependencies: ["28658F919522A076"]
+			description: [
+				"{image:atm:textures/questpics/schematics/smart_vault.png width:220 height:110 align:1}",
+				"",
+				"Автоматический логистический хаб: интеллектуальная сортировка сотен предметов в секунду.",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x-8x Хранилище предметов (Item Vault)",
+				"• 2x-4x Механические руки (Mechanical Arms)",
+				"• Латунные воронки с фильтрами (Brass Funnels with Item Filters)",
+				"• Желоба, латунные туннели и конвейеры",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Механические руки сканируют атрибутивные фильтры на воронках хранилищ и моментально распределяют ресурсы без очередей и лагов!",
+				"",
+				"🌐 §bПоиск схем на сайте:§r §ehttps://createmod.com/search/?query=vault§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=q1W2E3R4T5Y§r"
+			]
 			icon: {
 				id: "create:item_vault"
 			}
 			id: "4C0000000000000C"
-			rewards: [{
-				count: 4
-				id: "4C000000000000CA"
-				item: {
+			rewards: [
+				{
 					count: 4
-					id: "create:brass_funnel"
+					id: "4C000000000000CA"
+					item: {
+						count: 4
+						id: "create:brass_funnel"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+			]
 			tasks: [
 				{
 					id: "4C000000000000CB"
 					item: { count: 1, id: "create:item_vault" }
 					type: "item"
-				}
+				},
 				{
 					id: "4C000000000000CC"
 					item: { count: 1, id: "create:mechanical_arm" }
 					type: "item"
 				}
 			]
+			title: "Схема: Умный Склад (Sorting & Vault)"
 			x: 7.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["7F963674E6A4D5EE"]
+			description: [
+				"{image:atm:textures/questpics/schematics/train_logistics.png width:220 height:110 align:1}",
+				"",
+				"Автономный транспортный состав (§etransport-train§r) для перевозки руд и жидкостей между базами.",
+				"",
+				"📦 §6Необходимые блоки и компоненты:§r",
+				"• 1x Станция поезда (Track Station)",
+				"• 1x Управление поездом (Train Controls)",
+				"• 2x Железнодорожные тележки (Train Bogeys / Railway Casing)",
+				"• Рельсы (Tracks) и Портативные интерфейсы (хранилищ / жидкостей)",
+				"• Расписание поезда (Train Schedule)",
+				"",
+				"⚙️ §6Принцип работы:§r",
+				"Посадите кондуктора за контроллер, настройте станции в Расписании, и состав будет сам курсировать между базами!",
+				"",
+				"🌐 §bСтраница схемы:§r §ehttps://createmod.com/schematics/transport-train§r",
+				"🧊 §3Интерактивный 3D-просмотр:§r §bhttps://createmod.com/viewer/shulkr/transport-train§r",
+				"📥 §aСкачать .nbt:§r §ehttps://createmod.com/get/transport-train§r",
+				"📺 §cВидеогайд (YouTube):§r §ehttps://www.youtube.com/watch?v=p9O8I7U6Y5T§r"
+			]
 			icon: {
 				id: "create:track_station"
 			}
@@ -579,7 +895,7 @@
 						id: "create:track"
 					}
 					type: "item"
-				}
+				},
 				{
 					id: "1A2B3C4D5E6F7019"
 					type: "xp_levels"
@@ -593,15 +909,17 @@
 					id: "2A3B4C5D6E7F8012"
 					item: { count: 1, id: "create:track_station" }
 					type: "item"
-				}
+				},
 				{
 					id: "2A3B4C5D6E7F8013"
 					item: { count: 1, id: "create:controls" }
 					type: "item"
 				}
 			]
-			x: 11.2d
-			y: -3.5d
+			title: "Схема: Поездная Сеть (Create Trains)"
+			x: 9.5d
+			y: 2.0d
 		}
 	]
+	title: "Чертежи и Схемы (Create Schematics)"
 }
