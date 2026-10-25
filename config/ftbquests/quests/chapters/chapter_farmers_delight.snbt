@@ -639,5 +639,806 @@
 			x: 8.8d
 			y: 0.0d
 		}
+		{
+			icon: {
+				id: "barbequesdelight:grill"
+			}
+			id: "5A8C11099E030101"
+			rewards: [
+				{
+					count: 16
+					id: "1F2E3D4C5B6A0101"
+					item: {
+						count: 16
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0102"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "2F3E4D5C6B7A0101"
+				item: { count: 1, id: "barbequesdelight:grill" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030101"]
+			icon: {
+				id: "barbequesdelight:basin"
+			}
+			id: "5A8C11099E030102"
+			rewards: [
+				{
+					count: 16
+					id: "1F2E3D4C5B6A0103"
+					item: {
+						count: 16
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0104"
+					type: "xp"
+					xp: 50
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0102"
+				item: { count: 1, id: "barbequesdelight:basin" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030102"]
+			icon: {
+				id: "barbequesdelight:barbeque_sauce"
+			}
+			id: "5A8C11099E030103"
+			rewards: [
+				{
+					count: 2
+					id: "1F2E3D4C5B6A0105"
+					item: {
+						count: 2
+						id: "barbequesdelight:buffalo_sauce"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0106"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [
+				{
+					id: "2F3E4D5C6B7A0103"
+					item: { count: 1, id: "barbequesdelight:barbeque_sauce" }
+					type: "item"
+				}
+				{
+					id: "2F3E4D5C6B7A0104"
+					item: { count: 1, id: "barbequesdelight:honey_mustard_sauce" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030102"]
+			icon: {
+				id: "barbequesdelight:chili_powder"
+			}
+			id: "5A8C11099E030104"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0107"
+					item: {
+						count: 4
+						id: "barbequesdelight:pepper_powder"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0108"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [
+				{
+					id: "2F3E4D5C6B7A0105"
+					item: { count: 1, id: "barbequesdelight:chili_powder" }
+					type: "item"
+				}
+				{
+					id: "2F3E4D5C6B7A0106"
+					item: { count: 1, id: "barbequesdelight:cumin_powder" }
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030103"]
+			icon: {
+				id: "barbequesdelight:grilled_beef_skewer"
+			}
+			id: "5A8C11099E030105"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0109"
+					item: {
+						count: 4
+						id: "barbequesdelight:grilled_beef_skewer"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0110"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0107"
+				item: { count: 1, id: "barbequesdelight:grilled_beef_skewer" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030105"]
+			icon: {
+				id: "barbequesdelight:grilled_pork_sausage_skewer"
+			}
+			id: "5A8C11099E030106"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0111"
+					item: {
+						count: 4
+						id: "barbequesdelight:grilled_pork_sausage_skewer"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0112"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0108"
+				item: { count: 1, id: "barbequesdelight:grilled_pork_sausage_skewer" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030101"]
+			icon: {
+				id: "barbequesdelight:grilled_chicken_skewer"
+			}
+			id: "5A8C11099E030107"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0113"
+					item: {
+						count: 4
+						id: "barbequesdelight:grilled_chicken_skewer"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0114"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0109"
+				item: { count: 1, id: "barbequesdelight:grilled_chicken_skewer" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5A8C11099E030107"]
+			icon: {
+				id: "barbequesdelight:grilled_lamb_skewer"
+			}
+			id: "5A8C11099E030108"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0115"
+					item: {
+						count: 4
+						id: "barbequesdelight:grilled_lamb_skewer"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0116"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0110"
+				item: { count: 1, id: "barbequesdelight:grilled_lamb_skewer" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5A8C11099E030108"]
+			icon: {
+				id: "barbequesdelight:grilled_salmon_skewer"
+			}
+			id: "5A8C11099E030109"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0117"
+					item: {
+						count: 4
+						id: "barbequesdelight:grilled_cod_skewer"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0118"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "2F3E4D5C6B7A0111"
+					item: { count: 1, id: "barbequesdelight:grilled_salmon_skewer" }
+					type: "item"
+				}
+				{
+					id: "2F3E4D5C6B7A0112"
+					item: { count: 1, id: "barbequesdelight:grilled_cod_skewer" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5A8C11099E030109"]
+			icon: {
+				id: "barbequesdelight:grilled_vegetable_skewer"
+			}
+			id: "5A8C11099E030110"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0119"
+					item: {
+						count: 4
+						id: "barbequesdelight:grilled_potato_skewer"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0120"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "2F3E4D5C6B7A0113"
+					item: { count: 1, id: "barbequesdelight:grilled_vegetable_skewer" }
+					type: "item"
+				}
+				{
+					id: "2F3E4D5C6B7A0114"
+					item: { count: 1, id: "barbequesdelight:grilled_mushroom_skewer" }
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5A8C11099E030105"]
+			icon: {
+				id: "barbequesdelight:kebab_wrap"
+			}
+			id: "5A8C11099E030111"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0121"
+					item: {
+						count: 4
+						id: "barbequesdelight:kebab_wrap"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0122"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "square"
+			size: 1.2d
+			tasks: [{
+				id: "2F3E4D5C6B7A0115"
+				item: { count: 1, id: "barbequesdelight:kebab_wrap" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5A8C11099E030111"]
+			icon: {
+				id: "barbequesdelight:kebab_sandwich"
+			}
+			id: "5A8C11099E030112"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0123"
+					item: {
+						count: 4
+						id: "barbequesdelight:kebab_sandwich"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0124"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "square"
+			size: 1.2d
+			tasks: [{
+				id: "2F3E4D5C6B7A0116"
+				item: { count: 1, id: "barbequesdelight:kebab_sandwich" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"5A8C11099E030106"
+				"5A8C11099E030112"
+			]
+			icon: {
+				id: "barbequesdelight:bibimbap"
+			}
+			id: "5A8C11099E030113"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0125"
+					item: {
+						count: 4
+						id: "barbequesdelight:bibimbap"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0126"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "hexagon"
+			size: 1.4d
+			tasks: [{
+				id: "2F3E4D5C6B7A0117"
+				item: { count: 1, id: "barbequesdelight:bibimbap" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 5.25d
+		}
+		{
+			icon: {
+				id: "moredelight:simple_hamburger"
+			}
+			id: "5A8C11099E030114"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0127"
+					item: {
+						count: 4
+						id: "moredelight:simple_hamburger"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0128"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "2F3E4D5C6B7A0118"
+				item: { count: 1, id: "moredelight:simple_hamburger" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030114"]
+			icon: {
+				id: "moredelight:hamburger_with_cheese"
+			}
+			id: "5A8C11099E030115"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0129"
+					item: {
+						count: 4
+						id: "moredelight:hamburger_with_cheese"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0130"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0119"
+				item: { count: 1, id: "moredelight:hamburger_with_cheese" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030115"]
+			icon: {
+				id: "moredelight:hamburger_with_egg"
+			}
+			id: "5A8C11099E030116"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0131"
+					item: {
+						count: 4
+						id: "moredelight:hamburger_with_egg"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0132"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0120"
+				item: { count: 1, id: "moredelight:hamburger_with_egg" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030116"]
+			icon: {
+				id: "moredelight:loaded_hamburger"
+			}
+			id: "5A8C11099E030117"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0133"
+					item: {
+						count: 4
+						id: "moredelight:loaded_hamburger"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0134"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "square"
+			size: 1.3d
+			tasks: [{
+				id: "2F3E4D5C6B7A0121"
+				item: { count: 1, id: "moredelight:loaded_hamburger" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030114"]
+			icon: {
+				id: "moredelight:steak_sandwich"
+			}
+			id: "5A8C11099E030118"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0135"
+					item: {
+						count: 4
+						id: "moredelight:steak_sandwich"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0136"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0122"
+				item: { count: 1, id: "moredelight:steak_sandwich" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030118"]
+			icon: {
+				id: "moredelight:chicken_sandwich_with_egg_and_tomato"
+			}
+			id: "5A8C11099E030119"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0137"
+					item: {
+						count: 4
+						id: "moredelight:chicken_sandwich_with_egg_and_tomato"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0138"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0123"
+				item: { count: 1, id: "moredelight:chicken_sandwich_with_egg_and_tomato" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5A8C11099E030114"]
+			icon: {
+				id: "moredelight:creamy_pasta_with_chicken_cuts"
+			}
+			id: "5A8C11099E030120"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0139"
+					item: {
+						count: 4
+						id: "moredelight:creamy_pasta_with_chicken_cuts"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0140"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0124"
+				item: { count: 1, id: "moredelight:creamy_pasta_with_chicken_cuts" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["5A8C11099E030120"]
+			icon: {
+				id: "moredelight:creamy_pasta_with_ham"
+			}
+			id: "5A8C11099E030121"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0141"
+					item: {
+						count: 4
+						id: "moredelight:creamy_pasta_with_ham"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0142"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0125"
+				item: { count: 1, id: "moredelight:creamy_pasta_with_ham" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["5A8C11099E030121"]
+			icon: {
+				id: "moredelight:cooked_rice_with_beef"
+			}
+			id: "5A8C11099E030122"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0143"
+					item: {
+						count: 4
+						id: "moredelight:cooked_rice_with_beef"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0144"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0126"
+				item: { count: 1, id: "moredelight:cooked_rice_with_beef" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["5A8C11099E030122"]
+			icon: {
+				id: "moredelight:mashed_potatoes"
+			}
+			id: "5A8C11099E030123"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0145"
+					item: {
+						count: 4
+						id: "moredelight:mashed_potatoes"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0146"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0127"
+				item: { count: 1, id: "moredelight:mashed_potatoes" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["5A8C11099E030123"]
+			icon: {
+				id: "moredelight:diced_potatoes_with_beef"
+			}
+			id: "5A8C11099E030124"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0147"
+					item: {
+						count: 4
+						id: "moredelight:diced_potatoes_with_beef"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0148"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "2F3E4D5C6B7A0128"
+				item: { count: 1, id: "moredelight:diced_potatoes_with_beef" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["5A8C11099E030124"]
+			icon: {
+				id: "moredelight:omelette"
+			}
+			id: "5A8C11099E030125"
+			rewards: [
+				{
+					count: 4
+					id: "1F2E3D4C5B6A0149"
+					item: {
+						count: 4
+						id: "moredelight:chocolate_popsicle"
+					}
+					type: "item"
+				}
+				{
+					id: "1F2E3D4C5B6A0150"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "hexagon"
+			size: 1.4d
+			tasks: [
+				{
+					id: "2F3E4D5C6B7A0129"
+					item: { count: 1, id: "moredelight:omelette" }
+					type: "item"
+				}
+				{
+					id: "2F3E4D5C6B7A0130"
+					item: { count: 1, id: "moredelight:chocolate_popsicle" }
+					type: "item"
+				}
+			]
+			x: 8.5d
+			y: -6.0d
+		}
+
 	]
 }

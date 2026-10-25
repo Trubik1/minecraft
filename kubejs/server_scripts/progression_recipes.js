@@ -1311,4 +1311,76 @@ ServerEvents.recipes(event => {
         }
     }).id('steampunk:endgame/creative_storage_disk_9x9');
 
+
+    // ==========================================================================
+    // WAYSTONES: УСЛОЖНЕНИЕ И ИНТЕРТЕХНОЛОГИЧЕСКИЙ КРАФТ ТЕЛЕПОРТАЦИИ
+    // ==========================================================================
+
+    // 1. Камень перемещения (Warp Stone) — ядро телепортации
+    // Требует: Самоцвет Источника Ars Nouveau + Прецизионный механизм Create + Око Эндера + Аметисты
+    event.remove({ output: 'waystones:warp_stone' });
+    event.shaped('waystones:warp_stone', [
+        'AEA',
+        'MSM',
+        'AEA'
+    ], {
+        A: 'minecraft:amethyst_shard',
+        E: 'minecraft:ender_eye',
+        M: 'create:precision_mechanism',
+        S: 'ars_nouveau:source_gem'
+    }).id('steampunk:waystones/warp_stone_progression');
+
+    // 2. Путевой камень (Waystone)
+    // Требует: Камень перемещения + Стальные слитки Mekanism + Каменные кирпичи + Термостойкие пластины Create
+    event.remove({ output: 'waystones:waystone' });
+    event.shaped('waystones:waystone', [
+        ' S ',
+        'SWS',
+        'TMT'
+    ], {
+        S: 'minecraft:stone_bricks',
+        W: 'waystones:warp_stone',
+        T: 'create:sturdy_sheet',
+        M: 'mekanism:ingot_steel'
+    }).id('steampunk:waystones/waystone_progression');
+
+    // 3. Свиток перемещения (Warp Scroll)
+    // Требует: Магический пергамент Ars Nouveau + Пыль варпа + Золото
+    event.remove({ output: 'waystones:warp_scroll' });
+    event.shaped('3x waystones:warp_scroll', [
+        'GDG',
+        'GEG',
+        'PPP'
+    ], {
+        G: '#c:nuggets/gold',
+        D: 'minecraft:ink_sac',
+        E: 'waystones:warp_dust',
+        P: 'ars_nouveau:blank_parchment'
+    }).id('steampunk:waystones/warp_scroll_progression');
+
+    // 4. Свиток возврата (Return Scroll)
+    event.remove({ output: 'waystones:return_scroll' });
+    event.shaped('3x waystones:return_scroll', [
+        'GEG',
+        'PPP'
+    ], {
+        G: '#c:nuggets/gold',
+        E: 'minecraft:ender_pearl',
+        P: 'ars_nouveau:blank_parchment'
+    }).id('steampunk:waystones/return_scroll_progression');
+
+    // 5. Плита перемещения (Warp Plate)
+    // Требует: Латунный корпус Create + Спящий осколок + Пыль варпа + Латунные листы
+    event.remove({ output: 'waystones:warp_plate' });
+    event.shaped('waystones:warp_plate', [
+        'SWS',
+        'WFW',
+        'SMS'
+    ], {
+        S: 'create:brass_sheet',
+        W: 'waystones:warp_dust',
+        F: 'waystones:dormant_shard',
+        M: 'create:brass_casing'
+    }).id('steampunk:waystones/warp_plate_progression');
+
 });

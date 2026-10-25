@@ -731,4 +731,107 @@
 		"Monumental &e9x9&r crafting table!\n\nUnlocks the crafting of &6Creative Items&r: Creative Motor, Creative Energy Cube, and Creative RS Controller!"
 	]
 
+
+	// 25 New Food Quests (Barbeque's Delight & More Delight)
+	quest.5A8C11099E030101.title: "&6Barbeque Grill&r"
+	quest.5A8C11099E030101.quest_desc: [
+		"Place the grill over a campfire or open fire to roast skewers."
+	]
+	quest.5A8C11099E030102.title: "Seasoning Basin"
+	quest.5A8C11099E030102.quest_desc: [
+		"Use the basin to mix sauces, spices, and marinate raw skewers."
+	]
+	quest.5A8C11099E030103.title: "Chef Sauces"
+	quest.5A8C11099E030103.quest_desc: [
+		"Craft Barbeque and Honey Mustard sauces."
+	]
+	quest.5A8C11099E030104.title: "Exotic Spices"
+	quest.5A8C11099E030104.quest_desc: [
+		"Chili, cumin, and pepper powders for rich aroma."
+	]
+	quest.5A8C11099E030105.title: "Grilled Beef Skewer"
+	quest.5A8C11099E030105.quest_desc: [
+		"Juicy charcoal grilled beef."
+	]
+	quest.5A8C11099E030106.title: "Grilled Sausage Skewer"
+	quest.5A8C11099E030106.quest_desc: [
+		"Crispy Bavarian sausages on a skewer."
+	]
+	quest.5A8C11099E030107.title: "Grilled Chicken Skewer"
+	quest.5A8C11099E030107.quest_desc: [
+		"Tender marinated chicken breast."
+	]
+	quest.5A8C11099E030108.title: "Grilled Lamb Skewer"
+	quest.5A8C11099E030108.quest_desc: [
+		"Savory roasted lamb."
+	]
+	quest.5A8C11099E030109.title: "Seafood BBQ"
+	quest.5A8C11099E030109.quest_desc: [
+		"Grilled salmon and cod skewers."
+	]
+	quest.5A8C11099E030110.title: "Grilled Vegetables"
+	quest.5A8C11099E030110.quest_desc: [
+		"Roasted potato, mushroom, and vegetable skewers."
+	]
+	quest.5A8C11099E030111.title: "&6Kebab Wrap&r"
+	quest.5A8C11099E030111.quest_desc: [
+		"Juicy meat, veggies, and sauce rolled in flatbread."
+	]
+	quest.5A8C11099E030112.title: "Kebab Sandwich"
+	quest.5A8C11099E030112.quest_desc: [
+		"Toasted bun packed with roast meat."
+	]
+	quest.5A8C11099E030113.title: "&eKorean Bibimbap&r"
+	quest.5A8C11099E030113.quest_desc: [
+		"Rice bowl with seasoned beef, fried egg, and spicy sauce."
+	]
+	quest.5A8C11099E030114.title: "Simple Hamburger"
+	quest.5A8C11099E030114.quest_desc: [
+		"Bun, patty, and lettuce."
+	]
+	quest.5A8C11099E030115.title: "Cheeseburger"
+	quest.5A8C11099E030115.quest_desc: [
+		"Classic burger with melted cheese."
+	]
+	quest.5A8C11099E030116.title: "Egg Burger"
+	quest.5A8C11099E030116.quest_desc: [
+		"Hearty breakfast burger with egg."
+	]
+	quest.5A8C11099E030117.title: "&6Loaded Hamburger&r"
+	quest.5A8C11099E030117.quest_desc: [
+		"Double patty, crispy bacon, and double cheese!"
+	]
+	quest.5A8C11099E030118.title: "Steak Sandwich"
+	quest.5A8C11099E030118.quest_desc: [
+		"Toasted bread with a grilled steak."
+	]
+	quest.5A8C11099E030119.title: "Chicken Club Sandwich"
+	quest.5A8C11099E030119.quest_desc: [
+		"Triple decker sandwich with chicken, egg, and tomato."
+	]
+	quest.5A8C11099E030120.title: "Creamy Chicken Pasta"
+	quest.5A8C11099E030120.quest_desc: [
+		"Pasta in rich cream sauce with chicken."
+	]
+	quest.5A8C11099E030121.title: "Creamy Ham Pasta"
+	quest.5A8C11099E030121.quest_desc: [
+		"Savory carbonara with ham."
+	]
+	quest.5A8C11099E030122.title: "Beef Rice Bowl"
+	quest.5A8C11099E030122.quest_desc: [
+		"Fluffy rice with tender beef."
+	]
+	quest.5A8C11099E030123.title: "Mashed Potatoes"
+	quest.5A8C11099E030123.quest_desc: [
+		"Fluffy mashed potatoes with butter and milk."
+	]
+	quest.5A8C11099E030124.title: "Diced Potatoes with Beef"
+	quest.5A8C11099E030124.quest_desc: [
+		"Skillet fried diced potatoes with beef."
+	]
+	quest.5A8C11099E030125.title: "Omelette & Popsicle"
+	quest.5A8C11099E030125.quest_desc: [
+		"Fluffy breakfast omelette and cold chocolate popsicle."
+	]
+
 }

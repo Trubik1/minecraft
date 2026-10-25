@@ -81,15 +81,6 @@
 			y: -7.0d
 		}
 		{
-			height: 3.0d
-			id: "52A6D8E13F4BE068"
-			image: "integrateddynamics:aspect/read/boolean/inventory/full"
-			rotation: 0.0d
-			width: 3.0d
-			x: 0.0d
-			y: 7.0d
-		}
-		{
 			height: 1.0d
 			id: "11A00895E9522365"
 			image: "sophisticatedstorage:item/packing_tape"
@@ -132,8 +123,8 @@
 				}
 			]
 			tasks: [{
-				id: "49F46466DB8EDD61"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				id: "02FA69AC4E936EE4"
+				item: { components: { "sophisticatedstorage:wood_type": "oak" }, count: 1, id: "sophisticatedstorage:iron_chest" }
 				type: "item"
 			}]
 			x: 9.0d
@@ -258,8 +249,8 @@
 			shape: "rsquare"
 			size: 1.5d
 			tasks: [{
-				id: "095C8219D3184ED9"
-				item: { components: { "sophisticatedstorage:wood_type": "spruce" }, count: 1, id: "sophisticatedstorage:copper_chest" }
+				id: "0E6CC35B7F3030DE"
+				item: { components: { "sophisticatedstorage:wood_type": "oak" }, count: 1, id: "sophisticatedstorage:copper_chest" }
 				type: "item"
 			}]
 			x: 4.5d
@@ -2040,8 +2031,8 @@
 				}
 			]
 			tasks: [{
-				id: "200CE35BF3C04F6F"
-				item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+				id: "05C73FF405A83609"
+				item: { components: { "sophisticatedstorage:wood_type": "oak" }, count: 1, id: "sophisticatedstorage:copper_chest" }
 				type: "item"
 			}]
 			x: 7.0d
