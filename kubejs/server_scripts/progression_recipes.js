@@ -235,4 +235,147 @@ ServerEvents.recipes(event => {
         per_tick_usage: false
     }).id('steampunk:infusing/redstone_lamp_from_glowstone');
 
+
+    // ==========================================================================
+    // 11. ТЕХНОЛОГИЧЕСКИЕ И МАГИЧЕСКИЕ СВЯЗКИ (Mekanism x Create x Ars Nouveau)
+    // ==========================================================================
+
+    // 1. КОМБАЙНЕР MEKANISM: 100% сборка Точного механизма (БЕЗ РИСКА ПОЛОМКИ И БРАКА!)
+    event.custom({
+        type: 'mekanism:combining',
+        main_input: {
+            count: 1,
+            item: 'create:brass_casing'
+        },
+        extra_input: {
+            count: 1,
+            item: 'create:electron_tube'
+        },
+        output: {
+            count: 1,
+            id: 'create:precision_mechanism'
+        }
+    }).id('steampunk:combining/precision_mechanism_100_percent');
+
+    // 2. КОМБАЙНЕР MEKANISM: Сборка Точного механизма через микросхему Mekanism
+    event.custom({
+        type: 'mekanism:combining',
+        main_input: {
+            count: 1,
+            item: 'create:brass_sheet'
+        },
+        extra_input: {
+            count: 1,
+            item: 'mekanism:basic_control_circuit'
+        },
+        output: {
+            count: 1,
+            id: 'create:precision_mechanism'
+        }
+    }).id('steampunk:combining/precision_mechanism_from_circuit');
+
+    // 3. КАМЕРА ОБОГАЩЕНИЯ: Удвоение сырого цинка Create (x2 переработка руды)
+    event.custom({
+        type: 'mekanism:enriching',
+        input: {
+            count: 1,
+            item: 'create:raw_zinc'
+        },
+        output: {
+            count: 2,
+            id: 'create:zinc_ingot'
+        }
+    }).id('steampunk:enriching/raw_zinc_doubling');
+
+    // 4. КАМЕРА ОБОГАЩЕНИЯ: Умножение кристаллов маны (Source Gem)
+    event.custom({
+        type: 'mekanism:enriching',
+        input: {
+            count: 1,
+            item: 'ars_nouveau:source_gem'
+        },
+        output: {
+            count: 2,
+            id: 'ars_nouveau:source_gem'
+        }
+    }).id('steampunk:enriching/source_gem_duplication');
+
+    // 5. НАПОЛНИТЕЛЬ MEKANISM: Прямая штамповка латунных пластин Create из меди
+    event.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemical_input: {
+            amount: 10,
+            tag: 'mekanism:redstone'
+        },
+        item_input: {
+            count: 1,
+            item: 'create:copper_sheet'
+        },
+        output: {
+            count: 2,
+            id: 'create:brass_sheet'
+        },
+        per_tick_usage: false
+    }).id('steampunk:infusing/brass_sheet_from_copper');
+
+    // ==========================================================================
+    // 12. ЭПИЧЕСКИЙ БОЙ И ОРУЖИЕ БОССОВ (Cataclysm x Epic Fight x Create/Mekanism)
+    // ==========================================================================
+
+    // 1. ИНФЕРНАЛЬНЫЙ КИНЕТИЧЕСКИЙ МОЛОТ (Cataclysm Infernal Forge)
+    // Объединение молота Монструозности, Парового двигателя Create и стали Mekanism
+    event.remove({ output: 'cataclysm:infernal_forge' });
+    event.shaped('cataclysm:infernal_forge', [
+        'ABA',
+        'CDC',
+        ' E '
+    ], {
+        A: 'cataclysm:ignitium_ingot',
+        B: 'create:steam_engine',
+        C: 'mekanism:ingot_steel',
+        D: 'cataclysm:monstrous_horn',
+        E: 'epicfight:netherite_greatsword'
+    }).id('steampunk:boss_craft/infernal_forge_upgraded');
+
+    // 2. ПЛАЗМЕННЫЙ ИСПЕПЕЛИТЕЛЬ ИГНИСА (Cataclysm The Incinerator)
+    // Великий меч Игниса, питаемый энергопланшетом Mekanism и кристаллами Ars Nouveau
+    event.remove({ output: 'cataclysm:the_incinerator' });
+    event.shaped('cataclysm:the_incinerator', [
+        ' A ',
+        'BCD',
+        ' E '
+    ], {
+        A: 'cataclysm:ignitium_block',
+        B: 'mekanism:energy_tablet',
+        C: 'cataclysm:monstrosity_blade',
+        D: 'ars_nouveau:source_gem_block',
+        E: 'epicfight:netherite_tachi'
+    }).id('steampunk:boss_craft/the_incinerator_reforged');
+
+    // 3. КНИГА БОЕВЫХ ИСКУССТВ (Epic Fight Master Skillbook)
+    // Ковка фолианта боевых техник (парирование, уклонение, специальные стойки)
+    event.shaped('epicfight:skillbook', [
+        'ABA',
+        'CDC',
+        'ABA'
+    ], {
+        A: 'create:golden_sheet',
+        B: 'ars_nouveau:source_gem',
+        C: 'mekanism:enriched_alloy',
+        D: 'minecraft:book'
+    }).id('steampunk:combat/master_skillbook');
+
+    // 4. ТРОФЕЙНАЯ КАТАНА МАСТЕРА (Epic Fight Uchigatana)
+    // Из стали Mekanism, Витерита Cataclysm и Точного механизма Create
+    event.remove({ output: 'epicfight:uchigatana' });
+    event.shaped('epicfight:uchigatana', [
+        '  A',
+        ' B ',
+        'C  '
+    ], {
+        A: 'cataclysm:witherite_ingot',
+        B: 'mekanism:ingot_steel',
+        C: 'create:precision_mechanism'
+    }).id('steampunk:combat/master_uchigatana');
+
 });

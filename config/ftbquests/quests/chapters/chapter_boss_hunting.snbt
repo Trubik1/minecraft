@@ -791,5 +791,74 @@
 			x: 3.6d
 			y: 3.2d
 		}
+
+		{
+			id: "5A8C11099E0100_FORGE"
+			rewards: [
+				{
+					count: 4
+					id: "5A8C11099E0100_R1"
+					item: {
+						count: 1
+						id: "cataclysm:ignitium_ingot"
+					}
+					type: "item"
+				},
+				{
+					id: "5A8C11099E0100_R2"
+					type: "xp_levels"
+					xp_levels: 40
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "5A8C11099E0100_T1"
+				item: { count: 1, id: "cataclysm:infernal_forge" }
+				type: "item"
+			}]
+			title: "Инфернальный Кинетический Молот"
+			description: [
+				"Сокрушительный боевой молот Cataclysm, усиленный паровым двигателем Create и сталью Mekanism!"
+				""
+				"Разносит врагов ударными сейсмическими волнами."
+			]
+			x: 5.0d
+			y: 1.5d
+		}
+		{
+			id: "5A8C11099E0100_INCIN"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099E0100_R3"
+					item: {
+						count: 1
+						id: "cataclysm:ignitium_block"
+					}
+					type: "item"
+				},
+				{
+					id: "5A8C11099E0100_R4"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "5A8C11099E0100_T2"
+				item: { count: 1, id: "cataclysm:the_incinerator" }
+				type: "item"
+			}]
+			title: "Плазменный Испепелитель Игниса"
+			description: [
+				"Колоссальный пылающий меч лорда Игниса."
+				""
+				"Запитан квантовым энергопланшетом Mekanism и магией Источника Ars Nouveau."
+			]
+			x: 5.0d
+			y: -1.5d
+		}
 	]
 }

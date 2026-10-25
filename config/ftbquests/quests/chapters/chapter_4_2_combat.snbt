@@ -1091,5 +1091,74 @@
 			x: 10.8d
 			y: 0.0d
 		}
+
+		{
+			id: "5A8C11099E0600_UCHI"
+			rewards: [
+				{
+					count: 2
+					id: "5A8C11099E0600_R1"
+					item: {
+						count: 1
+						id: "cataclysm:witherite_ingot"
+					}
+					type: "item"
+				},
+				{
+					id: "5A8C11099E0600_R2"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [{
+				id: "5A8C11099E0600_T1"
+				item: { count: 1, id: "epicfight:uchigatana" }
+				type: "item"
+			}]
+			title: "Клинок Мастера: Утигатана"
+			description: [
+				"Легендарная катана Epic Fight с молниеносными стойками и комбо-ударами!"
+				""
+				"Выкована из стали Mekanism, Витерита Cataclysm и кинетического Точного механизма Create."
+			]
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			id: "5A8C11099E0600_BOOK"
+			rewards: [
+				{
+					count: 8
+					id: "5A8C11099E0600_R3"
+					item: {
+						count: 1
+						id: "ars_nouveau:source_gem"
+					}
+					type: "item"
+				},
+				{
+					id: "5A8C11099E0600_R4"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "5A8C11099E0600_T2"
+				item: { count: 1, id: "epicfight:skillbook" }
+				type: "item"
+			}]
+			title: "Фолиант Боевых Искусств"
+			description: [
+				"Книга боевых навыков Epic Fight."
+				""
+				"Открывает доступ к парированию, акробатическим уклонениям и смертоносным спец-приемам!"
+			]
+			x: 12.0d
+			y: 1.5d
+		}
 	]
 }
