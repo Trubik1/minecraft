@@ -362,7 +362,7 @@
 			y: 13.7d
 		}
 	]
-	order_index: 4
+	order_index: 5
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
@@ -468,27 +468,17 @@
 				}
 				{
 					icon: {
-					id: "powah:energy_cable_basic"
-				}
-				title: "Энергетический кабель"
-				icon: {
-					id: "powah:energy_cable_basic"
-				}
-				title: "Энергетический кабель"
-				id: "36E378BF22554E0A"
+						id: "powah:energy_cable_basic"
+					}
+					id: "36E378BF22554E0A"
 					item: { components: { "ftbfiltersystem:filter": "or(item(powah:energy_cable_basic)item(powah:energy_cable_starter))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 					type: "item"
 				}
 				{
 					icon: {
-					id: "powah:energizing_rod_basic"
-				}
-				title: "Заряжающий стержень"
-				icon: {
-					id: "powah:energizing_rod_basic"
-				}
-				title: "Стержень зарядки"
-				id: "17F07D6404668DE6"
+						id: "powah:energizing_rod_basic"
+					}
+					id: "17F07D6404668DE6"
 					item: { components: { "ftbfiltersystem:filter": "or(item(powah:energizing_rod_starter)item(powah:energizing_rod_basic))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 					type: "item"
 				}
@@ -746,14 +736,9 @@
 				}
 				{
 					icon: {
-					id: "powah:binding_card"
-				}
-				title: "Карта связи (Binding Card)"
-				icon: {
-					id: "powah:binding_card"
-				}
-				title: "Карта привязки (Binding Card)"
-				id: "1F929F1DF23460AE"
+						id: "powah:binding_card"
+					}
+					id: "1F929F1DF23460AE"
 					item: { components: { "ftbfiltersystem:filter": "or(item(powah:binding_card)item(powah:binding_card_dim))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 					type: "item"
 				}

@@ -983,7 +983,7 @@
 			tasks: [
 				{
 					id: "6D15AAF1CBE5E3EE"
-					item: { count: 1, id: "deeperdarker:heart_of_the_ender" }
+					item: { components: { "ftbquests:missing_item": "deeperdarker:heart_of_the_ender" }, count: 1, id: "ftbquests:missing_item" }
 					type: "item"
 				}
 				{

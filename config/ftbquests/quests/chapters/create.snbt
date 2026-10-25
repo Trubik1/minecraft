@@ -1967,7 +1967,7 @@
 					count: 3
 					id: "19E74CBA0D778614"
 					item: {
-						count: 1,
+						count: 1
 						id: "create:brass_ingot"
 					}
 					type: "item"
@@ -2049,7 +2049,7 @@
 					count: 4
 					id: "2B72AF25BC0235BE"
 					item: {
-						count: 1,
+						count: 1
 						id: "create:deployer"
 					}
 					type: "item"
@@ -3174,7 +3174,7 @@
 				count: 5
 				id: "783F3F33B293858B"
 				item: {
-					count: 1,
+					count: 1
 					id: "create:brass_ingot"
 				}
 				type: "item"
@@ -3321,7 +3321,7 @@
 					count: 3
 					id: "727528AFAC25F78B"
 					item: {
-						count: 1,
+						count: 1
 						id: "create:honey_bucket"
 					}
 					type: "item"

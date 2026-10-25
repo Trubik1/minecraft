@@ -117,6 +117,9 @@
     "energy": true,
     "tooltip_renderer": true
   },
+  "mysticalagradditions": {
+    "infused_farmland": true
+  },
   "pipez": {
     "pipe": true
   },
@@ -130,6 +133,11 @@
   },
   "corpse": {
     "corpse": true
+  },
+  "mysticalagriculture": {
+    "infused_farmland": true,
+    "crop": true,
+    "inferium_crop": true
   },
   "barbequesdelight": {
     "grill": true

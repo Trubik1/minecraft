@@ -3,16 +3,90 @@
 	loot_size: 1
 	order_index: 0
 	rewards: [
-		{ count: 4, item: { count: 4, id: "minecraft:iron_ingot" }, weight: 100.0f }
-		{ count: 2, item: { count: 2, id: "minecraft:gold_ingot" }, weight: 75.0f }
-		{ item: { count: 1, id: "minecraft:diamond" }, weight: 25.0f }
-		{ count: 8, item: { count: 8, id: "minecraft:cooked_beef" }, weight: 100.0f }
-		{ count: 4, item: { count: 4, id: "minecraft:ender_pearl" }, weight: 50.0f }
-		{ item: { count: 1, id: "create:precision_mechanism" }, weight: 20.0f }
-		{ item: { count: 1, id: "sophisticatedbackpacks:upgrade_base" }, weight: 35.0f }
-		{ item: { count: 1, id: "sophisticatedstorage:basic_tier_upgrade" }, weight: 40.0f }
-		{ count: 16, item: { count: 16, id: "minecraft:torch" }, weight: 100.0f }
-		{ item: { count: 1, id: "minecraft:emerald_block" }, weight: 15.0f }
+		{
+			count: 4
+			id: "17D81A7B6693CEB4"
+			item: {
+				count: 4
+				id: "minecraft:iron_ingot"
+			}
+			weight: 100.0f
+		}
+		{
+			count: 2
+			id: "215A5DC4658631FD"
+			item: {
+				count: 2
+				id: "minecraft:gold_ingot"
+			}
+			weight: 75.0f
+		}
+		{
+			id: "2D060A00FE1E5F74"
+			item: {
+				count: 1
+				id: "minecraft:diamond"
+			}
+			weight: 25.0f
+		}
+		{
+			count: 8
+			id: "260BBD3F330FA0EC"
+			item: {
+				count: 8
+				id: "minecraft:cooked_beef"
+			}
+			weight: 100.0f
+		}
+		{
+			count: 4
+			id: "1891C132B64711A5"
+			item: {
+				count: 4
+				id: "minecraft:ender_pearl"
+			}
+			weight: 50.0f
+		}
+		{
+			id: "3E925AA6F801C7D0"
+			item: {
+				count: 1
+				id: "create:precision_mechanism"
+			}
+			weight: 20.0f
+		}
+		{
+			id: "1D8F560EA99DC444"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:upgrade_base"
+			}
+			weight: 35.0f
+		}
+		{
+			id: "4728F6F3ADC3FB2B"
+			item: {
+				count: 1
+				id: "sophisticatedstorage:basic_tier_upgrade"
+			}
+			weight: 40.0f
+		}
+		{
+			count: 16
+			id: "6426ABECA6237A70"
+			item: {
+				count: 16
+				id: "minecraft:torch"
+			}
+			weight: 100.0f
+		}
+		{
+			id: "7BB1C79AC4537960"
+			item: {
+				count: 1
+				id: "minecraft:emerald_block"
+			}
+			weight: 15.0f
+		}
 	]
-	title: "Случайная Награда: Хранилища"
 }

@@ -13,16 +13,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"Мод Epic Fight полностью преображает боевую систему Minecraft, превращая сражения в динамичный экшен со стойками, выносливостью и спецударами!",
-				"",
-				"§6Основы боевого режима:§r",
-				"• Клавиша §e[R]§r (по умолчанию) — переключение между мирным и боевым режимом.",
-				"• В боевом режиме появляется шкала Выносливости (Stamina).",
-				"• Нажатие §e[Пробел]§r во время движения — уворот/перекат (Roll) с кадрами неуязвимости (i-frames).",
-				"• Каждое оружие обладает уникальными анимациями, комбо-сериями атак и скоростью.",
-				"• Нанесение ударов накапливает шкалу спецататора — мощнейшего особого приема!"
-			]
 			icon: {
 				id: "epicfight:iron_greatsword"
 			}
@@ -47,23 +37,13 @@
 			size: 1.5d
 			tasks: [{
 				id: "4B0000000000000C"
-				title: "Я готов изучить боевые искусства!"
 				type: "checkmark"
 			}]
-			title: "Боевые искусства Epic Fight"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["4B00000000000001"]
-			description: [
-				"Книги навыков позволяют изучать пассивные и активные боевые способности: парирование щитом, усиленные рывки, контратаки и финишеры.",
-				"",
-				"§6Как изучать и применять навыки:§r",
-				"1. Возьмите Книгу навыков в руку и изучите её.",
-				"2. Откройте интерфейс навыков Epic Fight (клавиша §e[K]§r или значок в инвентаре).",
-				"3. Перетащите изученную способность в слот Dodge, Guard, Passive или Special."
-			]
 			icon: {
 				id: "epicfight:skillbook"
 			}
@@ -91,46 +71,34 @@
 				item: { count: 1, id: "epicfight:skillbook" }
 				type: "item"
 			}]
-			title: "Книга боевых навыков (Skill Book)"
 			x: 0.0d
 			y: -2.0d
 		}
 		{
 			dependencies: ["4B00000000000001"]
-			description: [
-				"Двуручные мечи обладают колоссальной разрушительной силой и гигантским радиусом поражения.",
-				"",
-				"Широкие размашистые взмахи наносят урон сразу всем врагам в полукруге, сбивая их с ног и пробивая щиты!"
-			]
 			icon: {
 				id: "epicfight:iron_greatsword"
 			}
 			id: "4B00000000000010"
-			rewards: [
-				{
+			rewards: [{
+				count: 8
+				id: "4B0000000000001A"
+				item: {
 					count: 8
-					id: "4B0000000000001A"
-					item: {
-						count: 8
-						id: "minecraft:iron_ingot"
-					}
-					type: "item"
+					id: "minecraft:iron_ingot"
 				}
-			]
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B0000000000001B"
 				item: { count: 1, id: "epicfight:iron_greatsword" }
 				type: "item"
 			}]
-			title: "Железный двуручный меч (Greatsword)"
 			x: 2.5d
 			y: -2.0d
 		}
 		{
 			dependencies: ["4B00000000000010"]
-			description: [
-				"Усиленный алмазный двуручник наносит сокрушительный урон любому чудовищу."
-			]
 			icon: {
 				id: "epicfight:diamond_greatsword"
 			}
@@ -156,15 +124,11 @@
 				item: { count: 1, id: "epicfight:diamond_greatsword" }
 				type: "item"
 			}]
-			title: "Алмазный двуручный меч"
 			x: 4.5d
 			y: -2.0d
 		}
 		{
 			dependencies: ["4B00000000000011"]
-			description: [
-				"Максимальное воплощение силы тяжелого клинка. Спецатака разносит врагов сокрушительным нисходящим ударом!"
-			]
 			icon: {
 				id: "epicfight:netherite_greatsword"
 			}
@@ -192,135 +156,103 @@
 				item: { count: 1, id: "epicfight:netherite_greatsword" }
 				type: "item"
 			}]
-			title: "Незеритовый двуручный меч"
 			x: 6.5d
 			y: -2.0d
 		}
 		{
 			dependencies: ["4B00000000000001"]
-			description: [
-				"Рыцарский полутораручный меч. Идеальный баланс между дистанцией клинка, скоростью взмаха и защитными стойками.",
-				"",
-				"Позволяет блокировать удары кликом ПКМ прямо клинком!"
-			]
 			icon: {
 				id: "epicfight:iron_longsword"
 			}
 			id: "4B00000000000013"
-			rewards: [
-				{
+			rewards: [{
+				count: 8
+				id: "4B0000000000002C"
+				item: {
 					count: 8
-					id: "4B0000000000002C"
-					item: {
-						count: 8
-						id: "minecraft:iron_ingot"
-					}
-					type: "item"
+					id: "minecraft:iron_ingot"
 				}
-			]
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B0000000000002D"
 				item: { count: 1, id: "epicfight:iron_longsword" }
 				type: "item"
 			}]
-			title: "Железный длинный меч (Longsword)"
 			x: 2.5d
 			y: -0.7d
 		}
 		{
 			dependencies: ["4B00000000000013"]
-			description: [
-				"Алмазный длинный меч обладает увеличенной прочностью и уроном, идеально подходя для дуэлей с боссами."
-			]
 			icon: {
 				id: "epicfight:diamond_longsword"
 			}
 			id: "4B00000000000014"
-			rewards: [
-				{
+			rewards: [{
+				count: 4
+				id: "4B0000000000002E"
+				item: {
 					count: 4
-					id: "4B0000000000002E"
-					item: {
-						count: 4
-						id: "minecraft:diamond"
-					}
-					type: "item"
+					id: "minecraft:diamond"
 				}
-			]
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B0000000000002F"
 				item: { count: 1, id: "epicfight:diamond_longsword" }
 				type: "item"
 			}]
-			title: "Алмазный длинный меч"
 			x: 4.5d
 			y: -0.7d
 		}
 		{
 			dependencies: ["4B00000000000001"]
-			description: [
-				"Традиционный изогнутый клинок самураев. Молниеносные рубящие диагональные взмахи и скользящие увороты."
-			]
 			icon: {
 				id: "epicfight:iron_tachi"
 			}
 			id: "4B00000000000015"
-			rewards: [
-				{
+			rewards: [{
+				count: 8
+				id: "4B0000000000003A"
+				item: {
 					count: 8
-					id: "4B0000000000003A"
-					item: {
-						count: 8
-						id: "minecraft:iron_ingot"
-					}
-					type: "item"
+					id: "minecraft:iron_ingot"
 				}
-			]
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B0000000000003B"
 				item: { count: 1, id: "epicfight:iron_tachi" }
 				type: "item"
 			}]
-			title: "Железный тати (Tachi)"
 			x: 2.5d
 			y: 0.7d
 		}
 		{
 			dependencies: ["4B00000000000015"]
-			description: [
-				"Алмазный тати позволяет проводить стремительные комбо-атаки без потери выносливости."
-			]
 			icon: {
 				id: "epicfight:diamond_tachi"
 			}
 			id: "4B00000000000016"
-			rewards: [
-				{
+			rewards: [{
+				count: 4
+				id: "4B0000000000003C"
+				item: {
 					count: 4
-					id: "4B0000000000003C"
-					item: {
-						count: 4
-						id: "minecraft:diamond"
-					}
-					type: "item"
+					id: "minecraft:diamond"
 				}
-			]
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B0000000000003D"
 				item: { count: 1, id: "epicfight:diamond_tachi" }
 				type: "item"
 			}]
-			title: "Алмазный тати"
 			x: 4.5d
 			y: 0.7d
 		}
 		{
 			dependencies: ["4B00000000000016"]
-			description: [
-				"Вершина восточного фехтования!",
-				"",
-				"Спецатака Утигатаны позволяет выполнить легендарную технику Баттодзюцу (извлечение клинка из ножен на сверхзвуковой скорости) с колоссальным критическим уроном!"
-			]
 			icon: {
 				id: "epicfight:uchigatana"
 			}
@@ -348,135 +280,103 @@
 				item: { count: 1, id: "epicfight:uchigatana" }
 				type: "item"
 			}]
-			title: "Утигатана (Uchigatana)"
 			x: 6.5d
 			y: 0.7d
 		}
 		{
 			dependencies: ["4B00000000000001"]
-			description: [
-				"Парные кинжалы берутся сразу в обе руки.",
-				"",
-				"Бешеная частота ударов и тройной урон при ударе в спину врага делают кинжалы грозным оружием в руках быстрого воина."
-			]
 			icon: {
 				id: "epicfight:iron_dagger"
 			}
 			id: "4B00000000000018"
-			rewards: [
-				{
+			rewards: [{
+				count: 8
+				id: "4B0000000000004B"
+				item: {
 					count: 8
-					id: "4B0000000000004B"
-					item: {
-						count: 8
-						id: "minecraft:iron_ingot"
-					}
-					type: "item"
+					id: "minecraft:iron_ingot"
 				}
-			]
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B0000000000004C"
 				item: { count: 1, id: "epicfight:iron_dagger" }
 				type: "item"
 			}]
-			title: "Парные железные кинжалы (Daggers)"
 			x: 2.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["4B00000000000018"]
-			description: [
-				"Алмазные кинжалы моментально шинкуют врагов в капусту быстрыми крестовыми выпадами."
-			]
 			icon: {
 				id: "epicfight:diamond_dagger"
 			}
 			id: "4B00000000000019"
-			rewards: [
-				{
+			rewards: [{
+				count: 4
+				id: "4B0000000000004D"
+				item: {
 					count: 4
-					id: "4B0000000000004D"
-					item: {
-						count: 4
-						id: "minecraft:diamond"
-					}
-					type: "item"
+					id: "minecraft:diamond"
 				}
-			]
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B0000000000004E"
 				item: { count: 1, id: "epicfight:diamond_dagger" }
 				type: "item"
 			}]
-			title: "Алмазные кинжалы"
 			x: 4.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["4B00000000000001"]
-			description: [
-				"Длинное древковое оружие. Позволяет удерживать криперов, скелетов и боссов на безопасном расстоянии, прокалывая их защиту."
-			]
 			icon: {
 				id: "epicfight:iron_spear"
 			}
 			id: "4B00000000000020"
-			rewards: [
-				{
+			rewards: [{
+				count: 8
+				id: "4B0000000000004F"
+				item: {
 					count: 8
-					id: "4B0000000000004F"
-					item: {
-						count: 8
-						id: "minecraft:iron_ingot"
-					}
-					type: "item"
+					id: "minecraft:iron_ingot"
 				}
-			]
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B0000000000005A"
 				item: { count: 1, id: "epicfight:iron_spear" }
 				type: "item"
 			}]
-			title: "Железное копье (Spear)"
 			x: 2.5d
 			y: 3.2d
 		}
 		{
 			dependencies: ["4B00000000000001"]
-			description: [
-				"Стиль кулачного боя. Быстрые серии джебов, хуков и апперкотов ошеломляют противника и сбивают подготовку заклинаний."
-			]
 			icon: {
 				id: "epicfight:glove"
 			}
 			id: "4B00000000000021"
-			rewards: [
-				{
+			rewards: [{
+				count: 8
+				id: "4B0000000000005B"
+				item: {
 					count: 8
-					id: "4B0000000000005B"
-					item: {
-						count: 8
-						id: "minecraft:leather"
-					}
-					type: "item"
+					id: "minecraft:leather"
 				}
-			]
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B0000000000005C"
 				item: { count: 1, id: "epicfight:glove" }
 				type: "item"
 			}]
-			title: "Боевые перчатки (Glove)"
 			x: 2.5d
 			y: -3.2d
 		}
 		{
 			dependencies: ["4B00000000000012"]
-			description: [
-				"Легендарный пылающий двуручный меч, выбиваемый из Незеритового Монстра (Netherite Monstrosity).",
-				"",
-				"Поджигает врагов и оставляет за собой пылающие полосы адского огня!"
-			]
 			icon: {
 				id: "cataclysm:the_incinerator"
 			}
@@ -504,17 +404,11 @@
 				item: { count: 1, id: "cataclysm:the_incinerator" }
 				type: "item"
 			}]
-			title: "Испепелитель (The Incinerator)"
 			x: 8.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["4B00000000000017"]
-			description: [
-				"Сокрушительный боевой молот древних адских кузнецов.",
-				"",
-				"Каждый удар раскалывает землю, отбрасывая врагов и вызывая волны лавы!"
-			]
 			icon: {
 				id: "cataclysm:infernal_forge"
 			}
@@ -542,17 +436,11 @@
 				item: { count: 1, id: "cataclysm:infernal_forge" }
 				type: "item"
 			}]
-			title: "Адская кузня (Infernal Forge)"
 			x: 8.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["4B00000000000019"]
-			description: [
-				"Могущественная перчатка Стража Оплота (Harbinger).",
-				"",
-				"Позволяет ставить непреодолимые силовые блоки и наносить сокрушительные импульсные удары."
-			]
 			icon: {
 				id: "cataclysm:gauntlet_of_bulwark"
 			}
@@ -580,7 +468,6 @@
 				item: { count: 1, id: "cataclysm:gauntlet_of_bulwark" }
 				type: "item"
 			}]
-			title: "Перчатка оплота (Gauntlet of Bulwark)"
 			x: 8.5d
 			y: 1.5d
 		}
@@ -589,11 +476,6 @@
 				"4B00000000000025"
 				"4B00000000000026"
 				"4B00000000000027"
-			]
-			description: [
-				"Вы подчинили силу величайших боссов разрушительного мира Cataclysm и стали абсолютным мастером клинка!",
-				"",
-				"Ваша легенда высечена в камне навечно."
 			]
 			icon: {
 				id: "cataclysm:the_incinerator"
@@ -628,49 +510,33 @@
 			size: 1.6d
 			tasks: [{
 				id: "4B0000000000007D"
-				title: "Я стал легендой боевых искусств!"
 				type: "checkmark"
 			}]
-			title: "Сердце Воина: Триумф над Боссами"
 			x: 10.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["4B00000000000001"]
-			description: [
-				"В сокровищницах, пирамидах, заброшенных шахтах и подводных руинах сокрыты могущественные артефакты.",
-				"",
-				"Они экипируются в специальные слоты аксессуаров (кнопка слотов Curios в инвентаре) и даруют владельцу мощные постоянные эффекты.",
-				"",
-				"§6Внимание:§r Все квесты на артефакты §eполностью независимы§r! Находите любой артефакт в подземельях и сразу получайте за него награду без всяких очередей!"
-			]
 			icon: {
 				id: "artifacts:cloud_in_a_bottle"
 			}
 			id: "4B00000000000100"
-			rewards: [
-				{
-					id: "4B0000000000007E"
-					type: "xp"
-					xp: 100
-				}
-			]
+			rewards: [{
+				id: "4B0000000000007E"
+				type: "xp"
+				xp: 100
+			}]
 			shape: "rsquare"
 			size: 1.4d
 			tasks: [{
 				id: "4B0000000000007F"
-				title: "Охота за реликвиями открыта!"
 				type: "checkmark"
 			}]
-			title: "Древние реликвии и артефакты"
 			x: -2.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Позволяет совершать дополнительный прыжок прямо в воздухе!"
-			]
 			icon: {
 				id: "artifacts:cloud_in_a_bottle"
 			}
@@ -678,7 +544,10 @@
 			rewards: [{
 				count: 4
 				id: "4B0000000000008A"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -686,15 +555,11 @@
 				item: { count: 1, id: "artifacts:cloud_in_a_bottle" }
 				type: "item"
 			}]
-			title: "Облако в банке (Двойной прыжок)"
 			x: -4.0d
 			y: -3.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Увеличивают высоту прыжка и полностью аннулируют урон от падения с любой высоты!"
-			]
 			icon: {
 				id: "artifacts:bunny_hoppers"
 			}
@@ -702,7 +567,10 @@
 			rewards: [{
 				count: 4
 				id: "4B0000000000008C"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -710,15 +578,11 @@
 				item: { count: 1, id: "artifacts:bunny_hoppers" }
 				type: "item"
 			}]
-			title: "Заячьи тапочки (Bunny Hoppers)"
 			x: -5.8d
 			y: -3.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Позволяют бегать по поверхности воды так же легко, как по твердой земле."
-			]
 			icon: {
 				id: "artifacts:aqua_dashers"
 			}
@@ -726,7 +590,10 @@
 			rewards: [{
 				count: 4
 				id: "4B0000000000008E"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -734,15 +601,11 @@
 				item: { count: 1, id: "artifacts:aqua_dashers" }
 				type: "item"
 			}]
-			title: "Водобеги (Aqua Dashers)"
 			x: -7.6d
 			y: -3.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Повышает показатель Удачи персонажа (+Looting) при убийстве любых существ."
-			]
 			icon: {
 				id: "artifacts:superstitious_hat"
 			}
@@ -750,7 +613,10 @@
 			rewards: [{
 				count: 4
 				id: "4B0000000000009A"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -758,15 +624,11 @@
 				item: { count: 1, id: "artifacts:superstitious_hat" }
 				type: "item"
 			}]
-			title: "Суеверная шляпа (Удача)"
 			x: -9.4d
 			y: -3.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Бесконечный кусок питательного мяса, который можно есть снова и снова!"
-			]
 			icon: {
 				id: "artifacts:everlasting_beef"
 			}
@@ -774,7 +636,10 @@
 			rewards: [{
 				count: 4
 				id: "4B0000000000009C"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -782,15 +647,11 @@
 				item: { count: 1, id: "artifacts:everlasting_beef" }
 				type: "item"
 			}]
-			title: "Вечная говядина (Everlasting Beef)"
 			x: -4.0d
 			y: -1.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Любой ваш удар в ближнем бою поджигает противника адским пламенем."
-			]
 			icon: {
 				id: "artifacts:fire_gauntlet"
 			}
@@ -798,7 +659,10 @@
 			rewards: [{
 				count: 4
 				id: "4B0000000000009E"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -806,15 +670,11 @@
 				item: { count: 1, id: "artifacts:fire_gauntlet" }
 				type: "item"
 			}]
-			title: "Огненная перчатка (Fire Gauntlet)"
 			x: -5.8d
 			y: -1.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"В момент получения смертельного удара тотем спасает вас и мгновенно телепортирует в безопасное место."
-			]
 			icon: {
 				id: "artifacts:chorus_totem"
 			}
@@ -822,7 +682,10 @@
 			rewards: [{
 				count: 4
 				id: "4B000000000000A1"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -830,15 +693,11 @@
 				item: { count: 1, id: "artifacts:chorus_totem" }
 				type: "item"
 			}]
-			title: "Тотем хоруса (Chorus Totem)"
 			x: -7.6d
 			y: -1.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Дарует бесконечный запас кислорода и высокую скорость плавания под водой."
-			]
 			icon: {
 				id: "artifacts:helium_flamingo"
 			}
@@ -846,7 +705,10 @@
 			rewards: [{
 				count: 4
 				id: "4B000000000000A3"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -854,15 +716,11 @@
 				item: { count: 1, id: "artifacts:helium_flamingo" }
 				type: "item"
 			}]
-			title: "Гелиевый фламинго (Плавание)"
 			x: -9.4d
 			y: -1.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"При получении вами урона бьет атакующего противника ответным разрядом молнии."
-			]
 			icon: {
 				id: "artifacts:shock_pendant"
 			}
@@ -870,7 +728,10 @@
 			rewards: [{
 				count: 4
 				id: "4B000000000000A5"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -878,15 +739,11 @@
 				item: { count: 1, id: "artifacts:shock_pendant" }
 				type: "item"
 			}]
-			title: "Грозовой кулон (Shock Pendant)"
 			x: -4.0d
 			y: 1.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"При получении любого ранения активирует сильный прилив адреналина и скорости бега."
-			]
 			icon: {
 				id: "artifacts:panic_necklace"
 			}
@@ -894,7 +751,10 @@
 			rewards: [{
 				count: 4
 				id: "4B000000000000A7"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -902,15 +762,11 @@
 				item: { count: 1, id: "artifacts:panic_necklace" }
 				type: "item"
 			}]
-			title: "Ожерелье паники (Panic Necklace)"
 			x: -5.8d
 			y: 1.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Увеличивает период неуязвимости (i-frames) после каждого полученного удара."
-			]
 			icon: {
 				id: "artifacts:cross_necklace"
 			}
@@ -918,7 +774,10 @@
 			rewards: [{
 				count: 4
 				id: "4B000000000000A9"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -926,15 +785,11 @@
 				item: { count: 1, id: "artifacts:cross_necklace" }
 				type: "item"
 			}]
-			title: "Крест защиты (Cross Necklace)"
 			x: -7.6d
 			y: 1.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Даруют постоянный эффект ночного видения без ограничения по времени!"
-			]
 			icon: {
 				id: "artifacts:night_vision_goggles"
 			}
@@ -942,7 +797,10 @@
 			rewards: [{
 				count: 4
 				id: "4B000000000000AB"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -950,15 +808,11 @@
 				item: { count: 1, id: "artifacts:night_vision_goggles" }
 				type: "item"
 			}]
-			title: "Очки ночного видения"
 			x: -9.4d
 			y: 1.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"В разы уменьшает длительность любых негативных эффектов (отравление, иссушение, слабость)."
-			]
 			icon: {
 				id: "artifacts:antidote_vessel"
 			}
@@ -966,7 +820,10 @@
 			rewards: [{
 				count: 4
 				id: "4B000000000000AD"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -974,15 +831,11 @@
 				item: { count: 1, id: "artifacts:antidote_vessel" }
 				type: "item"
 			}]
-			title: "Сосуд с противоядием"
 			x: -4.0d
 			y: 3.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Автоматически притягивает к вам выпавшие предметы и сферы опыта на значительном радиусе."
-			]
 			icon: {
 				id: "artifacts:universal_attractor"
 			}
@@ -990,7 +843,10 @@
 			rewards: [{
 				count: 4
 				id: "4B000000000000AF"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -998,15 +854,11 @@
 				item: { count: 1, id: "artifacts:universal_attractor" }
 				type: "item"
 			}]
-			title: "Универсальный магнит"
 			x: -5.8d
 			y: 3.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Восстанавливает здоровье при нанесении урона противникам в ближнем бою."
-			]
 			icon: {
 				id: "artifacts:vampiric_glove"
 			}
@@ -1014,7 +866,10 @@
 			rewards: [{
 				count: 4
 				id: "4B000000000000B2"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -1022,15 +877,11 @@
 				item: { count: 1, id: "artifacts:vampiric_glove" }
 				type: "item"
 			}]
-			title: "Перчатка вампира (Вампиризм)"
 			x: -7.6d
 			y: 3.2d
 		}
 		{
 			dependencies: ["4B00000000000100"]
-			description: [
-				"Дарует временную неуязвимость к огню и лаве при контакте с ними."
-			]
 			icon: {
 				id: "artifacts:obsidian_skull"
 			}
@@ -1038,7 +889,10 @@
 			rewards: [{
 				count: 4
 				id: "4B000000000000B4"
-				item: { count: 4, id: "minecraft:emerald" }
+				item: {
+					count: 4
+					id: "minecraft:emerald"
+				}
 				type: "item"
 			}]
 			tasks: [{
@@ -1046,7 +900,6 @@
 				item: { count: 1, id: "artifacts:obsidian_skull" }
 				type: "item"
 			}]
-			title: "Обсидиановый череп (Защита от лавы)"
 			x: -9.4d
 			y: 3.2d
 		}
