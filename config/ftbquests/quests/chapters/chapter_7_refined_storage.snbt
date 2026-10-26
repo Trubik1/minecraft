@@ -1289,7 +1289,7 @@
 				}
 				{
 					id: "086992D773D34C15"
-					item: { components: { "ftbquests:missing_item": "ftbfiltersystem:smart_filter" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "refinedstorage:fortune_3_upgrade" }
 					type: "item"
 				}
 			]

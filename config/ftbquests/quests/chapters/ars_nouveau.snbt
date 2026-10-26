@@ -1648,24 +1648,11 @@
 		{
 			dependencies: ["64D0E66CB4FBEC82"]
 			id: "33682F4B44950123"
-			rewards: [
-				{
-					id: "33B8442826203713"
-					item: {
-						count: 1
-						id: "ars_nouveau:blue_archwood_sapling"
-					}
-					type: "item"
-				}
-				{
-					id: "5C16757EA6C22406"
-					type: "xp"
-					xp: 50
-				}
-			]
+			icon: "ars_nouveau:blue_archwood_log"
+			title: "Древесина Архдерева"
 			tasks: [{
 				id: "2BC0F5A88E2F03C3"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:logs/archwood)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "ars_nouveau:blue_archwood_log" }
 				type: "item"
 			}]
 			x: -1.0d

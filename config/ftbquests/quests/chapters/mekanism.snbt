@@ -1085,7 +1085,9 @@
 		{
 			dependencies: ["08DDE018A804BFE7"]
 			id: "0F326EEEC2EBE4E5"
-			rewards: [
+			title: "Обогащенные материалы"
+icon: "mekanism:enriched_carbon"
+rewards: [
 				{
 					count: 3
 					id: "592DDA8413504FDB"
@@ -1108,7 +1110,7 @@
 			shape: "circle"
 			tasks: [{
 				id: "4B60ACBCC3B46D1D"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(mekanism:enriched)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:enriched_carbon" }
 				type: "item"
 			}]
 			x: -1.0d
@@ -1962,6 +1964,8 @@
 		{
 			dependencies: ["4935209D870E25F2"]
 			id: "62827AA1AD29A222"
+			icon: "mekanism:basic_universal_cable"
+			title: "Универсальные провода"
 			rewards: [
 				{
 					count: 16
@@ -1985,7 +1989,7 @@
 			shape: "rsquare"
 			tasks: [{
 				id: "6877D91D6603E4FD"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_universal_cable)item(mekanism:advanced_universal_cable)item(mekanism:elite_universal_cable)item(mekanism:ultimate_universal_cable))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:basic_universal_cable" }
 				type: "item"
 			}]
 			x: -6.0d
@@ -1994,6 +1998,8 @@
 		{
 			dependencies: ["4935209D870E25F2"]
 			id: "0AA9EF3981E9BA37"
+			icon: "mekanism:basic_energy_cube"
+			title: "Энергетические кубы"
 			rewards: [
 				{
 					id: "10FD3BDB04012C03"
@@ -2020,7 +2026,7 @@
 			shape: "rsquare"
 			tasks: [{
 				id: "03C590DB786810FB"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_energy_cube)item(mekanism:advanced_energy_cube)item(mekanism:elite_energy_cube)item(mekanism:ultimate_energy_cube))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:basic_energy_cube" }
 				type: "item"
 			}]
 			x: -5.0d
@@ -2029,7 +2035,9 @@
 		{
 			dependencies: ["5E116409DC7D30BB"]
 			id: "33C69B5934BE4D64"
-			rewards: [
+			title: "Механические трубы"
+icon: "mekanism:basic_mechanical_pipe"
+rewards: [
 				{
 					count: 16
 					id: "26272E4B7C8569D4"
@@ -2053,7 +2061,7 @@
 			size: 1.25d
 			tasks: [{
 				id: "4632192573FD8501"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_mechanical_pipe)item(mekanism:advanced_mechanical_pipe)item(mekanism:elite_mechanical_pipe)item(mekanism:ultimate_mechanical_pipe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:basic_mechanical_pipe" }
 				type: "item"
 			}]
 			x: -5.0d
@@ -2062,7 +2070,9 @@
 		{
 			dependencies: ["5E116409DC7D30BB"]
 			id: "3AF1DC02E9A0010C"
-			rewards: [
+			title: "Герметичные трубки"
+icon: "mekanism:basic_pressurized_tube"
+rewards: [
 				{
 					count: 16
 					id: "55A16073857CB8E8"
@@ -2086,7 +2096,7 @@
 			size: 1.25d
 			tasks: [{
 				id: "50795B2B2A320D16"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_pressurized_tube)item(mekanism:advanced_pressurized_tube)item(mekanism:elite_pressurized_tube)item(mekanism:ultimate_pressurized_tube))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:basic_pressurized_tube" }
 				type: "item"
 			}]
 			x: -3.0d
@@ -2095,7 +2105,9 @@
 		{
 			dependencies: ["5E116409DC7D30BB"]
 			id: "60ECCCAB66AAC05D"
-			rewards: [
+			title: "Логистические транспортеры"
+icon: "mekanism:basic_logistical_transporter"
+rewards: [
 				{
 					count: 16
 					id: "0694B55D2359E8EC"
@@ -2119,7 +2131,7 @@
 			size: 1.25d
 			tasks: [{
 				id: "6B24D8667BC856A3"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_logistical_transporter)item(mekanism:advanced_logistical_transporter)item(mekanism:elite_logistical_transporter)item(mekanism:ultimate_logistical_transporter))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:basic_logistical_transporter" }
 				type: "item"
 			}]
 			x: -6.5d
@@ -2128,7 +2140,9 @@
 		{
 			dependencies: ["5E116409DC7D30BB"]
 			id: "66A450CAC07232E1"
-			rewards: [
+			title: "Термодинамические проводники"
+icon: "mekanism:basic_thermodynamic_conductor"
+rewards: [
 				{
 					count: 16
 					id: "452CE7224E47C6FB"
@@ -2152,7 +2166,7 @@
 			size: 1.25d
 			tasks: [{
 				id: "36B9FB74D9BF26E4"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_thermodynamic_conductor)item(mekanism:advanced_thermodynamic_conductor)item(mekanism:elite_thermodynamic_conductor)item(mekanism:ultimate_thermodynamic_conductor))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:basic_thermodynamic_conductor" }
 				type: "item"
 			}]
 			x: -1.5d
@@ -2162,7 +2176,9 @@
 			dependencies: ["19341B01E048ACAB"]
 			hide_dependency_lines: true
 			id: "090B564935D7A8F5"
-			rewards: [
+			title: "Установщики уровней"
+icon: "mekanism:basic_tier_installer"
+rewards: [
 				{
 					count: 2
 					id: "083E13034B619449"
@@ -2184,7 +2200,7 @@
 			size: 1.1d
 			tasks: [{
 				id: "09788D3638E59F3B"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_tier_installer)item(mekanism:advanced_tier_installer)item(mekanism:elite_tier_installer)item(mekanism:ultimate_tier_installer))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:basic_tier_installer" }
 				type: "item"
 			}]
 			x: 10.0d
@@ -2193,7 +2209,9 @@
 		{
 			dependencies: ["3AF1DC02E9A0010C"]
 			id: "1922623A26E08078"
-			rewards: [
+			title: "Химические баки"
+icon: "mekanism:basic_chemical_tank"
+rewards: [
 				{
 					count: 8
 					id: "11BD4A6B2F166B9F"
@@ -2215,7 +2233,7 @@
 			]
 			tasks: [{
 				id: "16E5E87F1CAC042A"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_chemical_tank)item(mekanism:advanced_chemical_tank)item(mekanism:elite_chemical_tank)item(mekanism:ultimate_chemical_tank))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:basic_chemical_tank" }
 				type: "item"
 			}]
 			x: -3.5d
@@ -2224,7 +2242,9 @@
 		{
 			dependencies: ["33C69B5934BE4D64"]
 			id: "7952DA35B4F5C598"
-			rewards: [
+			title: "Резервуары для жидкостей"
+icon: "mekanism:basic_fluid_tank"
+rewards: [
 				{
 					count: 8
 					id: "2E34B11E7DAE24E5"
@@ -2246,7 +2266,7 @@
 			]
 			tasks: [{
 				id: "68C11540A9010775"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_fluid_tank)item(mekanism:advanced_fluid_tank)item(mekanism:elite_fluid_tank)item(mekanism:ultimate_fluid_tank))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:basic_fluid_tank" }
 				type: "item"
 			}]
 			x: -4.5d
@@ -2255,7 +2275,9 @@
 		{
 			dependencies: ["60ECCCAB66AAC05D"]
 			id: "73E6878553BA6908"
-			rewards: [
+			title: "Бункеры Mekanism"
+icon: "mekanism:basic_bin"
+rewards: [
 				{
 					count: 2
 					id: "27A380BFA32783CB"
@@ -2276,8 +2298,8 @@
 				}
 			]
 			tasks: [{
-				id: "11EF7663818B6CC6"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_bin)item(mekanism:advanced_bin)item(mekanism:elite_bin)item(mekanism:ultimate_bin))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				id: "08D64AC44D7C2C77"
+				item: { count: 1, id: "mekanism:basic_bin" }
 				type: "item"
 			}]
 			x: -7.0d
@@ -2330,7 +2352,9 @@
 		{
 			dependencies: ["60ECCCAB66AAC05D"]
 			id: "1F8B4F648EB5A0DC"
-			rewards: [{
+			title: "Личное хранилище"
+icon: "mekanism:personal_chest"
+rewards: [{
 				id: "76209AC2E7706116"
 				item: {
 					count: 1
@@ -2339,8 +2363,8 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "2C1B1D314E190B80"
-				item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:personal_barrel)item(mekanism:personal_chest))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				id: "70D7C9475CF4FDF2"
+				item: { count: 1, id: "mekanism:personal_chest" }
 				type: "item"
 			}]
 			x: -6.0d
@@ -2376,7 +2400,9 @@
 			dependencies: ["21D8B88155648EA6"]
 			hide_dependency_lines: true
 			id: "119BED334E331C25"
-			rewards: [
+			title: "Обработка руд: Уровень 1 (2x)"
+icon: "mekanism:enrichment_chamber"
+rewards: [
 				{
 					count: 5
 					id: "7DA9DE79920ACF0D"
@@ -2406,13 +2432,18 @@
 			tasks: [
 				{
 					id: "4558919345C3BE5D"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:enrichment_chamber)item(mekanism:basic_enriching_factory)item(mekanism:advanced_enriching_factory)item(mekanism:elite_enriching_factory)item(mekanism:ultimate_enriching_factory))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:enrichment_chamber" }
 					type: "item"
 				}
 				{
-					id: "4B6C5B2099B18AB7"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:energized_smelter)item(mekanism:basic_smelting_factory)item(mekanism:advanced_smelting_factory)item(mekanism:elite_smelting_factory)item(mekanism:ultimate_smelting_factory))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					id: "1F5F2B57B23E2FBF"
+					item: { count: 1, id: "mekanism:energized_smelter" }
 					type: "item"
+				}
+				{
+					id: "79532E4325832DA5"
+					type: "xp_levels"
+					xp_levels: 1
 				}
 			]
 			x: 4.5d
@@ -2422,7 +2453,9 @@
 			dependencies: ["21D8B88155648EA6"]
 			hide_dependency_lines: true
 			id: "445CC9AAA6F8AAB6"
-			rewards: [
+			title: "Камера очистки"
+icon: "mekanism:purification_chamber"
+rewards: [
 				{
 					id: "6545A9A44AC20C75"
 					item: {
@@ -2459,9 +2492,14 @@
 					type: "item"
 				}
 				{
-					id: "564D0E533237E951"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:purification_chamber)item(mekanism:basic_purifying_factory)item(mekanism:advanced_purifying_factory)item(mekanism:elite_purifying_factory)item(mekanism:ultimate_purifying_factory))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					id: "7BE46DAF7BE0BC50"
+					item: { count: 1, id: "mekanism:purification_chamber" }
 					type: "item"
+				}
+				{
+					id: "0A7713B4BC19BB41"
+					type: "xp_levels"
+					xp_levels: 1
 				}
 			]
 			x: 4.5d
@@ -2470,7 +2508,9 @@
 		{
 			dependencies: ["445CC9AAA6F8AAB6"]
 			id: "67E7A9A65B14C933"
-			min_width: 300
+			title: "Обработка руд: Уровень 2 (3x)"
+icon: "mekanism:crusher"
+min_width: 300
 			rewards: [
 				{
 					count: 10
@@ -2501,18 +2541,23 @@
 			tasks: [
 				{
 					id: "35A07C18FFEEB872"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:crusher)item(mekanism:basic_crushing_factory)item(mekanism:advanced_crushing_factory)item(mekanism:elite_crushing_factory)item(mekanism:ultimate_crushing_factory))", "minecraft:custom_name": "\"Crushers\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:crusher" }
 					type: "item"
 				}
 				{
 					id: "091B97D20403D516"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:enrichment_chamber)item(mekanism:basic_enriching_factory)item(mekanism:advanced_enriching_factory)item(mekanism:elite_enriching_factory)item(mekanism:ultimate_enriching_factory))", "minecraft:custom_name": "\"Enrichers\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:enrichment_chamber" }
 					type: "item"
 				}
 				{
-					id: "6CB34AE622DF9CC2"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:energized_smelter)item(mekanism:basic_smelting_factory)item(mekanism:advanced_smelting_factory)item(mekanism:elite_smelting_factory)item(mekanism:ultimate_smelting_factory))", "minecraft:custom_name": "\"Smelters\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					id: "7B1A53EF3C540562"
+					item: { count: 1, id: "mekanism:energized_smelter" }
 					type: "item"
+				}
+				{
+					id: "38C647CDCD725418"
+					type: "xp_levels"
+					xp_levels: 1
 				}
 			]
 			x: 6.0d
@@ -2733,7 +2778,9 @@
 		{
 			dependencies: ["0E175356D43E6A10"]
 			id: "0095422BC87AA135"
-			min_width: 300
+			title: "Обработка руд: Уровень 3 (4x)"
+icon: "mekanism:chemical_injection_chamber"
+min_width: 300
 			rewards: [
 				{
 					count: 15
@@ -2773,23 +2820,28 @@
 			tasks: [
 				{
 					id: "4E0A3C347EDD235A"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:purification_chamber)item(mekanism:basic_purifying_factory)item(mekanism:advanced_purifying_factory)item(mekanism:elite_purifying_factory)item(mekanism:ultimate_purifying_factory))", "minecraft:custom_name": "\"Purifiers\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:purification_chamber" }
 					type: "item"
 				}
 				{
 					id: "62E0C347DC32EA77"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:crusher)item(mekanism:basic_crushing_factory)item(mekanism:advanced_crushing_factory)item(mekanism:elite_crushing_factory)item(mekanism:ultimate_crushing_factory))", "minecraft:custom_name": "\"Crushers\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:crusher" }
 					type: "item"
 				}
 				{
 					id: "2068F53F091BFD5A"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:enrichment_chamber)item(mekanism:basic_enriching_factory)item(mekanism:advanced_enriching_factory)item(mekanism:elite_enriching_factory)item(mekanism:ultimate_enriching_factory))", "minecraft:custom_name": "\"Enrichers\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:enrichment_chamber" }
 					type: "item"
 				}
 				{
 					id: "17C665008B4C0CD7"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:energized_smelter)item(mekanism:basic_smelting_factory)item(mekanism:advanced_smelting_factory)item(mekanism:elite_smelting_factory)item(mekanism:ultimate_smelting_factory))", "minecraft:custom_name": "\"Smelters\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:energized_smelter" }
 					type: "item"
+				}
+				{
+					id: "4BCDC983D961F5B1"
+					type: "xp_levels"
+					xp_levels: 1
 				}
 			]
 			x: 7.5d
@@ -2982,7 +3034,9 @@
 		{
 			dependencies: ["6DC1E08D019FD543"]
 			id: "7934873E784C4B3C"
-			min_width: 300
+			title: "Обработка руд: Уровень 4 (5x)"
+icon: "mekanism:chemical_dissolution_chamber"
+min_width: 300
 			rewards: [
 				{
 					count: 64
@@ -3041,23 +3095,28 @@
 				}
 				{
 					id: "729C1974AE346ECA"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:purification_chamber)item(mekanism:basic_purifying_factory)item(mekanism:advanced_purifying_factory)item(mekanism:elite_purifying_factory)item(mekanism:ultimate_purifying_factory))", "minecraft:custom_name": "\"Purificaters\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:purification_chamber" }
 					type: "item"
 				}
 				{
 					id: "591B93F4B6397821"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:crusher)item(mekanism:basic_crushing_factory)item(mekanism:advanced_crushing_factory)item(mekanism:elite_crushing_factory)item(mekanism:ultimate_crushing_factory))", "minecraft:custom_name": "\"Crushers\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:crusher" }
 					type: "item"
 				}
 				{
 					id: "4C0098C62CDF1FF9"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:enrichment_chamber)item(mekanism:basic_enriching_factory)item(mekanism:advanced_enriching_factory)item(mekanism:elite_enriching_factory)item(mekanism:ultimate_enriching_factory))", "minecraft:custom_name": "\"Enrichers\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:enrichment_chamber" }
 					type: "item"
 				}
 				{
 					id: "7EA092725A784CA7"
-					item: { components: { "ftbfiltersystem:filter": "or(item(mekanism:energized_smelter)item(mekanism:basic_smelting_factory)item(mekanism:advanced_smelting_factory)item(mekanism:elite_smelting_factory)item(mekanism:ultimate_smelting_factory))", "minecraft:custom_name": "\"Smelters\"" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "mekanism:energized_smelter" }
 					type: "item"
+				}
+				{
+					id: "593DF38F9DF1C59D"
+					type: "xp_levels"
+					xp_levels: 1
 				}
 			]
 			x: 9.0d
@@ -3405,7 +3464,9 @@
 			]
 			dependency_requirement: "one_completed"
 			id: "47F38E606AD3FF53"
-			rewards: [
+			title: "Металлическая пыль"
+icon: "mekanism:dust_iron"
+rewards: [
 				{
 					count: 5
 					id: "7905B57A34AF9588"
@@ -3428,7 +3489,7 @@
 			shape: "circle"
 			tasks: [{
 				id: "6DCF32EB40B8E9C6"
-				item: { components: { "ftbfiltersystem:filter": "or(item_tag(c:dusts))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "mekanism:dust_iron" }
 				type: "item"
 			}]
 			x: -1.0d

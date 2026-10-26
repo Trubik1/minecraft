@@ -1666,7 +1666,9 @@
 				"69EE22CB4FF1E591"
 			]
 			id: "45EC31812FB9934D"
-			rewards: [
+			title: "Механические поршни"
+icon: "create:mechanical_piston"
+rewards: [
 				{
 					count: 5
 					id: "0CC36E16938C2F45"
@@ -1688,7 +1690,7 @@
 			]
 			tasks: [{
 				id: "0BD1BA7949BB5855"
-				item: { components: { "ftbfiltersystem:filter": "or(item(create:mechanical_piston)item(create:sticky_mechanical_piston))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "create:mechanical_piston" }
 				type: "item"
 			}]
 			x: -11.0d
@@ -2569,7 +2571,9 @@
 		{
 			dependencies: ["5B36DE3826F26963"]
 			id: "6893D537716AA748"
-			rewards: [
+			title: "Шестерни"
+icon: "create:cogwheel"
+rewards: [
 				{
 					count: 5
 					id: "648140111985DBAF"
@@ -2591,7 +2595,7 @@
 			]
 			tasks: [{
 				id: "727CBE88631AC9E4"
-				item: { components: { "ftbfiltersystem:filter": "or(item(create:cogwheel)item(create:large_cogwheel))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "create:cogwheel" }
 				type: "item"
 			}]
 			x: 1.5d
@@ -2660,7 +2664,9 @@
 		{
 			dependencies: ["6893D537716AA748"]
 			id: "5DD6631F5996BA71"
-			rewards: [
+			title: "Водяные колеса"
+icon: "create:water_wheel"
+rewards: [
 				{
 					id: "6F09D6AB5F77AC20"
 					item: {
@@ -2689,7 +2695,7 @@
 			size: 1.25d
 			tasks: [{
 				id: "6F72D8976359CFF9"
-				item: { components: { "ftbfiltersystem:filter": "or(item(create:water_wheel)item(create:large_water_wheel))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "create:water_wheel" }
 				type: "item"
 			}]
 			x: 3.0d
@@ -3593,7 +3599,9 @@
 		{
 			dependencies: ["3FBCBBEBB78B83FC"]
 			id: "2D96965317D3CFEC"
-			rewards: [
+			title: "Сиденья"
+icon: "create:white_seat"
+rewards: [
 				{
 					count: 3
 					id: "4C10DE58B9365242"
@@ -3621,7 +3629,7 @@
 				}
 				{
 					id: "21C5C92ABD91D795"
-					item: { components: { "ftbfiltersystem:filter": "or(item_tag(create:seats))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					item: { count: 1, id: "create:white_seat" }
 					type: "item"
 				}
 			]
@@ -3797,7 +3805,9 @@
 		{
 			dependencies: ["16B0C1F7B951C19D"]
 			id: "57A18F2E51952EB8"
-			rewards: [
+			title: "Почтовые ящики"
+icon: "create:white_postbox"
+rewards: [
 				{
 					count: 3
 					id: "37724FCE10D31F94"
@@ -3818,7 +3828,7 @@
 			]
 			tasks: [{
 				id: "194776374F591632"
-				item: { components: { "ftbfiltersystem:filter": "or(item_tag(create:postboxes))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "create:white_postbox" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -3935,7 +3945,9 @@
 		{
 			dependencies: ["672F9CF5B0E626F1"]
 			id: "16B0C1F7B951C19D"
-			rewards: [{
+			title: "Посылки"
+icon: "create:cardboard_box"
+rewards: [{
 				id: "7E26E2BE66E19CA9"
 				item: {
 					components: {
@@ -3971,7 +3983,7 @@
 			size: 1.25d
 			tasks: [{
 				id: "3AB6845819FF686F"
-				item: { components: { "ftbfiltersystem:filter": "or(item_tag(create:packages))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "create:cardboard_box" }
 				type: "item"
 			}]
 			x: -6.0d
@@ -4003,7 +4015,9 @@
 				"754B8F1FBCD983C5"
 			]
 			id: "64860340A5BEBAB9"
-			rewards: [
+			title: "Скатерти"
+icon: "create:white_table_cloth"
+rewards: [
 				{
 					id: "1F6AB3B781D9B508"
 					item: {
@@ -4031,7 +4045,7 @@
 			]
 			tasks: [{
 				id: "45140DDB8CE40AC4"
-				item: { components: { "ftbfiltersystem:filter": "or(item_tag(create:table_cloths))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { count: 1, id: "create:white_table_cloth" }
 				type: "item"
 			}]
 			x: -8.0d

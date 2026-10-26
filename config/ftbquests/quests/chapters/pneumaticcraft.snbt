@@ -411,8 +411,8 @@
 			shape: "diamond"
 			size: 1.3d
 			tasks: [{
-				id: "770A415371815B01"
-				item: { components: { "ftbquests:missing_item": "pneumaticcraft:refinery_controller" }, count: 1, id: "ftbquests:missing_item" }
+				id: "062467F1F37DCCEA"
+				item: { count: 1, id: "pneumaticcraft:refinery" }
 				type: "item"
 			}]
 			x: 2.5d

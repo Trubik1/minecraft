@@ -39,8 +39,8 @@
 			shape: "square"
 			size: 1.2d
 			tasks: [{
-				id: "44F78B45E12E9903"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:logs)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				id: "6AF898522CD0256F"
+				item: { count: 1, id: "minecraft:oak_log" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -76,15 +76,15 @@
 			size: 1.0d
 			tasks: [
 				{
-					count: 8L
-					id: "3C4D5E6F7001A2B3"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:planks)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-				{
 					count: 4L
 					id: "4D5E6F7001A2B3C4"
 					item: { count: 1, id: "minecraft:stick" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "0ACACB03B572213D"
+					item: { count: 1, id: "minecraft:oak_planks" }
 					type: "item"
 				}
 			]
@@ -207,8 +207,8 @@
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
-				id: "3E7D63E63D08420D"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:beds)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				id: "18107815F8CA1391"
+				item: { count: 1, id: "minecraft:red_bed" }
 				type: "item"
 			}]
 			x: 3.0d
@@ -2124,8 +2124,8 @@
 				item: { count: 1, id: "minecraft:brewing_stand" }
 				type: "item"
 			}]
-			x: 24.5d
-			y: -3.5d
+			x: 30.5d
+			y: -4.5d
 		}
 		{
 			dependencies: ["5A8C11099E070001"]
@@ -2154,8 +2154,8 @@
 				item: { count: 1, id: "minecraft:sugar" }
 				type: "item"
 			}]
-			x: 26.0d
-			y: -4.5d
+			x: 32.0d
+			y: -5.5d
 		}
 		{
 			dependencies: ["5A8C11099E070001"]
@@ -2184,8 +2184,8 @@
 				item: { count: 1, id: "minecraft:magma_cream" }
 				type: "item"
 			}]
-			x: 26.0d
-			y: -3.5d
+			x: 32.0d
+			y: -4.5d
 		}
 		{
 			dependencies: ["5A8C11099E070001"]
@@ -2214,8 +2214,8 @@
 				item: { count: 1, id: "minecraft:glistering_melon_slice" }
 				type: "item"
 			}]
-			x: 26.0d
-			y: -2.5d
+			x: 32.0d
+			y: -3.5d
 		}
 		{
 			dependencies: ["5A8C11099E070003"]
@@ -2244,8 +2244,8 @@
 				item: { count: 1, id: "minecraft:fermented_spider_eye" }
 				type: "item"
 			}]
-			x: 27.5d
-			y: -3.5d
+			x: 33.0d
+			y: -4.5d
 		}
 		{
 			icon: {
