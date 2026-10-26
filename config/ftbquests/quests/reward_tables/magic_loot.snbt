@@ -2,17 +2,95 @@
 	id: "5A8C11099EFA8002"
 	loot_size: 1
 	order_index: 1
-	title: "Магические сокровища"
 	rewards: [
-		{ count: 4, id: "1A00000000000001", item: { count: 4, id: "ars_nouveau:source_gem" }, weight: 100.0f }
-		{ count: 8, id: "1A00000000000002", item: { count: 8, id: "ars_nouveau:magebloom_fiber" }, weight: 80.0f }
-		{ count: 4, id: "1A00000000000003", item: { count: 4, id: "ars_nouveau:experience_gem" }, weight: 70.0f }
-		{ count: 2, id: "1A00000000000004", item: { count: 2, id: "minecraft:golden_apple" }, weight: 50.0f }
-		{ count: 16, id: "1A00000000000005", item: { count: 16, id: "minecraft:lapis_lazuli" }, weight: 100.0f }
-		{ count: 8, id: "1A00000000000006", item: { count: 8, id: "minecraft:amethyst_shard" }, weight: 90.0f }
-		{ count: 4, id: "1A00000000000007", item: { count: 4, id: "twilightforest:ironwood_ingot" }, weight: 60.0f }
-		{ count: 4, id: "1A00000000000008", item: { count: 4, id: "twilightforest:steeleaf_ingot" }, weight: 50.0f }
-		{ count: 1, id: "1A00000000000009", item: { count: 1, id: "twilightforest:charm_of_life_1" }, weight: 20.0f }
-		{ count: 2, id: "1A0000000000000A", item: { count: 2, id: "minecraft:diamond" }, weight: 30.0f }
+		{
+			count: 4
+			id: "1A00000000000001"
+			item: {
+				count: 4
+				id: "ars_nouveau:source_gem"
+			}
+			weight: 100.0f
+		}
+		{
+			count: 8
+			id: "1A00000000000002"
+			item: {
+				count: 8
+				id: "ars_nouveau:magebloom_fiber"
+			}
+			weight: 80.0f
+		}
+		{
+			count: 4
+			id: "1A00000000000003"
+			item: {
+				count: 4
+				id: "ars_nouveau:experience_gem"
+			}
+			weight: 70.0f
+		}
+		{
+			count: 2
+			id: "1A00000000000004"
+			item: {
+				count: 2
+				id: "minecraft:golden_apple"
+			}
+			weight: 50.0f
+		}
+		{
+			count: 16
+			id: "1A00000000000005"
+			item: {
+				count: 16
+				id: "minecraft:lapis_lazuli"
+			}
+			weight: 100.0f
+		}
+		{
+			count: 8
+			id: "1A00000000000006"
+			item: {
+				count: 8
+				id: "minecraft:amethyst_shard"
+			}
+			weight: 90.0f
+		}
+		{
+			count: 4
+			id: "1A00000000000007"
+			item: {
+				count: 4
+				id: "twilightforest:ironwood_ingot"
+			}
+			weight: 60.0f
+		}
+		{
+			count: 4
+			id: "1A00000000000008"
+			item: {
+				count: 4
+				id: "twilightforest:steeleaf_ingot"
+			}
+			weight: 50.0f
+		}
+		{
+			id: "1A00000000000009"
+			item: {
+				count: 1
+				id: "twilightforest:charm_of_life_1"
+			}
+			weight: 20.0f
+		}
+		{
+			count: 2
+			id: "1A0000000000000A"
+			item: {
+				count: 2
+				id: "minecraft:diamond"
+			}
+			weight: 30.0f
+		}
 	]
 }

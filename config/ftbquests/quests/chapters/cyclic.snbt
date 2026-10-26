@@ -80,7 +80,6 @@
 			rewards: [
 				{
 					id: "5A8C11099EFC0203"
-					table_id: 3B4F29D120150002L
 					type: "random"
 				}
 				{
@@ -194,7 +193,6 @@
 			id: "5A8C11099EFC0007"
 			rewards: [
 				{
-					count: 1
 					id: "5A8C11099EFC0207"
 					item: {
 						count: 1
@@ -225,7 +223,6 @@
 			rewards: [
 				{
 					id: "5A8C11099EFC0208"
-					table_id: 3B4F29D120150002L
 					type: "random"
 				}
 				{
@@ -339,7 +336,6 @@
 			id: "5A8C11099EFC000C"
 			rewards: [
 				{
-					count: 1
 					id: "5A8C11099EFC020C"
 					item: {
 						count: 1
@@ -430,7 +426,6 @@
 			rewards: [
 				{
 					id: "5A8C11099EFC020F"
-					table_id: 3B4F29D120150002L
 					type: "random"
 				}
 				{
@@ -686,7 +681,10 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["5A8C11099EFC0016", "5A8C11099EFC0017"]
+			dependencies: [
+				"5A8C11099EFC0016"
+				"5A8C11099EFC0017"
+			]
 			icon: {
 				id: "cyclic:charm_wing"
 			}
@@ -724,7 +722,6 @@
 			rewards: [
 				{
 					id: "5A8C11099EFC0219"
-					table_id: 3B4F29D120150002L
 					type: "random"
 				}
 				{
@@ -748,7 +745,6 @@
 			id: "5A8C11099EFC001A"
 			rewards: [
 				{
-					count: 1
 					id: "5A8C11099EFC021A"
 					item: {
 						count: 1
@@ -778,7 +774,6 @@
 			id: "5A8C11099EFC001B"
 			rewards: [
 				{
-					count: 1
 					id: "5A8C11099EFC021B"
 					item: {
 						count: 1
@@ -838,7 +833,6 @@
 			id: "5A8C11099EFC001D"
 			rewards: [
 				{
-					count: 1
 					id: "5A8C11099EFC021D"
 					item: {
 						count: 1
@@ -869,7 +863,6 @@
 			rewards: [
 				{
 					id: "5A8C11099EFC021E"
-					table_id: 3B4F29D120150001L
 					type: "random"
 				}
 				{

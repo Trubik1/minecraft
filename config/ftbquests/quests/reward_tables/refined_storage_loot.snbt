@@ -2,17 +2,93 @@
 	id: "5A8C11099EFA8003"
 	loot_size: 1
 	order_index: 2
-	title: "Электронные компоненты RS"
 	rewards: [
-		{ count: 8, id: "2B00000000000001", item: { count: 8, id: "refinedstorage:quartz_enriched_iron" }, weight: 100.0f }
-		{ count: 16, id: "2B00000000000002", item: { count: 16, id: "refinedstorage:silicon" }, weight: 100.0f }
-		{ count: 8, id: "2B00000000000003", item: { count: 8, id: "refinedstorage:processor_binding" }, weight: 90.0f }
-		{ count: 4, id: "2B00000000000004", item: { count: 4, id: "refinedstorage:basic_processor" }, weight: 70.0f }
-		{ count: 2, id: "2B00000000000005", item: { count: 2, id: "refinedstorage:improved_processor" }, weight: 50.0f }
-		{ count: 1, id: "2B00000000000006", item: { count: 1, id: "refinedstorage:advanced_processor" }, weight: 30.0f }
-		{ count: 16, id: "2B00000000000007", item: { count: 16, id: "refinedstorage:cable" }, weight: 100.0f }
-		{ count: 1, id: "2B00000000000008", item: { count: 1, id: "refinedstorage:1k_storage_part" }, weight: 40.0f }
-		{ count: 1, id: "2B00000000000009", item: { count: 1, id: "refinedstorage:upgrade" }, weight: 30.0f }
-		{ count: 32, id: "2B0000000000000A", item: { count: 32, id: "minecraft:redstone" }, weight: 100.0f }
+		{
+			count: 8
+			id: "2B00000000000001"
+			item: {
+				count: 8
+				id: "refinedstorage:quartz_enriched_iron"
+			}
+			weight: 100.0f
+		}
+		{
+			count: 16
+			id: "2B00000000000002"
+			item: {
+				count: 16
+				id: "refinedstorage:silicon"
+			}
+			weight: 100.0f
+		}
+		{
+			count: 8
+			id: "2B00000000000003"
+			item: {
+				count: 8
+				id: "refinedstorage:processor_binding"
+			}
+			weight: 90.0f
+		}
+		{
+			count: 4
+			id: "2B00000000000004"
+			item: {
+				count: 4
+				id: "refinedstorage:basic_processor"
+			}
+			weight: 70.0f
+		}
+		{
+			count: 2
+			id: "2B00000000000005"
+			item: {
+				count: 2
+				id: "refinedstorage:improved_processor"
+			}
+			weight: 50.0f
+		}
+		{
+			id: "2B00000000000006"
+			item: {
+				count: 1
+				id: "refinedstorage:advanced_processor"
+			}
+			weight: 30.0f
+		}
+		{
+			count: 16
+			id: "2B00000000000007"
+			item: {
+				count: 16
+				id: "refinedstorage:cable"
+			}
+			weight: 100.0f
+		}
+		{
+			id: "2B00000000000008"
+			item: {
+				count: 1
+				id: "refinedstorage:1k_storage_part"
+			}
+			weight: 40.0f
+		}
+		{
+			id: "2B00000000000009"
+			item: {
+				count: 1
+				id: "refinedstorage:upgrade"
+			}
+			weight: 30.0f
+		}
+		{
+			count: 32
+			id: "2B0000000000000A"
+			item: {
+				count: 32
+				id: "minecraft:redstone"
+			}
+			weight: 100.0f
+		}
 	]
 }
