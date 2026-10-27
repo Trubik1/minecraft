@@ -598,62 +598,69 @@ ServerEvents.recipes(event => {
     event.remove({ output: 'solarflux:sp_2' });
     event.shaped('solarflux:sp_2', [
         'PPP',
-        'SCS',
-        'SSS'
+        'ECE',
+        'ESE'
     ], {
         P: 'solarflux:sp_1',
         C: 'solarflux:photovoltaic_cell_1',
-        S: 'create:brass_sheet'
+        E: 'powah:steel_energized',
+        S: 'powah:capacitor_basic'
     }).id('steampunk:solar/sp_2_craft');
 
-    // Солнечная панель 3: 2x SP 2 + сплав Mekanism + Фотоэлемент 2
+    // Солнечная панель 3: 3x SP 2 + Пылающий кристалл Powah + Закаленный конденсатор + ячейка 2
     event.remove({ output: 'solarflux:sp_3' });
     event.shaped('solarflux:sp_3', [
         'PPP',
-        'ACA',
-        'AAA'
+        'ECE',
+        'AKA'
     ], {
         P: 'solarflux:sp_2',
         C: 'solarflux:photovoltaic_cell_2',
+        E: 'powah:crystal_blazing',
+        K: 'powah:capacitor_hardened',
         A: 'mekanism:alloy_infused'
     }).id('steampunk:solar/sp_3_craft');
 
-    // Солнечная панель 4: 2x SP 3 + базовая схема Mekanism + Фотоэлемент 3
+    // Солнечная панель 4: 3x SP 3 + Ниотический кристалл Powah + Пылающий конденсатор + ячейка 3
     event.remove({ output: 'solarflux:sp_4' });
     event.shaped('solarflux:sp_4', [
         'PPP',
         'ECE',
-        'EEE'
+        'NMN'
     ], {
         P: 'solarflux:sp_3',
         C: 'solarflux:photovoltaic_cell_3',
-        E: 'mekanism:basic_control_circuit'
+        E: 'powah:crystal_niotic',
+        N: 'powah:capacitor_blazing',
+        M: 'mekanism:basic_control_circuit'
     }).id('steampunk:solar/sp_4_craft');
 
-    // Солнечная панель 5: 2x SP 4 + продвинутая схема Mekanism + Фотоэлемент 4
+    // Солнечная панель 5: 3x SP 4 + Спиритический кристалл Powah + Ниотический конденсатор + ячейка 4
     event.remove({ output: 'solarflux:sp_5' });
     event.shaped('solarflux:sp_5', [
         'PPP',
         'ECE',
-        'EEE'
+        'SMS'
     ], {
         P: 'solarflux:sp_4',
         C: 'solarflux:photovoltaic_cell_4',
-        E: 'mekanism:advanced_control_circuit'
+        E: 'powah:crystal_spirited',
+        S: 'powah:capacitor_niotic',
+        M: 'mekanism:advanced_control_circuit'
     }).id('steampunk:solar/sp_5_craft');
 
-    // Солнечная панель 6: 2x SP 5 + элитная схема Mekanism + камень Источника + точный механизм
+    // Солнечная панель 6: 3x SP 5 + Нитро кристалл Powah + Спиритический конденсатор + ячейка 5
     event.remove({ output: 'solarflux:sp_6' });
     event.shaped('solarflux:sp_6', [
         'PPP',
         'ECE',
-        'SGS'
+        'SMS'
     ], {
         P: 'solarflux:sp_5',
         C: 'solarflux:photovoltaic_cell_5',
-        E: 'mekanism:elite_control_circuit',
-        S: 'ars_nouveau:source_gem',
-        G: 'create:precision_mechanism'
+        E: 'powah:crystal_nitro',
+        S: 'powah:capacitor_spirited',
+        M: 'mekanism:elite_control_circuit'
     }).id('steampunk:solar/sp_6_craft');
 
     // Солнечная панель 7: 2x SP 6 + абсолютная схема Mekanism + Звезда Незера
@@ -1123,22 +1130,132 @@ ServerEvents.recipes(event => {
     // --------------------------------------------------------------------------
 
     // Улучшенный процессор (Синий RS): требует Базовую микросхему Mekanism + Золотой лист Create
+    // --- REFINED STORAGE: ГЛУБОКАЯ ИНТЕГРАЦИЯ С POWAH (ТРЕБУЕТСЯ АВТОКРАФТ В ОРБЕ) ---
+
+    // 1. Необработанный базовый процессор: требует Энергетическую сталь Powah
+    event.remove({ output: 'refinedstorage:raw_basic_processor' });
+    event.shapeless('refinedstorage:raw_basic_processor', [
+        'refinedstorage:processor_binding',
+        'refinedstorage:silicon',
+        'minecraft:redstone',
+        'powah:steel_energized'
+    ]).id('steampunk:rs/raw_basic_processor_powah');
+
+    // 2. Необработанный улучшенный процессор: требует Пылающий кристалл Powah + базовый микрочип
     event.remove({ output: 'refinedstorage:raw_improved_processor' });
     event.shapeless('refinedstorage:raw_improved_processor', [
         'refinedstorage:processor_binding',
-        'create:golden_sheet',
         'refinedstorage:silicon',
-        'mekanism:basic_control_circuit'
-    ]).id('steampunk:rs/raw_improved_processor_integrated');
+        'mekanism:basic_control_circuit',
+        'powah:crystal_blazing'
+    ]).id('steampunk:rs/raw_improved_processor_powah');
 
-    // Продвинутый процессор (Желтый RS): требует Продвинутую микросхему Mekanism + Алмаз + Кремний
+    // 3. Необработанный продвинутый процессор: требует Ниотический кристалл Powah + продвинутый микрочип
     event.remove({ output: 'refinedstorage:raw_advanced_processor' });
     event.shapeless('refinedstorage:raw_advanced_processor', [
         'refinedstorage:processor_binding',
-        'minecraft:diamond',
         'refinedstorage:silicon',
-        'mekanism:advanced_control_circuit'
-    ]).id('steampunk:rs/raw_advanced_processor_integrated');
+        'mekanism:advanced_control_circuit',
+        'powah:crystal_niotic'
+    ]).id('steampunk:rs/raw_advanced_processor_powah');
+
+    // БОНУСНЫЕ РЕЦЕПТЫ В ENERGIZING ORB (АВТОКРАФТ ДАЕТ x2 ГОТОВЫХ ПРОЦЕССОРА СРАЗУ БЕЗ ПЕРЕПЛАВКИ!)
+    // 2x Базовый процессор напрямую из Сферы Зарядки
+    event.custom({
+        type: 'powah:energizing',
+        energy: 15000,
+        ingredients: [
+            { item: 'refinedstorage:processor_binding' },
+            { item: 'refinedstorage:silicon' },
+            { item: 'minecraft:redstone' },
+            { item: 'minecraft:iron_ingot' }
+        ],
+        result: {
+            count: 2,
+            id: 'refinedstorage:basic_processor'
+        }
+    }).id('steampunk:rs/energizing_basic_processor_double');
+
+    // 2x Улучшенный процессор напрямую из Сферы Зарядки
+    event.custom({
+        type: 'powah:energizing',
+        energy: 35000,
+        ingredients: [
+            { item: 'refinedstorage:processor_binding' },
+            { item: 'refinedstorage:silicon' },
+            { item: 'mekanism:basic_control_circuit' },
+            { item: 'minecraft:gold_ingot' }
+        ],
+        result: {
+            count: 2,
+            id: 'refinedstorage:improved_processor'
+        }
+    }).id('steampunk:rs/energizing_improved_processor_double');
+
+    // 2x Продвинутый процессор напрямую из Сферы Зарядки
+    event.custom({
+        type: 'powah:energizing',
+        energy: 60000,
+        ingredients: [
+            { item: 'refinedstorage:processor_binding' },
+            { item: 'refinedstorage:silicon' },
+            { item: 'mekanism:advanced_control_circuit' },
+            { item: 'minecraft:diamond' }
+        ],
+        result: {
+            count: 2,
+            id: 'refinedstorage:advanced_processor'
+        }
+    }).id('steampunk:rs/energizing_advanced_processor_double');
+
+    // Автокрафтер Refined Storage: требует конденсатор Blazing и компоненты Powah
+    event.remove({ output: 'refinedstorage:autocrafter' });
+    event.shaped('refinedstorage:autocrafter', [
+        'ECE',
+        'BMB',
+        'EDE'
+    ], {
+        E: 'refinedstorage:quartz_enriched_iron',
+        C: 'refinedstorage:construction_core',
+        B: 'powah:capacitor_blazing',
+        M: 'refinedstorage:machine_casing',
+        D: 'refinedstorage:destruction_core'
+    }).id('steampunk:rs/autocrafter_powah');
+
+    // Кабельные автокрафтеры Cable Tiers (требуют спиритические и нитро компоненты Powah)
+    event.remove({ output: 'cabletiers:elite_autocrafter' });
+    event.shaped('cabletiers:elite_autocrafter', [
+        'SES',
+        'CAC',
+        'SES'
+    ], {
+        S: 'powah:crystal_spirited',
+        E: 'powah:capacitor_spirited',
+        C: 'refinedstorage:improved_processor',
+        A: 'refinedstorage:autocrafter'
+    }).id('steampunk:cabletiers/elite_autocrafter_powah');
+
+    event.remove({ output: 'cabletiers:ultra_autocrafter' });
+    event.shaped('cabletiers:ultra_autocrafter', [
+        'NEN',
+        'NAN',
+        'NEN'
+    ], {
+        N: 'powah:crystal_nitro',
+        E: 'powah:capacitor_nitro',
+        A: 'cabletiers:elite_autocrafter'
+    }).id('steampunk:cabletiers/ultra_autocrafter_powah');
+
+    event.remove({ output: 'cabletiers:mega_autocrafter' });
+    event.shaped('cabletiers:mega_autocrafter', [
+        'NRN',
+        'RAR',
+        'NRN'
+    ], {
+        N: 'minecraft:netherite_block',
+        R: 'powah:reactor_nitro',
+        A: 'cabletiers:ultra_autocrafter'
+    }).id('steampunk:cabletiers/mega_autocrafter_powah');
 
 
     // ==========================================================================
@@ -1904,5 +2021,272 @@ ServerEvents.recipes(event => {
         },
         result: { id: 'mysticalagriculture:master_infusion_crystal', count: 1 }
     }).id('steampunk:extendedcrafting/master_infusion_crystal_5x5');
+
+
+    // ==========================================================================
+    // ГЛУБОКАЯ ИНТЕГРАЦИЯ POWAH ДЛЯ МАССОВОГО АВТОКРАФТА
+    // ==========================================================================
+
+    // --------------------------------------------------------------------------
+    // A. АПГРЕЙДЫ MEKANISM (МАССОВОЕ ПРОИЗВОДСТВО: РУЧНОЙ x1 ИЛИ В СФЕРЕ x4)
+    // --------------------------------------------------------------------------
+
+    // Апгрейд скорости (Speed Upgrade)
+    event.remove({ output: 'mekanism:upgrade_speed' });
+    event.shaped('mekanism:upgrade_speed', [
+        ' G ',
+        'ACA',
+        ' O '
+    ], {
+        G: '#c:glass_blocks',
+        A: 'mekanism:alloy_infused',
+        C: 'powah:steel_energized',
+        O: '#c:dusts/osmium'
+    }).id('steampunk:mekanism/upgrade_speed_powah');
+
+    // Опция автокрафта в Сфере Зарядки: дает x4 апгрейда скорости за раз!
+    event.custom({
+        type: 'powah:energizing',
+        energy: 30000,
+        ingredients: [
+            { item: 'mekanism:alloy_infused' },
+            { item: 'mekanism:alloy_infused' },
+            { tag: 'c:dusts/osmium' },
+            { item: 'powah:steel_energized' },
+            { item: 'powah:capacitor_basic' },
+            { tag: 'c:glass_blocks' }
+        ],
+        result: {
+            count: 4,
+            id: 'mekanism:upgrade_speed'
+        }
+    }).id('steampunk:mekanism/energizing_speed_upgrade_quad');
+
+    // Апгрейд энергии (Energy Upgrade)
+    event.remove({ output: 'mekanism:upgrade_energy' });
+    event.shaped('mekanism:upgrade_energy', [
+        ' G ',
+        'ACA',
+        ' D '
+    ], {
+        G: '#c:glass_blocks',
+        A: 'mekanism:alloy_infused',
+        C: 'powah:crystal_blazing',
+        D: '#c:dusts/gold'
+    }).id('steampunk:mekanism/upgrade_energy_powah');
+
+    // Опция автокрафта в Сфере Зарядки: дает x4 апгрейда энергии за раз!
+    event.custom({
+        type: 'powah:energizing',
+        energy: 50000,
+        ingredients: [
+            { item: 'mekanism:alloy_infused' },
+            { item: 'mekanism:alloy_infused' },
+            { tag: 'c:dusts/gold' },
+            { item: 'powah:crystal_blazing' },
+            { item: 'powah:capacitor_hardened' },
+            { tag: 'c:glass_blocks' }
+        ],
+        result: {
+            count: 4,
+            id: 'mekanism:upgrade_energy'
+        }
+    }).id('steampunk:mekanism/energizing_energy_upgrade_quad');
+
+    // Апгрейд химикатов (Chemical Upgrade)
+    event.remove({ output: 'mekanism:upgrade_chemical' });
+    event.shaped('mekanism:upgrade_chemical', [
+        ' G ',
+        'ACA',
+        ' I '
+    ], {
+        G: '#c:glass_blocks',
+        A: 'mekanism:alloy_infused',
+        C: 'powah:crystal_niotic',
+        I: '#c:dusts/iron'
+    }).id('steampunk:mekanism/upgrade_chemical_powah');
+
+    // Опция автокрафта в Сфере Зарядки: дает x4 апгрейда химикатов за раз!
+    event.custom({
+        type: 'powah:energizing',
+        energy: 70000,
+        ingredients: [
+            { item: 'mekanism:alloy_infused' },
+            { item: 'mekanism:alloy_infused' },
+            { tag: 'c:dusts/iron' },
+            { item: 'powah:crystal_niotic' },
+            { item: 'powah:capacitor_blazing' },
+            { tag: 'c:glass_blocks' }
+        ],
+        result: {
+            count: 4,
+            id: 'mekanism:upgrade_chemical'
+        }
+    }).id('steampunk:mekanism/energizing_chemical_upgrade_quad');
+
+    // --------------------------------------------------------------------------
+    // B. АПГРЕЙДЫ PIPEZ (ЛОГИСТИКА И МАССОВАЯ ТРУБОПРОВОДНАЯ СЕТЬ)
+    // --------------------------------------------------------------------------
+
+    event.remove({ output: 'pipez:basic_upgrade' });
+    event.shaped('pipez:basic_upgrade', [
+        'INI',
+        'NPN',
+        'INI'
+    ], {
+        I: '#c:ingots/iron',
+        N: '#c:nuggets/iron',
+        P: 'powah:steel_energized'
+    }).id('steampunk:pipez/basic_upgrade_powah');
+
+    event.remove({ output: 'pipez:improved_upgrade' });
+    event.shaped('pipez:improved_upgrade', [
+        'GRG',
+        'RUR',
+        'GRG'
+    ], {
+        U: 'pipez:basic_upgrade',
+        G: '#c:ingots/gold',
+        R: 'powah:crystal_blazing'
+    }).id('steampunk:pipez/improved_upgrade_powah');
+
+    event.remove({ output: 'pipez:advanced_upgrade' });
+    event.shaped('pipez:advanced_upgrade', [
+        'DRD',
+        'RUR',
+        'DRD'
+    ], {
+        U: 'pipez:improved_upgrade',
+        D: '#c:gems/diamond',
+        R: 'powah:crystal_niotic'
+    }).id('steampunk:pipez/advanced_upgrade_powah');
+
+    event.remove({ output: 'pipez:ultimate_upgrade' });
+    event.shaped('pipez:ultimate_upgrade', [
+        'NRN',
+        'RUR',
+        'NRN'
+    ], {
+        U: 'pipez:advanced_upgrade',
+        N: '#c:ingots/netherite',
+        R: 'powah:crystal_spirited'
+    }).id('steampunk:pipez/ultimate_upgrade_powah');
+
+    // --------------------------------------------------------------------------
+    // C. БЕСПРОВОДНАЯ ЭНЕРГОСЕТЬ FLUX NETWORKS (ИНТЕГРАЦИЯ С КРИСТАЛЛАМИ И СФЕРОЙ)
+    // --------------------------------------------------------------------------
+
+    // Flux Core: требует Ядро Края Powah (создаваемое в Сфере Зарядки)
+    event.remove({ output: 'fluxnetworks:flux_core' });
+    event.shaped('4x fluxnetworks:flux_core', [
+        'FOF',
+        'OEO',
+        'FOF'
+    ], {
+        F: 'fluxnetworks:flux_dust',
+        O: 'minecraft:obsidian',
+        E: 'powah:ender_core'
+    }).id('steampunk:fluxnetworks/flux_core_powah');
+
+    // Flux Plug (Точка отправки энергии): требует Пылающий кристалл Powah
+    event.remove({ output: 'fluxnetworks:flux_plug' });
+    event.shaped('fluxnetworks:flux_plug', [
+        ' C ',
+        'CBC',
+        ' C '
+    ], {
+        C: 'fluxnetworks:flux_core',
+        B: 'powah:crystal_blazing'
+    }).id('steampunk:fluxnetworks/flux_plug_powah');
+
+    // Flux Point (Точка приема энергии): требует Ниотический кристалл Powah
+    event.remove({ output: 'fluxnetworks:flux_point' });
+    event.shaped('fluxnetworks:flux_point', [
+        ' C ',
+        'CBC',
+        ' C '
+    ], {
+        C: 'fluxnetworks:flux_core',
+        B: 'powah:crystal_niotic'
+    }).id('steampunk:fluxnetworks/flux_point_powah');
+
+    // Flux Controller: требует Спиритический кристалл Powah + Flux Блоки
+    event.remove({ output: 'fluxnetworks:flux_controller' });
+    event.shaped('fluxnetworks:flux_controller', [
+        'BCB',
+        'FEF',
+        'BBB'
+    ], {
+        B: 'fluxnetworks:flux_block',
+        C: 'fluxnetworks:flux_core',
+        F: 'fluxnetworks:flux_dust',
+        E: 'powah:crystal_spirited'
+    }).id('steampunk:fluxnetworks/flux_controller_powah');
+
+    // --------------------------------------------------------------------------
+    // D. CREATE CRAFTS & ADDITIONS: ЭЛЕКТРИЧЕСКАЯ ТЕХНИКА
+    // --------------------------------------------------------------------------
+
+    // Конденсатор Create: диэлектрическая паста Powah
+    event.remove({ output: 'createaddition:capacitor' });
+    event.shaped('createaddition:capacitor', [
+        'Z',
+        'C',
+        'P'
+    ], {
+        Z: '#c:plates/zinc',
+        C: '#c:plates/copper',
+        P: 'powah:dielectric_paste'
+    }).id('steampunk:createaddition/capacitor_powah');
+
+    // Электромотор Create: требует Базовый конденсатор Powah + Энергетическую сталь
+    event.remove({ output: 'createaddition:electric_motor' });
+    event.custom({
+        type: 'create:mechanical_crafting',
+        accept_mirrored: true,
+        category: 'misc',
+        key: {
+            A: { item: 'create:andesite_alloy' },
+            B: { tag: 'c:plates/brass' },
+            C: { item: 'powah:capacitor_basic' },
+            R: { item: 'powah:steel_energized' },
+            S: { item: 'createaddition:copper_spool' }
+        },
+        pattern: [
+            '  A  ',
+            ' BSB ',
+            'BSRSB',
+            ' BCB '
+        ],
+        result: {
+            count: 1,
+            id: 'createaddition:electric_motor'
+        }
+    }).id('steampunk:createaddition/electric_motor_powah');
+
+    // Альтернатор Create: требует Энергетическую сталь
+    event.remove({ output: 'createaddition:alternator' });
+    event.custom({
+        type: 'create:mechanical_crafting',
+        accept_mirrored: true,
+        category: 'misc',
+        key: {
+            A: { item: 'create:andesite_alloy' },
+            I: { tag: 'c:plates/iron' },
+            R: { item: 'powah:steel_energized' },
+            S: { item: 'createaddition:copper_spool' }
+        },
+        pattern: [
+            '  A  ',
+            ' ISI ',
+            'ISRSI',
+            ' ISI ',
+            '  A  '
+        ],
+        result: {
+            count: 1,
+            id: 'createaddition:alternator'
+        }
+    }).id('steampunk:createaddition/alternator_powah');
 
 });
