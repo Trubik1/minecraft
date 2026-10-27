@@ -39,8 +39,9 @@
 			shape: "square"
 			size: 1.2d
 			tasks: [{
-				id: "6AF898522CD0256F"
-				item: { count: 1, id: "minecraft:oak_log" }
+				id: "44F78B45E12E9903"
+				item: { components: { "ftbfiltersystem:filter": "item_tag(minecraft:logs)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				title: "Любое бревно"
 				type: "item"
 			}]
 			x: 0.0d
@@ -83,8 +84,9 @@
 				}
 				{
 					count: 8L
-					id: "0ACACB03B572213D"
-					item: { count: 1, id: "minecraft:oak_planks" }
+					id: "3C4D5E6F7001A2B3"
+					item: { components: { "ftbfiltersystem:filter": "item_tag(minecraft:planks)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					title: "Любые доски"
 					type: "item"
 				}
 			]
@@ -207,8 +209,9 @@
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
-				id: "18107815F8CA1391"
-				item: { count: 1, id: "minecraft:red_bed" }
+				id: "3E7D63E63D08420D"
+				item: { components: { "ftbfiltersystem:filter": "item_tag(minecraft:beds)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				title: "Любая кровать"
 				type: "item"
 			}]
 			x: 3.0d
