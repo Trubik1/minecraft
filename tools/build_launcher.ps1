@@ -31,7 +31,9 @@ $source = Join-Path $root "launcher-src\bin\$Configuration\net48\SteampunkLaunch
 $dist = Join-Path $root "launcher"
 New-Item -ItemType Directory -Force -Path $dist | Out-Null
 Copy-Item $source (Join-Path $dist "SteampunkLauncher.exe") -Force
-Set-Content -Path (Join-Path $dist "version.txt") -Value ("{0}`nSteampunk & Swords launcher`n" -f $Version) -Encoding UTF8 -NoNewline
+$versionFile = Join-Path $dist "version.txt"
+$versionText = ("{0}`nSteampunk & Swords launcher`n" -f $Version)
+[System.IO.File]::WriteAllText($versionFile, $versionText, (New-Object System.Text.UTF8Encoding($false)))
 
 $exe = Get-Item (Join-Path $dist "SteampunkLauncher.exe")
 Write-Host ("Готово: {0} ({1:N0} КБ, v{2})" -f $exe.FullName, ($exe.Length / 1KB), $Version) -ForegroundColor Green
