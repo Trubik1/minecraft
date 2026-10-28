@@ -26,7 +26,7 @@ namespace SteampunkLauncher
 
             var client = new HttpClient();
             client.Timeout = TimeSpan.FromMinutes(30);
-            client.DefaultRequestHeaders.UserAgent.ParseAdd("SteampunkLauncher/1.0 (+https://github.com/Trubik1/minecraft)");
+            client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36");
             return client;
         }
 
