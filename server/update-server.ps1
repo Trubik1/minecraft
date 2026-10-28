@@ -28,7 +28,11 @@ if (-not $manifest.files) { throw "Пустой манифест" }
 $baseUrl = $manifest.baseUrl.TrimEnd('/')
 
 $installed = @()
-if (Test-Path $stateFile) { $installed = @(Get-Content $stateFile -Raw | ConvertFrom-Json) }
+if (Test-Path $stateFile) {
+    # ConvertFrom-Json (PS 5.1) returns the whole array as a single object, so flatten it explicitly.
+    $state = Get-Content $stateFile -Raw | ConvertFrom-Json
+    $installed = @($state | ForEach-Object { [string]$_ })
+}
 
 $wanted = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
 foreach ($file in $manifest.files) { [void]$wanted.Add($file.path) }
@@ -68,7 +72,8 @@ foreach ($old in $installed) {
     }
 }
 
-$manifest.files.path | ConvertTo-Json -Compress | Set-Content $stateFile -Encoding UTF8
+$state = @($manifest.files | ForEach-Object { [string]$_.path })
+ConvertTo-Json -InputObject $state -Compress | Set-Content $stateFile -Encoding UTF8
 
 Write-Host ""
 Write-Host ("Готово: скачано {0} файлов ({1:N1} МБ), удалено {2}. Версия сборки {3}." -f `

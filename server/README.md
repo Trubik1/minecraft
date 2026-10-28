@@ -6,6 +6,11 @@
 
 1. **Java 21.** Скачать Temurin 21 (JRE или JDK) и установить, либо взять `java.exe` из папки
    лаунчера: `<папка игры>\runtime\temurin21\...\bin\java.exe`.
+   Если `java` не в PATH, `start-server.bat` можно запускать так:
+   ```
+   set JAVA_EXE=C:\Program Files\Eclipse Adoptium\jdk-21.0.12.1-hotspot\bin\java.exe
+   start-server.bat
+   ```
 2. **NeoForge 21.1.264.** Скачать `neoforge-21.1.264-installer.jar`
    ([maven.neoforged.net](https://maven.neoforged.net/releases/net/neoforged/neoforge/21.1.264/neoforge-21.1.264-installer.jar))
    и выполнить в папке сервера:
@@ -47,6 +52,24 @@ powershell -ExecutionPolicy Bypass -File server\update-server.ps1 -Dir .
 Список модов, которые не нужны серверу, лежит в `server/client-only.txt`.
 Если сервер падает при старте с ошибкой загрузки мода — добавьте его имя в этот файл,
 пересоберите манифест (`python tools/build_server_manifest.py`) и обновите сервер.
+
+`server-manifest.json` собирается из `manifest.json` автоматически: в нём нет
+ресурспаков, шейдеров, картинок KubeJS и клиентских модов. При каждом обновлении
+сборки админу нужно запустить оба скрипта:
+
+```powershell
+python tools\build_manifest.py
+python tools\build_server_manifest.py
+```
+
+## Если что-то не так
+
+`update-server.ps1` не проверяет хеши, только размеры файлов. Если файл скачался
+битым или вы поменяли моды вручную — запустите с ключом `-Force` (перекачает всё):
+
+```powershell
+powershell -ExecutionPolicy Bypass -File server\update-server.ps1 -Dir . -Force
+```
 
 ## Адрес для игроков
 
