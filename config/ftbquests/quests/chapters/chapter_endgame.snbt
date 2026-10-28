@@ -434,36 +434,6 @@
 			y: -1.8d
 		}
 		{
-			dependencies: ["5A8C11099E050005"]
-			icon: {
-				id: "mekanism:induction_casing"
-			}
-			id: "5A8C11099E050012"
-			rewards: [
-				{
-					count: 2
-					id: "6E51864B8C6754E4"
-					item: {
-						count: 2
-						id: "mekanism:ultimate_induction_cell"
-					}
-					type: "item"
-				}
-				{
-					id: "49AFFE334DD1D21A"
-					type: "xp_levels"
-					xp_levels: 80
-				}
-			]
-			tasks: [{
-				id: "5DC8BD5A62B9C832"
-				item: { count: 1, id: "mekanism:induction_casing" }
-				type: "item"
-			}]
-			x: 5.8d
-			y: 1.8d
-		}
-		{
 			dependencies: ["5A8C11099E050007"]
 			icon: {
 				id: "minecraft:nether_star"

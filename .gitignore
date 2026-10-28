@@ -20,3 +20,9 @@ local/
 config/ars_nouveau/search_index/
 
 config/inventory-particles/cache/
+
+# launcher build output
+launcher-src/bin/
+launcher-src/obj/
+launcher-src/FodyWeavers.xsd
+dist/

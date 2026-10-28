@@ -1,0 +1,3 @@
+name=Steampunk & Swords
+ip=
+port=25565
