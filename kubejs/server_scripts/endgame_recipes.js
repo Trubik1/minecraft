@@ -1,112 +1,108 @@
 // ==============================================================================
-//  KubeJS Server Script: Endgame Mega-Crafts & Creative Items for 1.21.1
+//  KubeJS Server Script: Endgame Creative Items -> Ultimate Crafting Table (9x9)
 //  Сборка: Steampunk & Swords
-//  Объединяет Create, Mekanism, Ars Nouveau, Refined Storage, Powah, Cataclysm!
+//
+//  Шесть "основных" креативных предметов собираются только на Ultimate Crafting
+//  Table (9x9, tier 4). Каждый требует ДВЕ кастомные сингулярности:
+//    - extendedcrafting:niotic  (1000 кристаллов ниотика Powah)
+//    - extendedcrafting:ars     (1000 source gem / magebloom Ars Nouveau)
+//  Сами сингулярности делаются в Compressor (Extended Crafting).
+//
+//  Здесь лежат только те два предмета, для которых 9x9-рецепта ещё не было:
+//    - create:creative_blaze_cake
+//    - mekanism:creative_fluid_tank
+//
+//  Остальные четыре (creative_motor, creative_energy_cube,
+//  creative_controller, creative_storage_disk) уже были 9x9 и обновлены
+//  в progression_recipes.js — там же, где лежали изначально.
+//
+//  ВАЖНО: старые 3x3-рецепты этих предметов удалены, чтобы креатив нельзя
+//  было получить в обычном верстаке.
 // ==============================================================================
 
 ServerEvents.recipes(event => {
-    console.info('=== Loading Endgame Mega-Crafts Recipes ===');
+    console.info('=== Loading Endgame 9x9 Creative Recipes ===');
+
+    // Сингулярность Extended Crafting — предмет с компонентом singularity_id.
+    const singularity = (id) => ({
+        type: 'neoforge:components',
+        items: ['extendedcrafting:singularity'],
+        components: { 'extendedcrafting:singularity_id': id },
+        strict: false
+    });
+
+    const niotic = () => singularity('extendedcrafting:niotic');
+    const ars = () => singularity('extendedcrafting:ars');
+
+    const table = (id, pattern, key, result) => {
+        event.custom({
+            type: 'extendedcrafting:shaped_table',
+            tier: 4,
+            pattern: pattern,
+            key: key,
+            result: { id: result, count: 1 }
+        }).id(id);
+    };
 
     // --------------------------------------------------------------------------
-    // 1. КРЕАТИВНЫЙ МОТОР (Create: Creative Motor)
-    // Требует: Броню и реликвию Левиафана/Монструозности, Процессоры Mekanism,
-    // Контроллер RS, Батарею Powah и Паровой Двигатель Create
+    // 1. КРЕАТИВНЫЙ ТОРТ СПОЛОХА (Create: Creative Blaze Cake)
     // --------------------------------------------------------------------------
-    event.shaped('create:creative_motor', [
-        'ABC',
-        'DEF',
-        'GHI'
+    table('steampunk:endgame/creative_blaze_cake', [
+        'V  A B   ',
+        '         ',
+        '  C D E  ',
+        '         ',
+        'F   G   H',
+        '         ',
+        '  I J K  ',
+        '         ',
+        'L       W'
     ], {
-        A: 'create:brass_casing',
-        B: 'cataclysm:abyssal_sacrifice',
-        C: 'create:steam_engine',
-        D: 'mekanism:ultimate_control_circuit',
-        E: 'create:precision_mechanism',
-        F: 'powah:battery_nitro',
-        G: 'refinedstorage:controller',
-        H: 'ars_nouveau:source_gem_block',
-        I: 'industrialforegoing:machine_frame_supreme'
-    }).id('steampunk:endgame/creative_motor');
+        A: { item: 'cataclysm:ignitium_ingot' },
+        B: { item: 'minecraft:nether_star' },
+        C: { item: 'powah:crystal_nitro' },
+        D: { item: 'create:blaze_cake' },
+        E: { item: 'ars_nouveau:source_gem_block' },
+        F: { item: 'mekanism:ultimate_control_circuit' },
+        G: { item: 'farmersdelight:roast_chicken_block' },
+        H: { item: 'create:precision_mechanism' },
+        I: { item: 'twilightforest:carminite' },
+        J: { item: 'create:blaze_cake_base' },
+        K: { item: 'ars_nouveau:fire_essence' },
+        L: { item: 'mekanism:pellet_antimatter' },
+        V: niotic(),
+        W: ars()
+    }, 'create:creative_blaze_cake');
 
     // --------------------------------------------------------------------------
-    // 2. КРЕАТИВНЫЙ ТОРТ СПОЛОХА (Create: Creative Blaze Cake)
-    // Бесконечное топливо максимальной температуры для двигателей и паровых котлов
+    // 2. КРЕАТИВНЫЙ РЕЗЕРВУАР ЖИДКОСТЕЙ (Mekanism: Creative Fluid Tank)
     // --------------------------------------------------------------------------
-    event.shaped('create:creative_blaze_cake', [
-        ' A ',
-        'BCD',
-        ' E '
+    table('steampunk:endgame/creative_fluid_tank', [
+        'V  A B   ',
+        '         ',
+        '  C D E  ',
+        '         ',
+        'F   G   H',
+        '         ',
+        '  I J K  ',
+        '         ',
+        'L       W'
     ], {
-        A: 'cataclysm:ignitium_ingot',
-        B: 'powah:crystal_nitro',
-        C: 'create:blaze_cake',
-        D: 'ars_nouveau:source_gem',
-        E: 'farmersdelight:roast_chicken_block'
-    }).id('steampunk:endgame/creative_blaze_cake');
+        A: { item: 'industrialforegoing:plastic' },
+        B: { item: 'cataclysm:void_core' },
+        C: { item: 'mekanism:ultimate_fluid_tank' },
+        D: { item: 'ars_nouveau:source_jar' },
+        E: { item: 'mekanism:ultimate_control_circuit' },
+        F: { item: 'create:mechanical_pump' },
+        G: { item: 'refinedstorage:advanced_processor' },
+        H: { item: 'powah:ender_cell_nitro' },
+        I: { item: 'minecraft:nether_star' },
+        J: { item: 'industrialforegoing:machine_frame_supreme' },
+        K: { item: 'ars_nouveau:source_gem_block' },
+        L: { item: 'mekanism:ultimate_energy_cube' },
+        V: niotic(),
+        W: ars()
+    }, 'mekanism:creative_fluid_tank');
 
-    // --------------------------------------------------------------------------
-    // 3. КРЕАТИВНЫЙ ЭНЕРГЕТИЧЕСКИЙ КУБ (Mekanism: Creative Energy Cube)
-    // Бесконечная энергия любого вольтажа
-    // --------------------------------------------------------------------------
-    event.shaped('mekanism:creative_energy_cube', [
-        'ABA',
-        'CDC',
-        'AEA'
-    ], {
-        A: 'fluxnetworks:gargantuan_flux_storage',
-        B: 'powah:ender_cell_nitro',
-        C: 'mekanism:ultimate_control_circuit',
-        D: 'mekanism:ultimate_energy_cube',
-        E: 'cataclysm:witherite_ingot'
-    }).id('steampunk:endgame/creative_energy_cube');
-
-    // --------------------------------------------------------------------------
-    // 4. КРЕАТИВНЫЙ РЕЗЕРВУАР ЖИДКОСТЕЙ (Mekanism: Creative Fluid Tank)
-    // Бесконечный источник любой залитой жидкости или газа
-    // --------------------------------------------------------------------------
-    event.shaped('mekanism:creative_fluid_tank', [
-        'ABA',
-        'CDC',
-        'AEA'
-    ], {
-        A: 'industrialforegoing:plastic',
-        B: 'cataclysm:void_core',
-        C: 'mekanism:ultimate_control_circuit',
-        D: 'mekanism:ultimate_fluid_tank',
-        E: 'ars_nouveau:source_jar'
-    }).id('steampunk:endgame/creative_fluid_tank');
-
-    // --------------------------------------------------------------------------
-    // 5. КРЕАТИВНЫЙ ДИСК ХРАНИЛИЩА (Refined Storage: Creative Storage Disk)
-    // Бесконечное пространство для любых предметов цифровой сети
-    // --------------------------------------------------------------------------
-    event.shaped('refinedstorage:creative_storage_disk', [
-        'ABA',
-        'CDC',
-        'AEA'
-    ], {
-        A: 'refinedstorage:advanced_processor',
-        B: 'cataclysm:void_core',
-        C: 'create:precision_mechanism',
-        D: 'refinedstorage:64k_storage_disk',
-        E: 'mekanism:teleportation_core'
-    }).id('steampunk:endgame/creative_storage_disk');
-
-    // --------------------------------------------------------------------------
-    // 6. КРЕАТИВНЫЙ КОНТРОЛЛЕР (Refined Storage: Creative Controller)
-    // Бесконечная энергия для МЭ-сети
-    // --------------------------------------------------------------------------
-    event.shaped('refinedstorage:creative_controller', [
-        'ABA',
-        'CDC',
-        'AEA'
-    ], {
-        A: 'refinedstorage:advanced_processor',
-        B: 'cataclysm:witherite_ingot',
-        C: 'powah:player_transmitter_nitro',
-        D: 'refinedstorage:controller',
-        E: 'create:creative_motor'
-    }).id('steampunk:endgame/creative_controller');
-
-    console.info('=== Endgame Mega-Crafts Recipes Loaded Successfully! ===');
+    console.info('=== Endgame 9x9 Creative Recipes Loaded Successfully! ===');
 });

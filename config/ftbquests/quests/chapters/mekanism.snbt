@@ -1085,9 +1085,7 @@
 		{
 			dependencies: ["08DDE018A804BFE7"]
 			id: "0F326EEEC2EBE4E5"
-			title: "Обогащенные материалы"
-icon: "mekanism:enriched_carbon"
-rewards: [
+			rewards: [
 				{
 					count: 3
 					id: "592DDA8413504FDB"
@@ -1964,8 +1962,6 @@ rewards: [
 		{
 			dependencies: ["4935209D870E25F2"]
 			id: "62827AA1AD29A222"
-			icon: "mekanism:basic_universal_cable"
-			title: "Универсальные провода"
 			rewards: [
 				{
 					count: 16
@@ -1998,8 +1994,6 @@ rewards: [
 		{
 			dependencies: ["4935209D870E25F2"]
 			id: "0AA9EF3981E9BA37"
-			icon: "mekanism:basic_energy_cube"
-			title: "Энергетические кубы"
 			rewards: [
 				{
 					id: "10FD3BDB04012C03"
@@ -2035,9 +2029,7 @@ rewards: [
 		{
 			dependencies: ["5E116409DC7D30BB"]
 			id: "33C69B5934BE4D64"
-			title: "Механические трубы"
-icon: "mekanism:basic_mechanical_pipe"
-rewards: [
+			rewards: [
 				{
 					count: 16
 					id: "26272E4B7C8569D4"
@@ -2070,9 +2062,7 @@ rewards: [
 		{
 			dependencies: ["5E116409DC7D30BB"]
 			id: "3AF1DC02E9A0010C"
-			title: "Герметичные трубки"
-icon: "mekanism:basic_pressurized_tube"
-rewards: [
+			rewards: [
 				{
 					count: 16
 					id: "55A16073857CB8E8"
@@ -2105,9 +2095,7 @@ rewards: [
 		{
 			dependencies: ["5E116409DC7D30BB"]
 			id: "60ECCCAB66AAC05D"
-			title: "Логистические транспортеры"
-icon: "mekanism:basic_logistical_transporter"
-rewards: [
+			rewards: [
 				{
 					count: 16
 					id: "0694B55D2359E8EC"
@@ -2140,9 +2128,7 @@ rewards: [
 		{
 			dependencies: ["5E116409DC7D30BB"]
 			id: "66A450CAC07232E1"
-			title: "Термодинамические проводники"
-icon: "mekanism:basic_thermodynamic_conductor"
-rewards: [
+			rewards: [
 				{
 					count: 16
 					id: "452CE7224E47C6FB"
@@ -2176,9 +2162,7 @@ rewards: [
 			dependencies: ["19341B01E048ACAB"]
 			hide_dependency_lines: true
 			id: "090B564935D7A8F5"
-			title: "Установщики уровней"
-icon: "mekanism:basic_tier_installer"
-rewards: [
+			rewards: [
 				{
 					count: 2
 					id: "083E13034B619449"
@@ -2209,9 +2193,7 @@ rewards: [
 		{
 			dependencies: ["3AF1DC02E9A0010C"]
 			id: "1922623A26E08078"
-			title: "Химические баки"
-icon: "mekanism:basic_chemical_tank"
-rewards: [
+			rewards: [
 				{
 					count: 8
 					id: "11BD4A6B2F166B9F"
@@ -2242,9 +2224,7 @@ rewards: [
 		{
 			dependencies: ["33C69B5934BE4D64"]
 			id: "7952DA35B4F5C598"
-			title: "Резервуары для жидкостей"
-icon: "mekanism:basic_fluid_tank"
-rewards: [
+			rewards: [
 				{
 					count: 8
 					id: "2E34B11E7DAE24E5"
@@ -2275,9 +2255,7 @@ rewards: [
 		{
 			dependencies: ["60ECCCAB66AAC05D"]
 			id: "73E6878553BA6908"
-			title: "Бункеры Mekanism"
-icon: "mekanism:basic_bin"
-rewards: [
+			rewards: [
 				{
 					count: 2
 					id: "27A380BFA32783CB"
@@ -2352,9 +2330,7 @@ rewards: [
 		{
 			dependencies: ["60ECCCAB66AAC05D"]
 			id: "1F8B4F648EB5A0DC"
-			title: "Личное хранилище"
-icon: "mekanism:personal_chest"
-rewards: [{
+			rewards: [{
 				id: "76209AC2E7706116"
 				item: {
 					count: 1
@@ -2400,9 +2376,7 @@ rewards: [{
 			dependencies: ["21D8B88155648EA6"]
 			hide_dependency_lines: true
 			id: "119BED334E331C25"
-			title: "Обработка руд: Уровень 1 (2x)"
-icon: "mekanism:enrichment_chamber"
-rewards: [
+			rewards: [
 				{
 					count: 5
 					id: "7DA9DE79920ACF0D"
@@ -2422,7 +2396,7 @@ rewards: [
 					type: "item"
 				}
 				{
-					id: "79532E4325832DA5"
+					id: "24692CAD415C38A5"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -2442,8 +2416,7 @@ rewards: [
 				}
 				{
 					id: "79532E4325832DA5"
-					type: "xp_levels"
-					xp_levels: 1
+					type: "custom"
 				}
 			]
 			x: 4.5d
@@ -2453,9 +2426,7 @@ rewards: [
 			dependencies: ["21D8B88155648EA6"]
 			hide_dependency_lines: true
 			id: "445CC9AAA6F8AAB6"
-			title: "Камера очистки"
-icon: "mekanism:purification_chamber"
-rewards: [
+			rewards: [
 				{
 					id: "6545A9A44AC20C75"
 					item: {
@@ -2473,7 +2444,7 @@ rewards: [
 					type: "item"
 				}
 				{
-					id: "0A7713B4BC19BB41"
+					id: "3A4A18FF5C4FDBF2"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -2498,8 +2469,7 @@ rewards: [
 				}
 				{
 					id: "0A7713B4BC19BB41"
-					type: "xp_levels"
-					xp_levels: 1
+					type: "custom"
 				}
 			]
 			x: 4.5d
@@ -2508,9 +2478,7 @@ rewards: [
 		{
 			dependencies: ["445CC9AAA6F8AAB6"]
 			id: "67E7A9A65B14C933"
-			title: "Обработка руд: Уровень 2 (3x)"
-icon: "mekanism:crusher"
-min_width: 300
+			min_width: 300
 			rewards: [
 				{
 					count: 10
@@ -2531,7 +2499,7 @@ min_width: 300
 					type: "item"
 				}
 				{
-					id: "38C647CDCD725418"
+					id: "7BC83F053972699C"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -2556,8 +2524,7 @@ min_width: 300
 				}
 				{
 					id: "38C647CDCD725418"
-					type: "xp_levels"
-					xp_levels: 1
+					type: "custom"
 				}
 			]
 			x: 6.0d
@@ -2778,9 +2745,7 @@ min_width: 300
 		{
 			dependencies: ["0E175356D43E6A10"]
 			id: "0095422BC87AA135"
-			title: "Обработка руд: Уровень 3 (4x)"
-icon: "mekanism:chemical_injection_chamber"
-min_width: 300
+			min_width: 300
 			rewards: [
 				{
 					count: 15
@@ -2810,7 +2775,7 @@ min_width: 300
 					type: "item"
 				}
 				{
-					id: "4BCDC983D961F5B1"
+					id: "664360F3BDA970DD"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -2840,8 +2805,7 @@ min_width: 300
 				}
 				{
 					id: "4BCDC983D961F5B1"
-					type: "xp_levels"
-					xp_levels: 1
+					type: "custom"
 				}
 			]
 			x: 7.5d
@@ -3034,9 +2998,7 @@ min_width: 300
 		{
 			dependencies: ["6DC1E08D019FD543"]
 			id: "7934873E784C4B3C"
-			title: "Обработка руд: Уровень 4 (5x)"
-icon: "mekanism:chemical_dissolution_chamber"
-min_width: 300
+			min_width: 300
 			rewards: [
 				{
 					count: 64
@@ -3075,7 +3037,7 @@ min_width: 300
 					type: "item"
 				}
 				{
-					id: "593DF38F9DF1C59D"
+					id: "7804657162EAA9F2"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -3115,8 +3077,7 @@ min_width: 300
 				}
 				{
 					id: "593DF38F9DF1C59D"
-					type: "xp_levels"
-					xp_levels: 1
+					type: "custom"
 				}
 			]
 			x: 9.0d
@@ -3464,9 +3425,7 @@ min_width: 300
 			]
 			dependency_requirement: "one_completed"
 			id: "47F38E606AD3FF53"
-			title: "Металлическая пыль"
-icon: "mekanism:dust_iron"
-rewards: [
+			rewards: [
 				{
 					count: 5
 					id: "7905B57A34AF9588"

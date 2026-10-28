@@ -1,0 +1,12 @@
+{
+  "name": "singularity.steampunk.niotic",
+  "colors": [
+    "8fe8ff",
+    "1b6f8a"
+  ],
+  "ingredient": {
+    "item": "powah:crystal_niotic"
+  },
+  "materialCount": 1000,
+  "inUltimateSingularity": false
+}

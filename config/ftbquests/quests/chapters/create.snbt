@@ -1666,9 +1666,7 @@
 				"69EE22CB4FF1E591"
 			]
 			id: "45EC31812FB9934D"
-			title: "Механические поршни"
-icon: "create:mechanical_piston"
-rewards: [
+			rewards: [
 				{
 					count: 5
 					id: "0CC36E16938C2F45"
@@ -2571,9 +2569,7 @@ rewards: [
 		{
 			dependencies: ["5B36DE3826F26963"]
 			id: "6893D537716AA748"
-			title: "Шестерни"
-icon: "create:cogwheel"
-rewards: [
+			rewards: [
 				{
 					count: 5
 					id: "648140111985DBAF"
@@ -2664,9 +2660,7 @@ rewards: [
 		{
 			dependencies: ["6893D537716AA748"]
 			id: "5DD6631F5996BA71"
-			title: "Водяные колеса"
-icon: "create:water_wheel"
-rewards: [
+			rewards: [
 				{
 					id: "6F09D6AB5F77AC20"
 					item: {
@@ -3599,9 +3593,7 @@ rewards: [
 		{
 			dependencies: ["3FBCBBEBB78B83FC"]
 			id: "2D96965317D3CFEC"
-			title: "Сиденья"
-icon: "create:white_seat"
-rewards: [
+			rewards: [
 				{
 					count: 3
 					id: "4C10DE58B9365242"
@@ -3805,9 +3797,7 @@ rewards: [
 		{
 			dependencies: ["16B0C1F7B951C19D"]
 			id: "57A18F2E51952EB8"
-			title: "Почтовые ящики"
-icon: "create:white_postbox"
-rewards: [
+			rewards: [
 				{
 					count: 3
 					id: "37724FCE10D31F94"
@@ -3945,9 +3935,7 @@ rewards: [
 		{
 			dependencies: ["672F9CF5B0E626F1"]
 			id: "16B0C1F7B951C19D"
-			title: "Посылки"
-icon: "create:cardboard_box"
-rewards: [{
+			rewards: [{
 				id: "7E26E2BE66E19CA9"
 				item: {
 					components: {
@@ -3983,7 +3971,7 @@ rewards: [{
 			size: 1.25d
 			tasks: [{
 				id: "3AB6845819FF686F"
-				item: { count: 1, id: "create:cardboard_box" }
+				item: { components: { "ftbquests:missing_item": "create:cardboard_box" }, count: 1, id: "ftbquests:missing_item" }
 				type: "item"
 			}]
 			x: -6.0d
@@ -4015,9 +4003,7 @@ rewards: [{
 				"754B8F1FBCD983C5"
 			]
 			id: "64860340A5BEBAB9"
-			title: "Скатерти"
-icon: "create:white_table_cloth"
-rewards: [
+			rewards: [
 				{
 					id: "1F6AB3B781D9B508"
 					item: {

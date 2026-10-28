@@ -572,9 +572,7 @@
 				"45C9D975E3731DFE"
 			]
 			id: "7CBAA67204CC258C"
-			title: "Оружие Стража"
-icon: "deeperdarker:warden_sword"
-rewards: [{
+			rewards: [{
 				id: "273BC3CA12F4E0F8"
 				item: {
 					components: {
@@ -604,9 +602,7 @@ rewards: [{
 				"45C9D975E3731DFE"
 			]
 			id: "726A627BD7654E0C"
-			title: "Инструменты Стража"
-icon: "deeperdarker:warden_pickaxe"
-rewards: [{
+			rewards: [{
 				id: "4FBF34E4D9FA04C5"
 				item: {
 					components: {

@@ -1648,8 +1648,6 @@
 		{
 			dependencies: ["64D0E66CB4FBEC82"]
 			id: "33682F4B44950123"
-			icon: "ars_nouveau:blue_archwood_log"
-			title: "Древесина Архдерева"
 			tasks: [{
 				id: "2BC0F5A88E2F03C3"
 				item: { count: 1, id: "ars_nouveau:blue_archwood_log" }

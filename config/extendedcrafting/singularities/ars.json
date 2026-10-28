@@ -1,0 +1,12 @@
+{
+  "name": "singularity.steampunk.ars",
+  "colors": [
+    "c77dff",
+    "4a1a6b"
+  ],
+  "ingredient": {
+    "tag": "steampunk:ars_singularity_materials"
+  },
+  "materialCount": 1000,
+  "inUltimateSingularity": false
+}

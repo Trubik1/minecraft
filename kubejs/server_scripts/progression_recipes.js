@@ -1263,10 +1263,13 @@ ServerEvents.recipes(event => {
     // ==========================================================================
 
     // 1. Креативный мотор Create (create:creative_motor)
+    // NOTE: creative items below now require 1x Niotic Singularity (V) and
+    // 1x Ars Singularity (W), both made in the Extended Crafting Compressor.
     event.custom({
         type: 'extendedcrafting:shaped_table',
+        tier: 4,
         pattern: [
-            'MFPAUAPFM',
+            'VFPAUAPFM',
             'FSPCHCPFS',
             'PPKOTOKPP',
             'ACONBNOCA',
@@ -1274,7 +1277,7 @@ ServerEvents.recipes(event => {
             'ACONBNOCA',
             'PPKOTOKPP',
             'FSPCHCPFS',
-            'MFPAUAPFM'
+            'MFPAUAPFW'
         ],
         key: {
             M: { item: 'create:brass_casing' },
@@ -1290,7 +1293,9 @@ ServerEvents.recipes(event => {
             T: { item: 'undergarden:forgotten_ingot' },
             N: { item: 'powah:crystal_nitro' },
             B: { item: 'minecraft:nether_star' },
-            E: { item: 'minecraft:netherite_block' }
+            E: { item: 'minecraft:netherite_block' },
+            V: { type: 'neoforge:components', items: ['extendedcrafting:singularity'], components: { 'extendedcrafting:singularity_id': 'extendedcrafting:niotic' }, strict: false },
+            W: { type: 'neoforge:components', items: ['extendedcrafting:singularity'], components: { 'extendedcrafting:singularity_id': 'extendedcrafting:ars' }, strict: false }
         },
         result: {
             id: 'create:creative_motor',
@@ -1301,8 +1306,9 @@ ServerEvents.recipes(event => {
     // 2. Креативный энергетический куб Mekanism (mekanism:creative_energy_cube)
     event.custom({
         type: 'extendedcrafting:shaped_table',
+        tier: 4,
         pattern: [
-            'SCPUAUPFS',
+            'VCPUAUPFS',
             'CRUNTNURC',
             'PUMIEIMUP',
             'UNMOBOMNU',
@@ -1310,7 +1316,7 @@ ServerEvents.recipes(event => {
             'UNMOBOMNU',
             'PUMIEIMUP',
             'CRUNTNURC',
-            'SFPUAUPCS'
+            'SFPUAUPFW'
         ],
         key: {
             S: { item: 'solarflux:sp_8' },
@@ -1326,8 +1332,10 @@ ServerEvents.recipes(event => {
             M: { item: 'mekanism:induction_casing' },
             O: { item: 'mekanism:ingot_refined_obsidian' },
             B: { item: 'minecraft:nether_star' },
-            E: { item: 'mekanism:energy_cube' },
-            K: { item: 'minecraft:netherite_block' }
+            E: { item: 'mekanism:ultimate_energy_cube' },
+            K: { item: 'minecraft:netherite_block' },
+            V: { type: 'neoforge:components', items: ['extendedcrafting:singularity'], components: { 'extendedcrafting:singularity_id': 'extendedcrafting:niotic' }, strict: false },
+            W: { type: 'neoforge:components', items: ['extendedcrafting:singularity'], components: { 'extendedcrafting:singularity_id': 'extendedcrafting:ars' }, strict: false }
         },
         result: {
             id: 'mekanism:creative_energy_cube',
@@ -1370,8 +1378,9 @@ ServerEvents.recipes(event => {
     // 4. Креативный контроллер Refined Storage (refinedstorage:creative_controller)
     event.custom({
         type: 'extendedcrafting:shaped_table',
+        tier: 4,
         pattern: [
-            'PPPPUPPPP',
+            'VPPPUPPPP',
             'PCSAMASCP',
             'PSOTBTOSP',
             'PAEDRDEAP',
@@ -1379,7 +1388,7 @@ ServerEvents.recipes(event => {
             'PAEDRDEAP',
             'PSOTBTOSP',
             'PCSAMASCP',
-            'PPPPUPPPP'
+            'PPPPUPPPW'
         ],
         key: {
             P: { item: 'refinedstorage:advanced_processor' },
@@ -1395,7 +1404,9 @@ ServerEvents.recipes(event => {
             D: { item: 'refinedstorage:machine_casing' },
             R: { item: 'undergarden:forgotten_ingot' },
             K: { item: 'minecraft:netherite_block' },
-            N: { item: 'refinedstorage:network_card' }
+            N: { item: 'refinedstorage:network_card' },
+            V: { type: 'neoforge:components', items: ['extendedcrafting:singularity'], components: { 'extendedcrafting:singularity_id': 'extendedcrafting:niotic' }, strict: false },
+            W: { type: 'neoforge:components', items: ['extendedcrafting:singularity'], components: { 'extendedcrafting:singularity_id': 'extendedcrafting:ars' }, strict: false }
         },
         result: {
             id: 'refinedstorage:creative_controller',
@@ -1406,8 +1417,9 @@ ServerEvents.recipes(event => {
     // 5. Креативный диск памяти Refined Storage (refinedstorage:creative_storage_disk)
     event.custom({
         type: 'extendedcrafting:shaped_table',
+        tier: 4,
         pattern: [
-            'SSSSUSSSS',
+            'VSSSUSSSS',
             'SCPAPAPCS',
             'SPOMTMOSP',
             'SAENBNEAP',
@@ -1415,7 +1427,7 @@ ServerEvents.recipes(event => {
             'PAENBNEAP',
             'SPOMTMOSP',
             'SCPAPAPCS',
-            'SSSSUSSSS'
+            'SSSSUSSSW'
         ],
         key: {
             S: { item: 'refinedstorage:64k_storage_part' },
@@ -1430,7 +1442,9 @@ ServerEvents.recipes(event => {
             N: { item: 'minecraft:nether_star' },
             B: { item: 'undergarden:forgotten_ingot' },
             K: { item: 'refinedstorage:storage_housing' },
-            D: { item: 'minecraft:netherite_block' }
+            D: { item: 'minecraft:netherite_block' },
+            V: { type: 'neoforge:components', items: ['extendedcrafting:singularity'], components: { 'extendedcrafting:singularity_id': 'extendedcrafting:niotic' }, strict: false },
+            W: { type: 'neoforge:components', items: ['extendedcrafting:singularity'], components: { 'extendedcrafting:singularity_id': 'extendedcrafting:ars' }, strict: false }
         },
         result: {
             id: 'refinedstorage:creative_storage_disk',
