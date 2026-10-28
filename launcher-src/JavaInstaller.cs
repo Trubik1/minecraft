@@ -17,20 +17,41 @@ namespace SteampunkLauncher
 
         private const long ExpectedSize = 50L * 1024 * 1024;
 
+        public static string EnsureJavaw(string javaPath)
+        {
+            if (string.IsNullOrEmpty(javaPath)) return javaPath;
+            if (javaPath.EndsWith("javaw.exe", StringComparison.OrdinalIgnoreCase)) return javaPath;
+            try
+            {
+                string dir = Path.GetDirectoryName(javaPath);
+                if (!string.IsNullOrEmpty(dir))
+                {
+                    string javaw = Path.Combine(dir, "javaw.exe");
+                    if (File.Exists(javaw)) return javaw;
+                }
+            }
+            catch { }
+            if (javaPath.EndsWith("java.exe", StringComparison.OrdinalIgnoreCase))
+            {
+                return javaPath.Substring(0, javaPath.Length - 8) + "javaw.exe";
+            }
+            return javaPath;
+        }
+
         public static async Task<string> EnsureJavaAsync(string gameDir, string configuredPath,
             IProgress<ProgressInfo> progress, CancellationToken ct)
         {
-            if (IsUsable(configuredPath)) return configuredPath;
+            if (IsUsable(configuredPath)) return EnsureJavaw(configuredPath);
 
             string found = FindJava(gameDir);
             if (found != null)
             {
                 Log.Info("Найдена Java 21: " + found);
-                return found;
+                return EnsureJavaw(found);
             }
 
             progress.Report(new ProgressInfo { Phase = "Скачивание Java 21", Fraction = 0, Detail = "Temurin JRE" });
-            Log.Info("Java 21 не найдена, скачиваю Temurin JRE");
+            Log.Info("Java 21 не найдена, скачиваем Temurin JRE");
 
             string runtimeDir = Path.Combine(gameDir, "runtime");
             Directory.CreateDirectory(runtimeDir);
@@ -63,10 +84,11 @@ namespace SteampunkLauncher
 
             string java = FindJavaExe(target);
             if (java == null || !IsJava21(java))
-                throw new InvalidOperationException("Не удалось установить Java 21 (java.exe не найден после распаковки).");
+                throw new InvalidOperationException("Не удалось установить Java 21 (javaw.exe не найден после распаковки).");
 
-            Log.Info("Java 21 установлена: " + java);
-            return java;
+            string finalJava = EnsureJavaw(java);
+            Log.Info("Java 21 установлена: " + finalJava);
+            return finalJava;
         }
 
         public static string FindJava(string gameDir)
@@ -76,6 +98,10 @@ namespace SteampunkLauncher
             try
             {
                 foreach (var exe in Directory.EnumerateFiles(runtimeDir, "java.exe", SearchOption.AllDirectories))
+                {
+                    if (IsJava21(exe)) return EnsureJavaw(exe);
+                }
+                foreach (var exe in Directory.EnumerateFiles(runtimeDir, "javaw.exe", SearchOption.AllDirectories))
                 {
                     if (IsJava21(exe)) return exe;
                 }
@@ -92,9 +118,15 @@ namespace SteampunkLauncher
             if (!Directory.Exists(root)) return null;
             try
             {
-                return Directory.EnumerateFiles(root, "java.exe", SearchOption.AllDirectories)
+                var javaw = Directory.EnumerateFiles(root, "javaw.exe", SearchOption.AllDirectories)
                     .OrderBy(p => p.Length)
                     .FirstOrDefault();
+                if (javaw != null) return javaw;
+
+                var java = Directory.EnumerateFiles(root, "java.exe", SearchOption.AllDirectories)
+                    .OrderBy(p => p.Length)
+                    .FirstOrDefault();
+                return java != null ? EnsureJavaw(java) : null;
             }
             catch
             {
@@ -109,9 +141,21 @@ namespace SteampunkLauncher
 
         public static bool IsJava21(string javaPath)
         {
+            if (string.IsNullOrEmpty(javaPath)) return false;
             try
             {
-                var psi = new ProcessStartInfo(javaPath, "-version")
+                string probePath = javaPath;
+                if (probePath.EndsWith("javaw.exe", StringComparison.OrdinalIgnoreCase))
+                {
+                    string dir = Path.GetDirectoryName(probePath);
+                    if (!string.IsNullOrEmpty(dir))
+                    {
+                        string sibling = Path.Combine(dir, "java.exe");
+                        if (File.Exists(sibling)) probePath = sibling;
+                    }
+                }
+
+                var psi = new ProcessStartInfo(probePath, "-version")
                 {
                     UseShellExecute = false,
                     RedirectStandardError = true,
