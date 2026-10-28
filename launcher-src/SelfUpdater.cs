@@ -17,11 +17,11 @@ namespace SteampunkLauncher
         public string Notes { get; set; }
     }
 
-    /// <summary>Checks GitHub Releases for a newer SteampunkLauncher.exe and swaps it in place.</summary>
+    /// <summary>Checks the copy of the launcher in the repo and swaps it in place.</summary>
     public static class SelfUpdater
     {
-        private const string ReleasesApi = "https://api.github.com/repos/Trubik1/minecraft/releases?per_page=10";
-        private const string AssetName = "SteampunkLauncher.exe";
+        private const string VersionUrl = "https://raw.githubusercontent.com/Trubik1/minecraft/main/launcher/version.txt";
+        private const string ExeUrl = "https://raw.githubusercontent.com/Trubik1/minecraft/main/launcher/SteampunkLauncher.exe";
 
         public static Version CurrentVersion
         {
@@ -32,28 +32,20 @@ namespace SteampunkLauncher
         {
             try
             {
-                string json = await HttpUtil.GetStringAsync(ReleasesApi, ct).ConfigureAwait(false);
-                var releases = JArray.Parse(json);
-                foreach (var release in releases)
+                string text = await HttpUtil.GetStringAsync(
+                    VersionUrl + "?t=" + DateTime.UtcNow.Ticks, ct, 2).ConfigureAwait(false);
+                if (string.IsNullOrWhiteSpace(text)) return null;
+
+                var lines = text.Replace("\r", "").Split('\n');
+                Version remote = ParseVersion(lines[0].Trim());
+                if (remote == null || remote <= CurrentVersion) return null;
+
+                return new UpdateInfo
                 {
-                    if (release.Value<bool?>("draft") == true) continue;
-                    if (release.Value<bool?>("prerelease") == true) continue;
-                    var assets = release["assets"] as JArray;
-                    if (assets == null) continue;
-                    var asset = assets.FirstOrDefault(a =>
-                        string.Equals((string)a["name"], AssetName, StringComparison.OrdinalIgnoreCase));
-                    if (asset == null) continue;
-
-                    Version version = ParseVersion((string)release["tag_name"]);
-                    if (version == null || version <= CurrentVersion) continue;
-
-                    return new UpdateInfo
-                    {
-                        Version = version,
-                        DownloadUrl = (string)asset["browser_download_url"],
-                        Notes = (string)release["body"]
-                    };
-                }
+                    Version = remote,
+                    DownloadUrl = ExeUrl,
+                    Notes = string.Join("\n", lines).Trim()
+                };
             }
             catch (Exception ex)
             {

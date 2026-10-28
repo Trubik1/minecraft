@@ -46,6 +46,7 @@ EXCLUDE_PREFIXES = (
 EXCLUDE_FILES = {
     "config/iris.properties",      # player's shader choice
     "config/jei/jei-client.ini",   # player's JEI window layout
+    "config/sodium-fingerprint.json",  # rewritten by Sodium on every launch
 }
 
 BASE_URL = "https://raw.githubusercontent.com/Trubik1/minecraft/main/"

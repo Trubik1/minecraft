@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Threading;
 
 namespace SteampunkLauncher
@@ -8,17 +9,28 @@ namespace SteampunkLauncher
     {
         public static int RunUpdate(string gameDir)
         {
+            return Run(gameDir, false, null);
+        }
+
+        public static int RunLaunch(string gameDir, string nickname)
+        {
+            return Run(gameDir, true, nickname);
+        }
+
+        private static int Run(string gameDir, bool launch, string nickname)
+        {
             try
             {
                 if (string.IsNullOrWhiteSpace(gameDir))
                 {
-                    Log.Error("--update: не указана папка игры");
+                    Log.Error("не указана папка игры");
                     return 2;
                 }
 
                 gameDir = System.IO.Path.GetFullPath(gameDir);
                 var config = LauncherConfig.Load();
                 config.GameDir = gameDir;
+                if (!string.IsNullOrEmpty(nickname)) config.Nickname = nickname;
                 if (string.IsNullOrEmpty(config.Nickname)) config.Nickname = "TestPlayer";
                 config.Save();
 
@@ -40,6 +52,16 @@ namespace SteampunkLauncher
 
                 Log.Info(string.Format("=== OK: сборка {0}, скачано {1} файлов ({2:N1} МБ), версия {3} ===",
                     manifest.PackVersion, sync.Downloaded, sync.DownloadedBytes / 1024.0 / 1024.0, version));
+
+                if (!launch) return 0;
+
+                Log.Info("=== Запуск игры ===");
+                Process game = GameInstaller.LaunchAsync(gameDir, version, java, config.Nickname,
+                    config.ResolveRamMb(), ServerInfo.Parse(""), false, CancellationToken.None)
+                    .GetAwaiter().GetResult();
+
+                game.WaitForExit();
+                Log.Info("=== Игра закрыта, код " + game.ExitCode + " ===");
                 return 0;
             }
             catch (Exception ex)

@@ -44,6 +44,10 @@ namespace SteampunkLauncher
                         return await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     }
                 }
+                catch (OperationCanceledException)
+                {
+                    throw;
+                }
                 catch (Exception ex)
                 {
                     last = ex;
@@ -82,6 +86,10 @@ namespace SteampunkLauncher
                         }
                     }
                     return;
+                }
+                catch (OperationCanceledException)
+                {
+                    throw;
                 }
                 catch (Exception ex)
                 {

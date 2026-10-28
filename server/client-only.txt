@@ -1,0 +1,21 @@
+# Моды, которые не ставятся на сервер (клиентские).
+# Совпадение по подстроке в имени jar, регистр не важен.
+# Список при необходимости правьте и пересобирайте server-manifest.json.
+
+# графика и оптимизация клиента
+sodium
+iris
+entityculling
+immediatelyfast
+dynamic-fps
+smoothswapping
+inventoryparticles
+
+# интерфейс
+betterf3
+better-advanced-tooltips
+jei
+jade
+mousetweaks
+fast-ip-ping
+createschematichelper

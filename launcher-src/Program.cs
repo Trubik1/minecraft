@@ -18,6 +18,14 @@ namespace SteampunkLauncher
                 return;
             }
 
+            if (args.Length > 0 && args[0] == "--launch")
+            {
+                string dir = args.Length > 1 ? args[1] : null;
+                string nick = args.Length > 2 ? args[2] : null;
+                Environment.ExitCode = Cli.RunLaunch(dir, nick);
+                return;
+            }
+
             bool created;
             _mutex = new Mutex(true, @"Local\SteampunkLauncher.SingleInstance", out created);
             if (!created)

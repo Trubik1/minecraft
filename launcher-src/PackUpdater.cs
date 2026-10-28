@@ -148,12 +148,17 @@ namespace SteampunkLauncher
                     {
                         string rel = Normalize(captured.Path);
                         await DownloadOneAsync(manifest, gameDir, captured, rel, ct).ConfigureAwait(false);
-                        verified[rel] = new VerifiedEntry
+
+                        var downloaded = new FileInfo(LocalPath(gameDir, rel));
+                        lock (verified)
                         {
-                            Size = new FileInfo(LocalPath(gameDir, rel)).Length,
-                            MTime = File.GetLastWriteTimeUtc(LocalPath(gameDir, rel)).Ticks,
-                            Hash = captured.Hash
-                        };
+                            verified[rel] = new VerifiedEntry
+                            {
+                                Size = downloaded.Length,
+                                MTime = downloaded.LastWriteTimeUtc.Ticks,
+                                Hash = captured.Hash
+                            };
+                        }
 
                         lock (sync)
                         {
@@ -199,6 +204,10 @@ namespace SteampunkLauncher
                     if (File.Exists(full)) File.Delete(full);
                     File.Move(temp, full);
                     return;
+                }
+                catch (OperationCanceledException)
+                {
+                    throw;
                 }
                 catch (Exception ex)
                 {

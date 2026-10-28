@@ -71,6 +71,7 @@ namespace SteampunkLauncher
                 Left = 24,
                 Top = 18,
                 AutoSize = true,
+                UseMnemonic = false,
                 Font = Theme.Font(19f, FontStyle.Bold),
                 ForeColor = Theme.Gold,
                 BackColor = Color.Transparent
@@ -189,7 +190,7 @@ namespace SteampunkLauncher
             _folder.Click += (s, e) => OpenFolder();
             Controls.Add(_folder);
 
-            _verify = Theme.FlatButton("Проверить файлы", 150, 34, Theme.PanelLight, Theme.Border);
+            _verify = Theme.FlatButton("Проверить файлы", 168, 34, Theme.PanelLight, Theme.Border);
             _verify.Left = x + 140; _verify.Top = 498; _verify.ForeColor = Theme.Text;
             _verify.Click += (s, e) =>
             {
@@ -200,7 +201,7 @@ namespace SteampunkLauncher
             Controls.Add(_verify);
 
             _settings = Theme.FlatButton("Настройки", 128, 34, Theme.PanelLight, Theme.Border);
-            _settings.Left = x + 302; _settings.Top = 498; _settings.ForeColor = Theme.Text;
+            _settings.Left = x + 320; _settings.Top = 498; _settings.ForeColor = Theme.Text;
             _settings.Click += (s, e) => OpenSettings();
             Controls.Add(_settings);
 
