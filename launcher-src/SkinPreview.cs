@@ -26,6 +26,7 @@ namespace SteampunkLauncher
             public RectangleF Uv;
             public float Depth;
             public int Shade;
+            public Bitmap CustomTexture;
         }
 
         private readonly List<Face> _faces = new List<Face>();
@@ -33,6 +34,8 @@ namespace SteampunkLauncher
 
         private Bitmap _skin;
         private Bitmap _placeholder;
+        private Bitmap _cape;
+        private bool _showCape = true;
         private int _armWidth = 4;
 
         private float _yaw = -28f;
@@ -55,6 +58,7 @@ namespace SteampunkLauncher
             Cursor = Cursors.Hand;
 
             _placeholder = CreatePlaceholder();
+            _cape = CreateSteampunkCape();
 
             _timer = new Timer { Interval = 33 };
             _timer.Tick += (s, e) =>
@@ -75,6 +79,19 @@ namespace SteampunkLauncher
         public bool IsSlim
         {
             get { return _armWidth == 3; }
+        }
+
+        public bool ShowCape
+        {
+            get { return _showCape; }
+            set
+            {
+                if (_showCape != value)
+                {
+                    _showCape = value;
+                    Invalidate();
+                }
+            }
         }
 
         public void SetSkin(Bitmap skin)
@@ -238,7 +255,7 @@ namespace SteampunkLauncher
 
         private float LastDepth;
 
-        private void AddFace(V3 p0, V3 p1, V3 p2, V3 p3, RectangleF uv, int shade)
+        private void AddFace(V3 p0, V3 p1, V3 p2, V3 p3, RectangleF uv, int shade, Bitmap customTex = null)
         {
             if (uv.Width <= 0 || uv.Height <= 0) return;
 
@@ -259,7 +276,8 @@ namespace SteampunkLauncher
                 A = a, B = b, C = c, D = d,
                 Uv = uv,
                 Depth = (d0 + d1 + d2 + d3) * 0.25f,
-                Shade = shade
+                Shade = shade,
+                CustomTexture = customTex
             });
         }
 
@@ -343,6 +361,34 @@ namespace SteampunkLauncher
             AddBox(-0.2f, -0.2f, -2.2f, 4.2f, 12.2f, 2.2f,
                 Uv(4, 52, 4, 12), Uv(0, 52, 4, 12), Uv(8, 52, 4, 12), Uv(12, 52, 4, 12),
                 Uv(4, 48, 4, 4), Uv(8, 48, 4, 4));
+
+            if (_showCape)
+            {
+                AddCape();
+            }
+        }
+
+        private void AddCape()
+        {
+            if (_cape == null) return;
+
+            float x0 = -5f, x1 = 5f;
+            float y0 = 8f, y1 = 24f;
+            float z0_top = -2.8f, z1_top = -2.0f;
+            float z0_bot = -4.4f, z1_bot = -3.6f;
+
+            // Front (inner lining facing back of torso)
+            AddFace(new V3(x0, y1, z1_top), new V3(x1, y1, z1_top), new V3(x1, y0, z1_bot), new V3(x0, y0, z1_bot), Uv(1, 1, 10, 16), 25, _cape);
+            // Back (outer ornate side facing world)
+            AddFace(new V3(x1, y1, z0_top), new V3(x0, y1, z0_top), new V3(x0, y0, z0_bot), new V3(x1, y0, z0_bot), Uv(12, 1, 10, 16), 55, _cape);
+            // Left
+            AddFace(new V3(x1, y1, z1_top), new V3(x1, y1, z0_top), new V3(x1, y0, z0_bot), new V3(x1, y0, z1_bot), Uv(0, 1, 1, 16), 35, _cape);
+            // Right
+            AddFace(new V3(x0, y1, z0_top), new V3(x0, y1, z1_top), new V3(x0, y0, z1_bot), new V3(x0, y0, z0_bot), Uv(11, 1, 1, 16), 40, _cape);
+            // Top
+            AddFace(new V3(x0, y1, z0_top), new V3(x1, y1, z0_top), new V3(x1, y1, z1_top), new V3(x0, y1, z1_top), Uv(1, 0, 10, 1), 15, _cape);
+            // Bottom
+            AddFace(new V3(x0, y0, z1_bot), new V3(x1, y0, z1_bot), new V3(x1, y0, z0_bot), new V3(x0, y0, z0_bot), Uv(11, 0, 10, 1), 75, _cape);
         }
 
         private void DrawFace(Graphics g, Face face)
@@ -350,7 +396,7 @@ namespace SteampunkLauncher
             var uv = face.Uv;
             if (uv.Width < 0.01f || uv.Height < 0.01f) return;
 
-            var bitmap = _skin ?? _placeholder;
+            var bitmap = face.CustomTexture ?? _skin ?? _placeholder;
             if (bitmap == null) return;
 
             var state = g.Save();
@@ -433,6 +479,47 @@ namespace SteampunkLauncher
             return bmp;
         }
 
+        private static Bitmap CreateSteampunkCape()
+        {
+            var bmp = new Bitmap(64, 32, PixelFormat.Format32bppArgb);
+            using (var g = Graphics.FromImage(bmp))
+            {
+                g.Clear(Color.Transparent);
+
+                // Cape background: Obsidian black velvet
+                using (var brush = new SolidBrush(Color.FromArgb(24, 26, 34)))
+                {
+                    g.FillRectangle(brush, 0, 0, 24, 18);
+                }
+
+                // Front (inner lining): Rich burgundy velvet
+                using (var brush = new SolidBrush(Color.FromArgb(58, 20, 28)))
+                {
+                    g.FillRectangle(brush, 1, 1, 10, 16);
+                }
+
+                // Back: Gold borders and steampunk emblem
+                using (var border = new Pen(Color.FromArgb(245, 166, 35), 1))
+                {
+                    g.DrawRectangle(border, 12, 1, 9, 15);
+                }
+
+                // Golden cogwheel on back
+                using (var gold = new SolidBrush(Color.FromArgb(245, 166, 35)))
+                {
+                    g.FillEllipse(gold, 15, 6, 4, 4);
+                    // Cross blades
+                    g.FillRectangle(gold, 14, 7, 6, 2);
+                    g.FillRectangle(gold, 16, 5, 2, 6);
+                }
+                using (var centerHole = new SolidBrush(Color.FromArgb(24, 26, 34)))
+                {
+                    g.FillEllipse(centerHole, 16, 7, 2, 2);
+                }
+            }
+            return bmp;
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -441,6 +528,7 @@ namespace SteampunkLauncher
                 _timer.Dispose();
                 if (_skin != null) _skin.Dispose();
                 if (_placeholder != null) _placeholder.Dispose();
+                if (_cape != null) _cape.Dispose();
             }
             base.Dispose(disposing);
         }

@@ -6,7 +6,7 @@ namespace SteampunkLauncher
     /// <summary>Shared steampunk gear emblem used by the header, watermark and window icon.</summary>
     internal static class Gear
     {
-        public static void Draw(Graphics g, RectangleF rect, Color color)
+        public static void Draw(Graphics g, RectangleF rect, Color color, float angleDegrees = 0f)
         {
             var center = new PointF(rect.X + rect.Width / 2f, rect.Y + rect.Height / 2f);
             float outer = rect.Width / 2f - 1f;
@@ -17,6 +17,14 @@ namespace SteampunkLauncher
             g.SmoothingMode = SmoothingMode.AntiAlias;
             try
             {
+                var outerState = g.Save();
+                if (angleDegrees != 0f)
+                {
+                    g.TranslateTransform(center.X, center.Y);
+                    g.RotateTransform(angleDegrees);
+                    g.TranslateTransform(-center.X, -center.Y);
+                }
+
                 using (var pen = new Pen(color, thickness))
                 {
                     for (int i = 0; i < 8; i++)
@@ -42,6 +50,8 @@ namespace SteampunkLauncher
                 float dot = System.Math.Max(1.4f, rect.Width * 0.04f);
                 using (var brush = new SolidBrush(color))
                     g.FillEllipse(brush, center.X - dot, center.Y - dot, dot * 2f, dot * 2f);
+
+                g.Restore(outerState);
             }
             finally
             {

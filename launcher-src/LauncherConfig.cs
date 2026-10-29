@@ -15,6 +15,10 @@ namespace SteampunkLauncher
         public string JavaPath { get; set; }
         public bool JoinServer { get; set; }
         public bool ShowLog { get; set; }
+        public string GraphicsPreset { get; set; } = "Balanced";
+        public string ActiveShader { get; set; } = "None";
+        public bool DiscordRpcEnabled { get; set; } = true;
+        public bool ShowCape { get; set; } = true;
 
         [JsonIgnore]
         public bool IsFirstRun

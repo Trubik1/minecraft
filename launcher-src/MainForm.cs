@@ -76,6 +76,13 @@ namespace SteampunkLauncher
         private TrackBar _sliderSettingsRam;
         private RichTextBox _logBox;
 
+        // ─── Дополнительные компоненты (Анимация, RPC, Шейдеры) ──
+        private float _gearAngle = 0f;
+        private bool _isLogoHovered = false;
+        private System.Windows.Forms.Timer _gearAnimTimer;
+        private ComboBox _cmbShaders;
+        private CheckBox _chkDiscordRpc;
+
         public MainForm()
         {
             _config = LauncherConfig.Load();
@@ -88,6 +95,17 @@ namespace SteampunkLauncher
                     _config.Save();
                 }
             }
+
+            _gearAnimTimer = new System.Windows.Forms.Timer { Interval = 33 };
+            _gearAnimTimer.Tick += (s, e) =>
+            {
+                if (_busy || _isLogoHovered)
+                {
+                    _gearAngle = (_gearAngle + 3.5f) % 360f;
+                    _logoPanel?.Invalidate();
+                }
+            };
+            _gearAnimTimer.Start();
 
             // Свойства окна: по умолчанию развернуто во весь экран (Maximized)
             Text = "Steampunk & Swords Launcher";
@@ -184,6 +202,8 @@ namespace SteampunkLauncher
 
             Action goHome = () => SwitchTab("game");
             _logoPanel.Click += (s, e) => goHome();
+            _logoPanel.MouseEnter += (s, e) => { _isLogoHovered = true; };
+            _logoPanel.MouseLeave += (s, e) => { _isLogoHovered = false; };
 
             _logoPanel.Paint += (s, e) =>
             {
@@ -191,8 +211,8 @@ namespace SteampunkLauncher
                 g.SmoothingMode = SmoothingMode.AntiAlias;
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 
-                // Четкая векторная шестеренка без малейшей обрезки зубцов
-                Gear.Draw(g, new RectangleF(2, 14, 38, 38), Theme.Gold);
+                // Четкая векторная шестеренка с плавной стимпанк-анимацией вращения
+                Gear.Draw(g, new RectangleF(2, 14, 38, 38), Theme.Gold, _gearAngle);
 
                 // Заголовок STEAMPUNK
                 using (var fTitle = Theme.Display(13.5f, FontStyle.Bold))
@@ -226,16 +246,32 @@ namespace SteampunkLauncher
 
             _headerBar.Controls.Add(_navContainer);
 
-            // 3. Блок профиля справа (скругленная капсула)
+            // 3. Блок быстрых кнопок и профиля справа (скругленная капсула)
             _rightWrapper = new Panel
             {
-                Size = new Size(260, 46),
+                Size = new Size(385, 46),
                 BackColor = Color.Transparent
             };
 
+            var btnChangelog = CreateHeaderIconBtn("📜", 0, "Что нового в сборке (Патчноут)", () =>
+            {
+                using (var dlg = new ChangelogDialog()) dlg.ShowDialog(this);
+            });
+
+            var btnDiscord = CreateHeaderIconBtn("💬", 42, "Наш Discord сервер", () =>
+            {
+                try { Process.Start(new ProcessStartInfo("https://discord.gg/") { UseShellExecute = true }); } catch { }
+            });
+
+            var btnWiki = CreateHeaderIconBtn("📖", 84, "База знаний и гайды", () =>
+            {
+                try { Process.Start(new ProcessStartInfo("https://github.com/Trubik1/minecraft") { UseShellExecute = true }); } catch { }
+            });
+
             var profileBox = new Card
             {
-                Dock = DockStyle.Fill,
+                Location = new Point(130, 0),
+                Size = new Size(250, 46),
                 FillColor = Color.FromArgb(24, 28, 38),
                 BorderColor = Theme.BorderSoft,
                 Radius = 23f,
@@ -298,7 +334,7 @@ namespace SteampunkLauncher
             _picProfileAvatar.Click += (s, e) => OpenProfileModal();
 
             profileBox.Controls.AddRange(new Control[] { _picProfileAvatar, _txtHeaderNick, btnEditProfile });
-            _rightWrapper.Controls.Add(profileBox);
+            _rightWrapper.Controls.AddRange(new Control[] { btnChangelog, btnDiscord, btnWiki, profileBox });
             _headerBar.Controls.Add(_rightWrapper);
 
             // Динамическое позиционирование шапки при ресайзе с защитой от наложений
@@ -337,6 +373,28 @@ namespace SteampunkLauncher
             _navButtons[id] = btn;
             parent.Controls.Add(btn);
             currentX += width + 8;
+        }
+
+        private static Button CreateHeaderIconBtn(string text, int x, string tooltip, Action onClick)
+        {
+            var btn = new Button
+            {
+                Text = text,
+                Location = new Point(x, 5),
+                Size = new Size(36, 36),
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(24, 28, 38),
+                ForeColor = Theme.Gold,
+                Font = Theme.Font(11f),
+                Cursor = Cursors.Hand
+            };
+            btn.FlatAppearance.BorderSize = 1;
+            btn.FlatAppearance.BorderColor = Theme.BorderSoft;
+            btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 46, 62);
+            var tt = new ToolTip();
+            tt.SetToolTip(btn, tooltip);
+            btn.Click += (s, e) => onClick();
+            return btn;
         }
 
         private void OpenProfileModal()
@@ -697,8 +755,53 @@ namespace SteampunkLauncher
                 lblRamTitle, _txtRamNumber, lblGbSuffix, _lblRamStatus, _ramSlider, btn4Gb, btn8Gb, btn12Gb
             });
 
+            // Карточка пресетов графики («Слабый ПК», «Баланс», «Ультра»)
+            var presetCard = new Card
+            {
+                Location = new Point(0, 276),
+                Size = new Size(490, 42),
+                FillColor = Color.FromArgb(20, 24, 32),
+                BorderColor = Theme.BorderSoft,
+                Radius = 12f
+            };
+
+            var lblPresetTitle = new Label
+            {
+                Text = "Графика:",
+                Font = Theme.Font(9f, FontStyle.Bold),
+                ForeColor = Theme.Text,
+                Location = new Point(14, 12),
+                AutoSize = true
+            };
+
+            var btnPotato = new Button();
+            var btnBalanced = new Button();
+            var btnUltra = new Button();
+
+            Action updatePresetButtons = () =>
+            {
+                string cur = _config.GraphicsPreset ?? GraphicsPresets.Balanced;
+                ConfigurePresetBtn(btnPotato, "🥔 Слабый ПК (Ноут)", cur == GraphicsPresets.Potato);
+                ConfigurePresetBtn(btnBalanced, "⚙️ Баланс", cur == GraphicsPresets.Balanced);
+                ConfigurePresetBtn(btnUltra, "✨ Ультра", cur == GraphicsPresets.Ultra);
+            };
+
+            Action<string> selectPreset = (p) =>
+            {
+                _config.GraphicsPreset = p;
+                _config.Save();
+                updatePresetButtons();
+            };
+
+            SetupPresetButton(btnPotato, 88, 6, 146, () => selectPreset(GraphicsPresets.Potato));
+            SetupPresetButton(btnBalanced, 240, 6, 104, () => selectPreset(GraphicsPresets.Balanced));
+            SetupPresetButton(btnUltra, 350, 6, 126, () => selectPreset(GraphicsPresets.Ultra));
+            updatePresetButtons();
+
+            presetCard.Controls.AddRange(new Control[] { lblPresetTitle, btnPotato, btnBalanced, btnUltra });
+
             bottomInfoPanel.Controls.AddRange(new Control[] {
-                lblSubtitleTop, lblSubtitleGold, lblDesc, ramBoxCard
+                lblSubtitleTop, lblSubtitleGold, lblDesc, ramBoxCard, presetCard
             });
             _gameCanvas.Controls.Add(bottomInfoPanel);
 
@@ -794,7 +897,7 @@ namespace SteampunkLauncher
 
             _gameCanvas.Resize += (s, e) =>
             {
-                bottomInfoPanel.Location = new Point(32, Math.Max(70, _gameCanvas.Height - 330));
+                bottomInfoPanel.Location = new Point(32, Math.Max(70, _gameCanvas.Height - 340));
                 repositionLaunch();
                 _gameCanvas.Invalidate();
             };
@@ -819,6 +922,25 @@ namespace SteampunkLauncher
             btn.FlatAppearance.BorderSize = 0;
             btn.Click += (s, e) => onClick();
             return btn;
+        }
+
+        private static void SetupPresetButton(Button btn, int x, int y, int w, Action onClick)
+        {
+            btn.Location = new Point(x, y);
+            btn.Size = new Size(w, 28);
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.Cursor = Cursors.Hand;
+            btn.Font = Theme.Font(8.5f, FontStyle.Bold);
+            btn.FlatAppearance.BorderSize = 1;
+            btn.Click += (s, e) => onClick();
+        }
+
+        private static void ConfigurePresetBtn(Button btn, string text, bool active)
+        {
+            btn.Text = text;
+            btn.BackColor = active ? Color.FromArgb(45, 55, 75) : Color.FromArgb(24, 28, 36);
+            btn.ForeColor = active ? Theme.Gold : Theme.TextDim;
+            btn.FlatAppearance.BorderColor = active ? Theme.Gold : Theme.BorderSoft;
         }
 
         // ════════════════════════════════════════════════════════════════════
@@ -894,7 +1016,7 @@ namespace SteampunkLauncher
             var bottomActions = new Panel
             {
                 Dock = DockStyle.Bottom,
-                Height = 145,
+                Height = 185,
                 BackColor = Color.Transparent
             };
 
@@ -918,13 +1040,33 @@ namespace SteampunkLauncher
             btnUpload.SetGreenStyle();
             btnUpload.Click += (s, e) => UploadSkinFromFile();
 
-            var spacer = new Panel { Dock = DockStyle.Top, Height = 8 };
+            var spacer2 = new Panel { Dock = DockStyle.Top, Height = 6 };
+
+            var btnToggleCape = new AccentButton
+            {
+                Text = _config.ShowCape ? "✨ Стимпанк-плащ: Включен" : "✨ Стимпанк-плащ: Выключен",
+                Dock = DockStyle.Top,
+                Height = 34,
+                Font = Theme.Font(9f)
+            };
+            btnToggleCape.SetDarkStyle();
+            btnToggleCape.ForeColor = _config.ShowCape ? Theme.Gold : Theme.TextDim;
+            btnToggleCape.Click += (s, e) =>
+            {
+                _config.ShowCape = !_config.ShowCape;
+                _config.Save();
+                _skinPreview.ShowCape = _config.ShowCape;
+                btnToggleCape.Text = _config.ShowCape ? "✨ Стимпанк-плащ: Включен" : "✨ Стимпанк-плащ: Выключен";
+                btnToggleCape.ForeColor = _config.ShowCape ? Theme.Gold : Theme.TextDim;
+            };
+
+            var spacer = new Panel { Dock = DockStyle.Top, Height = 6 };
 
             var btnReset = new AccentButton
             {
                 Text = "Сбросить на стандартный",
                 Dock = DockStyle.Top,
-                Height = 36,
+                Height = 34,
                 Font = Theme.Font(9f)
             };
             btnReset.SetDarkStyle();
@@ -949,7 +1091,7 @@ namespace SteampunkLauncher
             };
 
             bottomActions.Controls.AddRange(new Control[] {
-                _lblSkinStatus, btnReset, spacer, btnUpload, lblHint
+                _lblSkinStatus, btnReset, spacer, btnToggleCape, spacer2, btnUpload, lblHint
             });
             previewCard.Controls.Add(bottomActions);
 
@@ -957,7 +1099,8 @@ namespace SteampunkLauncher
             _skinPreview = new SkinPreview
             {
                 Dock = DockStyle.Fill,
-                BackColor = Theme.Field
+                BackColor = Theme.Field,
+                ShowCape = _config.ShowCape
             };
             _skinPreview.SkinChanged += (s, e) =>
             {
@@ -1748,11 +1891,11 @@ namespace SteampunkLauncher
             var spacer1 = new Panel { Dock = DockStyle.Top, Height = 14 };
             _tabSettings.Controls.Add(spacer1);
 
-            // Карточка 2: Параметры запуска и память
+            // Карточка 2: Параметры запуска, графика и оптимизация
             var cardOptions = new Card
             {
                 Dock = DockStyle.Top,
-                Height = 170,
+                Height = 225,
                 FillColor = Theme.Card,
                 BorderColor = Theme.BorderSoft,
                 Radius = 14f,
@@ -1761,7 +1904,7 @@ namespace SteampunkLauncher
 
             var titleOpts = new Label
             {
-                Text = "Параметры запуска и память",
+                Text = "Параметры запуска, графика и оптимизация",
                 Font = Theme.Display(13f, FontStyle.Bold),
                 ForeColor = Theme.Text,
                 Location = new Point(24, 16),
@@ -1844,8 +1987,8 @@ namespace SteampunkLauncher
             _chkJoinServer = new CheckBox
             {
                 Text = "Подключаться к серверу автоматически при старте",
-                Location = new Point(24, 94),
-                Width = 420,
+                Location = new Point(24, 88),
+                Width = 380,
                 AutoSize = true,
                 ForeColor = Theme.TextDim,
                 BackColor = Color.Transparent,
@@ -1858,26 +2001,142 @@ namespace SteampunkLauncher
                 _config.Save();
             };
 
-            var btnResetCache = new AccentButton
+            _chkDiscordRpc = new CheckBox
             {
-                Text = "Сбросить кэш файлов сборки",
-                Location = new Point(24, 124),
-                Width = 240,
-                Height = 32,
+                Text = "Отображать статус в Discord (RPC)",
+                Location = new Point(410, 88),
+                Width = 270,
+                AutoSize = true,
+                ForeColor = Theme.TextDim,
+                BackColor = Color.Transparent,
+                Checked = _config.DiscordRpcEnabled,
+                Cursor = Cursors.Hand
+            };
+            _chkDiscordRpc.CheckedChanged += (s, e) =>
+            {
+                _config.DiscordRpcEnabled = _chkDiscordRpc.Checked;
+                _config.Save();
+                if (_config.DiscordRpcEnabled) DiscordRpc.Instance.Start();
+                else DiscordRpc.Instance.SetPresence("", "");
+            };
+
+            // Выбор активного шейдера
+            var lblShader = new Label
+            {
+                Text = "Шейдерпак (Iris):",
+                Location = new Point(24, 126),
+                Font = Theme.Font(9.5f),
+                ForeColor = Theme.Text,
+                AutoSize = true
+            };
+
+            _cmbShaders = new ComboBox
+            {
+                Location = new Point(160, 122),
+                Width = 260,
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                BackColor = Theme.Field,
+                ForeColor = Theme.Gold,
+                Font = Theme.Font(9.5f)
+            };
+            _cmbShaders.SelectedIndexChanged += (s, e) =>
+            {
+                if (_cmbShaders.SelectedItem != null)
+                {
+                    string sel = _cmbShaders.SelectedItem.ToString();
+                    ShaderManager.SetActiveShader(_config.GameDir, sel);
+                    _config.ActiveShader = sel;
+                    _config.Save();
+                }
+            };
+
+            var btnRepair = new AccentButton
+            {
+                Text = "🛠️ Починить сборку",
+                Location = new Point(24, 166),
+                Width = 200,
+                Height = 36,
+                Font = Theme.Font(9f, FontStyle.Bold)
+            };
+            btnRepair.SetGoldGlowStyle();
+            btnRepair.Click += async (s, e) =>
+            {
+                if (_busy) return;
+                var ans = MessageBox.Show(this,
+                    "Лаунчер сбросит временные кэши, перепроверит все моды и восстановит поврежденные файлы.\n\nПродолжить?",
+                    "Починка сборки", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (ans != DialogResult.Yes) return;
+
+                SetBusy(true);
+                _progressBar.Value = 0;
+                try
+                {
+                    using (var cts = new CancellationTokenSource())
+                    {
+                        var prog = new Progress<ProgressInfo>(p =>
+                        {
+                            if (p != null)
+                            {
+                                _progressBar.Value = p.Percent;
+                                SetPhase(p.Phase, p.Detail);
+                            }
+                        });
+
+                        PackUpdater.ResetVerificationCache(_config.GameDir);
+                        GameInstaller.ResetInstallMarker(_config.GameDir);
+                        SetPhase("Проверка файлов...", "");
+                        PackManifest manifest = await _updater.FetchManifestAsync(cts.Token);
+                        SyncResult res = await _updater.SyncAsync(manifest, _config.GameDir, prog, cts.Token);
+                        AppendLog(string.Format("Починка завершена: проверено {0} файлов, обновлено {1}", res.Total, res.Downloaded));
+                        SetPhase("Сборка в порядке!", "");
+                        MessageBox.Show(this, "Все файлы успешно проверены и восстановлены!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    AppendLog("Ошибка починки: " + ex.Message);
+                    MessageBox.Show(this, "Не удалось выполнить починку: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    SetBusy(false);
+                }
+            };
+
+            var btnOpenGameDir = new AccentButton
+            {
+                Text = "📂 Папка игры",
+                Location = new Point(234, 166),
+                Width = 140,
+                Height = 36,
                 Font = Theme.Font(9f)
             };
-            btnResetCache.SetDarkStyle();
-            btnResetCache.Click += (s, e) =>
+            btnOpenGameDir.SetDarkStyle();
+            btnOpenGameDir.Click += (s, e) =>
             {
-                PackUpdater.ResetVerificationCache(_config.GameDir);
-                GameInstaller.ResetInstallMarker(_config.GameDir);
-                AppendLog("Кэш проверки файлов сброшен");
-                MessageBox.Show(this, "Кэш проверки файлов сброшен. При следующем запуске все файлы будут сверены с манифестом.",
-                    "Steampunk & Swords", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (!string.IsNullOrEmpty(_config.GameDir) && Directory.Exists(_config.GameDir))
+                    Process.Start("explorer.exe", _config.GameDir);
+            };
+
+            var btnBackupWp = new AccentButton
+            {
+                Text = "💾 Бэкап меток карты",
+                Location = new Point(384, 166),
+                Width = 190,
+                Height = 36,
+                Font = Theme.Font(9f)
+            };
+            btnBackupWp.SetDarkStyle();
+            btnBackupWp.Click += (s, e) =>
+            {
+                WaypointsBackup.CreateBackup(_config.GameDir);
+                MessageBox.Show(this, "Резервная копия меток карты Xaero сохранена в backups/waypoints!",
+                    "Бэкап меток", MessageBoxButtons.OK, MessageBoxIcon.Information);
             };
 
             cardOptions.Controls.AddRange(new Control[] {
-                titleOpts, lblSettingsRam, _txtSettingsRam, lblSettingsRamUnit, _sliderSettingsRam, _chkJoinServer, btnResetCache
+                titleOpts, lblSettingsRam, _txtSettingsRam, lblSettingsRamUnit, _sliderSettingsRam,
+                _chkJoinServer, _chkDiscordRpc, lblShader, _cmbShaders, btnRepair, btnOpenGameDir, btnBackupWp
             });
             _tabSettings.Controls.Add(cardOptions);
 
@@ -1940,6 +2199,16 @@ namespace SteampunkLauncher
             int curRam = _config.ResolveRamMb();
             if (_txtSettingsRam != null) _txtSettingsRam.Text = string.Format("{0:0.#}", curRam / 1024.0);
             if (_sliderSettingsRam != null) _sliderSettingsRam.Value = curRam;
+            if (_chkDiscordRpc != null) _chkDiscordRpc.Checked = _config.DiscordRpcEnabled;
+            if (_cmbShaders != null && !string.IsNullOrEmpty(_config.GameDir) && Directory.Exists(_config.GameDir))
+            {
+                var shaders = ShaderManager.GetInstalledShaders(_config.GameDir);
+                _cmbShaders.Items.Clear();
+                _cmbShaders.Items.AddRange(shaders.ToArray());
+                string curShader = ShaderManager.GetCurrentShader(_config.GameDir);
+                int idx = _cmbShaders.Items.IndexOf(curShader);
+                _cmbShaders.SelectedIndex = idx >= 0 ? idx : 0;
+            }
         }
 
         // ════════════════════════════════════════════════════════════════════
@@ -1999,14 +2268,26 @@ namespace SteampunkLauncher
                 SetPhase("Проверка файлов игры...", "Minecraft " + GameInstaller.McVersion + " • NeoForge " + GameInstaller.NeoForgeVersion);
                 string versionName = await GameInstaller.EnsureInstalledAsync(_config.GameDir, java, progress, ct);
 
-                // 4. Применяем скин
+                // 4.1 Применяем скин
                 SkinStore.ApplyToGame(_config.GameDir, nick);
+
+                // 4.2 Применяем графический пресет (Слабый ПК / Баланс / Ультра)
+                GraphicsPresets.Apply(_config.GameDir, _config.GraphicsPreset);
+
+                // 4.3 Резервный бэкап меток карты (Xaero's WorldMap & Waypoints)
+                WaypointsBackup.CreateBackup(_config.GameDir);
 
                 if (!launchAfter)
                 {
                     SetPhase("Готово", "Все файлы проверены и готовы к игре");
                     _progressBar.Value = 100;
                     return;
+                }
+
+                // Discord RPC: В игре
+                if (_config.DiscordRpcEnabled)
+                {
+                    DiscordRpc.Instance.SetInGamePresence(nick);
                 }
 
                 // 5. Запуск игры
@@ -2021,6 +2302,19 @@ namespace SteampunkLauncher
                 Show();
                 Activate();
                 AppendLog("Игра закрыта (код " + game.ExitCode + ")");
+
+                // Discord RPC: В лаунчере
+                if (_config.DiscordRpcEnabled)
+                {
+                    DiscordRpc.Instance.SetLauncherPresence();
+                }
+
+                // Умный доктор крашей
+                if (game.ExitCode != 0)
+                {
+                    CrashDoctor.CheckAndShowIfCrashed(this, _config.GameDir, game.ExitCode);
+                }
+
                 SetPhase("Готов к запуску", "");
                 _progressBar.Value = 0;
             }
@@ -2081,6 +2375,16 @@ namespace SteampunkLauncher
 
         private async Task InitBackgroundTasksAsync()
         {
+            // Инициализация Discord Rich Presence
+            if (_config.DiscordRpcEnabled)
+            {
+                try
+                {
+                    DiscordRpc.Instance.Start();
+                }
+                catch { }
+            }
+
             // Получаем данные о сервере в фоне
             try
             {
@@ -2113,6 +2417,13 @@ namespace SteampunkLauncher
                 }
             }
             catch { }
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            try { DiscordRpc.Instance.Dispose(); } catch { }
+            try { _gearAnimTimer?.Stop(); _gearAnimTimer?.Dispose(); } catch { }
+            base.OnFormClosing(e);
         }
     }
 }
