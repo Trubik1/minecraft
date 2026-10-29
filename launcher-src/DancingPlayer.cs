@@ -234,8 +234,8 @@ namespace SteampunkLauncher
             PrepareCamera();
             BuildDancingSkel();
 
-            // Реалистичная тень на каменном постаменте
-            var shadowRect = new RectangleF(_cx - 9.5f * _s, _cy + 13.8f * _s, 19f * _s, 5.2f * _s);
+            // Реалистичная тень на каменном постаменте прямо под ногами
+            var shadowRect = new RectangleF(_cx - 10f * _s, _cy + 15.6f * _s, 20f * _s, 5.2f * _s);
             using (var pathShadow = new GraphicsPath())
             {
                 pathShadow.AddEllipse(shadowRect);
@@ -262,11 +262,11 @@ namespace SteampunkLauncher
 
         private void PrepareCamera()
         {
-            // Персонаж заполняет правую часть в монументальном масштабе без обрезки
-            float availableH = Math.Max(100f, Height - 30f);
-            _s = (availableH / 34.0f) * 0.98f * _zoom;
+            // Масштаб персонажа: героический размер с гарантированным запасом от обрезки сверху и снизу
+            float availableH = Math.Max(100f, Height - 70f);
+            _s = (availableH / 36.5f) * _zoom;
             _cx = Width * 0.5f;
-            _cy = Height * 0.51f + 1.8f * _s;
+            _cy = Height * 0.48f;
 
             double yawRad = _yaw * Math.PI / 180.0;
             double pitchRad = _pitch * Math.PI / 180.0;
@@ -403,7 +403,7 @@ namespace SteampunkLauncher
             if (_currentDance == DanceStyle.Groove)
             {
                 // Стимпанк-грув: упругий пружинящий бит и кач руками/бёдрами
-                float bounce = (float)Math.Abs(Math.Sin(t * 6.2)) * 2.2f;
+                float bounce = (float)Math.Abs(Math.Sin(t * 6.2)) * 1.8f;
                 rootY = bounce;
                 rootX = (float)Math.Sin(t * 3.1) * 1.8f;
 
@@ -426,8 +426,8 @@ namespace SteampunkLauncher
             {
                 // Казачок / Присядка: глубокий присед со скрещенными руками и поочередным выбросом ног
                 float kKick = (float)Math.Sin(t * 7.5);
-                float kBounce = (float)Math.Abs(Math.Sin(t * 7.5)) * 1.6f;
-                rootY = -5.5f + kBounce;
+                float kBounce = (float)Math.Abs(Math.Sin(t * 7.5)) * 1.0f;
+                rootY = -2.8f + kBounce;
 
                 rArmPitch = -78.0f;
                 rArmRoll = 42.0f;
@@ -438,19 +438,21 @@ namespace SteampunkLauncher
                 lArmYaw = -38.0f;
 
                 bodyPitch = 6.0f;
-                headPitch = -12.0f + kBounce * 6.0f;
-                headRoll = (float)Math.Sin(t * 3.75) * 6.0f;
+                headPitch = -10.0f + kBounce * 4.0f;
+                headRoll = (float)Math.Sin(t * 3.75) * 5.0f;
 
+                // Базовый угол сгиба опорной ноги, удерживающий ступни на каменном постаменте
+                float baseBend = 38.0f;
                 if (kKick > 0)
                 {
-                    rLegPitch = -75.0f * kKick;
-                    lLegPitch = 40.0f * kKick;
+                    rLegPitch = -72.0f * kKick;
+                    lLegPitch = baseBend + (1f - kKick) * 6.0f;
                 }
                 else
                 {
                     float inv = -kKick;
-                    lLegPitch = -75.0f * inv;
-                    rLegPitch = 40.0f * inv;
+                    lLegPitch = -72.0f * inv;
+                    rLegPitch = baseBend + (1f - inv) * 6.0f;
                 }
             }
 

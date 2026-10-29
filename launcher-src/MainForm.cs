@@ -699,13 +699,12 @@ namespace SteampunkLauncher
             // 2. Позиционирование масштабного танцующего персонажа на постаменте справа
             if (_dancingPlayer != null)
             {
-                int charH = Math.Min(700, H - 65);
+                int charH = Math.Min(680, H - 85);
                 int charW = Math.Min(560, (int)(charH * 0.82f));
-                int charX = W - charW - 6;
-                int charY = Math.Max(15, H - charH - 40);
+                int charX = W - charW - 10;
+                int charY = Math.Max(10, H - charH - 85);
                 _dancingPlayer.Size = new Size(charW, charH);
                 _dancingPlayer.Location = new Point(charX, charY);
-                _dancingPlayer.BringToFront();
             }
 
             // 3. Позиционирование Command Deck по центру внизу
@@ -716,6 +715,7 @@ namespace SteampunkLauncher
 
             _commandDeck.Location = new Point(deckX, deckY);
             _commandDeck.Size = new Size(deckW, deckH);
+            _commandDeck.BringToFront();
 
             LayoutCommandDeck(deckW, deckH);
         }
