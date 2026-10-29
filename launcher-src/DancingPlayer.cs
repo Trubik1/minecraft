@@ -74,10 +74,6 @@ namespace SteampunkLauncher
         private DanceStyle _currentDance = DanceStyle.Groove;
         private bool _isExcited;
 
-        // Всплывающий микро-бейдж только при клике (на 1.4 секунды)
-        private string _badgeText = "Стимпанк-грув 🕺";
-        private float _badgeTimer = 0f;
-
         // Проекция
         private float _s, _cx, _cy, _sinYaw, _cosYaw, _sinPitch, _cosPitch;
         private float _lastDepth;
@@ -158,11 +154,6 @@ namespace SteampunkLauncher
                 }
             }
 
-            if (_badgeTimer > 0f)
-            {
-                _badgeTimer -= dt;
-            }
-
             Invalidate();
         }
 
@@ -170,8 +161,6 @@ namespace SteampunkLauncher
         {
             // Переключаем только между двумя лучшими танцами: Стимпанк-грув и Присядка
             _currentDance = (_currentDance == DanceStyle.Groove) ? DanceStyle.Kazotsky : DanceStyle.Groove;
-            _badgeText = (_currentDance == DanceStyle.Groove) ? "Стимпанк-грув 🕺" : "Присядка (Казачок) 🪗";
-            _badgeTimer = 1.4f;
             Invalidate();
         }
 
@@ -269,49 +258,15 @@ namespace SteampunkLauncher
             {
                 DrawFace(g, face);
             }
-
-            // Лаконичный бейдж названия танца только на 1.4 секунды после клика
-            if (_badgeTimer > 0f)
-            {
-                g.SmoothingMode = SmoothingMode.AntiAlias;
-                g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-
-                float badgeAlphaFrac = Math.Min(1f, _badgeTimer / 0.4f);
-                int bAlpha = (int)(badgeAlphaFrac * 240);
-                if (bAlpha > 255) bAlpha = 255;
-
-                using (var fBadge = Theme.Font(8.8f, FontStyle.Bold))
-                {
-                    var sz = g.MeasureString(_badgeText, fBadge);
-                    float bw = sz.Width + 20f;
-                    float bh = 24f;
-                    float bx = (Width - bw) / 2f;
-                    float by = Height * 0.05f;
-
-                    var bRect = new RectangleF(bx, by, bw, bh);
-                    using (var pathB = Theme.RoundRect(bRect, 6f))
-                    {
-                        using (var brushB = new SolidBrush(Color.FromArgb(bAlpha, 18, 22, 32)))
-                            g.FillPath(brushB, pathB);
-                        using (var penB = new Pen(Color.FromArgb(bAlpha, Theme.Gold), 1.2f))
-                            g.DrawPath(penB, pathB);
-                    }
-
-                    using (var brushTxt = new SolidBrush(Color.FromArgb(bAlpha, Color.White)))
-                    using (var sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center })
-                    {
-                        g.DrawString(_badgeText, fBadge, brushTxt, bRect, sf);
-                    }
-                }
-            }
         }
 
         private void PrepareCamera()
         {
-            // Масштаб увеличен: персонаж крупный, солидный, заполняет правую часть
-            _s = 13.0f * _zoom;
+            // Персонаж заполняет правую часть в монументальном масштабе без обрезки
+            float availableH = Math.Max(100f, Height - 30f);
+            _s = (availableH / 34.0f) * 0.98f * _zoom;
             _cx = Width * 0.5f;
-            _cy = Height * 0.52f + 2.5f * _s;
+            _cy = Height * 0.51f + 1.8f * _s;
 
             double yawRad = _yaw * Math.PI / 180.0;
             double pitchRad = _pitch * Math.PI / 180.0;

@@ -699,10 +699,10 @@ namespace SteampunkLauncher
             // 2. Позиционирование масштабного танцующего персонажа на постаменте справа
             if (_dancingPlayer != null)
             {
-                int charW = 420;
-                int charH = 520;
+                int charH = Math.Min(700, H - 65);
+                int charW = Math.Min(560, (int)(charH * 0.82f));
                 int charX = W - charW - 6;
-                int charY = Math.Max(20, H - charH - 65);
+                int charY = Math.Max(15, H - charH - 40);
                 _dancingPlayer.Size = new Size(charW, charH);
                 _dancingPlayer.Location = new Point(charX, charY);
                 _dancingPlayer.BringToFront();
