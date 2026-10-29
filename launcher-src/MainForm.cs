@@ -40,9 +40,10 @@ namespace SteampunkLauncher
         private PictureBox _picProfileAvatar;
         private TextBox _txtHeaderNick;
 
-        // ─── Элементы вкладки «Игра» (Command Deck + Hero Panel) ───────────
+        // ─── Элементы вкладки «Игра» (Command Deck + Hero Panel + Dancing Player) ───────────
         private GameCanvas _gameCanvas;
         private HeroPanel _heroPanel;
+        private DancingPlayer _dancingPlayer;
         private CommandDeck _commandDeck;
         private AccentButton _btnLaunch;
         private AccentButton _btnCancel;
@@ -448,6 +449,11 @@ namespace SteampunkLauncher
                 {
                     _picProfileAvatar.Image = null;
                 }
+
+                if (_dancingPlayer != null)
+                {
+                    try { _dancingPlayer.ReloadSkin(); } catch { }
+                }
             }
             catch { }
         }
@@ -478,7 +484,11 @@ namespace SteampunkLauncher
             };
             _gameCanvas.Controls.Add(_heroPanel);
 
-            // 2. Монолитная нижняя панель управления (Command Deck)
+            // 2. Танцующий 3D-персонаж на каменном постаменте справа от портала
+            _dancingPlayer = new DancingPlayer();
+            _gameCanvas.Controls.Add(_dancingPlayer);
+
+            // 3. Монолитная нижняя панель управления (Command Deck)
             _commandDeck = new CommandDeck
             {
                 Size = new Size(1040, 94),
@@ -686,7 +696,19 @@ namespace SteampunkLauncher
                 _heroPanel.Size = new Size(Math.Min(600, W - 72), 105);
             }
 
-            // 2. Позиционирование Command Deck по центру внизу
+            // 2. Позиционирование танцующего персонажа на постаменте справа
+            if (_dancingPlayer != null)
+            {
+                int charW = 260;
+                int charH = 370;
+                int charX = Math.Min(W - charW - 16, Math.Max(W / 2 + 100, (int)(W * 0.76f)));
+                int charY = Math.Max(60, H - charH - 92);
+                _dancingPlayer.Size = new Size(charW, charH);
+                _dancingPlayer.Location = new Point(charX, charY);
+                _dancingPlayer.BringToFront();
+            }
+
+            // 3. Позиционирование Command Deck по центру внизу
             int deckW = Math.Min(1060, W - 48);
             int deckH = 94;
             int deckX = (W - deckW) / 2;
@@ -2217,6 +2239,7 @@ namespace SteampunkLauncher
             if (_btn8Gb != null) _btn8Gb.Enabled = !busy;
             if (_btn12Gb != null) _btn12Gb.Enabled = !busy;
             if (_presetSwitch != null) _presetSwitch.Enabled = !busy;
+            if (_dancingPlayer != null) _dancingPlayer.IsExcited = busy;
             RepositionGameLayout();
         }
 
