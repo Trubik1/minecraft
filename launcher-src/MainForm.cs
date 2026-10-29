@@ -23,7 +23,7 @@ namespace SteampunkLauncher
 
         // ─── Навигация и контейнеры ───────────────────────────
         private Panel _headerBar;
-        private Panel _logoPanel;
+        private LogoBox _logoPanel;
         private Panel _navContainer;
         private Panel _rightWrapper;
         private Panel _contentArea;
@@ -41,7 +41,8 @@ namespace SteampunkLauncher
         private TextBox _txtHeaderNick;
 
         // ─── Элементы вкладки «Игра» (LoliLand Style) ───────────
-        private Panel _gameCanvas;
+        private GameCanvas _gameCanvas;
+        private Panel _bottomInfoPanel;
         private AccentButton _btnLaunch;
         private AccentButton _btnCancel;
         private FlatProgressBar _progressBar;
@@ -77,8 +78,7 @@ namespace SteampunkLauncher
         private RichTextBox _logBox;
 
         // ─── Дополнительные компоненты (Анимация, RPC, Шейдеры) ──
-        private float _gearAngle = 0f;
-        private bool _isLogoHovered = false;
+        private float _gearSpeed = 0f;
         private System.Windows.Forms.Timer _gearAnimTimer;
         private ComboBox _cmbShaders;
         private CheckBox _chkDiscordRpc;
@@ -96,13 +96,25 @@ namespace SteampunkLauncher
                 }
             }
 
-            _gearAnimTimer = new System.Windows.Forms.Timer { Interval = 33 };
+            _gearAnimTimer = new System.Windows.Forms.Timer { Interval = 25 };
             _gearAnimTimer.Tick += (s, e) =>
             {
-                if (_busy || _isLogoHovered)
+                if (_busy || (_logoPanel != null && _logoPanel.IsHovered))
                 {
-                    _gearAngle = (_gearAngle + 3.5f) % 360f;
-                    _logoPanel?.Invalidate();
+                    _gearSpeed = Math.Min(4.2f, _gearSpeed + 0.6f);
+                }
+                else
+                {
+                    _gearSpeed = Math.Max(0f, _gearSpeed - 0.25f);
+                }
+
+                if (_gearSpeed > 0.05f)
+                {
+                    if (_logoPanel != null)
+                    {
+                        _logoPanel.GearAngle = (_logoPanel.GearAngle + _gearSpeed) % 360f;
+                        _logoPanel.Invalidate();
+                    }
                 }
             };
             _gearAnimTimer.Start();
@@ -118,23 +130,24 @@ namespace SteampunkLauncher
             Font = Theme.Font(9.5f);
             DoubleBuffered = true;
 
-            // Иконка окна и процесса
+            // Иконка окна и процесса (загружаем напрямую из внедрённого ресурса app.ico)
             try
             {
-                Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+                using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("app.ico"))
+                {
+                    if (stream != null) Icon = new Icon(stream);
+                }
             }
             catch { }
             if (Icon == null)
             {
                 try
                 {
-                    using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("app.ico"))
-                    {
-                        if (stream != null) Icon = new Icon(stream);
-                    }
+                    Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
                 }
                 catch { }
             }
+            ShowIcon = true;
 
             LoadBackgroundImage();
             BuildLayout();
@@ -192,43 +205,12 @@ namespace SteampunkLauncher
             };
 
             // 1. Логотип слева (при клике переходит на главный экран)
-            _logoPanel = new Panel
+            _logoPanel = new LogoBox
             {
                 Location = new Point(20, 0),
-                Size = new Size(190, 68),
-                BackColor = Color.Transparent,
-                Cursor = Cursors.Hand
+                Size = new Size(210, 68)
             };
-
-            Action goHome = () => SwitchTab("game");
-            _logoPanel.Click += (s, e) => goHome();
-            _logoPanel.MouseEnter += (s, e) => { _isLogoHovered = true; };
-            _logoPanel.MouseLeave += (s, e) => { _isLogoHovered = false; };
-
-            _logoPanel.Paint += (s, e) =>
-            {
-                var g = e.Graphics;
-                g.SmoothingMode = SmoothingMode.AntiAlias;
-                g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-
-                // Четкая векторная шестеренка с плавной стимпанк-анимацией вращения
-                Gear.Draw(g, new RectangleF(2, 14, 38, 38), Theme.Gold, _gearAngle);
-
-                // Заголовок STEAMPUNK
-                using (var fTitle = Theme.Display(13.5f, FontStyle.Bold))
-                using (var bTitle = new SolidBrush(Theme.Gold))
-                {
-                    g.DrawString("STEAMPUNK", fTitle, bTitle, 46, 14);
-                }
-
-                // Буквальный подзаголовок & SWORDS (без мнемоники и обрезки)
-                using (var fSub = Theme.Font(9f, FontStyle.Bold))
-                using (var bSub = new SolidBrush(Theme.TextDim))
-                {
-                    g.DrawString("& SWORDS", fSub, bSub, 48, 37);
-                }
-            };
-
+            _logoPanel.Click += (s, e) => SwitchTab("game");
             _headerBar.Controls.Add(_logoPanel);
 
             // 2. Капсульные вкладки по центру (компактные пилюли без наложений)
@@ -442,6 +424,7 @@ namespace SteampunkLauncher
             }
 
             _contentArea.ResumeLayout(true);
+            if (tabId == "game") RepositionGameLayout();
         }
 
         private void InitTabs()
@@ -485,129 +468,71 @@ namespace SteampunkLauncher
             _tabGame = new Panel { Dock = DockStyle.Fill, BackColor = Theme.Bg };
 
             // Полноэкранный холст с отрисовкой кинематографичного арта и градиента
-            _gameCanvas = new Panel
+            _gameCanvas = new GameCanvas
             {
-                Dock = DockStyle.Fill,
-                BackColor = Theme.Bg
+                Dock = DockStyle.Fill
             };
-            _gameCanvas.GetType().GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic)
-                ?.SetValue(_gameCanvas, true, null);
-
-            _gameCanvas.Paint += (s, e) =>
+            if (_bgImage != null)
             {
-                var g = e.Graphics;
-                g.SmoothingMode = SmoothingMode.HighQuality;
-
-                // 1. Отрисовка фонового арта с сохранением пропорций (Cover)
-                if (_bgImage != null)
-                {
-                    float imgRatio = (float)_bgImage.Width / _bgImage.Height;
-                    float screenRatio = (float)_gameCanvas.Width / _gameCanvas.Height;
-                    float drawW, drawH, drawX, drawY;
-
-                    if (screenRatio > imgRatio)
-                    {
-                        drawW = _gameCanvas.Width;
-                        drawH = _gameCanvas.Width / imgRatio;
-                        drawX = 0;
-                        drawY = (_gameCanvas.Height - drawH) / 2f;
-                    }
-                    else
-                    {
-                        drawH = _gameCanvas.Height;
-                        drawW = _gameCanvas.Height * imgRatio;
-                        drawX = (_gameCanvas.Width - drawW) / 2f;
-                        drawY = 0;
-                    }
-
-                    g.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                    g.DrawImage(_bgImage, drawX, drawY, drawW, drawH);
-                }
-                else
-                {
-                    using (var brush = new SolidBrush(Theme.Bg))
-                        g.FillRectangle(brush, _gameCanvas.ClientRectangle);
-                }
-
-                // 2. Мягкое бесшовное градиентное затемнение снизу для идеальной читаемости (без швов)
-                int gradH = (int)(_gameCanvas.Height * 0.55f);
-                if (gradH > 10)
-                {
-                    int startY = _gameCanvas.Height - gradH;
-                    var brushRect = new Rectangle(0, startY - 2, _gameCanvas.Width, gradH + 4);
-                    using (var lgb = new LinearGradientBrush(brushRect,
-                        Color.FromArgb(0, 14, 16, 22),
-                        Color.FromArgb(245, 14, 16, 22),
-                        LinearGradientMode.Vertical))
-                    {
-                        lgb.WrapMode = WrapMode.TileFlipY;
-                        g.FillRectangle(lgb, 0, startY, _gameCanvas.Width, gradH);
-                    }
-                }
-            };
+                _gameCanvas.SetWallpaper(_bgImage);
+            }
 
             // ─── Снизу слева: Название, описание и ЧИСЛОВОЙ ВВОД RAM ───
-            var bottomInfoPanel = new Panel
+            _bottomInfoPanel = new Panel
             {
-                Location = new Point(32, _tabGame.Height - 330),
-                Size = new Size(500, 315),
+                Location = new Point(32, 200),
+                Size = new Size(494, 282),
                 BackColor = Color.Transparent,
-                Anchor = AnchorStyles.Bottom | AnchorStyles.Left
+                Anchor = AnchorStyles.Top | AnchorStyles.Left
             };
+            _bottomInfoPanel.GetType().GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic)
+                ?.SetValue(_bottomInfoPanel, true, null);
 
-            var lblSubtitleTop = new Label
+            _bottomInfoPanel.Paint += (s, e) =>
             {
-                Text = "Увлекательное",
-                Font = Theme.Display(23f, FontStyle.Bold),
-                ForeColor = Color.White,
-                Location = new Point(0, 0),
-                AutoSize = true
-            };
+                var g = e.Graphics;
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 
-            var lblSubtitleGold = new Label
-            {
-                Text = "кубическое приключение",
-                Font = Theme.Display(23f, FontStyle.Bold),
-                ForeColor = Theme.Gold,
-                Location = new Point(0, 40),
-                AutoSize = true
-            };
-
-            var lblDesc = new Label
-            {
-                Text = "Steampunk & Swords — сборка с уникальными механизмами, магией и приключениями!\nMinecraft 1.21.1  •  NeoForge 21.1.264  •  Быстрое подключение и автосинхронизация",
-                Font = Theme.Font(9.5f),
-                ForeColor = Color.FromArgb(210, 220, 235),
-                Location = new Point(0, 88),
-                Size = new Size(500, 44)
+                using (var fBig = Theme.Display(21f, FontStyle.Bold))
+                using (var bWhite = new SolidBrush(Color.White))
+                using (var bGold = new SolidBrush(Theme.Gold))
+                using (var fSmall = Theme.Font(9.2f))
+                using (var bMuted = new SolidBrush(Color.FromArgb(210, 220, 235)))
+                {
+                    g.DrawString("Увлекательное", fBig, bWhite, 0, 0);
+                    g.DrawString("кубическое приключение", fBig, bGold, 0, 32);
+                    g.DrawString("Steampunk & Swords — сборка с механизмами, магией и приключениями!", fSmall, bMuted, 0, 68);
+                }
             };
 
             // ─── Блок ввода никнейма игрока ───
             var nickCard = new Card
             {
-                Location = new Point(0, 140),
-                Size = new Size(490, 48),
+                Location = new Point(0, 96),
+                Size = new Size(490, 42),
                 FillColor = Color.FromArgb(170, 20, 24, 32),
                 BorderColor = Theme.BorderSoft,
                 Radius = 12f,
-                Padding = new Padding(12, 8, 12, 8)
+                Padding = new Padding(12, 6, 12, 6),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left
             };
 
             var lblNickTitle = new Label
             {
                 Text = "Никнейм игрока:",
-                Font = Theme.Font(10f, FontStyle.Bold),
+                Font = Theme.Font(9.5f, FontStyle.Bold),
                 ForeColor = Theme.Text,
-                Location = new Point(14, 14),
+                Location = new Point(14, 11),
                 AutoSize = true
             };
 
             _txtGameNick = new TextBox
             {
                 Text = string.IsNullOrEmpty(_config.Nickname) ? "Trubik" : _config.Nickname,
-                Location = new Point(165, 10),
-                Width = 220,
-                Height = 26,
+                Location = new Point(140, 8),
+                Width = 240,
+                Height = 24,
                 Font = Theme.Font(11f, FontStyle.Bold),
                 BackColor = Theme.Field,
                 ForeColor = Color.White,
@@ -628,7 +553,7 @@ namespace SteampunkLauncher
             };
 
             nickCard.Controls.AddRange(new Control[] { lblNickTitle, _txtGameNick });
-            bottomInfoPanel.Controls.Add(nickCard);
+            _bottomInfoPanel.Controls.Add(nickCard);
 
             // ─── Блок оперативной памяти с ЧИСЛОВЫМ ВВОДОМ ───
             int curRam = _config.ResolveRamMb();
@@ -637,12 +562,13 @@ namespace SteampunkLauncher
 
             var ramBoxCard = new Card
             {
-                Location = new Point(0, 196),
-                Size = new Size(490, 96),
+                Location = new Point(0, 146),
+                Size = new Size(490, 82),
                 FillColor = Color.FromArgb(170, 20, 24, 32),
                 BorderColor = Theme.BorderSoft,
                 Radius = 12f,
-                Padding = new Padding(12)
+                Padding = new Padding(12),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left
             };
 
             var lblRamTitle = new Label
@@ -650,7 +576,7 @@ namespace SteampunkLauncher
                 Text = "Выделение памяти (RAM):",
                 Font = Theme.Font(9.5f, FontStyle.Bold),
                 ForeColor = Theme.Text,
-                Location = new Point(14, 12),
+                Location = new Point(14, 11),
                 AutoSize = true
             };
 
@@ -658,8 +584,8 @@ namespace SteampunkLauncher
             _txtRamNumber = new TextBox
             {
                 Text = string.Format("{0:0.#}", curRam / 1024.0),
-                Location = new Point(205, 8),
-                Size = new Size(52, 24),
+                Location = new Point(190, 8),
+                Size = new Size(50, 24),
                 Font = Theme.Font(10.5f, FontStyle.Bold),
                 BackColor = Theme.Field,
                 ForeColor = Theme.Gold,
@@ -672,7 +598,7 @@ namespace SteampunkLauncher
                 Text = "ГБ",
                 Font = Theme.Font(9.5f, FontStyle.Bold),
                 ForeColor = Theme.Gold,
-                Location = new Point(262, 11),
+                Location = new Point(244, 11),
                 AutoSize = true
             };
 
@@ -681,14 +607,14 @@ namespace SteampunkLauncher
                 Text = string.Format("({0} МБ из {1} МБ)", curRam, totalSystemRam),
                 Font = Theme.Font(8.5f),
                 ForeColor = Theme.Muted,
-                Location = new Point(292, 12),
+                Location = new Point(274, 12),
                 AutoSize = true
             };
 
             _ramSlider = new TrackBar
             {
-                Location = new Point(10, 44),
-                Size = new Size(300, 40),
+                Location = new Point(8, 40),
+                Size = new Size(285, 34),
                 Minimum = 1024,
                 Maximum = maxSlider,
                 TickFrequency = 1024,
@@ -747,22 +673,24 @@ namespace SteampunkLauncher
                 _lblRamStatus.Text = string.Format("({0} МБ из {1} МБ)", mb, totalSystemRam);
             };
 
-            var btn4Gb = CreatePresetBtn("4G", 320, 46, () => setPreset(4));
-            var btn8Gb = CreatePresetBtn("8G", 374, 46, () => setPreset(8));
-            var btn12Gb = CreatePresetBtn("12G", 428, 46, () => setPreset(12));
+            var btn4Gb = CreatePresetBtn("4G", 306, 42, () => setPreset(4));
+            var btn8Gb = CreatePresetBtn("8G", 362, 42, () => setPreset(8));
+            var btn12Gb = CreatePresetBtn("12G", 418, 42, () => setPreset(12));
 
             ramBoxCard.Controls.AddRange(new Control[] {
                 lblRamTitle, _txtRamNumber, lblGbSuffix, _lblRamStatus, _ramSlider, btn4Gb, btn8Gb, btn12Gb
             });
+            _bottomInfoPanel.Controls.Add(ramBoxCard);
 
             // Карточка пресетов графики («Слабый ПК», «Баланс», «Ультра»)
             var presetCard = new Card
             {
-                Location = new Point(0, 276),
+                Location = new Point(0, 236),
                 Size = new Size(490, 42),
-                FillColor = Color.FromArgb(20, 24, 32),
+                FillColor = Color.FromArgb(170, 20, 24, 32),
                 BorderColor = Theme.BorderSoft,
-                Radius = 12f
+                Radius = 12f,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left
             };
 
             var lblPresetTitle = new Label
@@ -793,17 +721,14 @@ namespace SteampunkLauncher
                 updatePresetButtons();
             };
 
-            SetupPresetButton(btnPotato, 88, 6, 146, () => selectPreset(GraphicsPresets.Potato));
-            SetupPresetButton(btnBalanced, 240, 6, 104, () => selectPreset(GraphicsPresets.Balanced));
-            SetupPresetButton(btnUltra, 350, 6, 126, () => selectPreset(GraphicsPresets.Ultra));
+            SetupPresetButton(btnPotato, 88, 7, 146, () => selectPreset(GraphicsPresets.Potato));
+            SetupPresetButton(btnBalanced, 240, 7, 104, () => selectPreset(GraphicsPresets.Balanced));
+            SetupPresetButton(btnUltra, 350, 7, 126, () => selectPreset(GraphicsPresets.Ultra));
             updatePresetButtons();
 
             presetCard.Controls.AddRange(new Control[] { lblPresetTitle, btnPotato, btnBalanced, btnUltra });
-
-            bottomInfoPanel.Controls.AddRange(new Control[] {
-                lblSubtitleTop, lblSubtitleGold, lblDesc, ramBoxCard, presetCard
-            });
-            _gameCanvas.Controls.Add(bottomInfoPanel);
+            _bottomInfoPanel.Controls.Add(presetCard);
+            _gameCanvas.Controls.Add(_bottomInfoPanel);
 
             // ─── Снизу по центру: Большая золотая кнопка «НАЧАТЬ ИГРУ» ───
             _btnLaunch = new AccentButton
@@ -811,7 +736,7 @@ namespace SteampunkLauncher
                 Text = "НАЧАТЬ ИГРУ",
                 Size = new Size(280, 60),
                 Font = Theme.Display(15f, FontStyle.Bold),
-                Anchor = AnchorStyles.None
+                Anchor = AnchorStyles.Top | AnchorStyles.Left
             };
             _btnLaunch.SetGoldGlowStyle();
             _btnLaunch.Click += (s, e) => StartWork(launchAfter: true);
@@ -820,23 +745,20 @@ namespace SteampunkLauncher
             _btnCancel = new AccentButton
             {
                 Text = "Отмена",
-                Size = new Size(120, 44),
-                Radius = 22f,
+                Size = new Size(130, 42),
                 Font = Theme.Font(10.5f, FontStyle.Bold),
-                Anchor = AnchorStyles.None,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left,
                 Visible = false
             };
             _btnCancel.SetRedStyle();
-            _btnCancel.Radius = 22f;
-            _btnCancel.UpdateRegion();
             _btnCancel.Click += (s, e) => { if (_cts != null) _cts.Cancel(); };
             _gameCanvas.Controls.Add(_btnCancel);
 
             // Прогресс-бар и статусы над кнопкой
             _progressBar = new FlatProgressBar
             {
-                Size = new Size(460, 8),
-                Anchor = AnchorStyles.None,
+                Size = new Size(360, 8),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left,
                 Visible = false
             };
             _gameCanvas.Controls.Add(_progressBar);
@@ -846,9 +768,9 @@ namespace SteampunkLauncher
                 Text = "Готов к запуску",
                 Font = Theme.Font(10.5f, FontStyle.Bold),
                 ForeColor = Color.White,
-                Size = new Size(460, 22),
+                Size = new Size(360, 22),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Anchor = AnchorStyles.None,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left,
                 BackColor = Color.Transparent,
                 Visible = false
             };
@@ -859,51 +781,58 @@ namespace SteampunkLauncher
                 Text = "",
                 Font = Theme.Font(9f),
                 ForeColor = Theme.Gold,
-                Size = new Size(460, 20),
+                Size = new Size(360, 20),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Anchor = AnchorStyles.None,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left,
                 BackColor = Color.Transparent,
                 Visible = false
             };
             _gameCanvas.Controls.Add(_lblDetail);
 
-            // Динамическое позиционирование элементов запуска с защитой от наложений на инфо-панель
-            Action repositionLaunch = () =>
-            {
-                int bottomY = _gameCanvas.Height - 90;
-                int infoRight = bottomInfoPanel.Right + 20; // Правый край карточек информации + зазор
-                int idealX = (_gameCanvas.Width - _btnLaunch.Width) / 2;
-
-                // В широком окне / на весь экран — центрируем по экрану.
-                // В оконном режиме (если центр наезжает на левую панель) — смещаем в свободную правую зону!
-                int launchX = Math.Max(infoRight, idealX);
-
-                // Ограничиваем справа, чтобы не вылезало за границы
-                int maxRight = _gameCanvas.Width - _btnLaunch.Width - 30;
-                if (_btnCancel.Visible) maxRight -= (_btnCancel.Width + 14);
-                if (launchX > maxRight) launchX = Math.Max(infoRight, maxRight);
-
-                _btnLaunch.Location = new Point(launchX, bottomY);
-                _btnCancel.Location = new Point(_btnLaunch.Right + 14, bottomY + 8);
-
-                // Прогресс-бар центрируется строго относительно кнопки запуска
-                int pbWidth = Math.Min(460, _gameCanvas.Width - launchX - 20);
-                if (pbWidth < 280) pbWidth = 280;
-                _progressBar.Size = new Size(pbWidth, 8);
-                _progressBar.Location = new Point(launchX + (_btnLaunch.Width - pbWidth) / 2, bottomY - 18);
-                _lblDetail.Location = new Point(launchX + (_btnLaunch.Width - _lblDetail.Width) / 2, bottomY - 40);
-                _lblPhase.Location = new Point(launchX + (_btnLaunch.Width - _lblPhase.Width) / 2, bottomY - 62);
-            };
-
-            _gameCanvas.Resize += (s, e) =>
-            {
-                bottomInfoPanel.Location = new Point(32, Math.Max(70, _gameCanvas.Height - 340));
-                repositionLaunch();
-                _gameCanvas.Invalidate();
-            };
-            repositionLaunch();
+            _gameCanvas.Resize += (s, e) => RepositionGameLayout();
+            RepositionGameLayout();
 
             _tabGame.Controls.Add(_gameCanvas);
+        }
+
+        private void RepositionGameLayout()
+        {
+            if (_gameCanvas == null || _btnLaunch == null || _bottomInfoPanel == null) return;
+            int W = _gameCanvas.Width;
+            int H = _gameCanvas.Height;
+            if (W < 100 || H < 100) return;
+
+            // 1. Позиционирование левой панели с карточками (прижата к нижнему краю с 28px отступом)
+            int infoY = Math.Max(20, H - 282 - 28);
+            _bottomInfoPanel.Location = new Point(32, infoY);
+
+            // 2. Позиционирование кнопки запуска («НАЧАТЬ ИГРУ»)
+            int idealX = (W - _btnLaunch.Width) / 2;
+            int minX = _bottomInfoPanel.Right + 28;
+            int launchX = Math.Max(minX, idealX);
+            if (launchX + _btnLaunch.Width > W - 24)
+            {
+                launchX = Math.Max(minX, W - _btnLaunch.Width - 24);
+            }
+            int launchY = Math.Max(infoY + 282 - 60, H - 60 - 28);
+            _btnLaunch.Location = new Point(launchX, launchY);
+
+            // 3. Прогресс-бар, статусы и кнопка «Отмена»
+            int pbWidth = Math.Min(380, W - launchX - 24);
+            if (pbWidth < 260) pbWidth = 260;
+            int pbX = launchX + (_btnLaunch.Width - pbWidth) / 2;
+            if (pbX < minX) pbX = minX;
+            if (pbX + pbWidth > W - 20) pbWidth = W - 20 - pbX;
+
+            _progressBar.Size = new Size(pbWidth, 8);
+            _progressBar.Location = new Point(pbX, launchY - 18);
+            _lblDetail.Location = new Point(pbX, launchY - 40);
+            _lblPhase.Location = new Point(pbX, launchY - 62);
+            _lblDetail.Width = pbWidth;
+            _lblPhase.Width = pbWidth;
+
+            _btnCancel.Size = new Size(130, 42);
+            _btnCancel.Location = new Point(pbX + (pbWidth - 130) / 2, launchY + 8);
         }
 
         private static Button CreatePresetBtn(string text, int x, int y, Action onClick)
@@ -2345,13 +2274,14 @@ namespace SteampunkLauncher
         private void SetBusy(bool busy)
         {
             _busy = busy;
-            _btnLaunch.Enabled = !busy;
+            _btnLaunch.Visible = !busy;
             _btnCancel.Visible = busy;
             _progressBar.Visible = busy;
             _lblPhase.Visible = busy;
             _lblDetail.Visible = busy;
             if (_ramSlider != null) _ramSlider.Enabled = !busy;
             if (_txtRamNumber != null) _txtRamNumber.Enabled = !busy;
+            RepositionGameLayout();
         }
 
         private void SetPhase(string phase, string detail)

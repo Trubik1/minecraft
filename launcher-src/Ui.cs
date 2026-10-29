@@ -207,6 +207,7 @@ namespace SteampunkLauncher
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint |
                      ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw |
                      ControlStyles.SupportsTransparentBackColor, true);
+            UpdateStyles();
             FlatStyle = FlatStyle.Flat;
             FlatAppearance.BorderSize = 0;
             BackColor = Color.Transparent;
@@ -219,22 +220,9 @@ namespace SteampunkLauncher
 
         public void UpdateRegion()
         {
-            if (Width <= 2 || Height <= 2) return;
-            try
-            {
-                float r = IsGoldGlow ? (Height / 2f) : (Radius > 0 ? Radius : 8f);
-                using (var path = Theme.RoundRect(new RectangleF(0, 0, Width, Height), r))
-                {
-                    this.Region = new Region(path);
-                }
-            }
-            catch { }
-        }
-
-        protected override void OnSizeChanged(EventArgs e)
-        {
-            base.OnSizeChanged(e);
-            UpdateRegion();
+            // Не используем 1-битный HWND Region: он создаёт лестничные чёрные углы!
+            // Плавное скругление и прозрачность отрисовываются через OnPaintBackground GameCanvas
+            this.Region = null;
         }
 
         public void SetGreenStyle()
@@ -245,7 +233,6 @@ namespace SteampunkLauncher
             ForeColor = Color.White;
             IsPrimary = true;
             IsGoldGlow = false;
-            UpdateRegion();
             Invalidate();
         }
 
@@ -256,7 +243,6 @@ namespace SteampunkLauncher
             PressedColor = Color.FromArgb(180, 50, 50);
             ForeColor = Color.White;
             IsGoldGlow = false;
-            UpdateRegion();
             Invalidate();
         }
 
@@ -268,7 +254,6 @@ namespace SteampunkLauncher
             OutlineColor = Theme.BorderSoft;
             ForeColor = Theme.Text;
             IsGoldGlow = false;
-            UpdateRegion();
             Invalidate();
         }
 
@@ -279,19 +264,62 @@ namespace SteampunkLauncher
             ForeColor = Color.White;
             Radius = 28f;
             IsPrimary = true;
-            UpdateRegion();
             Invalidate();
         }
 
-        protected override void OnMouseEnter(EventArgs e) { _isHovered = true; Invalidate(); base.OnMouseEnter(e); }
-        protected override void OnMouseLeave(EventArgs e) { _isHovered = false; _isPressed = false; Invalidate(); base.OnMouseLeave(e); }
-        protected override void OnMouseDown(MouseEventArgs mevent) { _isPressed = true; Invalidate(); base.OnMouseDown(mevent); }
-        protected override void OnMouseUp(MouseEventArgs mevent) { _isPressed = false; Invalidate(); base.OnMouseUp(mevent); }
+        private bool IsInsidePill(Point pt)
+        {
+            float r = IsGoldGlow ? (Height / 2f) : (Radius > 0 ? Radius : 8f);
+            using (var path = Theme.RoundRect(new RectangleF(0, 0, Width, Height), r))
+            {
+                return path.IsVisible(pt);
+            }
+        }
+
+        protected override void OnMouseMove(MouseEventArgs mevent)
+        {
+            bool inside = IsInsidePill(mevent.Location);
+            if (inside != _isHovered)
+            {
+                _isHovered = inside;
+                Invalidate();
+            }
+            base.OnMouseMove(mevent);
+        }
+
+        protected override void OnMouseEnter(EventArgs e)
+        {
+            base.OnMouseEnter(e);
+        }
+
+        protected override void OnMouseLeave(EventArgs e)
+        {
+            _isHovered = false;
+            _isPressed = false;
+            Invalidate();
+            base.OnMouseLeave(e);
+        }
+
+        protected override void OnMouseDown(MouseEventArgs mevent)
+        {
+            if (mevent.Button == MouseButtons.Left && IsInsidePill(mevent.Location))
+            {
+                _isPressed = true;
+                Invalidate();
+                base.OnMouseDown(mevent);
+            }
+        }
+
+        protected override void OnMouseUp(MouseEventArgs mevent)
+        {
+            _isPressed = false;
+            Invalidate();
+            base.OnMouseUp(mevent);
+        }
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
             if (Width <= 2 || Height <= 2) return;
-            if (this.Region == null) UpdateRegion();
 
             var g = pevent.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
@@ -485,6 +513,173 @@ namespace SteampunkLauncher
             Color textColor = _active ? Color.White : (_hover ? Color.FromArgb(240, 245, 255) : Color.FromArgb(170, 180, 200));
             Theme.PaintText(g, Text, Font, textColor, new RectangleF(0, 0, Width, Height),
                 StringAlignment.Center, StringAlignment.Center);
+        }
+    }
+
+    /// <summary>
+    /// Double-buffered background canvas with smooth wallpaper scaling, seamless vignette,
+    /// and correct OnPaintBackground dispatch for 100% transparent child controls.
+    /// Eliminates all seam lines, black corners, and transparency flickering.
+    /// </summary>
+    public class GameCanvas : Panel
+    {
+        private Image _bgImage;
+
+        public GameCanvas()
+        {
+            SetStyle(ControlStyles.AllPaintingInWmPaint |
+                     ControlStyles.UserPaint |
+                     ControlStyles.OptimizedDoubleBuffer |
+                     ControlStyles.ResizeRedraw, true);
+            UpdateStyles();
+            BackColor = Color.FromArgb(14, 16, 22);
+        }
+
+        public void SetWallpaper(Image img)
+        {
+            _bgImage = img;
+            Invalidate();
+        }
+
+        public void DrawBackdrop(Graphics g, Rectangle bounds)
+        {
+            g.SmoothingMode = SmoothingMode.HighQuality;
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            g.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+            if (_bgImage != null)
+            {
+                float screenRatio = (float)Width / Math.Max(1, Height);
+                float imgRatio = (float)_bgImage.Width / Math.Max(1, _bgImage.Height);
+
+                float drawW, drawH, drawX = 0, drawY = 0;
+                if (screenRatio > imgRatio)
+                {
+                    drawW = Width;
+                    drawH = Width / imgRatio;
+                    drawY = (Height - drawH) / 2f;
+                }
+                else
+                {
+                    drawH = Height;
+                    drawW = Height * imgRatio;
+                    drawX = (Width - drawW) / 2f;
+                }
+
+                g.DrawImage(_bgImage, drawX, drawY, drawW, drawH);
+            }
+            else
+            {
+                using (var brush = new SolidBrush(Theme.Bg))
+                {
+                    g.FillRectangle(brush, bounds);
+                }
+            }
+
+            // Seamless bottom gradient for text contrast (ZERO seam line, starts at alpha 0)
+            int gradH = (int)(Height * 0.55f);
+            if (gradH > 10)
+            {
+                int startY = Height - gradH;
+                var brushRect = new Rectangle(0, startY, Width, gradH);
+                using (var lgb = new LinearGradientBrush(brushRect,
+                    Color.FromArgb(0, 14, 16, 22),
+                    Color.FromArgb(245, 14, 16, 22),
+                    LinearGradientMode.Vertical))
+                {
+                    var blend = new Blend(4)
+                    {
+                        Positions = new float[] { 0.0f, 0.20f, 0.65f, 1.0f },
+                        Factors   = new float[] { 0.0f, 0.12f, 0.70f, 1.0f }
+                    };
+                    lgb.Blend = blend;
+                    g.FillRectangle(lgb, brushRect);
+                }
+            }
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs pevent)
+        {
+            // Crucial: WinForms calls this for transparent child controls!
+            DrawBackdrop(pevent.Graphics, ClientRectangle);
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            // Background is drawn in OnPaintBackground
+            base.OnPaint(e);
+        }
+    }
+
+    /// <summary>
+    /// Double-buffered vector logo control with animated spinning gear and crisp typography.
+    /// Eliminates all flickering, transparency artifacts, hotkey underscores, and mouse-hover twitching.
+    /// </summary>
+    public class LogoBox : Control
+    {
+        public float GearAngle { get; set; }
+        public bool IsHovered { get; private set; }
+
+        public LogoBox()
+        {
+            SetStyle(ControlStyles.AllPaintingInWmPaint |
+                     ControlStyles.UserPaint |
+                     ControlStyles.OptimizedDoubleBuffer |
+                     ControlStyles.ResizeRedraw, true);
+            UpdateStyles();
+            BackColor = Color.FromArgb(16, 20, 26);
+            Cursor = Cursors.Hand;
+        }
+
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            IsHovered = true;
+        }
+
+        protected override void OnMouseLeave(EventArgs e)
+        {
+            base.OnMouseLeave(e);
+            IsHovered = false;
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs pevent)
+        {
+            using (var b = new SolidBrush(BackColor))
+            {
+                pevent.Graphics.FillRectangle(b, ClientRectangle);
+            }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            var g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
+
+            // Draw gear centered vertically (height 68 -> center Y=34 -> gear top=15)
+            Gear.Draw(g, new RectangleF(4, 15, 38, 38), Theme.Gold, GearAngle);
+
+            using (var sf = new StringFormat
+            {
+                HotkeyPrefix = HotkeyPrefix.None,
+                FormatFlags = StringFormatFlags.NoWrap
+            })
+            {
+                // Title STEAMPUNK
+                using (var fTitle = Theme.Display(13.5f, FontStyle.Bold))
+                using (var bTitle = new SolidBrush(Theme.Gold))
+                {
+                    g.DrawString("STEAMPUNK", fTitle, bTitle, new PointF(48, 14), sf);
+                }
+
+                // Subtitle & SWORDS (HotkeyPrefix.None prevents turning '&' into underline '_SWORDS')
+                using (var fSub = Theme.Font(9f, FontStyle.Bold))
+                using (var bSub = new SolidBrush(Theme.TextDim))
+                {
+                    g.DrawString("& SWORDS", fSub, bSub, new PointF(50, 36), sf);
+                }
+            }
         }
     }
 }
