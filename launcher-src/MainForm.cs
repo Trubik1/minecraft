@@ -40,18 +40,25 @@ namespace SteampunkLauncher
         private PictureBox _picProfileAvatar;
         private TextBox _txtHeaderNick;
 
-        // ─── Элементы вкладки «Игра» (LoliLand Style) ───────────
+        // ─── Элементы вкладки «Игра» (Command Deck + Hero Panel) ───────────
         private GameCanvas _gameCanvas;
-        private Panel _bottomInfoPanel;
+        private HeroPanel _heroPanel;
+        private CommandDeck _commandDeck;
         private AccentButton _btnLaunch;
         private AccentButton _btnCancel;
         private FlatProgressBar _progressBar;
         private Label _lblPhase;
         private Label _lblDetail;
-        private TextBox _txtGameNick;
         private TrackBar _ramSlider;
-        private TextBox _txtRamNumber;
-        private Label _lblRamStatus;
+        private Label _lblRamTitle;
+        private Label _lblRamValue;
+        private Label _lblRamMax;
+        private Button _btn4Gb;
+        private Button _btn8Gb;
+        private Button _btn12Gb;
+        private Label _lblPresetTitle;
+        private PresetSwitch _presetSwitch;
+        private Label _lblPresetDesc;
 
         // ─── Элементы вкладки «Скины» (Modrinth Style) ─────────
         private SkinPreview _skinPreview;
@@ -235,20 +242,26 @@ namespace SteampunkLauncher
                 BackColor = Color.Transparent
             };
 
-            var btnChangelog = CreateHeaderIconBtn("📜", 0, "Что нового в сборке (Патчноут)", () =>
+            var btnChangelog = new HeaderIconButton(HeaderIconKind.Changelog, "Что нового в сборке (Патчноут)");
+            btnChangelog.Location = new Point(0, 5);
+            btnChangelog.Click += (s, e) =>
             {
                 using (var dlg = new ChangelogDialog()) dlg.ShowDialog(this);
-            });
+            };
 
-            var btnDiscord = CreateHeaderIconBtn("💬", 42, "Наш Discord сервер", () =>
+            var btnDiscord = new HeaderIconButton(HeaderIconKind.Discord, "Наш Discord сервер");
+            btnDiscord.Location = new Point(42, 5);
+            btnDiscord.Click += (s, e) =>
             {
                 try { Process.Start(new ProcessStartInfo("https://discord.gg/") { UseShellExecute = true }); } catch { }
-            });
+            };
 
-            var btnWiki = CreateHeaderIconBtn("📖", 84, "База знаний и гайды", () =>
+            var btnWiki = new HeaderIconButton(HeaderIconKind.Wiki, "База знаний и гайды");
+            btnWiki.Location = new Point(84, 5);
+            btnWiki.Click += (s, e) =>
             {
                 try { Process.Start(new ProcessStartInfo("https://github.com/Trubik1/minecraft") { UseShellExecute = true }); } catch { }
-            });
+            };
 
             var profileBox = new Card
             {
@@ -288,7 +301,6 @@ namespace SteampunkLauncher
                 {
                     _config.Nickname = val;
                     _config.Save();
-                    if (_txtGameNick != null && _txtGameNick.Text != val) _txtGameNick.Text = val;
                     if (_txtSkinPlayerNick != null && _txtSkinPlayerNick.Text != val) _txtSkinPlayerNick.Text = val;
                     SkinStore.ApplyToGame(_config.GameDir, val);
                 }
@@ -357,27 +369,7 @@ namespace SteampunkLauncher
             currentX += width + 8;
         }
 
-        private static Button CreateHeaderIconBtn(string text, int x, string tooltip, Action onClick)
-        {
-            var btn = new Button
-            {
-                Text = text,
-                Location = new Point(x, 5),
-                Size = new Size(36, 36),
-                FlatStyle = FlatStyle.Flat,
-                BackColor = Color.FromArgb(24, 28, 38),
-                ForeColor = Theme.Gold,
-                Font = Theme.Font(11f),
-                Cursor = Cursors.Hand
-            };
-            btn.FlatAppearance.BorderSize = 1;
-            btn.FlatAppearance.BorderColor = Theme.BorderSoft;
-            btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 46, 62);
-            var tt = new ToolTip();
-            tt.SetToolTip(btn, tooltip);
-            btn.Click += (s, e) => onClick();
-            return btn;
-        }
+
 
         private void OpenProfileModal()
         {
@@ -461,13 +453,13 @@ namespace SteampunkLauncher
         }
 
         // ════════════════════════════════════════════════════════════════════
-        //  ВКЛАДКА 1: ГЛАВНАЯ (LOLILAND STYLE: ФОН, ЧИСЛОВОЙ ВВОД RAM, ЗОЛОТАЯ КНОПКА)
+        //  ВКЛАДКА 1: ГЛАВНАЯ (HERO PANEL + TACTILE COMMAND DECK)
         // ════════════════════════════════════════════════════════════════════
         private void InitGameTab()
         {
             _tabGame = new Panel { Dock = DockStyle.Fill, BackColor = Theme.Bg };
 
-            // Полноэкранный холст с отрисовкой кинематографичного арта и градиента
+            // Холст с артом, градиентами и адаптивными виньетками
             _gameCanvas = new GameCanvas
             {
                 Dock = DockStyle.Fill
@@ -477,317 +469,202 @@ namespace SteampunkLauncher
                 _gameCanvas.SetWallpaper(_bgImage);
             }
 
-            // ─── Снизу слева: Название, описание и ЧИСЛОВОЙ ВВОД RAM ───
-            _bottomInfoPanel = new Panel
+            // 1. Бренд-блок и технические бейджи (HeroPanel)
+            _heroPanel = new HeroPanel
             {
-                Location = new Point(32, 200),
-                Size = new Size(494, 282),
-                BackColor = Color.Transparent,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left
+                Location = new Point(36, 26),
+                Size = new Size(580, 105),
+                BackColor = Color.Transparent
             };
-            _bottomInfoPanel.GetType().GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic)
-                ?.SetValue(_bottomInfoPanel, true, null);
+            _gameCanvas.Controls.Add(_heroPanel);
 
-            _bottomInfoPanel.Paint += (s, e) =>
+            // 2. Монолитная нижняя панель управления (Command Deck)
+            _commandDeck = new CommandDeck
             {
-                var g = e.Graphics;
-                g.SmoothingMode = SmoothingMode.AntiAlias;
-                g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-
-                using (var fBig = Theme.Display(21f, FontStyle.Bold))
-                using (var bWhite = new SolidBrush(Color.White))
-                using (var bGold = new SolidBrush(Theme.Gold))
-                using (var fSmall = Theme.Font(9.2f))
-                using (var bMuted = new SolidBrush(Color.FromArgb(210, 220, 235)))
-                {
-                    g.DrawString("Увлекательное", fBig, bWhite, 0, 0);
-                    g.DrawString("кубическое приключение", fBig, bGold, 0, 32);
-                    g.DrawString("Steampunk & Swords — сборка с механизмами, магией и приключениями!", fSmall, bMuted, 0, 68);
-                }
+                Size = new Size(1040, 94),
+                BackColor = Color.Transparent
             };
 
-            // ─── Блок ввода никнейма игрока ───
-            var nickCard = new Card
-            {
-                Location = new Point(0, 96),
-                Size = new Size(490, 42),
-                FillColor = Color.FromArgb(170, 20, 24, 32),
-                BorderColor = Theme.BorderSoft,
-                Radius = 12f,
-                Padding = new Padding(12, 6, 12, 6),
-                Anchor = AnchorStyles.Top | AnchorStyles.Left
-            };
-
-            var lblNickTitle = new Label
-            {
-                Text = "Никнейм игрока:",
-                Font = Theme.Font(9.5f, FontStyle.Bold),
-                ForeColor = Theme.Text,
-                Location = new Point(14, 11),
-                AutoSize = true
-            };
-
-            _txtGameNick = new TextBox
-            {
-                Text = string.IsNullOrEmpty(_config.Nickname) ? "Trubik" : _config.Nickname,
-                Location = new Point(140, 8),
-                Width = 240,
-                Height = 24,
-                Font = Theme.Font(11f, FontStyle.Bold),
-                BackColor = Theme.Field,
-                ForeColor = Color.White,
-                BorderStyle = BorderStyle.FixedSingle
-            };
-
-            _txtGameNick.TextChanged += (s, e) =>
-            {
-                string val = _txtGameNick.Text.Trim();
-                if (val.Length >= 2 && val.Length <= 16)
-                {
-                    _config.Nickname = val;
-                    _config.Save();
-                    if (_txtHeaderNick != null && _txtHeaderNick.Text != val) _txtHeaderNick.Text = val;
-                    if (_txtSkinPlayerNick != null && _txtSkinPlayerNick.Text != val) _txtSkinPlayerNick.Text = val;
-                    SkinStore.ApplyToGame(_config.GameDir, val);
-                }
-            };
-
-            nickCard.Controls.AddRange(new Control[] { lblNickTitle, _txtGameNick });
-            _bottomInfoPanel.Controls.Add(nickCard);
-
-            // ─── Блок оперативной памяти с ЧИСЛОВЫМ ВВОДОМ ───
+            // ─── ЗОНА 1 (СЛЕВА): ОПЕРАТИВНАЯ ПАМЯТЬ ───────────────────
             int curRam = _config.ResolveRamMb();
             long totalSystemRam = LauncherConfig.TotalRamMb();
             int maxSlider = Math.Max(8192, (int)totalSystemRam);
 
-            var ramBoxCard = new Card
+            _lblRamTitle = new Label
             {
-                Location = new Point(0, 146),
-                Size = new Size(490, 82),
-                FillColor = Color.FromArgb(170, 20, 24, 32),
-                BorderColor = Theme.BorderSoft,
-                Radius = 12f,
-                Padding = new Padding(12),
-                Anchor = AnchorStyles.Top | AnchorStyles.Left
+                Text = "ОПЕРАТИВНАЯ ПАМЯТЬ",
+                Font = Theme.Font(7.8f, FontStyle.Bold),
+                ForeColor = Color.FromArgb(135, 148, 170),
+                AutoSize = true,
+                BackColor = Color.Transparent
             };
 
-            var lblRamTitle = new Label
+            _lblRamValue = new Label
             {
-                Text = "Выделение памяти (RAM):",
-                Font = Theme.Font(9.5f, FontStyle.Bold),
-                ForeColor = Theme.Text,
-                Location = new Point(14, 11),
-                AutoSize = true
-            };
-
-            // Числовое поле ввода RAM (ГБ)
-            _txtRamNumber = new TextBox
-            {
-                Text = string.Format("{0:0.#}", curRam / 1024.0),
-                Location = new Point(190, 8),
-                Size = new Size(50, 24),
-                Font = Theme.Font(10.5f, FontStyle.Bold),
-                BackColor = Theme.Field,
+                Text = string.Format("{0:0.#} ГБ", curRam / 1024.0),
+                Font = Theme.Font(12.5f, FontStyle.Bold),
                 ForeColor = Theme.Gold,
-                BorderStyle = BorderStyle.FixedSingle,
-                TextAlign = HorizontalAlignment.Center
+                AutoSize = true,
+                BackColor = Color.Transparent
             };
 
-            var lblGbSuffix = new Label
+            _lblRamMax = new Label
             {
-                Text = "ГБ",
-                Font = Theme.Font(9.5f, FontStyle.Bold),
-                ForeColor = Theme.Gold,
-                Location = new Point(244, 11),
-                AutoSize = true
-            };
-
-            _lblRamStatus = new Label
-            {
-                Text = string.Format("({0} МБ из {1} МБ)", curRam, totalSystemRam),
-                Font = Theme.Font(8.5f),
-                ForeColor = Theme.Muted,
-                Location = new Point(274, 12),
-                AutoSize = true
+                Text = string.Format("из {0:0.#} ГБ", totalSystemRam / 1024.0),
+                Font = Theme.Font(8.2f),
+                ForeColor = Color.FromArgb(110, 122, 142),
+                AutoSize = true,
+                BackColor = Color.Transparent
             };
 
             _ramSlider = new TrackBar
             {
-                Location = new Point(8, 40),
-                Size = new Size(285, 34),
+                Size = new Size(140, 24),
                 Minimum = 1024,
                 Maximum = maxSlider,
                 TickFrequency = 1024,
                 SmallChange = 512,
                 LargeChange = 1024,
                 Value = Math.Min(maxSlider, Math.Max(1024, curRam)),
-                BackColor = Color.FromArgb(20, 24, 32)
+                BackColor = Color.FromArgb(17, 21, 29)
             };
 
-            // Синхронизация слайдера с числовым полем
             _ramSlider.ValueChanged += (s, e) =>
             {
                 int snapped = (_ramSlider.Value / 512) * 512;
                 if (snapped < 1024) snapped = 1024;
                 _config.RamMb = snapped;
                 _config.Save();
-                _txtRamNumber.Text = string.Format("{0:0.#}", snapped / 1024.0);
-                _lblRamStatus.Text = string.Format("({0} МБ из {1} МБ)", snapped, totalSystemRam);
+                _lblRamValue.Text = string.Format("{0:0.#} ГБ", snapped / 1024.0);
             };
 
-            // Синхронизация числового поля со слайдером
-            Action applyTypedRam = () =>
-            {
-                string raw = _txtRamNumber.Text.Trim().Replace(',', '.');
-                double val;
-                if (double.TryParse(raw, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out val))
-                {
-                    int mb = (int)Math.Round(val * 1024);
-                    if (mb < 1024) mb = 1024;
-                    if (mb > maxSlider) mb = maxSlider;
-                    _config.RamMb = mb;
-                    _config.Save();
-                    _ramSlider.Value = mb;
-                    _lblRamStatus.Text = string.Format("({0} МБ из {1} МБ)", mb, totalSystemRam);
-                }
-            };
-            _txtRamNumber.Leave += (s, e) => applyTypedRam();
-            _txtRamNumber.KeyDown += (s, e) =>
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    applyTypedRam();
-                    e.SuppressKeyPress = true;
-                }
-            };
-
-            // Быстрые пресеты 4, 8, 12 ГБ
-            Action<int> setPreset = (gb) =>
+            Action<int> setRamChip = (gb) =>
             {
                 int mb = gb * 1024;
                 if (mb > maxSlider) mb = maxSlider;
                 _config.RamMb = mb;
                 _config.Save();
                 _ramSlider.Value = mb;
-                _txtRamNumber.Text = gb.ToString();
-                _lblRamStatus.Text = string.Format("({0} МБ из {1} МБ)", mb, totalSystemRam);
+                _lblRamValue.Text = string.Format("{0:0.#} ГБ", mb / 1024.0);
             };
 
-            var btn4Gb = CreatePresetBtn("4G", 306, 42, () => setPreset(4));
-            var btn8Gb = CreatePresetBtn("8G", 362, 42, () => setPreset(8));
-            var btn12Gb = CreatePresetBtn("12G", 418, 42, () => setPreset(12));
+            _btn4Gb = CreatePresetChip("4G", () => setRamChip(4));
+            _btn8Gb = CreatePresetChip("8G", () => setRamChip(8));
+            _btn12Gb = CreatePresetChip("12G", () => setRamChip(12));
 
-            ramBoxCard.Controls.AddRange(new Control[] {
-                lblRamTitle, _txtRamNumber, lblGbSuffix, _lblRamStatus, _ramSlider, btn4Gb, btn8Gb, btn12Gb
+            _commandDeck.Controls.AddRange(new Control[] {
+                _lblRamTitle, _lblRamValue, _lblRamMax, _ramSlider, _btn4Gb, _btn8Gb, _btn12Gb
             });
-            _bottomInfoPanel.Controls.Add(ramBoxCard);
 
-            // Карточка пресетов графики («Слабый ПК», «Баланс», «Ультра»)
-            var presetCard = new Card
+            // ─── ЗОНА 2 (ЦЕНТР): РЕЖИМ ГРАФИКИ ───────────────────────
+            _lblPresetTitle = new Label
             {
-                Location = new Point(0, 236),
-                Size = new Size(490, 42),
-                FillColor = Color.FromArgb(170, 20, 24, 32),
-                BorderColor = Theme.BorderSoft,
-                Radius = 12f,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left
+                Text = "РЕЖИМ ГРАФИКИ",
+                Font = Theme.Font(7.8f, FontStyle.Bold),
+                ForeColor = Color.FromArgb(135, 148, 170),
+                AutoSize = true,
+                BackColor = Color.Transparent
             };
 
-            var lblPresetTitle = new Label
+            _presetSwitch = new PresetSwitch
             {
-                Text = "Графика:",
-                Font = Theme.Font(9f, FontStyle.Bold),
-                ForeColor = Theme.Text,
-                Location = new Point(14, 12),
-                AutoSize = true
+                Size = new Size(310, 30)
             };
 
-            var btnPotato = new Button();
-            var btnBalanced = new Button();
-            var btnUltra = new Button();
-
-            Action updatePresetButtons = () =>
+            _lblPresetDesc = new Label
             {
-                string cur = _config.GraphicsPreset ?? GraphicsPresets.Balanced;
-                ConfigurePresetBtn(btnPotato, "🥔 Слабый ПК (Ноут)", cur == GraphicsPresets.Potato);
-                ConfigurePresetBtn(btnBalanced, "⚙️ Баланс", cur == GraphicsPresets.Balanced);
-                ConfigurePresetBtn(btnUltra, "✨ Ультра", cur == GraphicsPresets.Ultra);
+                Font = Theme.Font(8.2f),
+                ForeColor = Color.FromArgb(120, 132, 150),
+                AutoSize = false,
+                TextAlign = ContentAlignment.MiddleCenter,
+                BackColor = Color.Transparent
             };
 
-            Action<string> selectPreset = (p) =>
+            Action updatePresetDesc = () =>
             {
+                if (_presetSwitch.SelectedIndex == 0)
+                    _lblPresetDesc.Text = "Низкая нагрузка • 6 чанков • Без шейдеров";
+                else if (_presetSwitch.SelectedIndex == 2)
+                    _lblPresetDesc.Text = "Максимум • 14 чанков • Iris Shaders";
+                else
+                    _lblPresetDesc.Text = "Оптимально • 9 чанков • Мягкие тени";
+            };
+
+            _presetSwitch.SelectedIndexChanged += (s, e) =>
+            {
+                string p = GraphicsPresets.Balanced;
+                if (_presetSwitch.SelectedIndex == 0) p = GraphicsPresets.Potato;
+                else if (_presetSwitch.SelectedIndex == 2) p = GraphicsPresets.Ultra;
+
                 _config.GraphicsPreset = p;
                 _config.Save();
-                updatePresetButtons();
+                GraphicsPresets.Apply(_config.GameDir, p);
+                updatePresetDesc();
             };
 
-            SetupPresetButton(btnPotato, 88, 7, 146, () => selectPreset(GraphicsPresets.Potato));
-            SetupPresetButton(btnBalanced, 240, 7, 104, () => selectPreset(GraphicsPresets.Balanced));
-            SetupPresetButton(btnUltra, 350, 7, 126, () => selectPreset(GraphicsPresets.Ultra));
-            updatePresetButtons();
+            string curP = _config.GraphicsPreset ?? GraphicsPresets.Balanced;
+            if (curP == GraphicsPresets.Potato) _presetSwitch.SelectedIndex = 0;
+            else if (curP == GraphicsPresets.Ultra) _presetSwitch.SelectedIndex = 2;
+            else _presetSwitch.SelectedIndex = 1;
+            updatePresetDesc();
 
-            presetCard.Controls.AddRange(new Control[] { lblPresetTitle, btnPotato, btnBalanced, btnUltra });
-            _bottomInfoPanel.Controls.Add(presetCard);
-            _gameCanvas.Controls.Add(_bottomInfoPanel);
+            _commandDeck.Controls.AddRange(new Control[] {
+                _lblPresetTitle, _presetSwitch, _lblPresetDesc
+            });
 
-            // ─── Снизу по центру: Большая золотая кнопка «НАЧАТЬ ИГРУ» ───
+            // ─── ЗОНА 3 (СПРАВА): ЗАПУСК И ПРОГРЕСС ──────────────────
             _btnLaunch = new AccentButton
             {
-                Text = "НАЧАТЬ ИГРУ",
-                Size = new Size(280, 60),
-                Font = Theme.Display(15f, FontStyle.Bold),
-                Anchor = AnchorStyles.Top | AnchorStyles.Left
+                Text = "▶  НАЧАТЬ ИГРУ",
+                Size = new Size(230, 52),
+                Font = Theme.Font(12f, FontStyle.Bold)
             };
             _btnLaunch.SetGoldGlowStyle();
             _btnLaunch.Click += (s, e) => StartWork(launchAfter: true);
-            _gameCanvas.Controls.Add(_btnLaunch);
-
-            _btnCancel = new AccentButton
-            {
-                Text = "Отмена",
-                Size = new Size(130, 42),
-                Font = Theme.Font(10.5f, FontStyle.Bold),
-                Anchor = AnchorStyles.Top | AnchorStyles.Left,
-                Visible = false
-            };
-            _btnCancel.SetRedStyle();
-            _btnCancel.Click += (s, e) => { if (_cts != null) _cts.Cancel(); };
-            _gameCanvas.Controls.Add(_btnCancel);
-
-            // Прогресс-бар и статусы над кнопкой
-            _progressBar = new FlatProgressBar
-            {
-                Size = new Size(360, 8),
-                Anchor = AnchorStyles.Top | AnchorStyles.Left,
-                Visible = false
-            };
-            _gameCanvas.Controls.Add(_progressBar);
+            _commandDeck.Controls.Add(_btnLaunch);
 
             _lblPhase = new Label
             {
                 Text = "Готов к запуску",
-                Font = Theme.Font(10.5f, FontStyle.Bold),
+                Font = Theme.Font(9.2f, FontStyle.Bold),
                 ForeColor = Color.White,
-                Size = new Size(360, 22),
-                TextAlign = ContentAlignment.MiddleCenter,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left,
+                TextAlign = ContentAlignment.MiddleLeft,
                 BackColor = Color.Transparent,
                 Visible = false
             };
-            _gameCanvas.Controls.Add(_lblPhase);
+            _commandDeck.Controls.Add(_lblPhase);
+
+            _progressBar = new FlatProgressBar
+            {
+                Size = new Size(230, 6),
+                Visible = false
+            };
+            _commandDeck.Controls.Add(_progressBar);
 
             _lblDetail = new Label
             {
                 Text = "",
-                Font = Theme.Font(9f),
+                Font = Theme.Font(8f),
                 ForeColor = Theme.Gold,
-                Size = new Size(360, 20),
-                TextAlign = ContentAlignment.MiddleCenter,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left,
+                TextAlign = ContentAlignment.MiddleLeft,
                 BackColor = Color.Transparent,
                 Visible = false
             };
-            _gameCanvas.Controls.Add(_lblDetail);
+            _commandDeck.Controls.Add(_lblDetail);
+
+            _btnCancel = new AccentButton
+            {
+                Text = "Отмена",
+                Size = new Size(70, 24),
+                Font = Theme.Font(8.2f, FontStyle.Bold),
+                Radius = 6f,
+                Visible = false
+            };
+            _btnCancel.SetRedStyle();
+            _btnCancel.Click += (s, e) => { if (_cts != null) _cts.Cancel(); };
+            _commandDeck.Controls.Add(_btnCancel);
+
+            _gameCanvas.Controls.Add(_commandDeck);
 
             _gameCanvas.Resize += (s, e) => RepositionGameLayout();
             RepositionGameLayout();
@@ -797,79 +674,135 @@ namespace SteampunkLauncher
 
         private void RepositionGameLayout()
         {
-            if (_gameCanvas == null || _btnLaunch == null || _bottomInfoPanel == null) return;
+            if (_gameCanvas == null || _commandDeck == null) return;
             int W = _gameCanvas.Width;
             int H = _gameCanvas.Height;
             if (W < 100 || H < 100) return;
 
-            // 1. Позиционирование левой панели с карточками (прижата к нижнему краю с 28px отступом)
-            int infoY = Math.Max(20, H - 282 - 28);
-            _bottomInfoPanel.Location = new Point(32, infoY);
-
-            // 2. Позиционирование кнопки запуска («НАЧАТЬ ИГРУ»)
-            int idealX = (W - _btnLaunch.Width) / 2;
-            int minX = _bottomInfoPanel.Right + 28;
-            int launchX = Math.Max(minX, idealX);
-            if (launchX + _btnLaunch.Width > W - 24)
+            // 1. Позиционирование HeroPanel сверху слева
+            if (_heroPanel != null)
             {
-                launchX = Math.Max(minX, W - _btnLaunch.Width - 24);
+                _heroPanel.Location = new Point(36, 26);
+                _heroPanel.Size = new Size(Math.Min(600, W - 72), 105);
             }
-            int launchY = Math.Max(infoY + 282 - 60, H - 60 - 28);
-            _btnLaunch.Location = new Point(launchX, launchY);
 
-            // 3. Прогресс-бар, статусы и кнопка «Отмена»
-            int pbWidth = Math.Min(380, W - launchX - 24);
-            if (pbWidth < 260) pbWidth = 260;
-            int pbX = launchX + (_btnLaunch.Width - pbWidth) / 2;
-            if (pbX < minX) pbX = minX;
-            if (pbX + pbWidth > W - 20) pbWidth = W - 20 - pbX;
+            // 2. Позиционирование Command Deck по центру внизу
+            int deckW = Math.Min(1060, W - 48);
+            int deckH = 94;
+            int deckX = (W - deckW) / 2;
+            int deckY = Math.Max(150, H - deckH - 24);
 
-            _progressBar.Size = new Size(pbWidth, 8);
-            _progressBar.Location = new Point(pbX, launchY - 18);
-            _lblDetail.Location = new Point(pbX, launchY - 40);
-            _lblPhase.Location = new Point(pbX, launchY - 62);
-            _lblDetail.Width = pbWidth;
-            _lblPhase.Width = pbWidth;
+            _commandDeck.Location = new Point(deckX, deckY);
+            _commandDeck.Size = new Size(deckW, deckH);
 
-            _btnCancel.Size = new Size(130, 42);
-            _btnCancel.Location = new Point(pbX + (pbWidth - 130) / 2, launchY + 8);
+            LayoutCommandDeck(deckW, deckH);
         }
 
-        private static Button CreatePresetBtn(string text, int x, int y, Action onClick)
+        private void LayoutCommandDeck(int deckW, int deckH)
+        {
+            if (_commandDeck == null) return;
+
+            // Расчет ширины зон
+            int z1W = 300; // RAM зона
+            int z3W = 260; // Launch зона
+            int z2W = deckW - z1W - z3W; // Graphics зона
+
+            if (z2W < 240)
+            {
+                z1W = (int)(deckW * 0.35f);
+                z3W = (int)(deckW * 0.32f);
+                z2W = deckW - z1W - z3W;
+            }
+
+            _commandDeck.Divider1X = z1W;
+            _commandDeck.Divider2X = z1W + z2W;
+            _commandDeck.Invalidate();
+
+            // Зона 1: RAM
+            int z1X = 18;
+            if (_lblRamTitle != null) _lblRamTitle.Location = new Point(z1X, 15);
+            if (_lblRamValue != null) _lblRamValue.Location = new Point(z1X, 32);
+            if (_lblRamMax != null && _lblRamValue != null)
+                _lblRamMax.Location = new Point(_lblRamValue.Right + 4, 38);
+
+            int sliderW = Math.Max(100, z1W - 150);
+            if (_ramSlider != null)
+            {
+                _ramSlider.Size = new Size(sliderW, 24);
+                _ramSlider.Location = new Point(z1X, 58);
+            }
+
+            int chipX = (_ramSlider != null ? _ramSlider.Right : z1X + sliderW) + 8;
+            if (_btn4Gb != null) _btn4Gb.Location = new Point(chipX, 56);
+            if (_btn8Gb != null) _btn8Gb.Location = new Point(chipX + 38, 56);
+            if (_btn12Gb != null) _btn12Gb.Location = new Point(chipX + 76, 56);
+
+            // Зона 2: Графика
+            int z2X = z1W;
+            int switchW = Math.Min(310, z2W - 24);
+            int switchX = z2X + (z2W - switchW) / 2;
+
+            if (_lblPresetTitle != null) _lblPresetTitle.Location = new Point(switchX, 15);
+            if (_presetSwitch != null)
+            {
+                _presetSwitch.Size = new Size(switchW, 30);
+                _presetSwitch.Location = new Point(switchX, 32);
+            }
+            if (_lblPresetDesc != null)
+            {
+                _lblPresetDesc.Size = new Size(switchW, 18);
+                _lblPresetDesc.Location = new Point(switchX, 66);
+            }
+
+            // Зона 3: Кнопка пуска / Прогресс
+            int z3X = z1W + z2W + 16;
+            int btnW = z3W - 32;
+
+            if (_btnLaunch != null)
+            {
+                _btnLaunch.Size = new Size(btnW, 52);
+                _btnLaunch.Location = new Point(z3X, (deckH - 52) / 2);
+            }
+
+            if (_lblPhase != null)
+            {
+                _lblPhase.Size = new Size(btnW, 18);
+                _lblPhase.Location = new Point(z3X, 14);
+            }
+            if (_progressBar != null)
+            {
+                _progressBar.Size = new Size(btnW, 6);
+                _progressBar.Location = new Point(z3X, 36);
+            }
+            if (_lblDetail != null)
+            {
+                _lblDetail.Size = new Size(btnW - 75, 22);
+                _lblDetail.Location = new Point(z3X, 48);
+            }
+            if (_btnCancel != null)
+            {
+                _btnCancel.Size = new Size(70, 24);
+                _btnCancel.Location = new Point(z3X + btnW - 70, 48);
+            }
+        }
+
+        private static Button CreatePresetChip(string text, Action onClick)
         {
             var btn = new Button
             {
                 Text = text,
-                Location = new Point(x, y),
-                Size = new Size(46, 28),
+                Size = new Size(34, 22),
                 FlatStyle = FlatStyle.Flat,
-                BackColor = Color.FromArgb(32, 38, 50),
-                ForeColor = Theme.TextDim,
-                Font = Theme.Font(8.5f, FontStyle.Bold),
+                BackColor = Color.FromArgb(28, 34, 46),
+                ForeColor = Color.FromArgb(180, 192, 212),
+                Font = Theme.Font(7.8f, FontStyle.Bold),
                 Cursor = Cursors.Hand
             };
-            btn.FlatAppearance.BorderSize = 0;
+            btn.FlatAppearance.BorderSize = 1;
+            btn.FlatAppearance.BorderColor = Color.FromArgb(46, 56, 76);
+            btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(42, 52, 70);
             btn.Click += (s, e) => onClick();
             return btn;
-        }
-
-        private static void SetupPresetButton(Button btn, int x, int y, int w, Action onClick)
-        {
-            btn.Location = new Point(x, y);
-            btn.Size = new Size(w, 28);
-            btn.FlatStyle = FlatStyle.Flat;
-            btn.Cursor = Cursors.Hand;
-            btn.Font = Theme.Font(8.5f, FontStyle.Bold);
-            btn.FlatAppearance.BorderSize = 1;
-            btn.Click += (s, e) => onClick();
-        }
-
-        private static void ConfigurePresetBtn(Button btn, string text, bool active)
-        {
-            btn.Text = text;
-            btn.BackColor = active ? Color.FromArgb(45, 55, 75) : Color.FromArgb(24, 28, 36);
-            btn.ForeColor = active ? Theme.Gold : Theme.TextDim;
-            btn.FlatAppearance.BorderColor = active ? Theme.Gold : Theme.BorderSoft;
         }
 
         // ════════════════════════════════════════════════════════════════════
@@ -925,7 +858,6 @@ namespace SteampunkLauncher
                     _config.Nickname = val;
                     _config.Save();
                     if (_txtHeaderNick != null && _txtHeaderNick.Text != val) _txtHeaderNick.Text = val;
-                    if (_txtGameNick != null && _txtGameNick.Text != val) _txtGameNick.Text = val;
                     SkinStore.ApplyToGame(_config.GameDir, val);
                 }
             };
@@ -1345,7 +1277,6 @@ namespace SteampunkLauncher
         {
             string nick = string.IsNullOrEmpty(_config.Nickname) ? "Trubik" : _config.Nickname;
             if (_txtSkinPlayerNick != null && _txtSkinPlayerNick.Text != nick) _txtSkinPlayerNick.Text = nick;
-            if (_txtGameNick != null && _txtGameNick.Text != nick) _txtGameNick.Text = nick;
             if (_txtHeaderNick != null && _txtHeaderNick.Text != nick) _txtHeaderNick.Text = nick;
         }
 
@@ -1895,7 +1826,7 @@ namespace SteampunkLauncher
                 _config.Save();
                 _txtSettingsRam.Text = string.Format("{0:0.#}", snapped / 1024.0);
                 if (_ramSlider != null) _ramSlider.Value = snapped;
-                if (_txtRamNumber != null) _txtRamNumber.Text = string.Format("{0:0.#}", snapped / 1024.0);
+                if (_lblRamValue != null) _lblRamValue.Text = string.Format("{0:0.#} ГБ", snapped / 1024.0);
             };
 
             _txtSettingsRam.Leave += (s, e) =>
@@ -1910,6 +1841,8 @@ namespace SteampunkLauncher
                     _config.RamMb = mb;
                     _config.Save();
                     _sliderSettingsRam.Value = mb;
+                    if (_ramSlider != null) _ramSlider.Value = mb;
+                    if (_lblRamValue != null) _lblRamValue.Text = string.Format("{0:0.#} ГБ", mb / 1024.0);
                 }
             };
 
@@ -2274,13 +2207,16 @@ namespace SteampunkLauncher
         private void SetBusy(bool busy)
         {
             _busy = busy;
-            _btnLaunch.Visible = !busy;
-            _btnCancel.Visible = busy;
-            _progressBar.Visible = busy;
-            _lblPhase.Visible = busy;
-            _lblDetail.Visible = busy;
+            if (_btnLaunch != null) _btnLaunch.Visible = !busy;
+            if (_btnCancel != null) _btnCancel.Visible = busy;
+            if (_progressBar != null) _progressBar.Visible = busy;
+            if (_lblPhase != null) _lblPhase.Visible = busy;
+            if (_lblDetail != null) _lblDetail.Visible = busy;
             if (_ramSlider != null) _ramSlider.Enabled = !busy;
-            if (_txtRamNumber != null) _txtRamNumber.Enabled = !busy;
+            if (_btn4Gb != null) _btn4Gb.Enabled = !busy;
+            if (_btn8Gb != null) _btn8Gb.Enabled = !busy;
+            if (_btn12Gb != null) _btn12Gb.Enabled = !busy;
+            if (_presetSwitch != null) _presetSwitch.Enabled = !busy;
             RepositionGameLayout();
         }
 
