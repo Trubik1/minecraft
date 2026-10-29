@@ -3,6 +3,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "create_crafts__additions"
+	title: "Create: Crafts & Additions (Электричество)"
 	group: "181E781F1BAE7410"
 	icon: {
 		id: "createaddition:electric_motor"

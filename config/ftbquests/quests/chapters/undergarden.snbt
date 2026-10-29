@@ -3,6 +3,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "undergarden"
+	title: "The Undergarden (Подземный Сад)"
 	group: "1643FF0B14990565"
 	icon: {
 		id: "undergarden:catalyst"

@@ -2,6 +2,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "hexagon"
 	filename: "deeper_and_darker"
+	title: "Deeper and Darker (Глубже и Темнее)"
 	group: "1643FF0B14990565"
 	icon: {
 		id: "deeperdarker:heart_of_the_deep"

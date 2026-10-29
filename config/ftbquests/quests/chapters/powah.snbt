@@ -2,6 +2,7 @@
 	default_hide_dependency_lines: true
 	default_quest_shape: ""
 	filename: "powah"
+	title: "Powah: Энергия и Реакторы"
 	group: "0015B593B4889A40"
 	icon: {
 		id: "powah:energizing_orb"

@@ -2,6 +2,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "chapter_big_cannons"
+	title: "Create: Big Cannons (Тяжёлая Артиллерия)"
 	group: "181E781F1BAE7410"
 	icon: {
 		id: "createbigcannons:cannon_crafting_wand"

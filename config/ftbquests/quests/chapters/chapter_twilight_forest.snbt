@@ -2,6 +2,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "chapter_twilight_forest"
+	title: "Сумеречный Лес (Twilight Forest)"
 	group: "1643FF0B14990565"
 	icon: {
 		id: "twilightforest:moonworm_queen"
