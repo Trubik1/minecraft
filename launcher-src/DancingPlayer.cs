@@ -263,10 +263,10 @@ namespace SteampunkLauncher
         private void PrepareCamera()
         {
             // Масштаб персонажа: героический размер с гарантированным запасом от обрезки сверху и снизу
-            float availableH = Math.Max(100f, Height - 70f);
-            _s = (availableH / 36.5f) * _zoom;
+            float availableH = Math.Max(100f, Height - 60f);
+            _s = (availableH / 37.0f) * _zoom;
             _cx = Width * 0.5f;
-            _cy = Height * 0.48f;
+            _cy = Height * 0.43f;
 
             double yawRad = _yaw * Math.PI / 180.0;
             double pitchRad = _pitch * Math.PI / 180.0;

@@ -696,18 +696,7 @@ namespace SteampunkLauncher
                 _heroPanel.Size = new Size(Math.Min(600, W - 72), 105);
             }
 
-            // 2. Позиционирование масштабного танцующего персонажа на постаменте справа
-            if (_dancingPlayer != null)
-            {
-                int charH = Math.Min(680, H - 85);
-                int charW = Math.Min(560, (int)(charH * 0.82f));
-                int charX = W - charW - 10;
-                int charY = Math.Max(10, H - charH - 85);
-                _dancingPlayer.Size = new Size(charW, charH);
-                _dancingPlayer.Location = new Point(charX, charY);
-            }
-
-            // 3. Позиционирование Command Deck по центру внизу
+            // 2. Позиционирование Command Deck по центру внизу
             int deckW = Math.Min(1060, W - 48);
             int deckH = 94;
             int deckX = (W - deckW) / 2;
@@ -718,6 +707,20 @@ namespace SteampunkLauncher
             _commandDeck.BringToFront();
 
             LayoutCommandDeck(deckW, deckH);
+
+            // 3. Позиционирование масштабного танцующего персонажа на постаменте справа
+            // Персонаж поднят над Command Deck, чтобы ноги и ботинки были гарантированно полностью видны
+            if (_dancingPlayer != null)
+            {
+                int maxH = Math.Max(300, deckY - 15);
+                int charH = Math.Min(620, maxH);
+                int charW = Math.Min(540, (int)(charH * 0.84f));
+                int charX = W - charW - 10;
+                int charY = Math.Max(10, deckY - charH - 6);
+                _dancingPlayer.Size = new Size(charW, charH);
+                _dancingPlayer.Location = new Point(charX, charY);
+                _dancingPlayer.BringToFront();
+            }
         }
 
         private void LayoutCommandDeck(int deckW, int deckH)

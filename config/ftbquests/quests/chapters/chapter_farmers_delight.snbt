@@ -1099,10 +1099,7 @@
 		{
 			dependencies: ["5A8C11099E030114"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "moredelight:hamburger_with_cheese"
-				}
-				id: "ftbquests:missing_item"
+				id: "moredelight:hamburger_with_cheese"
 			}
 			id: "5A8C11099E030115"
 			rewards: [
@@ -1111,10 +1108,10 @@
 					id: "1F2E3D4C5B6A0129"
 					item: {
 						components: {
-							"ftbquests:missing_item": "4x moredelight:hamburger_with_cheese"
+							"id": "moredelight:hamburger_with_cheese"
 						}
 						count: 1
-						id: "ftbquests:missing_item"
+						id: "moredelight:hamburger_with_cheese"
 					}
 					type: "item"
 				}
@@ -1126,7 +1123,7 @@
 			]
 			tasks: [{
 				id: "2F3E4D5C6B7A0119"
-				item: { components: { "ftbquests:missing_item": "moredelight:hamburger_with_cheese" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "farmersdelight:hamburger" }
 				type: "item"
 			}]
 			x: 2.5d

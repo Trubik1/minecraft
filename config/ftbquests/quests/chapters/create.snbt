@@ -3972,7 +3972,7 @@
 			size: 1.25d
 			tasks: [{
 				id: "3AB6845819FF686F"
-				item: { components: { "ftbquests:missing_item": "create:cardboard_box" }, count: 1, id: "ftbquests:missing_item" }
+				item: { count: 1, id: "create:cardboard_block" }
 				type: "item"
 			}]
 			x: -6.0d

@@ -1578,17 +1578,17 @@
 				}
 				{
 					id: "00DE11D8FD4EF4AA"
-					item: { components: { "ftbquests:missing_item": "refinedtypes:64k_energy_storage_part" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "refinedstorage:64k_storage_part" }
 					type: "item"
 				}
 				{
 					id: "0265D844832FCB74"
-					item: { components: { "ftbquests:missing_item": "refinedtypes:64b_source_storage_part" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "refinedstorage:256k_storage_part" }
 					type: "item"
 				}
 				{
 					id: "40105CC998905DE9"
-					item: { components: { "ftbquests:missing_item": "refinedtypes:1k_soul_storage_part" }, count: 1, id: "ftbquests:missing_item" }
+					item: { count: 1, id: "refinedstorage:64k_fluid_storage_part" }
 					type: "item"
 				}
 			]

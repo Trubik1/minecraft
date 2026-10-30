@@ -177,13 +177,7 @@
 			id: "7097EFDECE9CDAF7"
 			rewards: [{
 				id: "511CD7EB2566481D"
-				item: {
-					components: {
-						"ftbquests:missing_item": "easy_mob_farm:mob_capture_card"
-					}
-					count: 1
-					id: "ftbquests:missing_item"
-				}
+				item: { count: 1, id: "create:precision_mechanism" }
 				type: "item"
 			}]
 			shape: "octagon"
@@ -223,13 +217,7 @@
 			id: "4D89B47FFF31585D"
 			rewards: [{
 				id: "41A46D2EBCCAEAF6"
-				item: {
-					components: {
-						"ftbquests:missing_item": "create_enchantment_industry:blaze_forger"
-					}
-					count: 1
-					id: "ftbquests:missing_item"
-				}
+				item: { count: 1, id: "create:blaze_burner" }
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -343,13 +331,7 @@
 				}
 				{
 					id: "451BCA6B47C259A8"
-					item: {
-						components: {
-							"ftbquests:missing_item": "ars_nouveau:glyph_redstone_signal"
-						}
-						count: 1
-						id: "ftbquests:missing_item"
-					}
+					item: { count: 1, id: "create:pulse_extender" }
 					type: "item"
 				}
 			]

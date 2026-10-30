@@ -36,13 +36,7 @@
 			id: "36268EBCE1143F0A"
 			rewards: [{
 				id: "477AE4E4E13DAE75"
-				item: {
-					components: {
-						"ftbquests:missing_item": "ars_elemental:glyph_summon_slime"
-					}
-					count: 1
-					id: "ftbquests:missing_item"
-				}
+				item: { count: 1, id: "minecraft:slime_ball" }
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -63,13 +57,7 @@
 			id: "45D99E459A6A38F3"
 			rewards: [{
 				id: "154DB7F3A534E6F2"
-				item: {
-					components: {
-						"ftbquests:missing_item": "create_dragons_plus:red_dye_bucket"
-					}
-					count: 1
-					id: "ftbquests:missing_item"
-				}
+				item: { count: 1, id: "minecraft:red_dye" }
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -87,13 +75,7 @@
 			rewards: [{
 				count: 64
 				id: "79B885E4C2387AE1"
-				item: {
-					components: {
-						"ftbquests:missing_item": "golden_foods:enchanted_golden_baked_potato"
-					}
-					count: 1
-					id: "ftbquests:missing_item"
-				}
+				item: { count: 1, id: "minecraft:golden_carrot" }
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -157,13 +139,7 @@
 			id: "5E2B9B6AAB1F34F4"
 			rewards: [{
 				id: "7A81EE798A34131F"
-				item: {
-					components: {
-						"ftbquests:missing_item": "irons_spellbooks:fire_upgrade_orb"
-					}
-					count: 1
-					id: "ftbquests:missing_item"
-				}
+				item: { count: 1, id: "minecraft:blaze_rod" }
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -228,13 +204,7 @@
 			id: "745255652688D720"
 			rewards: [{
 				id: "19CDD57A2AFB50B8"
-				item: {
-					components: {
-						"ftbquests:missing_item": "create_things_and_misc:blaze_ballon_fire"
-					}
-					count: 1
-					id: "ftbquests:missing_item"
-				}
+				item: { count: 1, id: "create:blaze_cake" }
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -251,13 +221,7 @@
 			id: "4FB32E41F9FEE89B"
 			rewards: [{
 				id: "0AFF06DD20802607"
-				item: {
-					components: {
-						"ftbquests:missing_item": "easy_mob_farm:ironbound_containment_cage"
-					}
-					count: 1
-					id: "ftbquests:missing_item"
-				}
+				item: { count: 1, id: "minecraft:iron_bars" }
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -274,13 +238,7 @@
 			id: "0F550A972D2CC175"
 			rewards: [{
 				id: "691CA18D5061B931"
-				item: {
-					components: {
-						"ftbquests:missing_item": "ars_elemental:fire_relay"
-					}
-					count: 1
-					id: "ftbquests:missing_item"
-				}
+				item: { count: 1, id: "minecraft:fire_charge" }
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -296,13 +254,7 @@
 			id: "6FBC7D12F531A361"
 			rewards: [{
 				id: "795322C016B396E5"
-				item: {
-					components: {
-						"ftbquests:missing_item": "irons_spellbooks:amethyst_rapier"
-					}
-					count: 1
-					id: "ftbquests:missing_item"
-				}
+				item: { count: 1, id: "minecraft:amethyst_shard" }
 				type: "item"
 			}]
 			shape: "rsquare"
