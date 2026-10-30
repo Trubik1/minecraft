@@ -3552,7 +3552,7 @@
 	quest.77F241BEE9902751.quest_subtitle: "Столько места для деятельности!"
 	quest.77F241BEE9902751.quest_desc: ["Самый вместительный сундук из мода Sophisticated Storage"]
 	quest.5E4BC0F59C90433A.title: "Sophisticated Storage"
-	quest.5E4BC0F59C90433A.quest_subtitle: "\""
+	quest.5E4BC0F59C90433A.quest_subtitle: "Sophisticated Chests"
 	quest.5E4BC0F59C90433A.quest_desc: [""
 	]
 	quest.2746575C929B6C50.quest_subtitle: "Стаки на стаках"
@@ -3758,8 +3758,8 @@
 	quest.134608BB2B04D96E.title: "Ванильное хранение"
 	quest.134608BB2B04D96E.quest_subtitle: "Классика"
 	quest.134608BB2B04D96E.quest_desc: ["Обычные сундуки имеют 27 ячеек, а двойные — в два раза больше."]
-	quest.7F990FBC1A691020.quest_subtitle: "\""
-	quest.7F990FBC1A691020.quest_desc: [""
+	quest.7F990FBC1A691020.quest_subtitle: "Trapped Chest"
+	quest.7F990FBC1A691020.quest_desc: ["A chest that emits a redstone signal when opened."]
 	]
 	quest.1659A59303C15CC9.quest_desc: ["Бочки работают так же, как сундуки, но их нельзя объединять. Зато они выглядят круто."]
 	quest.25AFD10D008DF30B.quest_desc: ["Все эндер-сундуки используют общее хранилище, но у каждого игрока оно своё. Их нельзя объединять в двойные."]

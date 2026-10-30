@@ -267,7 +267,7 @@
 			x: 4.5d
 			y: -2.0d
 					title: "Sophisticated Storage"
-			subtitle: "\""
+			subtitle: "Сундуки нового поколения"
 			description: [""]
 		}
 		{
@@ -2063,8 +2063,8 @@
 			}]
 			x: -1.5d
 			y: 3.5d
-					subtitle: "\"
-			description: [" quest.1659A59303C15CC9.quest_desc: ["Бочки работают так же, как сундуки, но их нельзя объединять. Зато они выглядят круто."]
+			subtitle: "Сундук-ловушка"
+			description: ["Сундук, излучающий сигнал редстоуна при открытии."]
 		}
 		{
 			dependencies: ["134608BB2B04D96E"]
