@@ -26,3 +26,6 @@ launcher-src/bin/
 launcher-src/obj/
 launcher-src/FodyWeavers.xsd
 dist/
+
+Steampunk_Server_Pack.zip
+server_pack/
