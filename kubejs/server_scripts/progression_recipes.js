@@ -582,6 +582,13 @@ ServerEvents.recipes(event => {
     // СОЛНЕЧНЫЕ ПАНЕЛИ SOLAR FLUX REBORN (ИНТЕГРАЦИЯ CREATE, MEKANISM, TWILIGHT)
     // ==========================================================================
 
+    // Полное удаление всех стандартных крафтов солнечных панелей Solar Flux Reborn
+    event.remove({ id: /^solarflux:(sp_|solar_panel_|sp_tf).*/ });
+    event.remove({ id: /^solarflux:solar_panels\/.*/ });
+    event.remove({ output: /^solarflux:sp_.*/, not: { id: /^steampunk:solar\/.*/ } });
+    event.remove({ output: 'solarflux:sp_tf.fiery', not: { id: /^steampunk:solar\/.*/ } });
+    event.remove({ output: 'solarflux:sp_tf.carminite', not: { id: /^steampunk:solar\/.*/ } });
+
     // Солнечная панель 1: Зеркала + железные листы Create + редстоун
     event.remove({ output: 'solarflux:sp_1' });
     event.shaped('solarflux:sp_1', [
