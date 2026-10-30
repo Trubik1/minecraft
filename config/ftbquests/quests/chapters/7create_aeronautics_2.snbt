@@ -2,14 +2,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "7create_aeronautics_2"
-	title: "Aeronautics: Воздушный Флот"
 	group: "181E781F1BAE7410"
+	order_index: 5
+	title: "Aeronautics: Воздушный Флот"
 	icon: {
 		id: "aeronautics:propeller_bearing"
 	}
 	id: "56096636DE3BAEC1"
 	images: [ ]
-	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{

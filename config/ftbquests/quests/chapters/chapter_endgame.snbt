@@ -2,14 +2,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "chapter_endgame"
-	title: "Эндгейм и Мега-Крафты"
 	group: "3E8A1F026B5C7D91"
+	order_index: 0
+	title: "Эндгейм и Мега-Крафты"
 	icon: {
 		id: "create:creative_motor"
 	}
 	id: "5A8C11099EFA0005"
 	images: [ ]
-	order_index: 0
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [

@@ -2,14 +2,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "chapter_1_base"
-	title: "Базовое Выживание"
 	group: "1643FF0B14990565"
+	order_index: 0
+	title: "Базовое Выживание"
 	icon: {
 		id: "minecraft:grass_block"
 	}
 	id: "6EE3A83667F04BFE"
 	images: [ ]
-	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{

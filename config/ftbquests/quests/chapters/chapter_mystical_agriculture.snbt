@@ -2,14 +2,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "chapter_mystical_agriculture"
-	title: "Mystical Agriculture: Мистическое Фермерство"
 	group: "0015B593B4889A40"
+	order_index: 7
+	title: "Mystical Agriculture: Магическое Фермерство"
 	icon: {
 		id: "mysticalagriculture:infusion_crystal"
 	}
 	id: "5A8C11099EFA0007"
 	images: [ ]
-	order_index: 6
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [

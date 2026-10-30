@@ -3,14 +3,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "pneumaticcraft"
-	title: "PneumaticCraft: Сжатый Воздух"
 	group: "0015B593B4889A40"
+	order_index: 4
+	title: "PneumaticCraft: Сжатый Воздух"
 	icon: {
 		id: "pneumaticcraft:pressure_gauge_module"
 	}
 	id: "5A8C11099EFA0009"
 	images: [ ]
-	order_index: 8
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [

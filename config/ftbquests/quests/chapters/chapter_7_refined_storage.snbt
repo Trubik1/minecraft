@@ -2,14 +2,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "diamond"
 	filename: "chapter_7_refined_storage"
-	title: "Refined Storage: Цифровые Сети"
 	group: "0015B593B4889A40"
+	order_index: 0
+	title: "Refined Storage: Цифровые Сети"
 	icon: {
 		id: "refinedstorage:creative_controller"
 	}
 	id: "15AAF17B6665223D"
 	images: [ ]
-	order_index: 1
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [

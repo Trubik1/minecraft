@@ -2,14 +2,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "chapter_boss_hunting"
-	title: "Охота на Боссов и Данжи"
-	group: "1643FF0B14990565"
+	group: "2A8C11099EFA0001"
+	order_index: 0
+	title: "Охота на Боссов и Контракты"
 	icon: {
 		id: "cataclysm:abyssal_sacrifice"
 	}
 	id: "5A8C11099EFA0001"
 	images: [ ]
-	order_index: 7
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [

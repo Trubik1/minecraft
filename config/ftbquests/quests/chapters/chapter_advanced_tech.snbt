@@ -2,14 +2,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "chapter_advanced_tech"
-	title: "Передовые Технологии (Advanced Tech)"
 	group: "0015B593B4889A40"
+	order_index: 8
+	title: "Передовые Технологии (Advanced Tech)"
 	icon: {
 		id: "industrialforegoing:plastic"
 	}
 	id: "5A8C11099EFA0004"
 	images: [ ]
-	order_index: 2
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [

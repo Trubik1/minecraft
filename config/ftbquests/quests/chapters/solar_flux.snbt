@@ -2,14 +2,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "solar_flux"
-	title: "Solar Flux: Солнечная Энергетика"
 	group: "0015B593B4889A40"
+	order_index: 5
+	title: "Solar Flux: Солнечные Панели"
 	icon: {
 		id: "solarflux:sp_5"
 	}
 	id: "6C91DA156B4B0C44"
 	images: [ ]
-	order_index: 5
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [

@@ -2,14 +2,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "create_connected"
-	title: "Create: Connected"
 	group: "181E781F1BAE7410"
+	order_index: 1
+	title: "Create: Connected"
 	icon: {
 		id: "create_connected:freewheel_clutch"
 	}
 	id: "4206A58542561BF0"
 	images: [ ]
-	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{

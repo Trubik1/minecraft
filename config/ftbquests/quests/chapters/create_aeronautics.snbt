@@ -2,14 +2,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "create_aeronautics"
-	title: "Create Aeronautics: Воздухоплавание"
 	group: "181E781F1BAE7410"
+	order_index: 4
+	title: "Create Aeronautics: Воздухоплавание"
 	icon: {
 		id: "offroad:large_tire"
 	}
 	id: "4E115E1260B9FA39"
 	images: [ ]
-	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{

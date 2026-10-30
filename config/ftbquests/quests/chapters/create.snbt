@@ -2,8 +2,9 @@
 	default_hide_dependency_lines: true
 	default_quest_shape: "gear"
 	filename: "create"
-	title: "Create: Кинетическая Инженерия"
 	group: "181E781F1BAE7410"
+	order_index: 0
+	title: "Create: Основы Механики"
 	icon: {
 		id: "create:large_cogwheel"
 	}
@@ -1272,7 +1273,6 @@
 			y: 0.0d
 		}
 	]
-	order_index: 0
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [

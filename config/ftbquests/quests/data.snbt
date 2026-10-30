@@ -12,7 +12,7 @@
 	fallback_locale: "ru_ru"
 	grid_scale: 0.5d
 	hide_excluded_quests: false
-	lock_message: "Выполните предыдущие задания для открытия!"
+	lock_message: "Квест заблокирован!"
 	loot_crate_no_drop: {
 		boss: 0
 		monster: 600

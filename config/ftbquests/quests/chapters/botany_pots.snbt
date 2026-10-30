@@ -3,14 +3,14 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "botany_pots"
-	title: "Botany Pots: Автоматические Фермы"
 	group: "0015B593B4889A40"
+	order_index: 6
+	title: "Botany Pots: Ботанические Горшки"
 	icon: {
 		id: "botanypots:terracotta_hopper_botany_pot"
 	}
 	id: "5A8C11099EFA0008"
 	images: [ ]
-	order_index: 7
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
