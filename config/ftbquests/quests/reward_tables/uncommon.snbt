@@ -1,0 +1,18 @@
+{
+	icon: {
+		id: "ftbquests:lootcrate"
+	}
+	id: "3A3BDBA4E9AD13C4"
+	loot_size: 1
+	order_index: 5
+	rewards: [
+		{ id: "2000000000000001", item: { count: 2, id: "minecraft:diamond" }, weight: 50.0f }
+		{ id: "2000000000000002", item: { count: 4, id: "minecraft:ender_pearl" }, weight: 60.0f }
+		{ id: "2000000000000003", item: { count: 4, id: "bigreactors:basic_reactorcasing" }, weight: 70.0f }
+		{ id: "2000000000000004", item: { count: 2, id: "bigreactors:basic_reactorfuelrod" }, weight: 60.0f }
+		{ id: "2000000000000005", item: { count: 4, id: "bigreactors:graphite_ingot" }, weight: 70.0f }
+		{ id: "2000000000000006", item: { count: 1, id: "mekanism:basic_energy_cube" }, weight: 40.0f }
+		{ id: "2000000000000007", item: { count: 4, id: "bigreactors:yellorium_ingot" }, weight: 70.0f }
+	]
+	title: "Необычная награда"
+}

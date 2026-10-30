@@ -1,0 +1,16 @@
+{
+	icon: {
+		id: "ftbquests:lootcrate"
+	}
+	id: "617F6D802ED0FD00"
+	loot_size: 1
+	order_index: 7
+	rewards: [
+		{ id: "4000000000000001", item: { count: 1, id: "minecraft:netherite_ingot" }, weight: 30.0f }
+		{ id: "4000000000000002", item: { count: 2, id: "bigreactors:ludicrite_ingot" }, weight: 40.0f }
+		{ id: "4000000000000003", item: { count: 2, id: "bigreactors:ridiculite_ingot" }, weight: 40.0f }
+		{ id: "4000000000000004", item: { count: 2, id: "bigreactors:inanite_ingot" }, weight: 40.0f }
+		{ id: "4000000000000005", item: { count: 1, id: "mekanism:elite_control_circuit" }, weight: 30.0f }
+	]
+	title: "Эпическая награда"
+}

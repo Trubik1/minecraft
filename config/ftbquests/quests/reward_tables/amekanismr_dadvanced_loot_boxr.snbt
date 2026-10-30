@@ -1,0 +1,16 @@
+{
+	icon: {
+		id: "ftbquests:lootcrate"
+	}
+	id: "74164DBBE7919A3B"
+	loot_size: 1
+	order_index: 8
+	rewards: [
+		{ id: "5000000000000001", item: { count: 1, id: "bigreactors:insanite_ingot" }, weight: 30.0f }
+		{ id: "5000000000000002", item: { count: 1, id: "bigreactors:insanite_block" }, weight: 15.0f }
+		{ id: "5000000000000003", item: { count: 1, id: "minecraft:netherite_block" }, weight: 10.0f }
+		{ id: "5000000000000004", item: { count: 4, id: "bigreactors:reinforced_reactorfuelrod" }, weight: 40.0f }
+		{ id: "5000000000000005", item: { count: 2, id: "mekanism:ultimate_control_circuit" }, weight: 25.0f }
+	]
+	title: "Продвинутый сундук реакторов"
+}

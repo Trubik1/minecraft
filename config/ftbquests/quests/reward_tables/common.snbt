@@ -1,0 +1,18 @@
+{
+	icon: {
+		id: "ftbquests:lootcrate"
+	}
+	id: "06C4634E81851A6C"
+	loot_size: 1
+	order_index: 4
+	rewards: [
+		{ id: "1000000000000001", item: { count: 4, id: "minecraft:iron_ingot" }, weight: 100.0f }
+		{ id: "1000000000000002", item: { count: 8, id: "minecraft:coal" }, weight: 100.0f }
+		{ id: "1000000000000003", item: { count: 8, id: "minecraft:redstone" }, weight: 100.0f }
+		{ id: "1000000000000004", item: { count: 2, id: "bigreactors:raw_yellorium" }, weight: 80.0f }
+		{ id: "1000000000000005", item: { count: 2, id: "bigreactors:yellorium_ingot" }, weight: 80.0f }
+		{ id: "1000000000000006", item: { count: 4, id: "minecraft:copper_ingot" }, weight: 100.0f }
+		{ id: "1000000000000007", item: { count: 8, id: "minecraft:cooked_beef" }, weight: 100.0f }
+	]
+	title: "Обычная награда"
+}

@@ -1,0 +1,17 @@
+{
+	icon: {
+		id: "ftbquests:lootcrate"
+	}
+	id: "4D37FFAF33DF678A"
+	loot_size: 1
+	order_index: 6
+	rewards: [
+		{ id: "3000000000000001", item: { count: 1, id: "minecraft:diamond_block" }, weight: 40.0f }
+		{ id: "3000000000000002", item: { count: 4, id: "bigreactors:cyanite_ingot" }, weight: 60.0f }
+		{ id: "3000000000000003", item: { count: 2, id: "bigreactors:blutonium_ingot" }, weight: 50.0f }
+		{ id: "3000000000000004", item: { count: 4, id: "bigreactors:reinforced_reactorcasing" }, weight: 50.0f }
+		{ id: "3000000000000005", item: { count: 1, id: "mekanism:advanced_energy_cube" }, weight: 30.0f }
+		{ id: "3000000000000006", item: { count: 1, id: "minecraft:netherite_scrap" }, weight: 30.0f }
+	]
+	title: "Редкая награда"
+}
