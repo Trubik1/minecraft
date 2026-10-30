@@ -86,6 +86,11 @@
 			y: -1.8d
 		}
 		{
+			title: "Творческий торт сполоха"
+			description: [
+				"Вечное сверхгорячее топливо для горелок сполоха Create."
+				"Переводит механизмы на максимальную скорость и обеспечивает супер-нагрев без постоянного расхода ресурсов!"
+			]
 			dependencies: ["5A8C11099E050002"]
 			icon: {
 				id: "create:creative_blaze_cake"
@@ -110,7 +115,7 @@
 			tasks: [{
 				id: "4EF38FE7AA6E1C06"
 				item: { count: 1, id: "create:creative_blaze_cake" }
-				type: "item"
+					type: "item"
 			}]
 			x: 4.2d
 			y: -1.8d
@@ -148,11 +153,17 @@
 			y: 1.8d
 		}
 		{
+			title: "Творческий резервуар жидкостей"
+			description: [
+				"Бесконечный источник любой залитой жидкости для Create и Mekanism."
+				"Вы можете свободно конвертировать творческий резервуар Create и творческий бак Mekanism друг в друга в обычном верстаке!"
+			]
 			dependencies: ["5A8C11099E050004"]
 			icon: {
-				id: "mekanism:creative_fluid_tank"
+				id: "create:creative_fluid_tank"
 			}
 			id: "5A8C11099E050005"
+			min_required_tasks: 1
 			rewards: [
 				{
 					count: 8
@@ -169,15 +180,27 @@
 					xp_levels: 80
 				}
 			]
-			tasks: [{
-				id: "5206B092EA66389D"
-				item: { count: 1, id: "mekanism:creative_fluid_tank" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "5206B092EA66389D"
+					item: { count: 1, id: "mekanism:creative_fluid_tank" }
+					type: "item"
+				}
+				{
+					id: "5206B092EA66389E"
+					item: { count: 1, id: "create:creative_fluid_tank" }
+					type: "item"
+				}
+			]
 			x: 4.2d
 			y: 1.8d
 		}
-		{
+			{
+			title: "Творческие диски хранения"
+			description: [
+				"Диски хранения бесконечной ёмкости для предметов и жидкостей."
+				"В них можно хранить триллионы предметов и жидкостей без лимитов типов и байтов."
+			]
 			dependencies: [
 				"5A8C11099E050003"
 				"5A8C11099E050005"
@@ -203,15 +226,22 @@
 			]
 			shape: "challenge"
 			size: 1.3d
-			tasks: [{
-				id: "3036005E26774E39"
-				item: { count: 1, id: "refinedstorage:creative_storage_disk" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "3036005E26774E39"
+					item: { count: 1, id: "refinedstorage:creative_storage_disk" }
+					type: "item"
+				}
+				{
+					id: "3036005E26774E40"
+					item: { count: 1, id: "refinedstorage:creative_fluid_storage_disk" }
+					type: "item"
+				}
+			]
 			x: 5.8d
 			y: 0.0d
 		}
-		{
+			{
 			dependencies: ["5A8C11099E050006"]
 			icon: {
 				id: "refinedstorage:creative_controller"
@@ -242,9 +272,14 @@
 			y: -1.5d
 		}
 		{
+			title: "Творческие беспроводные терминалы"
+			description: [
+				"Беспроводной терминал и терминал создания с бесконечной энергией!"
+				"Дают неограниченный доступ к хранилищу и возможность мгновенного крафта из любой точки мира."
+			]
 			dependencies: ["5A8C11099E050006"]
 			icon: {
-				id: "refinedstorage:network_card"
+				id: "refinedstorage_quartz_arsenal:creative_wireless_crafting_grid"
 			}
 			id: "5A8C11099E050009"
 			rewards: [
@@ -258,20 +293,38 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "55A8C1099EB00001"
+					item: {
+						count: 4
+						id: "minecraft:netherite_block"
+					}
+					type: "item"
+				}
+				{
 					id: "3B925FD82F4913EA"
 					type: "xp_levels"
-					xp_levels: 80
+					xp_levels: 100
 				}
 			]
-			tasks: [{
-				id: "1C047410C5A068D2"
-				item: { count: 1, id: "refinedstorage:network_card" }
-				type: "item"
-			}]
+			shape: "challenge"
+			size: 1.3d
+			tasks: [
+				{
+					id: "1C047410C5A068D2"
+					item: { count: 1, id: "refinedstorage:creative_wireless_grid" }
+					type: "item"
+				}
+				{
+					id: "744842B2AED2B999"
+					item: { count: 1, id: "refinedstorage_quartz_arsenal:creative_wireless_crafting_grid" }
+					type: "item"
+				}
+			]
 			x: 7.5d
 			y: 1.5d
 		}
-		{
+			{
 			dependencies: [
 				"5A8C11099E050008"
 				"5A8C11099E050009"

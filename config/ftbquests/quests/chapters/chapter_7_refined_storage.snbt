@@ -1277,7 +1277,7 @@
 			]
 			dependencies: ["6B04FC81351CD1AB"]
 			icon: {
-				id: "refinedstorage:creative_wireless_grid"
+				id: "refinedstorage:wireless_grid"
 			}
 			id: "15ECBC8E174FA39B"
 			rewards: [
@@ -1311,7 +1311,7 @@
 				"7044EAB5EDF32BBC"
 			]
 			icon: {
-				id: "refinedstorage:creative_wireless_autocrafting_monitor"
+				id: "refinedstorage:wireless_autocrafting_monitor"
 			}
 			id: "7FA85713C86166DA"
 			rewards: [
@@ -1345,7 +1345,7 @@
 				"0F00BBDF3618B3BA"
 			]
 			icon: {
-				id: "refinedstorage_quartz_arsenal:creative_wireless_crafting_grid"
+				id: "refinedstorage_quartz_arsenal:wireless_crafting_grid"
 			}
 			id: "744842B2AED28344"
 			rewards: [
@@ -1983,7 +1983,7 @@
 			]
 			hide_until_deps_complete: true
 			icon: {
-				id: "universalgrid:creative_wireless_universal_grid"
+				id: "universalgrid:wireless_universal_grid"
 			}
 			id: "24D3F605315ADB03"
 			rewards: [
@@ -2092,5 +2092,117 @@
 			x: -1.0d
 			y: -4.5d
 		}
+		{
+			title: "Творческое улучшение дальности"
+			description: [
+				"Обычные улучшения дальности дают лишь ограниченную зону покрытия."
+				"Творческое улучшение дальности снимает любые лимиты: один такой апгрейд в беспроводном передатчике обеспечивает сигнал по всему миру!"
+				"Создаётся в обычном верстаке с помощью незерита или звезды Незера."
+			]
+			dependencies: ["2E2811D1A0F2A492"]
+			icon: {
+				id: "refinedstorage:creative_range_upgrade"
+			}
+			id: "2E2811D1A0F2B001"
+			rewards: [
+				{
+					id: "5BC4782A0281F001"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5BC4782A0281F002"
+					type: "xp"
+					xp: 500
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "2E2811D1A0F2B002"
+				item: { count: 1, id: "refinedstorage:creative_range_upgrade" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: -0.5d
+		}
+		{
+			title: "Творческий беспроводной терминал"
+			description: [
+				"Беспроводной терминал с бесконечной энергией. Никогда не разряжается и позволяет открывать хранилище МЭ из любой точки мира!"
+			]
+			dependencies: ["15ECBC8E174FA39B"]
+			icon: {
+				id: "refinedstorage:creative_wireless_grid"
+			}
+			id: "15ECBC8E174FB001"
+			rewards: [
+				{
+					id: "5BC4782A0281F003"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5BC4782A0281F004"
+					type: "xp"
+					xp: 500
+				}
+			]
+			shape: "diamond"
+			size: 1.1d
+			tasks: [{
+				id: "15ECBC8E174FB002"
+				item: { count: 1, id: "refinedstorage:creative_wireless_grid" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: -4.7d
+		}
+		{
+			title: "Творческий беспроводной терминал создания"
+			description: [
+				"Максимальное удобство: бесконечная энергия плюс встроенный верстак с прямым доступом к сети.",
+				"Крафтите прямо на ходу в любом измерении, объединив творческий беспроводной терминал с верстаком и улучшенным процессором."
+			]
+			dependencies: [
+				"744842B2AED28344"
+				"15ECBC8E174FB001"
+			]
+			icon: {
+				id: "refinedstorage_quartz_arsenal:creative_wireless_crafting_grid"
+			}
+			id: "744842B2AED2B001"
+			rewards: [
+				{
+					id: "5BC4782A0281F005"
+					item: {
+						count: 2
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5BC4782A0281F006"
+					type: "xp"
+					xp: 1000
+				}
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [{
+				id: "744842B2AED2B002"
+				item: { count: 1, id: "refinedstorage_quartz_arsenal:creative_wireless_crafting_grid" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: -4.7d
+		}
+
 	]
 }

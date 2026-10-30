@@ -1274,7 +1274,6 @@ ServerEvents.recipes(event => {
     // 1x Ars Singularity (W), both made in the Extended Crafting Compressor.
     event.custom({
         type: 'extendedcrafting:shaped_table',
-        tier: 4,
         pattern: [
             'VFPAUAPFM',
             'FSPCHCPFS',
@@ -1313,7 +1312,6 @@ ServerEvents.recipes(event => {
     // 2. Креативный энергетический куб Mekanism (mekanism:creative_energy_cube)
     event.custom({
         type: 'extendedcrafting:shaped_table',
-        tier: 4,
         pattern: [
             'VCPUAUPFS',
             'CRUNTNURC',
@@ -1385,7 +1383,6 @@ ServerEvents.recipes(event => {
     // 4. Креативный контроллер Refined Storage (refinedstorage:creative_controller)
     event.custom({
         type: 'extendedcrafting:shaped_table',
-        tier: 4,
         pattern: [
             'VPPPUPPPP',
             'PCSAMASCP',
@@ -1424,7 +1421,6 @@ ServerEvents.recipes(event => {
     // 5. Креативный диск памяти Refined Storage (refinedstorage:creative_storage_disk)
     event.custom({
         type: 'extendedcrafting:shaped_table',
-        tier: 4,
         pattern: [
             'VSSSUSSSS',
             'SCPAPAPCS',
@@ -1754,7 +1750,7 @@ ServerEvents.recipes(event => {
         ],
         result: {
             count: 2,
-            id: 'extendedcrafting:black_iron_ingot_charcoal'
+            id: 'extendedcrafting:black_iron_ingot'
         }
     }).id('steampunk:powah/energizing_black_iron_ingot_charcoal');
 

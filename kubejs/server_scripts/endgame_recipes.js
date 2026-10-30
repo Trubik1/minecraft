@@ -30,7 +30,6 @@ ServerEvents.recipes(event => {
     const table = (id, pattern, key, result) => {
         event.custom({
             type: 'extendedcrafting:shaped_table',
-            tier: 4,
             pattern: pattern,
             key: key,
             result: { id: result, count: 1 }
@@ -636,14 +635,38 @@ ServerEvents.recipes(event => {
         'refinedstorage:creative_wireless_grid'
     ]).id('steampunk:endgame/creative_wireless_universal_grid');
 
+    // Улучшение дальности (Creative Range Upgrade) - сбалансированный крафт
     event.shaped('refinedstorage:creative_range_upgrade', [
-        'RRR',
-        'RNR',
-        'RRR'
+        'RUR',
+        'UNU',
+        'RUR'
     ], {
         R: 'refinedstorage:range_upgrade',
+        U: 'refinedstorage:upgrade',
         N: 'minecraft:nether_star'
     }).id('steampunk:endgame/creative_range_upgrade');
+
+    // Альтернативный умеренный крафт через Незерит и Улучшенные процессоры (не требующий звезд)
+    event.shaped('refinedstorage:creative_range_upgrade', [
+        'RPR',
+        'PNP',
+        'RPR'
+    ], {
+        R: 'refinedstorage:range_upgrade',
+        P: 'refinedstorage:advanced_processor',
+        N: 'minecraft:netherite_ingot'
+    }).id('steampunk:endgame/creative_range_upgrade_netherite');
+
+    // Двусторонняя конвертация творческих резервуаров Create <-> Mekanism
+    event.shapeless('create:creative_fluid_tank', ['mekanism:creative_fluid_tank']).id('steampunk:endgame/convert_mek_to_create_tank');
+    event.shapeless('mekanism:creative_fluid_tank', ['create:creative_fluid_tank']).id('steampunk:endgame/convert_create_to_mek_tank');
+
+    // Дополнительный удобный крафт для Творческого беспроводного терминала создания
+    event.shapeless('refinedstorage_quartz_arsenal:creative_wireless_crafting_grid', [
+        'refinedstorage:creative_wireless_grid',
+        'minecraft:crafting_table',
+        'refinedstorage:advanced_processor'
+    ]).id('steampunk:endgame/creative_wireless_crafting_grid_from_table');
 
     // 8.3 Креативные надстройки для Create, Storage Drawers, PneumaticCraft
     event.shapeless('create_connected:creative_fluid_vessel', [

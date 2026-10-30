@@ -1442,20 +1442,20 @@
 	quest.5A8C11099E050001.title: "Врата Абсолютного Могущества"
 	quest.5A8C11099E050002.quest_desc: ["Бесконечный источник вращения с любой скоростью RPM и стресс-емкостью SU. Больше никаких паровых котлов и ветряков!"]
 	quest.5A8C11099E050002.title: "Креативный Мотор Create"
-	quest.5A8C11099E050003.quest_desc: ["Вечное сверхгорячее пламя для любых механизмов Create. Никогда не тухнет!"]
-	quest.5A8C11099E050003.title: "Креативный Торт Сполоха"
+	quest.5A8C11099E050003.quest_desc: ["Infinite super-heating fuel for Create Blaze Burners."]
+	quest.5A8C11099E050003.title: "Creative Blaze Cake"
 	quest.5A8C11099E050004.quest_desc: ["Источник бесконечной FE энергии максимальной мощности. Питает гигантские индукционные матрицы и реакторы."]
 	quest.5A8C11099E050004.title: "Креативный Энергетический Куб"
-	quest.5A8C11099E050005.quest_desc: ["Бесконечный объем любой залитой жидкости или газа. Залейте тяжелую воду, пар или лаву!"]
-	quest.5A8C11099E050005.title: "Креативный Резервуар Жидкостей"
-	quest.5A8C11099E050006.quest_desc: ["Креативный диск для Refined Storage. Бесконечная емкость: вмещает триллионы предметов и ресурсов!"]
-	quest.5A8C11099E050006.title: "Бесконечный Диск Данных RS"
+	quest.5A8C11099E050005.quest_desc: ["Infinite source of any fluid for Create and Mekanism. Can be converted 1-to-1 in any crafting table."]
+	quest.5A8C11099E050005.title: "Creative Fluid Tank"
+	quest.5A8C11099E050006.quest_desc: ["Infinite storage disks for items and fluids without any type or byte limits."]
+	quest.5A8C11099E050006.title: "Creative Storage Disks"
 	quest.5A8C11099E050007.quest_desc: ["Вы создали все величайшие реликвии и стали абсолютным богом вселенной Steampunk  Swords! Слава великому инженеру и архимагу!"]
 	quest.5A8C11099E050007.title: "Повелитель Измерений (God of Steampunk)"
 	quest.5A8C11099E050008.quest_desc: ["Бесконечное питание цифровой МЭ-сети без генераторов энергии."]
 	quest.5A8C11099E050008.title: "Креативный Контроллер RS"
-	quest.5A8C11099E050009.quest_desc: ["Мгновенная беспроводная связь между любыми измерениями через квантовые кольца."]
-	quest.5A8C11099E050009.title: "Око Сингулярности (Quantum Bridge)"
+	quest.5A8C11099E050009.quest_desc: ["Creative wireless grid and crafting grid with infinite energy!", "Provides wireless storage access and crafting anywhere."]
+	quest.5A8C11099E050009.title: "Creative Wireless Terminals"
 	quest.5A8C11099E050010.quest_desc: ["Соберите блоки всех металлов вселенной: Медь, Цинк, Латунь, Олово, Свинец, Уран, Осмий и Незерит!"]
 	quest.5A8C11099E050010.title: "Повелитель Металлов"
 	quest.5A8C11099E050011.quest_desc: ["Полный гримуар со всеми глифами и высшими заклинаниями Ars Nouveau."]
@@ -5705,4 +5705,10 @@
 	quest.64E85274D24FE394.title: "Монитор хранения"
 	quest.7604D8B3C9FCCFD9.title: "Корпус диска (Storage Housing)"
 	quest.23F691FC053F2319.title: "Дисковый интерфейс"
+	quest.2E2811D1A0F2B001.title: "Creative Range Upgrade"
+	quest.2E2811D1A0F2B001.quest_desc: ["Regular range upgrades provide limited coverage.", "The Creative Range Upgrade removes all limits: a single upgrade in a wireless transmitter provides infinite range across all dimensions!", "Crafted in a regular crafting table using netherite or a nether star."]
+	quest.15ECBC8E174FB001.title: "Creative Wireless Grid"
+	quest.15ECBC8E174FB001.quest_desc: ["A wireless grid with infinite power that never runs out of charge."]
+	quest.744842B2AED2B001.title: "Creative Wireless Crafting Grid"
+	quest.744842B2AED2B001.quest_desc: ["The ultimate convenience: infinite power combined with an on-the-go 3x3 crafting grid directly connected to your ME network."]
 }
