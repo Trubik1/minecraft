@@ -21,17 +21,19 @@ namespace SteampunkLauncher
         {
             try
             {
+                var config = LauncherConfig.Load();
                 if (string.IsNullOrWhiteSpace(gameDir))
                 {
-                    Log.Error("не указана папка игры");
-                    return 2;
+                    gameDir = config.GameDir;
                 }
-
-                gameDir = System.IO.Path.GetFullPath(gameDir);
-                var config = LauncherConfig.Load();
+                if (string.IsNullOrWhiteSpace(gameDir))
+                {
+                    gameDir = LauncherConfig.DefaultGameDir();
+                }
+                gameDir = LauncherConfig.SanitizeGameDir(gameDir);
                 config.GameDir = gameDir;
                 if (!string.IsNullOrEmpty(nickname)) config.Nickname = nickname;
-                if (string.IsNullOrEmpty(config.Nickname)) config.Nickname = "TestPlayer";
+                if (string.IsNullOrEmpty(config.Nickname)) config.Nickname = "Player2";
                 config.Save();
 
                 var progress = new DirectProgress();
@@ -56,8 +58,18 @@ namespace SteampunkLauncher
                 if (!launch) return 0;
 
                 Log.Info("=== Запуск игры ===");
+                ServerInfo srv = new ServerInfo();
+                try
+                {
+                    string text = HttpUtil.GetStringAsync(
+                        "https://raw.githubusercontent.com/Trubik1/minecraft/main/server.txt",
+                        CancellationToken.None, 2).GetAwaiter().GetResult();
+                    srv = ServerInfo.Parse(text);
+                }
+                catch { }
+
                 Process game = GameInstaller.LaunchAsync(gameDir, version, java, config.Nickname,
-                    config.ResolveRamMb(), ServerInfo.Parse(""), false, CancellationToken.None)
+                    config.ResolveRamMb(), srv, config.JoinServer, CancellationToken.None)
                     .GetAwaiter().GetResult();
 
                 game.WaitForExit();

@@ -6,8 +6,6 @@ namespace SteampunkLauncher
 {
     internal static class Program
     {
-        private static Mutex _mutex;
-
         [STAThread]
         private static void Main(string[] args)
         {
@@ -20,19 +18,32 @@ namespace SteampunkLauncher
 
             if (args.Length > 0 && args[0] == "--launch")
             {
-                string dir = args.Length > 1 ? args[1] : null;
-                string nick = args.Length > 2 ? args[2] : null;
+                string dir = null;
+                string nick = null;
+                if (args.Length == 2)
+                {
+                    // SteampunkLauncher.exe --launch Nickname
+                    nick = args[1];
+                }
+                else if (args.Length > 2)
+                {
+                    // SteampunkLauncher.exe --launch "GameDir" Nickname
+                    dir = args[1];
+                    nick = args[2];
+                }
                 Environment.ExitCode = Cli.RunLaunch(dir, nick);
                 return;
             }
 
-            bool created;
-            _mutex = new Mutex(true, @"Local\SteampunkLauncher.SingleInstance", out created);
-            if (!created)
+            if (args.Length > 1 && (args[0] == "--nick" || args[0] == "-n"))
             {
-                MessageBox.Show("Лаунчер уже запущен.", "Steampunk & Swords",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                try
+                {
+                    var cfg = LauncherConfig.Load();
+                    cfg.Nickname = args[1];
+                    cfg.Save();
+                }
+                catch { }
             }
 
             Application.EnableVisualStyles();
@@ -42,14 +53,7 @@ namespace SteampunkLauncher
             AppDomain.CurrentDomain.UnhandledException += (s, e) => Log.Fatal(e.ExceptionObject as Exception);
             AppDomain.CurrentDomain.AssemblyResolve += (s, e) => null;
 
-            try
-            {
-                Application.Run(new MainForm());
-            }
-            finally
-            {
-                GC.KeepAlive(_mutex);
-            }
+            Application.Run(new MainForm());
         }
     }
 }
