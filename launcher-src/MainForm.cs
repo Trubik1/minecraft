@@ -1690,7 +1690,7 @@ namespace SteampunkLauncher
             {
                 Text = _config.GameDir ?? "",
                 Location = new Point(24, 68),
-                Size = new Size(650, 30),
+                Size = new Size(560, 30),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
                 Font = Theme.Font(10.5f),
                 BackColor = Theme.Field,
@@ -1698,11 +1698,36 @@ namespace SteampunkLauncher
                 BorderStyle = BorderStyle.FixedSingle
             };
 
+            void CommitGameDir()
+            {
+                string text = (_txtGameDir.Text ?? "").Trim();
+                if (!string.IsNullOrEmpty(text))
+                {
+                    string clean = LauncherConfig.SanitizeGameDir(text);
+                    if (_config.GameDir != clean)
+                    {
+                        _config.GameDir = clean;
+                        _config.Save();
+                        _txtGameDir.Text = clean;
+                        AppendLog("Папка игры: " + clean);
+                    }
+                }
+            }
+            _txtGameDir.Leave += (s, e) => CommitGameDir();
+            _txtGameDir.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    CommitGameDir();
+                    e.SuppressKeyPress = true;
+                }
+            };
+
             var btnBrowseDir = new AccentButton
             {
                 Text = "Обзор...",
-                Location = new Point(686, 66),
-                Width = 110,
+                Location = new Point(594, 66),
+                Width = 100,
                 Height = 32,
                 Anchor = AnchorStyles.Top | AnchorStyles.Right,
                 Font = Theme.Font(9f)
@@ -1710,16 +1735,44 @@ namespace SteampunkLauncher
             btnBrowseDir.SetDarkStyle();
             btnBrowseDir.Click += (s, e) =>
             {
-                using (var dlg = new FolderBrowserDialog { SelectedPath = _config.GameDir ?? "" })
+                using (var dlg = new FolderBrowserDialog
+                {
+                    Description = "Выберите папку для установки игры",
+                    SelectedPath = !string.IsNullOrEmpty(_config.GameDir) ? _config.GameDir : LauncherConfig.DefaultGameDir(),
+                    ShowNewFolderButton = true,
+                                        RootFolder = Environment.SpecialFolder.MyComputer
+                })
                 {
                     if (dlg.ShowDialog(this) == DialogResult.OK)
                     {
-                        _config.GameDir = dlg.SelectedPath;
+                        string clean = LauncherConfig.SanitizeGameDir(dlg.SelectedPath);
+                        _config.GameDir = clean;
                         _config.Save();
-                        _txtGameDir.Text = dlg.SelectedPath;
-                        AppendLog("Новая папка игры: " + dlg.SelectedPath);
+                        _txtGameDir.Text = clean;
+                        AppendLog("Новая папка игры: " + clean);
                     }
                 }
+            };
+
+            var btnOpenDir = new AccentButton
+            {
+                Text = "Папка",
+                Location = new Point(702, 66),
+                Width = 94,
+                Height = 32,
+                Anchor = AnchorStyles.Top | AnchorStyles.Right,
+                Font = Theme.Font(9f)
+            };
+            btnOpenDir.SetDarkStyle();
+            btnOpenDir.Click += (s, e) =>
+            {
+                try
+                {
+                    string p = _config.GameDir ?? LauncherConfig.DefaultGameDir();
+                    Directory.CreateDirectory(p);
+                    Process.Start("explorer.exe", p);
+                }
+                catch { }
             };
 
             var lblJava = new Label
@@ -1769,7 +1822,7 @@ namespace SteampunkLauncher
             };
 
             cardPaths.Controls.AddRange(new Control[] {
-                titlePaths, lblDir, _txtGameDir, btnBrowseDir, lblJava, _txtJavaPath, btnBrowseJava
+                titlePaths, lblDir, _txtGameDir, btnBrowseDir, btnOpenDir, lblJava, _txtJavaPath, btnBrowseJava
             });
             _tabSettings.Controls.Add(cardPaths);
 
@@ -2114,13 +2167,10 @@ namespace SteampunkLauncher
 
             if (string.IsNullOrEmpty(_config.GameDir))
             {
-                using (var dlg = new FolderBrowserDialog { Description = "Выберите папку для установки игры (.minecraft)" })
-                {
-                    if (dlg.ShowDialog(this) != DialogResult.OK) return;
-                    _config.GameDir = dlg.SelectedPath;
-                    _config.Save();
-                }
+                _config.GameDir = LauncherConfig.DefaultGameDir();
             }
+            _config.GameDir = LauncherConfig.SanitizeGameDir(_config.GameDir);
+            _config.Save();
 
             _cts = new CancellationTokenSource();
             SetBusy(true);

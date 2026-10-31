@@ -1,3 +1,4 @@
+using System.Linq;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -43,6 +44,62 @@ namespace SteampunkLauncher
             get { return Path.Combine(Dir, "config.json"); }
         }
 
+        public static string DefaultGameDir()
+        {
+            try
+            {
+                var drives = DriveInfo.GetDrives()
+                    .Where(d => d.IsReady && d.DriveType == DriveType.Fixed &&
+                                !d.Name.StartsWith("C:", StringComparison.OrdinalIgnoreCase) &&
+                                d.AvailableFreeSpace > 4L * 1024 * 1024 * 1024)
+                    .OrderByDescending(d => d.AvailableFreeSpace)
+                    .ToList();
+
+                if (drives.Count > 0)
+                {
+                    return Path.Combine(drives[0].Name, "SteampunkLauncher");
+                }
+            }
+            catch { }
+
+            return Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                ".steampunk");
+        }
+
+        public static string SanitizeGameDir(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path))
+                return DefaultGameDir();
+
+            path = path.Trim().TrimEnd('\\', '/');
+
+            try
+            {
+                string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).TrimEnd('\\', '/');
+                string userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile).TrimEnd('\\', '/');
+
+                // If user selected Desktop directly, create a Steampunk subfolder so files don't pollute the desktop
+                if (string.Equals(path, desktop, StringComparison.OrdinalIgnoreCase))
+                {
+                    return Path.Combine(path, "Steampunk");
+                }
+                if (string.Equals(path, userProfile, StringComparison.OrdinalIgnoreCase))
+                {
+                    return Path.Combine(path, "SteampunkLauncher");
+                }
+
+                // If root of a drive (e.g. C:, D:), append subfolder
+                if (path.EndsWith(":") || Path.GetPathRoot(path).TrimEnd('\\', '/') == path)
+                {
+                    return Path.Combine(path, "SteampunkLauncher");
+                }
+            }
+            catch { }
+
+            return path;
+        }
+
         public static LauncherConfig Load()
         {
             try
@@ -53,6 +110,10 @@ namespace SteampunkLauncher
                     if (cfg != null)
                     {
                         if (cfg.RamMb <= 0) cfg.RamMb = AutoRamMb();
+                        if (string.IsNullOrWhiteSpace(cfg.GameDir))
+                            cfg.GameDir = DefaultGameDir();
+                        else
+                            cfg.GameDir = SanitizeGameDir(cfg.GameDir);
                         return cfg;
                     }
                 }
@@ -62,7 +123,12 @@ namespace SteampunkLauncher
                 Log.Warn("Не удалось прочитать конфиг: " + ex.Message);
             }
 
-            return new LauncherConfig { RamMb = AutoRamMb(), JoinServer = true };
+            return new LauncherConfig
+            {
+                RamMb = AutoRamMb(),
+                GameDir = DefaultGameDir(),
+                JoinServer = true
+            };
         }
 
         public void Save()

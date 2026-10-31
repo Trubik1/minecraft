@@ -63,7 +63,7 @@ namespace SteampunkLauncher
             {
                 Left = x, Top = y, Width = 380, Height = 30, BorderStyle = BorderStyle.FixedSingle,
                 BackColor = Theme.PanelLight, ForeColor = Theme.Text, Font = Theme.Font(10f),
-                AutoSize = false, ReadOnly = true
+                AutoSize = false
             };
             Controls.Add(_folder);
 
@@ -185,14 +185,17 @@ namespace SteampunkLauncher
 
         private void BrowseFolder()
         {
-            using (var dialog = new FolderBrowserDialog())
+            using (var dialog = new FolderBrowserDialog
             {
-                dialog.Description = "Выберите папку для игры (нужно ~4 ГБ свободного места)";
-                dialog.SelectedPath = _folder.Text;
-                dialog.ShowNewFolderButton = true;
+                Description = "Выберите папку для игры (нужно ~4 ГБ свободного места)",
+                SelectedPath = !string.IsNullOrEmpty(_folder.Text) ? _folder.Text : LauncherConfig.DefaultGameDir(),
+                ShowNewFolderButton = true,
+                                RootFolder = Environment.SpecialFolder.MyComputer
+            })
+            {
                 if (dialog.ShowDialog(this) == DialogResult.OK)
                 {
-                    _folder.Text = dialog.SelectedPath;
+                    _folder.Text = LauncherConfig.SanitizeGameDir(dialog.SelectedPath);
                     UpdateFolderHint();
                 }
             }
@@ -207,7 +210,7 @@ namespace SteampunkLauncher
                 return;
             }
 
-            string folder = (_folder.Text ?? "").Trim();
+            string folder = LauncherConfig.SanitizeGameDir((_folder.Text ?? "").Trim());
             if (folder.Length < 3)
             {
                 _error.Text = "Выберите папку для игры.";
