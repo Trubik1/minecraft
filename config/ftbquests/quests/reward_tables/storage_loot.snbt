@@ -1,11 +1,17 @@
 {
 	id: "5A8C11099EFA8001"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 	loot_size: 1
 	order_index: 0
 	rewards: [
 		{
 			count: 4
 			id: "17D81A7B6693CEB4"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 			item: {
 				count: 4
 				id: "minecraft:iron_ingot"
@@ -15,6 +21,9 @@
 		{
 			count: 2
 			id: "215A5DC4658631FD"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 			item: {
 				count: 2
 				id: "minecraft:gold_ingot"
@@ -23,6 +32,9 @@
 		}
 		{
 			id: "2D060A00FE1E5F74"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 			item: {
 				count: 1
 				id: "minecraft:diamond"
@@ -32,6 +44,9 @@
 		{
 			count: 8
 			id: "260BBD3F330FA0EC"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 			item: {
 				count: 8
 				id: "minecraft:cooked_beef"
@@ -41,6 +56,9 @@
 		{
 			count: 4
 			id: "1891C132B64711A5"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 			item: {
 				count: 4
 				id: "minecraft:ender_pearl"
@@ -49,6 +67,9 @@
 		}
 		{
 			id: "3E925AA6F801C7D0"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 			item: {
 				count: 1
 				id: "create:precision_mechanism"
@@ -57,6 +78,9 @@
 		}
 		{
 			id: "1D8F560EA99DC444"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 			item: {
 				count: 1
 				id: "sophisticatedbackpacks:upgrade_base"
@@ -65,6 +89,9 @@
 		}
 		{
 			id: "4728F6F3ADC3FB2B"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 			item: {
 				count: 1
 				id: "sophisticatedstorage:basic_tier_upgrade"
@@ -74,6 +101,9 @@
 		{
 			count: 16
 			id: "6426ABECA6237A70"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 			item: {
 				count: 16
 				id: "minecraft:torch"
@@ -82,6 +112,9 @@
 		}
 		{
 			id: "7BB1C79AC4537960"
+	icon: {
+		id: "sophisticatedstorage:diamond_chest"
+	}
 			item: {
 				count: 1
 				id: "minecraft:emerald_block"
@@ -89,4 +122,5 @@
 			weight: 15.0f
 		}
 	]
+	title: "Награда хранилищ"
 }

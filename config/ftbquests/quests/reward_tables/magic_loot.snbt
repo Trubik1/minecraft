@@ -1,11 +1,17 @@
 {
 	id: "5A8C11099EFA8002"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 	loot_size: 1
 	order_index: 1
 	rewards: [
 		{
 			count: 4
 			id: "1A00000000000001"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 			item: {
 				count: 4
 				id: "ars_nouveau:source_gem"
@@ -15,6 +21,9 @@
 		{
 			count: 8
 			id: "1A00000000000002"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 			item: {
 				count: 8
 				id: "ars_nouveau:magebloom_fiber"
@@ -24,6 +33,9 @@
 		{
 			count: 4
 			id: "1A00000000000003"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 			item: {
 				count: 4
 				id: "ars_nouveau:experience_gem"
@@ -33,6 +45,9 @@
 		{
 			count: 2
 			id: "1A00000000000004"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 			item: {
 				count: 2
 				id: "minecraft:golden_apple"
@@ -42,6 +57,9 @@
 		{
 			count: 16
 			id: "1A00000000000005"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 			item: {
 				count: 16
 				id: "minecraft:lapis_lazuli"
@@ -51,6 +69,9 @@
 		{
 			count: 8
 			id: "1A00000000000006"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 			item: {
 				count: 8
 				id: "minecraft:amethyst_shard"
@@ -60,6 +81,9 @@
 		{
 			count: 4
 			id: "1A00000000000007"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 			item: {
 				count: 4
 				id: "twilightforest:ironwood_ingot"
@@ -69,6 +93,9 @@
 		{
 			count: 4
 			id: "1A00000000000008"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 			item: {
 				count: 4
 				id: "twilightforest:steeleaf_ingot"
@@ -77,6 +104,9 @@
 		}
 		{
 			id: "1A00000000000009"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 			item: {
 				count: 1
 				id: "twilightforest:charm_of_life_1"
@@ -86,6 +116,9 @@
 		{
 			count: 2
 			id: "1A0000000000000A"
+	icon: {
+		id: "ars_nouveau:source_gem"
+	}
 			item: {
 				count: 2
 				id: "minecraft:diamond"
@@ -93,4 +126,5 @@
 			weight: 30.0f
 		}
 	]
+	title: "Магическая награда"
 }

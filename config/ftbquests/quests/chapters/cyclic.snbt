@@ -85,6 +85,7 @@
 			rewards: [
 				{
 					id: "5A8C11099EFC0203"
+					table_id: 4196188979167302596L
 					type: "random"
 				}
 				{
@@ -238,6 +239,7 @@
 			rewards: [
 				{
 					id: "5A8C11099EFC0208"
+					table_id: 4196188979167302596L
 					type: "random"
 				}
 				{
@@ -455,6 +457,7 @@
 			rewards: [
 				{
 					id: "5A8C11099EFC020F"
+					table_id: 4196188979167302596L
 					type: "random"
 				}
 				{
@@ -771,6 +774,7 @@
 			rewards: [
 				{
 					id: "5A8C11099EFC0219"
+					table_id: 4196188979167302596L
 					type: "random"
 				}
 				{
@@ -922,6 +926,7 @@
 			rewards: [
 				{
 					id: "5A8C11099EFC021E"
+					table_id: 4196188979167302596L
 					type: "random"
 				}
 				{

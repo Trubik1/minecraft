@@ -1,11 +1,17 @@
 {
 	id: "5A8C11099EFA8003"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 	loot_size: 1
 	order_index: 2
 	rewards: [
 		{
 			count: 8
 			id: "2B00000000000001"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 			item: {
 				count: 8
 				id: "refinedstorage:quartz_enriched_iron"
@@ -15,6 +21,9 @@
 		{
 			count: 16
 			id: "2B00000000000002"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 			item: {
 				count: 16
 				id: "refinedstorage:silicon"
@@ -24,6 +33,9 @@
 		{
 			count: 8
 			id: "2B00000000000003"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 			item: {
 				count: 8
 				id: "refinedstorage:processor_binding"
@@ -33,6 +45,9 @@
 		{
 			count: 4
 			id: "2B00000000000004"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 			item: {
 				count: 4
 				id: "refinedstorage:basic_processor"
@@ -42,6 +57,9 @@
 		{
 			count: 2
 			id: "2B00000000000005"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 			item: {
 				count: 2
 				id: "refinedstorage:improved_processor"
@@ -50,6 +68,9 @@
 		}
 		{
 			id: "2B00000000000006"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 			item: {
 				count: 1
 				id: "refinedstorage:advanced_processor"
@@ -59,6 +80,9 @@
 		{
 			count: 16
 			id: "2B00000000000007"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 			item: {
 				count: 16
 				id: "refinedstorage:cable"
@@ -67,6 +91,9 @@
 		}
 		{
 			id: "2B00000000000008"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 			item: {
 				count: 1
 				id: "refinedstorage:1k_storage_part"
@@ -75,6 +102,9 @@
 		}
 		{
 			id: "2B00000000000009"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 			item: {
 				count: 1
 				id: "refinedstorage:upgrade"
@@ -84,6 +114,9 @@
 		{
 			count: 32
 			id: "2B0000000000000A"
+	icon: {
+		id: "refinedstorage:advanced_processor"
+	}
 			item: {
 				count: 32
 				id: "minecraft:redstone"
@@ -91,4 +124,5 @@
 			weight: 100.0f
 		}
 	]
+	title: "Награда цифровых сетей"
 }

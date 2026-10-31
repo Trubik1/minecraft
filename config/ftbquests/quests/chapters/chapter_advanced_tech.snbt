@@ -1721,6 +1721,7 @@
 			rewards: [
 				{
 					id: "5A8C11099EFE0208"
+					table_id: 5564196992594175882L
 					type: "random"
 				}
 				{
@@ -1928,6 +1929,7 @@
 			rewards: [
 				{
 					id: "5A8C11099EFE020E"
+					table_id: 5564196992594175882L
 					type: "random"
 				}
 				{
@@ -1955,6 +1957,7 @@
 			rewards: [
 				{
 					id: "5A8C11099EFE020F"
+					table_id: 5564196992594175882L
 					type: "random"
 				}
 				{

@@ -3181,6 +3181,7 @@
 			rewards: [
 				{
 					id: "5A8C11099EFD020A"
+					table_id: 487623848494439020L
 					type: "random"
 				}
 				{

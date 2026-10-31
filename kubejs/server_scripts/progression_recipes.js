@@ -1668,7 +1668,7 @@ ServerEvents.recipes(event => {
     // 4. MYSTICAL AGRICULTURE SEED PROGRESSION
     // ==========================================
     // Prosperity Seed Base requires Ars Nouveau + Create
-    event.remove({ output: 'mysticalagriculture:prosperity_seed_base' });
+    // [RESTORED DEFAULT RECIPES] event.remove({ output: 'mysticalagriculture:prosperity_seed_base' });
     event.shaped('mysticalagriculture:prosperity_seed_base', [
         'PSP',
         'SMS',
@@ -1843,12 +1843,12 @@ ServerEvents.recipes(event => {
     // ==========================================================================
 
     // 0. Удаляем все дефолтные, верстачные и алтарные рецепты семян
-    event.remove({ output: /mysticalagriculture:.*_seeds/ });
-    event.remove({ output: /mysticalagradditions:.*_seeds/ });
-    event.remove({ type: 'mysticalagriculture:infusion' });
+    // [RESTORED DEFAULT RECIPES] event.remove({ output: /mysticalagriculture:.*_seeds/ });
+    // [RESTORED DEFAULT RECIPES] event.remove({ output: /mysticalagradditions:.*_seeds/ });
+    // [RESTORED DEFAULT RECIPES] event.remove({ type: 'mysticalagriculture:infusion' });
 
     // 1. Prosperity Seed Base (Конвейерная сборка из пшеничных семян)
-    event.remove({ output: 'mysticalagriculture:prosperity_seed_base' });
+    // [RESTORED DEFAULT RECIPES] event.remove({ output: 'mysticalagriculture:prosperity_seed_base' });
     event.recipes.create.sequenced_assembly([
         'mysticalagriculture:prosperity_seed_base'
     ], 'minecraft:wheat_seeds', [
@@ -1859,7 +1859,7 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('minecraft:wheat_seeds').loops(1).id('steampunk:create/sequenced_prosperity_seed_base');
 
     // 2. Soulium Seed Base (Конвейерная сборка: Prosperity Base + Soulium + Source Gem)
-    event.remove({ output: 'mysticalagriculture:soulium_seed_base' });
+    // [RESTORED DEFAULT RECIPES] event.remove({ output: 'mysticalagriculture:soulium_seed_base' });
     event.recipes.create.sequenced_assembly([
         'mysticalagriculture:soulium_seed_base'
     ], 'mysticalagriculture:prosperity_seed_base', [
